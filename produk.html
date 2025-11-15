@@ -48,66 +48,24 @@ keywords: harga kayu dolken gelam, jual dolken gelam 4 meter, dolken gelam murah
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="text-center">1</td>
-                <td><strong>2 - 3 cm</strong></td>
+              {% assign sorted_products = site.products | sort: "price" %}
+              {% for product in sorted_products %}
+              <tr{% if product.popular %} class="table-warning"{% endif %}>
+                <td class="text-center">{{ forloop.index }}</td>
+                <td><strong>{{ product.diameter }}</strong>{% if product.popular %} <span class="badge bg-warning text-dark">Populer</span>{% endif %}</td>
                 <td>4 Meter</td>
-                <td class="text-wood fw-bold">Rp 15.000</td>
-                <td><small>Dekorasi hotel, cafe, hiasan natural</small></td>
+                <td class="text-wood fw-bold">Rp {{ product.price | rupiah }}</td>
+                <td><small>{{ product.features | first }}</small></td>
                 <td class="text-center">
-                  <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20diameter%202-3%20cm" class="btn btn-sm btn-success" target="_blank">
+                  <a href="{{ product.url | relative_url }}" class="btn btn-sm btn-wood me-1">
+                    <i class="bi bi-info-circle"></i> Detail
+                  </a>
+                  <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20{{ product.title }}%20-%20Rp%20{{ product.price }}" class="btn btn-sm btn-success" target="_blank">
                     <i class="bi bi-whatsapp"></i> Pesan
                   </a>
                 </td>
               </tr>
-              <tr>
-                <td class="text-center">2</td>
-                <td><strong>4 - 6 cm</strong></td>
-                <td>4 Meter</td>
-                <td class="text-wood fw-bold">Rp 25.000</td>
-                <td><small>Konstruksi ringan, pagar taman</small></td>
-                <td class="text-center">
-                  <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20diameter%204-6%20cm" class="btn btn-sm btn-success" target="_blank">
-                    <i class="bi bi-whatsapp"></i> Pesan
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-center">3</td>
-                <td><strong>6 - 8 cm</strong></td>
-                <td>4 Meter</td>
-                <td class="text-wood fw-bold">Rp 30.000</td>
-                <td><small>Pagar pembatas, tiang penyangga</small></td>
-                <td class="text-center">
-                  <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20diameter%206-8%20cm" class="btn btn-sm btn-success" target="_blank">
-                    <i class="bi bi-whatsapp"></i> Pesan
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-center">4</td>
-                <td><strong>8 - 10 cm</strong></td>
-                <td>4 Meter</td>
-                <td class="text-wood fw-bold">Rp 35.000</td>
-                <td><small>Konstruksi sedang, pondasi ringan</small></td>
-                <td class="text-center">
-                  <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20diameter%208-10%20cm" class="btn btn-sm btn-success" target="_blank">
-                    <i class="bi bi-whatsapp"></i> Pesan
-                  </a>
-                </td>
-              </tr>
-              <tr class="table-warning">
-                <td class="text-center">5</td>
-                <td><strong>10 - 12 cm</strong> <span class="badge bg-warning text-dark">Populer</span></td>
-                <td>4 Meter</td>
-                <td class="text-wood fw-bold">Rp 45.000</td>
-                <td><small>Konstruksi berat, tiang utama</small></td>
-                <td class="text-center">
-                  <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20diameter%2010-12%20cm" class="btn btn-sm btn-success" target="_blank">
-                    <i class="bi bi-whatsapp"></i> Pesan
-                  </a>
-                </td>
-              </tr>
+              {% endfor %}
             </tbody>
           </table>
         </div>

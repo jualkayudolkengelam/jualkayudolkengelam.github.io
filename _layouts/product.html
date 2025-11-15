@@ -1,0 +1,177 @@
+---
+layout: default
+---
+
+<!-- Product Detail Page -->
+<div class="container py-5">
+  <div class="row">
+    <!-- Product Image -->
+    <div class="col-lg-6 mb-4">
+      {% if page.image %}
+      <div class="product-image-container">
+        <img src="{{ page.image | relative_url }}"
+             class="img-fluid rounded shadow"
+             alt="{{ page.title }}"
+             loading="eager">
+      </div>
+      {% else %}
+      <div class="text-center p-5 bg-light rounded">
+        <i class="bi bi-image" style="font-size: 8rem; color: #ccc;"></i>
+        <p class="text-muted mt-3">Gambar produk akan segera ditambahkan</p>
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- Product Info -->
+    <div class="col-lg-6">
+      <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}">Beranda</a></li>
+          <li class="breadcrumb-item"><a href="{{ site.baseurl }}/#produk">Produk</a></li>
+          <li class="breadcrumb-item active">{{ page.title }}</li>
+        </ol>
+      </nav>
+
+      <h1 class="display-5 fw-bold text-wood mb-3">{{ page.title }}</h1>
+
+      {% if page.popular %}
+      <span class="badge bg-warning text-dark mb-3"><i class="bi bi-star-fill me-1"></i> Produk Populer</span>
+      {% endif %}
+
+      <div class="product-price-large mb-4">
+        <span class="h2 text-wood fw-bold">Rp {{ page.price | rupiah }}</span>
+        <p class="text-muted">per batang (4 meter)</p>
+        <p class="small text-success"><i class="bi bi-check-circle-fill me-1"></i> Harga sudah termasuk ongkir</p>
+      </div>
+
+      <!-- Product Features -->
+      <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="text-wood mb-3"><i class="bi bi-info-circle me-2"></i>Spesifikasi</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><strong>Diameter:</strong> {{ page.diameter }}</li>
+            <li class="mb-2"><strong>Panjang:</strong> 4 meter</li>
+            <li class="mb-2"><strong>Material:</strong> Kayu Gelam Asli</li>
+            <li class="mb-2"><strong>SKU:</strong> {{ page.sku }}</li>
+            <li class="mb-2"><strong>Stok:</strong> <span class="text-success">Ready Stock</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Features List -->
+      {% if page.features %}
+      <div class="mb-4">
+        <h5 class="text-wood mb-3">Keunggulan:</h5>
+        <ul class="list-unstyled">
+          {% for feature in page.features %}
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>{{ feature }}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      <!-- CTA Buttons -->
+      <div class="d-grid gap-2">
+        <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20{{ page.title }}%20-%20Rp%20{{ page.price }}"
+           class="btn btn-success btn-lg"
+           target="_blank">
+          <i class="bi bi-whatsapp me-2"></i>Pesan via WhatsApp
+        </a>
+        <a href="tel:{{ site.business.phone }}" class="btn btn-outline-wood btn-lg">
+          <i class="bi bi-telephone me-2"></i>Telepon Langsung
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Description -->
+  {% if content != '' %}
+  <div class="row mt-5">
+    <div class="col-12">
+      <div class="card border-0 shadow-sm">
+        <div class="card-header bg-wood text-white">
+          <h4 class="mb-0"><i class="bi bi-file-text me-2"></i>Deskripsi Produk</h4>
+        </div>
+        <div class="card-body p-4">
+          <div class="product-description">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Related Products -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="text-wood mb-4"><i class="bi bi-grid me-2"></i>Produk Lainnya</h3>
+      <div class="row g-4">
+        {% assign related_products = site.products | where_exp: "item", "item.url != page.url" | sample: 3 %}
+        {% for product in related_products limit:3 %}
+        <div class="col-md-4">
+          <div class="card product-card h-100">
+            {% if product.image %}
+            <a href="{{ product.url | relative_url }}">
+              <img src="{{ product.image | relative_url }}"
+                   class="card-img-top"
+                   alt="{{ product.title }}"
+                   style="height: 200px; object-fit: cover;">
+            </a>
+            {% endif %}
+            <div class="card-header text-center bg-wood text-white">
+              <i class="bi bi-rulers me-2"></i>{{ product.diameter }}
+            </div>
+            <div class="card-body text-center">
+              <h5>{{ product.title }}</h5>
+              <div class="product-price mb-3">Rp {{ product.price | rupiah }}</div>
+              <a href="{{ product.url | relative_url }}" class="btn btn-wood btn-sm w-100">
+                Lihat Detail
+              </a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Schema.org Product Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 }}",
+  {% if page.image %}
+  "image": "{{ page.image | absolute_url }}",
+  {% endif %}
+  "sku": "{{ page.sku }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ site.business.name }}"
+  },
+  {% if page.popular %}
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127"
+  },
+  {% endif %}
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ page.url | absolute_url }}",
+    "priceCurrency": "IDR",
+    "price": "{{ page.price }}",
+    "priceValidUntil": "2025-12-31",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "{{ site.business.name }}"
+    }
+  }
+}
+</script>

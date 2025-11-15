@@ -7,3 +7,4 @@ Sitemap: https://jualkayudolkengelam.github.io/sitemap.xml
 # Disallow admin/config files
 Disallow: /assets/css/*.map
 Disallow: /_config.yml
+Disallow: /TODO
