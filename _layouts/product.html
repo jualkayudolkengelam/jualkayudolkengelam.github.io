@@ -7,7 +7,36 @@ layout: default
   <div class="row">
     <!-- Product Image -->
     <div class="col-lg-6 mb-4">
-      {% if page.image %}
+      {% if page.images %}
+      <!-- Image Gallery Carousel -->
+      <div id="productCarousel" class="carousel slide shadow rounded" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          {% for image in page.images %}
+          <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active" aria-current="true"{% endif %} aria-label="Slide {{ forloop.index }}"></button>
+          {% endfor %}
+        </div>
+        <div class="carousel-inner">
+          {% for image in page.images %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img src="{{ image | relative_url }}"
+                 class="d-block w-100 rounded"
+                 alt="{{ page.title }} - Foto {{ forloop.index }}"
+                 loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                 style="max-height: 500px; object-fit: cover;">
+          </div>
+          {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      {% elsif page.image %}
+      <!-- Single Image -->
       <div class="product-image-container">
         <img src="{{ page.image | relative_url }}"
              class="img-fluid rounded shadow"
@@ -15,6 +44,7 @@ layout: default
              loading="eager">
       </div>
       {% else %}
+      <!-- No Image -->
       <div class="text-center p-5 bg-light rounded">
         <i class="bi bi-image" style="font-size: 8rem; color: #ccc;"></i>
         <p class="text-muted mt-3">Gambar produk akan segera ditambahkan</p>
