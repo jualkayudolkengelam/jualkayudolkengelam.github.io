@@ -5,7 +5,14 @@ date: 2024-03-05 09:15:00 +0700
 categories: [Informasi Produk]
 tags: [kayu gelam, perbandingan, jenis kayu]
 author: Admin
-image: /assets/images/blog/kayu-gelam-comparison.jpg
+author_url: https://jualkayudolkengelam.github.io
+image: /assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-001.jpeg
+images:
+  - /assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-001.jpeg
+  - /assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-002.jpeg
+  - /assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-003.jpeg
+  - /assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-004.jpeg
+url: /2024/03/05/perbedaan-kayu-gelam-dengan-kayu-lainnya/
 excerpt: "Mengapa kayu gelam lebih unggul dibanding jenis kayu lainnya? Simak perbandingan lengkap karakteristik, harga, dan kegunaannya."
 ---
 
