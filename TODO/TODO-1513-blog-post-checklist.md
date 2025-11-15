@@ -183,7 +183,8 @@ show_products: true
 - Format: Emoji/Icon → Bold Title (baris terpisah) → Penjelasan (baris terpisah)
 - Setiap section punya H3 heading (untuk struktur SEO)
 - Sisipkan keyword naturally di setiap section
-- Section 10 (Tentang Lokasi): cari info di Wikipedia atau web search untuk sejarah & fakta wilayah
+- Section 7 (Studi Kasus): OPSIONAL, tambahkan jika perlu boost word count ke 2500-3000 kata
+- Section 11 (Tentang Lokasi): cari info di Wikipedia atau web search untuk sejarah & fakta wilayah
 
 ### 5️⃣ Build & Test (5 menit)
 ```bash
