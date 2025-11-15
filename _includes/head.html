@@ -173,7 +173,17 @@
       "description": "{{ site.description }}",
       "url": "{{ site.url }}",
       "telephone": "{{ site.business.phone }}",
-      "image": "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}",
+      "image": [
+        "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}",
+        "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-002.jpeg' | absolute_url }}",
+        "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-003.jpeg' | absolute_url }}"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}",
+        "width": "600",
+        "height": "600"
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Jl. Raya Banten KM 7, Kasunyatan, Kasemen",
