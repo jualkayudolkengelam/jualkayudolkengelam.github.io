@@ -25,113 +25,44 @@ keywords: jual kayu dolken terdekat, kayu dolken gelam, jual kayu dolken, dolken
       "@type": "ItemList",
       "name": "Daftar Harga Kayu Dolken Gelam",
       "description": "Daftar produk kayu dolken gelam berbagai ukuran diameter",
-      "numberOfItems": 5,
+      "numberOfItems": {{ site.products.size }},
       "itemListElement": [
+        {% assign sorted_products = site.products | sort: "price" %}
+        {% for product in sorted_products %}
         {
           "@type": "Product",
-          "position": 1,
-          "name": "Kayu Dolken Gelam Diameter 2-3 cm",
-          "description": "Kayu dolken gelam diameter 2-3 cm panjang 4 meter. Cocok untuk dekorasi hotel dan cafe.",
-          "image": "{{ site.url }}{{ site.baseurl }}/assets/images/products/jual-kayu-dolken-gelam-2-3cm-001.jpeg",
-          "sku": "DOLKEN-2-3",
-          "offers": {
-            "@type": "Offer",
-            "url": "{{ site.url }}{{ site.baseurl }}/",
-            "priceCurrency": "IDR",
-            "price": "15000",
-            "priceValidUntil": "2025-12-31",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-              "@type": "Organization",
-              "name": "{{ site.business.name }}"
-            }
-          }
-        },
-        {
-          "@type": "Product",
-          "position": 2,
-          "name": "Kayu Dolken Gelam Diameter 4-6 cm",
-          "description": "Kayu dolken gelam diameter 4-6 cm panjang 4 meter. Cocok untuk landscaping dan taman.",
-          "image": "{{ site.url }}{{ site.baseurl }}/assets/images/dolken-4-6cm.jpg",
-          "sku": "DOLKEN-4-6",
-          "offers": {
-            "@type": "Offer",
-            "url": "{{ site.url }}{{ site.baseurl }}/",
-            "priceCurrency": "IDR",
-            "price": "25000",
-            "priceValidUntil": "2025-12-31",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-              "@type": "Organization",
-              "name": "{{ site.business.name }}"
-            }
-          }
-        },
-        {
-          "@type": "Product",
-          "position": 3,
-          "name": "Kayu Dolken Gelam Diameter 6-8 cm",
-          "description": "Kayu dolken gelam diameter 6-8 cm panjang 4 meter. Untuk konstruksi ringan dan pagar.",
-          "image": "{{ site.url }}{{ site.baseurl }}/assets/images/dolken-6-8cm.jpg",
-          "sku": "DOLKEN-6-8",
-          "offers": {
-            "@type": "Offer",
-            "url": "{{ site.url }}{{ site.baseurl }}/",
-            "priceCurrency": "IDR",
-            "price": "30000",
-            "priceValidUntil": "2025-12-31",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-              "@type": "Organization",
-              "name": "{{ site.business.name }}"
-            }
-          }
-        },
-        {
-          "@type": "Product",
-          "position": 4,
-          "name": "Kayu Dolken Gelam Diameter 8-10 cm - POPULER",
-          "description": "Kayu dolken gelam diameter 8-10 cm panjang 4 meter. Produk terpopuler untuk konstruksi sedang dan pondasi ringan.",
-          "image": "{{ site.url }}{{ site.baseurl }}/assets/images/dolken-8-10cm.jpg",
-          "sku": "DOLKEN-8-10",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "127"
+          "position": {{ forloop.index }},
+          "name": "{{ product.title }}",
+          "description": "{{ product.description }}",
+          {% if product.image %}
+          "image": "{{ product.image | absolute_url }}",
+          {% endif %}
+          "sku": "{{ product.sku }}",
+          "brand": {
+            "@type": "Brand",
+            "name": "{{ site.business.name }}"
           },
           "offers": {
             "@type": "Offer",
-            "url": "{{ site.url }}{{ site.baseurl }}/",
+            "url": "{{ product.url | absolute_url }}",
             "priceCurrency": "IDR",
-            "price": "35000",
+            "price": "{{ product.price }}",
             "priceValidUntil": "2025-12-31",
             "availability": "https://schema.org/InStock",
             "seller": {
               "@type": "Organization",
               "name": "{{ site.business.name }}"
             }
-          }
-        },
-        {
-          "@type": "Product",
-          "position": 5,
-          "name": "Kayu Dolken Gelam Diameter 10-12 cm",
-          "description": "Kayu dolken gelam diameter 10-12 cm panjang 4 meter. Kualitas terbaik untuk konstruksi berat dan tiang utama.",
-          "image": "{{ site.url }}{{ site.baseurl }}/assets/images/dolken-10-12cm.jpg",
-          "sku": "DOLKEN-10-12",
-          "offers": {
-            "@type": "Offer",
-            "url": "{{ site.url }}{{ site.baseurl }}/",
-            "priceCurrency": "IDR",
-            "price": "45000",
-            "priceValidUntil": "2025-12-31",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-              "@type": "Organization",
-              "name": "{{ site.business.name }}"
-            }
-          }
-        }
+          }{% if product.popular %},
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+          }{% endif %}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
       ]
     }
   ]
