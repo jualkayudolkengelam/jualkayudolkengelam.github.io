@@ -1,6 +1,6 @@
 ---
 layout: product
-title: Kayu Dolken Gelam Diameter 4-6 cm
+title: Jual Kayu Dolken Gelam Diameter 4-6 cm
 description: Jual kayu dolken gelam diameter 4-6 cm panjang 4 meter. Ideal untuk konstruksi sedang, pagar kuat, dan berbagai aplikasi struktural. Harga sudah termasuk ongkir. Bayar setelah barang sampai.
 price: 25000
 diameter: 4 - 6 cm
