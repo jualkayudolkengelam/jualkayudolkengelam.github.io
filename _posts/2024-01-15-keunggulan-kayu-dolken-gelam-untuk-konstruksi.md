@@ -5,6 +5,14 @@ date: 2024-01-15 10:00:00 +0700
 categories: [Informasi Produk]
 tags: [kayu dolken, kayu gelam, konstruksi, keunggulan]
 author: Admin
+author_url: https://jualkayudolkengelam.github.io
+image: /assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-001.jpeg
+images:
+  - /assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-001.jpeg
+  - /assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-002.jpeg
+  - /assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-003.jpeg
+  - /assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-004.jpeg
+url: /2024/01/15/keunggulan-kayu-dolken-gelam-untuk-konstruksi/
 excerpt: "Kayu dolken gelam memiliki berbagai keunggulan yang membuatnya menjadi pilihan utama untuk berbagai keperluan konstruksi dan dekorasi."
 ---
 
