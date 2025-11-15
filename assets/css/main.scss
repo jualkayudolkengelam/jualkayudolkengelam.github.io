@@ -100,6 +100,13 @@ a:hover {
 }
 
 /* Navbar */
+.navbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1030 !important;
+  transition: all 0.3s ease;
+}
+
 .navbar-brand {
   font-size: 1.4rem;
 }
