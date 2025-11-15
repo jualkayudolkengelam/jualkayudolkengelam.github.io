@@ -1,12 +1,33 @@
 # TODO-1513: Checklist Membuat Blog Post dengan Product List
 
 **Date:** 2025-11-15
-**Time:** ~45 menit
+**Time:** ~50-60 menit (termasuk riset lokasi)
 **Type:** Standard Operating Procedure
+**Target:** Blog post 2500-3000 kata dengan SEO optimal
 
 ---
 
-## Checklist Singkat
+## 📋 Quick Summary
+
+**Output:** Blog post 2500-3000 kata dengan 12 section + product list + 4 foto carousel
+
+**Workflow:**
+1. Persiapan: Judul, slug, 4 foto, tanggal
+2. Images: Rename → Move → Convert WebP (8 files total)
+3. Buat file: Front matter + 12 section content
+4. Build & Test: Jekyll build + responsive check
+5. Deploy: Git commit + push
+
+**Kunci Sukses:**
+- ✅ Nomor 081311400177 muncul 8-10x
+- ✅ Product list include setelah section 2
+- ✅ Format markdown simple (NO HTML/CSS)
+- ✅ Section 11: WAJIB riset Wikipedia/WebSearch
+- ✅ Cek word count: target 2500-3000 kata
+
+---
+
+## Checklist Detail
 
 ### 1️⃣ Persiapan (5 menit)
 - [ ] Tentukan judul: "Jual Kayu Dolken [Lokasi] - Hub 081311400177"
@@ -18,33 +39,36 @@
 
 **Step 1: Rename di folder sumber (buat nama final)**
 ```bash
-cd /path/to/source/folder
+# Contoh path: /home/mkt01/Documents/ANDRI/Dolken/foto/WhatsApp Unknown 2025-11-15 at 09.05.21/
+cd /home/mkt01/Documents/ANDRI/Dolken/foto/[folder-name]/
 
 # Rename ke nama final yang akan dipakai
-mv "source1.jpeg" "[slug]-001.jpeg"
-mv "source2.jpeg" "[slug]-002.jpeg"
-mv "source3.jpeg" "[slug]-003.jpeg"
-mv "source4.jpeg" "[slug]-004.jpeg"
+mv "WhatsApp Image 2025-08-30 at 15.35.22.jpeg" "[slug]-001.jpeg"
+mv "WhatsApp Image 2025-08-30 at 15.35.12.jpeg" "[slug]-002.jpeg"
+mv "WhatsApp Image 2025-08-30 at 15.35.01.jpeg" "[slug]-003.jpeg"
+mv "WhatsApp Image 2025-08-30 at 15.34.53.jpeg" "[slug]-004.jpeg"
 ```
 
-**Step 2: Buat folder di Jekyll**
+**Step 2: Masuk ke Jekyll folder & buat folder images**
 ```bash
+cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
 mkdir -p assets/images/posts/[slug]
 ```
 
 **Step 3: Move ke Jekyll (sekaligus hapus dari source)**
 ```bash
 # Move (bukan copy) - file langsung pindah dari source ke Jekyll
-mv /path/to/source/[slug]-001.jpeg assets/images/posts/[slug]/[slug]-001.jpeg
-mv /path/to/source/[slug]-002.jpeg assets/images/posts/[slug]/[slug]-002.jpeg
-mv /path/to/source/[slug]-003.jpeg assets/images/posts/[slug]/[slug]-003.jpeg
-mv /path/to/source/[slug]-004.jpeg assets/images/posts/[slug]/[slug]-004.jpeg
+mv /home/mkt01/Documents/ANDRI/Dolken/foto/[folder-name]/[slug]-001.jpeg assets/images/posts/[slug]/[slug]-001.jpeg
+mv /home/mkt01/Documents/ANDRI/Dolken/foto/[folder-name]/[slug]-002.jpeg assets/images/posts/[slug]/[slug]-002.jpeg
+mv /home/mkt01/Documents/ANDRI/Dolken/foto/[folder-name]/[slug]-003.jpeg assets/images/posts/[slug]/[slug]-003.jpeg
+mv /home/mkt01/Documents/ANDRI/Dolken/foto/[folder-name]/[slug]-004.jpeg assets/images/posts/[slug]/[slug]-004.jpeg
 ```
 
 **Step 4: Convert ke WebP**
 ```bash
 cd assets/images/posts/[slug]
 for img in *.jpeg; do cwebp -q 85 "$img" -o "${img%.jpeg}.webp"; done
+cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
 ```
 
 **Checklist:**
@@ -54,6 +78,7 @@ for img in *.jpeg; do cwebp -q 85 "$img" -o "${img%.jpeg}.webp"; done
 
 ### 3️⃣ Buat File (5 menit)
 ```bash
+cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
 # Buat file: _posts/YYYY-MM-DD-[slug].md
 ```
 
@@ -121,7 +146,23 @@ show_products: true
 
   Penjelasan detail (1-2 kalimat)
   ```
-- [ ] **5. Aplikasi & Penggunaan (300-350 kata)** - Konstruksi, dekorasi, furniture, proyek komersial
+- [ ] **5. Aplikasi & Penggunaan (300-350 kata)** - 4 kategori dengan format:
+  ```
+  **Konstruksi & Bangunan:**
+  - Aplikasi 1
+  - Aplikasi 2
+  - Aplikasi 3
+
+  **Dekorasi & Landscaping:**
+  - Aplikasi 1
+  - Aplikasi 2
+
+  **Furniture & Lain-lain:**
+  - Aplikasi 1
+
+  **Proyek Komersial:**
+  Paragraf tentang proyek yang sudah dikerjakan
+  ```
 - [ ] **6. Cara Pemesanan (200-250 kata)** - 6 langkah, format:
   ```
   **1. Judul Langkah**
@@ -151,7 +192,25 @@ show_products: true
 
   ---
   ```
-- [ ] **9. Tips Memilih Ukuran (200-250 kata)** - Panduan praktis untuk customer
+- [ ] **9. Tips Memilih Ukuran (200-250 kata)** - 3 kategori dengan format:
+  ```
+  **Untuk Dekorasi Ringan (Pagar, Taman):**
+  - Pilih diameter 2-3 cm atau 4-6 cm
+  - Lebih ekonomis dan mudah dipasang
+  - Estetika lebih ringan dan elegan
+
+  **Untuk Struktur Sedang (Gazebo, Pergola):**
+  - Pilih diameter 6-8 cm
+  - Balance antara kekuatan dan harga
+  - Paling populer untuk residential
+
+  **Untuk Struktur Berat (Tiang Utama, Pondasi):**
+  - Pilih diameter 8-10 cm atau 10-12 cm
+  - Kekuatan maksimal
+  - Tahan beban berat jangka panjang
+
+  **Butuh Konsultasi?** Hubungi **081311400177** - tim kami siap bantu hitung kebutuhan Anda!
+  ```
 - [ ] **10. FAQ Singkat (300-400 kata)** - 5 pertanyaan umum dengan format:
   ```
   **Pertanyaan?**
@@ -159,41 +218,85 @@ show_products: true
   Jawaban detail 2-3 kalimat dengan nomor 081311400177 jika relevan
   ```
   Topik FAQ: minimal order, perawatan, pengiriman, custom, cek kualitas
-- [ ] **11. Tentang [Lokasi] (400-500 kata)** - Informasi wilayah dari Wikipedia/web:
-  - Sejarah singkat wilayah
-  - Luas, populasi, kecamatan
-  - Landmark penting (pelabuhan, mall, pusat bisnis)
-  - Karakteristik wilayah (industri, komersial, residential)
-  - Kenapa kayu dolken cocok untuk karakteristik wilayah tersebut
-  - Tutup dengan nomor 081311400177
-- [ ] **12. CTA Final (150-200 kata)** - Hubungi 081311400177, format:
+- [ ] **11. Tentang [Lokasi] (400-500 kata)** - Riset dari Wikipedia/WebSearch:
+  **Cara riset:**
   ```
-  ✅ Benefit 1
+  WebSearch: "[Lokasi] sejarah wilayah kecamatan landmark"
+  atau
+  Wikipedia: "Kota Administrasi [Lokasi]"
+  ```
+  **Struktur konten:**
+  - Paragraf intro: luas, populasi, jumlah kecamatan
+  - Sub-heading: **Sejarah [Lokasi]** (150-200 kata)
+  - Sub-heading: **[Landmark Utama]** (100-150 kata)
+  - Sub-heading: **Pusat Bisnis & Komersial Modern** (100-150 kata)
+  - Sub-heading: **Pembangunan & Infrastruktur** (50-100 kata)
+  - Sub-heading: **Kenapa Kayu Dolken Penting untuk [Lokasi]?** (100-150 kata)
+  - Tutup dengan: "Untuk kebutuhan kayu dolken gelam di [Lokasi], hubungi **081311400177**"
+- [ ] **12. CTA Final (150-200 kata)** - Format lengkap:
+  ```
+  ## 📞 Hubungi Kami Sekarang!
 
-  ✅ Benefit 2
+  **Telepon / WhatsApp: 081311400177**
+
+  Siap memesan kayu dolken untuk proyek di [Lokasi]? Hubungi **081311400177** sekarang juga untuk:
+
+  ✅ Konsultasi gratis kebutuhan proyek Anda
+
+  ✅ Cek ketersediaan stok real-time
+
+  ✅ Info harga terbaru dan penawaran khusus
+
+  ✅ Jadwal pengiriman gratis [Lokasi]
+
+  ✅ Rekomendasi ukuran sesuai kebutuhan
+
+  ✅ Harga nego untuk pembelian partai besar
+
+  **Jam Operasional:** Senin - Sabtu, 08:00 - 17:00 WIB (WhatsApp 24/7)
+
+  💼 **Melayani Semua Kebutuhan:**
+  - Proyek komersial (hotel, cafe, restoran, mall)
+  - Kontraktor & developer properti
+  - Arsitek & interior designer
+  - Perorangan / retail / homeowner
+  - Pembelian partai besar (harga spesial & nego)
+
+  🚚 **Pengiriman Gratis [Lokasi] - COD Tersedia - Stok Ready!**
+
+  **Jangan ragu untuk bertanya - konsultasi gratis tanpa biaya! Hubungi 081311400177 sekarang!**
   ```
-  6 poin benefit dengan emoji ✅
 
 **Poin Penting:**
 - Nomor **081311400177** muncul minimal 8-10x (tersebar merata)
 - **Total target 2500-3000 kata** (untuk ranking Google optimal)
+- **Cek word count** menggunakan Free Word Counter atau tool online setelah selesai
 - **Product list manual include** setelah section 2 (Mengapa Memilih Kami)
 - **TIDAK PERLU** menulis section "Harga" manual - sudah ada di product list
-- **JANGAN gunakan HTML list** - gunakan format markdown sederhana untuk mobile
+- **JANGAN gunakan HTML list/CSS inline** - gunakan format markdown sederhana untuk mobile
 - Format: Emoji/Icon → Bold Title (baris terpisah) → Penjelasan (baris terpisah)
-- Setiap section punya H3 heading (untuk struktur SEO)
+- Setiap section punya H3 heading (### Judul Section) untuk struktur SEO
 - Sisipkan keyword naturally di setiap section
 - Section 7 (Studi Kasus): OPSIONAL, tambahkan jika perlu boost word count ke 2500-3000 kata
-- Section 11 (Tentang Lokasi): cari info di Wikipedia atau web search untuk sejarah & fakta wilayah
+- Section 11 (Tentang Lokasi): WAJIB riset di Wikipedia atau WebSearch untuk sejarah & fakta wilayah
+
+**Estimasi Word Count per Section:**
+- Section 1-6: ~1,200 kata
+- Section 7 (opsional): +250 kata
+- Section 8-10: ~600 kata
+- Section 11: +450 kata
+- Section 12: +200 kata
+- **Total: ~2,500-2,700 kata**
 
 ### 5️⃣ Build & Test (5 menit)
 ```bash
+cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
 bundle exec jekyll build
 ```
 - [ ] Build success
 - [ ] Gambar load (carousel 4 foto)
-- [ ] Product list muncul di bawah
-- [ ] Test mobile responsive
+- [ ] Product list muncul setelah section "Mengapa Memilih Kami"
+- [ ] Test mobile responsive (testimoni, tips, FAQ)
 
 ### 6️⃣ Deploy (5 menit)
 ```bash
@@ -206,36 +309,29 @@ git push origin main
 
 ---
 
-## Template HTML List (Copy-Paste)
+## Template Product List Include
 
-```html
-<ul style="list-style: none; padding-left: 0;">
-  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>Point 1</strong> - Deskripsi</li>
-  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>Point 2</strong> - Deskripsi</li>
-</ul>
-```
+**WAJIB:** Product list harus di-include manual setelah section "Mengapa Memilih Kami"
 
+Template yang digunakan di section 2b:
+```markdown
 ---
 
-## Template Product List Partial (Copy-Paste)
+## 💰 Daftar Harga Kayu Dolken [Lokasi]
 
-**PENTING:** Layout `post-with-products` sudah otomatis include product list di bawah konten.
+Berikut daftar lengkap harga kayu dolken gelam untuk area [Lokasi] dengan pengiriman gratis:
 
-Jika ingin custom placement, gunakan partial berikut:
-
-```liquid
 {% include product-list.html %}
+
+**📞 Hubungi 081311400177 untuk info harga terbaru dan penawaran khusus!**
+
+---
 ```
 
-**Product list akan tampil otomatis jika:**
-- Front matter memiliki `show_products: true`
-- Layout menggunakan `post-with-products`
-- Tidak perlu manual include di content
-
-**Format responsive:**
-- Desktop: Table dengan 5 kolom (Gambar, Nama, Ukuran, Harga, Action)
-- Mobile: Card dengan semua info dan tombol WhatsApp
-- Auto-switch pada breakpoint 768px
+**Catatan:**
+- Layout `post-with-products` TIDAK lagi auto-include product list
+- Product list HANYA muncul jika manual include seperti template di atas
+- Format responsive: Desktop (table 5 kolom), Mobile (card view)
 
 ---
 
