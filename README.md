@@ -35,7 +35,7 @@ Website bisnis kayu dolken gelam menggunakan Jekyll dan GitHub Pages. Dirancang 
 │       └── main.scss          # Custom styling
 ├── index.html                  # Homepage
 ├── blog.html                   # Blog listing
-├── produk.html                 # Product page
+├── product.html                 # Product page
 ├── tentang.html                # About page
 ├── kontak.html                 # Contact page
 ├── robots.txt
@@ -138,7 +138,7 @@ Jika ingin menggunakan custom domain di masa depan:
 
 Edit file yang relevan:
 - `index.html` - Homepage product section
-- `produk.html` - Product page
+- `product.html` - Product page
 
 Cari dan update harga:
 ```html
@@ -163,7 +163,7 @@ business:
 - ✅ Excerpt/description (150-160 karakter)
 - ✅ Keywords yang relevan
 - ✅ Image dengan alt text (jika ada)
-- ✅ Internal links ke produk/pages lain
+- ✅ Internal links ke product/pages lain
 - ✅ Related articles (otomatis)
 
 ### Optimasi Images

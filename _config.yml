@@ -34,7 +34,7 @@ plugins:
 collections:
   products:
     output: true
-    permalink: /produk/:name/
+    permalink: /product/:name/
 
 # Defaults
 defaults:
