@@ -172,21 +172,44 @@ Kayu dolken gelam adalah pilihan terbaik untuk berbagai kebutuhan konstruksi dan
 
 **Telepon / WhatsApp: 081311400177**
 
-Siap memesan kayu dolken terdekat Anda? Hubungi **081311400177** sekarang untuk:
+<div class="row g-3 my-4">
+  <div class="col-md-6">
+    <div class="card border-0 shadow-sm h-100">
+      <div class="card-body">
+        <h5 class="card-title text-wood">
+          <i class="bi bi-telephone-fill me-2"></i>Hubungi Kami
+        </h5>
+        <p class="mb-3">Siap memesan kayu dolken terdekat Anda? Hubungi <strong>081311400177</strong> sekarang untuk:</p>
+        <ul class="list-unstyled mb-3">
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Konsultasi gratis kebutuhan proyek</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Cek ketersediaan stok</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Info harga terbaru dan penawaran khusus</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Jadwal pengiriman terdekat</li>
+        </ul>
+        <p class="mb-0 small text-muted">
+          <i class="bi bi-clock me-2"></i><strong>Jam Operasional:</strong> Senin - Sabtu, 08:00 - 17:00 WIB
+        </p>
+      </div>
+    </div>
+  </div>
 
-<ul style="list-style: none; padding-left: 0;">
-  <li style="margin-bottom: 0.5rem;">✅ Konsultasi gratis kebutuhan proyek</li>
-  <li style="margin-bottom: 0.5rem;">✅ Cek ketersediaan stok</li>
-  <li style="margin-bottom: 0.5rem;">✅ Info harga terbaru dan penawaran khusus</li>
-  <li style="margin-bottom: 0.5rem;">✅ Jadwal pengiriman terdekat</li>
-</ul>
-
-**Jam Operasional:** Senin - Sabtu, 08:00 - 17:00 WIB
-
-💼 **Melayani:**
-- Proyek komersial (hotel, cafe, restoran)
-- Kontraktor & developer
-- Perorangan / retail
-- Pembelian partai besar (harga nego)
-
-**Jangan ragu untuk bertanya - konsultasi gratis tanpa biaya!**
+  <div class="col-md-6">
+    <div class="card border-0 shadow-sm h-100">
+      <div class="card-body">
+        <h5 class="card-title text-wood">
+          <i class="bi bi-briefcase-fill me-2"></i>Melayani
+        </h5>
+        <p class="mb-3">Kami siap melayani berbagai kebutuhan:</p>
+        <ul class="list-unstyled mb-3">
+          <li class="mb-2"><i class="bi bi-building text-wood me-2"></i>Proyek komersial (hotel, cafe, restoran)</li>
+          <li class="mb-2"><i class="bi bi-hammer text-wood me-2"></i>Kontraktor & developer</li>
+          <li class="mb-2"><i class="bi bi-person text-wood me-2"></i>Perorangan / retail</li>
+          <li class="mb-2"><i class="bi bi-cart-check text-wood me-2"></i>Pembelian partai besar (harga nego)</li>
+        </ul>
+        <div class="alert alert-success mb-0 py-2 px-3">
+          <small><i class="bi bi-info-circle me-2"></i><strong>Konsultasi gratis tanpa biaya!</strong></small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
