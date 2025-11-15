@@ -25,32 +25,65 @@ Melayani pengiriman ke Kelapa Gading, Ancol, Pademangan, Tanjung Priok, Sunter, 
 
 ### Mengapa Memilih Kami?
 
-<ul style="list-style: none; padding-left: 0;">
-  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>Pengiriman Gratis Jakarta Utara</strong> - Gratis ongkir untuk area Jakarta Utara, hemat biaya pengiriman</li>
-  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>Kualitas Premium Grade A</strong> - Kayu gelam asli premium, tahan rayap alami dan tahan cuaca ekstrem</li>
-  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>Harga Terbaik</strong> - Langsung dari supplier, harga mulai Rp 15.000/batang tanpa markup</li>
-  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>COD Tersedia</strong> - Bayar setelah barang sampai dan Anda cek kualitasnya</li>
-  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>Stok Selalu Ready</strong> - Tersedia berbagai ukuran diameter 2-3 cm hingga 10-12 cm</li>
-  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>Fast Response 24/7</strong> - Tim kami siap melayani Anda kapan saja untuk konsultasi gratis</li>
-</ul>
+✅ **Pengiriman Gratis Jakarta Utara**
+
+Gratis ongkir untuk area Jakarta Utara, hemat biaya pengiriman
+
+✅ **Kualitas Premium Grade A**
+
+Kayu gelam asli premium, tahan rayap alami dan tahan cuaca ekstrem
+
+✅ **Harga Terbaik**
+
+Langsung dari supplier, harga mulai Rp 15.000/batang tanpa markup
+
+✅ **COD Tersedia**
+
+Bayar setelah barang sampai dan Anda cek kualitasnya
+
+✅ **Stok Selalu Ready**
+
+Tersedia berbagai ukuran diameter 2-3 cm hingga 10-12 cm
+
+✅ **Fast Response 24/7**
+
+Tim kami siap melayani Anda kapan saja untuk konsultasi gratis
 
 ### Area Pengiriman Jakarta Utara
 
 Kami melayani pengiriman kayu dolken gelam ke seluruh wilayah Jakarta Utara dengan pengiriman gratis:
 
 **Kecamatan yang Kami Layani:**
-- **Kelapa Gading** - Kelapa Gading Barat, Kelapa Gading Timur
-- **Tanjung Priok** - Sunter Agung, Sunter Jaya, Warakas, Papanggo
-- **Pademangan** - Pademangan Barat, Pademangan Timur, Ancol
-- **Penjaringan** - Pluit, Kapuk, Pejagalan, Kamal Muara
-- **Koja** - Koja, Tugu Utara, Lagoa, Rawa Badak
-- **Cilincing** - Cilincing, Kalibaru, Marunda, Semper
+
+**Kelapa Gading**
+- Kelapa Gading Barat
+- Kelapa Gading Timur
+
+**Tanjung Priok**
+- Sunter Agung, Sunter Jaya
+- Warakas, Papanggo
+
+**Pademangan**
+- Pademangan Barat, Pademangan Timur
+- Ancol
+
+**Penjaringan**
+- Pluit, Kapuk
+- Pejagalan, Kamal Muara
+
+**Koja**
+- Koja, Tugu Utara
+- Lagoa, Rawa Badak
+
+**Cilincing**
+- Cilincing, Kalibaru
+- Marunda, Semper
 
 **Kelurahan & Area Populer:**
-- Kelapa Gading Square & Mall of Indonesia (MOI)
+- Kelapa Gading Square & MOI
 - Sunter Mall & Danau Sunter
-- Ancol & Taman Impian Jaya Ancol
-- Pluit & Pantai Indah Kapuk (PIK)
+- Ancol & Taman Impian Jaya
+- Pluit & Pantai Indah Kapuk
 - Tanjung Priok Port Area
 - Kelapa Gading Boulevard
 
@@ -65,17 +98,29 @@ Kami melayani pengiriman kayu dolken gelam ke seluruh wilayah Jakarta Utara deng
 
 Kayu dolken gelam adalah pilihan terbaik untuk berbagai kebutuhan konstruksi dan dekorasi:
 
-🌳 **Tahan Lama Puluhan Tahun** - Kayu gelam dapat bertahan 20-30 tahun tanpa treatment khusus, hemat biaya perawatan jangka panjang
+🌳 **Tahan Lama Puluhan Tahun**
 
-🌳 **Anti Rayap Alami** - Tidak memerlukan obat anti rayap karena tekstur kayu gelam yang padat dan keras secara alami menolak rayap
+Kayu gelam dapat bertahan 20-30 tahun tanpa treatment khusus, hemat biaya perawatan jangka panjang
 
-🌳 **Tahan Air & Cuaca Ekstrem** - Cocok untuk aplikasi outdoor maupun indoor, tahan hujan, panas, dan kelembaban tinggi
+🌳 **Anti Rayap Alami**
 
-🌳 **Kuat & Padat** - Kepadatan tinggi memberikan kekuatan maksimal, cocok untuk beban berat dan struktur penyangga
+Tidak memerlukan obat anti rayap karena tekstur kayu gelam yang padat dan keras secara alami menolak rayap
 
-🌳 **Ramah Lingkungan** - Material kayu natural dan sustainable, ramah lingkungan dan biodegradable
+🌳 **Tahan Air & Cuaca Ekstrem**
 
-🌳 **Estetika Natural** - Warna coklat natural yang indah, cocok untuk dekorasi modern maupun tradisional
+Cocok untuk aplikasi outdoor maupun indoor, tahan hujan, panas, dan kelembaban tinggi
+
+🌳 **Kuat & Padat**
+
+Kepadatan tinggi memberikan kekuatan maksimal, cocok untuk beban berat dan struktur penyangga
+
+🌳 **Ramah Lingkungan**
+
+Material kayu natural dan sustainable, ramah lingkungan dan biodegradable
+
+🌳 **Estetika Natural**
+
+Warna coklat natural yang indah, cocok untuk dekorasi modern maupun tradisional
 
 ### Aplikasi Kayu Dolken Gelam
 
