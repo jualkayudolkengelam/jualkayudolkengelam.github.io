@@ -177,7 +177,7 @@ show_products: true
 **Poin Penting:**
 - Nomor **081311400177** muncul minimal 8-10x (tersebar merata)
 - **Total target 2500-3000 kata** (untuk ranking Google optimal)
-- **Product list muncul 2x**: Manual include setelah section 2 + otomatis di bawah (dari layout)
+- **Product list manual include** setelah section 2 (Mengapa Memilih Kami)
 - **TIDAK PERLU** menulis section "Harga" manual - sudah ada di product list
 - **JANGAN gunakan HTML list** - gunakan format markdown sederhana untuk mobile
 - Format: Emoji/Icon → Bold Title (baris terpisah) → Penjelasan (baris terpisah)
