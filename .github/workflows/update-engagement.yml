@@ -1,0 +1,77 @@
+name: Update Engagement Metrics
+
+on:
+  schedule:
+    # Runs every Monday at 00:00 UTC (07:00 WIB)
+    - cron: '0 0 * * 1'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-metrics:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+
+      - name: Update engagement metrics
+        run: |
+          echo "Updating engagement metrics..."
+
+          # Example: Increment like counts on random posts
+          # This is a simple simulation - you can make it more sophisticated
+
+          for post in _posts/*.md; do
+            # Random chance to increment (30% probability)
+            if [ $((RANDOM % 10)) -lt 3 ]; then
+              # Get current like_count
+              current_likes=$(grep "^like_count:" "$post" | awk '{print $2}')
+
+              if [ -n "$current_likes" ]; then
+                # Increment by 1-3 randomly
+                increment=$((RANDOM % 3 + 1))
+                new_likes=$((current_likes + increment))
+
+                # Update the file
+                sed -i "s/^like_count: $current_likes/like_count: $new_likes/" "$post"
+
+                echo "Updated $post: $current_likes → $new_likes likes"
+              fi
+            fi
+          done
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          git add _posts/*.md
+
+          git commit -m "chore: auto-update engagement metrics
+
+          - Daily automated engagement update
+          - Updated like counts via GitHub Actions
+          - Triggered by scheduled workflow"
+
+          git push
+
+      - name: No changes
+        if: steps.check_changes.outputs.has_changes == 'false'
+        run: echo "No metrics updated today"
