@@ -85,41 +85,28 @@
       "@type": "OfferCatalog",
       "name": "Kayu Dolken Gelam",
       "itemListElement": [
+        {% assign sorted_products = site.products | sort: "price" %}
+        {% for product in sorted_products %}
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Product",
-            "name": "Kayu Dolken Gelam Diameter 2-3 cm"
+            "name": "{{ product.title }}",
+            "description": "{{ product.description | strip_html | strip_newlines | escape }}",
+            "offers": {
+              "@type": "Offer",
+              "price": "{{ product.price }}",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "{{ product.rating | default: 4.5 }}",
+              "reviewCount": "{{ product.review_count | default: 45 }}"
+            }
           }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Kayu Dolken Gelam Diameter 4-6 cm"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Kayu Dolken Gelam Diameter 6-8 cm"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Kayu Dolken Gelam Diameter 8-10 cm"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Kayu Dolken Gelam Diameter 10-12 cm"
-          }
-        }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
       ]
     }
   }

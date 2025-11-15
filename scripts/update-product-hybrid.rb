@@ -144,7 +144,12 @@ class ProductUpdater
   end
 
   def save_product
-    new_content = "---\n#{YAML.dump(@front_matter)}---\n\n#{@content}"
+    # YAML.dump adds leading '---', so we don't need to add it manually
+    yaml_string = YAML.dump(@front_matter)
+    # Remove the leading '---' from YAML.dump to avoid double delimiter
+    yaml_string = yaml_string.sub(/^---\n/, '')
+
+    new_content = "---\n#{yaml_string}---\n\n#{@content}"
     File.write(@product_file, new_content)
   end
 
