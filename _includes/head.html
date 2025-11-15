@@ -25,6 +25,7 @@
   <meta name="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/assets/images/og-default.jpg' | absolute_url }}{% endif %}">
 
   <!-- Schema.org LocalBusiness -->
+  {% unless page.url == '/' or page.url contains '/product/' %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -123,6 +124,7 @@
     }
   }
   </script>
+  {% endunless %}
 
   {% if page.layout == 'post' %}
   <!-- Schema.org Article -->
