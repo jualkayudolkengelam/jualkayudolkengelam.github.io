@@ -1,0 +1,273 @@
+---
+layout: default
+---
+
+<!-- Blog Post with Product List -->
+<div class="container py-5">
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}">Beranda</a></li>
+      <li class="breadcrumb-item"><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+      <li class="breadcrumb-item active">{{ page.title }}</li>
+    </ol>
+  </nav>
+
+  <!-- Article Header -->
+  <article class="mb-5">
+    <header class="mb-4">
+      <h1 class="display-4 fw-bold text-wood mb-3">{{ page.title }}</h1>
+      <div class="text-muted mb-3">
+        <i class="bi bi-calendar3 me-2"></i>{{ page.date | date: "%d %B %Y" }}
+        {% if page.author %}
+        <span class="ms-3"><i class="bi bi-person me-2"></i>{{ page.author }}</span>
+        {% endif %}
+      </div>
+    </header>
+
+    <!-- Featured Image with Gallery -->
+    {% if page.images %}
+    <div class="mb-4">
+      <div id="postCarousel" class="carousel slide shadow rounded" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          {% for image in page.images %}
+          <button type="button" data-bs-target="#postCarousel" data-bs-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active" aria-current="true"{% endif %} aria-label="Slide {{ forloop.index }}"></button>
+          {% endfor %}
+        </div>
+        <div class="carousel-inner">
+          {% for image in page.images %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <picture>
+              <source srcset="{{ image | replace: '.jpeg', '.webp' | relative_url }}" type="image/webp">
+              <img src="{{ image | relative_url }}"
+                   class="d-block w-100 rounded"
+                   alt="{{ page.title }} - Foto {{ forloop.index }}"
+                   loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                   style="max-height: 500px; object-fit: cover;">
+            </picture>
+          </div>
+          {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#postCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#postCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    {% elsif page.image %}
+    <div class="mb-4">
+      <picture>
+        <source srcset="{{ page.image | replace: '.jpeg', '.webp' | relative_url }}" type="image/webp">
+        <img src="{{ page.image | relative_url }}" class="img-fluid rounded shadow w-100" alt="{{ page.title }}" style="max-height: 500px; object-fit: cover;">
+      </picture>
+    </div>
+    {% endif %}
+
+    <!-- Article Content -->
+    <div class="post-content mb-5">
+      {{ content }}
+    </div>
+  </article>
+
+  <!-- Product List Section -->
+  {% if page.show_products %}
+  <section class="products-section mb-5">
+    <div class="text-center mb-5">
+      <h2 class="display-6 fw-bold text-wood mb-3">Daftar Harga Kayu Dolken Gelam</h2>
+      <p class="lead text-muted">Panjang 4 Meter - Berbagai Ukuran Diameter</p>
+    </div>
+
+    <div class="row g-4">
+      {% assign sorted_products = site.products | sort: "price" %}
+      {% for product in sorted_products %}
+      <div class="col-lg-4 col-md-6">
+        <div class="card product-card h-100{% if product.popular %} popular border-wood{% endif %}"{% if product.popular %} style="border-width: 2px;"{% endif %}>
+          <a href="{{ product.url | relative_url }}" class="text-decoration-none">
+            {% if product.image %}
+            <picture>
+              <source srcset="{{ product.image | replace: '.jpeg', '.webp' | relative_url }}" type="image/webp">
+              <img src="{{ product.image | relative_url }}"
+                   class="card-img-top"
+                   alt="{{ product.title }}"
+                   style="height: 200px; object-fit: cover;"
+                   loading="lazy">
+            </picture>
+            {% endif %}
+          </a>
+          <div class="card-header text-center{% if product.popular %} bg-wood{% endif %}">
+            {% if product.popular %}
+            <i class="bi bi-star-fill me-2"></i>{{ product.diameter }}
+            <span class="badge bg-warning text-dark ms-2">Populer</span>
+            {% else %}
+            <i class="bi bi-rulers me-2"></i>{{ product.diameter }}
+            {% endif %}
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <div class="product-price mb-3">Rp {{ product.price | rupiah }}</div>
+            <p class="text-muted mb-4">per batang (4 meter)</p>
+            {% if product.features %}
+            <ul class="list-unstyled text-start mb-4">
+              {% for feature in product.features limit:3 %}
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>{{ feature }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            <a href="{{ product.url | relative_url }}" class="btn btn-wood w-100 mb-2">
+              <i class="bi bi-info-circle me-2"></i>Lihat Detail
+            </a>
+            <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20{{ product.title }}%20-%20Rp%20{{ product.price }}" class="btn btn-outline-success w-100" target="_blank">
+              <i class="bi bi-whatsapp me-2"></i>Pesan Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="card border-0 bg-wood text-white shadow-lg">
+      <div class="card-body p-5 text-center">
+        <h3 class="mb-3">Butuh Konsultasi?</h3>
+        <p class="lead mb-4">Hubungi kami untuk informasi lebih lanjut, cek stok, atau penawaran khusus!</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+          <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20konsultasi%20produk%20kayu%20dolken" class="btn btn-success btn-lg px-5" target="_blank">
+            <i class="bi bi-whatsapp me-2"></i>Chat WhatsApp
+          </a>
+          <a href="tel:{{ site.business.phone }}" class="btn btn-outline-light btn-lg px-5">
+            <i class="bi bi-telephone me-2"></i>{{ site.business.phone }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Schema.org Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "{{ page.title }}",
+      "description": "{{ page.description | strip_html | strip_newlines | escape }}",
+      "image": [
+        {% if page.images %}
+          {% for image in page.images %}
+          "{{ image | absolute_url }}"{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        {% elsif page.image %}
+          "{{ page.image | absolute_url }}"
+        {% endif %}
+      ],
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+      "author": {
+        "@type": "Person",
+        "name": "{% if page.author %}{{ page.author }}{% else %}Admin{% endif %}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.business.name }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ page.url | absolute_url }}"
+      }
+    }{% if page.show_products %},
+    {
+      "@type": "ItemList",
+      "name": "Daftar Produk Kayu Dolken Gelam",
+      "description": "Daftar lengkap kayu dolken gelam panjang 4 meter dengan berbagai ukuran diameter",
+      "numberOfItems": {{ site.products.size }},
+      "itemListElement": [
+        {% assign sorted_products = site.products | sort: "price" %}
+        {% for product in sorted_products %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": "Product",
+            "name": "{{ product.title }}",
+            "description": "{{ product.description | strip_html | strip_newlines | escape }}",
+            "image": "{{ site.url }}{{ site.baseurl }}{{ product.image }}",
+            "url": "{{ site.url }}{{ site.baseurl }}{{ product.url }}",
+            "sku": "DOLKEN-{{ product.diameter | replace: ' ', '' | upcase }}",
+            "brand": {
+              "@type": "Brand",
+              "name": "{{ site.business.name }}"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "{{ product.price }}",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "url": "{{ site.url }}{{ site.baseurl }}{{ product.url }}",
+              "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+              "seller": {
+                "@type": "Organization",
+                "name": "{{ site.business.name }}"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "IDR"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "ID"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 3,
+                    "maxValue": 7,
+                    "unitCode": "DAY"
+                  }
+                }
+              },
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "ID",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "merchantReturnDays": 7,
+                "returnMethod": "https://schema.org/ReturnByMail",
+                "returnFees": "https://schema.org/FreeReturn"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "{% if product.popular %}4.8{% else %}4.5{% endif %}",
+              "reviewCount": "{% if product.popular %}127{% else %}45{% endif %}",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }{% endif %}
+  ]
+}
+</script>

@@ -258,11 +258,14 @@ keywords: jual kayu dolken terdekat, kayu dolken gelam, jual kayu dolken, dolken
         <div class="card product-card h-100{% if product.popular %} popular border-wood{% endif %}"{% if product.popular %} style="border-width: 2px;"{% endif %}>
           <a href="{{ product.url | relative_url }}" class="text-decoration-none">
             {% if product.image %}
-            <img src="{{ product.image | relative_url }}"
-                 class="card-img-top"
-                 alt="{{ product.title }}"
-                 style="height: 200px; object-fit: cover;"
-                 loading="lazy">
+            <picture>
+              <source srcset="{{ product.image | replace: '.jpeg', '.webp' | relative_url }}" type="image/webp">
+              <img src="{{ product.image | relative_url }}"
+                   class="card-img-top"
+                   alt="{{ product.title }}"
+                   style="height: 200px; object-fit: cover;"
+                   loading="lazy">
+            </picture>
             {% endif %}
           </a>
           <div class="card-header text-center{% if product.popular %} bg-wood{% endif %}">
@@ -404,7 +407,10 @@ keywords: jual kayu dolken terdekat, kayu dolken gelam, jual kayu dolken, dolken
       <div class="col-md-6 col-lg-4">
         <div class="card blog-card">
           {% if post.image %}
-          <img src="{{ post.image | relative_url }}" class="card-img-top" alt="{{ post.title }}" loading="lazy">
+          <picture>
+            <source srcset="{{ post.image | replace: '.jpeg', '.webp' | relative_url }}" type="image/webp">
+            <img src="{{ post.image | relative_url }}" class="card-img-top" alt="{{ post.title }}" loading="lazy">
+          </picture>
           {% else %}
           <div class="bg-gradient-wood d-flex align-items-center justify-content-center" style="height: 200px;">
             <i class="bi bi-file-text text-white" style="font-size: 4rem;"></i>
