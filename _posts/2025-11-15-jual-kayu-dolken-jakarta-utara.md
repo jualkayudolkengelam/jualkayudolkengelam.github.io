@@ -122,20 +122,6 @@ Proses pemesanan sangat mudah dan cepat:
 
 💬 **Chat WhatsApp:** Klik tombol WhatsApp di bawah atau langsung hubungi **081311400177** untuk info lengkap, cek stok, dan penawaran khusus!
 
-### Harga Kayu Dolken Jakarta Utara
-
-Kami menawarkan harga terbaik untuk semua ukuran kayu dolken gelam:
-
-- **Diameter 2-3 cm:** Mulai Rp 15.000/batang - Cocok untuk dekorasi, pagar ringan
-- **Diameter 4-6 cm:** Mulai Rp 25.000/batang - Popular untuk gazebo, pergola
-- **Diameter 6-8 cm:** Mulai Rp 30.000/batang - Untuk struktur sedang
-- **Diameter 8-10 cm:** Mulai Rp 35.000/batang - Penyangga kuat, tiang utama
-- **Diameter 10-12 cm:** Mulai Rp 45.000/batang - Heavy duty, struktur besar
-
-**Semua harga sudah termasuk ongkir ke Jakarta Utara!**
-
-*Harga dapat berubah sewaktu-waktu. Hubungi 081311400177 untuk info harga terbaru dan penawaran khusus pembelian partai besar.
-
 ### Testimoni Pelanggan Jakarta Utara
 
 ⭐⭐⭐⭐⭐ **"Kualitas bagus, pengiriman ke Kelapa Gading cepat, harga bersaing!"** - Pak Budi, Kontraktor Kelapa Gading
