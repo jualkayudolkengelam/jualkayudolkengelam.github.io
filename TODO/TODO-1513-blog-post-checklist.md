@@ -11,12 +11,33 @@
 
 **Output:** Blog post 2500-3000 kata dengan 12 section + product list + 4 foto carousel
 
-**Workflow:**
+**⚠️ STRATEGI 2 TAHAP PENGERJAAN:**
+
+**Mengapa dibagi 2 tahap?**
+Pembagian menjadi 2 tahap bertujuan agar AI bisa menghasilkan lebih banyak tulisan berkualitas di tahap kedua. Dengan menyelesaikan tahap 1 terlebih dahulu (section 1-7), context dan token yang tersedia di tahap 2 akan lebih banyak untuk menulis section 8-12 dengan lebih detail dan mencapai target 2500-3000 kata.
+
+**TAHAP 1 (Section 1-7):**
 1. Persiapan: Judul, slug, 4 foto, tanggal
 2. Images: Rename → Move → Convert WebP (8 files total)
-3. Buat file: Front matter + 12 section content
-4. Build & Test: Jekyll build + responsive check
-5. Deploy: Git commit + push
+3. Buat file: Front matter
+4. Content Section 1-2: Intro + Mengapa Memilih Kami + Product List
+5. Content Section 3-4: Area Pengiriman + Keunggulan
+6. Content Section 5-6: Aplikasi + Cara Pemesanan
+7. Content Section 7: Studi Kasus (opsional, ~1,800-2,000 kata)
+
+**TAHAP 2 (Section 8-12 + Deploy):**
+8. Content Section 8: Testimoni Pelanggan
+9. Content Section 9: Tips Memilih Ukuran
+10. Content Section 10: FAQ Singkat
+11. Content Section 11: Tentang [Lokasi] (WAJIB riset Wikipedia/WebSearch)
+12. Content Section 12: CTA Final
+13. Build & Test: Jekyll build + responsive check
+14. Deploy: Git commit + push
+
+**Estimasi Word Count:**
+- Tahap 1: ~1,800-2,000 kata
+- Tahap 2: +700-1,000 kata
+- **Total: 2,500-3,000 kata**
 
 **Kunci Sukses:**
 - ✅ Nomor 081311400177 muncul 8-10x
