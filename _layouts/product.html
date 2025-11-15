@@ -154,13 +154,6 @@ layout: default
     "@type": "Brand",
     "name": "{{ site.business.name }}"
   },
-  {% if page.popular %}
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "127"
-  },
-  {% endif %}
   "offers": {
     "@type": "Offer",
     "url": "{{ page.url | absolute_url }}",
@@ -172,6 +165,13 @@ layout: default
       "@type": "Organization",
       "name": "{{ site.business.name }}"
     }
-  }
+  }{% if page.popular %},
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  }{% endif %}
 }
 </script>
