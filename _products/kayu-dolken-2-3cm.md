@@ -1,25 +1,32 @@
 ---
+---
 layout: product
 title: Jual Kayu Dolken Gelam Diameter 2-3 cm
-description: Jual kayu dolken gelam diameter 2-3 cm panjang 4 meter. Kualitas premium untuk dekorasi dan hiasan hotel, cafe, atau rumah mewah. Tidak untuk konstruksi. Harga sudah termasuk ongkir. Bayar setelah barang sampai.
+description: Jual kayu dolken gelam diameter 2-3 cm panjang 4 meter. Kualitas premium
+  untuk dekorasi dan hiasan hotel, cafe, atau rumah mewah. Tidak untuk konstruksi.
+  Harga sudah termasuk ongkir. Bayar setelah barang sampai.
 price: 15000
 diameter: 2 - 3 cm
-image: /assets/images/products/jual-kayu-dolken-gelam-2-3cm-001.jpeg
+image: "/assets/images/products/jual-kayu-dolken-gelam-2-3cm-001.jpeg"
 images:
-  - /assets/images/products/jual-kayu-dolken-gelam-2-3cm-001.jpeg
-  - /assets/images/products/jual-kayu-dolken-gelam-2-3cm-002.jpeg
-  - /assets/images/products/jual-kayu-dolken-gelam-2-3cm-003.jpeg
-  - /assets/images/products/jual-kayu-dolken-gelam-2-3cm-004.jpeg
+- "/assets/images/products/jual-kayu-dolken-gelam-2-3cm-001.jpeg"
+- "/assets/images/products/jual-kayu-dolken-gelam-2-3cm-002.jpeg"
+- "/assets/images/products/jual-kayu-dolken-gelam-2-3cm-003.jpeg"
+- "/assets/images/products/jual-kayu-dolken-gelam-2-3cm-004.jpeg"
 sku: DOLKEN-2-3
 popular: false
 features:
-  - Kayu gelam asli berkualitas tinggi
-  - Tahan rayap dan cuaca ekstrem
-  - Diameter konsisten 2-3 cm
-  - Panjang standar 4 meter
-  - Ideal untuk dekorasi hotel, cafe, dan rumah mewah
-  - Harga sudah termasuk ongkir
-  - Pembayaran setelah barang sampai
+- Kayu gelam asli berkualitas tinggi
+- Tahan rayap dan cuaca ekstrem
+- Diameter konsisten 2-3 cm
+- Panjang standar 4 meter
+- Ideal untuk dekorasi hotel, cafe, dan rumah mewah
+- Harga sudah termasuk ongkir
+- Pembayaran setelah barang sampai
+review_count: 1
+total_updates: 1
+rating: 4.5
+last_modified_at: '2025-11-15 20:25:25 +0700'
 ---
 
 ## Deskripsi Produk
