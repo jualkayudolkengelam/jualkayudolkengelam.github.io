@@ -133,7 +133,15 @@ show_products: true
   Penjelasan singkat
   ```
   Nomor 081311400177 muncul di langkah 2
-- [ ] **7. Testimoni Pelanggan (150-200 kata)** - 3-5 testimoni dengan format:
+- [ ] **7. Studi Kasus Proyek (OPSIONAL, 250-300 kata)** - 3-5 proyek real di lokasi:
+  ```
+  **Nama Proyek di [Area Spesifik] (Tahun)**
+
+  Deskripsi proyek: ukuran, jumlah batang, diameter, hasil
+  ```
+  Contoh: Gazebo di Kelapa Gading, Pagar Villa di PIK, Cafe di Sunter
+  Tutup dengan CTA: Hubungi 081311400177
+- [ ] **8. Testimoni Pelanggan (150-200 kata)** - 3-5 testimoni dengan format:
   ```
   ⭐⭐⭐⭐⭐
 
