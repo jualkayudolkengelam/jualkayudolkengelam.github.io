@@ -26,14 +26,13 @@
 
   <!-- Schema.org LocalBusiness with OfferCatalog -->
   {% comment %}
-  Only show on pages related to products/business:
-  - Homepage (/)
-  - Individual product pages (layout: product)
+  Only show on individual product pages (layout: product)
   NOT on:
+  - Homepage (/) - has its own @graph schema with BreadcrumbList + ItemList
   - Product listing page (/product/) - has its own ItemList schema
   - Blog pages, contact page, or other content pages
   {% endcomment %}
-  {% if page.url == '/' or page.layout == 'product' %}
+  {% if page.layout == 'product' %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

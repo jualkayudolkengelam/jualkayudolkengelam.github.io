@@ -91,8 +91,8 @@ keywords: jual kayu dolken terdekat, kayu dolken gelam, jual kayu dolken, dolken
           },
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "{% if product.popular %}4.8{% else %}4.5{% endif %}",
-            "reviewCount": "{% if product.popular %}127{% else %}45{% endif %}",
+            "ratingValue": "{{ product.rating | default: 4.5 }}",
+            "reviewCount": "{{ product.review_count | default: 45 }}",
             "bestRating": "5",
             "worstRating": "1"
           }
