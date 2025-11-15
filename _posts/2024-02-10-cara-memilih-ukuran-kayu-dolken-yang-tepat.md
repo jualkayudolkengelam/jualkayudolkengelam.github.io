@@ -5,6 +5,14 @@ date: 2024-02-10 14:30:00 +0700
 categories: [Tips & Panduan]
 tags: [tips, panduan, ukuran kayu, konstruksi]
 author: Admin
+author_url: https://jualkayudolkengelam.github.io
+image: /assets/images/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/cara-memilih-ukuran-kayu-dolken-yang-tepat-001.jpeg
+images:
+  - /assets/images/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/cara-memilih-ukuran-kayu-dolken-yang-tepat-001.jpeg
+  - /assets/images/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/cara-memilih-ukuran-kayu-dolken-yang-tepat-002.jpeg
+  - /assets/images/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/cara-memilih-ukuran-kayu-dolken-yang-tepat-003.jpeg
+  - /assets/images/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/cara-memilih-ukuran-kayu-dolken-yang-tepat-004.jpeg
+url: /2024/02/10/cara-memilih-ukuran-kayu-dolken-yang-tepat/
 excerpt: "Panduan lengkap memilih ukuran diameter kayu dolken gelam yang sesuai dengan kebutuhan proyek konstruksi atau dekorasi Anda."
 ---
 
