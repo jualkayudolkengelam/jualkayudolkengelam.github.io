@@ -151,22 +151,22 @@ show_products: true
 
   ---
   ```
-- [ ] **8. Tips Memilih Ukuran (200-250 kata)** - Panduan praktis untuk customer
-- [ ] **9. FAQ Singkat (300-400 kata)** - 5 pertanyaan umum dengan format:
+- [ ] **9. Tips Memilih Ukuran (200-250 kata)** - Panduan praktis untuk customer
+- [ ] **10. FAQ Singkat (300-400 kata)** - 5 pertanyaan umum dengan format:
   ```
   **Pertanyaan?**
 
   Jawaban detail 2-3 kalimat dengan nomor 081311400177 jika relevan
   ```
   Topik FAQ: minimal order, perawatan, pengiriman, custom, cek kualitas
-- [ ] **10. Tentang [Lokasi] (400-500 kata)** - Informasi wilayah dari Wikipedia/web:
+- [ ] **11. Tentang [Lokasi] (400-500 kata)** - Informasi wilayah dari Wikipedia/web:
   - Sejarah singkat wilayah
   - Luas, populasi, kecamatan
   - Landmark penting (pelabuhan, mall, pusat bisnis)
   - Karakteristik wilayah (industri, komersial, residential)
   - Kenapa kayu dolken cocok untuk karakteristik wilayah tersebut
   - Tutup dengan nomor 081311400177
-- [ ] **11. CTA Final (150-200 kata)** - Hubungi 081311400177, format:
+- [ ] **12. CTA Final (150-200 kata)** - Hubungi 081311400177, format:
   ```
   ✅ Benefit 1
 
