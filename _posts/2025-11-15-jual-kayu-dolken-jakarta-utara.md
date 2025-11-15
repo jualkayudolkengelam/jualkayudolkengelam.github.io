@@ -124,11 +124,27 @@ Proses pemesanan sangat mudah dan cepat:
 
 ### Testimoni Pelanggan Jakarta Utara
 
-⭐⭐⭐⭐⭐ **"Kualitas bagus, pengiriman ke Kelapa Gading cepat, harga bersaing!"** - Pak Budi, Kontraktor Kelapa Gading
+⭐⭐⭐⭐⭐
 
-⭐⭐⭐⭐⭐ **"Puas dengan kualitas dolken gelam nya. Untuk gazebo rumah saya di Sunter perfect!"** - Bu Santi, Sunter
+**"Kualitas bagus, pengiriman ke Kelapa Gading cepat, harga bersaing!"**
 
-⭐⭐⭐⭐⭐ **"Pelayanan ramah, produk sesuai ekspektasi. Recommended untuk area Jakarta Utara."** - Pak Herman, Pluit
+*- Pak Budi, Kontraktor Kelapa Gading*
+
+---
+
+⭐⭐⭐⭐⭐
+
+**"Puas dengan kualitas dolken gelam nya. Untuk gazebo rumah saya di Sunter perfect!"**
+
+*- Bu Santi, Sunter*
+
+---
+
+⭐⭐⭐⭐⭐
+
+**"Pelayanan ramah, produk sesuai ekspektasi. Recommended untuk area Jakarta Utara."**
+
+*- Pak Herman, Pluit*
 
 ### Tips Memilih Ukuran Kayu Dolken
 
