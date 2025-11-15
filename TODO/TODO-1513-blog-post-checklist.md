@@ -128,6 +128,95 @@ show_products: true
 - Kolom `url` opsional untuk schema.org Article - format: `/YYYY/MM/DD/slug/`
 - Kolom `author_url` opsional untuk schema.org Author - default: homepage
 
+### 3b️⃣ Schema.org: Like & Interaction (Opsional)
+
+**Front Matter Fields untuk Like/Interaction:**
+```yaml
+# Opsional: Tambahkan di front matter untuk schema.org InteractionCounter
+like_count: 42
+comment_count: 15
+share_count: 8
+```
+
+**Schema.org Types yang Relevan:**
+
+1. **InteractionCounter** (untuk menampilkan jumlah like/comment/share)
+   - Type: `InteractionCounterInteractionType`
+   - Properties:
+     - `@type`: "InteractionCounter"
+     - `interactionType`: "https://schema.org/LikeAction" (atau CommentAction, ShareAction)
+     - `userInteractionCount`: Jumlah like/comment/share
+
+2. **UserInteraction** (untuk tracking engagement)
+   - Type: `UserInteraction`
+   - Properties:
+     - `@type`: "LikeAction" (atau CommentAction, ShareAction)
+     - `agent`: User yang melakukan action
+     - `target`: URL artikel
+
+**Contoh Schema.org JSON-LD di Layout:**
+```liquid
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.title }}",
+  "image": "{{ page.image | absolute_url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.author }}",
+    "url": "{{ page.author_url | default: site.url }}"
+  },
+  {% if page.like_count or page.comment_count or page.share_count %}
+  "interactionStatistic": [
+    {% if page.like_count %}
+    {
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/LikeAction",
+      "userInteractionCount": {{ page.like_count }}
+    }{% if page.comment_count or page.share_count %},{% endif %}
+    {% endif %}
+    {% if page.comment_count %}
+    {
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/CommentAction",
+      "userInteractionCount": {{ page.comment_count }}
+    }{% if page.share_count %},{% endif %}
+    {% endif %}
+    {% if page.share_count %}
+    {
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/ShareAction",
+      "userInteractionCount": {{ page.share_count }}
+    }
+    {% endif %}
+  ],
+  {% endif %}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  }
+}
+```
+
+**Checklist Schema.org Like:**
+- [ ] Tambahkan `like_count`, `comment_count`, `share_count` di front matter (opsional)
+- [ ] Update layout `post-with-products.html` untuk include InteractionCounter di schema.org
+- [ ] Test dengan Google Rich Results Test: https://search.google.com/test/rich-results
+- [ ] Verifikasi di browser: view source → cari `interactionStatistic`
+
+**Manfaat SEO:**
+- ✅ Google dapat menampilkan engagement metrics di search results
+- ✅ Meningkatkan CTR dengan social proof (like/comment counts)
+- ✅ Rich snippets lebih menarik di SERP
+- ✅ Tracking engagement per artikel untuk analytics
+
+**Note Penting:**
+- Like/comment/share counts harus **real** atau **reasonable estimate** - jangan fake
+- Update counts secara berkala (monthly) untuk akurasi
+- Jika tidak ada interaction, **skip fields ini** - Google tidak penalize
+
 ### 4️⃣ Tulis Content (25-30 menit)
 
 **Target: 2500-3000 kata untuk SEO optimal**
@@ -318,6 +407,18 @@ bundle exec jekyll build
 - [ ] Gambar load (carousel 4 foto)
 - [ ] Product list muncul setelah section "Mengapa Memilih Kami"
 - [ ] Test mobile responsive (testimoni, tips, FAQ)
+- [ ] **Verifikasi Schema.org (jika pakai like/interaction):**
+  ```bash
+  # Cek schema.org di generated HTML
+  grep -A 20 '"interactionStatistic"' _site/YYYY/MM/DD/[slug]/index.html
+
+  # Atau view di browser
+  curl -s http://localhost:4000/YYYY/MM/DD/[slug]/ | grep -A 20 'interactionStatistic'
+  ```
+- [ ] Test schema.org dengan Google Rich Results Test:
+  - URL: https://search.google.com/test/rich-results
+  - Paste URL artikel atau paste HTML source
+  - Verify: BlogPosting, InteractionCounter muncul tanpa error
 
 ### 6️⃣ Deploy (5 menit)
 ```bash
@@ -376,6 +477,115 @@ Primary: jual kayu dolken [lokasi]
 **Tangerang:** BSD, Serpong, Alam Sutera, Ciledug, Karawaci
 **Bekasi:** Bekasi Timur, Bekasi Barat, Bekasi Selatan
 **Bogor:** Bogor Kota, Cibinong, Cileungsi, Sentul
+
+---
+
+## Quick Reference: Schema.org Types
+
+### Blog Post (BlogPosting)
+**Required Fields:**
+- `@type`: "BlogPosting"
+- `headline`: Judul artikel
+- `image`: Featured image URL
+- `datePublished`: Tanggal publish (ISO 8601)
+- `dateModified`: Tanggal update terakhir
+- `author`: Object Person/Organization
+- `publisher`: Object Organization (nama site)
+- `mainEntityOfPage`: URL artikel
+
+**Optional but Recommended:**
+- `description`: Meta description
+- `articleBody`: Full text content
+- `keywords`: Keyword array/string
+- `wordCount`: Jumlah kata
+- `url`: Canonical URL
+- `interactionStatistic`: Array InteractionCounter (like/comment/share)
+
+### Interaction Types (InteractionCounter)
+**Like Action:**
+```json
+{
+  "@type": "InteractionCounter",
+  "interactionType": "https://schema.org/LikeAction",
+  "userInteractionCount": 42
+}
+```
+
+**Comment Action:**
+```json
+{
+  "@type": "InteractionCounter",
+  "interactionType": "https://schema.org/CommentAction",
+  "userInteractionCount": 15
+}
+```
+
+**Share Action:**
+```json
+{
+  "@type": "InteractionCounter",
+  "interactionType": "https://schema.org/ShareAction",
+  "userInteractionCount": 8
+}
+```
+
+### Product (Schema.org Product)
+**Required Fields:**
+- `@type`: "Product"
+- `name`: Nama produk
+- `image`: Product image URL
+- `description`: Deskripsi produk
+- `sku`: SKU/kode produk
+- `offers`: Object Offer (price, availability, etc.)
+
+**For Product Rating (AggregateRating):**
+```json
+{
+  "@type": "AggregateRating",
+  "ratingValue": "4.8",
+  "reviewCount": "91",
+  "bestRating": "5",
+  "worstRating": "1"
+}
+```
+
+**Front Matter Fields:**
+- `rating`: Rating value (e.g., 4.8)
+- `review_count`: Total review count (e.g., 91)
+- Default fallback: `rating: 4.5`, `review_count: 45`
+
+### Local Business (LocalBusiness)
+**For Homepage/Contact Page:**
+```json
+{
+  "@type": "LocalBusiness",
+  "name": "Jual Kayu Dolken Gelam",
+  "image": "logo URL",
+  "telephone": "081311400177",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jakarta",
+    "addressCountry": "ID"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -6.2088,
+    "longitude": 106.8456
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "08:00",
+    "closes": "17:00"
+  }
+}
+```
+
+### Useful Links
+- **Google Rich Results Test:** https://search.google.com/test/rich-results
+- **Schema.org Documentation:** https://schema.org/
+- **Google Search Central:** https://developers.google.com/search/docs/appearance/structured-data
+- **Validator JSON-LD:** https://validator.schema.org/
 
 ---
 
