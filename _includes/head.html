@@ -35,10 +35,91 @@
     "telephone": "{{ site.business.phone }}",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "{{ site.business.location }}",
+      "streetAddress": "Jl. Raya Banten KM 7, Kasunyatan, Kasemen",
+      "addressLocality": "Kota Serang",
+      "addressRegion": "Banten",
+      "postalCode": "42191",
       "addressCountry": "ID"
     },
-    "areaServed": "{{ site.business.coverage }}"
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-6.1104",
+      "longitude": "106.1640"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    "priceRange": "Rp 15.000 - Rp 45.000",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Jakarta"
+      },
+      {
+        "@type": "State",
+        "name": "Jawa Barat"
+      },
+      {
+        "@type": "State",
+        "name": "Banten"
+      },
+      {
+        "@type": "State",
+        "name": "Jawa Tengah"
+      },
+      {
+        "@type": "State",
+        "name": "Jawa Timur"
+      },
+      {
+        "@type": "State",
+        "name": "Bali"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Kayu Dolken Gelam",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Kayu Dolken Gelam Diameter 2-3 cm"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Kayu Dolken Gelam Diameter 4-6 cm"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Kayu Dolken Gelam Diameter 6-8 cm"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Kayu Dolken Gelam Diameter 8-10 cm"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Kayu Dolken Gelam Diameter 10-12 cm"
+          }
+        }
+      ]
+    }
   }
   </script>
 
