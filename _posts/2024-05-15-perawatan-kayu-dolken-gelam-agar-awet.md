@@ -5,6 +5,14 @@ date: 2024-05-15 13:45:00 +0700
 categories: [Tips & Panduan]
 tags: [perawatan, tips, maintenance, kayu dolken]
 author: Admin
+author_url: https://jualkayudolkengelam.github.io
+image: /assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-001.jpeg
+images:
+  - /assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-001.jpeg
+  - /assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-002.jpeg
+  - /assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-003.jpeg
+  - /assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-004.jpeg
+url: /2024/05/15/perawatan-kayu-dolken-gelam-agar-awet/
 excerpt: "Panduan lengkap merawat kayu dolken gelam untuk memaksimalkan umur pakai hingga puluhan tahun dengan perawatan minimal."
 ---
 

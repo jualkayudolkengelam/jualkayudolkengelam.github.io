@@ -5,6 +5,14 @@ date: 2024-06-10 08:30:00 +0700
 categories: [Tips & Panduan]
 tags: [tips, panduan, kalkulasi, perencanaan]
 author: Admin
+author_url: https://jualkayudolkengelam.github.io
+image: /assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-001.jpeg
+images:
+  - /assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-001.jpeg
+  - /assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-002.jpeg
+  - /assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-003.jpeg
+  - /assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-004.jpeg
+url: /2024/06/10/hitung-kebutuhan-kayu-dolken-untuk-proyek/
 excerpt: "Panduan praktis menghitung jumlah kayu dolken yang dibutuhkan untuk proyek pagar, gazebo, dekorasi, dan konstruksi lainnya dengan akurat."
 ---
 
