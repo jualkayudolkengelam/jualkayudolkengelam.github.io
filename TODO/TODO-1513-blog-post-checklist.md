@@ -65,6 +65,7 @@ title: "Jual Kayu Dolken [Lokasi] - Hub 081311400177 - Gratis Ongkir"
 description: "Jual kayu dolken [lokasi] harga terbaik. Gratis ongkir. Hub 081311400177."
 date: YYYY-MM-DD
 author: Admin
+author_url: https://jualkayudolkengelam.github.io
 image: /assets/images/posts/[slug]/[slug]-001.jpeg
 images:
   - /assets/images/posts/[slug]/[slug]-001.jpeg
@@ -72,9 +73,14 @@ images:
   - /assets/images/posts/[slug]/[slug]-003.jpeg
   - /assets/images/posts/[slug]/[slug]-004.jpeg
 keywords: jual kayu dolken [lokasi], dolken gelam [lokasi], supplier dolken [lokasi]
+url: /YYYY/MM/DD/[slug]/
 show_products: true
 ---
 ```
+
+**Note:**
+- Kolom `url` opsional untuk schema.org Article - format: `/YYYY/MM/DD/slug/`
+- Kolom `author_url` opsional untuk schema.org Author - default: homepage
 
 ### 4️⃣ Tulis Content (20-25 menit)
 
@@ -83,22 +89,63 @@ show_products: true
 **Struktur Content (Urutan):**
 
 - [ ] **1. Intro & Hook (150-200 kata)** - Cari kayu dolken di [Lokasi]? Hubungi 081311400177
-- [ ] **2. Mengapa Memilih Kami (200-250 kata)** - 6 poin dengan HTML `<ul>` dan emoji ✅
-- [ ] **3. Area Pengiriman Detail (300-400 kata)** - Kecamatan, kelurahan, landmark terkenal
-- [ ] **4. Keunggulan Kayu Dolken Gelam (250-300 kata)** - 6 poin dengan emoji 🌳, jelaskan detail
+- [ ] **2. Mengapa Memilih Kami (200-250 kata)** - 6 poin, format:
+  ```
+  ✅ **Judul Poin**
+
+  Penjelasan singkat (1-2 kalimat)
+  ```
+- [ ] **3. Area Pengiriman Detail (300-400 kata)** - Format per kecamatan:
+  ```
+  **Nama Kecamatan**
+  - Area 1, Area 2
+  - Area 3, Area 4
+  ```
+- [ ] **4. Keunggulan Kayu Dolken Gelam (250-300 kata)** - 6 poin, format:
+  ```
+  🌳 **Judul Keunggulan**
+
+  Penjelasan detail (1-2 kalimat)
+  ```
 - [ ] **5. Aplikasi & Penggunaan (300-350 kata)** - Konstruksi, dekorasi, furniture, proyek komersial
-- [ ] **6. Cara Pemesanan (200-250 kata)** - 6 langkah detail dengan nomor 081311400177
-- [ ] **7. Daftar Harga (150-200 kata)** - List semua ukuran dengan harga dan deskripsi
-- [ ] **8. Testimoni Pelanggan (150-200 kata)** - 3-5 testimoni dengan rating ⭐
-- [ ] **9. Tips Memilih Ukuran (200-250 kata)** - Panduan praktis untuk customer
-- [ ] **10. FAQ Singkat (200-250 kata)** - 3-5 pertanyaan umum
-- [ ] **11. Informasi Tambahan Lokasi (200-300 kata)** - Info unik tentang area/kota
-- [ ] **12. CTA Final (150-200 kata)** - Hubungi 081311400177 dengan 6 poin benefit
+- [ ] **6. Cara Pemesanan (200-250 kata)** - 6 langkah, format:
+  ```
+  **1. Judul Langkah**
+
+  Penjelasan singkat
+
+  **2. Judul Langkah**
+
+  Penjelasan singkat
+  ```
+  Nomor 081311400177 muncul di langkah 2
+- [ ] **7. Testimoni Pelanggan (150-200 kata)** - 3-5 testimoni dengan format:
+  ```
+  ⭐⭐⭐⭐⭐
+
+  **"Review text"**
+
+  *- Nama, Profesi/Area*
+
+  ---
+  ```
+- [ ] **8. Tips Memilih Ukuran (200-250 kata)** - Panduan praktis untuk customer
+- [ ] **9. FAQ Singkat (200-250 kata)** - 3-5 pertanyaan umum
+- [ ] **10. Informasi Tambahan Lokasi (200-300 kata)** - Info unik tentang area/kota
+- [ ] **11. CTA Final (150-200 kata)** - Hubungi 081311400177, format:
+  ```
+  ✅ Benefit 1
+
+  ✅ Benefit 2
+  ```
+  6 poin benefit dengan emoji ✅
 
 **Poin Penting:**
 - Nomor **081311400177** muncul minimal 8-10x (tersebar merata)
 - **Total minimal 2500 kata** (untuk ranking Google lebih baik)
-- Gunakan HTML list dengan style inline (mobile-friendly)
+- **TIDAK PERLU** menulis section "Harga" - sudah otomatis dari product list partial
+- **JANGAN gunakan HTML list** - gunakan format markdown sederhana untuk mobile
+- Format: Emoji/Icon → Bold Title (baris terpisah) → Penjelasan (baris terpisah)
 - Setiap section punya H3 heading (untuk struktur SEO)
 - Sisipkan keyword naturally di setiap section
 
@@ -130,6 +177,28 @@ git push origin main
   <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>Point 2</strong> - Deskripsi</li>
 </ul>
 ```
+
+---
+
+## Template Product List Partial (Copy-Paste)
+
+**PENTING:** Layout `post-with-products` sudah otomatis include product list di bawah konten.
+
+Jika ingin custom placement, gunakan partial berikut:
+
+```liquid
+{% include product-list.html %}
+```
+
+**Product list akan tampil otomatis jika:**
+- Front matter memiliki `show_products: true`
+- Layout menggunakan `post-with-products`
+- Tidak perlu manual include di content
+
+**Format responsive:**
+- Desktop: Table dengan 5 kolom (Gambar, Nama, Ukuran, Harga, Action)
+- Mobile: Card dengan semua info dan tombol WhatsApp
+- Auto-switch pada breakpoint 768px
 
 ---
 
