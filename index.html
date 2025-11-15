@@ -277,8 +277,35 @@ keywords: jual kayu dolken terdekat, kayu dolken gelam, jual kayu dolken, dolken
             {% endif %}
           </div>
           <div class="card-body text-center">
-            <div class="product-price mb-3">Rp {{ product.price | rupiah }}</div>
-            <p class="text-muted mb-4">per batang (4 meter)</p>
+            <div class="product-price mb-2">Rp {{ product.price | rupiah }}</div>
+            <p class="text-muted mb-2">per batang (4 meter)</p>
+
+            {% if product.rating or product.review_count %}
+            <div class="mb-3 d-flex justify-content-center align-items-center gap-2">
+              {% if product.rating %}
+              <div class="text-warning">
+                {% assign rating_rounded = product.rating | default: 4.5 | round %}
+                {% for i in (1..5) %}
+                  {% if i <= rating_rounded %}
+                    <i class="bi bi-star-fill"></i>
+                  {% else %}
+                    <i class="bi bi-star"></i>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              {% endif %}
+              {% if product.rating and product.review_count %}
+              <span class="text-muted small">
+                <strong>{{ product.rating }}</strong> ({{ product.review_count }} ulasan)
+              </span>
+              {% elsif product.review_count %}
+              <span class="text-muted small">
+                {{ product.review_count }} ulasan
+              </span>
+              {% endif %}
+            </div>
+            {% endif %}
+
             {% if product.features %}
             <ul class="list-unstyled text-start mb-4">
               {% for feature in product.features limit:4 %}
