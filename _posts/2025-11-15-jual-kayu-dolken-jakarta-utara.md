@@ -49,6 +49,18 @@ Tersedia berbagai ukuran diameter 2-3 cm hingga 10-12 cm
 
 Tim kami siap melayani Anda kapan saja untuk konsultasi gratis
 
+---
+
+## 💰 Daftar Harga Kayu Dolken Jakarta Utara
+
+Berikut daftar lengkap harga kayu dolken gelam untuk area Jakarta Utara dengan pengiriman gratis:
+
+{% include product-list.html %}
+
+**📞 Hubungi 081311400177 untuk info harga terbaru dan penawaran khusus!**
+
+---
+
 ### Area Pengiriman Jakarta Utara
 
 Kami melayani pengiriman kayu dolken gelam ke seluruh wilayah Jakarta Utara dengan pengiriman gratis:
@@ -227,6 +239,54 @@ Bayar setelah barang sampai dan Anda cek kualitasnya
 - Tahan beban berat jangka panjang
 
 **Butuh Konsultasi?** Hubungi **081311400177** - tim kami siap bantu hitung kebutuhan Anda!
+
+### FAQ Seputar Kayu Dolken Jakarta Utara
+
+**Berapa minimal pemesanan kayu dolken?**
+
+Kami melayani pemesanan mulai dari 10 batang hingga proyek besar ratusan batang. Untuk pemesanan partai besar, kami berikan harga khusus yang lebih kompetitif. Hubungi **081311400177** untuk konsultasi jumlah yang Anda butuhkan.
+
+**Apakah kayu dolken perlu perawatan khusus?**
+
+Kayu dolken gelam tidak memerlukan perawatan khusus karena sudah tahan rayap dan cuaca secara alami. Namun untuk aplikasi outdoor, Anda bisa menambahkan coating atau vernis untuk mempercantik tampilan dan menambah daya tahan warna natural kayu.
+
+**Berapa lama pengiriman ke Jakarta Utara?**
+
+Untuk area Jakarta Utara, pengiriman biasanya 1-3 hari kerja setelah konfirmasi pesanan. Pengiriman gratis untuk seluruh wilayah Jakarta Utara termasuk Kelapa Gading, Sunter, Pluit, Ancol, dan sekitarnya.
+
+**Apakah bisa custom panjang kayu dolken?**
+
+Ya, kami melayani custom panjang sesuai kebutuhan proyek Anda. Standar panjang kami 4 meter, namun bisa dipotong atau disesuaikan dengan spesifikasi yang Anda inginkan. Hubungi tim kami di **081311400177** untuk diskusi lebih detail.
+
+**Bagaimana cara mengecek kualitas kayu dolken?**
+
+Kami menyediakan sistem COD (Cash on Delivery) sehingga Anda bisa cek kualitas kayu dolken terlebih dahulu sebelum membayar. Pastikan kayu tidak bengkok, tidak ada retakan besar, dan diameter sesuai pesanan.
+
+### Tentang Jakarta Utara: Pusat Bisnis & Pelabuhan
+
+Jakarta Utara adalah salah satu wilayah strategis di DKI Jakarta dengan luas 146,66 km² yang mencakup 22,06% dari total luas provinsi. Wilayah ini memiliki populasi sekitar 1,8 juta jiwa di akhir 2024 dan terdiri dari 6 kecamatan: Cilincing, Koja, Kelapa Gading, Tanjung Priok, Pademangan, dan Penjaringan.
+
+**Sejarah Jakarta Utara**
+
+Pada abad ke-5 Masehi, kawasan Jakarta Utara menjadi pusat pemerintahan Kerajaan Tarumanegara yang terletak di muara Sungai Ciliwung area Angke. Melalui akses pelabuhan yang terbuka untuk perdagangan, penyebaran agama, dan budaya, Jakarta Utara menjadi pusat pertumbuhan peradaban dari era kerajaan hingga masa kolonial. Sejak 1966, Jakarta Utara memiliki status otonomi khusus sebagai Kota Administrasi bagian dari Provinsi DKI Jakarta yang ditetapkan melalui Peraturan Pemerintah No. 25 Tahun 1978.
+
+**Pelabuhan Tanjung Priok: Jantung Ekonomi**
+
+Jakarta Utara dikenal sebagai kota pelabuhan dengan **Pelabuhan Tanjung Priok** dan **Pelabuhan Sunda Kelapa** sebagai landmark utama. Pembangunan Pelabuhan Tanjung Priok dimulai pada Mei 1877 dan selesai tahun 1886. Pelabuhan ini menjadi salah satu pelabuhan tersibuk di Indonesia yang berperan penting dalam melayani arus barang antar pulau dan negara, mendorong perekonomian melalui sektor ekspor-impor sejak masa lalu hingga kini.
+
+**Pusat Bisnis & Komersial Modern**
+
+Selain sebagai kawasan pelabuhan, Jakarta Utara juga berkembang menjadi pusat bisnis dan komersial modern. Area Kelapa Gading dengan Mall of Indonesia (MOI), Mall Kelapa Gading, dan La Piazza menjadi destinasi belanja dan kuliner favorit. Kawasan Pluit dan Pantai Indah Kapuk (PIK) berkembang sebagai area hunian mewah dengan infrastruktur modern. Sunter menjadi kawasan industri dan pergudangan yang strategis.
+
+**Pembangunan & Infrastruktur**
+
+Sebagai wilayah yang terus berkembang, Jakarta Utara membutuhkan banyak material konstruksi berkualitas termasuk kayu dolken gelam untuk berbagai proyek pembangunan. Mulai dari proyek komersial seperti hotel, restoran, mall, hingga residential seperti perumahan, apartment, dan villa di area Kelapa Gading, Pluit, PIK, dan Sunter.
+
+**Kenapa Kayu Dolken Penting untuk Jakarta Utara?**
+
+Dengan karakteristik wilayah Jakarta Utara yang dekat dengan laut, kelembaban tinggi, dan cuaca tropis, kayu dolken gelam menjadi pilihan ideal karena sifatnya yang tahan air, tahan rayap, dan tahan cuaca ekstrem. Cocok untuk aplikasi outdoor seperti gazebo di area tepi pantai, pergola di area taman kota, pagar villa di PIK, hingga landscaping di area komersial Mall Kelapa Gading.
+
+Untuk kebutuhan kayu dolken gelam di Jakarta Utara, hubungi **081311400177** - kami siap melayani dengan pengiriman gratis ke seluruh wilayah Jakarta Utara!
 
 ---
 
