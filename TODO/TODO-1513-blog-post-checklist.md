@@ -82,9 +82,9 @@ show_products: true
 - Kolom `url` opsional untuk schema.org Article - format: `/YYYY/MM/DD/slug/`
 - Kolom `author_url` opsional untuk schema.org Author - default: homepage
 
-### 4️⃣ Tulis Content (20-25 menit)
+### 4️⃣ Tulis Content (25-30 menit)
 
-**Target: 2500+ kata untuk SEO optimal**
+**Target: 2500-3000 kata untuk SEO optimal**
 
 **Struktur Content (Urutan):**
 
@@ -94,6 +94,20 @@ show_products: true
   ✅ **Judul Poin**
 
   Penjelasan singkat (1-2 kalimat)
+  ```
+- [ ] **2b. Include Product List** - Tambahkan setelah "Mengapa Memilih Kami":
+  ```markdown
+  ---
+
+  ## 💰 Daftar Harga Kayu Dolken [Lokasi]
+
+  Berikut daftar lengkap harga kayu dolken gelam untuk area [Lokasi] dengan pengiriman gratis:
+
+  {% include product-list.html %}
+
+  **📞 Hubungi 081311400177 untuk info harga terbaru dan penawaran khusus!**
+
+  ---
   ```
 - [ ] **3. Area Pengiriman Detail (300-400 kata)** - Format per kecamatan:
   ```
@@ -130,8 +144,20 @@ show_products: true
   ---
   ```
 - [ ] **8. Tips Memilih Ukuran (200-250 kata)** - Panduan praktis untuk customer
-- [ ] **9. FAQ Singkat (200-250 kata)** - 3-5 pertanyaan umum
-- [ ] **10. Informasi Tambahan Lokasi (200-300 kata)** - Info unik tentang area/kota
+- [ ] **9. FAQ Singkat (300-400 kata)** - 5 pertanyaan umum dengan format:
+  ```
+  **Pertanyaan?**
+
+  Jawaban detail 2-3 kalimat dengan nomor 081311400177 jika relevan
+  ```
+  Topik FAQ: minimal order, perawatan, pengiriman, custom, cek kualitas
+- [ ] **10. Tentang [Lokasi] (400-500 kata)** - Informasi wilayah dari Wikipedia/web:
+  - Sejarah singkat wilayah
+  - Luas, populasi, kecamatan
+  - Landmark penting (pelabuhan, mall, pusat bisnis)
+  - Karakteristik wilayah (industri, komersial, residential)
+  - Kenapa kayu dolken cocok untuk karakteristik wilayah tersebut
+  - Tutup dengan nomor 081311400177
 - [ ] **11. CTA Final (150-200 kata)** - Hubungi 081311400177, format:
   ```
   ✅ Benefit 1
@@ -142,12 +168,14 @@ show_products: true
 
 **Poin Penting:**
 - Nomor **081311400177** muncul minimal 8-10x (tersebar merata)
-- **Total minimal 2500 kata** (untuk ranking Google lebih baik)
-- **TIDAK PERLU** menulis section "Harga" - sudah otomatis dari product list partial
+- **Total target 2500-3000 kata** (untuk ranking Google optimal)
+- **Product list muncul 2x**: Manual include setelah section 2 + otomatis di bawah (dari layout)
+- **TIDAK PERLU** menulis section "Harga" manual - sudah ada di product list
 - **JANGAN gunakan HTML list** - gunakan format markdown sederhana untuk mobile
 - Format: Emoji/Icon → Bold Title (baris terpisah) → Penjelasan (baris terpisah)
 - Setiap section punya H3 heading (untuk struktur SEO)
 - Sisipkan keyword naturally di setiap section
+- Section 10 (Tentang Lokasi): cari info di Wikipedia atau web search untuk sejarah & fakta wilayah
 
 ### 5️⃣ Build & Test (5 menit)
 ```bash
