@@ -176,6 +176,15 @@ layout: default
       </div>
     </div>
   </div>
+
+  <!-- Related Articles Section -->
+  {% if site.posts.size > 0 %}
+  <div class="row mt-5">
+    <div class="col-12">
+      {% include related-content-by-node-id.html title="Artikel Panduan & Tips" %}
+    </div>
+  </div>
+  {% endif %}
 </div>
 
 <!-- Schema.org Product Markup -->

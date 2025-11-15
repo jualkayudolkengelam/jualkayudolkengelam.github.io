@@ -1,0 +1,164 @@
+{% comment %}
+  Related Products Component - Node-based rotation system
+
+  Logic: Rotates products based on article's position
+  - Each article shows different 3 products in rotation
+  - Article at node 20 shows products starting from (20 % total_products)
+  - Ensures all products get equal exposure across all articles
+
+  Usage:
+  {% include related-products.html %}
+{% endcomment %}
+
+{% comment %} Find current article index in site.posts {% endcomment %}
+{% assign current_index = 0 %}
+{% for post in site.posts %}
+  {% if post.url == page.url %}
+    {% assign current_index = forloop.index0 %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Sort products by price for consistent order {% endcomment %}
+{% assign sorted_products = site.products | sort: "price" %}
+{% assign product_count = sorted_products.size %}
+
+{% comment %} Calculate starting position using modulo for rotation {% endcomment %}
+{% assign start_position = current_index | modulo: product_count %}
+
+{% comment %} Get 3 products starting from calculated position (circular) {% endcomment %}
+{% assign selected_products = "" | split: "" %}
+
+{% for i in (0..2) %}
+  {% assign target_index = start_position | plus: i %}
+  {% assign target_index = target_index | modulo: product_count %}
+
+  {% for product in sorted_products %}
+    {% if forloop.index0 == target_index %}
+      {% assign selected_products = selected_products | push: product %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% assign final_products = selected_products %}
+
+<!-- Related Products Section -->
+<section class="related-products-section my-5 py-4 bg-light rounded">
+  <div class="container">
+    <div class="row align-items-center mb-4">
+      <div class="col">
+        <h3 class="h4 fw-bold text-wood mb-0">
+          <i class="bi bi-box-seam me-2"></i>Produk Kayu Dolken Gelam
+        </h3>
+        <p class="text-muted small mb-0 mt-1">Pilihan ukuran untuk kebutuhan proyek Anda</p>
+      </div>
+      <div class="col-auto">
+        <a href="{{ '/produk' | relative_url }}" class="btn btn-sm btn-outline-wood">
+          Lihat Semua Produk <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      {% for product in final_products %}
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100 product-card">
+          {% if product.image %}
+          <a href="{{ product.url | relative_url }}" class="text-decoration-none">
+            <picture>
+              <source srcset="{{ product.image | replace: '.jpeg', '.webp' | replace: '.jpg', '.webp' | relative_url }}" type="image/webp">
+              <img src="{{ product.image | relative_url }}"
+                   class="card-img-top"
+                   alt="{{ product.title }}"
+                   loading="lazy"
+                   style="height: 200px; object-fit: cover;">
+            </picture>
+          </a>
+          {% else %}
+          <div class="card-img-top bg-wood-gradient d-flex align-items-center justify-content-center" style="height: 200px;">
+            <i class="bi bi-tree text-white" style="font-size: 3rem;"></i>
+          </div>
+          {% endif %}
+
+          <div class="card-body">
+            <h4 class="card-title h6 fw-bold text-wood mb-2">
+              {{ product.title }}
+            </h4>
+
+            <p class="card-text mb-2">
+              <span class="text-muted small">Diameter:</span><br>
+              <strong>{{ product.diameter }}</strong>
+            </p>
+
+            <p class="card-text mb-3">
+              <span class="text-muted small">Harga:</span><br>
+              <span class="text-wood fw-bold fs-5">Rp {{ product.price | rupiah }}</span>
+              <small class="text-muted d-block">per batang (4 meter)</small>
+            </p>
+
+            {% if product.features %}
+            <p class="card-text small text-secondary mb-3">
+              <i class="bi bi-check-circle me-1"></i>{{ product.features | first }}
+            </p>
+            {% endif %}
+
+            <div class="d-grid gap-2">
+              <a href="{{ product.url | relative_url }}" class="btn btn-sm btn-outline-wood">
+                <i class="bi bi-info-circle me-1"></i>Detail Produk
+              </a>
+              <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20{{ product.title }}%20-%20Rp%20{{ product.price }}"
+                 class="btn btn-sm btn-success"
+                 target="_blank">
+                <i class="bi bi-whatsapp me-1"></i>Pesan Sekarang
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center mt-4 pt-4 border-top">
+      <p class="mb-3">
+        <strong>Butuh bantuan memilih ukuran yang tepat?</strong><br>
+        <span class="text-muted small">Tim kami siap membantu menghitung kebutuhan material untuk proyek Anda</span>
+      </p>
+      <div class="d-flex flex-column flex-md-row gap-2 justify-content-center">
+        <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20konsultasi%20tentang%20kayu%20dolken%20gelam"
+           class="btn btn-success px-4"
+           target="_blank">
+          <i class="bi bi-whatsapp me-2"></i>Konsultasi Gratis
+        </a>
+        <a href="{{ '/produk' | relative_url }}"
+           class="btn btn-outline-wood px-4">
+          <i class="bi bi-list me-2"></i>Lihat Semua Produk
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.product-card {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0.75rem 1.5rem rgba(139, 69, 19, 0.15) !important;
+}
+
+.product-card .card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.bg-wood-gradient {
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #CD853F 100%);
+}
+</style>

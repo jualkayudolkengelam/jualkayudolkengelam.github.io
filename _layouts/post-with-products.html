@@ -71,6 +71,11 @@ layout: default
     <div class="post-content mb-5">
       {{ content }}
     </div>
+
+    <!-- Related Articles (in content for SEO) -->
+    {% if site.posts.size > 1 %}
+      {% include related-content-by-node-id.html %}
+    {% endif %}
   </article>
 
   <!-- CTA Section -->
@@ -91,6 +96,9 @@ layout: default
     </div>
   </section>
 </div>
+
+<!-- Related Products Section (Node-based rotation) -->
+{% include related-products-by-node-id.html %}
 
 <!-- Schema.org Markup -->
 <script type="application/ld+json">
