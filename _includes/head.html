@@ -25,7 +25,7 @@
   <meta name="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}{% endif %}">
 
   <!-- Schema.org LocalBusiness -->
-  {% unless page.url == '/' or page.url contains '/product/' or page.show_products %}
+  {% unless page.url == '/' or page.url contains '/product/' or page.url contains '/kontak/' or page.show_products %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
