@@ -24,8 +24,16 @@
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}{% endif %}">
 
-  <!-- Schema.org LocalBusiness -->
-  {% unless page.url == '/' or page.url contains '/product/' or page.url contains '/kontak/' or page.show_products %}
+  <!-- Schema.org LocalBusiness with OfferCatalog -->
+  {% comment %}
+  Only show on pages related to products/business:
+  - Homepage (/)
+  - Product listing page (/product/)
+  - Individual product pages (layout: product or show_products: true)
+  - Contact page (/kontak/)
+  NOT on blog pages or other content pages
+  {% endcomment %}
+  {% if page.url == '/' or page.url contains '/product' or page.url contains '/kontak' or page.layout == 'product' %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -93,6 +101,8 @@
             "@type": "Product",
             "name": "{{ product.title }}",
             "description": "{{ product.description | strip_html | strip_newlines | escape }}",
+            "image": "{{ product.image | absolute_url }}",
+            "sku": "{{ product.sku }}",
             "offers": {
               "@type": "Offer",
               "price": "{{ product.price }}",
@@ -111,7 +121,43 @@
     }
   }
   </script>
-  {% endunless %}
+  {% endif %}
+
+  {% if page.url == '/blog' or page.url == '/blog/' %}
+  <!-- Schema.org CollectionPage for Blog Listing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "{{ page.title }}",
+    "description": "{{ page.description }}",
+    "url": "{{ page.url | absolute_url }}",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {% for post in site.posts limit:10 %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "url": "{{ post.url | absolute_url }}",
+          "name": "{{ post.title }}",
+          "item": {
+            "@type": "BlogPosting",
+            "headline": "{{ post.title }}",
+            "datePublished": "{{ post.date | date_to_xmlschema }}",
+            "author": {
+              "@type": "Person",
+              "name": "{% if post.author %}{{ post.author }}{% else %}Admin{% endif %}"
+            },
+            "image": "{% if post.image %}{{ post.image | absolute_url }}{% else %}{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}{% endif %}"
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+  }
+  </script>
+  {% endif %}
 
   {% if page.layout == 'post' %}
   <!-- Schema.org BlogPosting -->
