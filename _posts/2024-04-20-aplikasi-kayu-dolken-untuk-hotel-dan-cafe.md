@@ -5,6 +5,14 @@ date: 2024-04-20 11:00:00 +0700
 categories: [Inspirasi Desain]
 tags: [desain, hotel, cafe, dekorasi, interior]
 author: Admin
+author_url: https://jualkayudolkengelam.github.io
+image: /assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-001.jpeg
+images:
+  - /assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-001.jpeg
+  - /assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-002.jpeg
+  - /assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-003.jpeg
+  - /assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-004.jpeg
+url: /2024/04/20/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/
 excerpt: "Ide kreatif mengaplikasikan kayu dolken gelam untuk menciptakan suasana natural dan elegan di hotel dan cafe Anda."
 ---
 
