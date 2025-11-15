@@ -159,6 +159,65 @@
   </script>
   {% endif %}
 
+  {% if page.url == '/tentang' or page.url == '/tentang/' %}
+  <!-- Schema.org AboutPage with Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "{{ page.title }}",
+    "description": "{{ page.description }}",
+    "url": "{{ page.url | absolute_url }}",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "{{ site.business.name }}",
+      "description": "{{ site.description }}",
+      "url": "{{ site.url }}",
+      "telephone": "{{ site.business.phone }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Raya Banten KM 7, Kasunyatan, Kasemen",
+        "addressLocality": "Kota Serang",
+        "addressRegion": "Banten",
+        "postalCode": "42191",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-6.1104",
+        "longitude": "106.1640"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Jakarta"
+        },
+        {
+          "@type": "State",
+          "name": "Jawa Barat"
+        },
+        {
+          "@type": "State",
+          "name": "Banten"
+        },
+        {
+          "@type": "State",
+          "name": "Jawa Tengah"
+        },
+        {
+          "@type": "State",
+          "name": "Jawa Timur"
+        },
+        {
+          "@type": "State",
+          "name": "Bali"
+        }
+      ]
+    }
+  }
+  </script>
+  {% endif %}
+
   {% if page.layout == 'post' %}
   <!-- Schema.org BlogPosting -->
   <script type="application/ld+json">
