@@ -143,70 +143,146 @@ layout: default
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "{{ page.title }}",
-  "description": "{{ page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 }}",
-  {% if page.image %}
-  "image": "{{ page.image | absolute_url }}",
-  {% endif %}
-  "sku": "{{ page.sku }}",
-  "brand": {
-    "@type": "Brand",
-    "name": "{{ site.business.name }}"
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "{{ page.url | absolute_url }}",
-    "priceCurrency": "IDR",
-    "price": "{{ page.price }}",
-    "priceValidUntil": "2025-12-31",
-    "availability": "https://schema.org/InStock",
-    "seller": {
-      "@type": "Organization",
-      "name": "{{ site.business.name }}"
-    },
-    "shippingDetails": {
-      "@type": "OfferShippingDetails",
-      "shippingRate": {
-        "@type": "MonetaryAmount",
-        "value": "0",
-        "currency": "IDR"
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "{{ page.title }}",
+      "description": "{{ page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 }}",
+      {% if page.image %}
+      "image": "{{ page.image | absolute_url }}",
+      {% endif %}
+      "sku": "{{ page.sku }}",
+      "brand": {
+        "@type": "Brand",
+        "name": "{{ site.business.name }}"
       },
-      "shippingDestination": {
-        "@type": "DefinedRegion",
-        "addressCountry": "ID"
-      },
-      "deliveryTime": {
-        "@type": "ShippingDeliveryTime",
-        "handlingTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 1,
-          "maxValue": 2,
-          "unitCode": "DAY"
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ page.url | absolute_url }}",
+        "priceCurrency": "IDR",
+        "price": "{{ page.price }}",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "{{ site.business.name }}"
         },
-        "transitTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 3,
-          "maxValue": 7,
-          "unitCode": "DAY"
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "IDR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "ID"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "ID",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 7,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
         }
-      }
+      }{% if page.popular %},
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
+      }{% endif %}
     },
-    "hasMerchantReturnPolicy": {
-      "@type": "MerchantReturnPolicy",
-      "applicableCountry": "ID",
-      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-      "merchantReturnDays": 7,
-      "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/FreeReturn"
+    {
+      "@type": "ItemList",
+      "name": "Produk Lainnya",
+      "itemListElement": [
+        {% assign related_products = site.products | where_exp: "item", "item.url != page.url" | sample: 3 %}
+        {% for product in related_products limit:3 %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": "Product",
+            "name": "{{ product.title }}",
+            "description": "{{ product.description | strip_html | strip_newlines | escape }}",
+            "image": "{{ site.url }}{{ site.baseurl }}{{ product.image }}",
+            "url": "{{ site.url }}{{ site.baseurl }}{{ product.url }}",
+            "sku": "DOLKEN-{{ product.diameter | replace: ' ', '' | upcase }}",
+            "brand": {
+              "@type": "Brand",
+              "name": "{{ site.business.name }}"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "{{ product.price }}",
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock",
+              "url": "{{ site.url }}{{ site.baseurl }}{{ product.url }}",
+              "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+              "seller": {
+                "@type": "Organization",
+                "name": "{{ site.business.name }}"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "IDR"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "ID"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 3,
+                    "maxValue": 7,
+                    "unitCode": "DAY"
+                  }
+                }
+              },
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "ID",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "merchantReturnDays": 7,
+                "returnMethod": "https://schema.org/ReturnByMail",
+                "returnFees": "https://schema.org/FreeReturn"
+              }
+            }
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
     }
-  }{% if page.popular %},
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "127",
-    "bestRating": "5",
-    "worstRating": "1"
-  }{% endif %}
+  ]
 }
 </script>
