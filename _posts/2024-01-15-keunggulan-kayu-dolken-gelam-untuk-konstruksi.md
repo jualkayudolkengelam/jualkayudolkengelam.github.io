@@ -17,6 +17,7 @@ excerpt: "Kayu dolken gelam memiliki berbagai keunggulan yang membuatnya menjadi
 like_count: 67
 comment_count: 12
 share_count: 23
+last_modified_at: 2025-10-15 14:30:00 +0700
 ---
 
 Kayu dolken gelam telah lama dikenal sebagai salah satu jenis kayu terkuat dan paling tahan lama. Tidak heran jika kayu ini menjadi pilihan favorit untuk berbagai proyek konstruksi, dari yang skala kecil hingga besar.

@@ -24,7 +24,7 @@ layout: default
             </span>
             {% endif %}
             {% if page.categories %}
-            <span>
+            <span class="me-3">
               <i class="bi bi-folder me-1"></i>
               {% for category in page.categories %}
                 <a href="{{ site.baseurl }}/blog/kategori/{{ category | slugify }}" class="text-muted text-decoration-none">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
@@ -32,6 +32,33 @@ layout: default
             </span>
             {% endif %}
           </div>
+
+          <!-- Engagement Stats -->
+          {% if page.like_count or page.comment_count or page.share_count %}
+          <div class="engagement-stats mb-3 d-flex align-items-center flex-wrap gap-3">
+            {% if page.like_count %}
+            <span class="d-flex align-items-center text-muted">
+              <i class="bi bi-heart-fill me-1 text-danger"></i>
+              <strong class="text-dark">{{ page.like_count }}</strong>
+              <span class="ms-1 small">suka</span>
+            </span>
+            {% endif %}
+            {% if page.comment_count %}
+            <span class="d-flex align-items-center text-muted">
+              <i class="bi bi-chat-fill me-1 text-primary"></i>
+              <strong class="text-dark">{{ page.comment_count }}</strong>
+              <span class="ms-1 small">komentar</span>
+            </span>
+            {% endif %}
+            {% if page.share_count %}
+            <span class="d-flex align-items-center text-muted">
+              <i class="bi bi-share-fill me-1 text-success"></i>
+              <strong class="text-dark">{{ page.share_count }}</strong>
+              <span class="ms-1 small">dibagikan</span>
+            </span>
+            {% endif %}
+          </div>
+          {% endif %}
 
           {% if page.image %}
           <div class="post-image mb-4">

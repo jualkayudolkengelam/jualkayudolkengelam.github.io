@@ -48,8 +48,34 @@ Shows: 3 latest posts + 3 older posts (relative to current post)
                 </a>
               </h4>
               <p class="card-text small text-muted mb-2">
-                <i class="bi bi-calendar3 me-1"></i>{{ post.date | date: "%d %B %Y" }}
+                <i class="bi bi-calendar3 me-1"></i>{{ post.date | date: "%d %b %Y" }}
+                {% if post.last_modified_at %}
+                <span class="ms-2" title="Terakhir diperbarui">
+                  <i class="bi bi-pencil-square me-1"></i>{{ post.last_modified_at | date: "%d %b %Y" }}
+                </span>
+                {% endif %}
               </p>
+
+              {% if post.like_count or post.comment_count or post.share_count %}
+              <div class="mb-2 d-flex align-items-center flex-wrap gap-2" style="font-size: 0.75rem;">
+                {% if post.like_count %}
+                <span class="text-muted">
+                  <i class="bi bi-heart-fill text-danger"></i> {{ post.like_count }}
+                </span>
+                {% endif %}
+                {% if post.comment_count %}
+                <span class="text-muted">
+                  <i class="bi bi-chat-fill text-primary"></i> {{ post.comment_count }}
+                </span>
+                {% endif %}
+                {% if post.share_count %}
+                <span class="text-muted">
+                  <i class="bi bi-share-fill text-success"></i> {{ post.share_count }}
+                </span>
+                {% endif %}
+              </div>
+              {% endif %}
+
               <p class="card-text small">{{ post.excerpt | strip_html | truncate: 100 }}</p>
               <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-outline-wood">
                 Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i>
