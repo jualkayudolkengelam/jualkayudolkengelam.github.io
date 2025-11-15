@@ -30,10 +30,9 @@
   - Homepage (/)
   - Product listing page (/product/)
   - Individual product pages (layout: product or show_products: true)
-  - Contact page (/kontak/)
-  NOT on blog pages or other content pages
+  NOT on blog pages, contact page, or other content pages
   {% endcomment %}
-  {% if page.url == '/' or page.url contains '/product' or page.url contains '/kontak' or page.layout == 'product' %}
+  {% if page.url == '/' or page.url contains '/product' or page.layout == 'product' %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -174,6 +173,7 @@
       "description": "{{ site.description }}",
       "url": "{{ site.url }}",
       "telephone": "{{ site.business.phone }}",
+      "image": "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Jl. Raya Banten KM 7, Kasunyatan, Kasemen",
@@ -187,6 +187,73 @@
         "latitude": "-6.1104",
         "longitude": "106.1640"
       },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Jakarta"
+        },
+        {
+          "@type": "State",
+          "name": "Jawa Barat"
+        },
+        {
+          "@type": "State",
+          "name": "Banten"
+        },
+        {
+          "@type": "State",
+          "name": "Jawa Tengah"
+        },
+        {
+          "@type": "State",
+          "name": "Jawa Timur"
+        },
+        {
+          "@type": "State",
+          "name": "Bali"
+        }
+      ]
+    }
+  }
+  </script>
+  {% endif %}
+
+  {% if page.url == '/kontak' or page.url == '/kontak/' %}
+  <!-- Schema.org ContactPage with LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "{{ page.title }}",
+    "description": "{{ page.description }}",
+    "url": "{{ page.url | absolute_url }}",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "{{ site.business.name }}",
+      "description": "{{ site.description }}",
+      "url": "{{ site.url }}",
+      "telephone": "{{ site.business.phone }}",
+      "image": "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Raya Banten KM 7, Kasunyatan, Kasemen",
+        "addressLocality": "Kota Serang",
+        "addressRegion": "Banten",
+        "postalCode": "42191",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-6.1104",
+        "longitude": "106.1640"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "priceRange": "Rp 15.000 - Rp 45.000",
       "areaServed": [
         {
           "@type": "City",
