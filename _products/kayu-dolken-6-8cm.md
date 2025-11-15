@@ -7,6 +7,9 @@ diameter: 6 - 8 cm
 image: /assets/images/products/jual-kayu-dolken-gelam-6-8cm-001.jpeg
 sku: DOLKEN-6-8
 popular: false
+rating: 4.7
+review_count: 68
+total_updates: 0
 features:
   - Kayu gelam asli kualitas super
   - Diameter besar untuk konstruksi kuat

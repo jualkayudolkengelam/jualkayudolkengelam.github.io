@@ -7,6 +7,9 @@ diameter: 8 - 10 cm
 image: /assets/images/products/jual-kayu-dolken-gelam-8-10cm-001.jpeg
 sku: DOLKEN-8-10
 popular: true
+rating: 4.8
+review_count: 91
+total_updates: 0
 features:
   - Produk paling laris dan populer
   - Kayu gelam asli kualitas super premium

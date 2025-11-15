@@ -74,6 +74,25 @@ layout: default
       <span class="badge bg-warning text-dark mb-3"><i class="bi bi-star-fill me-1"></i> Produk Populer</span>
       {% endif %}
 
+      <!-- Rating Display -->
+      {% if page.rating %}
+      <div class="product-rating mb-3">
+        <span class="text-warning me-2">
+          {% assign rating = page.rating %}
+          {% for i in (1..5) %}
+            {% if i <= rating %}
+              <i class="bi bi-star-fill"></i>
+            {% else %}
+              <i class="bi bi-star"></i>
+            {% endif %}
+          {% endfor %}
+        </span>
+        <span class="text-muted">
+          <strong>{{ page.rating }}/5</strong> ({{ page.review_count | default: 0 }} review)
+        </span>
+      </div>
+      {% endif %}
+
       <div class="product-price-large mb-4">
         <span class="h2 text-wood fw-bold">Rp {{ page.price | rupiah }}</span>
         <p class="text-muted">per batang (4 meter)</p>
@@ -253,8 +272,8 @@ layout: default
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "{% if page.popular %}4.8{% else %}4.5{% endif %}",
-        "reviewCount": "{% if page.popular %}127{% else %}45{% endif %}",
+        "ratingValue": "{{ page.rating | default: 4.5 }}",
+        "reviewCount": "{{ page.review_count | default: 45 }}",
         "bestRating": "5",
         "worstRating": "1"
       }
