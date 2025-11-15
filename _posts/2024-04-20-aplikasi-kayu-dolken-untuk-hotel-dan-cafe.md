@@ -17,6 +17,7 @@ excerpt: "Ide kreatif mengaplikasikan kayu dolken gelam untuk menciptakan suasan
 like_count: 92
 comment_count: 24
 share_count: 38
+last_modified_at: 2025-09-20 16:45:00 +0700
 ---
 
 Kayu dolken gelam diameter kecil hingga sedang (2-6 cm) menjadi trending dalam desain interior dan eksterior hotel serta cafe modern. Material natural ini memberikan sentuhan rustic yang hangat namun tetap elegan.
