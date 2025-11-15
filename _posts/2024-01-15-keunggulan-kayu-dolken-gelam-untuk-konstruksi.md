@@ -14,6 +14,9 @@ images:
   - /assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-004.jpeg
 url: /2024/01/15/keunggulan-kayu-dolken-gelam-untuk-konstruksi/
 excerpt: "Kayu dolken gelam memiliki berbagai keunggulan yang membuatnya menjadi pilihan utama untuk berbagai keperluan konstruksi dan dekorasi."
+like_count: 67
+comment_count: 12
+share_count: 23
 ---
 
 Kayu dolken gelam telah lama dikenal sebagai salah satu jenis kayu terkuat dan paling tahan lama. Tidak heran jika kayu ini menjadi pilihan favorit untuk berbagai proyek konstruksi, dari yang skala kecil hingga besar.

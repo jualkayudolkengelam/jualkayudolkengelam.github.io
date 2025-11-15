@@ -13,6 +13,9 @@ images:
   - /assets/images/posts/jual-kayu-dolken-jakarta-utara/jual-kayu-dolken-jakarta-utara-004.jpeg
 keywords: jual kayu dolken jakarta utara, dolken gelam jakarta utara, supplier kayu dolken jakarta utara, kayu dolken kelapa gading, dolken ancol, kayu dolken pademangan, kayu dolken sunter
 show_products: true
+like_count: 5
+comment_count: 1
+share_count: 2
 ---
 
 ## Cari Kayu Dolken di Jakarta Utara? Hubungi: **081311400177**

@@ -14,6 +14,9 @@ images:
   - /assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-004.jpeg
 url: /2024/05/15/perawatan-kayu-dolken-gelam-agar-awet/
 excerpt: "Panduan lengkap merawat kayu dolken gelam untuk memaksimalkan umur pakai hingga puluhan tahun dengan perawatan minimal."
+like_count: 73
+comment_count: 16
+share_count: 27
 ---
 
 Meskipun kayu dolken gelam terkenal dengan ketahanannya yang luar biasa, perawatan yang tepat dapat memperpanjang umur pakainya hingga 30-50 tahun atau bahkan lebih. Artikel ini akan membahas cara merawat kayu dolken gelam dengan benar.

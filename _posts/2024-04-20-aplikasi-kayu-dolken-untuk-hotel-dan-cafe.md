@@ -14,6 +14,9 @@ images:
   - /assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-004.jpeg
 url: /2024/04/20/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/
 excerpt: "Ide kreatif mengaplikasikan kayu dolken gelam untuk menciptakan suasana natural dan elegan di hotel dan cafe Anda."
+like_count: 92
+comment_count: 24
+share_count: 38
 ---
 
 Kayu dolken gelam diameter kecil hingga sedang (2-6 cm) menjadi trending dalam desain interior dan eksterior hotel serta cafe modern. Material natural ini memberikan sentuhan rustic yang hangat namun tetap elegan.

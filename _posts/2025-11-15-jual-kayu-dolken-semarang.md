@@ -14,6 +14,9 @@ images:
 keywords: jual kayu dolken semarang, dolken gelam semarang, supplier kayu dolken semarang, kayu dolken kota lama, dolken tembalang, kayu dolken banyumanik
 url: /2025/11/15/jual-kayu-dolken-semarang/
 show_products: true
+like_count: 3
+comment_count: 0
+share_count: 1
 ---
 
 ## Cari Kayu Dolken di Semarang? Hubungi: **081311400177**

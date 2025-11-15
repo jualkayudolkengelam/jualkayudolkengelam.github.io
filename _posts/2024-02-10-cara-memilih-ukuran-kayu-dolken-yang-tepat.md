@@ -14,6 +14,9 @@ images:
   - /assets/images/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/cara-memilih-ukuran-kayu-dolken-yang-tepat-004.jpeg
 url: /2024/02/10/cara-memilih-ukuran-kayu-dolken-yang-tepat/
 excerpt: "Panduan lengkap memilih ukuran diameter kayu dolken gelam yang sesuai dengan kebutuhan proyek konstruksi atau dekorasi Anda."
+like_count: 84
+comment_count: 19
+share_count: 31
 ---
 
 Memilih ukuran kayu dolken yang tepat adalah langkah penting dalam memastikan kesuksesan proyek Anda. Ukuran yang tidak sesuai bisa mengakibatkan pemborosan biaya atau bahkan kegagalan struktur.
