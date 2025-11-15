@@ -1,0 +1,36 @@
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-wood" href="{{ '/' | relative_url }}">
+        <i class="bi bi-tree-fill me-2"></i>Jual Kayu Dolken Gelam
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if page.url contains '/produk' %}active{% endif %}" href="{{ '/produk' | relative_url }}">Produk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if page.url contains '/blog' %}active{% endif %}" href="{{ '/blog' | relative_url }}">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if page.url contains '/tentang' %}active{% endif %}" href="{{ '/tentang' | relative_url }}">Tentang Kami</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if page.url contains '/kontak' %}active{% endif %}" href="{{ '/kontak' | relative_url }}">Kontak</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-success btn-sm" href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20tertarik%20dengan%20kayu%20dolken%20gelam" target="_blank">
+              <i class="bi bi-whatsapp me-1"></i> Hubungi Kami
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

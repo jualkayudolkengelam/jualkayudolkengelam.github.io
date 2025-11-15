@@ -1,0 +1,127 @@
+---
+layout: default
+---
+
+<article class="post-content py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-9">
+
+        <!-- Post Header -->
+        <header class="post-header mb-4">
+          <h1 class="post-title display-5 fw-bold text-wood mb-3">{{ page.title }}</h1>
+
+          <div class="post-meta text-muted mb-3">
+            <span class="me-3">
+              <i class="bi bi-calendar3 me-1"></i>
+              <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: "%d %B %Y" }}
+              </time>
+            </span>
+            {% if page.author %}
+            <span class="me-3">
+              <i class="bi bi-person me-1"></i>{{ page.author }}
+            </span>
+            {% endif %}
+            {% if page.categories %}
+            <span>
+              <i class="bi bi-folder me-1"></i>
+              {% for category in page.categories %}
+                <a href="{{ site.baseurl }}/blog/kategori/{{ category | slugify }}" class="text-muted text-decoration-none">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </span>
+            {% endif %}
+          </div>
+
+          {% if page.image %}
+          <div class="post-image mb-4">
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="img-fluid rounded shadow">
+          </div>
+          {% endif %}
+        </header>
+
+        <!-- Post Body -->
+        <div class="post-body mb-5">
+          {{ content }}
+        </div>
+
+        <!-- Related Articles Block - IN CONTENT for SEO -->
+        {% if site.posts.size > 1 %}
+          {% include related-articles.html %}
+        {% endif %}
+
+        <!-- Post Footer -->
+        <footer class="post-footer mt-5 pt-4 border-top">
+          {% if page.tags %}
+          <div class="post-tags mb-4">
+            <i class="bi bi-tags me-2"></i>
+            {% for tag in page.tags %}
+              <a href="{{ site.baseurl }}/blog/tag/{{ tag | slugify }}" class="badge bg-secondary text-decoration-none me-2 mb-2">{{ tag }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <!-- Share Buttons -->
+          <div class="share-buttons">
+            <h5 class="h6 mb-3">Bagikan Artikel Ini:</h5>
+            <a href="https://wa.me/?text={{ page.title | uri_escape }}%20{{ page.url | absolute_url | uri_escape }}"
+               target="_blank"
+               class="btn btn-success btn-sm me-2 mb-2">
+              <i class="bi bi-whatsapp me-1"></i> WhatsApp
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}"
+               target="_blank"
+               class="btn btn-primary btn-sm me-2 mb-2">
+              <i class="bi bi-facebook me-1"></i> Facebook
+            </a>
+            <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}"
+               target="_blank"
+               class="btn btn-info btn-sm me-2 mb-2 text-white">
+              <i class="bi bi-twitter me-1"></i> Twitter
+            </a>
+          </div>
+        </footer>
+
+        <!-- Navigation: Previous/Next Posts -->
+        <nav class="post-navigation mt-5">
+          <div class="row">
+            {% if page.previous.url %}
+            <div class="col-md-6 mb-3 mb-md-0">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <p class="small text-muted mb-2">
+                    <i class="bi bi-arrow-left me-1"></i> Artikel Sebelumnya
+                  </p>
+                  <h6 class="card-title mb-0">
+                    <a href="{{ page.previous.url | relative_url }}" class="text-decoration-none text-dark">
+                      {{ page.previous.title }}
+                    </a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+
+            {% if page.next.url %}
+            <div class="col-md-6">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body text-md-end">
+                  <p class="small text-muted mb-2">
+                    Artikel Selanjutnya <i class="bi bi-arrow-right ms-1"></i>
+                  </p>
+                  <h6 class="card-title mb-0">
+                    <a href="{{ page.next.url | relative_url }}" class="text-decoration-none text-dark">
+                      {{ page.next.title }}
+                    </a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+</article>

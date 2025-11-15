@@ -1,0 +1,78 @@
+{% comment %}
+Related Articles Block - Positioned in content for SEO value
+Shows: 3 latest posts + 3 older posts (relative to current post)
+{% endcomment %}
+
+<div class="related-articles my-5 p-4 bg-light rounded">
+  <h3 class="h4 mb-4 text-wood"><i class="bi bi-newspaper me-2"></i>Artikel Terkait</h3>
+
+  {% comment %} Get 3 latest posts (excluding current post) {% endcomment %}
+  {% assign latest_posts = "" | split: "" %}
+  {% assign latest_count = 0 %}
+  {% for post in site.posts %}
+    {% if post.url != page.url and latest_count < 3 %}
+      {% assign latest_posts = latest_posts | push: post %}
+      {% assign latest_count = latest_count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
+  {% comment %} Get 3 older posts (posts with date before current post) {% endcomment %}
+  {% assign older_posts = "" | split: "" %}
+  {% assign older_count = 0 %}
+  {% for post in site.posts reversed %}
+    {% if post.date < page.date and older_count < 3 %}
+      {% assign older_posts = older_posts | push: post %}
+      {% assign older_count = older_count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
+  {% comment %} Combine both arrays {% endcomment %}
+  {% assign all_related = latest_posts | concat: older_posts %}
+
+  {% if all_related.size > 0 %}
+    <div class="row g-3">
+      {% for post in all_related %}
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm hover-lift">
+            {% if post.image %}
+              <img src="{{ post.image | relative_url }}" class="card-img-top" alt="{{ post.title }}" loading="lazy">
+            {% else %}
+              <div class="card-img-top bg-gradient-wood d-flex align-items-center justify-content-center" style="height: 180px;">
+                <i class="bi bi-file-text text-white" style="font-size: 3rem;"></i>
+              </div>
+            {% endif %}
+            <div class="card-body">
+              <h4 class="card-title h6">
+                <a href="{{ post.url | relative_url }}" class="text-decoration-none text-dark">
+                  {{ post.title }}
+                </a>
+              </h4>
+              <p class="card-text small text-muted mb-2">
+                <i class="bi bi-calendar3 me-1"></i>{{ post.date | date: "%d %B %Y" }}
+              </p>
+              <p class="card-text small">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+              <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-outline-wood">
+                Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="text-muted">Tidak ada artikel terkait saat ini.</p>
+  {% endif %}
+</div>
+
+<style>
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.bg-gradient-wood {
+  background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+}
+</style>

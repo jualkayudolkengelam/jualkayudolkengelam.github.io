@@ -1,0 +1,275 @@
+---
+layout: page
+title: Hubungi Kami
+description: Kontak supplier kayu dolken gelam Kota Serang. Hubungi kami via WhatsApp atau telepon untuk konsultasi dan pemesanan.
+---
+
+<div class="row mb-5">
+  <div class="col-lg-8 mx-auto text-center">
+    <p class="lead text-muted">Kami siap membantu Anda! Hubungi kami untuk konsultasi gratis, informasi produk, atau pemesanan kayu dolken gelam berkualitas.</p>
+  </div>
+</div>
+
+<!-- Contact Cards -->
+<div class="row g-4 mb-5">
+  <!-- WhatsApp -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card border-0 shadow-sm h-100 text-center hover-lift">
+      <div class="card-body p-4">
+        <div class="mb-3">
+          <i class="bi bi-whatsapp text-success" style="font-size: 4rem;"></i>
+        </div>
+        <h5 class="card-title">WhatsApp</h5>
+        <p class="text-muted mb-3">Cara tercepat untuk menghubungi kami</p>
+        <h6 class="text-wood mb-3">{{ site.business.phone }}</h6>
+        <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20konsultasi%20tentang%20kayu%20dolken%20gelam" class="btn btn-success btn-lg w-100" target="_blank">
+          <i class="bi bi-whatsapp me-2"></i>Chat Sekarang
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phone -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card border-0 shadow-sm h-100 text-center hover-lift">
+      <div class="card-body p-4">
+        <div class="mb-3">
+          <i class="bi bi-telephone-fill text-primary" style="font-size: 4rem;"></i>
+        </div>
+        <h5 class="card-title">Telepon</h5>
+        <p class="text-muted mb-3">Hubungi langsung untuk konsultasi</p>
+        <h6 class="text-wood mb-3">{{ site.business.phone }}</h6>
+        <a href="tel:{{ site.business.phone }}" class="btn btn-primary btn-lg w-100">
+          <i class="bi bi-telephone me-2"></i>Telepon Sekarang
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Location -->
+  <div class="col-md-12 col-lg-4">
+    <div class="card border-0 shadow-sm h-100 text-center hover-lift">
+      <div class="card-body p-4">
+        <div class="mb-3">
+          <i class="bi bi-geo-alt-fill text-danger" style="font-size: 4rem;"></i>
+        </div>
+        <h5 class="card-title">Lokasi</h5>
+        <p class="text-muted mb-3">Lokasi usaha kami</p>
+        <h6 class="text-wood mb-3">{{ site.business.location }}</h6>
+        <p class="small text-muted">Melayani pengiriman ke seluruh Jawa</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Business Info -->
+<div class="row mb-5">
+  <div class="col-lg-8 mx-auto">
+    <div class="card border-0 shadow-sm">
+      <div class="card-header bg-wood text-white">
+        <h5 class="mb-0"><i class="bi bi-info-circle me-2"></i>Informasi Bisnis</h5>
+      </div>
+      <div class="card-body p-4">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <h6 class="text-wood mb-2"><i class="bi bi-shop me-2"></i>Nama Usaha</h6>
+            <p class="mb-0">{{ site.business.name }}</p>
+          </div>
+          <div class="col-md-6 mb-3">
+            <h6 class="text-wood mb-2"><i class="bi bi-person-fill me-2"></i>Pemilik</h6>
+            <p class="mb-0">{{ site.business.owner }}</p>
+          </div>
+          <div class="col-md-6 mb-3">
+            <h6 class="text-wood mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Lokasi</h6>
+            <p class="mb-0">{{ site.business.location }}</p>
+          </div>
+          <div class="col-md-6 mb-3">
+            <h6 class="text-wood mb-2"><i class="bi bi-clock me-2"></i>Jam Operasional</h6>
+            <p class="mb-0">Senin - Sabtu: 08.00 - 17.00 WIB</p>
+            <p class="mb-0 small text-muted">Minggu: Chat via WhatsApp</p>
+          </div>
+          <div class="col-12 mb-3">
+            <h6 class="text-wood mb-2"><i class="bi bi-truck me-2"></i>Area Pengiriman</h6>
+            <p class="mb-0">{{ site.business.coverage }}</p>
+          </div>
+          <div class="col-12">
+            <h6 class="text-wood mb-2"><i class="bi bi-box-seam me-2"></i>Produk</h6>
+            <p class="mb-0">Kayu Dolken Gelam - Panjang 4 Meter</p>
+            <p class="mb-0 small">Diameter: 2-3 cm, 4-6 cm, 6-8 cm, 8-10 cm, 10-12 cm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Quick Contact Form -->
+<div class="row mb-5">
+  <div class="col-lg-8 mx-auto">
+    <div class="card border-0 shadow-sm">
+      <div class="card-header bg-light">
+        <h5 class="mb-0 text-wood"><i class="bi bi-envelope me-2"></i>Kirim Pesan Cepat</h5>
+      </div>
+      <div class="card-body p-4">
+        <p class="text-muted mb-4">Isi form di bawah ini dan kami akan menghubungi Anda via WhatsApp</p>
+
+        <div class="contact-form">
+          <form id="quickContactForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Nama Lengkap *</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Nomor WhatsApp *</label>
+                <input type="tel" class="form-control" id="phone" placeholder="08xxx" required>
+              </div>
+              <div class="col-12">
+                <label for="productType" class="form-label">Ukuran yang Diminati</label>
+                <select class="form-select" id="productType">
+                  <option value="">Pilih ukuran diameter...</option>
+                  <option value="2-3 cm">2 - 3 cm (Rp 15.000)</option>
+                  <option value="4-6 cm">4 - 6 cm (Rp 25.000)</option>
+                  <option value="6-8 cm">6 - 8 cm (Rp 30.000)</option>
+                  <option value="8-10 cm">8 - 10 cm (Rp 35.000)</option>
+                  <option value="10-12 cm">10 - 12 cm (Rp 45.000)</option>
+                  <option value="custom">Custom / Konsultasi</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="quantity" class="form-label">Jumlah Kebutuhan (estimasi)</label>
+                <input type="text" class="form-control" id="quantity" placeholder="Contoh: 100 batang">
+              </div>
+              <div class="col-md-6">
+                <label for="city" class="form-label">Kota Tujuan</label>
+                <input type="text" class="form-control" id="city" placeholder="Contoh: Jakarta">
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Pesan / Pertanyaan</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Tuliskan pertanyaan atau kebutuhan Anda..."></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-success btn-lg w-100">
+                  <i class="bi bi-whatsapp me-2"></i>Kirim via WhatsApp
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ Section -->
+<div class="row">
+  <div class="col-lg-8 mx-auto">
+    <h3 class="text-wood mb-4 text-center"><i class="bi bi-question-circle me-2"></i>Pertanyaan Umum</h3>
+
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item border-0 shadow-sm mb-3">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            Berapa minimal pemesanan kayu dolken gelam?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Tidak ada minimal pemesanan khusus. Anda bisa memesan sesuai kebutuhan, mulai dari 1 batang hingga ribuan batang. Namun untuk harga terbaik, biasanya pembelian dalam jumlah besar akan mendapat diskon khusus.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0 shadow-sm mb-3">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            Apakah harga sudah termasuk ongkir?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Harga yang tertera adalah harga per batang belum termasuk ongkos kirim. Biaya pengiriman akan dihitung berdasarkan jarak dan volume pemesanan. Hubungi kami untuk mendapatkan total harga termasuk pengiriman.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0 shadow-sm mb-3">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            Berapa lama pengiriman ke Jakarta?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Pengiriman ke Jakarta biasanya memakan waktu 1-2 hari kerja tergantung volume dan ketersediaan armada. Untuk wilayah lain di Jawa, estimasi 2-5 hari kerja. Kami akan informasikan estimasi waktu pengiriman saat Anda melakukan pemesanan.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0 shadow-sm mb-3">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+            Apakah bisa custom ukuran panjang?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ya, kami melayani custom cutting sesuai kebutuhan Anda. Panjang standar adalah 4 meter, namun bisa dipotong sesuai permintaan. Untuk custom ukuran, silakan konsultasikan terlebih dahulu dengan kami.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0 shadow-sm mb-3">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+            Bagaimana cara pembayarannya?
+          </button>
+        </h2>
+        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Kami menerima pembayaran via transfer bank. Untuk pelanggan baru, biasanya kami meminta DP (down payment) terlebih dahulu. Detail pembayaran akan kami informasikan saat konfirmasi pemesanan.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript for Contact Form -->
+<script>
+document.getElementById('quickContactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const productType = document.getElementById('productType').value;
+  const quantity = document.getElementById('quantity').value;
+  const city = document.getElementById('city').value;
+  const message = document.getElementById('message').value;
+
+  let whatsappMessage = `Halo, saya ${name}.\n\n`;
+
+  if (productType) {
+    whatsappMessage += `Saya tertarik dengan kayu dolken diameter ${productType}.\n`;
+  }
+
+  if (quantity) {
+    whatsappMessage += `Kebutuhan: ${quantity}\n`;
+  }
+
+  if (city) {
+    whatsappMessage += `Lokasi pengiriman: ${city}\n`;
+  }
+
+  if (message) {
+    whatsappMessage += `\nPesan:\n${message}\n`;
+  }
+
+  whatsappMessage += `\nNomor WhatsApp saya: ${phone}`;
+
+  const encodedMessage = encodeURIComponent(whatsappMessage);
+  const whatsappURL = `https://wa.me/{{ site.business.whatsapp }}?text=${encodedMessage}`;
+
+  window.open(whatsappURL, '_blank');
+});
+</script>

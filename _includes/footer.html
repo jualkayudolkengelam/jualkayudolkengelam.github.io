@@ -1,0 +1,57 @@
+<footer class="site-footer bg-dark text-white mt-5">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="text-wood-light mb-3"><i class="bi bi-tree-fill me-2"></i>Kayu Dolken Gelam</h5>
+        <p class="text-white-50">Supplier kayu dolken gelam berkualitas tinggi dengan berbagai ukuran diameter. Melayani pengiriman ke seluruh Jawa.</p>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h6 class="text-wood-light mb-3">Kontak</h6>
+        <ul class="list-unstyled text-white-50">
+          <li class="mb-2">
+            <i class="bi bi-person-fill me-2"></i>{{ site.business.owner }}
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-telephone-fill me-2"></i>
+            <a href="tel:{{ site.business.phone }}" class="text-white-50 text-decoration-none">{{ site.business.phone }}</a>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-whatsapp me-2"></i>
+            <a href="https://wa.me/{{ site.business.whatsapp }}" target="_blank" class="text-white-50 text-decoration-none">WhatsApp</a>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-geo-alt-fill me-2"></i>{{ site.business.location }}
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="text-wood-light mb-3">Area Layanan</h6>
+        <p class="text-white-50 small">{{ site.business.coverage }}</p>
+        <h6 class="text-wood-light mb-3 mt-4">Link Cepat</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="{{ '/produk' | relative_url }}" class="text-white-50 text-decoration-none">Produk</a>
+          </li>
+          <li class="mb-2">
+            <a href="{{ '/blog' | relative_url }}" class="text-white-50 text-decoration-none">Blog</a>
+          </li>
+          <li class="mb-2">
+            <a href="{{ '/tentang' | relative_url }}" class="text-white-50 text-decoration-none">Tentang Kami</a>
+          </li>
+          <li class="mb-2">
+            <a href="{{ '/kontak' | relative_url }}" class="text-white-50 text-decoration-none">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <div class="row">
+      <div class="col-md-12 text-center text-white-50 small">
+        <p class="mb-0">&copy; {{ 'now' | date: "%Y" }} {{ site.business.name }}. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

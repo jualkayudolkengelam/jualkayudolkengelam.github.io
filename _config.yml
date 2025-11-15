@@ -1,0 +1,60 @@
+# Site Settings
+title: "Jual Kayu Dolken Gelam Berkualitas"
+description: "Supplier kayu dolken gelam diameter 2-12 cm panjang 4 meter. Melayani pengiriman ke seluruh Jawa. Hubungi kami untuk pemesanan."
+url: "https://jualkayudolkengelam.github.io"
+baseurl: ""
+
+# Business Info
+business:
+  name: "Kayu Dolken Gelam - Amirudin Abdul Karim"
+  phone: "+62 813-1140-0177"
+  whatsapp: "6281311400177"
+  location: "Kota Serang, Banten"
+  coverage: "DKI Jakarta, Jawa Barat, Jawa Tengah, Jawa Timur, Banten"
+  owner: "Amirudin Abdul Karim"
+
+# SEO Settings
+lang: id
+timezone: Asia/Jakarta
+keywords: "jual kayu dolken terdekat, kayu dolken gelam, jual kayu dolken, dolken gelam murah, kayu dolken kota serang, dolken gelam banten, kayu dolken jakarta, supplier kayu dolken, toko kayu dolken, kayu dolken tangerang, kayu dolken bekasi, kayu dolken bogor, kayu dolken bandung"
+
+# Build Settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+sass:
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Collections
+collections:
+  products:
+    output: true
+    permalink: /produk/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Admin"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
