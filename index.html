@@ -444,36 +444,58 @@ keywords: jual kayu dolken terdekat, kayu dolken gelam, jual kayu dolken, dolken
           </div>
           {% endif %}
           <div class="card-body">
-            <div class="mb-2">
-              <p class="text-muted small mb-0">
+            <!-- Post Meta -->
+            <div class="post-meta text-muted small mb-2">
+              <p class="mb-1">
                 <i class="bi bi-calendar3 me-1"></i>{{ post.date | date: "%d %b %Y" }}
               </p>
               {% if post.last_modified_at %}
-              <p class="text-muted small mb-0" title="Terakhir diperbarui">
+              <p class="mb-1" title="Terakhir diperbarui">
                 <i class="bi bi-pencil-square me-1"></i>{{ post.last_modified_at | date: "%d %b %Y" }}
               </p>
               {% endif %}
+              {% if post.author %}
+              <p class="mb-1">
+                <i class="bi bi-person me-1"></i>{{ post.author }}
+              </p>
+              {% endif %}
+              {% if post.categories %}
+              <p class="mb-1">
+                <i class="bi bi-folder me-1"></i>
+                {% for category in post.categories %}
+                  <a href="{{ site.baseurl }}/blog/kategori/{{ category | slugify }}" class="text-muted text-decoration-none">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+              </p>
+              {% endif %}
             </div>
+
             <h5 class="card-title">
               <a href="{{ post.url | relative_url }}" class="text-decoration-none text-dark">{{ post.title }}</a>
             </h5>
             <p class="card-text">{{ post.excerpt | strip_html | truncate: 120 }}</p>
 
+            <!-- Engagement Stats -->
             {% if post.like_count or post.comment_count or post.share_count %}
-            <div class="mb-3 d-flex align-items-center flex-wrap gap-2" style="font-size: 0.875rem;">
+            <div class="engagement-stats mb-3 d-flex align-items-center flex-wrap gap-3" style="font-size: 0.875rem;">
               {% if post.like_count %}
-              <span class="text-muted">
-                <i class="bi bi-heart-fill text-danger"></i> {{ post.like_count }}
+              <span class="d-flex align-items-center text-muted">
+                <i class="bi bi-heart-fill me-1 text-danger"></i>
+                <strong class="text-dark">{{ post.like_count }}</strong>
+                <span class="ms-1 small">suka</span>
               </span>
               {% endif %}
               {% if post.comment_count %}
-              <span class="text-muted">
-                <i class="bi bi-chat-fill text-primary"></i> {{ post.comment_count }}
+              <span class="d-flex align-items-center text-muted">
+                <i class="bi bi-chat-fill me-1 text-primary"></i>
+                <strong class="text-dark">{{ post.comment_count }}</strong>
+                <span class="ms-1 small">komentar</span>
               </span>
               {% endif %}
               {% if post.share_count %}
-              <span class="text-muted">
-                <i class="bi bi-share-fill text-success"></i> {{ post.share_count }}
+              <span class="d-flex align-items-center text-muted">
+                <i class="bi bi-share-fill me-1 text-success"></i>
+                <strong class="text-dark">{{ post.share_count }}</strong>
+                <span class="ms-1 small">dibagikan</span>
               </span>
               {% endif %}
             </div>
