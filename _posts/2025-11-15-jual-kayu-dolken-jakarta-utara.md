@@ -197,6 +197,32 @@ Bayar setelah barang sampai dan Anda cek kualitasnya
 
 💬 **Chat WhatsApp:** Klik tombol WhatsApp di bawah atau langsung hubungi **081311400177** untuk info lengkap, cek stok, dan penawaran khusus!
 
+### Studi Kasus Proyek Jakarta Utara
+
+Berikut beberapa proyek yang telah kami kerjakan di Jakarta Utara menggunakan kayu dolken gelam berkualitas:
+
+**Proyek Gazebo Rumah di Kelapa Gading (2024)**
+
+Pembangunan gazebo minimalis 4x4 meter di taman rumah kawasan Kelapa Gading Boulevard. Menggunakan 48 batang kayu dolken diameter 8-10 cm untuk tiang utama dan rangka atap. Proyek selesai dalam 5 hari dengan hasil kokoh dan estetik natural yang menyatu dengan konsep taman tropis modern.
+
+**Pagar Villa di Pantai Indah Kapuk (2024)**
+
+Pemasangan pagar kayu dolken untuk villa mewah di area PIK sepanjang 25 meter dengan tinggi 1,8 meter. Menggunakan 180 batang diameter 6-8 cm. Kayu dolken dipilih karena tahan terhadap kelembaban tinggi area pantai dan memberikan kesan natural luxury yang sesuai dengan konsep arsitektur villa.
+
+**Landscaping Cafe Rustic di Sunter (2024)**
+
+Dekorasi interior dan exterior cafe bergaya rustic di kawasan Sunter Mall. Menggunakan kayu dolken diameter 4-6 cm untuk art installation dinding, pembatas area, dan penyangga tanaman vertikal garden. Total 120 batang dengan finishing natural coating untuk proteksi tambahan.
+
+**Dermaga Pribadi di Ancol (2023)**
+
+Pembangunan dermaga kecil untuk perahu pribadi di area marina Ancol. Menggunakan 85 batang kayu dolken diameter 10-12 cm untuk tiang pancang dan struktur utama. Kayu gelam dipilih karena tahan air laut dan tidak mudah lapuk meskipun terendam.
+
+**Pergola Rooftop Apartment Pluit (2024)**
+
+Instalasi pergola rooftop di apartment area Pluit untuk area bersantai dengan view laut. Menggunakan 36 batang diameter 8-10 cm. Kayu dolken mampu menahan angin kencang dan panas terik tanpa treatment khusus, perfect untuk aplikasi outdoor rooftop.
+
+Butuh konsultasi untuk proyek Anda di Jakarta Utara? **Hubungi 081311400177** untuk diskusi kebutuhan dan estimasi biaya!
+
 ### Testimoni Pelanggan Jakarta Utara
 
 ⭐⭐⭐⭐⭐
