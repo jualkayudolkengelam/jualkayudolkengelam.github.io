@@ -102,6 +102,7 @@ Fix missing schema.org markup pada halaman `/tentang/` (About Us page) dengan me
 - `description` - Business description (from site.description)
 - `url` - Website URL (from site.url)
 - `telephone` - Phone number (from site.business.phone)
+- `image` - Organization/business image (main business photo)
 - `address` - Physical address with PostalAddress type
   - streetAddress, addressLocality, addressRegion, postalCode, addressCountry
 - `geo` - Geographic coordinates (GeoCoordinates)
@@ -190,5 +191,26 @@ All major pages now have appropriate schema.org markup!
 
 ---
 
-**Status:** ✅ Completed
+## Update Log
+
+### 2025-11-16 - Image Property Added
+**Issue:** Organization schema missing optional "image" property (non-critical warning)
+
+**Fix Applied:**
+- Added `"image": "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}"` to Organization entity
+- Location: `_includes/head.html:176`
+- Rebuild: ✅ Success (133 files generated)
+
+**Verification:**
+```bash
+grep -A 50 '"@type": "Organization"' _site/tentang/index.html
+```
+✅ Image property now present:
+```json
+"image": "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg"
+```
+
+---
+
+**Status:** ✅ Completed (with image fix applied)
 **Next:** Monitor schema.org validation and search console for any warnings

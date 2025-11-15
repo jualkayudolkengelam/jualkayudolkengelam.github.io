@@ -28,11 +28,12 @@
   {% comment %}
   Only show on pages related to products/business:
   - Homepage (/)
-  - Product listing page (/product/)
-  - Individual product pages (layout: product or show_products: true)
-  NOT on blog pages, contact page, or other content pages
+  - Individual product pages (layout: product)
+  NOT on:
+  - Product listing page (/product/) - has its own ItemList schema
+  - Blog pages, contact page, or other content pages
   {% endcomment %}
-  {% if page.url == '/' or page.url contains '/product' or page.layout == 'product' %}
+  {% if page.url == '/' or page.layout == 'product' %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
