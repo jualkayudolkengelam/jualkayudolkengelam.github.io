@@ -159,12 +159,29 @@ Kami telah dipercaya oleh berbagai proyek komersial di Jakarta Utara seperti hot
 
 Proses pemesanan sangat mudah dan cepat:
 
-1. **Pilih Ukuran** - Lihat daftar produk lengkap di bawah, pilih diameter sesuai kebutuhan proyek Anda
-2. **Hubungi 081311400177** - Langsung via telepon atau WhatsApp untuk respon cepat
-3. **Konsultasi Gratis** - Tim kami akan bantu hitung kebutuhan dan berikan rekomendasi terbaik
-4. **Konfirmasi Pesanan** - Pastikan jumlah, ukuran, dan alamat pengiriman di Jakarta Utara
-5. **Pengiriman Gratis** - Kami antar langsung ke lokasi Anda dengan armada terpercaya
-6. **Bayar COD** - Bayar setelah barang sampai dan Anda cek kualitasnya
+**1. Pilih Ukuran**
+
+Lihat daftar produk lengkap di bawah, pilih diameter sesuai kebutuhan proyek Anda
+
+**2. Hubungi 081311400177**
+
+Langsung via telepon atau WhatsApp untuk respon cepat
+
+**3. Konsultasi Gratis**
+
+Tim kami akan bantu hitung kebutuhan dan berikan rekomendasi terbaik
+
+**4. Konfirmasi Pesanan**
+
+Pastikan jumlah, ukuran, dan alamat pengiriman di Jakarta Utara
+
+**5. Pengiriman Gratis**
+
+Kami antar langsung ke lokasi Anda dengan armada terpercaya
+
+**6. Bayar COD**
+
+Bayar setelah barang sampai dan Anda cek kualitasnya
 
 💬 **Chat WhatsApp:** Klik tombol WhatsApp di bawah atau langsung hubungi **081311400177** untuk info lengkap, cek stok, dan penawaran khusus!
 
@@ -219,14 +236,17 @@ Proses pemesanan sangat mudah dan cepat:
 
 Siap memesan kayu dolken untuk proyek di Jakarta Utara? Hubungi **081311400177** sekarang juga untuk:
 
-<ul style="list-style: none; padding-left: 0;">
-  <li style="margin-bottom: 0.5rem;">✅ Konsultasi gratis kebutuhan proyek Anda</li>
-  <li style="margin-bottom: 0.5rem;">✅ Cek ketersediaan stok real-time</li>
-  <li style="margin-bottom: 0.5rem;">✅ Info harga terbaru dan penawaran khusus</li>
-  <li style="margin-bottom: 0.5rem;">✅ Jadwal pengiriman gratis Jakarta Utara</li>
-  <li style="margin-bottom: 0.5rem;">✅ Rekomendasi ukuran sesuai kebutuhan</li>
-  <li style="margin-bottom: 0.5rem;">✅ Harga nego untuk pembelian partai besar</li>
-</ul>
+✅ Konsultasi gratis kebutuhan proyek Anda
+
+✅ Cek ketersediaan stok real-time
+
+✅ Info harga terbaru dan penawaran khusus
+
+✅ Jadwal pengiriman gratis Jakarta Utara
+
+✅ Rekomendasi ukuran sesuai kebutuhan
+
+✅ Harga nego untuk pembelian partai besar
 
 **Jam Operasional:** Senin - Sabtu, 08:00 - 17:00 WIB (WhatsApp 24/7)
 
