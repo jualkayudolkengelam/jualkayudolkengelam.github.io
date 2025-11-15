@@ -24,12 +24,14 @@ Tidak perlu bingung mencari supplier terdekat - kami siap melayani kebutuhan kay
 
 ### Mengapa Memilih Kami?
 
-✅ **Pengiriman Luas** - Melayani Jakarta, Bogor, Bandung, Tangerang, Bekasi, Semarang, Surabaya, dan seluruh Jawa-Bali
-✅ **Kualitas Terjamin** - Kayu gelam asli grade A premium, tahan rayap dan cuaca ekstrem
-✅ **Harga Kompetitif** - Langsung dari supplier, harga mulai Rp 15.000/batang
-✅ **COD Tersedia** - Bayar setelah barang sampai dan Anda cek kualitasnya
-✅ **Stok Ready** - Tersedia berbagai ukuran diameter 2-3 cm hingga 10-12 cm
-✅ **Konsultasi Gratis** - Tim kami siap bantu hitung kebutuhan proyek Anda
+<ul style="list-style: none; padding-left: 0;">
+  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>Pengiriman Luas</strong> - Melayani Jakarta, Bogor, Bandung, Tangerang, Bekasi, Semarang, Surabaya, dan seluruh Jawa-Bali</li>
+  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>Kualitas Terjamin</strong> - Kayu gelam asli grade A premium, tahan rayap dan cuaca ekstrem</li>
+  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>Harga Kompetitif</strong> - Langsung dari supplier, harga mulai Rp 15.000/batang</li>
+  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>COD Tersedia</strong> - Bayar setelah barang sampai dan Anda cek kualitasnya</li>
+  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>Stok Ready</strong> - Tersedia berbagai ukuran diameter 2-3 cm hingga 10-12 cm</li>
+  <li style="margin-bottom: 0.8rem;"><span style="color: #28a745; font-size: 1.2em;">✅</span> <strong>Konsultasi Gratis</strong> - Tim kami siap bantu hitung kebutuhan proyek Anda</li>
+</ul>
 
 ### Area Pengiriman Jual Kayu Dolken Terdekat
 
@@ -115,10 +117,13 @@ Kayu dolken gelam adalah pilihan terbaik untuk berbagai kebutuhan konstruksi dan
 **Telepon / WhatsApp: 081311400177**
 
 Siap memesan kayu dolken terdekat Anda? Hubungi **081311400177** sekarang untuk:
-- ✅ Konsultasi gratis kebutuhan proyek
-- ✅ Cek ketersediaan stok
-- ✅ Info harga terbaru dan penawaran khusus
-- ✅ Jadwal pengiriman terdekat
+
+<ul style="list-style: none; padding-left: 0;">
+  <li style="margin-bottom: 0.5rem;">✅ Konsultasi gratis kebutuhan proyek</li>
+  <li style="margin-bottom: 0.5rem;">✅ Cek ketersediaan stok</li>
+  <li style="margin-bottom: 0.5rem;">✅ Info harga terbaru dan penawaran khusus</li>
+  <li style="margin-bottom: 0.5rem;">✅ Jadwal pengiriman terdekat</li>
+</ul>
 
 **Jam Operasional:** Senin - Sabtu, 08:00 - 17:00 WIB
 
