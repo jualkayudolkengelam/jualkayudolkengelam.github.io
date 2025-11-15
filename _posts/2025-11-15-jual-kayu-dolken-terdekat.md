@@ -4,6 +4,7 @@ title: "Jual Kayu Dolken Terdekat - Hubungi 081311400177 - COD & Pengiriman Jawa
 description: "Jual kayu dolken terdekat - Hubungi 081311400177. Supplier kayu dolken gelam terpercaya, pengiriman Jakarta, Bogor, Bandung, Tangerang, Bekasi, Semarang, Surabaya. COD tersedia! Harga mulai Rp 15.000/batang."
 date: 2025-11-15
 author: Admin
+author_url: https://jualkayudolkengelam.github.io
 image: /assets/images/posts/jual-kayu-dolken-terdekat/jual-kayu-dolken-terdekat-001.jpeg
 images:
   - /assets/images/posts/jual-kayu-dolken-terdekat/jual-kayu-dolken-terdekat-001.jpeg
@@ -40,34 +41,86 @@ Tidak perlu bingung mencari supplier terdekat - kami siap melayani kebutuhan kay
 
 Kami melayani pengiriman kayu dolken gelam ke berbagai wilayah:
 
-**DKI Jakarta & Sekitarnya:**
-- Jakarta Pusat, Selatan, Barat, Utara, Timur
-- Tangerang & Tangerang Selatan
-- Bekasi & Kota Bekasi
-- Depok & Kota Depok
-- Bogor & Kota Bogor
+<div class="row g-3 my-4">
+  <div class="col-md-6">
+    <div class="card border-0 shadow-sm h-100">
+      <div class="card-body">
+        <h5 class="card-title text-wood">
+          <i class="bi bi-geo-alt-fill me-2"></i>DKI Jakarta & Sekitarnya
+        </h5>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Jakarta Pusat, Selatan, Barat, Utara, Timur</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Tangerang & Tangerang Selatan</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Bekasi & Kota Bekasi</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Depok & Kota Depok</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i>Bogor & Kota Bogor</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-**Jawa Barat:**
-- Bandung & Kota Bandung
-- Cimahi, Cianjur, Sukabumi
-- Karawang, Purwakarta, Subang
-- Cirebon, Indramayu, Majalengka
+  <div class="col-md-6">
+    <div class="card border-0 shadow-sm h-100">
+      <div class="card-body">
+        <h5 class="card-title text-wood">
+          <i class="bi bi-geo-alt-fill me-2"></i>Jawa Barat
+        </h5>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Bandung & Kota Bandung</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Cimahi, Cianjur, Sukabumi</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Karawang, Purwakarta, Subang</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i>Cirebon, Indramayu, Majalengka</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-**Jawa Tengah:**
-- Semarang & Kota Semarang
-- Solo (Surakarta)
-- Yogyakarta (DIY)
-- Tegal, Pekalongan, Purwokerto
+  <div class="col-md-6">
+    <div class="card border-0 shadow-sm h-100">
+      <div class="card-body">
+        <h5 class="card-title text-wood">
+          <i class="bi bi-geo-alt-fill me-2"></i>Jawa Tengah
+        </h5>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Semarang & Kota Semarang</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Solo (Surakarta)</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Yogyakarta (DIY)</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i>Tegal, Pekalongan, Purwokerto</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-**Jawa Timur:**
-- Surabaya & Sidoarjo
-- Malang & Batu
-- Gresik, Mojokerto, Pasuruan
-- Kediri, Blitar, Madiun
+  <div class="col-md-6">
+    <div class="card border-0 shadow-sm h-100">
+      <div class="card-body">
+        <h5 class="card-title text-wood">
+          <i class="bi bi-geo-alt-fill me-2"></i>Jawa Timur
+        </h5>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Surabaya & Sidoarjo</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Malang & Batu</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Gresik, Mojokerto, Pasuruan</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i>Kediri, Blitar, Madiun</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-**Bali:**
-- Denpasar & Badung
-- Gianyar, Tabanan, Buleleng
+  <div class="col-md-6">
+    <div class="card border-0 shadow-sm h-100">
+      <div class="card-body">
+        <h5 class="card-title text-wood">
+          <i class="bi bi-geo-alt-fill me-2"></i>Bali
+        </h5>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Denpasar & Badung</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i>Gianyar, Tabanan, Buleleng</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Keunggulan Kayu Dolken Gelam
 
