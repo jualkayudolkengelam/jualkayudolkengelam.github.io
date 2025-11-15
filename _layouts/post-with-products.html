@@ -113,6 +113,7 @@ layout: default
       "@type": "Article",
       "headline": "{{ page.title }}",
       "description": "{{ page.description | strip_html | strip_newlines | escape }}",
+      "url": "{% if page.url %}{{ page.url | absolute_url }}{% else %}{{ page.url | absolute_url }}{% endif %}",
       "image": [
         {% if page.images %}
           {% for image in page.images %}
