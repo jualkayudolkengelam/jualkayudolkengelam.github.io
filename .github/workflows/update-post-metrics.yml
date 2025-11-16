@@ -43,10 +43,19 @@ jobs:
                 increment=$((RANDOM % 3 + 1))
                 new_likes=$((current_likes + increment))
 
-                # Update the file
+                # Update like_count
                 sed -i "s/^like_count: $current_likes/like_count: $new_likes/" "$post"
 
-                echo "Updated $post: $current_likes → $new_likes likes"
+                # Update last_modified_at for SEO freshness
+                current_date=$(date '+%Y-%m-%d %H:%M:%S %z')
+                if grep -q "^last_modified_at:" "$post"; then
+                  sed -i "s|^last_modified_at:.*|last_modified_at: $current_date|" "$post"
+                else
+                  # Add after share_count if last_modified_at doesn't exist
+                  sed -i "/^share_count:/a last_modified_at: $current_date" "$post"
+                fi
+
+                echo "✅ Updated $post: $current_likes → $new_likes likes (last_modified: $current_date)"
               fi
             fi
           done

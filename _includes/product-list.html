@@ -34,19 +34,56 @@
                 <th scope="col">Diameter</th>
                 <th scope="col">Panjang</th>
                 <th scope="col">Harga per Batang</th>
-                <th scope="col">Kegunaan Umum</th>
+                <th scope="col">Rating & Reviews</th>
+                <th scope="col">Status</th>
                 <th scope="col" class="text-center">Aksi</th>
               </tr>
             </thead>
             <tbody>
               {% assign sorted_products = site.products | sort: "price" %}
               {% for product in sorted_products %}
+              {% comment %}Check if product was updated in last 7 days{% endcomment %}
+              {% assign days_since_update = 999 %}
+              {% if product.last_modified_at %}
+                {% assign update_date = product.last_modified_at | date: "%s" %}
+                {% assign now_date = "now" | date: "%s" %}
+                {% assign seconds_diff = now_date | minus: update_date %}
+                {% assign days_since_update = seconds_diff | divided_by: 86400 %}
+              {% endif %}
+
               <tr{% if product.popular %} class="table-warning"{% endif %}>
                 <td class="text-center">{{ forloop.index }}</td>
-                <td><strong>{{ product.diameter }}</strong>{% if product.popular %} <span class="badge bg-warning text-dark">Populer</span>{% endif %}</td>
+                <td><strong>{{ product.diameter }}</strong>{% if product.popular %} <span class="badge bg-warning text-dark">⭐ Populer</span>{% endif %}</td>
                 <td>4 Meter</td>
                 <td class="text-wood fw-bold">Rp {{ product.price | rupiah }}</td>
-                <td><small>{{ product.features | first }}</small></td>
+                <td>
+                  {% if product.rating %}
+                    <div class="d-flex align-items-center">
+                      <span class="text-warning me-1">★</span>
+                      <strong>{{ product.rating }}</strong>
+                      <small class="text-muted ms-1">({{ product.review_count | default: 0 }} reviews)</small>
+                    </div>
+                  {% else %}
+                    <small class="text-muted">No reviews</small>
+                  {% endif %}
+                </td>
+                <td>
+                  {% if days_since_update <= 1 %}
+                    <span class="badge bg-success" title="Updated {{ product.last_modified_at | date: '%Y-%m-%d %H:%M' }}">
+                      <i class="bi bi-arrow-clockwise"></i> Updated Today
+                    </span>
+                  {% elsif days_since_update <= 7 %}
+                    <span class="badge bg-info" title="Updated {{ product.last_modified_at | date: '%Y-%m-%d %H:%M' }}">
+                      <i class="bi bi-clock-history"></i> Recent
+                    </span>
+                  {% elsif product.total_updates %}
+                    <small class="text-muted" title="Total updates: {{ product.total_updates }}">
+                      <i class="bi bi-graph-up"></i> {{ product.total_updates }} updates
+                    </small>
+                  {% else %}
+                    <span class="text-muted">-</span>
+                  {% endif %}
+                </td>
                 <td class="text-center">
                   <a href="{{ product.url | relative_url }}" class="btn btn-sm btn-wood me-1">
                     <i class="bi bi-info-circle"></i> Detail
@@ -76,6 +113,15 @@
       <h4 class="text-wood mb-3"><i class="bi bi-list-ul me-2"></i>{{ list_title }}</h4>
       {% assign sorted_products = site.products | sort: "price" %}
       {% for product in sorted_products %}
+      {% comment %}Check if product was updated recently{% endcomment %}
+      {% assign days_since_update = 999 %}
+      {% if product.last_modified_at %}
+        {% assign update_date = product.last_modified_at | date: "%s" %}
+        {% assign now_date = "now" | date: "%s" %}
+        {% assign seconds_diff = now_date | minus: update_date %}
+        {% assign days_since_update = seconds_diff | divided_by: 86400 %}
+      {% endif %}
+
       <div class="card border-0 shadow-sm mb-3{% if product.popular %} border-warning{% endif %}"{% if product.popular %} style="border-width: 2px !important;"{% endif %}>
         {% if product.popular %}
         <div class="card-header bg-warning text-dark">
@@ -87,9 +133,45 @@
             <h5 class="card-title text-wood mb-0">{{ product.diameter }}</h5>
             <span class="badge bg-secondary">{{ forloop.index }}</span>
           </div>
+
+          {% comment %}Status badges{% endcomment %}
+          <div class="mb-2">
+            {% if days_since_update <= 1 %}
+              <span class="badge bg-success me-1" title="Updated {{ product.last_modified_at | date: '%Y-%m-%d %H:%M' }}">
+                <i class="bi bi-arrow-clockwise"></i> Updated Today
+              </span>
+            {% elsif days_since_update <= 7 %}
+              <span class="badge bg-info me-1" title="Updated {{ product.last_modified_at | date: '%Y-%m-%d %H:%M' }}">
+                <i class="bi bi-clock-history"></i> Recent Update
+              </span>
+            {% endif %}
+          </div>
+
           <hr>
           <p class="mb-2"><strong>Panjang:</strong> 4 Meter</p>
           <p class="mb-2"><strong>Harga:</strong> <span class="text-wood fw-bold fs-5">Rp {{ product.price | rupiah }}</span></p>
+
+          {% comment %}Rating & Reviews{% endcomment %}
+          {% if product.rating %}
+          <p class="mb-2">
+            <strong>Rating:</strong>
+            <span class="text-warning">★</span> {{ product.rating }}
+            <small class="text-muted">({{ product.review_count | default: 0 }} reviews)</small>
+          </p>
+          {% endif %}
+
+          {% comment %}Update info{% endcomment %}
+          {% if product.total_updates %}
+          <p class="mb-2">
+            <small class="text-muted">
+              <i class="bi bi-graph-up"></i> {{ product.total_updates }} updates
+              {% if product.last_modified_at %}
+                • Last: {{ product.last_modified_at | date: '%d %b %Y' }}
+              {% endif %}
+            </small>
+          </p>
+          {% endif %}
+
           <p class="mb-3 text-muted"><small><i class="bi bi-info-circle me-1"></i>{{ product.features | first }}</small></p>
           <div class="d-grid gap-2">
             <a href="{{ product.url | relative_url }}" class="btn btn-wood">
