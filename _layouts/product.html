@@ -177,190 +177,71 @@ layout: default
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Product",
-      "name": "{{ page.title }}",
-      "description": "{{ page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 }}",
-      {% if page.image %}
-      "image": "{{ page.image | absolute_url }}",
-      {% endif %}
-      "sku": "{{ page.sku }}",
-      "brand": {
-        "@type": "Brand",
-        "name": "{{ site.business.name }}"
+  "@type": "Product",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 }}",
+  {% if page.image %}
+  "image": "{{ page.image | absolute_url }}",
+  {% endif %}
+  "sku": "{{ page.sku }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ site.business.name }}"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ page.url | absolute_url }}",
+    "priceCurrency": "IDR",
+    "price": "{{ page.price }}",
+    "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "{{ site.business.name }}"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "IDR"
       },
-      "offers": {
-        "@type": "Offer",
-        "url": "{{ page.url | absolute_url }}",
-        "priceCurrency": "IDR",
-        "price": "{{ page.price }}",
-        "priceValidUntil": "2025-12-31",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "{{ site.business.name }}"
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "ID"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 2,
+          "unitCode": "DAY"
         },
-        "shippingDetails": {
-          "@type": "OfferShippingDetails",
-          "shippingRate": {
-            "@type": "MonetaryAmount",
-            "value": "0",
-            "currency": "IDR"
-          },
-          "shippingDestination": {
-            "@type": "DefinedRegion",
-            "addressCountry": "ID"
-          },
-          "deliveryTime": {
-            "@type": "ShippingDeliveryTime",
-            "handlingTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 1,
-              "maxValue": 2,
-              "unitCode": "DAY"
-            },
-            "transitTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 3,
-              "maxValue": 7,
-              "unitCode": "DAY"
-            }
-          }
-        },
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "ID",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-          "merchantReturnDays": 7,
-          "returnMethod": "https://schema.org/ReturnByMail",
-          "returnFees": "https://schema.org/FreeReturn"
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 3,
+          "maxValue": 7,
+          "unitCode": "DAY"
         }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "{{ page.rating | default: 4.5 }}",
-        "reviewCount": "{{ page.review_count | default: 45 }}",
-        "bestRating": "5",
-        "worstRating": "1"
       }
     },
-    {
-      "@type": "ItemList",
-      "name": "Produk Lainnya",
-      "itemListElement": [
-        {% comment %} Node-based rotation for Schema.org - matches visual display {% endcomment %}
-        {% assign current_product_index = 0 %}
-        {% for prod in site.products %}
-          {% if prod.url == page.url %}
-            {% assign current_product_index = forloop.index0 %}
-            {% break %}
-          {% endif %}
-        {% endfor %}
-
-        {% assign sorted_products_schema = site.products | sort: "last_modified_at" | reverse %}
-        {% assign product_count_schema = sorted_products_schema.size %}
-        {% assign start_position_schema = current_product_index | modulo: product_count_schema %}
-
-        {% assign schema_products = "" | split: "" %}
-        {% assign schema_products_added = 0 %}
-        {% assign schema_offset = 1 %}
-
-        {% for i in (0..10) %}
-          {% if schema_products_added >= 3 %}
-            {% break %}
-          {% endif %}
-
-          {% assign target_index_schema = start_position_schema | plus: schema_offset | plus: i %}
-          {% assign target_index_schema = target_index_schema | modulo: product_count_schema %}
-
-          {% for product in sorted_products_schema %}
-            {% if forloop.index0 == target_index_schema %}
-              {% comment %} Skip current product {% endcomment %}
-              {% if product.url != page.url %}
-                {% assign schema_products = schema_products | push: product %}
-                {% assign schema_products_added = schema_products_added | plus: 1 %}
-              {% endif %}
-              {% break %}
-            {% endif %}
-          {% endfor %}
-        {% endfor %}
-
-        {% for product in schema_products %}
-        {
-          "@type": "ListItem",
-          "position": {{ forloop.index }},
-          "item": {
-            "@type": "Product",
-            "name": "{{ product.title }}",
-            "description": "{{ product.description | strip_html | strip_newlines | escape }}",
-            "image": "{{ site.url }}{{ site.baseurl }}{{ product.image }}",
-            "url": "{{ site.url }}{{ site.baseurl }}{{ product.url }}",
-            "sku": "DOLKEN-{{ product.diameter | replace: ' ', '' | upcase }}",
-            "brand": {
-              "@type": "Brand",
-              "name": "{{ site.business.name }}"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "{{ product.price }}",
-              "priceCurrency": "IDR",
-              "availability": "https://schema.org/InStock",
-              "url": "{{ site.url }}{{ site.baseurl }}{{ product.url }}",
-              "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
-              "seller": {
-                "@type": "Organization",
-                "name": "{{ site.business.name }}"
-              },
-              "shippingDetails": {
-                "@type": "OfferShippingDetails",
-                "shippingRate": {
-                  "@type": "MonetaryAmount",
-                  "value": "0",
-                  "currency": "IDR"
-                },
-                "shippingDestination": {
-                  "@type": "DefinedRegion",
-                  "addressCountry": "ID"
-                },
-                "deliveryTime": {
-                  "@type": "ShippingDeliveryTime",
-                  "handlingTime": {
-                    "@type": "QuantitativeValue",
-                    "minValue": 1,
-                    "maxValue": 2,
-                    "unitCode": "DAY"
-                  },
-                  "transitTime": {
-                    "@type": "QuantitativeValue",
-                    "minValue": 3,
-                    "maxValue": 7,
-                    "unitCode": "DAY"
-                  }
-                }
-              },
-              "hasMerchantReturnPolicy": {
-                "@type": "MerchantReturnPolicy",
-                "applicableCountry": "ID",
-                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-                "merchantReturnDays": 7,
-                "returnMethod": "https://schema.org/ReturnByMail",
-                "returnFees": "https://schema.org/FreeReturn"
-              }
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "{% if product.popular %}4.8{% else %}4.5{% endif %}",
-              "reviewCount": "{% if product.popular %}127{% else %}45{% endif %}",
-              "bestRating": "5",
-              "worstRating": "1"
-            }
-          }
-        }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-      ]
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "ID",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 7,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
     }
-  ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ page.rating | default: 4.5 }}",
+    "reviewCount": "{{ page.review_count | default: 45 }}",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
 }
 </script>
 

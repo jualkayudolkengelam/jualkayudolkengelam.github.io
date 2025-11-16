@@ -74,6 +74,56 @@
 
 {% assign final_products = selected_products %}
 
+<!-- Schema.org ItemList for Related Products -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Produk Kayu Dolken Terkait",
+  "description": "Pilihan ukuran kayu dolken untuk kebutuhan proyek Anda",
+  "numberOfItems": {{ final_products.size }},
+  "itemListElement": [
+    {% for product in final_products %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {
+        "@type": "Product",
+        "name": "{{ product.title }}",
+        "url": "{{ product.url | absolute_url }}",
+        "image": "{{ product.image | absolute_url }}",
+        "sku": "{{ product.sku }}",
+        "description": "{{ product.description | strip_html | strip_newlines | escape }}",
+        "brand": {
+          "@type": "Brand",
+          "name": "{{ site.business.name }}"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "{{ product.price }}",
+          "priceCurrency": "IDR",
+          "availability": "https://schema.org/InStock",
+          "url": "{{ product.url | absolute_url }}",
+          "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+          "seller": {
+            "@type": "Organization",
+            "name": "{{ site.business.name }}"
+          }
+        }{% if product.rating or product.review_count %},
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "{{ product.rating | default: 4.5 }}",
+          "reviewCount": "{{ product.review_count | default: 45 }}",
+          "bestRating": "5",
+          "worstRating": "1"
+        }{% endif %}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
 <!-- Related Products Section -->
 <section class="related-products-section related-products-by-node-id my-5 py-4 bg-light rounded">
   <div class="container">
