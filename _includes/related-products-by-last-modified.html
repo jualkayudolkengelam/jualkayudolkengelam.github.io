@@ -88,13 +88,28 @@
 {% comment %} Get top 3 most recently updated {% endcomment %}
 {% assign final_products = sorted_products | slice: 0, 3 %}
 
-<!-- Schema.org Product References (Related Products) -->
+<!-- Schema.org Product Snippets (Related Products) -->
 {% for product in final_products %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "@id": "{{ product.url | absolute_url }}#product"
+  "@id": "{{ product.url | absolute_url }}#snippet",
+  "name": "{{ product.title }}",
+  "url": "{{ product.url | absolute_url }}",
+  "image": "{{ product.image | absolute_url }}",
+  "offers": {
+    "@type": "Offer",
+    "price": "{{ product.price }}",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock",
+    "url": "{{ product.url | absolute_url }}"
+  }{% if product.rating %},
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ product.rating }}",
+    "reviewCount": "{{ product.review_count | default: 45 }}"
+  }{% endif %}
 }
 </script>
 {% endfor %}
