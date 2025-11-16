@@ -25,7 +25,8 @@
 
 {% comment %} If not product page, check if it's an article {% endcomment %}
 {% unless is_product_page %}
-  {% for post in site.posts %}
+  {% assign all_posts = site.posts | concat: site.post_with_product %}
+  {% for post in all_posts %}
     {% if post.url == page.url %}
       {% assign current_index = forloop.index0 %}
       {% break %}

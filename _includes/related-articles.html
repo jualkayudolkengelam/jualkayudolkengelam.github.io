@@ -6,10 +6,13 @@ Shows: 3 latest posts + 3 older posts (relative to current post)
 <div class="related-content-section related-articles my-5 p-4 bg-light rounded">
   <h3 class="h4 mb-4 text-wood"><i class="bi bi-newspaper me-2"></i>Artikel Terkait</h3>
 
+  {% comment %} Combine all posts from both collections {% endcomment %}
+  {% assign all_posts = site.posts | concat: site.post_with_product %}
+
   {% comment %} Get 3 latest posts (excluding current post) {% endcomment %}
   {% assign latest_posts = "" | split: "" %}
   {% assign latest_count = 0 %}
-  {% for post in site.posts %}
+  {% for post in all_posts %}
     {% if post.url != page.url and latest_count < 3 %}
       {% assign latest_posts = latest_posts | push: post %}
       {% assign latest_count = latest_count | plus: 1 %}
@@ -19,7 +22,7 @@ Shows: 3 latest posts + 3 older posts (relative to current post)
   {% comment %} Get 3 older posts (posts with date before current post) {% endcomment %}
   {% assign older_posts = "" | split: "" %}
   {% assign older_count = 0 %}
-  {% for post in site.posts reversed %}
+  {% for post in all_posts reversed %}
     {% if post.date < page.date and older_count < 3 %}
       {% assign older_posts = older_posts | push: post %}
       {% assign older_count = older_count | plus: 1 %}

@@ -163,7 +163,8 @@ layout: default
   {% include related-products-by-node-id.html %}
 
   <!-- Related Articles Section -->
-  {% if site.posts.size > 0 %}
+  {% assign all_posts = site.posts | concat: site.post_with_product %}
+  {% if all_posts.size > 0 %}
   <div class="row mt-5">
     <div class="col-12">
       {% include related-content-by-node-id.html title="Artikel Panduan & Tips" %}

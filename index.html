@@ -421,7 +421,10 @@ keywords: jual kayu dolken terdekat, kayu dolken gelam, jual kayu dolken, dolken
 </section>
 
 <!-- Latest Blog Posts -->
-{% if site.posts.size > 0 %}
+{% comment %}Combine all posts from both collections{% endcomment %}
+{% assign all_posts = site.posts | concat: site.post_with_product %}
+
+{% if all_posts.size > 0 %}
 <section class="blog-preview-section py-5">
   <div class="container">
     <div class="text-center mb-5">
@@ -432,8 +435,8 @@ keywords: jual kayu dolken terdekat, kayu dolken gelam, jual kayu dolken, dolken
     {% comment %}
     Sort by last_modified_at to show recently updated posts first
     {% endcomment %}
-    {% assign posts_with_modified = site.posts | where_exp: "post", "post.last_modified_at" | sort: "last_modified_at" | reverse %}
-    {% assign posts_without_modified = site.posts | where_exp: "post", "post.last_modified_at == nil" | sort: "date" | reverse %}
+    {% assign posts_with_modified = all_posts | where_exp: "post", "post.last_modified_at" | sort: "last_modified_at" | reverse %}
+    {% assign posts_without_modified = all_posts | where_exp: "post", "post.last_modified_at == nil" | sort: "date" | reverse %}
     {% assign sorted_posts = posts_with_modified | concat: posts_without_modified %}
 
     <div class="row g-4">

@@ -73,7 +73,8 @@ layout: default
         </div>
 
         <!-- Related Articles Block - IN CONTENT for SEO -->
-        {% if site.posts.size > 1 %}
+        {% assign all_posts = site.posts | concat: site.post_with_product %}
+        {% if all_posts.size > 1 %}
           {% include related-articles.html %}
         {% endif %}
 

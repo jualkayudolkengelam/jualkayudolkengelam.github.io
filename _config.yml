@@ -35,6 +35,9 @@ collections:
   products:
     output: true
     permalink: /product/:name/
+  post_with_product:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
 
 # Defaults
 defaults:
@@ -43,6 +46,12 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      author: "Admin"
+  - scope:
+      path: ""
+      type: "post_with_product"
+    values:
+      layout: "post-with-products"
       author: "Admin"
   - scope:
       path: ""

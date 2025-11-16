@@ -16,11 +16,14 @@
 {% assign limit = include.limit | default: 3 %}
 {% assign section_title = include.title | default: "Artikel Terkait Lainnya" %}
 
-{% comment %} Find current page index in site.posts {% endcomment %}
-{% assign current_index = -1 %}
-{% assign post_count = site.posts.size %}
+{% comment %} Combine all posts from both collections {% endcomment %}
+{% assign all_posts = site.posts | concat: site.post_with_product %}
 
-{% for post in site.posts %}
+{% comment %} Find current page index in all_posts {% endcomment %}
+{% assign current_index = -1 %}
+{% assign post_count = all_posts.size %}
+
+{% for post in all_posts %}
   {% if post.url == page.url %}
     {% assign current_index = forloop.index0 %}
     {% break %}
@@ -40,7 +43,7 @@
     {% endif %}
 
     {% comment %} Get post at target index {% endcomment %}
-    {% for post in site.posts %}
+    {% for post in all_posts %}
       {% if forloop.index0 == target_index %}
         {% assign related_posts = related_posts | push: post %}
         {% break %}
@@ -51,7 +54,7 @@
 
 {% comment %} Fallback: if current page not found, show first 3 posts {% endcomment %}
 {% if related_posts.size == 0 %}
-  {% for post in site.posts limit: limit %}
+  {% for post in all_posts limit: limit %}
     {% if post.url != page.url %}
       {% assign related_posts = related_posts | push: post %}
     {% endif %}

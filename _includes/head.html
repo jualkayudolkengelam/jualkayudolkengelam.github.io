@@ -123,6 +123,7 @@
   {% endif %}
 
   {% if page.url == '/blog' or page.url == '/blog/' %}
+  {% assign all_posts = site.posts | concat: site.post_with_product %}
   <!-- Schema.org CollectionPage for Blog Listing -->
   <script type="application/ld+json">
   {
@@ -134,7 +135,7 @@
     "mainEntity": {
       "@type": "ItemList",
       "itemListElement": [
-        {% for post in site.posts limit:10 %}
+        {% for post in all_posts limit:10 %}
         {
           "@type": "ListItem",
           "position": {{ forloop.index }},
