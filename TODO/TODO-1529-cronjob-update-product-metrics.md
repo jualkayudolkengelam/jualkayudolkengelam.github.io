@@ -82,7 +82,9 @@ Setup GitHub Actions cronjob workflow untuk auto-update product metrics (review 
 `.github/workflows/update-product-metrics.yml`
 
 ### **Triggers:**
-1. **Scheduled:** Weekly on Monday at 00:00 UTC (07:00 WIB)
+1. **Scheduled:** Twice per week for organic timing variation
+   - Tuesday 03:00 UTC (10:00 WIB)
+   - Friday 05:15 UTC (12:15 WIB)
 2. **Manual:** Via Actions tab (workflow_dispatch)
 
 ### **What It Does:**
@@ -570,11 +572,12 @@ git add .github/workflows/update-product-metrics.yml
 git add TODO/TODO-1529-cronjob-update-product-metrics.md
 git commit -m "feat: add automated product metrics update workflow
 
-- Weekly cronjob every Monday at midnight (07:00 WIB)
+- Twice per week cronjob (Tue 10:00 & Fri 12:15 WIB)
 - Auto-increment review counts with smart aging algorithm
 - Auto-adjust ratings every 10 reviews (4.5-5.0 range)
 - Auto-set popular flag for products with 80+ reviews
 - Rate limiting: max +5 reviews per week
+- Organic timing variation for natural appearance
 - Triggers deployment workflow on push
 - Fully automated, zero maintenance"
 git push
