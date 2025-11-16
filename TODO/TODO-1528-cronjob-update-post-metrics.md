@@ -81,7 +81,9 @@ Setup GitHub Actions cronjob workflow untuk auto-update post metrics (like, comm
 `.github/workflows/update-post-metrics.yml`
 
 ### **Triggers:**
-1. **Scheduled:** Weekly on Monday at 00:00 UTC (07:00 WIB)
+1. **Scheduled:** Twice per week for organic timing variation
+   - Monday 00:00 UTC (07:00 WIB)
+   - Thursday 02:30 UTC (09:30 WIB)
 2. **Manual:** Via Actions tab (workflow_dispatch)
 
 ### **What It Does:**
@@ -153,7 +155,9 @@ Setup GitHub Actions cronjob workflow untuk auto-update post metrics (like, comm
 
 ### **Update Frequency:**
 
-**Current:** Weekly on Monday at midnight
+**Current:** Twice per week
+- Monday 00:00 UTC (07:00 WIB)
+- Thursday 02:30 UTC (09:30 WIB)
 ```yaml
 schedule:
   - cron: '0 0 * * 1'  # Weekly (Monday)
