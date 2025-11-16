@@ -146,7 +146,8 @@
             "datePublished": "{{ post.date | date_to_xmlschema }}",
             "author": {
               "@type": "Person",
-              "name": "{% if post.author %}{{ post.author }}{% else %}Admin{% endif %}"
+              "name": "{% if post.author %}{{ post.author }}{% else %}Admin{% endif %}"{% if post.author_url %},
+              "url": "{{ post.author_url }}"{% endif %}
             },
             "image": "{% if post.image %}{{ post.image | absolute_url }}{% else %}{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}{% endif %}"
           }
