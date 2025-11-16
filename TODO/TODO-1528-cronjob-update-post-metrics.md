@@ -1,4 +1,4 @@
-# TODO-1528: Cronjob Workflow for Engagement Updates
+# TODO-1528: Cronjob Workflow for Post Metrics Updates
 
 **Date:** 2025-11-16
 **Status:** 📋 Optional Enhancement
@@ -8,7 +8,7 @@
 
 ## Task Summary
 
-Setup GitHub Actions cronjob workflow untuk auto-update engagement metrics (like, comment, share counts) secara berkala, mensimulasikan aktivitas user dan menjaga konten tetap terlihat fresh.
+Setup GitHub Actions cronjob workflow untuk auto-update post metrics (like, comment, share counts) secara berkala, mensimulasikan aktivitas user dan menjaga konten tetap terlihat fresh.
 
 ---
 
@@ -18,12 +18,12 @@ Setup GitHub Actions cronjob workflow untuk auto-update engagement metrics (like
 
 ```
 ┌──────────────────────────────────────────────┐
-│  Cronjob Workflow (update-engagement.yml)   │
+│  Cronjob Workflow (update-post-metrics.yml)  │
 │  ─────────────────────────────────────────   │
 │  Trigger: Scheduled (daily at midnight)      │
 │  Actions:                                    │
 │  1. Checkout repository                      │
-│  2. Update engagement metrics in _posts/     │
+│  2. Update post metrics in _posts/           │
 │  3. Commit changes                           │
 │  4. Push to main branch                      │
 └──────────────┬───────────────────────────────┘
@@ -42,13 +42,13 @@ Setup GitHub Actions cronjob workflow untuk auto-update engagement metrics (like
 └──────────────────────────────────────────────┘
 ```
 
-**Result:** Engagement metrics auto-update daily, site auto-rebuilds dan deploy!
+**Result:** Post metrics auto-update daily, site auto-rebuilds dan deploy!
 
 ---
 
 ## Use Cases
 
-### **1. Engagement Metrics Simulation**
+### **1. Post Metrics Simulation**
 - **Like counts** - Increment by 0-3 randomly
 - **Comment counts** - Increment by 0-1 occasionally
 - **Share counts** - Increment by 0-2 occasionally
@@ -78,7 +78,7 @@ Setup GitHub Actions cronjob workflow untuk auto-update engagement metrics (like
 ## Workflow Features
 
 ### **File Created:**
-`.github/workflows/update-engagement.yml`
+`.github/workflows/update-post-metrics.yml`
 
 ### **Triggers:**
 1. **Scheduled:** Weekly on Monday at 00:00 UTC (07:00 WIB)
@@ -105,7 +105,7 @@ Setup GitHub Actions cronjob workflow untuk auto-update engagement metrics (like
 ```bash
 # Automated commit
 - Author: github-actions[bot]
-- Message: "chore: auto-update engagement metrics"
+- Message: "chore: auto-update post metrics"
 - Push to main → Triggers deployment
 ```
 
@@ -131,7 +131,7 @@ Setup GitHub Actions cronjob workflow untuk auto-update engagement metrics (like
    - aplikasi-kayu-dolken-hotel.md: 92 → 94 likes (+2)
    - perawatan-kayu-dolken.md: 45 → 46 likes (+1)
    ↓
-4. Commits: "chore: auto-update engagement metrics"
+4. Commits: "chore: auto-update post metrics"
    ↓
 5. Pushes to main
    ↓
@@ -141,7 +141,7 @@ Setup GitHub Actions cronjob workflow untuk auto-update engagement metrics (like
    ↓
 8. Deploys to GitHub Pages
    ↓
-9. ✅ Live site shows updated engagement!
+9. ✅ Live site shows updated post metrics!
 ```
 
 **Total time:** ~5 minutes
@@ -272,7 +272,7 @@ fi
 ### **4. Update last_modified_at:**
 
 ```bash
-# Always update last_modified_at when engagement changes
+# Always update last_modified_at when metrics change
 current_date=$(date +%Y-%m-%d)
 
 if grep -q "^last_modified_at:" "$post"; then
@@ -290,7 +290,7 @@ fi
 ### **Manual Trigger (Recommended First):**
 
 1. Go to: `https://github.com/jualkayudolkengelam/jualkayudolkengelam.github.io/actions`
-2. Click "Update Engagement Metrics" workflow
+2. Click "Update Post Metrics" workflow
 3. Click "Run workflow" dropdown
 4. Click "Run workflow" button
 5. Wait 1-2 minutes
@@ -315,7 +315,7 @@ git log -1 -p
 
 ### **View Workflow Runs:**
 ```
-GitHub → Actions → Update Engagement Metrics
+GitHub → Actions → Update Post Metrics
 ```
 
 **Check for:**
@@ -393,7 +393,7 @@ Click on a run to see:
 **Problem:** Auto-commits conflict with manual edits
 **Mitigation:**
 - Schedule during low-activity hours
-- Bot only touches engagement metrics
+- Bot only touches post metrics
 - Manual edits won't conflict
 
 ---
@@ -404,8 +404,8 @@ If you want to pause/disable:
 
 ### **Option 1: Delete Workflow File**
 ```bash
-git rm .github/workflows/update-engagement.yml
-git commit -m "chore: disable engagement auto-update"
+git rm .github/workflows/update-post-metrics.yml
+git commit -m "chore: disable post metrics auto-update"
 git push
 ```
 
@@ -429,8 +429,8 @@ on:
 | Workflow | File | Trigger | Purpose |
 |----------|------|---------|---------|
 | **Deployment** | `jekyll.yml` | Push to main | Build & deploy site |
-| **Engagement Update** | `update-engagement.yml` | Daily cron | Update metrics |
-| **(Future)** | `update-products.yml` | Weekly cron | Update product stock |
+| **Post Metrics Update** | `update-post-metrics.yml` | Daily cron | Update metrics |
+| **(Future)** | `update-product-metrics.yml` | Weekly cron | Update product metrics |
 | **(Future)** | `generate-sitemap.yml` | Monthly cron | Refresh sitemap |
 
 ---
@@ -441,9 +441,9 @@ on:
 
 ```bash
 # File already created
-git add .github/workflows/update-engagement.yml
-git add TODO/TODO-1528-cronjob-engagement-update.md
-git commit -m "feat: add automated engagement metrics update workflow
+git add .github/workflows/update-post-metrics.yml
+git add TODO/TODO-1528-cronjob-update-post-metrics.md
+git commit -m "feat: add automated post metrics update workflow
 
 - Weekly cronjob every Monday at midnight (07:00 WIB)
 - Auto-increment like counts (30% probability, +1 to +3)
@@ -454,7 +454,7 @@ git push
 
 ### **Option 2: Customize First**
 
-Edit `.github/workflows/update-engagement.yml`:
+Edit `.github/workflows/update-post-metrics.yml`:
 - Adjust cron schedule
 - Change probability
 - Modify increment range
