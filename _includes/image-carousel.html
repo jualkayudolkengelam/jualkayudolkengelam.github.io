@@ -98,14 +98,13 @@
   "@type": "ImageGallery",
   "name": "{{ gallery_name }}",
   "description": "{% if carousel_description != '' %}{{ carousel_description }}{% else %}Galeri foto {{ carousel_title }}{% endif %}",
-  "numberOfImages": {{ carousel_images.size }},
-  "associatedMedia": [
+  "image": [
     {% for image in carousel_images %}
     {
       "@type": "ImageObject",
-      "contentUrl": "{{ image | absolute_url }}",
+      "url": "{{ image | absolute_url }}",
       "name": "{{ carousel_title }} - Foto {{ forloop.index }}",
-      "description": "{{ carousel_title }} gambar {{ forloop.index }} dari {{ carousel_images.size }}"{% if page.width and page.height %},
+      "caption": "{{ carousel_title }} gambar {{ forloop.index }} dari {{ carousel_images.size }}"{% if page.width and page.height %},
       "width": "{{ page.width }}",
       "height": "{{ page.height }}"{% endif %}
     }{% unless forloop.last %},{% endunless %}
