@@ -1,16 +1,93 @@
 {% comment %}
-  Related Content Component - Node-based proximity recommendations
+  ============================================================================
+  Related Content Component - Node-based Proximity Recommendations
+  ============================================================================
 
-  Logic: Shows 3 articles near current article's position (node ID)
-  - If current article is node 20, shows nodes 17, 18, 19
-  - Circular: if at start, wraps to end of array
+  @file        _includes/related-content-by-node-id.html
+  @description Reusable component that displays related articles using
+               node-based proximity algorithm. Shows 3 articles positioned
+               near the current article in the content array, with circular
+               wrapping for continuous recommendations. Implements component-
+               level schema architecture with complete ItemList and BlogPosting
+               markup for SEO optimization.
+
+  @version     1.0.1
+  @date        2025-11-16
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Changelog:
+  ----------
+  v1.0.1 (2025-11-16)
+    - Added ItemList schema with BlogPosting items
+    - Complete BlogPosting fields (headline, url, image, dates, author, publisher)
+    - Include interactionStatistic for engagement metrics (likes, comments, shares)
+    - Schema describes exactly 3 articles (matches visual display)
+    - Perfect schema/visual accuracy
+
+  v1.0.0 (2025-11-15)
+    - Initial component with node-based proximity algorithm
+    - Proximity-based selection (shows articles before current position)
+    - Circular wrapping (wraps to end if at beginning)
+    - Support for custom limit and title parameters
+    - Engagement metrics display (likes, comments, shares)
+
+  Proximity Algorithm:
+  --------------------
+  1. Combine posts from site.posts and site.post_with_product collections
+  2. Find current article's position (index) in combined array
+  3. Select N articles BEFORE current position (proximity-based)
+  4. If at beginning: wrap to end of array (circular logic)
+  5. Fallback: if current not found, show first N posts
+
+  Example with limit=3:
+  - Article at position 20 shows articles: 19, 18, 17 (3 before)
+  - Article at position 2 shows articles: 1, 0, last (wraps around)
+  - Article at position 0 shows articles: last-2, last-1, last
+
+  Features:
+  ---------
+  - Node-based proximity recommendations for related content
+  - Circular wrapping for continuous article flow
+  - Schema.org ItemList with BlogPosting items
+  - Complete article metadata (headline, dates, author, publisher)
+  - Engagement metrics (likes, comments, shares) in schema and visual
+  - WebP image optimization with JPEG fallback
+  - Category badges for article classification
+  - Responsive card layout with Bootstrap 5
+  - Excerpt preview with read more link
+  - Last modified date tracking
+  - Customizable limit and section title via parameters
+
+  Schema Implementation:
+  ----------------------
+  - ItemList with N BlogPosting items (default: 3)
+  - Complete BlogPosting fields: headline, url, image, dates
+  - Author (Person) and Publisher (Organization) entities
+  - interactionStatistic for social engagement (likes, comments, shares)
+  - datePublished and dateModified timestamps
+  - numberOfItems matches visual display (perfect accuracy)
+
+  Parameters:
+  -----------
+  - limit: Number of articles to display (default: 3)
+  - title: Custom section heading (default: "Artikel Terkait Lainnya")
 
   Usage:
-  {% include related-content.html %}
+  ------
+  {% include related-content-by-node-id.html %}
 
-  Optional Parameters:
-  - limit: Number of articles to show (default: 3)
-  - title: Custom heading (default: "Artikel Terkait Lainnya")
+  {% include related-content-by-node-id.html limit=5 %}
+
+  {% include related-content-by-node-id.html title="Artikel Panduan & Tips" %}
+
+  Used in:
+  --------
+  - _layouts/post-with-products.html (blog posts with products)
+  - _layouts/product.html (individual product pages)
+
+  ============================================================================
 {% endcomment %}
 
 {% assign limit = include.limit | default: 3 %}
