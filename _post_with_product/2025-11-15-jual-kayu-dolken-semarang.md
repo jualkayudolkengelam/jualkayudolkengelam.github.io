@@ -1557,10 +1557,4 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
 
 ## 📚 Artikel Terkait
 
-{% include related-content-by-node-id.html %}
-
----
-
-## 📦 Produk Terbaru
-
-{% include related-products-by-last-modified.html %}
+{% include related-products-by-last-modified-on-blog-post.html %}
