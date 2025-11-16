@@ -86,6 +86,17 @@ Setup GitHub Actions cronjob workflow untuk auto-update post metrics (like, comm
    - Thursday 02:30 UTC (09:30 WIB)
 2. **Manual:** Via Actions tab (workflow_dispatch)
 
+### **Permissions:**
+```yaml
+permissions:
+  contents: write  # Required for git push
+```
+
+**Why needed:**
+- ✅ Allows github-actions[bot] to commit changes
+- ✅ Enables pushing to main branch
+- ✅ Prevents exit code 128 (403 Permission denied)
+
 ### **What It Does:**
 
 #### **Step 1: Update Metrics**
@@ -465,6 +476,13 @@ Edit `.github/workflows/update-post-metrics.yml`:
 - Change probability
 - Modify increment range
 - Add comment/share updates
+
+**⚠️ IMPORTANT:** Ensure workflow includes permissions:
+```yaml
+permissions:
+  contents: write  # Required for git push
+```
+Without this, workflow will fail with exit code 128 (Permission denied)
 
 Then commit.
 

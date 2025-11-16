@@ -87,6 +87,17 @@ Setup GitHub Actions cronjob workflow untuk auto-update product metrics (review 
    - Friday 05:15 UTC (12:15 WIB)
 2. **Manual:** Via Actions tab (workflow_dispatch)
 
+### **Permissions:**
+```yaml
+permissions:
+  contents: write  # Required for git push
+```
+
+**Why needed:**
+- ✅ Allows github-actions[bot] to commit changes
+- ✅ Enables pushing to main branch
+- ✅ Prevents exit code 128 (403 Permission denied)
+
 ### **What It Does:**
 
 #### **Step 1: Smart Product Metrics Update**
@@ -591,6 +602,13 @@ Edit `.github/workflows/update-product-metrics.yml`:
 - Modify increment ranges
 - Adjust popular threshold (default: 80 reviews)
 - Change rating range (default: 4.5-5.0)
+
+**⚠️ IMPORTANT:** Ensure workflow includes permissions:
+```yaml
+permissions:
+  contents: write  # Required for git push
+```
+Without this, workflow will fail with exit code 128 (Permission denied)
 
 ---
 
