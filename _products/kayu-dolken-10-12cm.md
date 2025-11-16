@@ -8,8 +8,9 @@ image: /assets/images/products/jual-kayu-dolken-gelam-10-12cm-001.jpeg
 sku: DOLKEN-10-12
 popular: false
 rating: 4.5
-review_count: 38
-total_updates: 0
+review_count: 39
+total_updates: 1
+last_modified_at: '2025-11-16 02:41:55 +0000'
 features:
   - Kayu gelam asli kualitas super premium
   - Diameter terbesar untuk beban maksimal
