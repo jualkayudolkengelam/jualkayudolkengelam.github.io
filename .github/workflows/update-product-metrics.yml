@@ -7,6 +7,9 @@ on:
     - cron: '15 5 * * 5'  # Friday 05:15 UTC (12:15 WIB)
   workflow_dispatch:  # Allow manual trigger
 
+permissions:
+  contents: write  # Required for git push
+
 jobs:
   update-metrics:
     runs-on: ubuntu-latest
