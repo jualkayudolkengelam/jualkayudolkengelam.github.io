@@ -88,32 +88,6 @@
 {% comment %} Get top 3 most recently updated {% endcomment %}
 {% assign final_products = sorted_products | slice: 0, 3 %}
 
-<!-- Schema.org Product Snippets (Related Products) -->
-{% for product in final_products %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "@id": "{{ product.url | absolute_url }}#snippet",
-  "name": "{{ product.title }}",
-  "url": "{{ product.url | absolute_url }}",
-  "image": "{{ product.image | absolute_url }}",
-  "offers": {
-    "@type": "Offer",
-    "price": "{{ product.price }}",
-    "priceCurrency": "IDR",
-    "availability": "https://schema.org/InStock",
-    "url": "{{ product.url | absolute_url }}"
-  }{% if product.rating %},
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "{{ product.rating }}",
-    "reviewCount": "{{ product.review_count | default: 45 }}"
-  }{% endif %}
-}
-</script>
-{% endfor %}
-
 <!-- Related Products Section (Last Modified Strategy) -->
 <section class="related-products-section related-products-by-last-modified my-5 py-4 bg-light rounded">
   <div class="container">
