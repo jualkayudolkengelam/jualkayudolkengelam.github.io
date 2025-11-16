@@ -33,8 +33,9 @@
   {% endfor %}
 {% endunless %}
 
-{% comment %} Sort products by price for consistent order {% endcomment %}
-{% assign sorted_products = site.products | sort: "price" %}
+{% comment %} Sort products by last_modified_at DESC for dynamic rotation {% endcomment %}
+{% comment %} Products updated by cron will automatically rise in order {% endcomment %}
+{% assign sorted_products = site.products | sort: "last_modified_at" | reverse %}
 {% assign product_count = sorted_products.size %}
 
 {% comment %} Calculate starting position using modulo for rotation {% endcomment %}

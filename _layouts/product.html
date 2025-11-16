@@ -257,7 +257,7 @@ layout: default
           {% endif %}
         {% endfor %}
 
-        {% assign sorted_products_schema = site.products | sort: "price" %}
+        {% assign sorted_products_schema = site.products | sort: "last_modified_at" | reverse %}
         {% assign product_count_schema = sorted_products_schema.size %}
         {% assign start_position_schema = current_product_index | modulo: product_count_schema %}
 
