@@ -21,9 +21,14 @@ Template ini universal untuk semua product. Cukup ganti `[PRODUCT_SIZE]` dengan 
 
 ## Prerequisites
 
-1. **Source Folder:** `/home/mkt01/Documents/ANDRI/Dolken/foto/[WhatsApp folder name]/`
+1. **Source Folder:** `[SOURCE_FOLDER]` (folder yang berisi foto yang akan ditambahkan)
 2. **Destination Folder:** `/home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/`
 3. **WebP Converter:** `cwebp` (already installed at `/usr/bin/cwebp`)
+
+**Note:** Ganti `[SOURCE_FOLDER]` dengan path lengkap folder sumber Anda, contoh:
+- `/home/mkt01/Downloads/`
+- `/home/mkt01/Documents/ANDRI/Dolken/foto/WhatsApp Unknown 2025-11-15/`
+- Atau folder lain sesuai kebutuhan
 
 ---
 
@@ -70,7 +75,7 @@ ls -lh /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/image
 
 **Scenario A: Product baru (belum ada foto)**
 ```bash
-cd '/home/mkt01/Documents/ANDRI/Dolken/foto/[WHATSAPP_FOLDER]/'
+cd '[SOURCE_FOLDER]'
 
 # Rename 4 files
 mv 'WhatsApp Image [timestamp-1].jpeg' 'jual-kayu-dolken-gelam-[PRODUCT_SIZE]-001.jpeg'
@@ -84,7 +89,7 @@ ls -lh jual-kayu-dolken-gelam-[PRODUCT_SIZE]-*
 
 **Scenario B: Menambah 3 foto (sudah ada 001)**
 ```bash
-cd '/home/mkt01/Documents/ANDRI/Dolken/foto/[WHATSAPP_FOLDER]/'
+cd '[SOURCE_FOLDER]'
 
 # Rename 3 files mulai dari 002
 mv 'WhatsApp Image [timestamp-1].jpeg' 'jual-kayu-dolken-gelam-[PRODUCT_SIZE]-002.jpeg'
@@ -97,7 +102,7 @@ ls -lh jual-kayu-dolken-gelam-[PRODUCT_SIZE]-*
 
 **Scenario C: Menambah 2 foto (sudah ada 001, 002)**
 ```bash
-cd '/home/mkt01/Documents/ANDRI/Dolken/foto/[WHATSAPP_FOLDER]/'
+cd '[SOURCE_FOLDER]'
 
 # Rename 2 files mulai dari 003
 mv 'WhatsApp Image [timestamp-1].jpeg' 'jual-kayu-dolken-gelam-[PRODUCT_SIZE]-003.jpeg'
@@ -109,7 +114,7 @@ ls -lh jual-kayu-dolken-gelam-[PRODUCT_SIZE]-*
 
 **Real Example (Product 6-8cm - menambah 3 foto):**
 ```bash
-cd '/home/mkt01/Documents/ANDRI/Dolken/foto/WhatsApp Unknown 2025-11-15 at 09.04.24/'
+cd '[SOURCE_FOLDER]'
 
 # Sudah ada 001, jadi mulai dari 002
 mv 'WhatsApp Image 2025-08-09 at 10.01.18.jpeg' 'jual-kayu-dolken-gelam-6-8cm-002.jpeg'
@@ -136,28 +141,28 @@ ls -lh /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/image
 
 **For 4 files (001-004):**
 ```bash
-cd '/home/mkt01/Documents/ANDRI/Dolken/foto/[WHATSAPP_FOLDER]/' && \
+cd '[SOURCE_FOLDER]' && \
 mv jual-kayu-dolken-gelam-[PRODUCT_SIZE]-00{1,2,3,4}.jpeg \
    /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/
 ```
 
 **For 3 files (002-004):**
 ```bash
-cd '/home/mkt01/Documents/ANDRI/Dolken/foto/[WHATSAPP_FOLDER]/' && \
+cd '[SOURCE_FOLDER]' && \
 mv jual-kayu-dolken-gelam-[PRODUCT_SIZE]-00{2,3,4}.jpeg \
    /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/
 ```
 
 **For 2 files (003-004):**
 ```bash
-cd '/home/mkt01/Documents/ANDRI/Dolken/foto/[WHATSAPP_FOLDER]/' && \
+cd '[SOURCE_FOLDER]' && \
 mv jual-kayu-dolken-gelam-[PRODUCT_SIZE]-00{3,4}.jpeg \
    /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/
 ```
 
 **For 1 file (004 only):**
 ```bash
-cd '/home/mkt01/Documents/ANDRI/Dolken/foto/[WHATSAPP_FOLDER]/' && \
+cd '[SOURCE_FOLDER]' && \
 mv jual-kayu-dolken-gelam-[PRODUCT_SIZE]-004.jpeg \
    /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/
 ```
@@ -350,7 +355,7 @@ ls -lh _site/assets/images/products/jual-kayu-dolken-gelam-6-8cm-*
 
 ```bash
 # Cek apakah file masih ada di source (should be empty)
-ls -lh '/home/mkt01/Documents/ANDRI/Dolken/foto/[WHATSAPP_FOLDER]/' | grep "jual-kayu-dolken-gelam-[PRODUCT_SIZE]"
+ls -lh '[SOURCE_FOLDER]' | grep "jual-kayu-dolken-gelam-[PRODUCT_SIZE]"
 
 # Expected: No output (files sudah pindah)
 ```
@@ -366,7 +371,7 @@ ls -lh /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/image
 
 **Rename (3 files for example):**
 ```bash
-cd '/home/mkt01/Documents/ANDRI/Dolken/foto/[FOLDER]/'
+cd '[SOURCE_FOLDER]'
 mv 'WhatsApp Image [A].jpeg' 'jual-kayu-dolken-gelam-[SIZE]-002.jpeg'
 mv 'WhatsApp Image [B].jpeg' 'jual-kayu-dolken-gelam-[SIZE]-003.jpeg'
 mv 'WhatsApp Image [C].jpeg' 'jual-kayu-dolken-gelam-[SIZE]-004.jpeg'
@@ -485,8 +490,8 @@ https://jualkayudolkengelam.github.io/product/kayu-dolken-[PRODUCT_SIZE]/
 ### Problem: "mv: cannot stat ... No such file"
 ```bash
 # Solution: Check folder name and file name (case-sensitive)
-ls -la '/home/mkt01/Documents/ANDRI/Dolken/foto/'
-cd '/home/mkt01/Documents/ANDRI/Dolken/foto/[EXACT_FOLDER_NAME]/'
+ls -la '[SOURCE_FOLDER]'
+cd '[SOURCE_FOLDER]'
 ls -lh | grep "WhatsApp Image"
 ```
 
@@ -540,7 +545,7 @@ ls -lh /home/mkt01/Public/.../products/jual-kayu-dolken-gelam-10-12cm-*.jpeg
 # Output: No files found (new product)
 
 # Step 1: Rename (start from 001)
-cd '/home/mkt01/Documents/ANDRI/Dolken/foto/WhatsApp Unknown 2025-XX-XX/'
+cd '[SOURCE_FOLDER]'
 mv 'WhatsApp Image A.jpeg' 'jual-kayu-dolken-gelam-10-12cm-001.jpeg'
 mv 'WhatsApp Image B.jpeg' 'jual-kayu-dolken-gelam-10-12cm-002.jpeg'
 mv 'WhatsApp Image C.jpeg' 'jual-kayu-dolken-gelam-10-12cm-003.jpeg'
@@ -571,7 +576,7 @@ ls -lh /home/mkt01/Public/.../products/jual-kayu-dolken-gelam-6-8cm-*.jpeg
 # Decision: Add as 002, 003, 004
 
 # Step 1: Rename (start from 002)
-cd '/home/mkt01/Documents/ANDRI/Dolken/foto/WhatsApp Unknown 2025-11-15 at 09.04.24/'
+cd '[SOURCE_FOLDER]'
 mv 'WhatsApp Image 2025-08-09 at 10.01.18.jpeg' 'jual-kayu-dolken-gelam-6-8cm-002.jpeg'
 mv 'WhatsApp Image 2025-08-09 at 10.01.17 (3).jpeg' 'jual-kayu-dolken-gelam-6-8cm-003.jpeg'
 mv 'WhatsApp Image 2025-08-09 at 10.01.17 (1).jpeg' 'jual-kayu-dolken-gelam-6-8cm-004.jpeg'
@@ -601,7 +606,7 @@ ls -lh /home/mkt01/Public/.../products/jual-kayu-dolken-gelam-4-6cm-*.jpeg
 # Decision: Add as 004
 
 # Step 1: Rename (only 004)
-cd '/home/mkt01/Documents/ANDRI/Dolken/foto/[FOLDER]/'
+cd '[SOURCE_FOLDER]'
 mv 'WhatsApp Image X.jpeg' 'jual-kayu-dolken-gelam-4-6cm-004.jpeg'
 
 # Step 2: Move (only 1 file)
@@ -617,10 +622,319 @@ cwebp -q 85 jual-kayu-dolken-gelam-4-6cm-004.jpeg -o jual-kayu-dolken-gelam-4-6c
 
 ---
 
-**Last Updated:** 2025-11-16
-**Tested On:**
-- Product kayu-dolken-2-3cm (4 images - new product)
-- Product kayu-dolken-8-10cm (4 images - new product)
-- Product kayu-dolken-6-8cm (3 images added to existing)
+## Lessons Learned (Pelajaran Penting)
 
-**Status:** ✅ Production Ready - Flexible & Safe
+### 🎓 Critical Lessons dari Real Implementation
+
+#### 1. **Step 0 (Pre-check) adalah WAJIB - Tidak Boleh Dilewati!**
+
+**Pelajaran:**
+- Awalnya saya tidak melakukan pre-check dengan teliti di product 6-8cm
+- Akibatnya: Markdown punya reference ke 004.jpeg yang tidak exist
+- Root cause: File 002-004 sudah di-move sebelumnya tapi tidak ter-track
+
+**Solusi:**
+```bash
+# SELALU jalankan ini dulu!
+ls -lh /home/mkt01/Public/.../products/jual-kayu-dolken-gelam-[SIZE]-*.jpeg
+
+# Bandingkan dengan markdown
+grep -A 5 "images:" _products/kayu-dolken-[SIZE].md
+
+# Pastikan match!
+```
+
+**Pencegahan:**
+- ✅ Pre-check adalah Step 0 yang MANDATORY
+- ✅ Cross-check markdown vs filesystem
+- ✅ Jangan assume file ada hanya karena markdown reference
+
+---
+
+#### 2. **Markdown vs Filesystem Mismatch - Bahaya!**
+
+**Pelajaran:**
+Product 6-8cm mengalami broken state:
+- Markdown: `images: [001, 002, 003, 004]`
+- Filesystem: Hanya ada `001.jpeg`
+- Result: Carousel tidak lengkap, broken references
+
+**Root Cause:**
+- File di-move tapi markdown tidak updated
+- ATAU file lost saat process sebelumnya
+- ATAU manual edit markdown tanpa add files
+
+**Solusi:**
+```bash
+# Verify sync antara markdown dan filesystem
+PRODUCT_SIZE="6-8cm"
+
+# Count images in markdown
+grep -A 10 "images:" _products/kayu-dolken-${PRODUCT_SIZE}.md | grep -c ".jpeg"
+
+# Count images in filesystem
+ls assets/images/products/jual-kayu-dolken-gelam-${PRODUCT_SIZE}-*.jpeg | wc -l
+
+# Should match!
+```
+
+**Recovery:**
+- ✅ Add new images untuk replace yang hilang
+- ✅ Update markdown sesuai realitas filesystem
+- ✅ Rebuild untuk verify
+
+---
+
+#### 3. **File Tracking After Move - Penting untuk Audit**
+
+**Pelajaran:**
+- `mv` (move) menghilangkan file dari source
+- Tidak ada trace bahwa file sudah dipakai
+- Kalau ada masalah, sulit track mana file yang sudah processed
+
+**Best Practice:**
+```bash
+# Step 6 (Optional tapi recommended): Document
+echo "Product: 6-8cm - Files moved on $(date)" >> ~/image-move-log.txt
+echo "  - 002.jpeg (336K)" >> ~/image-move-log.txt
+echo "  - 003.jpeg (388K)" >> ~/image-move-log.txt
+```
+
+**Alternative (untuk paranoid):**
+- Bisa pakai `cp` dulu, verify everything OK, baru `rm` source
+- Tapi ini against workflow (avoid duplication)
+- Trade-off: Safety vs Duplication prevention
+
+---
+
+#### 4. **Smart WebP Conversion is Critical**
+
+**Pelajaran:**
+- Tanpa skip logic, re-convert file yang sudah ada
+- Waste time dan bisa overwrite hasil convert sebelumnya
+- Quality bisa inconsistent kalau re-convert berkali-kali
+
+**Good Practice:**
+```bash
+# ALWAYS use skip logic
+for img in *.jpeg; do
+  if [ ! -f "${img%.jpeg}.webp" ]; then
+    cwebp -q 85 "$img" -o "${img%.jpeg}.webp"
+  else
+    echo "⊘ Skipped (exists): ${img%.jpeg}.webp"
+  fi
+done
+```
+
+**Result:**
+```
+⊘ Skipped: 001.webp (already exists - good!)
+✓ Converted: 002.jpeg → 002.webp
+✓ Converted: 003.jpeg → 003.webp
+```
+
+---
+
+#### 5. **Flexible Image Count - Carousel Works with 2, 3, or 4**
+
+**Pelajaran:**
+- Tidak semua product harus 4 images
+- Carousel works fine dengan 2 atau 3 slides
+- Update markdown sesuai jumlah aktual
+
+**Evidence:**
+- ✅ Product 6-8cm: 3 images - carousel works perfectly
+- ✅ Product 8-10cm: 4 images - full carousel
+- ✅ Product 10-12cm: 4 images - full carousel
+
+**Template Flexibility:**
+```yaml
+# 2 images (minimum for carousel)
+images:
+  - .../001.jpeg
+  - .../002.jpeg
+
+# 3 images (sweet spot)
+images:
+  - .../001.jpeg
+  - .../002.jpeg
+  - .../003.jpeg
+
+# 4 images (maximum)
+images:
+  - .../001.jpeg
+  - .../002.jpeg
+  - .../003.jpeg
+  - .../004.jpeg
+```
+
+---
+
+#### 6. **Verification at Every Step Prevents Cascading Failures**
+
+**Pelajaran:**
+- Skip verification → discover error di Step 5 (too late!)
+- Fix di Step 5 cost lebih mahal (rebuild time, etc)
+- Verify early, fail fast!
+
+**Verification Checklist:**
+```bash
+# After Step 1 (Rename)
+ls -lh jual-kayu-dolken-gelam-[SIZE]-*
+# ✓ Expect: renamed files with correct numbering
+
+# After Step 2 (Move)
+ls -lh /home/mkt01/Public/.../products/jual-kayu-dolken-gelam-[SIZE]-*.jpeg
+# ✓ Expect: files in destination
+ls -lh '/home/mkt01/Documents/.../[FOLDER]/' | grep "[SIZE]"
+# ✓ Expect: no output (files moved)
+
+# After Step 3 (WebP)
+ls -lh .../products/jual-kayu-dolken-gelam-[SIZE]-* | awk '{print $5, $9}'
+# ✓ Expect: JPEG + WebP pairs
+
+# After Step 4 (Markdown)
+grep -A 10 "images:" _products/kayu-dolken-[SIZE].md
+# ✓ Expect: correct number of entries
+
+# After Step 5 (Rebuild)
+grep -c 'carousel-item' _site/product/kayu-dolken-[SIZE]/index.html
+# ✓ Expect: matches images count
+```
+
+---
+
+#### 7. **Recovery Strategy When Things Go Wrong**
+
+**Pelajaran:**
+Product 6-8cm mengalami broken state, tapi bisa di-recover:
+
+**Problem:**
+- Markdown: 4 images
+- Filesystem: 1 image
+- Carousel: broken
+
+**Recovery Steps:**
+1. ✅ Pre-check: identify mismatch
+2. ✅ Add 2 new images (002, 003)
+3. ✅ Update markdown: reduce from 4 → 3
+4. ✅ Rebuild: verify carousel works
+5. ✅ Result: working 3-slide carousel
+
+**Key Insight:**
+- Markdown is source of truth for Jekyll build
+- Filesystem is source of truth for actual files
+- **They MUST sync** - prefer filesystem reality over markdown assumption
+
+---
+
+#### 8. **Common Mistakes & How to Avoid Them**
+
+**Mistake 1: Lupa Pre-check**
+- ❌ Langsung rename & move
+- ✅ Selalu Step 0 dulu
+
+**Mistake 2: Assume file numbering**
+- ❌ Assume harus start dari 001
+- ✅ Check existing, start from next number
+
+**Mistake 3: Update markdown sebelum verify files**
+- ❌ Edit markdown, lupa add files
+- ✅ Add files dulu, baru update markdown
+
+**Mistake 4: Tidak verify source folder**
+- ❌ File masih di source (tidak moved)
+- ✅ Check source empty after move
+
+**Mistake 5: Re-convert existing WebP**
+- ❌ Overwrite existing WebP
+- ✅ Use skip logic
+
+---
+
+#### 9. **When to Use This Workflow vs Manual**
+
+**Use This Workflow When:**
+- ✅ Adding multiple images (2-4) to product
+- ✅ Need consistent naming (SEO-friendly)
+- ✅ Want WebP conversion
+- ✅ Need to track what files are used
+
+**Manual Approach When:**
+- ❌ Only 1 image to add
+- ❌ Quick test/temporary
+- ❌ Non-product images (blog posts different workflow)
+
+---
+
+#### 10. **Production Lessons from 3 Real Implementations**
+
+**Session 1: Product 8-10cm (2025-11-16 11:49)**
+- ✅ Success: 4 images from scratch
+- ✅ Lesson: New product is easiest (no existing files)
+- ✅ Pattern: 001-004 straightforward
+
+**Session 2: Product 6-8cm (2025-11-16 11:56 - FIRST ATTEMPT)**
+- ⚠️ Issue: File 002-004 lost during process
+- ❌ Mistake: Tidak pre-check with enough care
+- 📝 Learning: Pre-check is CRITICAL
+
+**Session 3: Product 10-12cm (2025-11-16 12:35)**
+- ✅ Success: 3 images added (002-004)
+- ✅ Applied: Pre-check lesson
+- ✅ Result: Smooth execution
+
+**Session 4: Product 6-8cm RECOVERY (2025-11-16 12:35)**
+- ✅ Success: Fixed broken state
+- ✅ Added: 2 new images (002-003)
+- ✅ Fixed: Markdown 4→3 images
+- ✅ Result: Working 3-slide carousel
+- 📝 Learning: Recovery is possible, prefer filesystem reality
+
+---
+
+## Key Takeaways (Kesimpulan Utama)
+
+### ⭐ Top 5 Must-Do Rules:
+
+1. **NEVER skip Step 0 (Pre-check)** - This prevents 90% of problems
+2. **Verify after each step** - Fail fast, fix early
+3. **Markdown must match filesystem** - Cross-check before rebuild
+4. **Use smart WebP conversion** - Skip existing files
+5. **Document edge cases** - Log unusual situations
+
+### ✅ Success Metrics:
+
+When workflow is successful:
+- ✅ All images exist in filesystem
+- ✅ Markdown `images:` array matches filesystem
+- ✅ Carousel slide count matches images count
+- ✅ All JPEG have corresponding WebP
+- ✅ Build completes without errors
+- ✅ Source folder empty (files moved)
+
+### ⚠️ Red Flags (Warning Signs):
+
+- ❌ Markdown references more images than exist
+- ❌ Carousel slide count ≠ images array count
+- ❌ Missing WebP files
+- ❌ Files still in source folder after "move"
+- ❌ Build completes but carousel broken
+
+---
+
+**Last Updated:** 2025-11-16 (Updated with Lessons Learned)
+
+**Tested On:**
+- Product kayu-dolken-2-3cm (4 images - new product) - Success ✅
+- Product kayu-dolken-8-10cm (4 images - new product) - Success ✅
+- Product kayu-dolken-6-8cm (3 images added to existing) - Success ✅ (after recovery)
+- Product kayu-dolken-10-12cm (3 images added to existing) - Success ✅
+
+**Real-World Sessions:**
+- Session 1 (8-10cm): Smooth execution, new product baseline
+- Session 2 (6-8cm - attempt 1): Discovered pre-check importance
+- Session 3 (10-12cm): Applied lessons, perfect execution
+- Session 4 (6-8cm - recovery): Fixed broken state, flexible carousel
+
+**Status:** ✅ Production Ready - Battle-Tested & Improved
