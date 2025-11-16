@@ -37,8 +37,8 @@ Shows: 3 latest posts + 3 older posts (relative to current post)
             {% if post.image %}
               <img src="{{ post.image | relative_url }}" class="card-img-top" alt="{{ post.title }}" loading="lazy">
             {% else %}
-              <div class="card-img-top bg-gradient-wood d-flex align-items-center justify-content-center" style="height: 180px;">
-                <i class="bi bi-file-text text-white" style="font-size: 3rem;"></i>
+              <div class="card-img-top bg-gradient-wood">
+                <i class="bi bi-file-text text-white"></i>
               </div>
             {% endif %}
             <div class="card-body">
@@ -57,7 +57,7 @@ Shows: 3 latest posts + 3 older posts (relative to current post)
               </p>
 
               {% if post.like_count or post.comment_count or post.share_count %}
-              <div class="mb-2 d-flex align-items-center flex-wrap gap-2" style="font-size: 0.75rem;">
+              <div class="engagement-metrics">
                 {% if post.like_count %}
                 <span class="text-muted">
                   <i class="bi bi-heart-fill text-danger"></i> {{ post.like_count }}
@@ -89,16 +89,3 @@ Shows: 3 latest posts + 3 older posts (relative to current post)
     <p class="text-muted">Tidak ada artikel terkait saat ini.</p>
   {% endif %}
 </div>
-
-<style>
-.hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.hover-lift:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
-.bg-gradient-wood {
-  background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
-}
-</style>

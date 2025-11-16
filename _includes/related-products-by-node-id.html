@@ -101,13 +101,12 @@
               <img src="{{ product.image | relative_url }}"
                    class="card-img-top"
                    alt="{{ product.title }}"
-                   loading="lazy"
-                   style="height: 200px; object-fit: cover;">
+                   loading="lazy">
             </picture>
           </a>
           {% else %}
-          <div class="card-img-top bg-wood-gradient d-flex align-items-center justify-content-center" style="height: 200px;">
-            <i class="bi bi-tree text-white" style="font-size: 3rem;"></i>
+          <div class="card-img-top bg-wood-gradient">
+            <i class="bi bi-tree text-white"></i>
           </div>
           {% endif %}
 
@@ -149,7 +148,7 @@
 
             {% comment %}Rating & Reviews - Rich content{% endcomment %}
             {% if product.rating or product.review_count %}
-            <div class="mb-2 d-flex align-items-center" style="font-size: 0.875rem;">
+            <div class="rating-display">
               {% if product.rating %}
               <span class="text-warning me-1">★</span>
               <strong class="me-1">{{ product.rating }}</strong>
@@ -218,26 +217,3 @@
     </div>
   </div>
 </section>
-
-<style>
-.product-card {
-  transition: all 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0.75rem 1.5rem rgba(139, 69, 19, 0.15) !important;
-}
-
-.product-card .card-img-top {
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover .card-img-top {
-  transform: scale(1.05);
-}
-
-.bg-wood-gradient {
-  background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #CD853F 100%);
-}
-</style>
