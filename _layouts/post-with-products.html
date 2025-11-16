@@ -121,29 +121,6 @@ layout: default
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ page.url | absolute_url }}"
-  }{% if page.like_count or page.comment_count or page.share_count %},
-  "interactionStatistic": [
-    {% if page.like_count %}
-    {
-      "@type": "InteractionCounter",
-      "interactionType": "https://schema.org/LikeAction",
-      "userInteractionCount": {{ page.like_count }}
-    }{% if page.comment_count or page.share_count %},{% endif %}
-    {% endif %}
-    {% if page.comment_count %}
-    {
-      "@type": "InteractionCounter",
-      "interactionType": "https://schema.org/CommentAction",
-      "userInteractionCount": {{ page.comment_count }}
-    }{% if page.share_count %},{% endif %}
-    {% endif %}
-    {% if page.share_count %}
-    {
-      "@type": "InteractionCounter",
-      "interactionType": "https://schema.org/ShareAction",
-      "userInteractionCount": {{ page.share_count }}
-    }
-    {% endif %}
-  ]{% endif %}
+  }
 }
 </script>

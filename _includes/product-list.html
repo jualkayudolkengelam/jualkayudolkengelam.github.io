@@ -217,7 +217,12 @@
                 <td>
                   {% if product.rating %}
                     <div class="d-flex align-items-center">
-                      <span class="text-warning me-1">★</span>
+                      <span class="text-warning me-1">
+                        {% assign rating = product.rating %}
+                        {% for i in (1..5) %}
+                          {% if i <= rating %}★{% else %}☆{% endif %}
+                        {% endfor %}
+                      </span>
                       <strong>{{ product.rating }}</strong>
                       <small class="text-muted ms-1">({{ product.review_count | default: 0 }} reviews)</small>
                     </div>
@@ -312,7 +317,12 @@
           {% if product.rating %}
           <p class="mb-2">
             <strong>Rating:</strong>
-            <span class="text-warning">★</span> {{ product.rating }}
+            <span class="text-warning">
+              {% assign rating = product.rating %}
+              {% for i in (1..5) %}
+                {% if i <= rating %}★{% else %}☆{% endif %}
+              {% endfor %}
+            </span> {{ product.rating }}
             <small class="text-muted">({{ product.review_count | default: 0 }} reviews)</small>
           </p>
           {% endif %}

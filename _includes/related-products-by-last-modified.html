@@ -252,7 +252,12 @@
             {% if product.rating or product.review_count %}
             <div class="rating-display">
               {% if product.rating %}
-              <span class="text-warning me-1">★</span>
+              <span class="text-warning me-1">
+                {% assign rating = product.rating %}
+                {% for i in (1..5) %}
+                  {% if i <= rating %}★{% else %}☆{% endif %}
+                {% endfor %}
+              </span>
               <strong class="me-1">{{ product.rating }}</strong>
               {% endif %}
               {% if product.review_count %}
