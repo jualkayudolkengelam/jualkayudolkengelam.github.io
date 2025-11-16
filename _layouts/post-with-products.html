@@ -52,17 +52,8 @@ layout: default
       {% endif %}
     </header>
 
-    <!-- Featured Image with Gallery -->
-    {% if page.images %}
-    <div class="mb-4">
-      {% include image-carousel.html
-         carousel_id="postCarousel"
-         images=page.images
-         title=page.title
-         gallery_name="Galeri Artikel"
-      %}
-    </div>
-    {% elsif page.image %}
+    <!-- Featured Image -->
+    {% if page.image %}
     <div class="mb-4">
       <picture>
         <source srcset="{{ page.image | replace: '.jpeg', '.webp' | relative_url }}" type="image/webp">
