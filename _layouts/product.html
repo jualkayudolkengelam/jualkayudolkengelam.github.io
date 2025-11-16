@@ -362,3 +362,23 @@ layout: default
   ]
 }
 </script>
+
+<!-- Carousel Initialization Script -->
+{% if page.images %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var carouselElement = document.getElementById('productCarousel');
+  if (carouselElement && typeof bootstrap !== 'undefined') {
+    // Initialize carousel manually
+    var carousel = new bootstrap.Carousel(carouselElement, {
+      interval: 3000,
+      ride: 'carousel',
+      pause: 'hover',
+      wrap: true,
+      keyboard: true,
+      touch: true
+    });
+  }
+});
+</script>
+{% endif %}
