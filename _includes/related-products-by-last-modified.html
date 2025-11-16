@@ -88,92 +88,79 @@
 {% comment %} Get top 3 most recently updated {% endcomment %}
 {% assign final_products = sorted_products | slice: 0, 3 %}
 
-<!-- Schema.org ItemList for Related Products -->
+<!-- Schema.org Product Snippets (Related Products) -->
+{% for product in final_products %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "@id": "{{ page.url | absolute_url }}#related-products",
-  "name": "Produk Kayu Dolken Terbaru",
-  "description": "Produk kayu dolken gelam yang baru diperbarui",
-  "numberOfItems": {{ final_products.size }},
-  "itemListElement": [
-    {% for product in final_products %}
-    {
-      "@type": "ListItem",
-      "position": {{ forloop.index }},
-      "name": "{{ product.title }}",
-      "item": {
-        "@type": "Product",
-        "name": "{{ product.title }}",
-        "url": "{{ product.url | absolute_url }}",
-        "image": "{{ product.image | absolute_url }}",
-        "sku": "{{ product.sku }}",
-        "description": "{{ product.description | strip_html | strip_newlines | escape }}",
-        "brand": {
-          "@type": "Brand",
-          "name": "{{ site.business.name }}"
+  "@type": "Product",
+  "@id": "{{ product.url | absolute_url }}#snippet",
+  "name": "{{ product.title }}",
+  "url": "{{ product.url | absolute_url }}",
+  "image": "{{ product.image | absolute_url }}",
+  "sku": "{{ product.sku }}",
+  "description": "{{ product.description | strip_html | strip_newlines | escape }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ site.business.name }}"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "{{ product.price }}",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock",
+    "url": "{{ product.url | absolute_url }}",
+    "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+    "seller": {
+      "@type": "Organization",
+      "name": "{{ site.business.name }}"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "IDR"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "ID"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 2,
+          "unitCode": "DAY"
         },
-        "offers": {
-          "@type": "Offer",
-          "price": "{{ product.price }}",
-          "priceCurrency": "IDR",
-          "availability": "https://schema.org/InStock",
-          "url": "{{ product.url | absolute_url }}",
-          "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
-          "seller": {
-            "@type": "Organization",
-            "name": "{{ site.business.name }}"
-          },
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0",
-              "currency": "IDR"
-            },
-            "shippingDestination": {
-              "@type": "DefinedRegion",
-              "addressCountry": "ID"
-            },
-            "deliveryTime": {
-              "@type": "ShippingDeliveryTime",
-              "handlingTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 1,
-                "maxValue": 2,
-                "unitCode": "DAY"
-              },
-              "transitTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 3,
-                "maxValue": 7,
-                "unitCode": "DAY"
-              }
-            }
-          },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "ID",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 7,
-            "returnMethod": "https://schema.org/ReturnByMail",
-            "returnFees": "https://schema.org/FreeReturn"
-          }
-        }{% if product.rating or product.review_count %},
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "{{ product.rating | default: 4.5 }}",
-          "reviewCount": "{{ product.review_count | default: 45 }}",
-          "bestRating": "5",
-          "worstRating": "1"
-        }{% endif %}
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 3,
+          "maxValue": 7,
+          "unitCode": "DAY"
+        }
       }
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "ID",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 7,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    }
+  }{% if product.rating or product.review_count %},
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ product.rating | default: 4.5 }}",
+    "reviewCount": "{{ product.review_count | default: 45 }}",
+    "bestRating": "5",
+    "worstRating": "1"
+  }{% endif %}
 }
 </script>
+{% endfor %}
 
 <!-- Related Products Section (Last Modified Strategy) -->
 <section class="related-products-section related-products-by-last-modified my-5 py-4 bg-light rounded">
