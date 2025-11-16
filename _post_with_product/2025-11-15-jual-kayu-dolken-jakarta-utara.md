@@ -18,13 +18,55 @@ comment_count: 1
 share_count: 2
 ---
 
-## Cari Kayu Dolken di Jakarta Utara? Hubungi: **081311400177**
-
-Sedang mencari **jual kayu dolken Jakarta Utara** dengan harga terbaik dan kualitas terjamin? Kami adalah supplier kayu dolken gelam terpercaya yang melayani seluruh wilayah Jakarta Utara dengan **pengiriman gratis** dan sistem COD (Cash on Delivery).
-
-**📞 Hubungi Kami: 081311400177** (Telepon / WhatsApp)
-
-Melayani pengiriman ke Kelapa Gading, Ancol, Pademangan, Tanjung Priok, Sunter, Pluit, Koja, Cilincing, dan seluruh wilayah Jakarta Utara. Stok ready, pengiriman cepat, harga kompetitif langsung dari supplier!
+<div class="card border-0 shadow-lg my-4" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);">
+  <div class="card-body text-white py-4">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h2 class="h3 fw-bold mb-3">
+          <i class="bi bi-geo-alt-fill me-2"></i>Cari Kayu Dolken di Jakarta Utara?
+        </h2>
+        <p class="mb-3" style="opacity: 0.95; font-size: 1.05rem;">
+          Sedang mencari <strong>jual kayu dolken Jakarta Utara</strong> dengan harga terbaik dan kualitas terjamin? Kami adalah supplier kayu dolken gelam terpercaya yang melayani seluruh wilayah Jakarta Utara dengan <strong>pengiriman gratis</strong> dan sistem COD (Cash on Delivery).
+        </p>
+        <div class="bg-white bg-opacity-10 p-3 rounded mb-3">
+          <p class="mb-2" style="opacity: 0.95;">
+            <i class="bi bi-truck me-2"></i>
+            <strong>Melayani Pengiriman ke:</strong>
+          </p>
+          <p class="mb-0 small" style="opacity: 0.9;">
+            Kelapa Gading, Ancol, Pademangan, Tanjung Priok, Sunter, Pluit, Koja, Cilincing, dan seluruh wilayah Jakarta Utara
+          </p>
+        </div>
+        <div class="d-flex flex-wrap gap-2 align-items-center">
+          <span class="badge bg-white text-danger px-3 py-2">
+            <i class="bi bi-check-circle-fill me-1"></i>Stok Ready
+          </span>
+          <span class="badge bg-white text-danger px-3 py-2">
+            <i class="bi bi-lightning-fill me-1"></i>Pengiriman Cepat
+          </span>
+          <span class="badge bg-white text-danger px-3 py-2">
+            <i class="bi bi-cash-coin me-1"></i>Harga Kompetitif
+          </span>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center mt-4 mt-lg-0">
+        <div class="bg-white p-4 rounded shadow-lg">
+          <i class="bi bi-telephone-fill text-danger mb-3" style="font-size: 3rem;"></i>
+          <h4 class="h5 fw-bold text-danger mb-2">Hubungi Kami Sekarang!</h4>
+          <p class="h3 fw-bold text-dark mb-3">081311400177</p>
+          <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20untuk%20Jakarta%20Utara"
+             class="btn btn-success btn-lg w-100 shadow-sm"
+             target="_blank">
+            <i class="bi bi-whatsapp me-2"></i>Chat WhatsApp
+          </a>
+          <p class="small text-muted mt-2 mb-0">
+            <i class="bi bi-clock-fill me-1"></i>Respon cepat 24/7
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="my-5">
   <div class="card border-0 shadow-lg">
