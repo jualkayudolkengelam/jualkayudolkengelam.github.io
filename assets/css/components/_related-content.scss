@@ -3,5 +3,59 @@
    ========================================================================== */
 
 .related-content-section {
-  // Styles will be extracted here
+  // Card image styling
+  .card-img-top {
+    height: $card-image-height; // 200px
+    object-fit: cover;
+
+    &.bg-wood-gradient {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  // Icon sizing for placeholder
+  .bi-file-text {
+    font-size: $icon-size-sm; // 3rem
+    opacity: 0.75;
+  }
+
+  // Engagement metrics (likes, comments, shares)
+  .engagement-metrics {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: $font-size-xs; // 0.75rem
+  }
+
+  // Related content card hover effects
+  .related-content-card {
+    transition: $transition-default;
+    position: relative;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: $shadow-wood-hover;
+
+      .card-img-top {
+        transform: scale(1.05);
+      }
+    }
+
+    .card-img-top {
+      transition: $transition-transform;
+    }
+
+    .card-body {
+      z-index: 2;
+    }
+  }
+}
+
+// Light wood background
+.bg-wood-light {
+  background-color: #F5DEB3 !important;
 }

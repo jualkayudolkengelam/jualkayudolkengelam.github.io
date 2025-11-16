@@ -3,5 +3,43 @@
    ========================================================================== */
 
 .related-articles {
-  // Styles will be extracted here
+  // Placeholder image styling
+  .card-img-top {
+    &.bg-gradient-wood {
+      height: $card-image-height-sm; // 180px
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  // Icon sizing
+  .bi-file-text {
+    font-size: $icon-size-sm; // 3rem
+  }
+
+  // Engagement metrics (likes, comments, shares)
+  .engagement-metrics {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: $font-size-xs; // 0.75rem
+  }
+}
+
+// Hover lift effect (reusable)
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+// Gradient background (reusable across components)
+.bg-gradient-wood {
+  background: linear-gradient(135deg, $wood-brown 0%, $wood-light 100%);
 }

@@ -3,5 +3,69 @@
    ========================================================================== */
 
 .related-products-section {
-  // Styles will be extracted here
+  // Card image styling
+  .card-img-top {
+    height: $card-image-height; // 200px
+    object-fit: cover;
+
+    &.bg-wood-gradient {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  // Icon sizing for placeholder
+  .bi-tree {
+    font-size: $icon-size-sm; // 3rem
+  }
+
+  // Rating & review display
+  .rating-display {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: $font-size-sm; // 0.875rem
+  }
+
+  // Product card hover effects
+  .product-card {
+    transition: $transition-default;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: $shadow-wood-hover;
+
+      .card-img-top {
+        transform: scale(1.05);
+      }
+    }
+
+    .card-img-top {
+      transition: $transition-transform;
+    }
+  }
+
+  // Product card fresh variant (last-modified strategy)
+  .product-card-fresh {
+    transition: $transition-default;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0.75rem 1.5rem rgba(40, 167, 69, 0.15) !important;
+
+      .card-img-top {
+        transform: scale(1.05);
+      }
+    }
+
+    .card-img-top {
+      transition: $transition-transform;
+    }
+  }
+}
+
+// Wood gradient background (reusable)
+.bg-wood-gradient {
+  background: linear-gradient(135deg, $wood-brown 0%, #A0522D 50%, #CD853F 100%);
 }

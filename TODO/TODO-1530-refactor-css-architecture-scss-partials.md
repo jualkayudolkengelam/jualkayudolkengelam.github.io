@@ -137,7 +137,7 @@ $transition-default: all 0.3s ease;
 $transition-transform: transform 0.3s ease;
 ```
 
-### Phase 3: Extract Inline Styles (45 min)
+### Phase 3: Extract Inline Styles (45 min) ✅
 
 #### A. Related Articles Component
 **File:** `_includes/related-articles.html`
@@ -150,12 +150,12 @@ $transition-transform: transform 0.3s ease;
 ```
 
 **Actions:**
-- [ ] Create `assets/css/components/_related-articles.scss`
-- [ ] Extract `.related-articles .card-img-top { height: 180px; }`
-- [ ] Extract `.related-articles .bi-file-text { font-size: 3rem; }`
-- [ ] Extract `.related-articles .engagement-metrics { font-size: 0.75rem; }`
-- [ ] Remove inline `style=""` attributes
-- [ ] Remove `<style>` block at bottom of file
+- [x] Create `assets/css/components/_related-articles.scss`
+- [x] Extract `.related-articles .card-img-top { height: 180px; }`
+- [x] Extract `.related-articles .bi-file-text { font-size: 3rem; }`
+- [x] Extract `.related-articles .engagement-metrics { font-size: 0.75rem; }`
+- [ ] Remove inline `style=""` attributes (pending Phase 5)
+- [ ] Remove `<style>` block at bottom of file (pending Phase 5)
 
 **New SCSS (_related-articles.scss):**
 ```scss
@@ -224,10 +224,10 @@ $transition-transform: transform 0.3s ease;
 ```
 
 **Actions:**
-- [ ] Create `assets/css/components/_related-products.scss`
-- [ ] Extract image heights, icon sizes, font sizes
-- [ ] Remove inline styles from both files
-- [ ] Remove `<style>` blocks
+- [x] Create `assets/css/components/_related-products.scss`
+- [x] Extract image heights, icon sizes, font sizes
+- [ ] Remove inline styles from both files (pending Phase 5)
+- [ ] Remove `<style>` blocks (pending Phase 5)
 
 **New SCSS (_related-products.scss):**
 ```scss
@@ -290,10 +290,10 @@ $transition-transform: transform 0.3s ease;
 **File:** `_includes/related-content-by-node-id.html`
 
 **Actions:**
-- [ ] Create `assets/css/components/_related-content.scss`
-- [ ] Extract image heights, icon sizes, font sizes
-- [ ] Remove inline styles
-- [ ] Remove `<style>` block
+- [x] Create `assets/css/components/_related-content.scss`
+- [x] Extract image heights, icon sizes, font sizes
+- [ ] Remove inline styles (pending Phase 5)
+- [ ] Remove `<style>` block (pending Phase 5)
 
 **New SCSS (_related-content.scss):**
 ```scss
@@ -367,9 +367,9 @@ $transition-transform: transform 0.3s ease;
 ```
 
 **Actions:**
-- [ ] Create `assets/css/components/_product-list.scss`
-- [ ] Extract popular product border styling
-- [ ] Remove inline style attribute
+- [x] Create `assets/css/components/_product-list.scss`
+- [x] Extract popular product border styling
+- [ ] Remove inline style attribute (pending Phase 5)
 
 **New SCSS (_product-list.scss):**
 ```scss
@@ -389,7 +389,7 @@ $transition-transform: transform 0.3s ease;
 }
 ```
 
-### Phase 4: Create Utility Classes (30 min)
+### Phase 4: Create Utility Classes (30 min) ✅
 
 **File:** `assets/css/_utilities.scss`
 

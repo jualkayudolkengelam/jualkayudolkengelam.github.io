@@ -3,5 +3,13 @@
    ========================================================================== */
 
 .product-list {
-  // Styles will be extracted here
+  // Mobile card view - popular product border
+  .card.border-warning {
+    border-width: 2px !important;
+  }
+
+  // Desktop table view - popular product row highlight
+  .table-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+  }
 }
