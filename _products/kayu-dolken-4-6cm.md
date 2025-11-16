@@ -8,8 +8,9 @@ image: /assets/images/products/jual-kayu-dolken-gelam-4-6cm-001.jpeg
 sku: DOLKEN-4-6
 popular: false
 rating: 4.6
-review_count: 52
-total_updates: 0
+review_count: 53
+total_updates: 1
+last_modified_at: '2025-11-16 02:41:46 +0000'
 features:
   - Kayu gelam asli kualitas premium
   - Diameter ideal untuk konstruksi sedang
