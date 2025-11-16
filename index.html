@@ -429,8 +429,15 @@ keywords: jual kayu dolken terdekat, kayu dolken gelam, jual kayu dolken, dolken
       <p class="lead text-muted">Informasi seputar kayu dolken gelam dan penggunaannya</p>
     </div>
 
+    {% comment %}
+    Sort by last_modified_at to show recently updated posts first
+    {% endcomment %}
+    {% assign posts_with_modified = site.posts | where_exp: "post", "post.last_modified_at" | sort: "last_modified_at" | reverse %}
+    {% assign posts_without_modified = site.posts | where_exp: "post", "post.last_modified_at == nil" | sort: "date" | reverse %}
+    {% assign sorted_posts = posts_with_modified | concat: posts_without_modified %}
+
     <div class="row g-4">
-      {% for post in site.posts limit:3 %}
+      {% for post in sorted_posts limit:3 %}
       <div class="col-md-6 col-lg-4">
         <div class="card blog-card">
           {% if post.image %}

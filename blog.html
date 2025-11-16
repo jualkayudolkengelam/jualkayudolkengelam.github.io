@@ -6,7 +6,16 @@ description: Informasi, tips, dan artikel seputar kayu dolken gelam, penggunaan,
 
 <div class="row g-4 mb-5">
   {% if site.posts.size > 0 %}
-    {% for post in site.posts %}
+    {% comment %}
+    Sort posts by last_modified_at (DESC) for fresh content priority.
+    Posts with last_modified_at appear first, then posts sorted by publish date.
+    This ensures recently updated posts with new metrics rise to the top.
+    {% endcomment %}
+    {% assign posts_with_modified = site.posts | where_exp: "post", "post.last_modified_at" | sort: "last_modified_at" | reverse %}
+    {% assign posts_without_modified = site.posts | where_exp: "post", "post.last_modified_at == nil" | sort: "date" | reverse %}
+    {% assign sorted_posts = posts_with_modified | concat: posts_without_modified %}
+
+    {% for post in sorted_posts %}
     <div class="col-md-6 col-lg-4">
       <article class="card blog-card">
         {% if post.image %}
