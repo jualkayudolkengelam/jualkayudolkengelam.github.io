@@ -73,12 +73,6 @@ layout: default
     <div class="post-content mb-5">
       {{ content }}
     </div>
-
-    <!-- Related Articles (in content for SEO) -->
-    {% assign all_posts = site.posts | concat: site.post_with_product %}
-    {% if all_posts.size > 1 %}
-      {% include related-content-by-node-id.html %}
-    {% endif %}
   </article>
 
   <!-- CTA Section -->
@@ -99,9 +93,6 @@ layout: default
     </div>
   </section>
 </div>
-
-<!-- Related Products Section (Hybrid: Last Modified for freshness) -->
-{% include related-products-by-last-modified.html %}
 
 <!-- Schema.org Article Markup -->
 <script type="application/ld+json">
