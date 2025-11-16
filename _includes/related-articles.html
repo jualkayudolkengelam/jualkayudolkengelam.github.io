@@ -1,6 +1,91 @@
 {% comment %}
-Related Articles Block - Positioned in content for SEO value
-Shows: 3 latest posts + 3 older posts (relative to current post)
+  ============================================================================
+  Related Articles Component - Latest & Older Posts Selection
+  ============================================================================
+
+  @file        _includes/related-articles.html
+  @description Reusable component that displays related articles using a
+               dual-strategy approach: shows both latest posts and older
+               posts relative to current article. Combines fresh content
+               with historical articles for comprehensive related content.
+               Implements component-level schema architecture with complete
+               ItemList and BlogPosting markup for maximum SEO value.
+
+  @version     1.0.1
+  @date        2025-11-16
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Changelog:
+  ----------
+  v1.0.1 (2025-11-16)
+    - Added ItemList schema with BlogPosting items
+    - Complete BlogPosting fields (headline, url, image, dates, author, publisher)
+    - Include interactionStatistic for engagement metrics (likes, comments, shares)
+    - Schema describes actual articles shown (up to 6 items)
+    - Perfect schema/visual accuracy
+
+  v1.0.0 (2025-11-15)
+    - Initial component with dual-strategy selection
+    - Shows 3 latest posts (excluding current)
+    - Shows 3 older posts (before current post date)
+    - Engagement metrics display (likes, comments, shares)
+    - Positioned in content for SEO value
+
+  Selection Strategy:
+  -------------------
+  Dual approach for balanced recommendations:
+
+  1. Latest Posts (3 items):
+     - Get 3 most recent posts from all collections
+     - Exclude current post
+     - Provides fresh, up-to-date content
+
+  2. Older Posts (3 items):
+     - Get 3 posts published BEFORE current post date
+     - Ordered from newest to oldest of the "before" set
+     - Provides historical context and depth
+
+  3. Combine both sets (up to 6 total items)
+
+  Example:
+  - Current post date: 2025-11-15
+  - Latest: Shows 3 newest posts (may include posts after 2025-11-15)
+  - Older: Shows 3 posts before 2025-11-15
+  - Total: Up to 6 related articles
+
+  Features:
+  ---------
+  - Dual-strategy selection (latest + older posts)
+  - Schema.org ItemList with BlogPosting items
+  - Complete article metadata (headline, dates, author, publisher)
+  - Engagement metrics (likes, comments, shares) in schema and visual
+  - Image optimization with lazy loading
+  - Category badges for article classification
+  - Responsive card layout with Bootstrap 5
+  - Excerpt preview with read more button
+  - Last modified date tracking
+  - Positioned in content for SEO value
+
+  Schema Implementation:
+  ----------------------
+  - ItemList with up to 6 BlogPosting items
+  - Complete BlogPosting fields: headline, url, image, dates
+  - Author (Person) and Publisher (Organization) entities
+  - interactionStatistic for social engagement (likes, comments, shares)
+  - datePublished and dateModified timestamps
+  - numberOfItems matches visual display (perfect accuracy)
+
+  Usage:
+  ------
+  {% include related-articles.html %}
+
+  Used in:
+  --------
+  - _layouts/post.html (standard blog posts)
+
+  ============================================================================
 {% endcomment %}
 
 <div class="related-content-section related-articles my-5 p-4 bg-light rounded">
@@ -33,6 +118,73 @@ Shows: 3 latest posts + 3 older posts (relative to current post)
   {% assign all_related = latest_posts | concat: older_posts %}
 
   {% if all_related.size > 0 %}
+    <!-- Schema.org ItemList for Related Articles -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Artikel Terkait",
+      "description": "Artikel blog terbaru dan lama yang relevan",
+      "numberOfItems": {{ all_related.size }},
+      "itemListElement": [
+        {% for post in all_related %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": {
+            "@type": "BlogPosting",
+            "headline": "{{ post.title }}",
+            "url": "{{ post.url | absolute_url }}",
+            {% if post.image %}
+            "image": "{{ post.image | absolute_url }}",
+            {% endif %}
+            "datePublished": "{{ post.date | date_to_xmlschema }}",
+            {% if post.last_modified_at %}
+            "dateModified": "{{ post.last_modified_at | date_to_xmlschema }}",
+            {% endif %}
+            "author": {
+              "@type": "Person",
+              "name": "{% if post.author %}{{ post.author }}{% else %}Admin{% endif %}"{% if post.author_url %},
+              "url": "{{ post.author_url }}"{% endif %}
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "{{ site.business.name }}",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}"
+              }
+            }{% if post.like_count or post.comment_count or post.share_count %},
+            "interactionStatistic": [
+              {% if post.like_count %}
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/LikeAction",
+                "userInteractionCount": {{ post.like_count }}
+              }{% if post.comment_count or post.share_count %},{% endif %}
+              {% endif %}
+              {% if post.comment_count %}
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/CommentAction",
+                "userInteractionCount": {{ post.comment_count }}
+              }{% if post.share_count %},{% endif %}
+              {% endif %}
+              {% if post.share_count %}
+              {
+                "@type": "InteractionCounter",
+                "interactionType": "https://schema.org/ShareAction",
+                "userInteractionCount": {{ post.share_count }}
+              }
+              {% endif %}
+            ]{% endif %}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    </script>
+
     <div class="row g-3">
       {% for post in all_related %}
         <div class="col-md-6 col-lg-4">
