@@ -1,13 +1,84 @@
 {% comment %}
-  Related Products Component - Node-based rotation system
+  ============================================================================
+  Related Products Component - Node-based Rotation System
+  ============================================================================
 
-  Logic: Rotates products based on article's position
-  - Each article shows different 3 products in rotation
-  - Article at node 20 shows products starting from (20 % total_products)
-  - Ensures all products get equal exposure across all articles
+  @file        _includes/related-products-by-node-id.html
+  @description Reusable component that displays 3 related products using
+               intelligent node-based rotation algorithm. Each page shows
+               different products based on position index (node ID), ensuring
+               equal exposure for all products across the site. Implements
+               component-level schema architecture with complete ItemList markup.
+
+  @version     1.0.1
+  @date        2025-11-16
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Changelog:
+  ----------
+  v1.0.1 (2025-11-16)
+    - Added shippingDetails to Product schema (free shipping, 3-7 days delivery)
+    - Added hasMerchantReturnPolicy (7 days return window, free return)
+    - Fixed Google Rich Results non-critical warnings
+    - Complete Offer field parity with layout schemas
+
+  v1.0.0 (2025-11-16)
+    - Component-level schema implementation with ItemList
+    - Schema describes exactly 3 products (matches visual)
+    - Moved schema from layout to component for accuracy
+    - Eliminated duplicate rotation logic in product.html layout
+    - Complete Product details in schema (name, price, rating, offers)
+
+  v0.9.0 (2025-11-15)
+    - Initial component with node-based rotation logic
+    - Modulo-based circular rotation algorithm
+    - Context detection (product page vs article page)
+
+  Rotation Algorithm:
+  -------------------
+  1. Detect context: product page or article page
+  2. Get current page position (index) in collection
+  3. Calculate start position: current_index % total_products
+  4. Select 3 products starting from calculated position (circular)
+  5. On product pages: skip current product, show 3 others
+
+  Example:
+  - Article at position 0 shows products: 0, 1, 2
+  - Article at position 1 shows products: 1, 2, 3
+  - Article at position 5 shows products: 0, 1, 2 (wraps around)
+  - Product page for product 2 shows: 3, 4, 5 (skips itself)
+
+  Features:
+  ---------
+  - Node-based rotation for equal product exposure
+  - Context-aware (handles both article and product pages)
+  - Circular rotation using modulo arithmetic
+  - Schema.org ItemList markup with complete Product details
+  - WebP image optimization with JPEG fallback
+  - Rating and review count display
+  - Update badges for recently modified products
+  - Popular product badges
+  - WhatsApp order integration
+  - Responsive card layout with Bootstrap 5
+
+  Schema Implementation:
+  ----------------------
+  - ItemList with 3 Product items (rotated selection)
+  - Complete Offer fields: price, shipping, returns
+  - AggregateRating when available
+  - numberOfItems matches visual display (perfect accuracy)
+  - Schema rotation matches visual rotation
 
   Usage:
-  {% include related-products.html %}
+  ------
+  {% include related-products-by-node-id.html %}
+
+  Used in:
+  - _layouts/product.html (individual product pages)
+
+  ============================================================================
 {% endcomment %}
 
 {% comment %} Detect context: product page or article page {% endcomment %}

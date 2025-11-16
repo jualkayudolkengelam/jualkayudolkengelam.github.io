@@ -1,13 +1,67 @@
 {% comment %}
+  ============================================================================
   Related Products Component - Last Modified Strategy
+  ============================================================================
 
-  Logic: Shows 3 most recently updated products
-  - Products with newest last_modified_at appear first
-  - Changes automatically when products are updated via cron
-  - Creates freshness signal for search engines
+  @file        _includes/related-products-by-last-modified.html
+  @description Reusable component that displays 3 most recently updated
+               products with complete schema.org ItemList markup. Products
+               are sorted by last_modified_at field and automatically refresh
+               when cron updates product metrics. Implements component-level
+               schema architecture for perfect schema/visual accuracy.
+
+  @version     1.0.1
+  @date        2025-11-16
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Changelog:
+  ----------
+  v1.0.1 (2025-11-16)
+    - Added shippingDetails to Product schema (free shipping, 3-7 days delivery)
+    - Added hasMerchantReturnPolicy (7 days return window, free return)
+    - Fixed Google Rich Results non-critical warnings
+    - Complete Offer field parity with layout schemas
+
+  v1.0.0 (2025-11-16)
+    - Component-level schema implementation with ItemList
+    - Schema describes exactly 3 products (matches visual)
+    - Moved schema from layout to component for accuracy
+    - Complete Product details in schema (name, price, rating, offers)
+
+  v0.9.0 (2025-11-15)
+    - Initial component with last_modified_at rotation logic
+    - Shows 3 most recently updated products
+    - Freshness signal for search engines
+
+  Features:
+  ---------
+  - Automatic product rotation based on last_modified_at timestamp
+  - Schema.org ItemList markup with complete Product details
+  - WebP image optimization with JPEG fallback
+  - Rating and review count display
+  - Update badges (Updated Today, Recent) for products updated within 7 days
+  - Popular product badges
+  - WhatsApp order integration
+  - Responsive card layout with Bootstrap 5
+
+  Schema Implementation:
+  ----------------------
+  - ItemList with 3 Product items
+  - Complete Offer fields: price, shipping, returns
+  - AggregateRating when available
+  - numberOfItems matches visual display (perfect accuracy)
 
   Usage:
+  ------
   {% include related-products-by-last-modified.html %}
+
+  Used in:
+  - _layouts/post.html (blog posts)
+  - _layouts/post-with-products.html (blog posts with products)
+
+  ============================================================================
 {% endcomment %}
 
 {% comment %} Sort products by last_modified_at (fallback to date) {% endcomment %}
