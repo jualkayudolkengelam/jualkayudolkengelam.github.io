@@ -1,9 +1,10 @@
-name: Update Engagement Metrics
+name: Update Post Metrics
 
 on:
   schedule:
-    # Runs every Monday at 00:00 UTC (07:00 WIB)
-    - cron: '0 0 * * 1'
+    # Runs twice per week for organic timing variation
+    - cron: '0 0 * * 1'   # Monday 00:00 UTC (07:00 WIB)
+    - cron: '30 2 * * 4'  # Thursday 02:30 UTC (09:30 WIB)
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
