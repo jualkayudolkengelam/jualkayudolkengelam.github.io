@@ -160,7 +160,8 @@ Setup GitHub Actions cronjob workflow untuk auto-update post metrics (like, comm
 - Thursday 02:30 UTC (09:30 WIB)
 ```yaml
 schedule:
-  - cron: '0 0 * * 1'  # Weekly (Monday)
+  - cron: '0 0 * * 1'   # Monday 00:00 UTC (07:00 WIB)
+  - cron: '30 2 * * 4'  # Thursday 02:30 UTC (09:30 WIB)
 ```
 
 **Options:**
@@ -449,8 +450,9 @@ git add .github/workflows/update-post-metrics.yml
 git add TODO/TODO-1528-cronjob-update-post-metrics.md
 git commit -m "feat: add automated post metrics update workflow
 
-- Weekly cronjob every Monday at midnight (07:00 WIB)
+- Twice per week cronjob (Mon 07:00 & Thu 09:30 WIB)
 - Auto-increment like counts (30% probability, +1 to +3)
+- Organic timing variation for natural appearance
 - Triggers deployment workflow on push
 - Fully automated, zero maintenance"
 git push
