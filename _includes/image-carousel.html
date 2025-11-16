@@ -10,7 +10,7 @@
                and WebP optimization. Implements component-level schema architecture
                with ImageObject items for maximum SEO value.
 
-  @version     1.0.1
+  @version     1.0.2
   @date        2025-11-16
   @author      jualkayudolkengelam
   @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
@@ -18,14 +18,25 @@
 
   Changelog:
   ----------
+  v1.0.2 (2025-11-16)
+    - Use Schema.org standard structure for ImageGallery
+    - Changed "associatedMedia" to "image" array (standard field)
+    - Changed ImageObject "contentUrl" to "url" (standard field)
+    - Changed ImageObject "description" to "caption" (standard field)
+    - Added "@id" to ImageGallery for unique entity identification
+    - Added "@id" to each ImageObject for unique image identification
+    - Format: ImageGallery @id = "page-url#gallery"
+    - Format: ImageObject @id = "page-url#image-{position}"
+    - Ensures Google properly identifies ImageGallery as image carousel
+    - Prevents confusion with ItemList (Product/Article) schemas
+
   v1.0.1 (2025-11-16)
     - Initial component with ImageGallery schema
-    - Complete ImageObject fields (contentUrl, name, description, width, height)
+    - Complete ImageObject fields (url, name, caption, width, height)
     - Carousel HTML with Bootstrap 5 controls
     - WebP image optimization with JPEG fallback
     - Lazy loading for performance (eager for first image)
     - Flexible parameters for carousel_id, max_height, gallery_name
-    - Perfect schema/visual accuracy (numberOfItems matches images)
 
   Features:
   ---------
@@ -42,11 +53,14 @@
 
   Schema Implementation:
   ----------------------
-  - ImageGallery with N ImageObject items (matches visual)
-  - Complete ImageObject fields: contentUrl, name, description
+  - ImageGallery with unique @id for entity separation
+  - Standard "image" array (not "associatedMedia")
+  - Complete ImageObject fields: url, name, caption (Schema.org standard)
+  - Each ImageObject has unique @id for identification
   - Optional width/height if available
-  - numberOfImages matches actual image count
   - Perfect schema/visual accuracy
+  - ONLY ImageObject items (NO Product or ItemList relation)
+  - Clearly separated from product/article schemas via @id
 
   Parameters:
   -----------
@@ -96,12 +110,14 @@
 {
   "@context": "https://schema.org",
   "@type": "ImageGallery",
+  "@id": "{{ page.url | absolute_url }}#gallery",
   "name": "{{ gallery_name }}",
   "description": "{% if carousel_description != '' %}{{ carousel_description }}{% else %}Galeri foto {{ carousel_title }}{% endif %}",
   "image": [
     {% for image in carousel_images %}
     {
       "@type": "ImageObject",
+      "@id": "{{ page.url | absolute_url }}#image-{{ forloop.index }}",
       "url": "{{ image | absolute_url }}",
       "name": "{{ carousel_title }} - Foto {{ forloop.index }}",
       "caption": "{{ carousel_title }} gambar {{ forloop.index }} dari {{ carousel_images.size }}"{% if page.width and page.height %},
