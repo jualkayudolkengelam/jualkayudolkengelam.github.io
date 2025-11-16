@@ -82,6 +82,32 @@
           {% endif %}
 
           <div class="card-body">
+            {% comment %}Status badge{% endcomment %}
+            {% if product.popular %}
+            <span class="badge bg-warning text-dark mb-2">
+              <i class="bi bi-star-fill"></i> Populer
+            </span>
+            {% endif %}
+
+            {% comment %}Check if updated recently{% endcomment %}
+            {% assign days_since_update = 999 %}
+            {% if product.last_modified_at %}
+              {% assign update_date = product.last_modified_at | date: "%s" %}
+              {% assign now_date = "now" | date: "%s" %}
+              {% assign seconds_diff = now_date | minus: update_date %}
+              {% assign days_since_update = seconds_diff | divided_by: 86400 %}
+            {% endif %}
+
+            {% if days_since_update <= 1 %}
+            <span class="badge bg-success mb-2" title="Updated {{ product.last_modified_at | date: '%Y-%m-%d %H:%M' }}">
+              <i class="bi bi-arrow-clockwise"></i> Updated Today
+            </span>
+            {% elsif days_since_update <= 7 %}
+            <span class="badge bg-info mb-2" title="Updated {{ product.last_modified_at | date: '%Y-%m-%d %H:%M' }}">
+              <i class="bi bi-clock-history"></i> Recent
+            </span>
+            {% endif %}
+
             <h4 class="card-title h6 fw-bold text-wood mb-2">
               {{ product.title }}
             </h4>
@@ -90,6 +116,19 @@
               <span class="text-muted small">Diameter:</span><br>
               <strong>{{ product.diameter }}</strong>
             </p>
+
+            {% comment %}Rating & Reviews - Rich content{% endcomment %}
+            {% if product.rating or product.review_count %}
+            <div class="mb-2 d-flex align-items-center" style="font-size: 0.875rem;">
+              {% if product.rating %}
+              <span class="text-warning me-1">★</span>
+              <strong class="me-1">{{ product.rating }}</strong>
+              {% endif %}
+              {% if product.review_count %}
+              <small class="text-muted">({{ product.review_count }} reviews)</small>
+              {% endif %}
+            </div>
+            {% endif %}
 
             <p class="card-text mb-3">
               <span class="text-muted small">Harga:</span><br>
@@ -100,6 +139,16 @@
             {% if product.features %}
             <p class="card-text small text-secondary mb-3">
               <i class="bi bi-check-circle me-1"></i>{{ product.features | first }}
+            </p>
+            {% endif %}
+
+            {% comment %}Update info{% endcomment %}
+            {% if product.total_updates %}
+            <p class="card-text small text-muted mb-3">
+              <i class="bi bi-graph-up me-1"></i>{{ product.total_updates }} updates
+              {% if product.last_modified_at and days_since_update > 7 %}
+              • {{ product.last_modified_at | date: '%d %b %Y' }}
+              {% endif %}
             </p>
             {% endif %}
 
