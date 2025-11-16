@@ -104,6 +104,61 @@ Deleted:
 
 ---
 
+## 2025-11-16 (Evening)
+
+### Schedule Optimization - Organic Timing Variation
+
+**Change:** Updated cron schedules for both workflows to run 2x/week
+**Reason:** Prevent conflicts, organic appearance, better distribution
+**Modified By:** Development Team
+
+**Details:**
+
+**1. update-post-metrics.yml:**
+- Old: Weekly on Monday 00:00 UTC only
+- New: Twice per week
+  - Monday 00:00 UTC (07:00 WIB)
+  - Thursday 02:30 UTC (09:30 WIB)
+
+**2. update-product-metrics.yml:**
+- Old: Weekly on Monday 00:00 UTC only
+- New: Twice per week
+  - Tuesday 03:00 UTC (10:00 WIB)
+  - Friday 05:15 UTC (12:15 WIB)
+
+**Benefits:**
+- ✅ No schedule conflicts (different days & times)
+- ✅ More organic appearance (not all Monday morning)
+- ✅ Better distribution throughout the week
+- ✅ Posts update 2x/week (more fresh)
+- ✅ Products update 2x/week (faster growth for new items)
+- ✅ Varied timing reduces predictability
+
+**Weekly Pattern:**
+```
+Monday 07:00 WIB    → Post Metrics Update
+Tuesday 10:00 WIB   → Product Metrics Update
+Thursday 09:30 WIB  → Post Metrics Update
+Friday 12:15 WIB    → Product Metrics Update
+```
+
+**Testing:**
+- [x] YAML syntax validated
+- [ ] Manual trigger test pending
+- [ ] First automatic runs pending
+
+**Impact:**
+- ✅ 4 updates per week total (was 2)
+- ✅ Zero conflicts between workflows
+- ✅ More natural, organic growth pattern
+- ✅ No breaking changes (backwards compatible)
+
+**Documentation Updated:**
+- TODO-1528-cronjob-update-post-metrics.md
+- TODO-1529-cronjob-update-product-metrics.md
+
+---
+
 ## Change Log Format
 
 ### Template for Future Changes:
