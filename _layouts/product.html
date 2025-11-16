@@ -262,13 +262,24 @@ layout: default
         {% assign start_position_schema = current_product_index | modulo: product_count_schema %}
 
         {% assign schema_products = "" | split: "" %}
-        {% for i in (0..2) %}
-          {% assign target_index_schema = start_position_schema | plus: i %}
+        {% assign schema_products_added = 0 %}
+        {% assign schema_offset = 1 %}
+
+        {% for i in (0..10) %}
+          {% if schema_products_added >= 3 %}
+            {% break %}
+          {% endif %}
+
+          {% assign target_index_schema = start_position_schema | plus: schema_offset | plus: i %}
           {% assign target_index_schema = target_index_schema | modulo: product_count_schema %}
 
           {% for product in sorted_products_schema %}
             {% if forloop.index0 == target_index_schema %}
-              {% assign schema_products = schema_products | push: product %}
+              {% comment %} Skip current product {% endcomment %}
+              {% if product.url != page.url %}
+                {% assign schema_products = schema_products | push: product %}
+                {% assign schema_products_added = schema_products_added | plus: 1 %}
+              {% endif %}
               {% break %}
             {% endif %}
           {% endfor %}

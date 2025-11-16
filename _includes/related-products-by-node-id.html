@@ -10,14 +10,28 @@
   {% include related-products.html %}
 {% endcomment %}
 
-{% comment %} Find current article index in site.posts {% endcomment %}
+{% comment %} Detect context: product page or article page {% endcomment %}
 {% assign current_index = 0 %}
-{% for post in site.posts %}
-  {% if post.url == page.url %}
+{% assign is_product_page = false %}
+
+{% comment %} Check if current page is a product {% endcomment %}
+{% for product in site.products %}
+  {% if product.url == page.url %}
     {% assign current_index = forloop.index0 %}
+    {% assign is_product_page = true %}
     {% break %}
   {% endif %}
 {% endfor %}
+
+{% comment %} If not product page, check if it's an article {% endcomment %}
+{% unless is_product_page %}
+  {% for post in site.posts %}
+    {% if post.url == page.url %}
+      {% assign current_index = forloop.index0 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endunless %}
 
 {% comment %} Sort products by price for consistent order {% endcomment %}
 {% assign sorted_products = site.products | sort: "price" %}
@@ -28,14 +42,29 @@
 
 {% comment %} Get 3 products starting from calculated position (circular) {% endcomment %}
 {% assign selected_products = "" | split: "" %}
+{% assign products_added = 0 %}
+{% assign offset = 0 %}
 
-{% for i in (0..2) %}
-  {% assign target_index = start_position | plus: i %}
+{% comment %} If on product page, skip current product by starting from next position {% endcomment %}
+{% if is_product_page %}
+  {% assign offset = 1 %}
+{% endif %}
+
+{% for i in (0..10) %}
+  {% if products_added >= 3 %}
+    {% break %}
+  {% endif %}
+
+  {% assign target_index = start_position | plus: offset | plus: i %}
   {% assign target_index = target_index | modulo: product_count %}
 
   {% for product in sorted_products %}
     {% if forloop.index0 == target_index %}
-      {% assign selected_products = selected_products | push: product %}
+      {% comment %} Skip if this is the current product page {% endcomment %}
+      {% if product.url != page.url %}
+        {% assign selected_products = selected_products | push: product %}
+        {% assign products_added = products_added | plus: 1 %}
+      {% endif %}
       {% break %}
     {% endif %}
   {% endfor %}
