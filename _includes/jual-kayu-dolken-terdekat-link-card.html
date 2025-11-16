@@ -1,30 +1,25 @@
 {% comment %}
-  Reusable Article Link Card Component
+  Jual Kayu Dolken Terdekat Link Card Component
 
   Usage:
-  {% include article-link-card.html
-     url="/blog/2025/11/15/jual-kayu-dolken-terdekat/"
-     title="Jual Kayu Dolken Terdekat"
-     description="Cari supplier kayu dolken terdekat dari lokasi Anda?"
-     nama_kota="Semarang"
-     gradient="blue"
-     icon="geo-alt-fill"
-     cta_text="Lihat Lokasi Terdekat"
+  {% include jual-kayu-dolken-terdekat-link-card.html
+     nama_kota="Jakarta Utara"
   %}
 
   Parameters:
-  - url (required): Target article URL
-  - title (required): Article title
-  - description (optional): Short description (will be auto-generated if nama_kota is provided)
-  - nama_kota (optional): City name to personalize the description
-  - gradient (optional): Gradient color - blue, green, purple, orange, pink, cyan, red (default: blue)
-  - icon (optional): Bootstrap icon name (default: arrow-right-circle-fill)
-  - cta_text (optional): Button text (default: "Baca Selengkapnya")
+  - nama_kota (required): City name to personalize the description
+  - url (optional): Target article URL (default: /blog/2025/11/15/jual-kayu-dolken-terdekat/)
+  - title (optional): Article title (default: "Jual Kayu Dolken Terdekat")
+  - gradient (optional): Gradient color (default: cyan)
+  - icon (optional): Bootstrap icon name (default: geo-alt-fill)
+  - cta_text (optional): Button text (default: "Jual Kayu Dolken Terdekat")
 {% endcomment %}
 
-{% assign gradient = include.gradient | default: "blue" %}
-{% assign icon = include.icon | default: "arrow-right-circle-fill" %}
-{% assign cta_text = include.cta_text | default: "Baca Selengkapnya" %}
+{% assign url = include.url | default: "/blog/2025/11/15/jual-kayu-dolken-terdekat/" %}
+{% assign title = include.title | default: "Jual Kayu Dolken Terdekat" %}
+{% assign gradient = include.gradient | default: "cyan" %}
+{% assign icon = include.icon | default: "geo-alt-fill" %}
+{% assign cta_text = include.cta_text | default: "Jual Kayu Dolken Terdekat" %}
 
 {% comment %} Build description based on nama_kota parameter {% endcomment %}
 {% if include.nama_kota %}
@@ -80,7 +75,7 @@
             <i class="bi bi-{{ icon }}" style="font-size: 3rem;"></i>
           </div>
           <div>
-            <h4 class="h5 mb-2 fw-bold text-white">{{ include.title }}</h4>
+            <h4 class="h5 mb-2 fw-bold text-white">{{ title }}</h4>
             {% if final_description %}
             <p class="mb-0 small" style="opacity: 0.9;">{{ final_description }}</p>
             {% endif %}
@@ -88,7 +83,7 @@
         </div>
       </div>
       <div class="col-md-4 text-md-end mt-3 mt-md-0">
-        <a href="{{ include.url | relative_url }}" class="btn btn-light btn-lg px-4">
+        <a href="{{ url | relative_url }}" class="btn btn-light btn-lg px-4">
           <i class="bi bi-arrow-right-circle me-2"></i>{{ cta_text }}
         </a>
       </div>

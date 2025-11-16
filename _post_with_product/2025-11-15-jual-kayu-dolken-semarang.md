@@ -433,13 +433,8 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   </div>
 </div>
 
-{% include article-link-card.html
-   url="/blog/2025/11/15/jual-kayu-dolken-terdekat/"
-   title="Jual Kayu Dolken Terdekat"
+{% include jual-kayu-dolken-terdekat-link-card.html
    nama_kota="Semarang"
-   gradient="cyan"
-   icon="geo-alt-fill"
-   cta_text="Jual Kayu Dolken Terdekat"
 %}
 
 <div class="my-5">
