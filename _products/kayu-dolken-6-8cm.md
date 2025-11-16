@@ -5,6 +5,11 @@ description: Jual kayu dolken gelam diameter 6-8 cm panjang 4 meter. Kuat untuk 
 price: 30000
 diameter: 6 - 8 cm
 image: /assets/images/products/jual-kayu-dolken-gelam-6-8cm-001.jpeg
+images:
+  - /assets/images/products/jual-kayu-dolken-gelam-6-8cm-001.jpeg
+  - /assets/images/products/jual-kayu-dolken-gelam-6-8cm-002.jpeg
+  - /assets/images/products/jual-kayu-dolken-gelam-6-8cm-003.jpeg
+  - /assets/images/products/jual-kayu-dolken-gelam-6-8cm-004.jpeg
 sku: DOLKEN-6-8
 popular: false
 rating: 4.7
