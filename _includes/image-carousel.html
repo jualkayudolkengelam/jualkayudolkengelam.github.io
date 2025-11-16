@@ -1,0 +1,148 @@
+{% comment %}
+  ============================================================================
+  Image Carousel Component - Gallery with Schema.org ImageGallery
+  ============================================================================
+
+  @file        _includes/image-carousel.html
+  @description Reusable Bootstrap 5 carousel component with complete Schema.org
+               ImageGallery markup for Google Image Search optimization. Displays
+               multiple images in sliding gallery format with indicators, controls,
+               and WebP optimization. Implements component-level schema architecture
+               with ImageObject items for maximum SEO value.
+
+  @version     1.0.1
+  @date        2025-11-16
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Changelog:
+  ----------
+  v1.0.1 (2025-11-16)
+    - Initial component with ImageGallery schema
+    - Complete ImageObject fields (contentUrl, name, description, width, height)
+    - Carousel HTML with Bootstrap 5 controls
+    - WebP image optimization with JPEG fallback
+    - Lazy loading for performance (eager for first image)
+    - Flexible parameters for carousel_id, max_height, gallery_name
+    - Perfect schema/visual accuracy (numberOfItems matches images)
+
+  Features:
+  ---------
+  - Bootstrap 5 carousel with slide animation
+  - Schema.org ImageGallery with ImageObject items
+  - Complete image metadata (contentUrl, name, description)
+  - WebP optimization with picture element
+  - Lazy loading (except first image)
+  - Responsive design with object-fit: cover
+  - Carousel indicators for navigation
+  - Previous/Next controls
+  - Customizable carousel ID and max height
+  - Google Image Search optimization
+
+  Schema Implementation:
+  ----------------------
+  - ImageGallery with N ImageObject items (matches visual)
+  - Complete ImageObject fields: contentUrl, name, description
+  - Optional width/height if available
+  - numberOfImages matches actual image count
+  - Perfect schema/visual accuracy
+
+  Parameters:
+  -----------
+  - carousel_id: Unique ID for carousel element (default: "imageCarousel")
+  - images: Array of image paths (required)
+  - title: Page/product title for alt text (required)
+  - max_height: Max height for images (default: "500px")
+  - gallery_name: Gallery name for schema (default: uses title)
+  - description: Optional description for images
+
+  Usage:
+  ------
+  {% include image-carousel.html
+     carousel_id="productCarousel"
+     images=page.images
+     title=page.title
+     gallery_name="Galeri Produk Kayu Dolken"
+  %}
+
+  {% include image-carousel.html
+     carousel_id="postCarousel"
+     images=page.images
+     title=page.title
+     max_height="600px"
+  %}
+
+  Used in:
+  --------
+  - _layouts/product.html (product image galleries)
+  - _layouts/post.html (blog post image galleries)
+  - _layouts/post-with-products.html (article image galleries)
+
+  ============================================================================
+{% endcomment %}
+
+{% assign carousel_id = include.carousel_id | default: "imageCarousel" %}
+{% assign carousel_images = include.images %}
+{% assign carousel_title = include.title %}
+{% assign max_height = include.max_height | default: "500px" %}
+{% assign gallery_name = include.gallery_name | default: carousel_title %}
+{% assign carousel_description = include.description | default: "" %}
+
+{% if carousel_images and carousel_images.size > 0 %}
+
+<!-- Schema.org ImageGallery Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "{{ gallery_name }}",
+  "description": "{% if carousel_description != '' %}{{ carousel_description }}{% else %}Galeri foto {{ carousel_title }}{% endif %}",
+  "numberOfImages": {{ carousel_images.size }},
+  "associatedMedia": [
+    {% for image in carousel_images %}
+    {
+      "@type": "ImageObject",
+      "contentUrl": "{{ image | absolute_url }}",
+      "name": "{{ carousel_title }} - Foto {{ forloop.index }}",
+      "description": "{{ carousel_title }} gambar {{ forloop.index }} dari {{ carousel_images.size }}"{% if page.width and page.height %},
+      "width": "{{ page.width }}",
+      "height": "{{ page.height }}"{% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<!-- Image Gallery Carousel -->
+<div id="{{ carousel_id }}" class="carousel slide shadow rounded" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    {% for image in carousel_images %}
+    <button type="button" data-bs-target="#{{ carousel_id }}" data-bs-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active" aria-current="true"{% endif %} aria-label="Slide {{ forloop.index }}"></button>
+    {% endfor %}
+  </div>
+  <div class="carousel-inner">
+    {% for image in carousel_images %}
+    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+      <picture>
+        <source srcset="{{ image | replace: '.jpeg', '.webp' | relative_url }}" type="image/webp">
+        <img src="{{ image | relative_url }}"
+             class="d-block w-100 rounded"
+             alt="{{ carousel_title }} - Foto {{ forloop.index }}"
+             loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+             style="max-height: {{ max_height }}; object-fit: cover;">
+      </picture>
+    </div>
+    {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#{{ carousel_id }}" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#{{ carousel_id }}" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+{% endif %}
