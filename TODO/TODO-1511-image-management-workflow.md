@@ -261,6 +261,52 @@ images:  # Gallery array (optional)
 
 ---
 
+### Product 8-10 cm Gallery (4 images)
+**Date:** 2025-11-16 11:49
+
+#### Source Files Renamed:
+- ✅ `WhatsApp Image 2025-08-25 at 10.16.58 (1).jpeg` → `jual-kayu-dolken-gelam-8-10cm-001.jpeg` (384K)
+- ✅ `WhatsApp Image 2025-08-25 at 10.16.58.jpeg` → `jual-kayu-dolken-gelam-8-10cm-002.jpeg` (349K)
+- ✅ `WhatsApp Image 2025-08-25 at 10.16.57 (3).jpeg` → `jual-kayu-dolken-gelam-8-10cm-003.jpeg` (326K)
+- ✅ `WhatsApp Image 2025-08-25 at 10.16.57 (2).jpeg` → `jual-kayu-dolken-gelam-8-10cm-004.jpeg` (310K)
+
+#### Images Copied to Products Folder:
+- ✅ All 4 images copied to `public_html/assets/images/products/`
+- ✅ Total size: 1.3 MB (4 images)
+- ✅ Source folder: `/home/mkt01/Documents/ANDRI/Dolken/foto/WhatsApp Unknown 2025-11-15 at 09.04.38/`
+
+#### Product Front Matter Updated:
+- ✅ Added `images:` array to `_products/kayu-dolken-8-10cm.md` (lines 8-12)
+- ✅ Contains 4 image paths for carousel gallery
+- ✅ Primary `image:` field maintained for backward compatibility
+
+#### WebP Conversion:
+- ✅ Converted using `cwebp -q 85` (quality 85%)
+- ✅ `jual-kayu-dolken-gelam-8-10cm-001.webp` (444K) - from 384K JPEG
+- ✅ `jual-kayu-dolken-gelam-8-10cm-002.webp` (392K) - from 349K JPEG
+- ✅ `jual-kayu-dolken-gelam-8-10cm-003.webp` (362K) - from 326K JPEG
+- ✅ `jual-kayu-dolken-gelam-8-10cm-004.webp` (341K) - from 310K JPEG
+- ℹ️ Note: WebP slightly larger for these high-quality photos, but provides better browser compatibility
+
+#### Build Results:
+- ✅ Jekyll build successful (156 files, 31M)
+- ✅ Carousel with 4 slides generated for product 8-10 cm (POPULER)
+- ✅ Carousel initialization script included
+- ✅ All images accessible in _site folder
+- ✅ Picture element with WebP support for each slide
+- ✅ Modern browsers will use WebP, older browsers fallback to JPEG
+
+#### URLs:
+- Local: `http://jualkayudolkengelam.github.io.local/product/kayu-dolken-8-10cm/`
+- Production: `https://jualkayudolkengelam.github.io/product/kayu-dolken-8-10cm/`
+
+**Notes:**
+- This is the POPULAR product (popular: true, rating: 4.8, review_count: 91)
+- Carousel features: auto-play, indicators, prev/next buttons, touch swipe support
+- Images show diameter 8-10 cm kayu dolken gelam from various angles
+
+---
+
 ## Pending Tasks
 
 ### Future Enhancements
