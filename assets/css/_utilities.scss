@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Utility Classes - Kayu Dolken Gelam
+   ========================================================================== */
+
+/* Image Heights */
+.img-height-180 {
+  height: $card-image-height-sm;
+}
+
+.img-height-200 {
+  height: $card-image-height;
+}
+
+.img-height-250 {
+  height: $card-image-height-md;
+}
+
+/* Object Fit */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Icon Sizes */
+.icon-sm {
+  font-size: $icon-size-sm;
+}
+
+.icon-md {
+  font-size: $icon-size-md;
+}
+
+.icon-lg {
+  font-size: $icon-size-lg;
+}
+
+/* Font Sizes */
+.text-xs {
+  font-size: $font-size-xs;
+}
+
+.text-sm {
+  font-size: $font-size-sm;
+}
+
+/* Display Flex Utilities */
+.d-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+/* Gradients */
+.bg-gradient-wood {
+  background: linear-gradient(135deg, $wood-brown 0%, $wood-light 100%);
+}
+
+.bg-wood-gradient {
+  background: linear-gradient(135deg, $wood-brown 0%, #A0522D 50%, #CD853F 100%);
+}

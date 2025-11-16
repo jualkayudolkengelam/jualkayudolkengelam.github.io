@@ -1,0 +1,68 @@
+/* ==========================================================================
+   SCSS Variables - Kayu Dolken Gelam
+   ========================================================================== */
+
+/* Colors - Match existing :root variables */
+$wood-brown: #8B4513;
+$wood-light: #D2691E;
+$wood-dark: #654321;
+$wood-lightest: #DEB887;
+$success-green: #28a745;
+$light-bg: #f8f9fa;
+
+/* Component-specific Heights */
+$card-image-height: 200px;
+$card-image-height-sm: 180px;
+$card-image-height-md: 250px;
+
+/* Icon Sizes */
+$icon-size-sm: 3rem;
+$icon-size-md: 4rem;
+$icon-size-lg: 8rem;
+
+/* Font Sizes */
+$font-size-xs: 0.75rem;   // 12px
+$font-size-sm: 0.875rem;  // 14px
+$font-size-base: 1rem;    // 16px
+$font-size-lg: 1.1rem;    // ~18px
+$font-size-xl: 1.3rem;
+$font-size-2xl: 2rem;
+$font-size-3xl: 3rem;
+
+/* Spacing */
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+/* Border Radius */
+$border-radius-sm: 0.25rem;
+$border-radius-md: 0.5rem;
+$border-radius-lg: 1rem;
+
+/* Transitions */
+$transition-default: all 0.3s ease;
+$transition-transform: transform 0.3s ease;
+$transition-fast: all 0.2s ease;
+$transition-slow: all 0.5s ease;
+
+/* Box Shadows */
+$shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 5px 20px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.2);
+$shadow-wood: 0 4px 12px rgba(139, 69, 19, 0.2);
+$shadow-wood-hover: 0 0.75rem 1.5rem rgba(139, 69, 19, 0.15);
+
+/* Z-index Layers */
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-navbar: 1030;
+$z-index-modal: 1050;
+$z-index-tooltip: 1070;
+
+/* Breakpoints (Bootstrap default) */
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

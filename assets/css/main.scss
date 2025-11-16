@@ -2,6 +2,18 @@
 ---
 
 /* ==========================================================================
+   Kayu Dolken Gelam - Main Stylesheet
+   ========================================================================== */
+
+/* Import SCSS Partials */
+@import 'variables';
+@import 'utilities';
+@import 'components/related-articles';
+@import 'components/related-products';
+@import 'components/related-content';
+@import 'components/product-list';
+
+/* ==========================================================================
    Custom Theme - Kayu Dolken Gelam (Brown Wood Theme)
    ========================================================================== */
 
