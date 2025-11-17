@@ -321,9 +321,9 @@ This is the **execution checklist** for implementing the Drupal naming conventio
   git mv related-products-by-last-modified.html block--related-product--by-last-modified.html
   ```
 
-- [ ] **Rename: related-products-by-node-id.html → block--related-product--by-node.html**
+- [ ] **Rename: block--related-product--by-node.html → block--related-product--by-node.html**
   ```bash
-  git mv related-products-by-node-id.html block--related-product--by-node.html
+  git mv block--related-product--by-node.html block--related-product--by-node.html
   ```
 
 - [ ] **Update {% include %} references to product blocks**
@@ -738,7 +738,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
   - related-articles.html → block--related-content--latest.html
   - product-list.html → block--product-list.html
   - related-products-by-last-modified.html → block--related-product--by-last-modified.html
-  - related-products-by-node-id.html → block--related-product--by-node.html
+  - block--related-product--by-node.html → block--related-product--by-node.html
   - image-carousel.html → block--carousel--image.html
   - jual-kayu-dolken-terdekat-link-card.html → block--card--link.html
   - whatsapp-button.html → block--cta--whatsapp.html

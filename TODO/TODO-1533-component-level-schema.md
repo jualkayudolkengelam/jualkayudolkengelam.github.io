@@ -151,7 +151,7 @@ Component:
 | Component | Current State | Shows | Schema Location | Schema Content | Mismatch? |
 |-----------|---------------|-------|-----------------|----------------|-----------|
 | `related-products-by-last-modified.html` | ❌ No schema | 3 products (newest) | Layout has ItemList | ALL 6 products | ✅ YES |
-| `related-products-by-node-id.html` | ❌ No schema | 3 products (rotated) | Layout has ItemList | ALL 6 products | ✅ YES |
+| `block--related-product--by-node.html` | ❌ No schema | 3 products (rotated) | Layout has ItemList | ALL 6 products | ✅ YES |
 | `related-articles.html` | ❌ No schema | 6 articles (latest + older) | None | N/A | ⚠️ Could add |
 | `related-content-by-node-id.html` | ❌ No schema | 3 articles (proximity) | None | N/A | ⚠️ Could add |
 
@@ -161,7 +161,7 @@ Component:
 |--------|----------------|----------------|-------|
 | `_layouts/post-with-products.html` | Article + ItemList (@graph) | `related-products-by-last-modified.html` | Layout knows about products (tight coupling) |
 | `_layouts/post.html` | BlogPosting (to be added) | `related-products-by-last-modified.html` | Will need schema coordination |
-| `_layouts/product.html` | Product + ItemList (@graph) | `related-products-by-node-id.html` | Layout knows about related products |
+| `_layouts/product.html` | Product + ItemList (@graph) | `block--related-product--by-node.html` | Layout knows about related products |
 
 ---
 
@@ -288,9 +288,9 @@ Component:
 
 ---
 
-### **Component 2: related-products-by-node-id.html**
+### **Component 2: block--related-product--by-node.html**
 
-**Current File Location:** `_includes/related-products-by-node-id.html`
+**Current File Location:** `_includes/block--related-product--by-node.html`
 
 **What It Does:**
 - Node-based rotation system
@@ -343,7 +343,7 @@ Component:
 </script>
 ```
 
-**In Component (`related-products-by-node-id.html`):**
+**In Component (`block--related-product--by-node.html`):**
 ```liquid
 {% comment %} Node-based rotation logic {% endcomment %}
 {% assign current_index = ... %}
@@ -485,7 +485,7 @@ Component:
 | Component | Add Schema? | Reasoning |
 |-----------|-------------|-----------|
 | `related-products-by-last-modified.html` | ✅ **YES** | Products benefit from structured data, enables rich results |
-| `related-products-by-node-id.html` | ✅ **YES** | Same as above, consistency |
+| `block--related-product--by-node.html` | ✅ **YES** | Same as above, consistency |
 | `related-articles.html` | ❓ **DISCUSS** | Articles already have individual schemas, is list schema needed? |
 | `related-content-by-node-id.html` | ❓ **DISCUSS** | Same consideration as above |
 
@@ -829,9 +829,9 @@ Google Rich Results Test:
 
 ---
 
-#### Task 2.2: Add Schema to related-products-by-node-id.html
+#### Task 2.2: Add Schema to block--related-product--by-node.html
 
-**File:** `_includes/related-products-by-node-id.html`
+**File:** `_includes/block--related-product--by-node.html`
 **Current Lines:** ~220
 **Insert Location:** After logic (line ~75), before visual HTML (line ~78)
 
@@ -1164,7 +1164,7 @@ Add documentation comment at top:
 
 **Checklist:**
 - [ ] Add documentation to related-products-by-last-modified.html
-- [ ] Add documentation to related-products-by-node-id.html
+- [ ] Add documentation to block--related-product--by-node.html
 - [ ] Add documentation to related-articles.html (if modified)
 - [ ] Add documentation to related-content-by-node-id.html (if modified)
 - [ ] Commit: "Add component documentation for schema-aware components"

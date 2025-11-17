@@ -1,5 +1,5 @@
 ---
-layout: product
+layout: node--product
 title: Jual Kayu Dolken Gelam Diameter 10-12 cm
 description: Jual kayu dolken gelam diameter 10-12 cm panjang 4 meter. Ukuran terbesar untuk konstruksi berat dan proyek infrastruktur. Harga sudah termasuk ongkir. Bayar setelah barang sampai.
 price: 45000

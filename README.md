@@ -26,8 +26,8 @@ Website bisnis kayu dolken gelam menggunakan Jekyll dan GitHub Pages. Dirancang 
 │   ├── head.html              # Meta tags, SEO
 │   ├── header.html            # Navigation
 │   ├── footer.html
-│   ├── related-articles.html  # Related posts block
-│   └── whatsapp-button.html   # Floating WhatsApp
+│   ├── block--related-content--latest.html  # Related posts block
+│   └── block--cta--whatsapp.html   # Floating WhatsApp
 ├── _posts/                     # Blog posts
 │   └── YYYY-MM-DD-title.md
 ├── assets/

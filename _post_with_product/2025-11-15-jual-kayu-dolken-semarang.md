@@ -1,5 +1,5 @@
 ---
-layout: post-with-products
+layout: node--post-with-product
 title: "Jual Kayu Dolken Semarang - Hub 081311400177 - Gratis Ongkir"
 description: "Jual kayu dolken Semarang dengan harga terbaik. Melayani pengiriman gratis ke seluruh Semarang. Hubungi 081311400177 untuk info dan pemesanan."
 date: 2025-11-15
@@ -163,7 +163,7 @@ share_count: 1
 
 Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengiriman gratis:
 
-{% include product-list.html %}
+{% include block--product-list.html %}
 
 **📞 Hubungi 081311400177 untuk info harga terbaru dan penawaran khusus!**
 
@@ -475,7 +475,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   </div>
 </div>
 
-{% include jual-kayu-dolken-terdekat-link-card.html
+{% include block--card--link.html
    nama_kota="Semarang"
 %}
 

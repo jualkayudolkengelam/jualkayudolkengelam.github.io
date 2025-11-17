@@ -162,11 +162,11 @@ Kami dengan bangga mengumumkan peluncuran website **Jual Kayu Dolken Gelam v1.0.
 - `head.html` - HTML head dengan meta tags & schema
 - `navbar.html` - Navigation bar responsif
 - `footer.html` - Footer dengan business info
-- `related-products-by-node-id.html` - Related products dengan rotasi berbasis node
-- `related-products-by-last-modified.html` - Products sorted by update time
+- `block--related-product--by-node.html` - Related products dengan rotasi berbasis node
+- `block--related-product--by-last-modified.html` - Products sorted by update time
 - `related-articles-by-node-id.html` - Related articles dengan rotasi
-- `related-content-by-node-id.html` - Related content (hybrid)
-- `jual-kayu-dolken-terdekat-link-card.html` - Reusable link card component
+- `block--related-content--by-node.html` - Related content (hybrid)
+- `block--card--link.html` - Reusable link card component
 
 ### Assets
 - **CSS:** Compiled SCSS dengan compression

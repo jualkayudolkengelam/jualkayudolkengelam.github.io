@@ -70,8 +70,8 @@ public_html/
 │   └── README-hybrid-strategy.md      ← This file
 │
 ├── _includes/
-│   ├── related-products-by-node-id.html        ← Static rotation
-│   └── related-products-by-last-modified.html  ← Hybrid freshness ⭐
+│   ├── block--related-product--by-node.html        ← Static rotation
+│   └── block--related-product--by-last-modified.html  ← Hybrid freshness ⭐
 │
 └── _products/
     ├── kayu-dolken-2-3cm.md

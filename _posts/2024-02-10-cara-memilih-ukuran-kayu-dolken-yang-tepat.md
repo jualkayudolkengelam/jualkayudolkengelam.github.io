@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node--post
 title: "Cara Memilih Ukuran Kayu Dolken yang Tepat untuk Proyek Anda"
 date: 2024-02-10 14:30:00 +0700
 categories: [Tips & Panduan]

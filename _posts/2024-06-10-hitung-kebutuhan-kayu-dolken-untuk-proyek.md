@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node--post
 title: "Cara Menghitung Kebutuhan Kayu Dolken untuk Berbagai Proyek"
 date: 2024-06-10 08:30:00 +0700
 categories: [Tips & Panduan]

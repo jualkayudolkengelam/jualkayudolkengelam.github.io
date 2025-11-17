@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node--post
 title: "Keunggulan Kayu Dolken Gelam untuk Konstruksi"
 date: 2024-01-15 10:00:00 +0700
 categories: [Informasi Produk]

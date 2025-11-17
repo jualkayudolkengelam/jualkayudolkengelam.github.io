@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 
 <article class="post-content py-5">
@@ -75,7 +75,7 @@ layout: default
         <!-- Related Articles Block - IN CONTENT for SEO -->
         {% assign all_posts = site.posts | concat: site.post_with_product %}
         {% if all_posts.size > 1 %}
-          {% include related-articles.html %}
+          {% include block--related-content--latest.html %}
         {% endif %}
 
         <!-- Post Footer -->
@@ -155,4 +155,4 @@ layout: default
 </article>
 
 <!-- Related Products Section (Hybrid: Last Modified for freshness) -->
-{% include related-products-by-last-modified.html %}
+{% include block--related-product--by-last-modified.html %}

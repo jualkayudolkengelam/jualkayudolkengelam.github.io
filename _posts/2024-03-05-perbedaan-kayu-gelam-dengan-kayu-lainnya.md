@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node--post
 title: "Perbedaan Kayu Gelam dengan Kayu Lainnya yang Perlu Anda Ketahui"
 date: 2024-03-05 09:15:00 +0700
 categories: [Informasi Produk]

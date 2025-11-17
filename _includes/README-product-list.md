@@ -3,7 +3,7 @@
 Reusable partial untuk menampilkan daftar produk kayu dolken gelam dalam format tabel (desktop) dan card (mobile).
 
 ## File Location
-`_includes/product-list.html`
+`_includes/block--product-list.html`
 
 ## Features
 - ✅ **Responsive Design**: Tabel di desktop, card di mobile
@@ -17,7 +17,7 @@ Reusable partial untuk menampilkan daftar produk kayu dolken gelam dalam format 
 
 ### Default (dengan semua features)
 ```liquid
-{% include product-list.html %}
+{% include block--product-list.html %}
 ```
 
 Output:
@@ -26,17 +26,17 @@ Output:
 
 ### Custom Title
 ```liquid
-{% include product-list.html title="Harga Terbaru Kayu Dolken Gelam 2025" %}
+{% include block--product-list.html title="Harga Terbaru Kayu Dolken Gelam 2025" %}
 ```
 
 ### Tanpa Footer
 ```liquid
-{% include product-list.html show_footer=false %}
+{% include block--product-list.html show_footer=false %}
 ```
 
 ### Custom Title + Tanpa Footer
 ```liquid
-{% include product-list.html title="Produk Kayu Dolken" show_footer=false %}
+{% include block--product-list.html title="Produk Kayu Dolken" show_footer=false %}
 ```
 
 ## Parameters
@@ -75,7 +75,7 @@ layout: page
 title: Produk Kayu Dolken Gelam
 ---
 
-{% include product-list.html %}
+{% include block--product-list.html %}
 ```
 
 ### 2. Blog Post with Products (`_layouts/post-with-products.html`)
@@ -84,7 +84,7 @@ title: Produk Kayu Dolken Gelam
   {{ content }}
 
   <h2>Lihat Daftar Produk Kami</h2>
-  {% include product-list.html title="Pilihan Kayu Dolken Kami" %}
+  {% include block--product-list.html title="Pilihan Kayu Dolken Kami" %}
 </div>
 ```
 
@@ -92,7 +92,7 @@ title: Produk Kayu Dolken Gelam
 ```liquid
 <section class="products-section">
   <div class="container">
-    {% include product-list.html title="Investasi Terbaik untuk Proyek Anda" show_footer=false %}
+    {% include block--product-list.html title="Investasi Terbaik untuk Proyek Anda" show_footer=false %}
   </div>
 </section>
 ```
@@ -103,7 +103,7 @@ title: Produk Kayu Dolken Gelam
   <h2>Harga Kayu Dolken Gelam</h2>
   <p>Lihat daftar lengkap produk kami dengan harga terbaik.</p>
 
-  {% include product-list.html %}
+  {% include block--product-list.html %}
 
   <a href="/product/" class="btn btn-wood">Lihat Semua Produk</a>
 </div>
@@ -165,7 +165,7 @@ Products sorted by `price` field:
 3. Component will automatically include it (sorted by price)
 
 ### Modifying Component
-Edit `_includes/product-list.html`
+Edit `_includes/block--product-list.html`
 
 **Important:** Use `{% comment %}...{% endcomment %}` for documentation, NOT HTML comments `<!-- -->`, karena HTML comments akan execute Liquid tags di dalamnya.
 

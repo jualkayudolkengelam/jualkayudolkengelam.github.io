@@ -17,7 +17,7 @@ Fixed Google Rich Results non-critical warnings by adding optional but recommend
 
 #### Files Changed
 
-**`_includes/related-products-by-last-modified.html`**
+**`_includes/block--related-product--by-last-modified.html`**
 - Added `shippingDetails` object to Offer schema
   - Free shipping (value: 0 IDR)
   - Ships to Indonesia (addressCountry: ID)
@@ -28,7 +28,7 @@ Fixed Google Rich Results non-critical warnings by adding optional but recommend
   - Return method: by mail
   - Return fees: free
 
-**`_includes/related-products-by-node-id.html`**
+**`_includes/block--related-product--by-node.html`**
 - Added `shippingDetails` object to Offer schema (same as above)
 - Added `hasMerchantReturnPolicy` object (same as above)
 
@@ -139,7 +139,7 @@ Major restructuring of schema.org implementation from centralized (head.html) to
 }
 ```
 
-##### 4. **`_includes/related-products-by-last-modified.html`** (+48 lines)
+##### 4. **`_includes/block--related-product--by-last-modified.html`** (+48 lines)
 
 **Added component-level schema:**
 - ✅ ItemList schema for 3 most recently updated products
@@ -168,7 +168,7 @@ Major restructuring of schema.org implementation from centralized (head.html) to
 }
 ```
 
-##### 5. **`_includes/related-products-by-node-id.html`** (+48 lines)
+##### 5. **`_includes/block--related-product--by-node.html`** (+48 lines)
 
 **Added component-level schema:**
 - ✅ ItemList schema for 3 rotated products
@@ -262,8 +262,8 @@ This release completes **TODO-1533: Component-Level Schema Implementation**
 - ✅ Phase 2: Add Schemas to Components (product components)
 
 **Optional future work:**
-- [ ] Add schemas to article components (related-articles.html)
-- [ ] Add schemas to content components (related-content-by-node-id.html)
+- [ ] Add schemas to article components (block--related-content--latest.html)
+- [ ] Add schemas to content components (block--related-content--by-node.html)
 
 #### Breaking Changes
 

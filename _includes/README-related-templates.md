@@ -6,10 +6,10 @@ Sistem modular untuk menampilkan related content dan products dengan berbagai st
 
 ```
 _includes/
-├── related-content-by-node-id.html     ✅ IMPLEMENTED
+├── block--related-content--by-node.html     ✅ IMPLEMENTED
 ├── related-content-by-new-post.html    🔲 TODO
 ├── related-content-by-category.html    🔲 TODO
-├── related-products-by-node-id.html    ✅ IMPLEMENTED
+├── block--related-product--by-node.html    ✅ IMPLEMENTED
 ├── related-products-by-new-post.html   🔲 TODO
 └── related-products-by-category.html   🔲 TODO
 ```
@@ -18,7 +18,7 @@ _includes/
 
 ## 1. Related Content Templates
 
-### ✅ `related-content-by-node-id.html`
+### ✅ `block--related-content--by-node.html`
 
 **Strategy:** Node proximity (sequential)
 
@@ -29,8 +29,8 @@ _includes/
 
 **Usage:**
 ```liquid
-{% include related-content-by-node-id.html %}
-{% include related-content-by-node-id.html limit=6 %}
+{% include block--related-content--by-node.html %}
+{% include block--related-content--by-node.html limit=6 %}
 ```
 
 **Best For:**
@@ -86,7 +86,7 @@ _includes/
 
 ## 2. Related Products Templates
 
-### ✅ `related-products-by-node-id.html`
+### ✅ `block--related-product--by-node.html`
 
 **Strategy:** Rotation based on article node position
 
@@ -104,7 +104,7 @@ _includes/
 
 **Usage:**
 ```liquid
-{% include related-products-by-node-id.html %}
+{% include block--related-product--by-node.html %}
 ```
 
 **Best For:**
@@ -114,7 +114,7 @@ _includes/
 
 ---
 
-### ✅ `related-products-by-last-modified.html` ⭐ **HYBRID**
+### ✅ `block--related-product--by-last-modified.html` ⭐ **HYBRID**
 
 **Strategy:** Show most recently updated products (Hybrid freshness)
 
@@ -141,7 +141,7 @@ Any Article Shows:
 
 **Usage:**
 ```liquid
-{% include related-products-by-last-modified.html %}
+{% include block--related-product--by-last-modified.html %}
 ```
 
 **Best For:**
@@ -204,10 +204,10 @@ See: `scripts/update-product-hybrid.rb` and `scripts/README-hybrid-strategy.md`
 
 ```liquid
 <!-- Related Articles (existing) -->
-{% include related-articles.html %}
+{% include block--related-content--latest.html %}
 
 <!-- Related Products (HYBRID: Last Modified Strategy) -->
-{% include related-products-by-last-modified.html %}
+{% include block--related-product--by-last-modified.html %}
 ```
 
 **Active Strategy:** Hybrid Last-Modified (SEO Freshness)
@@ -226,7 +226,7 @@ See: `scripts/update-product-hybrid.rb` and `scripts/README-hybrid-strategy.md`
 ### Example 2: Mix strategies
 ```liquid
 <!-- Articles by node proximity -->
-{% include related-content-by-node-id.html limit=3 %}
+{% include block--related-content--by-node.html limit=3 %}
 
 <!-- Products by category match -->
 {% include related-products-by-category.html %}
@@ -241,7 +241,7 @@ See: `scripts/update-product-hybrid.rb` and `scripts/README-hybrid-strategy.md`
 {% include related-content-by-category.html limit=3 title="Artikel Terkait" %}
 
 <!-- Products rotation -->
-{% include related-products-by-node-id.html %}
+{% include block--related-product--by-node.html %}
 ```
 
 ---
@@ -271,7 +271,7 @@ See: `scripts/update-product-hybrid.rb` and `scripts/README-hybrid-strategy.md`
 
 ## Hybrid System
 
-✅ **Active:** `related-products-by-last-modified.html`
+✅ **Active:** `block--related-product--by-last-modified.html`
 ✅ **Script:** `scripts/update-product-hybrid.rb`
 ✅ **Documentation:** `scripts/README-hybrid-strategy.md`
 

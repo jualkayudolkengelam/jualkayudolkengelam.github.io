@@ -139,7 +139,7 @@ Component: ItemList schema (3 products) + HTML (3 products)
   - ItemList schema untuk 3 related products (node-based rotation)
 - **Problem:**
   - Layout includes ItemList for related products
-  - Related products are rendered by component `related-products-by-node-id.html`
+  - Related products are rendered by component `block--related-product--by-node.html`
   - Schema tidak portable (tied to layout)
 - **⚠️ Issue 1:** head.html punya LocalBusiness + OfferCatalog untuk `page.layout == 'product'` (REDUNDANT!)
 - **⚠️ Issue 2:** Layout schema includes related products, but products rendered by component
@@ -165,7 +165,7 @@ Component: ItemList schema (3 products) + HTML (3 products)
 
 #### Components (NEW - Consideration):
 8. **`_includes/related-products-by-last-modified.html`** ❌ - Shows 3 products, no schema (could have ItemList)
-9. **`_includes/related-products-by-node-id.html`** ❌ - Shows 3 products, no schema (could have ItemList)
+9. **`_includes/block--related-product--by-node.html`** ❌ - Shows 3 products, no schema (could have ItemList)
 10. **`_includes/related-articles.html`** ❌ - Shows 6 articles, no schema (could have ItemList - discussion)
 11. **`_includes/related-content-by-node-id.html`** ❌ - Shows 3 articles, no schema (could have ItemList - discussion)
 
@@ -717,8 +717,8 @@ Add after component logic, before visual display:
 
 ---
 
-#### ❓ Task 5.4: Add Schema to related-products-by-node-id.html (if 5.1 = A or B)
-**Target:** `_includes/related-products-by-node-id.html`
+#### ❓ Task 5.4: Add Schema to block--related-product--by-node.html (if 5.1 = A or B)
+**Target:** `_includes/block--related-product--by-node.html`
 **Depends on:** Task 5.3 completion
 
 **Implementation:** Same as Task 5.3, but for node-based rotation component
@@ -762,7 +762,7 @@ Add after component logic, before visual display:
 
 **Current:** Layout has Product + ItemList (related products) via @graph
 
-**Question:** Should we move ItemList to `related-products-by-node-id.html` component?
+**Question:** Should we move ItemList to `block--related-product--by-node.html` component?
 
 **Pros:**
 - ✅ Component self-contained

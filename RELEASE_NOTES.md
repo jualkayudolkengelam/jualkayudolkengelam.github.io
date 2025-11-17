@@ -33,10 +33,10 @@ _layouts/
 └── product.html
 
 _includes/
-├── related-content-by-node-id.html
-├── related-products-by-last-modified.html
-├── product-list.html
-└── image-carousel.html
+├── block--related-content--by-node.html
+├── block--related-product--by-last-modified.html
+├── block--product-list.html
+└── block--carousel--image.html
 ```
 
 **Target State (Drupal-style):**
@@ -52,7 +52,7 @@ _layouts/
 _includes/
 ├── block--related-content--by-node.html
 ├── block--related-product--by-last-modified.html
-├── block--product-list.html
+├── block--block--product-list.html
 ├── block--carousel--image.html
 ├── block--card--link.html
 └── block--cta--whatsapp.html

@@ -1,5 +1,5 @@
 ---
-layout: post-with-products
+layout: node--post-with-product
 title: "Jual Kayu Dolken Terdekat - Hubungi 081311400177 - COD & Pengiriman Jawa-Bali"
 description: "Jual kayu dolken terdekat - Hubungi 081311400177. Supplier kayu dolken gelam terpercaya, pengiriman Jakarta, Bogor, Bandung, Tangerang, Bekasi, Semarang, Surabaya. COD tersedia! Harga mulai Rp 15.000/batang."
 date: 2025-11-15

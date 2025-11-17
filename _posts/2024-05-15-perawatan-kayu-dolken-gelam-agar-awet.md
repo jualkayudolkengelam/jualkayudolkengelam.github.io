@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: node--post
 title: "Cara Merawat Kayu Dolken Gelam Agar Tetap Awet Puluhan Tahun"
 date: 2024-05-15 13:45:00 +0700
 categories: [Tips & Panduan]

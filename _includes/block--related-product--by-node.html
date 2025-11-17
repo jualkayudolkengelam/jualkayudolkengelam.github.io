@@ -1,14 +1,14 @@
 {% comment %}
   ============================================================================
-  Related Products Component - Last Modified Strategy
+  Related Products Component - Node-based Rotation System
   ============================================================================
 
-  @file        _includes/related-products-by-last-modified.html
-  @description Reusable component that displays 3 most recently updated
-               products with complete schema.org ItemList markup. Products
-               are sorted by last_modified_at field and automatically refresh
-               when cron updates product metrics. Implements component-level
-               schema architecture for perfect schema/visual accuracy.
+  @file        _includes/block--related-product--by-node.html
+  @description Reusable component that displays 3 related products using
+               intelligent node-based rotation algorithm. Each page shows
+               different products based on position index (node ID), ensuring
+               equal exposure for all products across the site. Implements
+               component-level schema architecture with complete ItemList markup.
 
   @version     1.0.1
   @date        2025-11-16
@@ -28,101 +28,219 @@
     - Component-level schema implementation with ItemList
     - Schema describes exactly 3 products (matches visual)
     - Moved schema from layout to component for accuracy
+    - Eliminated duplicate rotation logic in product.html layout
     - Complete Product details in schema (name, price, rating, offers)
 
   v0.9.0 (2025-11-15)
-    - Initial component with last_modified_at rotation logic
-    - Shows 3 most recently updated products
-    - Freshness signal for search engines
+    - Initial component with node-based rotation logic
+    - Modulo-based circular rotation algorithm
+    - Context detection (product page vs article page)
+
+  Rotation Algorithm:
+  -------------------
+  1. Detect context: product page or article page
+  2. Get current page position (index) in collection
+  3. Calculate start position: current_index % total_products
+  4. Select 3 products starting from calculated position (circular)
+  5. On product pages: skip current product, show 3 others
+
+  Example:
+  - Article at position 0 shows products: 0, 1, 2
+  - Article at position 1 shows products: 1, 2, 3
+  - Article at position 5 shows products: 0, 1, 2 (wraps around)
+  - Product page for product 2 shows: 3, 4, 5 (skips itself)
 
   Features:
   ---------
-  - Automatic product rotation based on last_modified_at timestamp
+  - Node-based rotation for equal product exposure
+  - Context-aware (handles both article and product pages)
+  - Circular rotation using modulo arithmetic
   - Schema.org ItemList markup with complete Product details
   - WebP image optimization with JPEG fallback
   - Rating and review count display
-  - Update badges (Updated Today, Recent) for products updated within 7 days
+  - Update badges for recently modified products
   - Popular product badges
   - WhatsApp order integration
   - Responsive card layout with Bootstrap 5
 
   Schema Implementation:
   ----------------------
-  - ItemList with 3 Product items
+  - ItemList with 3 Product items (rotated selection)
   - Complete Offer fields: price, shipping, returns
   - AggregateRating when available
   - numberOfItems matches visual display (perfect accuracy)
+  - Schema rotation matches visual rotation
 
   Usage:
   ------
-  {% include related-products-by-last-modified.html %}
+  {% include block--related-product--by-node.html %}
 
   Used in:
-  - _layouts/post.html (blog posts)
-  - _layouts/post-with-products.html (blog posts with products)
+  - _layouts/product.html (individual product pages)
 
   ============================================================================
 {% endcomment %}
 
-{% comment %} Sort products by last_modified_at (fallback to date) {% endcomment %}
-{% assign products_with_date = "" | split: "" %}
+{% comment %} Detect context: product page or article page {% endcomment %}
+{% assign current_index = 0 %}
+{% assign is_product_page = false %}
 
+{% comment %} Check if current page is a product {% endcomment %}
 {% for product in site.products %}
-  {% comment %} Use last_modified_at if available, otherwise use date {% endcomment %}
-  {% if product.last_modified_at %}
-    {% assign sort_date = product.last_modified_at %}
-  {% elsif product.date %}
-    {% assign sort_date = product.date %}
-  {% else %}
-    {% assign sort_date = "2000-01-01" %}
+  {% if product.url == page.url %}
+    {% assign current_index = forloop.index0 %}
+    {% assign is_product_page = true %}
+    {% break %}
   {% endif %}
-
-  {% comment %} Create temp object with sort date {% endcomment %}
-  {% assign product_data = product | append: "|" | append: sort_date %}
-  {% assign products_with_date = products_with_date | push: product %}
 {% endfor %}
 
-{% comment %} Sort by last_modified_at descending {% endcomment %}
+{% comment %} If not product page, check if it's an article {% endcomment %}
+{% unless is_product_page %}
+  {% assign all_posts = site.posts | concat: site.post_with_product %}
+  {% for post in all_posts %}
+    {% if post.url == page.url %}
+      {% assign current_index = forloop.index0 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endunless %}
+
+{% comment %} Sort products by last_modified_at DESC for dynamic rotation {% endcomment %}
+{% comment %} Products updated by cron will automatically rise in order {% endcomment %}
 {% assign sorted_products = site.products | sort: "last_modified_at" | reverse %}
+{% assign product_count = sorted_products.size %}
 
-{% comment %} Get top 3 most recently updated {% endcomment %}
-{% assign final_products = sorted_products | slice: 0, 3 %}
+{% comment %} Calculate starting position using modulo for rotation {% endcomment %}
+{% assign start_position = current_index | modulo: product_count %}
 
-<!-- Schema.org Product Snippets (Related Products) -->
-{% for product in final_products %}
+{% comment %} Get 3 products starting from calculated position (circular) {% endcomment %}
+{% assign selected_products = "" | split: "" %}
+{% assign products_added = 0 %}
+{% assign offset = 0 %}
+
+{% comment %} If on product page, skip current product by starting from next position {% endcomment %}
+{% if is_product_page %}
+  {% assign offset = 1 %}
+{% endif %}
+
+{% for i in (0..10) %}
+  {% if products_added >= 3 %}
+    {% break %}
+  {% endif %}
+
+  {% assign target_index = start_position | plus: offset | plus: i %}
+  {% assign target_index = target_index | modulo: product_count %}
+
+  {% for product in sorted_products %}
+    {% if forloop.index0 == target_index %}
+      {% comment %} Skip if this is the current product page {% endcomment %}
+      {% if product.url != page.url %}
+        {% assign selected_products = selected_products | push: product %}
+        {% assign products_added = products_added | plus: 1 %}
+      {% endif %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% assign final_products = selected_products %}
+
+<!-- Schema.org ItemList for Related Products -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "@id": "{{ product.url | absolute_url }}#snippet",
-  "name": "{{ product.title }}",
-  "url": "{{ product.url | absolute_url }}",
-  "image": "{{ product.image | absolute_url }}",
-  "offers": {
-    "@type": "Offer",
-    "price": "{{ product.price }}",
-    "priceCurrency": "IDR",
-    "availability": "https://schema.org/InStock",
-    "url": "{{ product.url | absolute_url }}"
-  }{% if product.rating %},
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "{{ product.rating }}",
-    "reviewCount": "{{ product.review_count | default: 45 }}"
-  }{% endif %}
+  "@type": "ItemList",
+  "@id": "{{ page.url | absolute_url }}#related-products",
+  "name": "Produk Kayu Dolken Terkait",
+  "description": "Pilihan ukuran kayu dolken untuk kebutuhan proyek Anda",
+  "numberOfItems": {{ final_products.size }},
+  "itemListElement": [
+    {% for product in final_products %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "name": "{{ product.title }}",
+      "item": {
+        "@type": "Product",
+        "name": "{{ product.title }}",
+        "url": "{{ product.url | absolute_url }}",
+        "image": "{{ product.image | absolute_url }}",
+        "sku": "{{ product.sku }}",
+        "description": "{{ product.description | strip_html | strip_newlines | escape }}",
+        "brand": {
+          "@type": "Brand",
+          "name": "{{ site.business.name }}"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "{{ product.price }}",
+          "priceCurrency": "IDR",
+          "availability": "https://schema.org/InStock",
+          "url": "{{ product.url | absolute_url }}",
+          "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+          "seller": {
+            "@type": "Organization",
+            "name": "{{ site.business.name }}"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "IDR"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "ID"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 1,
+                "maxValue": 2,
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 3,
+                "maxValue": 7,
+                "unitCode": "DAY"
+              }
+            }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "ID",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          }
+        }{% if product.rating or product.review_count %},
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "{{ product.rating | default: 4.5 }}",
+          "reviewCount": "{{ product.review_count | default: 45 }}",
+          "bestRating": "5",
+          "worstRating": "1"
+        }{% endif %}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
 }
 </script>
-{% endfor %}
 
-<!-- Related Products Section (Last Modified Strategy) -->
-<section class="related-products-section related-products-by-last-modified my-5 py-4 bg-light rounded">
+<!-- Related Products Section -->
+<section class="related-products-section related-products-by-node-id my-5 py-4 bg-light rounded">
   <div class="container">
     <div class="row align-items-center mb-4">
       <div class="col">
         <h3 class="h4 fw-bold text-wood mb-0">
-          <i class="bi bi-box-seam me-2"></i>Produk Kayu Dolken Kami
+          <i class="bi bi-box-seam me-2"></i>Produk Kayu Dolken Gelam
         </h3>
-        <p class="text-muted small mb-0 mt-1">Mungkin ada tertarik melihat produk kayu dolken kami dibawah ini</p>
+        <p class="text-muted small mb-0 mt-1">Pilihan ukuran untuk kebutuhan proyek Anda</p>
       </div>
       <div class="col-auto">
         <a href="{{ '/produk' | relative_url }}" class="btn btn-sm btn-outline-wood">
@@ -134,7 +252,7 @@
     <div class="row g-4">
       {% for product in final_products %}
       <div class="col-md-4">
-        <div class="card border-0 shadow-sm h-100 product-card-fresh">
+        <div class="card border-0 shadow-sm h-100 product-card">
           {% if product.image %}
           <a href="{{ product.url | relative_url }}" class="text-decoration-none">
             <picture>

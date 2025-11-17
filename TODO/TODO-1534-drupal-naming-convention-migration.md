@@ -20,7 +20,7 @@ _layouts/
 _includes/
 ├── related-content-by-node-id.html
 ├── related-products-by-last-modified.html
-├── related-products-by-node-id.html
+├── block--related-product--by-node.html
 ├── product-list.html
 └── image-carousel.html
 ```
@@ -560,7 +560,7 @@ _includes/block--related-content--latest.html
 ```
 _includes/product-list.html
 _includes/related-products-by-last-modified.html
-_includes/related-products-by-node-id.html
+_includes/block--related-product--by-node.html
 ```
 
 **New:**
@@ -789,7 +789,7 @@ grep -r "product-list" . --exclude-dir=_site
 | `_includes/related-articles.html` | `_includes/block--related-content--latest.html` | Related content |
 | `_includes/product-list.html` | `_includes/block--product-list.html` | Product listing |
 | `_includes/related-products-by-last-modified.html` | `_includes/block--related-product--by-last-modified.html` | Related products |
-| `_includes/related-products-by-node-id.html` | `_includes/block--related-product--by-node.html` | Related products |
+| `_includes/block--related-product--by-node.html` | `_includes/block--related-product--by-node.html` | Related products |
 | `_includes/image-carousel.html` | `_includes/block--carousel--image.html` | UI component |
 | `_includes/jual-kayu-dolken-terdekat-link-card.html` | `_includes/block--card--link.html` | UI component |
 | `_includes/whatsapp-button.html` | `_includes/block--cta--whatsapp.html` | CTA component |

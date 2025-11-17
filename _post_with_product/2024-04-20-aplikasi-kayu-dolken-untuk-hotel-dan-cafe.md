@@ -1,5 +1,5 @@
 ---
-layout: post-with-products
+layout: node--post-with-product
 title: "Inspirasi Aplikasi Kayu Dolken Gelam untuk Hotel dan Cafe"
 date: 2024-04-20 11:00:00 +0700
 categories: [Inspirasi Desain]

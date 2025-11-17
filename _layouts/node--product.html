@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 
 <!-- Product Detail Page -->
@@ -8,7 +8,7 @@ layout: default
     <!-- Product Image -->
     <div class="col-lg-6 mb-4">
       {% if page.images %}
-      {% include image-carousel.html
+      {% include block--carousel--image.html
          carousel_id="productCarousel"
          images=page.images
          title=page.title
@@ -136,14 +136,14 @@ layout: default
   {% endif %}
 
   <!-- Related Products -->
-  {% include related-products-by-node-id.html %}
+  {% include block--related-product--by-node.html %}
 
   <!-- Related Articles Section -->
   {% assign all_posts = site.posts | concat: site.post_with_product %}
   {% if all_posts.size > 0 %}
   <div class="row mt-5">
     <div class="col-12">
-      {% include related-content-by-node-id.html title="Artikel Panduan & Tips" %}
+      {% include block--related-content--by-node.html title="Artikel Panduan & Tips" %}
     </div>
   </div>
   {% endif %}

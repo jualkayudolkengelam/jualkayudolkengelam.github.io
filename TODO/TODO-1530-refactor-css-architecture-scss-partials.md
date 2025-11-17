@@ -32,7 +32,7 @@ _includes/product-list.html              - 1 inline style
 _includes/related-articles.html          - 4 inline styles
 _includes/related-content-by-node-id.html - 5 inline styles
 _includes/related-products-by-last-modified.html - 4 inline styles
-_includes/related-products-by-node-id.html - 4 inline styles
+_includes/block--related-product--by-node.html - 4 inline styles
 ```
 
 ### Issues:
@@ -212,7 +212,7 @@ $transition-transform: transform 0.3s ease;
 
 #### B. Related Products Components
 **Files:**
-- `_includes/related-products-by-node-id.html`
+- `_includes/block--related-product--by-node.html`
 - `_includes/related-products-by-last-modified.html`
 
 **Current Inline Styles:**
@@ -476,7 +476,7 @@ $transition-transform: transform 0.3s ease;
 </div>
 ```
 
-**Before (related-products-by-node-id.html):**
+**Before (block--related-product--by-node.html):**
 ```html
 <img src="..." style="height: 200px; object-fit: cover;">
 <div class="mb-2 d-flex align-items-center" style="font-size: 0.875rem;">
@@ -582,7 +582,7 @@ $transition-transform: transform 0.3s ease;
 _includes/related-articles.html
 _includes/related-content-by-node-id.html
 _includes/related-products-by-last-modified.html
-_includes/related-products-by-node-id.html
+_includes/block--related-product--by-node.html
 _includes/product-list.html
 ```
 
