@@ -29,10 +29,12 @@ Used by:
 Site Structure:
 - HTML doctype and lang attribute
 - head.html (meta tags, CSS, scripts)
+- schema--product-page.html (combined product schema)
 - header.html (logo, navigation menu)
 - main.main-content:
-  - {{ content }} renders node--product.html (product entity)
-  - block--related-product--by-node.html (related products)
+  - {{ content }} renders node--product.html (pure product entity)
+  - block--related-product--by-node.html (related products by category)
+  - block--related-content--by-node.html (related articles & tips)
   - block--product-list.html (full product catalog)
 - footer.html (site footer with business info)
 - block--cta--whatsapp.html (floating WhatsApp button)
@@ -47,13 +49,18 @@ Hierarchy:
 _products/kayu-dolken-6-8cm.md
 └── node--product.html (layout: page--product)
     └── page--product.html (this file - product wrapper)
+        ├── schema--product-page.html
         ├── header.html
         ├── {{ content }} renders node--product.html
         ├── block--related-product--by-node.html
+        ├── block--related-content--by-node.html (artikel panduan)
         ├── block--product-list.html
         └── footer.html
 
-Note: Product-specific includes are here, NOT in node--product.html!
+Architecture Principle:
+- Node = Pure entity (produk itu sendiri)
+- Page wrapper = Site structure + related blocks
+- All includes belong in page wrapper, NOT in node template!
 
 ============================================================================
 {% endcomment %}
@@ -71,15 +78,27 @@ Note: Product-specific includes are here, NOT in node--product.html!
     {{ content }}
 
     <!-- Product-specific includes -->
-    <div class="row mt-5">
-      <div class="col-12">
-        {% include block--related-product--by-node.html %}
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-12">
+          {% include block--related-product--by-node.html %}
+        </div>
       </div>
-    </div>
 
-    <div class="row mt-5">
-      <div class="col-12">
-        {% include block--product-list.html %}
+      <!-- Related Articles Section -->
+      {% assign all_posts = site.posts | concat: site.post_with_product %}
+      {% if all_posts.size > 0 %}
+      <div class="row mt-5">
+        <div class="col-12">
+          {% include block--related-content--by-node.html title="Artikel Panduan & Tips" %}
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="row mt-5">
+        <div class="col-12">
+          {% include block--product-list.html %}
+        </div>
       </div>
     </div>
   </main>

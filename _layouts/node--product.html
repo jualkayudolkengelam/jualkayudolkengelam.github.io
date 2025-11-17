@@ -33,8 +33,8 @@ Features:
 - Product specifications (diameter, length, weight)
 - Pricing information with currency
 - Rating and review count display
-- Related products section
-- Schema.org Product markup (embedded in content)
+- Pure entity content (no page-level includes)
+- Related content managed by page--product.html wrapper
 
 Styling:
 - Bootstrap classes: container, row, col-lg-6, py-5
@@ -60,10 +60,12 @@ Data Expected in Frontmatter:
   ---
 
 Hierarchy:
-page.html (wrapper with header/footer)
-└── node--product.html (this file - product detail)
+page--product.html (wrapper with header/footer + related blocks)
+└── node--product.html (this file - pure product entity content)
     └── {{ content }} (product description from _products/*.md)
-        └── {% include block--product-list.html %} (related products)
+
+Note: Related products, related articles, and product list are handled
+by page--product.html wrapper, NOT in this node template.
 
 ============================================================================
 {% endcomment %}
@@ -191,19 +193,6 @@ page.html (wrapper with header/footer)
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  {% endif %}
-
-  <!-- Related Products -->
-  {% include block--related-product--by-node.html %}
-
-  <!-- Related Articles Section -->
-  {% assign all_posts = site.posts | concat: site.post_with_product %}
-  {% if all_posts.size > 0 %}
-  <div class="row mt-5">
-    <div class="col-12">
-      {% include block--related-content--by-node.html title="Artikel Panduan & Tips" %}
     </div>
   </div>
   {% endif %}
