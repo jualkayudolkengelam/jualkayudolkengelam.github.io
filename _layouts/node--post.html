@@ -62,6 +62,12 @@ page.html (wrapper with header/footer)
     <div class="row justify-content-center">
       <div class="col-lg-10 col-xl-9">
 
+        {% include block--breadcrumb.html
+           current_title=page.title
+           parent_name="Blog"
+           parent_url="/blog"
+        %}
+
         <!-- Post Header -->
         <header class="post-header mb-4">
           <h1 class="post-title display-5 fw-bold text-wood mb-3">{{ page.title }}</h1>

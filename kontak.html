@@ -5,6 +5,39 @@ description: Kontak supplier kayu dolken terdekat di kota Anda. Hubungi kami via
 schema_type: ContactPage
 ---
 
+<div class="container py-4">
+<!-- Breadcrumb Navigation -->
+<nav aria-label="breadcrumb" class="mb-3">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="{{ '/' | relative_url }}">Beranda</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Kontak</li>
+  </ol>
+</nav>
+
+<!-- Breadcrumb Schema (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Beranda",
+      "item": "{{ site.url }}{{ site.baseurl }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Kontak",
+      "item": "{{ site.url }}{{ site.baseurl }}/kontak"
+    }
+  ]
+}
+</script>
+
 <div class="row mb-5">
   <div class="col-lg-8 mx-auto text-center">
     <p class="lead text-muted">Kami siap membantu Anda! Hubungi kami untuk konsultasi gratis, informasi produk, atau pemesanan kayu dolken gelam berkualitas.</p>
@@ -337,3 +370,4 @@ document.getElementById('quickContactForm').addEventListener('submit', function(
   window.open(whatsappURL, '_blank');
 });
 </script>
+</div><!-- /.container -->
