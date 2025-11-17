@@ -1,0 +1,129 @@
+{% comment %}
+============================================================================
+Component: Single Product Card
+============================================================================
+
+@file        block--product.html
+@path        _includes/block--product.html
+@type        Block (component)
+@description Reusable single product card with optional schema
+@author      arisciwek
+
+This is a reusable component for displaying a single product card.
+Can be used in product grids, related products, featured products, etc.
+
+Parameters:
+-----------
+- product: (required) product object
+- show_schema: (optional) include Product schema (default: false)
+- variant: (optional) card style variant (default: "standard")
+  Options: "standard", "compact", "featured"
+
+Usage:
+------
+Basic usage (standard card, no schema):
+{% for product in site.products %}
+  {% include block--product.html product=product %}
+{% endfor %}
+
+With schema (for standalone product display):
+{% include block--product.html product=product show_schema=true %}
+
+Compact variant:
+{% include block--product.html product=product variant="compact" %}
+
+Featured variant:
+{% include block--product.html product=product variant="featured" show_schema=true %}
+
+Used by:
+--------
+- Product grids
+- Related products sections
+- Featured products display
+- Search results
+- Product recommendations
+
+Features:
+---------
+- Product image
+- Product title and description
+- Price display (formatted)
+- Rating and review count
+- Action buttons (Detail, Pesan via WhatsApp)
+- Optional Product schema
+- Variant support for different styles
+- Fully responsive
+
+============================================================================
+{% endcomment %}
+
+{% assign product = include.product %}
+{% assign show_schema = include.show_schema | default: false %}
+{% assign variant = include.variant | default: "standard" %}
+
+{% comment %}Include schema if requested{% endcomment %}
+{% if show_schema %}
+  {% include schema--product.html product=product %}
+{% endif %}
+
+{% comment %}Product Card HTML - Homepage Style{% endcomment %}
+<div class="card product-card h-100">
+  <a href="{{ product.url | relative_url }}" class="text-decoration-none">
+    {% if product.image %}
+    <picture>
+      <source srcset="{{ product.image | replace: '.jpeg', '.webp' | replace: '.jpg', '.webp' | relative_url }}" type="image/webp">
+      <img src="{{ product.image | relative_url }}"
+           class="card-img-top"
+           alt="{{ product.title }}"
+           style="height: 200px; object-fit: cover;"
+           loading="lazy">
+    </picture>
+    {% endif %}
+  </a>
+
+  <div class="card-header text-center">
+    {% if product.diameter %}
+    <i class="bi bi-rulers me-2"></i>{{ product.diameter }}
+    {% endif %}
+  </div>
+
+  <div class="card-body text-center">
+    <div class="product-price mb-2">Rp {{ product.price | divided_by: 1000 | round: 3 | remove: '.0' }}</div>
+    <p class="text-muted mb-2">per batang (4 meter)</p>
+
+    {% if product.rating %}
+    <div class="mb-3 d-flex justify-content-center align-items-center gap-2">
+      <div class="text-warning">
+        {% assign rating = product.rating | floor %}
+        {% for i in (1..5) %}
+          {% if i <= rating %}
+            <i class="bi bi-star-fill"></i>
+          {% else %}
+            <i class="bi bi-star"></i>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <span class="text-muted small">
+        <strong>{{ product.rating }}</strong> ({{ product.review_count | default: 0 }} ulasan)
+      </span>
+    </div>
+    {% endif %}
+
+    {% if product.features %}
+    <ul class="list-unstyled text-start mb-4">
+      {% for feature in product.features limit:4 %}
+      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>{{ feature }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <a href="{{ product.url | relative_url }}" class="btn btn-wood w-100 mb-2">
+      <i class="bi bi-info-circle me-2"></i>Lihat Detail
+    </a>
+    <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20{{ product.title }}%20-%20Rp%20{{ product.price }}"
+       class="btn btn-outline-success w-100"
+       target="_blank">
+      <i class="bi bi-whatsapp me-2"></i>Pesan Sekarang
+    </a>
+  </div>
+</div>

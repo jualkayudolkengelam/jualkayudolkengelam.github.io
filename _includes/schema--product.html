@@ -1,0 +1,142 @@
+{% comment %}
+============================================================================
+Shared Schema: Product
+============================================================================
+
+@file        schema--product.html
+@path        _includes/schema--product.html
+@type        Schema (shared component)
+@description Reusable Product schema for all product displays
+@author      arisciwek
+
+This is a shared schema component that provides Product structured data
+for consistency across all product displays (detail pages, cards, lists).
+
+Parameters:
+-----------
+- product: (required) product object
+- raw: (optional) output raw JSON without <script> tags (default: false)
+
+Usage:
+------
+In node--product.html (single product page):
+{% include schema--product.html product=page %}
+
+In block--product.html (product card with schema):
+{% include schema--product.html product=include.product %}
+
+In block--product-list.html (ItemList with Products):
+"item": {% include schema--product.html product=product raw=true %}
+
+Benefits:
+---------
+- DRY: Single source of truth for Product schema
+- Consistency: Same fields across all product displays
+- Maintainability: Update once, applies everywhere
+- Flexible: Can output with/without script tags
+
+Used by:
+--------
+- _layouts/node--product.html (product detail page)
+- _includes/block--product.html (single product card)
+- _includes/block--product-list.html (product catalog)
+
+Schema Fields:
+--------------
+- Product basics: name, description, image, url, sku
+- Brand information
+- Category and material
+- Offer details: price, availability, seller
+- AggregateRating (if available)
+- AdditionalProperty (diameter, length)
+
+============================================================================
+{% endcomment %}
+
+{% assign raw_output = include.raw | default: false %}
+{% assign product = include.product %}
+
+{% unless raw_output %}<script type="application/ld+json">
+{% endunless %}{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "{{ product.url | absolute_url }}#product",
+  "name": "{{ product.title }}",
+  "description": "{{ product.description | strip_html | strip_newlines | escape }}",
+  "image": "{{ product.image | absolute_url }}",
+  "url": "{{ product.url | absolute_url }}",
+  "sku": "{{ product.sku }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ site.business.name }}"
+  },
+  "category": "{{ product.category | default: 'Kayu Dolken Gelam' }}",
+  "material": "{{ product.material | default: 'Kayu Gelam' }}",
+  "offers": {
+    "@type": "Offer",
+    "price": "{{ product.price }}",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock",
+    "url": "{{ product.url | absolute_url }}",
+    "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+    "seller": {
+      "@type": "Organization",
+      "name": "{{ site.business.name }}"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "IDR"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "ID"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 2,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 3,
+          "maxValue": 7,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "ID",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 7,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    }
+  }{% if product.rating or product.review_count %},
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ product.rating | default: 4.5 }}",
+    "reviewCount": "{{ product.review_count | default: 45 }}",
+    "bestRating": "5",
+    "worstRating": "1"
+  }{% endif %}{% if product.diameter %},
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Diameter",
+      "value": "{{ product.diameter }}"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Panjang",
+      "value": "4 Meter"
+    }
+  ]{% endif %}
+}{% unless raw_output %}
+</script>{% endunless %}

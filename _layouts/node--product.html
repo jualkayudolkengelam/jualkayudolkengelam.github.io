@@ -216,76 +216,7 @@ page.html (wrapper with header/footer)
 </div>
 
 <!-- Schema.org Product Markup -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "{{ page.title }}",
-  "description": "{{ page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 }}",
-  {% if page.image %}
-  "image": "{{ page.image | absolute_url }}",
-  {% endif %}
-  "sku": "{{ page.sku }}",
-  "brand": {
-    "@type": "Brand",
-    "name": "{{ site.business.name }}"
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "{{ page.url | absolute_url }}",
-    "priceCurrency": "IDR",
-    "price": "{{ page.price }}",
-    "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
-    "availability": "https://schema.org/InStock",
-    "seller": {
-      "@type": "Organization",
-      "name": "{{ site.business.name }}"
-    },
-    "shippingDetails": {
-      "@type": "OfferShippingDetails",
-      "shippingRate": {
-        "@type": "MonetaryAmount",
-        "value": "0",
-        "currency": "IDR"
-      },
-      "shippingDestination": {
-        "@type": "DefinedRegion",
-        "addressCountry": "ID"
-      },
-      "deliveryTime": {
-        "@type": "ShippingDeliveryTime",
-        "handlingTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 1,
-          "maxValue": 2,
-          "unitCode": "DAY"
-        },
-        "transitTime": {
-          "@type": "QuantitativeValue",
-          "minValue": 3,
-          "maxValue": 7,
-          "unitCode": "DAY"
-        }
-      }
-    },
-    "hasMerchantReturnPolicy": {
-      "@type": "MerchantReturnPolicy",
-      "applicableCountry": "ID",
-      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-      "merchantReturnDays": 7,
-      "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/FreeReturn"
-    }
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "{{ page.rating | default: 4.5 }}",
-    "reviewCount": "{{ page.review_count | default: 45 }}",
-    "bestRating": "5",
-    "worstRating": "1"
-  }
-}
-</script>
+{% include schema--product.html product=page %}
 
 <!-- Carousel Initialization Script -->
 {% if page.images %}
