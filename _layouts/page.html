@@ -47,13 +47,18 @@ page.html (this file - site wrapper)
 {% include head.html %}
 
 <body>
-  <!-- Global Schema: WebSite + Navigation (auto-included for all pages) -->
-  {% include schema--global.html %}
+  <!-- Combined Schema (if use_combined_schema is true) -->
+  {% if page.use_combined_schema %}
+    {% include schema--page-combined.html %}
+  {% else %}
+    <!-- Global Schema: WebSite + Navigation (auto-included for all pages) -->
+    {% include schema--global.html %}
 
-  <!-- WebPage Schema (auto-included for all pages using this layout) -->
-  {% unless page.skip_page_schema %}
-    {% include schema--page.html %}
-  {% endunless %}
+    <!-- WebPage Schema (auto-included for all pages using this layout) -->
+    {% unless page.skip_page_schema %}
+      {% include schema--page.html %}
+    {% endunless %}
+  {% endif %}
 
   {% include header.html %}
 
