@@ -62,7 +62,13 @@ Note: Homepage does NOT use node template - renders content directly!
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'id' }}">
 {% include head.html %}
+
 <body>
+  <!-- WebPage Schema (auto-included for homepage) -->
+  {% unless page.skip_page_schema %}
+    {% include schema--page.html %}
+  {% endunless %}
+
   {% include header.html %}
 
   <main class="main-content">
