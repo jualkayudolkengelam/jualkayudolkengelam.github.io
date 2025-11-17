@@ -46,12 +46,12 @@ page.html (this file - site wrapper)
 <html lang="{{ site.lang | default: 'id' }}">
 {% include head.html %}
 
-<!-- WebPage Schema (if not already included in content) -->
-{% unless page.skip_page_schema %}
-  {% include schema--page.html %}
-{% endunless %}
-
 <body>
+  <!-- WebPage Schema (auto-included for all pages using this layout) -->
+  {% unless page.skip_page_schema %}
+    {% include schema--page.html %}
+  {% endunless %}
+
   {% include header.html %}
 
   <main class="main-content">
