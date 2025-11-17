@@ -464,6 +464,15 @@ img {
   overflow-wrap: break-word;
 }
 
+/* Fix h4 heading size on desktop - reduce from default Bootstrap size */
+.post-body h4,
+h4.h4 {
+  font-size: 1.25rem !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
 /* Ensure text wraps properly on mobile */
 @media (max-width: 768px) {
   .post-content {
@@ -475,5 +484,31 @@ img {
   .post-content p,
   .post-content li {
     hyphens: auto;
+  }
+
+  /* Fix h4 heading display on mobile - reduce font size and enable wrapping */
+  .post-body h4,
+  h4.h4 {
+    font-size: 1.05rem !important;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Force description text to next line on mobile */
+  h4.h4 + p.small,
+  h4.h4 ~ p.small {
+    display: block;
+    margin-left: 0 !important;
+  }
+
+  /* Make list items stack vertically on mobile */
+  .post-body li {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .post-body li .d-flex {
+    flex-direction: column !important;
+    align-items: flex-start !important;
   }
 }
