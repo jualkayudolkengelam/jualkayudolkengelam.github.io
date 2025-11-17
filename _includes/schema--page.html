@@ -16,7 +16,6 @@ Parameters:
 -----------
 - type: (optional) WebPage type variant (default: "WebPage")
   Options: "WebPage", "AboutPage", "ContactPage", "CollectionPage"
-- breadcrumb: (optional) show breadcrumb reference (default: true)
 
 Usage:
 ------
@@ -26,11 +25,11 @@ Basic usage (default WebPage):
 With custom type:
 {% include schema--page.html type="AboutPage" %}
 
-Without breadcrumb:
-{% include schema--page.html breadcrumb=false %}
+Contact page:
+{% include schema--page.html type="ContactPage" %}
 
-Full control:
-{% include schema--page.html type="ContactPage" breadcrumb=true %}
+About page:
+{% include schema--page.html type="AboutPage" %}
 
 Used by:
 --------
@@ -54,13 +53,12 @@ SEO Impact:
 - Improves rich results eligibility
 - Better search engine understanding
 - Enhanced structured data coverage
-- Supports breadcrumb navigation
+- Provides basic WebPage schema for all pages
 
 ============================================================================
 {% endcomment %}
 
 {% assign schema_type = include.type | default: "WebPage" %}
-{% assign show_breadcrumb = include.breadcrumb | default: true %}
 
 <script type="application/ld+json">
 {
@@ -76,11 +74,7 @@ SEO Impact:
     "@id": "{{ site.url }}{{ site.baseurl }}/#website",
     "url": "{{ site.url }}{{ site.baseurl }}/",
     "name": "{{ site.title }}"
-  }{% if show_breadcrumb %},
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "@id": "{{ page.url | absolute_url }}#breadcrumb"
-  }{% endif %}{% if page.image %},
+  }{% if page.image %},
   "primaryImageOfPage": {
     "@type": "ImageObject",
     "url": "{{ page.image | absolute_url }}"
