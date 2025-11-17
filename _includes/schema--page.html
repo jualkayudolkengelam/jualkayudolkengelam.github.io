@@ -58,7 +58,7 @@ SEO Impact:
 ============================================================================
 {% endcomment %}
 
-{% assign schema_type = include.type | default: "WebPage" %}
+{% assign schema_type = page.schema_type | default: include.type | default: "WebPage" %}
 
 <script type="application/ld+json">
 {
@@ -83,3 +83,4 @@ SEO Impact:
   "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}"{% endif %}
 }
 </script>
+
