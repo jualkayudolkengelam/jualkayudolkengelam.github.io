@@ -1,0 +1,200 @@
+{% comment %}
+============================================================================
+Related Products Block - Last Modified Strategy (Nested Block Pattern)
+============================================================================
+
+@file        block--related-product-last-modified.html
+@path        _includes/block--related-product-last-modified.html
+@type        Block (parent - with nested child blocks)
+@description Parent block that handles product selection logic and calls
+             child block--product.html for rendering. Demonstrates nested
+             block pattern for better code reusability.
+@author      arisciwek
+
+Architecture Pattern: Nested Blocks
+------------------------------------
+This block demonstrates the nested block pattern:
+
+block--related-product-last-modified.html (parent - THIS FILE)
+├── Logic: Sort & filter products by last_modified_at
+├── Section wrapper & title
+└── Loop products
+    └── {% include block--product.html %} (child - rendering)
+
+Benefits:
+---------
+- Separation of concerns: Logic vs Presentation
+- DRY principle: block--product.html reusable everywhere
+- Easier maintenance: Change UI in one place
+- Flexible: Can use different product selection strategies with same UI
+- Modular: Parent handles "what to show", child handles "how to show"
+
+Parameters:
+-----------
+- limit: (optional) Number of products to show (default: 3)
+- title: (optional) Section title (default: "Produk Terbaru")
+- show_schema: (optional) Include ItemList schema (default: true)
+
+Usage:
+------
+Default (3 products with schema):
+{% include block--related-product-last-modified.html %}
+
+Custom limit and title:
+{% include block--related-product-last-modified.html
+   limit=5
+   title="Produk Populer"
+   show_schema=false
+%}
+
+Used in:
+--------
+- Homepage (index.html)
+- Blog posts (_layouts/post.html)
+- Article pages
+
+Related Files:
+--------------
+- block--product.html (child block - product card rendering)
+- block--related-product--by-node.html (alternative strategy)
+- block--product-list.html (full catalog)
+
+============================================================================
+{% endcomment %}
+
+{% comment %} Parameters with defaults {% endcomment %}
+{% assign limit = include.limit | default: 3 %}
+{% assign title = include.title | default: "Produk Terbaru" %}
+{% assign show_schema = include.show_schema | default: true %}
+{% assign show_cta = include.show_cta | default: true %}
+
+{% comment %}
+====================
+LOGIC SECTION
+====================
+Sort products by last_modified_at (most recent first)
+{% endcomment %}
+{% assign sorted_products = site.products | sort: "last_modified_at" | reverse %}
+
+{% comment %} Get top N products based on limit parameter {% endcomment %}
+{% assign selected_products = sorted_products | slice: 0, limit %}
+
+{% comment %}
+====================
+SCHEMA SECTION (Optional)
+====================
+ItemList schema for related products
+{% endcomment %}
+{% if show_schema and selected_products.size > 0 %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "{{ title }}",
+  "description": "Daftar produk kayu dolken gelam terbaru",
+  "numberOfItems": {{ selected_products.size }},
+  "itemListElement": [
+    {% for product in selected_products %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {
+        "@type": "Product",
+        "@id": "{{ product.url | absolute_url }}#product",
+        "name": "{{ product.title }}",
+        "description": "{{ product.description | strip_html | strip_newlines | escape }}",
+        "image": "{{ product.image | absolute_url }}",
+        "url": "{{ product.url | absolute_url }}",
+        "sku": "{{ product.sku }}",
+        "brand": {
+          "@type": "Brand",
+          "name": "{{ site.business.name }}"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "{{ product.price }}",
+          "priceCurrency": "IDR",
+          "availability": "https://schema.org/InStock",
+          "url": "{{ product.url | absolute_url }}",
+          "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+          "seller": {
+            "@type": "Organization",
+            "name": "{{ site.business.name }}"
+          }
+        }{% if product.rating %},
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "{{ product.rating }}",
+          "reviewCount": "{{ product.review_count | default: 0 }}",
+          "bestRating": "5",
+          "worstRating": "1"
+        }{% endif %}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{% comment %}
+====================
+PRESENTATION SECTION
+====================
+Section wrapper and nested block calls
+{% endcomment %}
+{% if selected_products.size > 0 %}
+<section class="related-products-section my-5 py-4 bg-light rounded">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="row align-items-center mb-4">
+      <div class="col">
+        <h3 class="h4 fw-bold text-wood mb-0">
+          <i class="bi bi-clock-history me-2"></i>{{ title }}
+        </h3>
+        <p class="text-muted small mb-0 mt-1">Produk dengan update terbaru</p>
+      </div>
+      <div class="col-auto">
+        <a href="{{ '/product' | relative_url }}" class="btn btn-sm btn-outline-wood">
+          Lihat Semua <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="row g-4">
+      {% for product in selected_products %}
+      <div class="col-md-4">
+        {% comment %}
+        ====================
+        NESTED BLOCK CALL
+        ====================
+        Call child block--product.html for rendering
+        Parent handles WHAT to show, child handles HOW to show it
+        {% endcomment %}
+        {% include block--product.html
+           product=product
+           variant="card"
+           show_schema=false
+        %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- CTA Section (Optional) -->
+    {% if show_cta %}
+    <div class="text-center mt-4 pt-4 border-top">
+      <p class="mb-3">
+        <strong>Butuh bantuan memilih ukuran yang tepat?</strong><br>
+        <span class="text-muted">Tim kami siap membantu Anda</span>
+      </p>
+      <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20butuh%20bantuan%20memilih%20ukuran%20kayu%20dolken"
+         class="btn btn-success"
+         target="_blank">
+        <i class="bi bi-whatsapp me-2"></i>Konsultasi Gratis via WhatsApp
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
