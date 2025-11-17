@@ -212,18 +212,164 @@ layout: page  <!-- Wraps in page.html -->
 | Current | New | Type | Notes |
 |---------|-----|------|-------|
 | `default.html` | `page.html` | Page wrapper | Base page layout (header, footer) |
+| *(new)* | `page--front.html` | Homepage wrapper | Special layout for homepage only |
 | *(new)* | `node.html` | Base content | Fallback content template |
 | `post.html` | `node--post.html` | Blog post content | Single blog post layout |
 | `post-with-products.html` | `node--post-with-product.html` | Hybrid post content | Blog post + product catalog |
 | `product.html` | `node--product.html` | Product content | Single product detail |
 
+---
+
+### When to Use page--* vs node--*
+
+#### Understanding the Decision:
+
+**Question:** Why does homepage need `page--front.html` BUT products don't need `page--product.html`?
+
+**Answer:** It depends on **what level of layout variation you need**.
+
+---
+
+#### ✅ Homepage NEEDS page--front.html (Site Structure Variation)
+
+**Reason:** Homepage has **different site structure** than other pages.
+
+**Current Analysis of default.html (Lines 1-15):**
+```html
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  {% include header.html %}
+  <main class="main-content">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  {% include whatsapp-button.html %}
+</html>
+```
+
+**Why Homepage Needs Different Wrapper:**
+1. **Different header style:**
+   - Regular pages: Standard header with navigation
+   - Homepage: Could have transparent/fixed header, hero section
+
+2. **Different layout structure:**
+   - Regular pages: May have sidebar, standard container
+   - Homepage: Full-width hero, multiple sections (features, testimonials, products preview, blog preview)
+
+3. **Different footer:**
+   - Regular pages: Compact footer
+   - Homepage: Expanded footer with more info, newsletter signup
+
+**Example page--front.html Structure:**
+```html
+<body class="homepage">
+  <header class="transparent-header fixed">Logo | Menu</header>
+
+  <section class="hero-full-width">
+    <!-- Big hero section -->
+  </section>
+
+  <main class="no-sidebar full-width">
+    {{ content }}  <!-- Homepage content blocks -->
+  </main>
+
+  <footer class="expanded-footer">
+    <!-- Bigger footer with newsletter, social, multiple columns -->
+  </footer>
+</body>
+```
+
+**✅ Result:** Homepage has **different wrapper** = needs `page--front.html`
+
+---
+
+#### ❌ Products DON'T NEED page--product.html (Content Variation Only)
+
+**Reason:** Product pages have **same site structure**, only **content layout** differs.
+
+**Current Analysis of product.html (Lines 1-3):**
+```yaml
+---
+layout: default  ← Wrapped by default.html!
+---
+<!-- Product content only (no header/footer) -->
+```
+
+**Why Products DON'T Need page--product.html:**
+1. **Same header/footer as other pages:**
+   - Blog posts → `{% include header.html %}` + `{% include footer.html %}`
+   - Products → `{% include header.html %}` + `{% include footer.html %}`
+   - Same WhatsApp button, same navigation
+
+2. **Same site wrapper structure:**
+   - product.html already uses `layout: default`
+   - Meaning: default.html wraps product content
+   - Header, footer, whatsapp-button identical to other pages
+
+3. **Only content layout differs:**
+   - Products show: title, image, price, specs table
+   - Blog posts show: title, date, content, related posts
+   - But both wrapped by same page structure!
+
+**Current Structure (Correct!):**
+```
+page.html (site wrapper for ALL)
+└── node--product.html (product content only)
+    └── Product title, image, price, specs
+    └── {% include block--product-list.html %}
+```
+
+**✅ Result:** Products only need **content template** = `node--product.html` (NOT page--product.html)
+
+---
+
+#### Decision Matrix:
+
+| Need | Use | Example |
+|------|-----|---------|
+| Different **header/footer/wrapper** | `page--*.html` | Homepage (hero, different footer) |
+| Different **content layout** only | `node--*.html` | Products (price, specs) vs Posts (date, author) |
+| Same content, different **sorting/filtering** | `block--*--*.html` | Related products by-node vs by-last-modified |
+
+---
+
+#### Real Examples from This Site:
+
+**page.html (Site Wrapper):**
+- Used by: Blog posts, Products, Hybrid posts, Static pages
+- Contains: header.html, footer.html, whatsapp-button.html
+- Purpose: Consistent site structure for ALL pages
+
+**page--front.html (Homepage Wrapper):**
+- Used by: Homepage only (index.md or index.html)
+- Contains: Different header (hero), full-width layout, expanded footer
+- Purpose: Special homepage design for conversion
+
+**node--post.html (Blog Content):**
+- Wrapped by: page.html
+- Contains: Post title, date, content, related posts
+- Purpose: Blog post content layout
+
+**node--product.html (Product Content):**
+- Wrapped by: page.html (same as posts!)
+- Contains: Product title, image, price, specs, product list
+- Purpose: Product detail content layout
+
+**node--post-with-product.html (Hybrid Content):**
+- Wrapped by: page.html (same wrapper!)
+- Contains: Post content + embedded product catalog
+- Purpose: Blog post with product recommendations
+
+---
+
 #### Future Variants (Examples):
 
 **Page Templates (Wrappers):**
 ```
-page--front.html          # Homepage wrapper (different from default)
 page--two-column.html     # Two-column layout (future)
 page--full-width.html     # Full-width layout (future)
+page--landing.html        # Landing page (future, for marketing campaigns)
 ```
 
 **Node Templates (Content Types):**
@@ -295,11 +441,13 @@ block--card--link.html                 # Link card (terdekat)
 **Checklist:**
 - [ ] Backup current layouts (git commit before migration)
 - [ ] Rename `default.html` → `page.html` (page wrapper)
+- [ ] Create `page--front.html` (homepage wrapper - copy from page.html, customize for homepage)
 - [ ] Create `node.html` (base content template - copy from page.html, strip wrapper)
 - [ ] Rename `post.html` → `node--post.html` (content type)
 - [ ] Rename `post-with-products.html` → `node--post-with-product.html` (content type)
 - [ ] Rename `product.html` → `node--product.html` (content type)
 - [ ] Update all frontmatter `layout:` references in content files
+- [ ] Update homepage (index.html/index.md) to use `layout: page--front`
 - [ ] Test build
 - [ ] Commit: "Migrate layouts to Drupal naming convention"
 
@@ -309,6 +457,9 @@ cd _layouts/
 
 # Rename page wrapper
 git mv default.html page.html
+
+# Create homepage wrapper (will need manual editing)
+cp page.html page--front.html
 
 # Create base node template (will need manual editing)
 cp page.html node.html
@@ -334,6 +485,15 @@ sed -i 's/layout: post-with-products/layout: node--post-with-product/g' {files}
 sed -i 's/layout: product/layout: node--product/g' {files}
 ```
 
+**Manual Steps for page--front.html:**
+After creating page--front.html, customize it for homepage:
+1. Add `class="homepage"` to body tag
+2. Consider adding hero section before main content
+3. Change header styling (e.g., transparent, fixed)
+4. Modify footer (expanded with more info)
+5. Adjust main layout (full-width, no sidebar)
+6. This will be used ONLY by homepage (index.html/index.md)
+
 **Manual Steps for node.html:**
 After creating node.html, edit it to:
 1. Remove header/footer (those belong in page.html)
@@ -346,9 +506,11 @@ After creating node.html, edit it to:
 #### Task 1.2: Update Layout References
 
 **Locations to check:**
+- [ ] Homepage (`index.html` or `index.md`) frontmatter → should use `layout: page--front`
 - [ ] `_posts/*.md` frontmatter → should use `layout: node--post`
 - [ ] `_post_with_product/*.md` frontmatter → should use `layout: node--post-with-product`
 - [ ] `_products/*.md` frontmatter → should use `layout: node--product`
+- [ ] Static pages (about, contact, etc.) → should use `layout: page` (if they need wrapper)
 - [ ] Any other collections
 - [ ] Documentation/README
 
@@ -534,10 +696,11 @@ _includes/whatsapp-button.html → block--cta--whatsapp.html
 - [ ] Check for errors/warnings
 - [ ] Verify no missing includes
 - [ ] Test all page types:
-  - [ ] Homepage (uses page.html wrapper)
+  - [ ] Homepage (uses page--front.html wrapper - special layout)
   - [ ] Blog posts (uses node--post.html wrapped by page.html)
   - [ ] Blog with products (uses node--post-with-product.html wrapped by page.html)
   - [ ] Product pages (uses node--product.html wrapped by page.html)
+  - [ ] Static pages (uses page.html wrapper directly if no node template)
 - [ ] Verify all blocks render correctly
 - [ ] Check schema.org markup intact
 - [ ] Verify page > node > block hierarchy works
@@ -612,6 +775,7 @@ grep -r "product-list" . --exclude-dir=_site
 | Old Path | New Path | Template Type |
 |----------|----------|---------------|
 | `_layouts/default.html` | `_layouts/page.html` | Page wrapper (base) |
+| *(new)* | `_layouts/page--front.html` | Page wrapper (homepage) |
 | *(new)* | `_layouts/node.html` | Content template (base) |
 | `_layouts/post.html` | `_layouts/node--post.html` | Blog post content |
 | `_layouts/post-with-products.html` | `_layouts/node--post-with-product.html` | Hybrid post content |
@@ -733,11 +897,13 @@ ls _includes/block--carousel*
 ## Success Criteria
 
 - [ ] Page wrapper renamed: `default.html` → `page.html`
+- [ ] Homepage wrapper created: `page--front.html`
+- [ ] Homepage (index.html/index.md) uses `layout: page--front`
 - [ ] Base node template created: `node.html`
 - [ ] All content templates renamed to `node--*.html` pattern
 - [ ] All blocks renamed to `block--*.html` pattern
 - [ ] No old naming references remain in codebase
-- [ ] All pages render correctly
+- [ ] All pages render correctly (including homepage with new wrapper)
 - [ ] All includes found
 - [ ] Three-tier hierarchy works: page > node > block
 - [ ] Schema.org markup intact
@@ -758,4 +924,12 @@ ls _includes/block--carousel*
 
 **Created by:** Claude Code
 **Last Updated:** 2025-11-17
-**Status:** Planning - Ready for Approval
+**Status:** Planning - Ready for Approval ✅
+
+**Revision Notes:**
+- Added `page--front.html` for homepage wrapper (special layout)
+- Explained why homepage needs `page--front.html` but products don't need `page--product.html`
+- Added decision matrix for when to use `page--*` vs `node--*` vs `block--*`
+- Included real examples from this site showing current structure
+- Updated migration plan to include homepage wrapper creation
+- Updated success criteria to verify homepage wrapper implementation
