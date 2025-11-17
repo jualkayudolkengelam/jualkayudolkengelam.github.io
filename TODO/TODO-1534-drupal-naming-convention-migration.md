@@ -213,6 +213,7 @@ layout: page  <!-- Wraps in page.html -->
 |---------|-----|------|-------|
 | `default.html` | `page.html` | Page wrapper | Base page layout (header, footer) |
 | *(new)* | `page--front.html` | Homepage wrapper | Special layout for homepage only |
+| *(new)* | `page--product.html` | Product wrapper | Special layout for product pages with product-specific includes |
 | *(new)* | `node.html` | Base content | Fallback content template |
 | `post.html` | `node--post.html` | Blog post content | Single blog post layout |
 | `post-with-products.html` | `node--post-with-product.html` | Hybrid post content | Blog post + product catalog |
@@ -224,9 +225,13 @@ layout: page  <!-- Wraps in page.html -->
 
 #### Understanding the Decision:
 
-**Question:** Why does homepage need `page--front.html` BUT products don't need `page--product.html`?
+**Question:** When do we need page--* variants vs just using page.html?
 
-**Answer:** It depends on **what level of layout variation you need**.
+**Answer:** Create a `page--*.html` variant when you need **page-type-specific includes** or **different site structure**.
+
+**Key Principle:**
+- **Node templates** = Pure entity content (no includes)
+- **Page wrappers** = Site structure + page-type-specific includes
 
 ---
 
@@ -284,43 +289,69 @@ layout: page  <!-- Wraps in page.html -->
 
 ---
 
-#### ❌ Products DON'T NEED page--product.html (Content Variation Only)
+#### ✅ Products NEED page--product.html (Page-Type-Specific Includes)
 
-**Reason:** Product pages have **same site structure**, only **content layout** differs.
+**Reason:** Product pages need **product-specific includes** that other pages don't need.
 
-**Current Analysis of product.html (Lines 1-3):**
-```yaml
----
-layout: default  ← Wrapped by default.html!
----
-<!-- Product content only (no header/footer) -->
+**Architecture Principle:**
+- **Node templates** = Pure entity content (standalone, no includes)
+- **Page wrappers** = Place for page-type-specific includes
+
+**Why Products Need page--product.html:**
+
+1. **Product pages need product-specific components:**
+   - Related products (by node similarity)
+   - Product catalog/listing
+   - Product comparison tables
+   - Product-specific CTAs
+
+2. **Blog pages DON'T need these:**
+   - Blog posts only need related articles (not products)
+   - Static pages don't need product components
+   - Forcing product includes on all pages via page.html = wrong!
+
+3. **Node should be pure entity:**
+   - `node--product.html` = Product detail content ONLY
+   - No includes in node (separation of concerns)
+   - Includes belong in page wrapper
+
+**Correct Structure:**
+```
+page--product.html (product page wrapper)
+├── header.html, footer.html
+├── {{ content }} → renders node--product.html
+└── Product-specific includes:
+    ├── block--related-product--by-node.html
+    └── block--product-list.html
+
+node--product.html (pure product entity)
+├── layout: page--product  ← uses product wrapper
+└── Product detail HTML (image, specs, price)
+    └── NO includes here!
 ```
 
-**Why Products DON'T Need page--product.html:**
-1. **Same header/footer as other pages:**
-   - Blog posts → `{% include header.html %}` + `{% include footer.html %}`
-   - Products → `{% include header.html %}` + `{% include footer.html %}`
-   - Same WhatsApp button, same navigation
+**Example page--product.html:**
+```html
+<main class="main-content">
+  {{ content }}  <!-- node--product.html content -->
 
-2. **Same site wrapper structure:**
-   - product.html already uses `layout: default`
-   - Meaning: default.html wraps product content
-   - Header, footer, whatsapp-button identical to other pages
-
-3. **Only content layout differs:**
-   - Products show: title, image, price, specs table
-   - Blog posts show: title, date, content, related posts
-   - But both wrapped by same page structure!
-
-**Current Structure (Correct!):**
-```
-page.html (site wrapper for ALL)
-└── node--product.html (product content only)
-    └── Product title, image, price, specs
-    └── {% include block--product-list.html %}
+  <!-- Product-specific includes -->
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-12">
+        {% include block--related-product--by-node.html %}
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12">
+        {% include block--product-list.html title="Produk Lainnya" %}
+      </div>
+    </div>
+  </div>
+</main>
 ```
 
-**✅ Result:** Products only need **content template** = `node--product.html` (NOT page--product.html)
+**✅ Result:** Products need **page wrapper with specific includes** = `page--product.html` + `node--product.html`
 
 ---
 
@@ -328,38 +359,133 @@ page.html (site wrapper for ALL)
 
 | Need | Use | Example |
 |------|-----|---------|
-| Different **header/footer/wrapper** | `page--*.html` | Homepage (hero, different footer) |
+| Different **site structure** OR **page-type-specific includes** | `page--*.html` | Homepage (hero, different footer), Products (related products, catalog) |
 | Different **content layout** only | `node--*.html` | Products (price, specs) vs Posts (date, author) |
-| Same content, different **sorting/filtering** | `block--*--*.html` | Related products by-node vs by-last-modified |
+| **Reusable component** with data | `block--*.html` | Product card, related content widget |
+| Same component, different **variant/behavior** | `block--*--*.html` | Related products by-node vs by-last-modified |
 
 ---
 
 #### Real Examples from This Site:
 
-**page.html (Site Wrapper):**
-- Used by: Blog posts, Products, Hybrid posts, Static pages
+**page.html (Site Wrapper - Base):**
+- Used by: Blog posts, Static pages, Hybrid posts
 - Contains: header.html, footer.html, whatsapp-button.html
-- Purpose: Consistent site structure for ALL pages
+- Purpose: Consistent site structure for standard pages
+- Includes: None (or general content for all pages)
 
-**page--front.html (Homepage Wrapper):**
+**page--front.html (Homepage Wrapper - Variant):**
 - Used by: Homepage only (index.md or index.html)
-- Contains: Different header (hero), full-width layout, expanded footer
+- Contains: Same header/footer as page.html, different hero/layout
 - Purpose: Special homepage design for conversion
+- Includes: Hero carousel, featured products, latest posts
+
+**page--product.html (Product Wrapper - Variant):**
+- Used by: Product detail pages (wraps node--product.html)
+- Contains: Same header/footer as page.html
+- Purpose: Product pages with product-specific components
+- Includes: Related products, product catalog, comparison
 
 **node--post.html (Blog Content):**
 - Wrapped by: page.html
-- Contains: Post title, date, content, related posts
+- Layout: `layout: page`
+- Contains: Post title, date, content, author
 - Purpose: Blog post content layout
+- Includes: NONE (pure content)
 
 **node--product.html (Product Content):**
-- Wrapped by: page.html (same as posts!)
-- Contains: Product title, image, price, specs, product list
+- Wrapped by: page--product.html (NOT page.html!)
+- Layout: `layout: page--product`
+- Contains: Product title, image, price, specs
 - Purpose: Product detail content layout
+- Includes: NONE (pure entity, includes in page wrapper)
 
 **node--post-with-product.html (Hybrid Content):**
 - Wrapped by: page.html (same wrapper!)
 - Contains: Post content + embedded product catalog
 - Purpose: Blog post with product recommendations
+
+---
+
+### Shared Schema Architecture
+
+#### Problem: Schema Duplication
+
+When same entity (e.g., Product) appears in multiple places, we get duplicate schema code:
+- `node--product.html` needs Product schema
+- `block--product.html` needs Product schema
+- `/product.html` listing needs ItemList with Product schemas
+
+**Solution:** Shared Schema Includes
+
+**Create:** `_includes/schema--product.html`
+```liquid
+{% comment %}
+  Shared Product Schema
+  Used by: node--product.html, block--product.html, block--product-list.html
+{% endcomment %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ include.product.title }}",
+  "description": "{{ include.product.description | strip_html | escape }}",
+  "image": "{{ include.product.image | absolute_url }}",
+  "url": "{{ include.product.url | absolute_url }}",
+  "sku": "{{ include.product.sku }}",
+  "offers": { ... },
+  "aggregateRating": { ... }
+}
+</script>
+```
+
+**Usage:**
+
+In `node--product.html`:
+```liquid
+---
+layout: page--product
+---
+{% include schema--product.html product=page %}
+<!-- Product detail HTML -->
+```
+
+In `block--product.html`:
+```liquid
+{% include schema--product.html product=include.product %}
+<!-- Product card HTML -->
+```
+
+In `block--product-list.html`:
+```liquid
+<script type="application/ld+json">
+{
+  "@type": "ItemList",
+  "itemListElement": [
+    {% for product in site.products %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {% include schema--product.html product=product raw=true %}
+    }
+    {% endfor %}
+  ]
+}
+</script>
+```
+
+**Benefits:**
+✅ Single source of truth for Product schema
+✅ No duplication - update once, applies everywhere
+✅ Consistent schema across all contexts
+✅ Easier to maintain and debug
+
+**Shared Schemas to Create:**
+- `schema--product.html` - Product entity schema
+- `schema--article.html` - BlogPosting/Article schema
+- `schema--organization.html` - Business/Organization schema
+- `schema--breadcrumb.html` - BreadcrumbList schema
 
 ---
 
@@ -442,12 +568,14 @@ block--card--link.html                 # Link card (terdekat)
 - [ ] Backup current layouts (git commit before migration)
 - [ ] Rename `default.html` → `page.html` (page wrapper)
 - [ ] Create `page--front.html` (homepage wrapper - copy from page.html, customize for homepage)
+- [ ] Create `page--product.html` (product wrapper - copy from page.html, add product-specific includes)
 - [ ] Create `node.html` (base content template - copy from page.html, strip wrapper)
 - [ ] Rename `post.html` → `node--post.html` (content type)
 - [ ] Rename `post-with-products.html` → `node--post-with-product.html` (content type)
 - [ ] Rename `product.html` → `node--product.html` (content type)
 - [ ] Update all frontmatter `layout:` references in content files
 - [ ] Update homepage (index.html/index.md) to use `layout: page--front`
+- [ ] Update product pages to use `layout: page--product`
 - [ ] Test build
 - [ ] Commit: "Migrate layouts to Drupal naming convention"
 
@@ -460,6 +588,9 @@ git mv default.html page.html
 
 # Create homepage wrapper (will need manual editing)
 cp page.html page--front.html
+
+# Create product wrapper (will need manual editing for includes)
+cp page.html page--product.html
 
 # Create base node template (will need manual editing)
 cp page.html node.html
@@ -478,11 +609,13 @@ grep -r "layout: post" _posts/
 grep -r "layout: post-with-products" _post_with_product/
 grep -r "layout: product" _products/
 
-# Update references (content types use node--, not page--)
+# Update references
+# - Posts use node-- templates (wrapped by page.html)
+# - Products use page--product wrapper (which wraps node--product.html internally)
 sed -i 's/layout: default/layout: page/g' {files}
 sed -i 's/layout: post$/layout: node--post/g' {files}
 sed -i 's/layout: post-with-products/layout: node--post-with-product/g' {files}
-sed -i 's/layout: product/layout: node--product/g' {files}
+sed -i 's/layout: product/layout: page--product/g' {files}  # Products use page wrapper variant!
 ```
 
 **Manual Steps for page--front.html:**
@@ -493,6 +626,31 @@ After creating page--front.html, customize it for homepage:
 4. Modify footer (expanded with more info)
 5. Adjust main layout (full-width, no sidebar)
 6. This will be used ONLY by homepage (index.html/index.md)
+
+**Manual Steps for page--product.html:**
+After creating page--product.html, add product-specific includes:
+1. Keep same header/footer as page.html (site structure stays consistent)
+2. Change `{{ content }}` section to include product-specific components:
+   ```liquid
+   <main class="main-content">
+     {{ content }}  <!-- Renders node--product.html -->
+
+     <!-- Product-specific includes -->
+     <div class="row mt-5">
+       <div class="col-12">
+         {% include block--related-product--by-node.html %}
+       </div>
+     </div>
+
+     <div class="row mt-5">
+       <div class="col-12">
+         {% include block--product-list.html %}
+       </div>
+     </div>
+   </main>
+   ```
+3. This wrapper will be used by ALL product pages (_products/*.md)
+4. Keeps node--product.html pure (entity only, no includes)
 
 **Manual Steps for node.html:**
 After creating node.html, edit it to:
@@ -509,7 +667,7 @@ After creating node.html, edit it to:
 - [ ] Homepage (`index.html` or `index.md`) frontmatter → should use `layout: page--front`
 - [ ] `_posts/*.md` frontmatter → should use `layout: node--post`
 - [ ] `_post_with_product/*.md` frontmatter → should use `layout: node--post-with-product`
-- [ ] `_products/*.md` frontmatter → should use `layout: node--product`
+- [ ] `_products/*.md` frontmatter → should use `layout: page--product` (wrapper, not node!)
 - [ ] Static pages (about, contact, etc.) → should use `layout: page` (if they need wrapper)
 - [ ] Any other collections
 - [ ] Documentation/README
@@ -524,7 +682,9 @@ grep -r "layout: post$" . --exclude-dir=_site
 
 # Should find NEW references
 grep -r "layout: page" . --exclude-dir=_site
-grep -r "layout: node--" . --exclude-dir=_site
+grep -r "layout: page--front" . --exclude-dir=_site  # Homepage
+grep -r "layout: page--product" . --exclude-dir=_site  # Products
+grep -r "layout: node--" . --exclude-dir=_site  # Content types
 ```
 
 ---
@@ -699,7 +859,7 @@ _includes/whatsapp-button.html → block--cta--whatsapp.html
   - [ ] Homepage (uses page--front.html wrapper - special layout)
   - [ ] Blog posts (uses node--post.html wrapped by page.html)
   - [ ] Blog with products (uses node--post-with-product.html wrapped by page.html)
-  - [ ] Product pages (uses node--product.html wrapped by page.html)
+  - [ ] Product pages (uses node--product.html wrapped by page--product.html)
   - [ ] Static pages (uses page.html wrapper directly if no node template)
 - [ ] Verify all blocks render correctly
 - [ ] Check schema.org markup intact
@@ -776,6 +936,7 @@ grep -r "product-list" . --exclude-dir=_site
 |----------|----------|---------------|
 | `_layouts/default.html` | `_layouts/page.html` | Page wrapper (base) |
 | *(new)* | `_layouts/page--front.html` | Page wrapper (homepage) |
+| *(new)* | `_layouts/page--product.html` | Page wrapper (products) |
 | *(new)* | `_layouts/node.html` | Content template (base) |
 | `_layouts/post.html` | `_layouts/node--post.html` | Blog post content |
 | `_layouts/post-with-products.html` | `_layouts/node--post-with-product.html` | Hybrid post content |
@@ -899,14 +1060,18 @@ ls _includes/block--carousel*
 - [ ] Page wrapper renamed: `default.html` → `page.html`
 - [ ] Homepage wrapper created: `page--front.html`
 - [ ] Homepage (index.html/index.md) uses `layout: page--front`
+- [ ] Product wrapper created: `page--product.html` with product-specific includes
+- [ ] Product pages (_products/*.md) use `layout: page--product`
 - [ ] Base node template created: `node.html`
 - [ ] All content templates renamed to `node--*.html` pattern
 - [ ] All blocks renamed to `block--*.html` pattern
 - [ ] No old naming references remain in codebase
-- [ ] All pages render correctly (including homepage with new wrapper)
+- [ ] All pages render correctly (including homepage and products with new wrappers)
 - [ ] All includes found
 - [ ] Three-tier hierarchy works: page > node > block
-- [ ] Schema.org markup intact
+- [ ] Node templates are pure entities (no includes)
+- [ ] Page wrappers contain page-type-specific includes
+- [ ] Schema.org markup intact (no duplication)
 - [ ] Build completes without errors
 - [ ] Google Rich Results Test passes
 - [ ] Documentation updated
@@ -928,8 +1093,12 @@ ls _includes/block--carousel*
 
 **Revision Notes:**
 - Added `page--front.html` for homepage wrapper (special layout)
-- Explained why homepage needs `page--front.html` but products don't need `page--product.html`
+- Added `page--product.html` for product wrapper (includes separation)
+- Corrected architecture: Products NEED page--product.html for page-type-specific includes
+- Architecture principle: Node templates = pure entities (no includes), Page wrappers = includes container
 - Added decision matrix for when to use `page--*` vs `node--*` vs `block--*`
+- Added shared schema architecture to prevent duplication
 - Included real examples from this site showing current structure
-- Updated migration plan to include homepage wrapper creation
-- Updated success criteria to verify homepage wrapper implementation
+- Updated migration plan to include both homepage and product wrapper creation
+- Updated success criteria to verify proper separation of concerns
+- Fixed sed commands to use `layout: page--product` for products (not node--product)
