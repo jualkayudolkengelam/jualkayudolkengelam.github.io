@@ -60,7 +60,11 @@ Note: Product-specific includes are here, NOT in node--product.html!
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'id' }}">
 {% include head.html %}
+
 <body>
+  <!-- Combined Product Page Schema (WebPage + Breadcrumb + Product in @graph) -->
+  {% include schema--product-page.html product=page %}
+
   {% include header.html %}
 
   <main class="main-content">
