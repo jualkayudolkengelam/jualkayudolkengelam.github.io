@@ -1,0 +1,86 @@
+{% comment %}
+============================================================================
+Page Wrapper: Product Pages (page--product.html)
+============================================================================
+
+@file        page--product.html
+@path        _layouts/page--product.html
+@type        Page (wrapper - variant)
+@variant     product (product detail pages)
+@description Product page wrapper with product-specific includes
+@author      arisciwek
+
+Drupal-style naming: page--product.html (variant of page.html)
+
+This is the product page wrapper, created to separate product-specific
+includes from the pure entity content (node--product.html).
+
+Architecture Principle:
+- Node templates = Pure entity content (no includes)
+- Page wrappers = Container for page-type-specific includes
+
+Related templates:
+- page.html (base page wrapper)
+- node--product.html (product entity content)
+
+Used by:
+- _products/*.md (all product pages)
+
+Site Structure:
+- HTML doctype and lang attribute
+- head.html (meta tags, CSS, scripts)
+- header.html (logo, navigation menu)
+- main.main-content:
+  - {{ content }} renders node--product.html (product entity)
+  - block--related-product--by-node.html (related products)
+  - block--product-list.html (full product catalog)
+- footer.html (site footer with business info)
+- block--cta--whatsapp.html (floating WhatsApp button)
+
+Usage:
+Set in node--product.html frontmatter:
+  ---
+  layout: page--product
+  ---
+
+Hierarchy:
+_products/kayu-dolken-6-8cm.md
+└── node--product.html (layout: page--product)
+    └── page--product.html (this file - product wrapper)
+        ├── header.html
+        ├── {{ content }} renders node--product.html
+        ├── block--related-product--by-node.html
+        ├── block--product-list.html
+        └── footer.html
+
+Note: Product-specific includes are here, NOT in node--product.html!
+
+============================================================================
+{% endcomment %}
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'id' }}">
+{% include head.html %}
+<body>
+  {% include header.html %}
+
+  <main class="main-content">
+    {{ content }}
+
+    <!-- Product-specific includes -->
+    <div class="row mt-5">
+      <div class="col-12">
+        {% include block--related-product--by-node.html %}
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-12">
+        {% include block--product-list.html %}
+      </div>
+    </div>
+  </main>
+
+  {% include footer.html %}
+  {% include block--cta--whatsapp.html %}
+</body>
+</html>
