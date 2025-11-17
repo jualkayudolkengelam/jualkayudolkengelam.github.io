@@ -1,6 +1,71 @@
 ---
 layout: page
 ---
+{% comment %}
+============================================================================
+Content Template: Blog Post with Products (node--post-with-product.html)
+============================================================================
+
+@file        node--post-with-product.html
+@path        _layouts/node--post-with-product.html
+@type        Node (content template - variant)
+@variant     post-with-product (hybrid posts)
+@description Hybrid content template for blog posts with embedded product catalog
+@author      arisciwek
+
+Drupal-style naming: node--post-with-product.html (variant of node.html)
+
+This template wraps in page.html and provides hybrid structure combining
+blog post content with product recommendations/catalog.
+
+Related templates:
+- node.html (base content template - fallback)
+- node--page.html (static page content)
+- node--post.html (blog post only)
+- node--product.html (product detail only)
+
+Used by:
+- _post_with_product/*.md (hybrid blog post files)
+- Articles about products with embedded catalog (e.g., location-based posts)
+
+Features:
+- Breadcrumb navigation
+- Hero intro card with gradient styling
+- Blog post content rendering
+- Embedded product catalog (full or filtered)
+- Engagement metrics (likes, comments, shares)
+- Related content/articles section
+- Schema.org BlogPosting + ItemList markup
+
+Styling:
+- Bootstrap classes: container, row, col-lg-8, col-lg-4, py-5
+- Hero card with gradient background
+- Sidebar layout (content | related products)
+- Responsive grid for mobile collapse
+
+Data Expected in Frontmatter:
+  ---
+  layout: node--post-with-product
+  title: Blog Post Title
+  description: Post description
+  date: 2025-11-17
+  author: Author Name
+  likes: 127
+  comments: 34
+  shares: 18
+  location: Jakarta Utara (optional, for filtering)
+  ---
+
+Hierarchy:
+page.html (wrapper with header/footer)
+└── node--post-with-product.html (this file - hybrid post)
+    └── {{ content }} (blog content from _post_with_product/*.md)
+        ├── Hero intro card with engagement stats
+        ├── Blog post body content
+        └── {% include block--product-list.html %} (product catalog)
+
+============================================================================
+{% endcomment %}
 
 <!-- Blog Post with Product List -->
 <div class="container py-5">

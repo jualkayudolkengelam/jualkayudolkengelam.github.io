@@ -1,3 +1,64 @@
+{% comment %}
+============================================================================
+Page Wrapper: Homepage (page--front.html)
+============================================================================
+
+@file        page--front.html
+@path        _layouts/page--front.html
+@type        Page (wrapper - variant)
+@variant     front (homepage)
+@description Homepage wrapper with potential for special layout customization
+@author      arisciwek
+
+Drupal-style naming: page--front.html (variant of page.html)
+
+This is the homepage wrapper, created to allow different site structure
+for the homepage compared to other pages (e.g., hero section, different
+header style, expanded footer, full-width layouts).
+
+Related templates:
+- page.html (base page wrapper)
+
+Used by:
+- /index.html (homepage only)
+
+Current Status:
+Currently identical to page.html, but ready for homepage-specific customization.
+
+Future Customization Options:
+- Add class="homepage" to body tag
+- Transparent/fixed header for hero section
+- Full-width hero section before main content
+- Expanded footer with newsletter signup
+- Different navigation style
+- No sidebar layout
+
+Site Structure (Current):
+- HTML doctype and lang attribute
+- head.html (meta tags, CSS, scripts)
+- header.html (logo, navigation menu)
+- main.main-content (renders {{ content }} - homepage content)
+- footer.html (site footer with business info)
+- block--cta--whatsapp.html (floating WhatsApp button)
+
+Usage:
+Set in /index.html frontmatter:
+  ---
+  layout: page--front
+  title: Homepage Title
+  ---
+
+Hierarchy:
+page--front.html (this file - homepage wrapper)
+└── {{ content }} renders index.html content directly
+    ├── Hero carousel
+    ├── Featured products
+    └── Latest blog posts
+
+Note: Homepage does NOT use node template - renders content directly!
+
+============================================================================
+{% endcomment %}
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'id' }}">
 {% include head.html %}

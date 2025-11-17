@@ -1,6 +1,72 @@
 ---
 layout: page
 ---
+{% comment %}
+============================================================================
+Content Template: Product Detail (node--product.html)
+============================================================================
+
+@file        node--product.html
+@path        _layouts/node--product.html
+@type        Node (content template - variant)
+@variant     product (product details)
+@description Content template for individual product detail pages
+@author      arisciwek
+
+Drupal-style naming: node--product.html (variant of node.html)
+
+This template wraps in page.html and provides product detail structure with
+image gallery, specifications, pricing, and related products.
+
+Related templates:
+- node.html (base content template - fallback)
+- node--page.html (static page content)
+- node--post.html (blog post content)
+- node--post-with-product.html (hybrid post with products)
+
+Used by:
+- _products/*.md (all product markdown files)
+- Individual product detail pages (e.g., /products/kayu-dolken-6-8cm/)
+
+Features:
+- Product image gallery with carousel
+- Product specifications (diameter, length, weight)
+- Pricing information with currency
+- Rating and review count display
+- Related products section
+- Schema.org Product markup (embedded in content)
+
+Styling:
+- Bootstrap classes: container, row, col-lg-6, py-5
+- Two-column layout (image | details)
+- Responsive grid for mobile/tablet
+- Custom classes: product-image, product-details, product-specs
+
+Data Expected in Frontmatter:
+  ---
+  layout: node--product
+  title: Product Name
+  description: Product description
+  diameter: "6-8 cm"
+  length: "4 meter"
+  weight: "20-25 kg"
+  price: 28000
+  currency: IDR
+  rating: 4.8
+  reviewCount: 156
+  images:
+    - /assets/images/product-001.jpeg
+    - /assets/images/product-002.jpeg
+  ---
+
+Hierarchy:
+page.html (wrapper with header/footer)
+└── node--product.html (this file - product detail)
+    └── {{ content }} (product description from _products/*.md)
+        └── {% include block--product-list.html %} (related products)
+
+============================================================================
+{% endcomment %}
 
 <!-- Product Detail Page -->
 <div class="container py-5">

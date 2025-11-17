@@ -1,6 +1,61 @@
 ---
 layout: page
 ---
+{% comment %}
+============================================================================
+Content Template: Blog Post (node--post.html)
+============================================================================
+
+@file        node--post.html
+@path        _layouts/node--post.html
+@type        Node (content template - variant)
+@variant     post (blog posts)
+@description Content template for blog post articles with metadata and engagement
+@author      arisciwek
+
+Drupal-style naming: node--post.html (variant of node.html)
+
+This template wraps in page.html and provides blog post structure with
+article metadata (date, author), engagement stats, and related content.
+
+Related templates:
+- node.html (base content template - fallback)
+- node--page.html (static page content)
+- node--product.html (product detail content)
+- node--post-with-product.html (hybrid post with products)
+
+Used by:
+- _posts/*.md (all blog post markdown files)
+- Standard blog articles without product recommendations
+
+Features:
+- Article header with title, date, author
+- Engagement metrics (if available)
+- Blog post content rendering
+- Related articles section (optional)
+- Schema.org Article markup (embedded in content)
+
+Styling:
+- Bootstrap classes: container, row, col-lg-10, col-xl-9, py-5
+- Centered narrow column for better readability
+- Custom classes: post-content, post-header, post-body
+
+Usage:
+Set in frontmatter of _posts/*.md:
+  ---
+  layout: node--post
+  title: Blog Post Title
+  date: 2025-11-17
+  author: Author Name
+  ---
+
+Hierarchy:
+page.html (wrapper with header/footer)
+└── node--post.html (this file - blog post content)
+    └── {{ content }} (markdown content from _posts/*.md)
+
+============================================================================
+{% endcomment %}
 
 <article class="post-content py-5">
   <div class="container">

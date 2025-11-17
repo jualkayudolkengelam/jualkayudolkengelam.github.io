@@ -1,6 +1,60 @@
 ---
 layout: page
 ---
+{% comment %}
+============================================================================
+Content Template: Static Page (node--page.html)
+============================================================================
+
+@file        node--page.html
+@path        _layouts/node--page.html
+@type        Node (content template - variant)
+@variant     page (static pages)
+@description Content template for static pages with Bootstrap styling
+@author      arisciwek
+
+Drupal-style naming: node--page.html (variant of node.html)
+
+This template wraps in page.html and provides Bootstrap container/grid
+structure for static pages like product listing, about, contact, etc.
+
+Related templates:
+- node.html (base content template - fallback)
+- node--post.html (blog post content)
+- node--product.html (product detail content)
+- node--post-with-product.html (hybrid post content)
+
+Used by:
+- /product.html (product listing page)
+- /tentang/ or /about/ (about page)
+- /kontak/ or /contact/ (contact page)
+- Other static pages requiring Bootstrap layout
+
+Styling:
+- Bootstrap classes: container, row, col-lg-12, py-5
+- Custom classes: page-content, page-header, page-title, text-wood
+- Responsive grid layout
+- Vertical padding (py-5)
+
+Difference from node.html:
+- node.html = Generic, no Bootstrap container
+- node--page.html = Bootstrap styled, container/row/col structure
+
+Usage:
+Set in frontmatter:
+  ---
+  layout: node--page
+  title: Page Title
+  description: Page description
+  ---
+
+Hierarchy:
+page.html (wrapper with header/footer)
+└── node--page.html (this file - static page content)
+    └── {{ content }} (actual page content from .html or .md file)
+
+============================================================================
+{% endcomment %}
 
 <div class="page-content py-5">
   <div class="container">
