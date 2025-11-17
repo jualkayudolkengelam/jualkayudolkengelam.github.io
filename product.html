@@ -6,107 +6,6 @@ keywords: harga kayu dolken gelam, jual dolken gelam 4 meter, dolken gelam murah
 image: /assets/images/jual-kayu-dolken-gelam-product-page-001.jpeg
 ---
 
-<!-- Schema.org ItemList + Product -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Daftar Produk Kayu Dolken Gelam",
-  "description": "Daftar lengkap kayu dolken gelam panjang 4 meter dengan berbagai ukuran diameter. Harga kompetitif langsung dari supplier.",
-  "url": "{{ site.url }}{{ site.baseurl }}/product/",
-  "numberOfItems": {{ site.products.size }},
-  "itemListElement": [
-    {% assign sorted_products = site.products | sort: "price" %}
-    {% for product in sorted_products %}
-    {
-      "@type": "ListItem",
-      "position": {{ forloop.index }},
-      "item": {
-        "@type": "Product",
-        "name": "{{ product.title }}",
-        "description": "{{ product.description | strip_html | strip_newlines | escape }}",
-        "image": "{{ site.url }}{{ site.baseurl }}{{ product.image }}",
-        "url": "{{ site.url }}{{ site.baseurl }}{{ product.url }}",
-        "sku": "DOLKEN-{{ product.diameter | replace: ' ', '' | upcase }}",
-        "brand": {
-          "@type": "Brand",
-          "name": "{{ site.business.name }}"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "{{ product.price }}",
-          "priceCurrency": "IDR",
-          "availability": "https://schema.org/InStock",
-          "url": "{{ site.url }}{{ site.baseurl }}{{ product.url }}",
-          "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
-          "seller": {
-            "@type": "Organization",
-            "name": "{{ site.business.name }}"
-          },
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0",
-              "currency": "IDR"
-            },
-            "shippingDestination": {
-              "@type": "DefinedRegion",
-              "addressCountry": "ID"
-            },
-            "deliveryTime": {
-              "@type": "ShippingDeliveryTime",
-              "handlingTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 1,
-                "maxValue": 2,
-                "unitCode": "DAY"
-              },
-              "transitTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 3,
-                "maxValue": 7,
-                "unitCode": "DAY"
-              }
-            }
-          },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "ID",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 7,
-            "returnMethod": "https://schema.org/ReturnByMail",
-            "returnFees": "https://schema.org/FreeReturn"
-          }
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "{{ product.rating | default: 4.5 }}",
-          "reviewCount": "{{ product.review_count | default: 45 }}",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "category": "Kayu Dolken Gelam",
-        "material": "Kayu Gelam",
-        "additionalProperty": [
-          {
-            "@type": "PropertyValue",
-            "name": "Diameter",
-            "value": "{{ product.diameter }}"
-          },
-          {
-            "@type": "PropertyValue",
-            "name": "Panjang",
-            "value": "4 Meter"
-          }
-        ]
-      }
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
-}
-</script>
-
 <!-- Product Intro -->
 <div class="row mb-5">
   <div class="col-lg-8 mx-auto text-center">
@@ -128,6 +27,9 @@ image: /assets/images/jual-kayu-dolken-gelam-product-page-001.jpeg
     </div>
   </div>
 </div>
+
+<!-- Product List Component (with Schema) -->
+{% include block--product-list.html %}
 
 <!-- Features Grid -->
 <div class="row g-4 mb-5">
