@@ -1,0 +1,128 @@
+{% comment %}
+============================================================================
+Social Proof Block - Customer Confidence Builder
+============================================================================
+
+@file        block--social-proof.html
+@path        _includes/block--social-proof.html
+@type        Block (component)
+@description Social proof statistics to build credibility and trust
+@author      arisciwek
+
+Displays key metrics and statistics that demonstrate business credibility
+and customer satisfaction. Creates FOMO (Fear of Missing Out) effect.
+
+Features:
+---------
+- 3 key metrics in responsive grid
+- Eye-catching statistics with icons
+- Lightweight card design
+- Fully responsive layout
+- Configurable via parameters
+
+Parameters:
+-----------
+- projects: (optional) Number of completed projects (default: "1000+")
+- rating: (optional) Average rating (default: "4.8★")
+- reviews: (optional) Number of positive reviews (default: "500+")
+- title: (optional) Card title (default: "Dipercaya Ribuan Pelanggan")
+- variant: (optional) Card style: "default", "success", "primary" (default: "default")
+
+Usage:
+------
+Default (with default values):
+{% include block--social-proof.html %}
+
+Custom values:
+{% include block--social-proof.html
+   projects="2000+"
+   rating="4.9★"
+   reviews="1000+"
+   title="Terpercaya Sejak 2015"
+   variant="success"
+%}
+
+Compact version (without title):
+{% include block--social-proof.html title="" %}
+
+Used in:
+--------
+- Product detail pages (below carousel/trust badges)
+- Landing pages (hero section)
+- About page (company credibility)
+- Blog posts (sidebar)
+- Homepage (testimonial section)
+
+Styling:
+--------
+- Bootstrap 5 card component
+- Success color for metrics
+- Responsive 3-column grid
+- Text-center alignment
+- Light background for subtle emphasis
+
+Benefits:
+---------
+- Builds trust through social proof
+- Demonstrates business credibility
+- Increases conversion rate
+- Reduces buyer hesitation
+- Creates urgency (FOMO effect)
+
+============================================================================
+{% endcomment %}
+
+{% assign projects_count = include.projects | default: "1000+" %}
+{% assign rating_value = include.rating | default: "4.8★" %}
+{% assign reviews_count = include.reviews | default: "500+" %}
+{% assign card_title = include.title | default: "Dipercaya Ribuan Pelanggan" %}
+{% assign card_variant = include.variant | default: "default" %}
+
+{% comment %} Determine card background class {% endcomment %}
+{% case card_variant %}
+  {% when "success" %}
+    {% assign bg_class = "bg-success-subtle" %}
+  {% when "primary" %}
+    {% assign bg_class = "bg-primary-subtle" %}
+  {% else %}
+    {% assign bg_class = "bg-light" %}
+{% endcase %}
+
+<!-- Social Proof Block -->
+<div class="social-proof-block mt-4">
+  <div class="card border-0 {{ bg_class }}">
+    <div class="card-body text-center py-4">
+      {% if card_title != "" %}
+      <h5 class="text-wood mb-4">
+        <i class="bi bi-people-fill me-2"></i>{{ card_title }}
+      </h5>
+      {% endif %}
+
+      <div class="row g-3">
+        <!-- Metric 1: Completed Projects -->
+        <div class="col-4">
+          <div class="metric-item">
+            <h3 class="text-success mb-1 fw-bold">{{ projects_count }}</h3>
+            <small class="text-muted d-block">Proyek Selesai</small>
+          </div>
+        </div>
+
+        <!-- Metric 2: Average Rating -->
+        <div class="col-4">
+          <div class="metric-item">
+            <h3 class="text-success mb-1 fw-bold">{{ rating_value }}</h3>
+            <small class="text-muted d-block">Rating Rata-rata</small>
+          </div>
+        </div>
+
+        <!-- Metric 3: Positive Reviews -->
+        <div class="col-4">
+          <div class="metric-item">
+            <h3 class="text-success mb-1 fw-bold">{{ reviews_count }}</h3>
+            <small class="text-muted d-block">Review Positif</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
