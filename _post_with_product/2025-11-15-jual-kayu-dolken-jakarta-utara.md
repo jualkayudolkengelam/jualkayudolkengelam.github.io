@@ -22,7 +22,7 @@ share_count: 2
   <div class="card-body text-white py-4">
     <div class="row align-items-center">
       <div class="col-lg-8">
-        <h2 class="h3 fw-bold mb-3">
+        <h2 class="h2 fw-bold mb-3">
           <i class="bi bi-geo-alt-fill me-2"></i>Cari Kayu Dolken di Jakarta Utara?
         </h2>
         <p class="mb-3" style="opacity: 0.95; font-size: 1.05rem;">
@@ -52,7 +52,7 @@ share_count: 2
       <div class="col-lg-4 text-center mt-4 mt-lg-0">
         <div class="bg-white p-4 rounded shadow-lg">
           <i class="bi bi-telephone-fill text-danger mb-3" style="font-size: 3rem;"></i>
-          <h4 class="h5 fw-bold text-danger mb-2">Hubungi Kami Sekarang!</h4>
+          <h3 class="h3 fw-bold text-danger mb-2">Hubungi Kami Sekarang!</h3>
           <p class="h3 fw-bold text-dark mb-3">081311400177</p>
           <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20untuk%20Jakarta%20Utara"
              class="btn btn-success btn-lg w-100 shadow-sm"
@@ -72,7 +72,7 @@ share_count: 2
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);">
       <i class="bi bi-patch-check-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h3 class="h4 mb-0 fw-bold text-white">Mengapa Memilih Kami?</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Mengapa Memilih Kami?</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-stars me-1"></i>
         Supplier terpercaya dengan layanan terbaik di Jakarta Utara
@@ -89,7 +89,7 @@ share_count: 2
         <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-truck text-success" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2">Pengiriman Gratis Jakarta Utara</h4>
+        <h4 class="h4 text-wood mb-2">Pengiriman Gratis Jakarta Utara</h4>
         <p class="small text-muted mb-0">Gratis ongkir untuk area Jakarta Utara, hemat biaya pengiriman untuk proyek Anda</p>
       </div>
     </div>
@@ -101,7 +101,7 @@ share_count: 2
         <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-award-fill text-warning" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2">Kualitas Premium Grade A</h4>
+        <h4 class="h4 text-wood mb-2">Kualitas Premium Grade A</h4>
         <p class="small text-muted mb-0">Kayu gelam asli premium, tahan rayap alami dan tahan cuaca ekstrem, cocok untuk iklim Jakarta Utara</p>
       </div>
     </div>
@@ -113,7 +113,7 @@ share_count: 2
         <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-cash-coin text-danger" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2">Harga Terbaik</h4>
+        <h4 class="h4 text-wood mb-2">Harga Terbaik</h4>
         <p class="small text-muted mb-0">Langsung dari supplier, harga mulai Rp 15.000/batang tanpa markup perantara</p>
       </div>
     </div>
@@ -125,7 +125,7 @@ share_count: 2
         <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-shield-check text-primary" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2">COD Tersedia</h4>
+        <h4 class="h4 text-wood mb-2">COD Tersedia</h4>
         <p class="small text-muted mb-0">Bayar setelah barang sampai dan Anda cek kualitasnya, aman dan terpercaya</p>
       </div>
     </div>
@@ -137,7 +137,7 @@ share_count: 2
         <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-boxes text-info" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2">Stok Selalu Ready</h4>
+        <h4 class="h4 text-wood mb-2">Stok Selalu Ready</h4>
         <p class="small text-muted mb-0">Tersedia berbagai ukuran diameter 2-3 cm hingga 10-12 cm untuk semua kebutuhan proyek</p>
       </div>
     </div>
@@ -149,7 +149,7 @@ share_count: 2
         <div class="bg-secondary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-headset text-secondary" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2">Fast Response 24/7</h4>
+        <h4 class="h4 text-wood mb-2">Fast Response 24/7</h4>
         <p class="small text-muted mb-0">Tim kami siap melayani Anda kapan saja untuk konsultasi gratis dan pemesanan cepat</p>
       </div>
     </div>
@@ -158,13 +158,33 @@ share_count: 2
 
 ---
 
-## 💰 Daftar Harga Kayu Dolken Jakarta Utara
-
-Berikut daftar lengkap harga kayu dolken gelam untuk area Jakarta Utara dengan pengiriman gratis:
+<div class="my-5">
+  <div class="card border-0 shadow-lg">
+    <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
+      <i class="bi bi-tag-fill mb-2" style="font-size: 2.5rem;"></i>
+      <h2 class="h2 mb-0 fw-bold text-white">💰 Daftar Harga Kayu Dolken Jakarta Utara</h2>
+      <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+        <i class="bi bi-truck me-1"></i>
+        Gratis ongkir ke seluruh wilayah Jakarta Utara
+        <i class="bi bi-truck ms-1"></i>
+      </p>
+    </div>
+  </div>
+</div>
 
 {% include block--product-list.html %}
 
-**📞 Hubungi 081311400177 untuk info harga terbaru dan penawaran khusus!**
+<div class="my-4">
+  <div class="card border-0 shadow-sm">
+    <div class="card-body text-center py-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+      <p class="mb-0 text-white fw-bold">
+        <i class="bi bi-telephone-fill me-2"></i>
+        📞 Hubungi 081311400177 untuk info harga terbaru dan penawaran khusus!
+        <i class="bi bi-telephone-fill ms-2"></i>
+      </p>
+    </div>
+  </div>
+</div>
 
 ---
 
@@ -172,7 +192,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Jakarta Utara dengan p
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
       <i class="bi bi-geo-alt-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h3 class="h4 mb-0 fw-bold text-white">Area Pengiriman Jakarta Utara</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Area Pengiriman Jakarta Utara</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-truck me-1"></i>
         Gratis ongkir ke seluruh wilayah Jakarta Utara
@@ -325,7 +345,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Jakarta Utara dengan p
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
       <i class="bi bi-shield-shaded mb-2" style="font-size: 2.5rem;"></i>
-      <h3 class="h4 mb-0 fw-bold text-white">Keunggulan Kayu Dolken Gelam</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Keunggulan Kayu Dolken Gelam</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-tree me-1"></i>
         Pilihan terbaik untuk konstruksi dan dekorasi di Jakarta Utara
@@ -417,7 +437,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Jakarta Utara dengan p
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);">
       <i class="bi bi-grid-3x3-gap-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h3 class="h4 mb-0 fw-bold text-white">Aplikasi Kayu Dolken Gelam</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Aplikasi Kayu Dolken Gelam</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-hammer me-1"></i>
         Berbagai kebutuhan konstruksi, dekorasi, dan landscaping
@@ -612,7 +632,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Jakarta Utara dengan p
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 50%, #be185d 100%);">
       <i class="bi bi-cart-check-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h3 class="h4 mb-0 fw-bold text-white">Cara Pemesanan Kayu Dolken Jakarta Utara</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Cara Pemesanan Kayu Dolken Jakarta Utara</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-telephone-fill me-1"></i>
         Hubungi: <strong>081311400177</strong> (Telepon / WhatsApp)
@@ -756,7 +776,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Jakarta Utara dengan p
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);">
       <i class="bi bi-file-earmark-check-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h3 class="h4 mb-0 fw-bold text-white">Studi Kasus Proyek Jakarta Utara</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Studi Kasus Proyek Jakarta Utara</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-briefcase me-1"></i>
         Proyek nyata yang telah kami kerjakan dengan hasil memuaskan
@@ -1006,7 +1026,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Jakarta Utara dengan p
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
       <i class="bi bi-chat-quote-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h3 class="h4 mb-0 fw-bold text-white">Testimoni Pelanggan Jakarta Utara</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Testimoni Pelanggan Jakarta Utara</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-star-fill me-1"></i>
         Kepuasan pelanggan adalah prioritas kami
@@ -1135,7 +1155,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Jakarta Utara dengan p
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
       <i class="bi bi-lightbulb-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h3 class="h4 mb-0 fw-bold text-white">Tips Memilih Ukuran Kayu Dolken</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Tips Memilih Ukuran Kayu Dolken</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-rulers me-1"></i>
         Panduan praktis memilih diameter yang tepat untuk proyek Anda
@@ -1283,7 +1303,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Jakarta Utara dengan p
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);">
       <i class="bi bi-patch-question-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h3 class="h4 mb-0 fw-bold text-white">FAQ Seputar Kayu Dolken Jakarta Utara</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">FAQ Seputar Kayu Dolken Jakarta Utara</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-question-circle me-1"></i>
         Pertanyaan yang sering ditanyakan seputar kayu dolken gelam
@@ -1415,7 +1435,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Jakarta Utara dengan p
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);">
       <i class="bi bi-building-fill-gear mb-2" style="font-size: 2.5rem;"></i>
-      <h3 class="h4 mb-0 fw-bold text-white">Tentang Jakarta Utara: Pusat Bisnis & Pelabuhan</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Tentang Jakarta Utara: Pusat Bisnis & Pelabuhan</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-geo-alt-fill me-1"></i>
         Wilayah strategis dengan sejarah panjang dan pertumbuhan pesat
@@ -1626,7 +1646,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Jakarta Utara dengan p
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);">
       <i class="bi bi-telephone-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h2 class="h3 mb-0 fw-bold text-white">Hubungi Kami Sekarang!</h2>
+      <h2 class="h2 mb-0 fw-bold text-white">Hubungi Kami Sekarang!</h2>
       <p class="mb-0 mt-2" style="opacity: 0.85;">
         <i class="bi bi-whatsapp me-1"></i>
         <strong style="font-size: 1.2rem;">Telepon / WhatsApp: 081311400177</strong>
