@@ -490,25 +490,37 @@ h4.h4 {
   .post-body h4,
   h4.h4 {
     font-size: 1.05rem !important;
-    display: block;
+    display: block !important;
     margin-bottom: 0.25rem;
+    width: 100%;
   }
 
   /* Force description text to next line on mobile */
   h4.h4 + p.small,
   h4.h4 ~ p.small {
-    display: block;
+    display: block !important;
     margin-left: 0 !important;
+    width: 100%;
   }
 
-  /* Make list items stack vertically on mobile */
+  /* Make list items with h4 stack vertically on mobile */
+  .card-body li,
   .post-body li {
-    flex-direction: column;
-    align-items: flex-start !important;
-  }
-
-  .post-body li .d-flex {
+    display: flex;
     flex-direction: column !important;
     align-items: flex-start !important;
+  }
+
+  /* Icon should stay inline with h4 but allow wrapping after */
+  .card-body li > i,
+  .post-body li > i {
+    margin-bottom: 0.25rem;
+  }
+
+  /* Remove left margin from description on mobile */
+  .card-body li p.ms-4,
+  .post-body li p.ms-4 {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
   }
 }
