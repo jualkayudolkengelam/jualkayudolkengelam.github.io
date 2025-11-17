@@ -473,6 +473,39 @@ h4.h4 {
   line-height: 1.4;
 }
 
+/* Desktop layout: h4 and description on separate lines */
+@media (min-width: 769px) {
+  .card-body li,
+  .post-body li {
+    display: flex;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+  }
+
+  /* Icon and h4 on first line */
+  .card-body li > i,
+  .post-body li > i {
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+  }
+
+  /* h4 stays inline with icon */
+  .card-body li h4.h4,
+  .post-body li h4.h4 {
+    display: inline !important;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Force description to next line */
+  h4.h4 + p.small,
+  h4.h4 ~ p.small {
+    display: block !important;
+    width: 100%;
+    margin-left: 1.75rem !important; /* Align with h4 text, accounting for icon width */
+    padding-left: 0 !important;
+  }
+}
+
 /* Ensure text wraps properly on mobile */
 @media (max-width: 768px) {
   .post-content {
