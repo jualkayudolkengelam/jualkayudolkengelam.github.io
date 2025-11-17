@@ -152,7 +152,7 @@
         <img src="{{ image | relative_url }}"
              class="d-block w-100 rounded"
              alt="{{ carousel_title }} - Foto {{ forloop.index }}"
-             loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+             loading="eager"
              style="max-height: {{ max_height }}; object-fit: cover;">
       </picture>
     </div>

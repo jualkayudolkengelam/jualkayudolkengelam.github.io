@@ -52,8 +52,18 @@ layout: default
       {% endif %}
     </header>
 
-    <!-- Featured Image -->
-    {% if page.image %}
+    <!-- Featured Image / Gallery Carousel -->
+    {% if page.images %}
+    <div class="mb-4">
+      {% include image-carousel.html
+         carousel_id="postCarousel"
+         images=page.images
+         title=page.title
+         gallery_name="Galeri Artikel"
+         max_height="500px"
+      %}
+    </div>
+    {% elsif page.image %}
     <div class="mb-4">
       <picture>
         <source srcset="{{ page.image | replace: '.jpeg', '.webp' | relative_url }}" type="image/webp">
@@ -124,3 +134,23 @@ layout: default
   }
 }
 </script>
+
+<!-- Initialize Carousel -->
+{% if page.images %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var carouselElement = document.getElementById('postCarousel');
+  if (carouselElement && typeof bootstrap !== 'undefined') {
+    // Initialize carousel manually
+    var carousel = new bootstrap.Carousel(carouselElement, {
+      interval: 3000,
+      ride: 'carousel',
+      pause: 'hover',
+      wrap: true,
+      keyboard: true,
+      touch: true
+    });
+  }
+});
+</script>
+{% endif %}
