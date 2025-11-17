@@ -1,344 +1,285 @@
-# Release Notes - v1.0.0
+# Release Notes - v1.0.1
 
-**Release Date:** 2025-11-16
+**Release Date:** 2025-11-17
 **Project:** Jual Kayu Dolken Gelam Website
 **Business:** Kayu Dolken Gelam - Amirudin Abdul Karim
+**Type:** Patch Release - Documentation & Architecture Planning
 
 ---
 
-## 🎉 Initial Release - Production Ready
+## 📋 Summary
 
-Kami dengan bangga mengumumkan peluncuran website **Jual Kayu Dolken Gelam v1.0.0** - website profesional untuk bisnis supplier kayu dolken gelam dengan fitur lengkap SEO, performa optimal, dan pengalaman pengguna yang modern.
+Version 1.0.1 adalah patch release yang fokus pada perencanaan arsitektur untuk meningkatkan maintainability dan scalability website melalui adopsi **Drupal-style naming convention** untuk Jekyll layouts dan components.
 
----
-
-## 🚀 Fitur Utama
-
-### 📦 **Katalog Produk Lengkap**
-- **5 Produk Kayu Dolken Gelam** dengan berbagai ukuran diameter:
-  - Kayu Dolken 2-3 cm (Rp 15.000/btg)
-  - Kayu Dolken 4-6 cm (Rp 20.000/btg)
-  - Kayu Dolken 6-8 cm (Rp 28.000/btg)
-  - Kayu Dolken 8-10 cm (Rp 35.000/btg)
-  - Kayu Dolken 10-12 cm (Rp 45.000/btg)
-- Setiap produk dilengkapi dengan:
-  - Foto produk berkualitas tinggi dengan format WebP
-  - Spesifikasi lengkap (diameter, panjang, berat)
-  - Harga transparan
-  - Rating dan review count
-  - Schema.org Product markup untuk SEO
-  - Related products dengan sistem rotasi berbasis node-id
-
-### 📝 **Blog dengan Engagement Metrics**
-- **4 Artikel Blog** dengan konten berkualitas:
-  - Jual Kayu Dolken Jakarta Utara
-  - Jual Kayu Dolken Semarang
-  - Aplikasi Kayu Dolken untuk Hotel dan Cafe
-  - Jual Kayu Dolken Terdekat
-- Fitur engagement metrics:
-  - Like count dengan ikon hati
-  - Comment count dengan ikon chat
-  - Share count dengan ikon share
-- Modern hero intro cards dengan gradient merah
-- Reusable link card component untuk artikel terkait
-- Schema.org BlogPosting dengan interactionStatistic
-
-### 🏠 **Homepage yang Menarik**
-- Hero section dengan carousel foto produk
-- Display rating produk di card
-- Rich content blog post cards dengan engagement stats
-- Breadcrumb navigation
-- Schema.org @graph dengan:
-  - BreadcrumbList untuk navigasi
-  - ItemList untuk produk
-  - CollectionPage untuk homepage
-
-### 📄 **Halaman Statis Lengkap**
-- **Tentang Kami** (`/tentang`):
-  - Informasi lengkap tentang bisnis
-  - Schema.org AboutPage + Organization
-  - Logo dan foto bisnis
-- **Kontak** (`/kontak`):
-  - Formulir kontak
-  - Informasi WhatsApp, telepon, email
-  - Google Maps embed
-  - Schema.org ContactPage + LocalBusiness
-- **Blog Listing** (`/blog`):
-  - Grid layout untuk semua artikel
-  - Filter dan sorting
-  - Schema.org CollectionPage + ItemList
-
-### 🎨 **Desain Modern & Responsif**
-- Bootstrap 5.3.0 untuk UI framework
-- Bootstrap Icons untuk ikon
-- Custom SCSS architecture dengan partials:
-  - `_variables.scss` untuk tema warna
-  - `_base.scss` untuk styling global
-  - `_components.scss` untuk komponen reusable
-  - `_layouts.scss` untuk layout-specific styles
-  - `_utilities.scss` untuk helper classes
-- Responsive design untuk mobile, tablet, desktop
-- Color scheme profesional:
-  - Primary wood color: `#8B4513`
-  - Gradient merah untuk hero sections
-  - Bootstrap 5 color system
+**Tidak ada perubahan pada kode production** - release ini hanya menambahkan dokumentasi perencanaan dan execution checklist.
 
 ---
 
-## ⚡ **Optimasi Performa**
+## 🎯 What's New
 
-### Core Web Vitals Optimization (Commit: effae5d)
-- **Preconnect & DNS Prefetch** untuk cdn.jsdelivr.net
-- **fetchpriority="high"** untuk critical CSS (Bootstrap & custom CSS)
-- **Deferred loading** untuk Bootstrap Icons (non-critical)
-- **LCP Image Preload** untuk post-with-products layout
-- **Explicit image dimensions** (width & height) untuk prevent CLS
-- **WebP image format** dengan JPEG fallback untuk semua gambar
+### 📝 **Documentation - Architecture Planning**
 
-### Hasil:
-- Target Performance Score: 90+ (dari baseline 49)
-- FCP (First Contentful Paint): Target <1.5s (dari 3.1s)
-- LCP (Largest Contentful Paint): Target <2.0s (dari 5.1s)
-- TBL (Total Blocking Time): Target <150ms (dari 960ms)
-- CLS (Cumulative Layout Shift): Target <0.05 (dari 0.136)
+#### TODO-1534: Drupal Naming Convention Migration (Planning)
+**File:** `TODO/TODO-1534-drupal-naming-convention-migration.md`
 
----
+Dokumen perencanaan komprehensif untuk migrasi naming convention:
 
-## 🔍 **SEO & Schema.org**
+**Current State (Inconsistent):**
+```
+_layouts/
+├── default.html
+├── post.html
+├── post-with-products.html
+└── product.html
 
-### Comprehensive Schema.org Implementation
-- **Product Schema** di setiap halaman produk:
-  - Product details dengan offers
-  - AggregateRating dengan reviewCount
-  - Brand, SKU, availability
-  - ItemList untuk related products (node-based rotation)
-- **BlogPosting Schema** di setiap artikel:
-  - Article metadata (headline, description, image)
-  - Author dan publisher information
-  - datePublished dan dateModified
-  - interactionStatistic (likes, comments, shares)
-- **LocalBusiness Schema** untuk halaman kontak
-- **Organization Schema** untuk halaman tentang
-- **CollectionPage + ItemList** untuk homepage dan blog listing
-- **BreadcrumbList** untuk navigasi SEO
-
-### Meta Tags Lengkap
-- Open Graph untuk Facebook sharing
-- Twitter Cards untuk Twitter sharing
-- Canonical URLs
-- Meta description dan keywords
-- og:image dengan fallback
-- Locale: id_ID (Indonesia)
-
-### Sitemap & Robots
-- Jekyll Sitemap plugin untuk auto-generated sitemap
-- robots.txt untuk search engine crawlers
-- Permalink structure: `/blog/:year/:month/:day/:title/`
-
----
-
-## 🛠️ **Arsitektur Teknis**
-
-### Jekyll Static Site Generator
-- **Version:** Jekyll 4.x
-- **Markdown:** kramdown
-- **Plugins:**
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
-
-### Collections
-- `_products` - Koleksi produk (5 items)
-- `_post_with_product` - Koleksi blog post dengan produk terkait (4 items)
-
-### Layouts
-- `default.html` - Base layout dengan navbar & footer
-- `product.html` - Layout untuk halaman produk individual
-- `post-with-products.html` - Layout untuk blog post dengan related products
-- `post.html` - Layout untuk blog post standar
-- `page.html` - Layout untuk halaman statis
-
-### Components (Includes)
-- `head.html` - HTML head dengan meta tags & schema
-- `navbar.html` - Navigation bar responsif
-- `footer.html` - Footer dengan business info
-- `related-products-by-node-id.html` - Related products dengan rotasi berbasis node
-- `related-products-by-last-modified.html` - Products sorted by update time
-- `related-articles-by-node-id.html` - Related articles dengan rotasi
-- `related-content-by-node-id.html` - Related content (hybrid)
-- `jual-kayu-dolken-terdekat-link-card.html` - Reusable link card component
-
-### Assets
-- **CSS:** Compiled SCSS dengan compression
-- **Images:** WebP format dengan JPEG fallback
-- **Favicons:** Multiple sizes (32x32, 180x180, 256x256, 512x512)
-
----
-
-## 📊 **Konten**
-
-### Produk (5 items)
-1. Kayu Dolken 2-3 cm - Rp 15.000
-2. Kayu Dolken 4-6 cm - Rp 20.000
-3. Kayu Dolken 6-8 cm - Rp 28.000
-4. Kayu Dolken 8-10 cm - Rp 35.000
-5. Kayu Dolken 10-12 cm - Rp 45.000
-
-### Blog Posts (4 items)
-1. **Jual Kayu Dolken Jakarta Utara** (2025-11-15)
-   - Like: 127 | Comment: 34 | Share: 18
-   - Modern hero card dengan gradient merah
-   - Konten SEO-optimized untuk Jakarta Utara
-2. **Jual Kayu Dolken Semarang** (2025-11-15)
-   - Like: 98 | Comment: 21 | Share: 12
-   - Hero card dengan info bisnis
-   - Target pasar Semarang dan Jawa Tengah
-3. **Aplikasi Kayu Dolken untuk Hotel dan Cafe** (2024-04-20)
-   - Like: 156 | Comment: 42 | Share: 31
-   - Use case dan aplikasi produk
-4. **Jual Kayu Dolken Terdekat** (2025-11-15)
-   - Like: 203 | Comment: 67 | Share: 45
-   - Panduan mencari supplier terdekat
-
-### Static Pages
-- Homepage (`/`) - Hero carousel + featured products + blog posts
-- Blog Listing (`/blog`) - Semua artikel dalam grid layout
-- Product Listing (`/product`) - Katalog produk lengkap
-- Tentang (`/tentang`) - About the business
-- Kontak (`/kontak`) - Contact information & form
-
----
-
-## 🎯 **Business Information**
-
-- **Nama Bisnis:** Kayu Dolken Gelam - Amirudin Abdul Karim
-- **Owner:** Amirudin Abdul Karim
-- **Telepon:** +62 813-1140-0177
-- **WhatsApp:** 6281311400177
-- **Lokasi:** Kota Serang, Banten
-- **Coverage Area:** DKI Jakarta, Jawa Barat, Jawa Tengah, Jawa Timur, Banten, Bali
-- **Alamat:** Jl. Raya Banten KM 7, Kasunyatan, Kasemen, Kota Serang, Banten 42191
-- **Koordinat:** -6.1104, 106.1640
-- **Jam Operasional:** Senin-Sabtu, 08:00-17:00
-
----
-
-## 🔧 **Development & Deployment**
-
-### Build Process
-- Script: `rebuild.sh` untuk automated build
-- GitHub Actions workflow untuk CI/CD
-- Minified CSS output
-- Optimized HTML
-
-### GitHub Pages Deployment
-- Auto-deploy dari branch utama
-- Custom domain support ready
-- HTTPS enabled
-- CDN acceleration via jsDelivr
-
----
-
-## 📋 **TODO Items Created (Future Enhancements)**
-
-### Performance (TODO-1531)
-- [ ] Service Worker & PWA implementation
-- [ ] Asset versioning & cache busting
-- [ ] Jekyll Cache plugin untuk schema generation
-- [ ] Lazy load Bootstrap JS
-- [ ] jekyll-picture-tag untuk responsive images
-- [ ] Critical CSS inlining
-- [ ] Font optimization
-
-### Schema Migration (TODO-1532)
-- [ ] Phase 1: Migrate schemas to individual templates
-- [ ] Phase 2: Handle BlogPosting duplications
-- [ ] Phase 3: Remove redundant LocalBusiness schema
-- [ ] Phase 4: Investigate product listing page schema
-
-### Component Schema (TODO-1533)
-- [ ] Component-level schema implementation
-- [ ] Move ItemList schemas to components
-- [ ] Ensure schema/visual accuracy match
-
----
-
-## 🐛 **Known Issues**
-
-None. Website is production-ready!
-
----
-
-## 📦 **Dependencies**
-
-```ruby
-# Gemfile
-gem "jekyll", "~> 4.3.4"
-gem "jekyll-sitemap"
-gem "jekyll-seo-tag"
-gem "jekyll-feed"
-gem "webrick", "~> 1.8"
+_includes/
+├── related-content-by-node-id.html
+├── related-products-by-last-modified.html
+├── product-list.html
+└── image-carousel.html
 ```
 
-**External CDN:**
-- Bootstrap 5.3.0 (CSS & JS)
-- Bootstrap Icons 1.11.0
+**Target State (Drupal-style):**
+```
+_layouts/
+├── page.html                        # Page wrapper (base)
+├── page--front.html                 # Homepage wrapper (special layout)
+├── node.html                        # Content template (base)
+├── node--post.html                  # Blog post content
+├── node--post-with-product.html     # Hybrid post content
+└── node--product.html               # Product content
 
----
-
-## 🚀 **Getting Started**
-
-### Installation
-```bash
-bundle install
+_includes/
+├── block--related-content--by-node.html
+├── block--related-product--by-last-modified.html
+├── block--product-list.html
+├── block--carousel--image.html
+├── block--card--link.html
+└── block--cta--whatsapp.html
 ```
 
-### Development
-```bash
-bundle exec jekyll serve
-# Visit http://localhost:4000
+**Key Concepts Documented:**
+
+1. **Three-Tier Architecture:**
+   - `page.html` - Page wrapper (header, footer, site structure)
+   - `node.html` - Content template (article/product layout)
+   - `block.html` - Reusable components (related content, product lists)
+
+2. **Decision Matrix:**
+   | Need | Use | Example |
+   |------|-----|---------|
+   | Different header/footer/wrapper | `page--*.html` | Homepage (hero, different footer) |
+   | Different content layout only | `node--*.html` | Products vs Posts |
+   | Same content, different sorting | `block--*--*.html` | Related products by-node vs by-last-modified |
+
+3. **Real Examples from This Site:**
+   - **Homepage NEEDS `page--front.html`** - Different site structure (hero, expanded footer)
+   - **Products DON'T NEED `page--product.html`** - Same site structure, only content differs
+   - Current analysis of `default.html` and `product.html` showing why this distinction matters
+
+**Benefits:**
+- ✅ Self-documenting file names
+- ✅ Better organization and scalability
+- ✅ Consistent naming pattern
+- ✅ Easier to add new variants
+- ✅ Clear hierarchy visible from names
+
+---
+
+#### TODO-1535: Drupal Naming Migration - Execution Checklist
+**File:** `TODO/TODO-1535-drupal-naming-migration-execution.md`
+
+Comprehensive step-by-step execution checklist dengan **913 lines** of detailed instructions:
+
+**Structure:**
+
+**Pre-Migration Checklist:**
+- Safety & backup (git commit sebelum mulai)
+- Create migration branch (optional)
+- Document current file structure
+
+**Phase 1: Layouts Migration (11 tasks)**
+- Rename `default.html` → `page.html`
+- Create `page--front.html` (homepage wrapper)
+- Create `node.html` (base content template)
+- Rename all layouts → `node--*.html` pattern
+- Update all frontmatter `layout:` references
+- Verification steps
+
+**Phase 2: Blocks/Components Migration (4 sub-tasks)**
+- Task 2.1: Related content blocks
+- Task 2.2: Product blocks
+- Task 2.3: UI blocks (carousel, cards)
+- Task 2.4: Utility blocks (WhatsApp CTA)
+- Each task: rename + update references + verify
+
+**Phase 3: Testing & Validation (4 sub-tasks)**
+- Task 3.1: Build testing (`bundle exec jekyll build`)
+- Task 3.2: Visual testing (local server)
+  - Test homepage, blog posts, products, static pages
+- Task 3.3: Schema validation (Google Rich Results)
+- Task 3.4: Link verification (RSS, sitemap)
+
+**Phase 4: Documentation Updates**
+- Add Drupal naming headers to all files
+- Create/update NAMING-CONVENTION.md
+- Update README if needed
+
+**Phase 5: Commit & Finalize**
+- Final verification (no old references)
+- Create detailed migration commit
+- Create migration summary document
+
+**Special Features:**
+- ✅ Complete bash commands for each step (copy-paste ready)
+- ✅ Verification steps after each phase
+- ✅ Rollback plan if migration fails (3 options)
+- ✅ Testing checklist (build, visual, schema, links)
+- ✅ Post-migration tasks (merge, deploy, documentation)
+
+**Estimated Execution Time:** 8-12 hours
+
+---
+
+## 📂 Files Changed
+
+### New Files
+- ✅ `TODO/TODO-1534-drupal-naming-convention-migration.md` (761 lines)
+- ✅ `TODO/TODO-1535-drupal-naming-migration-execution.md` (913 lines)
+- ✅ `RELEASE/RELEASE_NOTES-v1.0.0.md` (archived from previous version)
+
+### Modified Files
+- ✅ `RELEASE_NOTES.md` (new content for v1.0.1)
+
+---
+
+## 🔄 Migration Status
+
+**Current Status:** ⏸️ Planning Complete - Ready for Execution
+
+**Dependencies:**
+- ✅ TODO-1534 planning completed
+- ✅ TODO-1535 execution checklist ready
+- ⏳ Awaiting user approval to begin migration
+
+**When Migration Executes:**
+- All existing functionality will remain unchanged
+- Better file organization for future development
+- Easier onboarding for contributors
+- Scalable architecture for adding new features
+
+---
+
+## 🎓 Key Learnings Documented
+
+### Why Homepage Needs page--front.html BUT Products Don't
+
+**Homepage (Different Site Structure):**
+```html
+<!-- page--front.html -->
+<body class="homepage">
+  <header class="transparent-header fixed">Logo | Menu</header>
+  <section class="hero-full-width"><!-- Big hero --></section>
+  <main class="no-sidebar full-width">{{ content }}</main>
+  <footer class="expanded-footer"><!-- Newsletter, social --></footer>
+</body>
 ```
 
-### Build
-```bash
-./rebuild.sh
-# Or manually:
-bundle exec jekyll build
+**Products (Same Site Structure, Different Content):**
+```yaml
+# product.html frontmatter
+---
+layout: default  ← Wrapped by default.html!
+---
+<!-- Product content only -->
 ```
 
-### Deploy
-Push to GitHub, auto-deployed via GitHub Pages.
+**Insight:** Products use same header/footer/whatsapp-button as other pages. Only content layout differs, so they need `node--product.html` (content template), NOT `page--product.html` (wrapper).
 
 ---
 
-## 📸 **Screenshots**
+## 🛠️ Technical Details
 
-✅ Homepage dengan hero carousel dan featured products
-✅ Product pages dengan detailed specs dan related products
-✅ Blog posts dengan engagement metrics dan hero cards
-✅ Mobile-responsive design
-✅ Schema.org validation passed
+### Pattern Structure
+```
+{entity-type}--{variant}.html
+{entity-type}--{variant}--{sub-variant}.html
+```
 
----
-
-## 🙏 **Credits**
-
-- **Development:** Claude Code AI Assistant
-- **Business Owner:** Amirudin Abdul Karim
-- **Framework:** Jekyll Static Site Generator
-- **UI Framework:** Bootstrap 5
-- **Icons:** Bootstrap Icons
-- **Hosting:** GitHub Pages
+### Rules
+1. **Base template** = fallback (e.g., `page.html`, `node.html`, `block.html`)
+2. **Double dash `--`** = variant separator
+3. **Specific > General** = cascade/specificity hierarchy
+4. **Three-tier architecture** = page wraps node wraps block
+5. **Alphabetically grouped** = better file organization
 
 ---
 
-## 📄 **License**
+## 🔍 Impact Analysis
 
-All rights reserved © 2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+### Before Migration
+**Problems:**
+- ❌ No hierarchy - susah bedakan base vs variant
+- ❌ Tidak konsisten - `post.html`, `product.html`, tapi base-nya `default.html`
+- ❌ Tidak scalable - sulit tambah variants baru
+- ❌ Components tidak terorganisir - `related-*`, `product-*` tercampur
+
+### After Migration (Expected)
+**Benefits:**
+- ✅ Clear three-tier hierarchy: page > node > block
+- ✅ Consistent naming across all files
+- ✅ Easy to add variants: `block--product-list--featured.html`
+- ✅ Self-documenting: `block--related-product--by-last-modified.html`
+- ✅ Better searchability: `ls _includes/block--*product*`
 
 ---
 
-## 📞 **Support**
+## 📊 Statistics
+
+**Total Lines of Documentation Added:** 1,674+ lines
+- TODO-1534: 761 lines (planning)
+- TODO-1535: 913 lines (execution)
+
+**Files to be Migrated (When Executed):**
+- Layouts: 4 renamed, 2 created = 6 total layout files
+- Blocks: 8+ renamed to `block--*.html` pattern
+- Content files: 13+ files (frontmatter updates)
+
+**Zero Breaking Changes** (when properly executed)
+
+---
+
+## 🚀 What's Next?
+
+### Immediate Next Steps
+1. Review TODO-1534 for understanding the architecture
+2. Review TODO-1535 for execution steps
+3. Get user approval to begin migration
+4. Execute migration following TODO-1535 checklist
+5. Test thoroughly (build, visual, schema, links)
+6. Deploy to production
+
+### Future Enhancements (Still Pending)
+From v1.0.0 TODO items:
+- TODO-1531: Performance optimization strategies
+- TODO-1532: Schema.org migration plan
+- TODO-1533: Component-level schema implementation
+
+**After migration completes**, these TODOs will be easier to implement with the new architecture.
+
+---
+
+## ⚠️ Important Notes
+
+1. **This is a PLANNING release** - no code changes yet
+2. **All current functionality intact** - website still works as v1.0.0
+3. **Migration is optional** - can be executed when ready
+4. **Rollback plan included** - safe to attempt migration
+5. **Estimated time: 8-12 hours** - for complete migration
+
+---
+
+## 📞 Support
 
 Untuk pertanyaan atau bantuan:
 - WhatsApp: +62 813-1140-0177
@@ -346,17 +287,31 @@ Untuk pertanyaan atau bantuan:
 
 ---
 
-**Version:** 1.0.0
-**Status:** Production Ready ✅
-**Release Date:** 2025-11-16
+## 🙏 Credits
+
+- **Planning & Documentation:** Claude Code AI Assistant
+- **Business Owner:** Amirudin Abdul Karim
+- **Framework:** Jekyll Static Site Generator
+- **Architecture Pattern:** Drupal Twig Template Naming Convention
 
 ---
 
-## 🎯 **What's Next?**
+**Version:** 1.0.1
+**Status:** Planning Complete ✅ - Ready for Execution
+**Release Date:** 2025-11-17
+**Previous Version:** 1.0.0 (archived in `RELEASE/RELEASE_NOTES-v1.0.0.md`)
 
-Lihat folder `TODO/` untuk enhancement plans:
-- TODO-1531: Performance optimization strategies
-- TODO-1532: Schema.org migration plan
-- TODO-1533: Component-level schema implementation
+---
 
-**Terima kasih telah menggunakan website Kayu Dolken Gelam!** 🌳
+## 📖 Version History
+
+- **v1.0.1** (2025-11-17) - Architecture planning & documentation
+- **v1.0.0** (2025-11-16) - Initial production release
+
+---
+
+**Next Release:** v1.0.2 or v1.1.0 (after migration execution)
+- If migration succeeds → v1.1.0 (minor version bump for architecture change)
+- If only bug fixes → v1.0.2 (patch version)
+
+**Terima kasih!** 🌳
