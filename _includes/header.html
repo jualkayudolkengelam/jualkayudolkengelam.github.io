@@ -8,28 +8,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Beranda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if page.url contains '/product' %}active{% endif %}" href="{{ '/product' | relative_url }}">Produk</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if page.url contains '/blog' %}active{% endif %}" href="{{ '/blog' | relative_url }}">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if page.url contains '/tentang' %}active{% endif %}" href="{{ '/tentang' | relative_url }}">Tentang Kami</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if page.url contains '/kontak' %}active{% endif %}" href="{{ '/kontak' | relative_url }}">Kontak</a>
-          </li>
-          <li class="nav-item ms-lg-3">
-            <a class="btn btn-success btn-sm" href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20tertarik%20dengan%20kayu%20dolken%20gelam" target="_blank">
-              <i class="bi bi-whatsapp me-1"></i> Hubungi Kami
-            </a>
-          </li>
-        </ul>
+        {% include block--navigation.html %}
       </div>
     </div>
   </nav>
