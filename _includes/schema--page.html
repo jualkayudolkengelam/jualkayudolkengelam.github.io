@@ -1,0 +1,91 @@
+{% comment %}
+============================================================================
+Shared Schema: WebPage
+============================================================================
+
+@file        schema--page.html
+@path        _includes/schema--page.html
+@type        Schema (shared component)
+@description Reusable WebPage schema for all pages
+@author      arisciwek
+
+This is a shared schema component that provides WebPage structured data
+for SEO and rich results eligibility. Used across all pages for consistency.
+
+Parameters:
+-----------
+- type: (optional) WebPage type variant (default: "WebPage")
+  Options: "WebPage", "AboutPage", "ContactPage", "CollectionPage"
+- breadcrumb: (optional) show breadcrumb reference (default: true)
+
+Usage:
+------
+Basic usage (default WebPage):
+{% include schema--page.html %}
+
+With custom type:
+{% include schema--page.html type="AboutPage" %}
+
+Without breadcrumb:
+{% include schema--page.html breadcrumb=false %}
+
+Full control:
+{% include schema--page.html type="ContactPage" breadcrumb=true %}
+
+Used by:
+--------
+- index.html (homepage)
+- product.html (product listing)
+- blog.html (blog listing)
+- tentang.html (about page)
+- kontak.html (contact page)
+- All content pages
+
+Benefits:
+---------
+- Single source of truth for WebPage schema
+- DRY principle (define once, use everywhere)
+- Consistent schema across all pages
+- Easy to update (change once, applies everywhere)
+- Parameterized for flexibility
+
+SEO Impact:
+-----------
+- Improves rich results eligibility
+- Better search engine understanding
+- Enhanced structured data coverage
+- Supports breadcrumb navigation
+
+============================================================================
+{% endcomment %}
+
+{% assign schema_type = include.type | default: "WebPage" %}
+{% assign show_breadcrumb = include.breadcrumb | default: true %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ schema_type }}",
+  "@id": "{{ page.url | absolute_url }}#webpage",
+  "url": "{{ page.url | absolute_url }}",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description | default: site.description | strip_html | strip_newlines | escape }}",
+  "inLanguage": "{{ site.lang | default: 'id' }}",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "{{ site.url }}{{ site.baseurl }}/#website",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "name": "{{ site.title }}"
+  }{% if show_breadcrumb %},
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "@id": "{{ page.url | absolute_url }}#breadcrumb"
+  }{% endif %}{% if page.image %},
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "{{ page.image | absolute_url }}"
+  }{% endif %}{% if page.date %},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}"{% endif %}
+}
+</script>

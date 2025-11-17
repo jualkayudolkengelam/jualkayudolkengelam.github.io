@@ -4,6 +4,9 @@ title: Blog & Artikel
 description: Informasi, tips, dan artikel seputar kayu dolken gelam, penggunaan, perawatan, dan inspirasi proyek
 ---
 
+<!-- WebPage Schema -->
+{% include schema--page.html type="CollectionPage" %}
+
 <div class="row g-4 mb-5">
   {% comment %}Combine regular posts and posts with products{% endcomment %}
   {% assign all_posts = site.posts | concat: site.post_with_product %}
