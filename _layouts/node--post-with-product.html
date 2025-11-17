@@ -145,10 +145,15 @@ page.html (wrapper with header/footer)
     <div class="post-content mb-5">
       {{ content }}
     </div>
+
+    <!-- Related Products Section (Part of article content) -->
+    <section class="article-related-products mt-5">
+      {% include block--related-product-last-modified.html %}
+    </section>
   </article>
 
   <!-- CTA Section -->
-  <section class="cta-section">
+  <section class="cta-section mt-5">
     <div class="card border-0 bg-wood text-white shadow-lg">
       <div class="card-body p-5 text-center">
         <h3 class="mb-3">Butuh Konsultasi?</h3>
@@ -164,9 +169,6 @@ page.html (wrapper with header/footer)
       </div>
     </div>
   </section>
-
-  <!-- Related Products Section (Auto-included for post-with-product layout) -->
-  {% include block--related-product-last-modified.html %}
 </div>
 
 <!-- Schema.org Article Markup -->
