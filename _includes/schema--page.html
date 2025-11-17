@@ -1,59 +1,37 @@
 {% comment %}
 ============================================================================
-Shared Schema: WebPage
+Unified Schema: WebSite + Organization + Navigation + Page
 ============================================================================
 
 @file        schema--page.html
 @path        _includes/schema--page.html
-@type        Schema (shared component)
-@description Reusable WebPage schema for all pages
+@type        Schema (unified component)
+@description All schemas in single @graph for better Google recognition
 @author      arisciwek
 
-This is a shared schema component that provides WebPage structured data
-for SEO and rich results eligibility. Used across all pages for consistency.
+This combines WebSite, Organization, SiteNavigationElement, and Page
+schemas into a single @graph for optimal Google Rich Results detection.
 
 Parameters:
 -----------
-- type: (optional) WebPage type variant (default: "WebPage")
-  Options: "WebPage", "AboutPage", "ContactPage", "CollectionPage"
+Uses page.schema_type from frontmatter (default: "WebPage")
+Options: "WebPage", "AboutPage", "ContactPage", "CollectionPage"
 
 Usage:
 ------
-Basic usage (default WebPage):
-{% include schema--page.html %}
-
-With custom type:
-{% include schema--page.html type="AboutPage" %}
-
-Contact page:
-{% include schema--page.html type="ContactPage" %}
-
-About page:
-{% include schema--page.html type="AboutPage" %}
-
-Used by:
---------
-- index.html (homepage)
-- product.html (product listing)
-- blog.html (blog listing)
-- tentang.html (about page)
-- kontak.html (contact page)
-- All content pages
+Auto-included in page.html and page--front.html layouts.
+Set schema_type in page frontmatter:
+---
+schema_type: AboutPage
+---
 
 Benefits:
 ---------
-- Single source of truth for WebPage schema
-- DRY principle (define once, use everywhere)
-- Consistent schema across all pages
-- Easy to update (change once, applies everywhere)
-- Parameterized for flexibility
-
-SEO Impact:
------------
-- Improves rich results eligibility
-- Better search engine understanding
-- Enhanced structured data coverage
-- Provides basic WebPage schema for all pages
+- All schemas in single @graph (Google best practice)
+- Better Rich Results detection
+- All schema types detected properly by Google
+- Single source of truth for all page schemas
+- Follows naming convention: schema--page.html for global use
 
 ============================================================================
 {% endcomment %}
@@ -64,6 +42,76 @@ SEO Impact:
 {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#website",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "name": "{{ site.title }}",
+      "description": "{{ site.description }}",
+      "inLanguage": "{{ site.lang | default: 'id' }}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.business.name }}",
+        "@id": "{{ site.url }}{{ site.baseurl }}/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#organization",
+      "name": "{{ site.business.name }}",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}{{ site.baseurl }}/assets/images/logo.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "{{ site.business.phone }}",
+        "contactType": "Customer Service",
+        "areaServed": "ID",
+        "availableLanguage": "Indonesian"
+      },
+      "sameAs": [
+        "{{ site.business.whatsapp_url }}"
+      ]
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#navigation",
+      "name": "Main Navigation",
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}{{ site.baseurl }}/#beranda",
+          "name": "Beranda",
+          "url": "{{ site.url }}{{ site.baseurl }}/"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}{{ site.baseurl }}/product#produk",
+          "name": "Produk",
+          "url": "{{ site.url }}{{ site.baseurl }}/product"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}{{ site.baseurl }}/blog#blog",
+          "name": "Blog",
+          "url": "{{ site.url }}{{ site.baseurl }}/blog"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}{{ site.baseurl }}/tentang#tentang",
+          "name": "Tentang Kami",
+          "url": "{{ site.url }}{{ site.baseurl }}/tentang"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}{{ site.baseurl }}/kontak#kontak",
+          "name": "Kontak",
+          "url": "{{ site.url }}{{ site.baseurl }}/kontak"
+        }
+      ]
+    },
     {
       "@type": "{{ schema_type }}",
       "@id": "{{ page.url | absolute_url }}#webpage",
@@ -87,4 +135,3 @@ SEO Impact:
   ]
 }
 </script>
-

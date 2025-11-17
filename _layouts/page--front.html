@@ -64,10 +64,7 @@ Note: Homepage does NOT use node template - renders content directly!
 {% include head.html %}
 
 <body>
-  <!-- Global Schema: WebSite + Navigation (auto-included for all pages) -->
-  {% include schema--global.html %}
-
-  <!-- WebPage Schema (auto-included for homepage) -->
+  <!-- Unified Schema: WebSite + Organization + Navigation + Page in single @graph -->
   {% unless page.skip_page_schema %}
     {% include schema--page.html %}
   {% endunless %}
