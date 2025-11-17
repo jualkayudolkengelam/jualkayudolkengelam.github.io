@@ -206,9 +206,9 @@ share_count: 2
   <div class="col-md-6 col-lg-4">
     <div class="card border-0 shadow-sm h-100">
       <div class="card-header bg-primary text-white">
-        <h4 class="h6 mb-0">
+        <h3 class="h3 mb-0">
           <i class="bi bi-pin-map-fill me-2"></i>Kelapa Gading
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <ul class="list-unstyled small mb-0">
@@ -222,9 +222,9 @@ share_count: 2
   <div class="col-md-6 col-lg-4">
     <div class="card border-0 shadow-sm h-100">
       <div class="card-header bg-wood text-white">
-        <h4 class="h6 mb-0">
+        <h3 class="h3 mb-0">
           <i class="bi bi-pin-map-fill me-2"></i>Tanjung Priok
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <ul class="list-unstyled small mb-0">
@@ -238,9 +238,9 @@ share_count: 2
   <div class="col-md-6 col-lg-4">
     <div class="card border-0 shadow-sm h-100">
       <div class="card-header bg-wood text-white">
-        <h4 class="h6 mb-0">
+        <h3 class="h3 mb-0">
           <i class="bi bi-pin-map-fill me-2"></i>Pademangan
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <ul class="list-unstyled small mb-0">
@@ -254,9 +254,9 @@ share_count: 2
   <div class="col-md-6 col-lg-4">
     <div class="card border-0 shadow-sm h-100">
       <div class="card-header bg-info text-white">
-        <h4 class="h6 mb-0">
+        <h3 class="h3 mb-0">
           <i class="bi bi-pin-map-fill me-2"></i>Penjaringan
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <ul class="list-unstyled small mb-0">
@@ -270,9 +270,9 @@ share_count: 2
   <div class="col-md-6 col-lg-4">
     <div class="card border-0 shadow-sm h-100">
       <div class="card-header bg-wood text-white">
-        <h4 class="h6 mb-0">
+        <h3 class="h3 mb-0">
           <i class="bi bi-pin-map-fill me-2"></i>Koja
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <ul class="list-unstyled small mb-0">
@@ -286,9 +286,9 @@ share_count: 2
   <div class="col-md-6 col-lg-4">
     <div class="card border-0 shadow-sm h-100">
       <div class="card-header bg-wood text-white">
-        <h4 class="h6 mb-0">
+        <h3 class="h3 mb-0">
           <i class="bi bi-pin-map-fill me-2"></i>Cilincing
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <ul class="list-unstyled small mb-0">
@@ -304,9 +304,9 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100">
       <div class="card-header bg-success text-white">
-        <h4 class="h6 mb-0">
+        <h3 class="h3 mb-0">
           <i class="bi bi-buildings me-2"></i>Area Populer
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <ul class="list-unstyled small mb-0">
@@ -324,9 +324,9 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100">
       <div class="card-header bg-danger text-white">
-        <h4 class="h6 mb-0">
+        <h3 class="h3 mb-0">
           <i class="bi bi-star-fill me-2"></i>Landmark Terdekat
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <ul class="list-unstyled small mb-0">
@@ -362,7 +362,7 @@ share_count: 2
         <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-clock-history text-success" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2 fw-bold">Tahan Lama Puluhan Tahun</h4>
+        <h3 class="h3 text-wood mb-2 fw-bold">Tahan Lama Puluhan Tahun</h3>
         <p class="small text-muted mb-0">Kayu gelam dapat bertahan 20-30 tahun tanpa treatment khusus, hemat biaya perawatan jangka panjang bahkan di area pesisir Jakarta Utara</p>
       </div>
     </div>
@@ -374,7 +374,7 @@ share_count: 2
         <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-bug text-danger" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2 fw-bold">Anti Rayap Alami</h4>
+        <h3 class="h3 text-wood mb-2 fw-bold">Anti Rayap Alami</h3>
         <p class="small text-muted mb-0">Tidak memerlukan obat anti rayap karena tekstur kayu gelam yang padat dan keras secara alami menolak rayap dan hama</p>
       </div>
     </div>
@@ -386,7 +386,7 @@ share_count: 2
         <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-cloud-rain text-primary" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2 fw-bold">Tahan Air & Cuaca Ekstrem</h4>
+        <h3 class="h3 text-wood mb-2 fw-bold">Tahan Air & Cuaca Ekstrem</h3>
         <p class="small text-muted mb-0">Cocok untuk aplikasi outdoor maupun indoor, tahan hujan deras, panas terik, dan kelembaban tinggi area Jakarta Utara</p>
       </div>
     </div>
@@ -398,7 +398,7 @@ share_count: 2
         <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-hammer text-warning" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2 fw-bold">Kuat & Padat</h4>
+        <h3 class="h3 text-wood mb-2 fw-bold">Kuat & Padat</h3>
         <p class="small text-muted mb-0">Kepadatan tinggi memberikan kekuatan maksimal, cocok untuk beban berat dan struktur penyangga permanen</p>
       </div>
     </div>
@@ -410,7 +410,7 @@ share_count: 2
         <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-recycle text-success" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2 fw-bold">Ramah Lingkungan</h4>
+        <h3 class="h3 text-wood mb-2 fw-bold">Ramah Lingkungan</h3>
         <p class="small text-muted mb-0">Material kayu natural dan sustainable, ramah lingkungan dan biodegradable, mendukung green building</p>
       </div>
     </div>
@@ -422,7 +422,7 @@ share_count: 2
         <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-palette text-info" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2 fw-bold">Estetika Natural</h4>
+        <h3 class="h3 text-wood mb-2 fw-bold">Estetika Natural</h3>
         <p class="small text-muted mb-0">Warna coklat natural yang indah, cocok untuk dekorasi modern maupun tradisional, mempercantik bangunan</p>
       </div>
     </div>
@@ -452,35 +452,35 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header text-white py-3" style="background: linear-gradient(135deg, #92400e 0%, #78350f 100%);">
-        <h4 class="h6 mb-0 fw-bold">
+        <h3 class="h3 mb-0 fw-bold">
           <i class="bi bi-building me-2"></i>Konstruksi & Bangunan
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <ul class="list-unstyled mb-0">
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Tiang penyangga struktur bangunan</strong>
+            <h4 class="h4 mb-1">Tiang penyangga struktur bangunan</h4>
             <p class="small text-muted mb-0 ms-4">Kokoh menopang beban struktural</p>
           </li>
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Pondasi bangunan ringan</strong>
+            <h4 class="h4 mb-1">Pondasi bangunan ringan</h4>
             <p class="small text-muted mb-0 ms-4">Gazebo, pergola, saung</p>
           </li>
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Scaffolding tradisional</strong>
+            <h4 class="h4 mb-1">Scaffolding tradisional</h4>
             <p class="small text-muted mb-0 ms-4">Perancah konstruksi kuat & aman</p>
           </li>
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Rangka atap dan dinding</strong>
+            <h4 class="h4 mb-1">Rangka atap dan dinding</h4>
             <p class="small text-muted mb-0 ms-4">Struktur rangka yang tahan lama</p>
           </li>
           <li class="mb-0">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Tiang pancang area rawa/basah</strong>
+            <h4 class="h4 mb-1">Tiang pancang area rawa/basah</h4>
             <p class="small text-muted mb-0 ms-4">Tahan air dan kelembaban tinggi</p>
           </li>
         </ul>
@@ -492,45 +492,45 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header bg-primary text-white py-3">
-        <h4 class="h6 mb-0 fw-bold">
+        <h3 class="h3 mb-0 fw-bold">
           <i class="bi bi-palette-fill me-2"></i>Dekorasi & Landscaping
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <ul class="list-unstyled mb-0">
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Pagar rumah dan taman minimalis</strong>
+            <h4 class="h4 mb-1">Pagar rumah dan taman minimalis</h4>
             <p class="small text-muted mb-0 ms-4">Estetika natural modern</p>
           </li>
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Gazebo & pergola outdoor</strong>
+            <h4 class="h4 mb-1">Gazebo & pergola outdoor</h4>
             <p class="small text-muted mb-0 ms-4">Area bersantai outdoor</p>
           </li>
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Interior hotel, cafe, restoran</strong>
+            <h4 class="h4 mb-1">Interior hotel, cafe, restoran</h4>
             <p class="small text-muted mb-0 ms-4">Rustic & tropical theme</p>
           </li>
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Landscaping taman dan area hijau</strong>
+            <h4 class="h4 mb-1">Landscaping taman dan area hijau</h4>
             <p class="small text-muted mb-0 ms-4">Penataan landscape alami</p>
           </li>
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Art installation & display</strong>
+            <h4 class="h4 mb-1">Art installation & display</h4>
             <p class="small text-muted mb-0 ms-4">Karya seni dekorasi unik</p>
           </li>
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Tiang lampu taman</strong>
+            <h4 class="h4 mb-1">Tiang lampu taman</h4>
             <p class="small text-muted mb-0 ms-4">Pencahayaan outdoor estetik</p>
           </li>
           <li class="mb-0">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Pembatas area parkir</strong>
+            <h4 class="h4 mb-1">Pembatas area parkir</h4>
             <p class="small text-muted mb-0 ms-4">Zonasi area yang rapi</p>
           </li>
         </ul>
@@ -542,40 +542,40 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header bg-info text-white py-3">
-        <h4 class="h6 mb-0 fw-bold">
+        <h3 class="h3 mb-0 fw-bold">
           <i class="bi bi-chair-fill me-2"></i>Furniture & Lain-lain
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <ul class="list-unstyled mb-0">
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Penyangga tanaman vertikal garden</strong>
+            <h4 class="h4 mb-1">Penyangga tanaman vertikal garden</h4>
             <p class="small text-muted mb-0 ms-4">Urban farming & green wall</p>
           </li>
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Pembatas area (barrier)</strong>
+            <h4 class="h4 mb-1">Pembatas area (barrier)</h4>
             <p class="small text-muted mb-0 ms-4">Zonasi ruang yang efektif</p>
           </li>
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Furniture outdoor</strong>
+            <h4 class="h4 mb-1">Furniture outdoor</h4>
             <p class="small text-muted mb-0 ms-4">Bench, table, kursi taman</p>
           </li>
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Jalur pedestrian</strong>
+            <h4 class="h4 mb-1">Jalur pedestrian</h4>
             <p class="small text-muted mb-0 ms-4">Pathway taman & jogging track</p>
           </li>
           <li class="mb-2">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Dermaga kecil/jembatan</strong>
+            <h4 class="h4 mb-1">Dermaga kecil/jembatan</h4>
             <p class="small text-muted mb-0 ms-4">Struktur tepi air yang kuat</p>
           </li>
           <li class="mb-0">
             <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <strong>Kolam ikan & aquascape</strong>
+            <h4 class="h4 mb-1">Kolam ikan & aquascape</h4>
             <p class="small text-muted mb-0 ms-4">Dekorasi kolam alami</p>
           </li>
         </ul>
@@ -587,9 +587,9 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header bg-success text-white py-3">
-        <h4 class="h6 mb-0 fw-bold">
+        <h3 class="h3 mb-0 fw-bold">
           <i class="bi bi-briefcase-fill me-2"></i>Proyek Komersial
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <p class="mb-3">
@@ -598,23 +598,23 @@ share_count: 2
         <ul class="list-unstyled mb-0">
           <li class="mb-2">
             <i class="bi bi-building-fill-check text-success me-2"></i>
-            <strong>Hotel & Resort</strong>
+            <h4 class="h4 mb-0">Hotel & Resort</h4>
           </li>
           <li class="mb-2">
             <i class="bi bi-building-fill-check text-success me-2"></i>
-            <strong>Cafe & Restoran</strong>
+            <h4 class="h4 mb-0">Cafe & Restoran</h4>
           </li>
           <li class="mb-2">
             <i class="bi bi-building-fill-check text-success me-2"></i>
-            <strong>Mall & Shopping Center</strong>
+            <h4 class="h4 mb-0">Mall & Shopping Center</h4>
           </li>
           <li class="mb-2">
             <i class="bi bi-building-fill-check text-success me-2"></i>
-            <strong>Apartment & Kondominium</strong>
+            <h4 class="h4 mb-0">Apartment & Kondominium</h4>
           </li>
           <li class="mb-0">
             <i class="bi bi-building-fill-check text-success me-2"></i>
-            <strong>Developer Perumahan</strong>
+            <h4 class="h4 mb-0">Developer Perumahan</h4>
           </li>
         </ul>
         <div class="mt-3 p-3 bg-light rounded">
@@ -646,7 +646,7 @@ share_count: 2
   <div class="d-flex align-items-center">
     <i class="bi bi-info-circle-fill me-3" style="font-size: 2rem;"></i>
     <div>
-      <h5 class="mb-1 fw-bold">Proses Pemesanan Mudah & Cepat</h5>
+      <h3 class="h3 mb-1 fw-bold">Proses Pemesanan Mudah & Cepat</h3>
       <p class="mb-0 small">Hanya 6 langkah sederhana untuk mendapatkan kayu dolken gelam berkualitas!</p>
     </div>
   </div>
@@ -660,7 +660,7 @@ share_count: 2
         <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <span class="fw-bold text-primary" style="font-size: 2rem;">1</span>
         </div>
-        <h4 class="h6 text-wood mb-2 fw-bold">
+        <h4 class="h4 text-wood mb-2 fw-bold">
           <i class="bi bi-list-check me-2"></i>Pilih Ukuran
         </h4>
         <p class="small text-muted mb-0">
@@ -677,7 +677,7 @@ share_count: 2
         <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <span class="fw-bold text-success" style="font-size: 2rem;">2</span>
         </div>
-        <h4 class="h6 text-wood mb-2 fw-bold">
+        <h4 class="h4 text-wood mb-2 fw-bold">
           <i class="bi bi-telephone-fill me-2"></i>Hubungi 081311400177
         </h4>
         <p class="small text-muted mb-0">
@@ -694,7 +694,7 @@ share_count: 2
         <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <span class="fw-bold text-info" style="font-size: 2rem;">3</span>
         </div>
-        <h4 class="h6 text-wood mb-2 fw-bold">
+        <h4 class="h4 text-wood mb-2 fw-bold">
           <i class="bi bi-chat-dots-fill me-2"></i>Konsultasi Gratis
         </h4>
         <p class="small text-muted mb-0">
@@ -711,7 +711,7 @@ share_count: 2
         <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <span class="fw-bold text-warning" style="font-size: 2rem;">4</span>
         </div>
-        <h4 class="h6 text-wood mb-2 fw-bold">
+        <h4 class="h4 text-wood mb-2 fw-bold">
           <i class="bi bi-clipboard-check-fill me-2"></i>Konfirmasi Pesanan
         </h4>
         <p class="small text-muted mb-0">
@@ -728,7 +728,7 @@ share_count: 2
         <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <span class="fw-bold text-danger" style="font-size: 2rem;">5</span>
         </div>
-        <h4 class="h6 text-wood mb-2 fw-bold">
+        <h4 class="h4 text-wood mb-2 fw-bold">
           <i class="bi bi-truck me-2"></i>Pengiriman Gratis
         </h4>
         <p class="small text-muted mb-0">
@@ -745,7 +745,7 @@ share_count: 2
         <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px; background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
           <span class="fw-bold text-white" style="font-size: 2rem;">6</span>
         </div>
-        <h4 class="h6 text-wood mb-2 fw-bold">
+        <h4 class="h4 text-wood mb-2 fw-bold">
           <i class="bi bi-cash-coin me-2"></i>Bayar COD
         </h4>
         <p class="small text-muted mb-0">
@@ -760,7 +760,7 @@ share_count: 2
 <div class="card border-0 shadow-lg my-4" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);">
   <div class="card-body text-white text-center py-4">
     <i class="bi bi-whatsapp mb-3" style="font-size: 3.5rem;"></i>
-    <h4 class="h5 fw-bold mb-2">Pesan Sekarang via WhatsApp!</h4>
+    <h3 class="h3 fw-bold mb-2">Pesan Sekarang via WhatsApp!</h3>
     <p class="mb-3 small" style="opacity: 0.9;">
       Klik tombol di bawah atau langsung hubungi <strong>081311400177</strong> untuk info lengkap, cek stok, dan penawaran khusus!
     </p>
@@ -790,7 +790,7 @@ share_count: 2
   <div class="d-flex align-items-center">
     <i class="bi bi-check-circle-fill me-3" style="font-size: 2rem;"></i>
     <div>
-      <h5 class="mb-1 fw-bold">Portfolio Proyek Terpercaya</h5>
+      <h3 class="h3 mb-1 fw-bold">Portfolio Proyek Terpercaya</h3>
       <p class="mb-0 small">Berikut beberapa proyek yang telah kami kerjakan di Jakarta Utara menggunakan kayu dolken gelam berkualitas</p>
     </div>
   </div>
@@ -801,7 +801,7 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header bg-success text-white py-3">
-        <h4 class="h6 mb-0 fw-bold">
+        <h4 class="h4 mb-0 fw-bold">
           <i class="bi bi-house-heart-fill me-2"></i>Proyek Gazebo Rumah di Kelapa Gading
         </h4>
       </div>
@@ -816,20 +816,20 @@ share_count: 2
         <div class="bg-light p-3 rounded mb-3">
           <div class="row g-2">
             <div class="col-6">
-              <small class="text-muted d-block">Ukuran</small>
-              <strong>4x4 meter</strong>
+              <h5 class="h5 text-muted d-block">Ukuran</h5>
+              <h6 class="h6">4x4 meter</h6>
             </div>
             <div class="col-6">
-              <small class="text-muted d-block">Material</small>
-              <strong>48 batang</strong>
+              <h5 class="h5 text-muted d-block">Material</h5>
+              <h6 class="h6">48 batang</h6>
             </div>
             <div class="col-6">
-              <small class="text-muted d-block">Diameter</small>
-              <strong>8-10 cm</strong>
+              <h5 class="h5 text-muted d-block">Diameter</h5>
+              <h6 class="h6">8-10 cm</h6>
             </div>
             <div class="col-6">
-              <small class="text-muted d-block">Waktu</small>
-              <strong>5 hari</strong>
+              <h5 class="h5 text-muted d-block">Waktu</h5>
+              <h6 class="h6">5 hari</h6>
             </div>
           </div>
         </div>
@@ -845,7 +845,7 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header bg-primary text-white py-3">
-        <h4 class="h6 mb-0 fw-bold">
+        <h4 class="h4 mb-0 fw-bold">
           <i class="bi bi-shield-fill-check me-2"></i>Pagar Villa di Pantai Indah Kapuk
         </h4>
       </div>
@@ -860,20 +860,20 @@ share_count: 2
         <div class="bg-light p-3 rounded mb-3">
           <div class="row g-2">
             <div class="col-6">
-              <small class="text-muted d-block">Panjang</small>
-              <strong>25 meter</strong>
+              <h5 class="h5 text-muted d-block">Panjang</h5>
+              <h6 class="h6">25 meter</h6>
             </div>
             <div class="col-6">
-              <small class="text-muted d-block">Tinggi</small>
-              <strong>1.8 meter</strong>
+              <h5 class="h5 text-muted d-block">Tinggi</h5>
+              <h6 class="h6">1.8 meter</h6>
             </div>
             <div class="col-6">
-              <small class="text-muted d-block">Material</small>
-              <strong>180 batang</strong>
+              <h5 class="h5 text-muted d-block">Material</h5>
+              <h6 class="h6">180 batang</h6>
             </div>
             <div class="col-6">
-              <small class="text-muted d-block">Diameter</small>
-              <strong>6-8 cm</strong>
+              <h5 class="h5 text-muted d-block">Diameter</h5>
+              <h6 class="h6">6-8 cm</h6>
             </div>
           </div>
         </div>
@@ -889,7 +889,7 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header bg-warning text-dark py-3">
-        <h4 class="h6 mb-0 fw-bold">
+        <h4 class="h4 mb-0 fw-bold">
           <i class="bi bi-cup-hot-fill me-2"></i>Landscaping Cafe Rustic di Sunter
         </h4>
       </div>
@@ -904,16 +904,16 @@ share_count: 2
         <div class="bg-light p-3 rounded mb-3">
           <div class="row g-2">
             <div class="col-6">
-              <small class="text-muted d-block">Material</small>
-              <strong>120 batang</strong>
+              <h5 class="h5 text-muted d-block">Material</h5>
+              <h6 class="h6">120 batang</h6>
             </div>
             <div class="col-6">
-              <small class="text-muted d-block">Diameter</small>
-              <strong>4-6 cm</strong>
+              <h5 class="h5 text-muted d-block">Diameter</h5>
+              <h6 class="h6">4-6 cm</h6>
             </div>
             <div class="col-12">
-              <small class="text-muted d-block">Finishing</small>
-              <strong>Natural coating</strong>
+              <h5 class="h5 text-muted d-block">Finishing</h5>
+              <h6 class="h6">Natural coating</h6>
             </div>
           </div>
         </div>
@@ -929,7 +929,7 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header bg-info text-white py-3">
-        <h4 class="h6 mb-0 fw-bold">
+        <h4 class="h4 mb-0 fw-bold">
           <i class="bi bi-water me-2"></i>Dermaga Pribadi di Ancol
         </h4>
       </div>
@@ -944,16 +944,16 @@ share_count: 2
         <div class="bg-light p-3 rounded mb-3">
           <div class="row g-2">
             <div class="col-6">
-              <small class="text-muted d-block">Material</small>
-              <strong>85 batang</strong>
+              <h5 class="h5 text-muted d-block">Material</h5>
+              <h6 class="h6">85 batang</h6>
             </div>
             <div class="col-6">
-              <small class="text-muted d-block">Diameter</small>
-              <strong>10-12 cm</strong>
+              <h5 class="h5 text-muted d-block">Diameter</h5>
+              <h6 class="h6">10-12 cm</h6>
             </div>
             <div class="col-12">
-              <small class="text-muted d-block">Aplikasi</small>
-              <strong>Tiang pancang & struktur</strong>
+              <h5 class="h5 text-muted d-block">Aplikasi</h5>
+              <h6 class="h6">Tiang pancang & struktur</h6>
             </div>
           </div>
         </div>
@@ -969,7 +969,7 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header bg-danger text-white py-3">
-        <h4 class="h6 mb-0 fw-bold">
+        <h4 class="h4 mb-0 fw-bold">
           <i class="bi bi-building me-2"></i>Pergola Rooftop Apartment Pluit
         </h4>
       </div>
@@ -984,16 +984,16 @@ share_count: 2
         <div class="bg-light p-3 rounded mb-3">
           <div class="row g-2">
             <div class="col-6">
-              <small class="text-muted d-block">Material</small>
-              <strong>36 batang</strong>
+              <h5 class="h5 text-muted d-block">Material</h5>
+              <h6 class="h6">36 batang</h6>
             </div>
             <div class="col-6">
-              <small class="text-muted d-block">Diameter</small>
-              <strong>8-10 cm</strong>
+              <h5 class="h5 text-muted d-block">Diameter</h5>
+              <h6 class="h6">8-10 cm</h6>
             </div>
             <div class="col-12">
-              <small class="text-muted d-block">Lokasi</small>
-              <strong>Rooftop dengan view laut</strong>
+              <h5 class="h5 text-muted d-block">Lokasi</h5>
+              <h6 class="h6">Rooftop dengan view laut</h6>
             </div>
           </div>
         </div>
@@ -1036,11 +1036,22 @@ share_count: 2
   </div>
 </div>
 
+<div class="alert alert-warning border-0 shadow-sm my-4">
+  <div class="d-flex align-items-center">
+    <i class="bi bi-chat-left-quote-fill me-3" style="font-size: 2rem;"></i>
+    <div>
+      <h3 class="h3 mb-1 fw-bold">Apa Kata Pelanggan Kami?</h3>
+      <p class="mb-0 small">Rating 5 bintang dari pelanggan setia kami di Jakarta Utara</p>
+    </div>
+  </div>
+</div>
+
 <div class="row g-4 my-4">
   <!-- Testimoni 1: Pak Budi -->
   <div class="col-md-4">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-body">
+        <h6 class="h6 small text-muted mb-1">Rating</h6>
         <div class="text-warning mb-3">
           <i class="bi bi-star-fill"></i>
           <i class="bi bi-star-fill"></i>
@@ -1059,8 +1070,8 @@ share_count: 2
             <i class="bi bi-person-fill text-primary" style="font-size: 1.5rem;"></i>
           </div>
           <div>
-            <strong class="d-block">Pak Budi</strong>
-            <small class="text-muted">Kontraktor Kelapa Gading</small>
+            <h4 class="h4 d-block mb-1">Pak Budi</h4>
+            <h5 class="h5 text-muted">Kontraktor Kelapa Gading</h5>
           </div>
         </div>
       </div>
@@ -1071,6 +1082,7 @@ share_count: 2
   <div class="col-md-4">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-body">
+        <h6 class="h6 small text-muted mb-1">Rating</h6>
         <div class="text-warning mb-3">
           <i class="bi bi-star-fill"></i>
           <i class="bi bi-star-fill"></i>
@@ -1089,8 +1101,8 @@ share_count: 2
             <i class="bi bi-person-fill text-success" style="font-size: 1.5rem;"></i>
           </div>
           <div>
-            <strong class="d-block">Bu Santi</strong>
-            <small class="text-muted">Sunter</small>
+            <h4 class="h4 d-block mb-1">Bu Santi</h4>
+            <h5 class="h5 text-muted">Sunter</h5>
           </div>
         </div>
       </div>
@@ -1101,6 +1113,7 @@ share_count: 2
   <div class="col-md-4">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-body">
+        <h6 class="h6 small text-muted mb-1">Rating</h6>
         <div class="text-warning mb-3">
           <i class="bi bi-star-fill"></i>
           <i class="bi bi-star-fill"></i>
@@ -1119,8 +1132,8 @@ share_count: 2
             <i class="bi bi-person-fill text-info" style="font-size: 1.5rem;"></i>
           </div>
           <div>
-            <strong class="d-block">Pak Herman</strong>
-            <small class="text-muted">Pluit</small>
+            <h4 class="h4 d-block mb-1">Pak Herman</h4>
+            <h5 class="h5 text-muted">Pluit</h5>
           </div>
         </div>
       </div>
@@ -1173,7 +1186,7 @@ share_count: 2
         <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
           <i class="bi bi-flower1 text-info" style="font-size: 2.5rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-3 fw-bold">Untuk Dekorasi Ringan</h4>
+        <h3 class="h3 text-wood mb-3 fw-bold">Untuk Dekorasi Ringan</h3>
         <p class="small text-muted mb-3">
           <strong>Pagar, Taman, Dekorasi</strong>
         </p>
@@ -1213,7 +1226,7 @@ share_count: 2
         <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
           <i class="bi bi-house-door text-warning" style="font-size: 2.5rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-3 fw-bold">Untuk Struktur Sedang</h4>
+        <h3 class="h3 text-wood mb-3 fw-bold">Untuk Struktur Sedang</h3>
         <p class="small text-muted mb-3">
           <strong>Gazebo, Pergola, Saung</strong>
         </p>
@@ -1248,7 +1261,7 @@ share_count: 2
         <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
           <i class="bi bi-building text-danger" style="font-size: 2.5rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-3 fw-bold">Untuk Struktur Berat</h4>
+        <h3 class="h3 text-wood mb-3 fw-bold">Untuk Struktur Berat</h3>
         <p class="small text-muted mb-3">
           <strong>Tiang Utama, Pondasi, Dermaga</strong>
         </p>
@@ -1284,7 +1297,7 @@ share_count: 2
       <div class="d-flex align-items-center">
         <i class="bi bi-calculator-fill me-3" style="font-size: 2.5rem;"></i>
         <div>
-          <h5 class="mb-1 fw-bold">Butuh Konsultasi Ukuran?</h5>
+          <h3 class="h3 mb-1 fw-bold">Butuh Konsultasi Ukuran?</h3>
           <p class="mb-0 small">Tim kami siap bantu hitung kebutuhan material untuk proyek Anda di Jakarta Utara</p>
         </div>
       </div>
@@ -1317,10 +1330,10 @@ share_count: 2
   <!-- FAQ 1 -->
   <div class="card border-0 shadow-sm mb-3">
     <div class="card-header bg-white py-3">
-      <h5 class="mb-0">
+      <h3 class="h3 mb-0">
         <i class="bi bi-question-circle-fill text-primary me-2"></i>
         <strong>Berapa minimal pemesanan kayu dolken?</strong>
-      </h5>
+      </h3>
     </div>
     <div class="card-body bg-light">
       <p class="mb-0">
@@ -1335,10 +1348,10 @@ share_count: 2
   <!-- FAQ 2 -->
   <div class="card border-0 shadow-sm mb-3">
     <div class="card-header bg-white py-3">
-      <h5 class="mb-0">
+      <h3 class="h3 mb-0">
         <i class="bi bi-question-circle-fill text-success me-2"></i>
         <strong>Apakah kayu dolken perlu perawatan khusus?</strong>
-      </h5>
+      </h3>
     </div>
     <div class="card-body bg-light">
       <p class="mb-2">
@@ -1354,10 +1367,10 @@ share_count: 2
   <!-- FAQ 3 -->
   <div class="card border-0 shadow-sm mb-3">
     <div class="card-header bg-white py-3">
-      <h5 class="mb-0">
+      <h3 class="h3 mb-0">
         <i class="bi bi-question-circle-fill text-warning me-2"></i>
         <strong>Berapa lama pengiriman ke Jakarta Utara?</strong>
-      </h5>
+      </h3>
     </div>
     <div class="card-body bg-light">
       <p class="mb-2">
@@ -1373,10 +1386,10 @@ share_count: 2
   <!-- FAQ 4 -->
   <div class="card border-0 shadow-sm mb-3">
     <div class="card-header bg-white py-3">
-      <h5 class="mb-0">
+      <h3 class="h3 mb-0">
         <i class="bi bi-question-circle-fill text-info me-2"></i>
         <strong>Apakah bisa custom panjang kayu dolken?</strong>
-      </h5>
+      </h3>
     </div>
     <div class="card-body bg-light">
       <p class="mb-2">
@@ -1394,10 +1407,10 @@ share_count: 2
   <!-- FAQ 5 -->
   <div class="card border-0 shadow-sm mb-3">
     <div class="card-header bg-white py-3">
-      <h5 class="mb-0">
+      <h3 class="h3 mb-0">
         <i class="bi bi-question-circle-fill text-danger me-2"></i>
         <strong>Bagaimana cara mengecek kualitas kayu dolken?</strong>
-      </h5>
+      </h3>
     </div>
     <div class="card-body bg-light">
       <p class="mb-2">
@@ -1419,7 +1432,7 @@ share_count: 2
 <div class="card border-0 shadow-lg my-4" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);">
   <div class="card-body text-white text-center py-4">
     <i class="bi bi-chat-left-dots-fill mb-3" style="font-size: 3rem;"></i>
-    <h4 class="h5 fw-bold mb-2">Masih Ada Pertanyaan?</h4>
+    <h3 class="h3 fw-bold mb-2">Masih Ada Pertanyaan?</h3>
     <p class="mb-3 small" style="opacity: 0.9;">
       Tim kami siap menjawab semua pertanyaan Anda seputar kayu dolken gelam
     </p>
@@ -1478,9 +1491,9 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header bg-primary text-white py-3">
-        <h4 class="h6 mb-0 fw-bold">
+        <h3 class="h3 mb-0 fw-bold">
           <i class="bi bi-book-fill me-2"></i>Sejarah Jakarta Utara
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <p class="mb-3">
@@ -1503,9 +1516,9 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header bg-info text-white py-3">
-        <h4 class="h6 mb-0 fw-bold">
+        <h3 class="h3 mb-0 fw-bold">
           <i class="bi bi-water me-2"></i>Pelabuhan Tanjung Priok: Jantung Ekonomi
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <p class="mb-3">
@@ -1535,9 +1548,9 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header bg-success text-white py-3">
-        <h4 class="h6 mb-0 fw-bold">
+        <h3 class="h3 mb-0 fw-bold">
           <i class="bi bi-building me-2"></i>Pusat Bisnis & Komersial Modern
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <p class="mb-3">
@@ -1565,9 +1578,9 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header bg-warning text-dark py-3">
-        <h4 class="h6 mb-0 fw-bold">
+        <h3 class="h3 mb-0 fw-bold">
           <i class="bi bi-tools me-2"></i>Pembangunan & Infrastruktur
-        </h4>
+        </h3>
       </div>
       <div class="card-body">
         <p class="mb-3">
@@ -1599,9 +1612,9 @@ share_count: 2
   <div class="card-body text-white py-4">
     <div class="row align-items-center">
       <div class="col-md-8">
-        <h4 class="h5 fw-bold mb-3">
+        <h3 class="h3 fw-bold mb-3">
           <i class="bi bi-lightbulb-fill me-2"></i>Kenapa Kayu Dolken Penting untuk Jakarta Utara?
-        </h4>
+        </h3>
         <p class="mb-2" style="opacity: 0.95;">
           Dengan karakteristik wilayah Jakarta Utara yang <strong>dekat dengan laut, kelembaban tinggi, dan cuaca tropis</strong>, kayu dolken gelam menjadi pilihan ideal karena:
         </p>
@@ -1625,7 +1638,7 @@ share_count: 2
       <div class="d-flex align-items-center">
         <i class="bi bi-telephone-fill me-3" style="font-size: 2.5rem;"></i>
         <div>
-          <h5 class="mb-1 fw-bold">Siap Melayani Seluruh Jakarta Utara!</h5>
+          <h3 class="h3 mb-1 fw-bold">Siap Melayani Seluruh Jakarta Utara!</h3>
           <p class="mb-0 small">Pengiriman gratis ke Kelapa Gading, Sunter, Pluit, PIK, Ancol, dan seluruh wilayah Jakarta Utara</p>
         </div>
       </div>
@@ -1657,10 +1670,10 @@ share_count: 2
 
 <div class="card border-0 shadow-sm my-4">
   <div class="card-body p-4">
-    <h5 class="fw-bold mb-3 text-center">
+    <h3 class="h3 fw-bold mb-3 text-center">
       <i class="bi bi-hand-thumbs-up-fill text-success me-2"></i>
       Siap memesan kayu dolken untuk proyek di Jakarta Utara?
-    </h5>
+    </h3>
     <p class="text-center text-muted mb-4">Hubungi <strong>081311400177</strong> sekarang juga untuk:</p>
 
     <div class="row g-3 mb-4">
@@ -1741,9 +1754,9 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100">
       <div class="card-header bg-primary text-white py-3">
-        <h5 class="mb-0">
+        <h3 class="h3 mb-0">
           <i class="bi bi-briefcase-fill me-2"></i>Melayani Semua Kebutuhan
-        </h5>
+        </h3>
       </div>
       <div class="card-body">
         <ul class="list-unstyled mb-0">
@@ -1776,9 +1789,9 @@ share_count: 2
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100">
       <div class="card-header bg-success text-white py-3">
-        <h5 class="mb-0">
+        <h3 class="h3 mb-0">
           <i class="bi bi-award-fill me-2"></i>Keunggulan Layanan Kami
-        </h5>
+        </h3>
       </div>
       <div class="card-body">
         <div class="mb-3">
@@ -1805,7 +1818,7 @@ share_count: 2
 <div class="card border-0 shadow-lg my-4" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">
   <div class="card-body text-white text-center py-5">
     <i class="bi bi-chat-dots-fill mb-3" style="font-size: 4rem;"></i>
-    <h3 class="h4 fw-bold mb-3">Jangan ragu untuk bertanya!</h3>
+    <h3 class="h3 fw-bold mb-3">Jangan ragu untuk bertanya!</h3>
     <p class="mb-4" style="opacity: 0.9; font-size: 1.1rem;">
       Konsultasi gratis tanpa biaya - Tim kami siap membantu Anda
     </p>
