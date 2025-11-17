@@ -1,0 +1,109 @@
+{% comment %}
+============================================================================
+Global Schema: WebSite + SiteNavigationElement
+============================================================================
+
+@file        schema--global.html
+@path        _includes/schema--global.html
+@type        Schema (global component)
+@description Global schema with @graph containing WebSite and Navigation
+@author      arisciwek
+
+This schema provides the foundation for all pages with:
+- WebSite schema (site-wide information)
+- SiteNavigationElement (main navigation structure)
+
+Combined in a single @graph for better Google Rich Results recognition.
+
+Usage:
+------
+Include in head.html or page.html (once per page):
+{% include schema--global.html %}
+
+Benefits:
+---------
+- WebSite + SiteNavigationElement in single @graph (Google best practice)
+- Better Rich Results detection
+- Improved SEO and structured data coverage
+- Single source of truth for global schema
+
+============================================================================
+{% endcomment %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#website",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "name": "{{ site.title }}",
+      "description": "{{ site.description }}",
+      "inLanguage": "{{ site.lang | default: 'id' }}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.business.name }}",
+        "@id": "{{ site.url }}{{ site.baseurl }}/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#organization",
+      "name": "{{ site.business.name }}",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}{{ site.baseurl }}/assets/images/logo.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "{{ site.business.phone }}",
+        "contactType": "Customer Service",
+        "areaServed": "ID",
+        "availableLanguage": "Indonesian"
+      },
+      "sameAs": [
+        "{{ site.business.whatsapp_url }}"
+      ]
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "{{ site.url }}{{ site.baseurl }}/#navigation",
+      "name": "Main Navigation",
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}{{ site.baseurl }}/#beranda",
+          "name": "Beranda",
+          "url": "{{ site.url }}{{ site.baseurl }}/"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}{{ site.baseurl }}/product#produk",
+          "name": "Produk",
+          "url": "{{ site.url }}{{ site.baseurl }}/product"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}{{ site.baseurl }}/blog#blog",
+          "name": "Blog",
+          "url": "{{ site.url }}{{ site.baseurl }}/blog"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}{{ site.baseurl }}/tentang#tentang",
+          "name": "Tentang Kami",
+          "url": "{{ site.url }}{{ site.baseurl }}/tentang"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}{{ site.baseurl }}/kontak#kontak",
+          "name": "Kontak",
+          "url": "{{ site.url }}{{ site.baseurl }}/kontak"
+        }
+      ]
+    }
+  ]
+}
+</script>

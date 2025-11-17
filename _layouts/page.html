@@ -47,6 +47,9 @@ page.html (this file - site wrapper)
 {% include head.html %}
 
 <body>
+  <!-- Global Schema: WebSite + Navigation (auto-included for all pages) -->
+  {% include schema--global.html %}
+
   <!-- WebPage Schema (auto-included for all pages using this layout) -->
   {% unless page.skip_page_schema %}
     {% include schema--page.html %}
