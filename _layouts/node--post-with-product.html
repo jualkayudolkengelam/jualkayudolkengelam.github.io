@@ -205,20 +205,5 @@ page.html (wrapper with header/footer)
 
 <!-- Initialize Carousel -->
 {% if page.images %}
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var carouselElement = document.getElementById('postCarousel');
-  if (carouselElement && typeof bootstrap !== 'undefined') {
-    // Initialize carousel manually
-    var carousel = new bootstrap.Carousel(carouselElement, {
-      interval: 3000,
-      ride: 'carousel',
-      pause: 'hover',
-      wrap: true,
-      keyboard: true,
-      touch: true
-    });
-  }
-});
-</script>
+<script src="{{ '/assets/js/post-carousel.js' | relative_url }}" defer></script>
 {% endif %}
