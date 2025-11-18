@@ -142,19 +142,19 @@ page.html (wrapper with header/footer)
     {% endif %}
 
     <!-- Article Content -->
-    <div class="post-content mb-5">
+    <section id="article-content" class="post-content mb-5">
       {{ content }}
-    </div>
+    </section>
 
     <!-- Related Products Section (Part of article content) -->
-    <section class="article-related-products mt-5">
+    <section id="related-products" class="article-related-products mt-5">
       {% include block--related-product-last-modified.html %}
     </section>
   </article>
 
 
   <!-- CTA Section -->
-  <section class="cta-section mt-5">
+  <section id="cta-konsultasi" class="cta-section mt-5">
     <div class="card border-0 bg-wood text-white shadow-lg">
       <div class="card-body p-5 text-center">
         <h2 class="h3 mb-3">Butuh Konsultasi?</h2>

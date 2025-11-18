@@ -197,7 +197,7 @@ share_count: 1
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
         <i class="bi bi-tag-fill mb-2" style="font-size: 2.5rem;"></i>
-        <h2 class="h2 mb-0 fw-bold text-white">💰 Daftar Harga Kayu Dolken Semarang</h2>
+        <h3 class="h2 mb-0 fw-bold text-white">💰 Daftar Harga Kayu Dolken Semarang</h3>
         <p class="mb-0 mt-2 small" style="opacity: 0.85;">
           <i class="bi bi-truck me-1"></i>
   Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengiriman gratis:
