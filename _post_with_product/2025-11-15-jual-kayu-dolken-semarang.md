@@ -77,6 +77,34 @@ testimoni_komersial:
     judul: "Review Pelayanan Profesional"
     komentar: "Pelayanan profesional, COD tersedia jadi aman. Terima kasih untuk pengiriman gratis ke Semarang Selatan!"
     warna: "info"
+tips_ukuran:
+  - kategori: "Dekorasi Ringan"
+    aplikasi: "Pagar, Taman"
+    diameter: "2-3 cm / 4-6 cm"
+    keunggulan:
+      - "Lebih ekonomis dan mudah dipasang"
+      - "Estetika lebih ringan dan elegan"
+      - "Cocok untuk taman minimalis dan pagar residential"
+    warna: "success"
+    icon: "bi-tree"
+  - kategori: "Struktur Sedang"
+    aplikasi: "Gazebo, Pergola"
+    diameter: "6-8 cm"
+    keunggulan:
+      - "Balance antara kekuatan dan harga"
+      - "Paling populer untuk residential dan cafe"
+      - "Ideal untuk gazebo outdoor dan pergola taman"
+    warna: "primary"
+    icon: "bi-house-fill"
+  - kategori: "Struktur Berat"
+    aplikasi: "Tiang Utama, Pondasi"
+    diameter: "8-10 cm / 10-12 cm"
+    keunggulan:
+      - "Kekuatan maksimal untuk beban berat"
+      - "Tahan beban berat jangka panjang"
+      - "Perfect untuk proyek komersial dan bangunan permanen"
+    warna: "danger"
+    icon: "bi-building-fill"
 like_count: 3
 comment_count: 0
 share_count: 1
@@ -1070,143 +1098,8 @@ share_count: 1
   {% include block--testimoni-pelanggan.html %}
 </section>
 <section id="tips-memilih-ukuran">
-  <div class="my-5">
-    <div class="card border-0 shadow-lg">
-      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
-        <i class="bi bi-lightbulb-fill mb-2" style="font-size: 2.5rem;"></i>
-        <h2 class="h2 mb-0 fw-bold text-white">Tips Memilih Ukuran Kayu Dolken</h2>
-        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
-          <i class="bi bi-ruler me-1"></i>
-          Pilih diameter yang tepat sesuai kebutuhan proyek
-          <i class="bi bi-ruler ms-1"></i>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Panduan Pemilihan Berdasarkan Jenis Proyek -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-diagram-3 text-success me-2"></i>Panduan Pemilihan Berdasarkan Jenis Proyek
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Pilih diameter yang tepat untuk hasil maksimal</p>
-      </div>
-    </div>
-
-    <div class="row g-4">
-      <!-- H4: Dekorasi Ringan -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-success text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-tree me-2" style="font-size: 1.5rem;"></i>
-              <h4 class="h5 mb-0 fw-bold">Dekorasi Ringan</h4>
-            </div>
-            <small style="opacity: 0.85;">Pagar, Taman</small>
-          </div>
-          <div class="card-body">
-            <!-- H5: Diameter Rekomendasi -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-rulers me-1"></i>Diameter Rekomendasi
-            </h5>
-            <div class="bg-success bg-opacity-10 rounded p-3 mb-3 text-center">
-              <h6 class="text-success mb-0 fw-bold">2-3 cm / 4-6 cm</h6>
-            </div>
-
-            <!-- H5: Keunggulan dan Aplikasi -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-star me-1"></i>Keunggulan dan Aplikasi
-            </h5>
-            <ul class="list-unstyled small mb-0">
-              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Lebih ekonomis dan mudah dipasang</li>
-              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Estetika lebih ringan dan elegan</li>
-              <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Cocok untuk taman minimalis dan pagar residential</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- H4: Struktur Sedang -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-primary text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-house-fill me-2" style="font-size: 1.5rem;"></i>
-              <h4 class="h5 mb-0 fw-bold">Struktur Sedang</h4>
-            </div>
-            <small style="opacity: 0.85;">Gazebo, Pergola</small>
-          </div>
-          <div class="card-body">
-            <!-- H5: Diameter Rekomendasi -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-rulers me-1"></i>Diameter Rekomendasi
-            </h5>
-            <div class="bg-primary bg-opacity-10 rounded p-3 mb-3 text-center">
-              <h6 class="text-primary mb-0 fw-bold">6-8 cm</h6>
-            </div>
-
-            <!-- H5: Keunggulan dan Aplikasi -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-star me-1"></i>Keunggulan dan Aplikasi
-            </h5>
-            <ul class="list-unstyled small mb-0">
-              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Balance antara kekuatan dan harga</li>
-              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Paling populer untuk residential dan cafe</li>
-              <li class="mb-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>Ideal untuk gazebo outdoor dan pergola taman</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- H4: Struktur Berat -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-danger text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-building-fill me-2" style="font-size: 1.5rem;"></i>
-              <h4 class="h5 mb-0 fw-bold">Struktur Berat</h4>
-            </div>
-            <small style="opacity: 0.85;">Tiang Utama, Pondasi</small>
-          </div>
-          <div class="card-body">
-            <!-- H5: Diameter Rekomendasi -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-rulers me-1"></i>Diameter Rekomendasi
-            </h5>
-            <div class="bg-danger bg-opacity-10 rounded p-3 mb-3 text-center">
-              <h6 class="text-danger mb-0 fw-bold">8-10 cm / 10-12 cm</h6>
-            </div>
-
-            <!-- H5: Keunggulan dan Aplikasi -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-star me-1"></i>Keunggulan dan Aplikasi
-            </h5>
-            <ul class="list-unstyled small mb-0">
-              <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i>Kekuatan maksimal untuk beban berat</li>
-              <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i>Tahan beban berat jangka panjang</li>
-              <li class="mb-0"><i class="bi bi-check-circle-fill text-danger me-2"></i>Perfect untuk proyek komersial dan bangunan permanen</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card border-0 shadow-sm my-4">
-    <div class="card-body text-center py-4" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);">
-      <i class="bi bi-headset text-primary mb-3" style="font-size: 2.5rem;"></i>
-      <h5 class="fw-bold text-primary mb-2">Butuh Konsultasi?</h5>
-      <p class="text-muted mb-3">Tim kami siap bantu hitung kebutuhan kayu dolken untuk proyek Anda!</p>
-      <a href="https://wa.me/6281311400177?text=Halo,%20saya%20butuh%20konsultasi%20memilih%20ukuran%20kayu%20dolken" class="btn btn-primary px-4" target="_blank">
-        <i class="bi bi-telephone-fill me-2"></i>Hubungi 081311400177
-      </a>
-    </div>
-  </div>
+  {% include block--tips-memilih-ukuran-kayu-dolken.html %}
 </section>
-
-<section id="faq-kayu-dolken">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);">

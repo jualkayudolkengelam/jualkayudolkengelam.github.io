@@ -1,0 +1,131 @@
+{% comment %}
+  ============================================================================
+  Tips Memilih Ukuran Kayu Dolken Block Component
+  ============================================================================
+
+  @file        _includes/block--tips-memilih-ukuran-kayu-dolken.html
+  @description Reusable component for size selection tips with project categories
+
+  @version     1.0.0
+  @date        2025-11-18
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading for SEO
+  - 3 project categories with size recommendations
+  - Dynamic advantages list for each category
+  - Color-coded cards (success, primary, danger)
+  - Consultation CTA with WhatsApp link
+
+  Parameters:
+  -----------
+  - page.tips_ukuran: Array of 3 size tips
+    Each item:
+    - kategori: Category name (e.g., "Dekorasi Ringan")
+    - aplikasi: Application type (e.g., "Pagar, Taman")
+    - diameter: Recommended diameter (e.g., "2-3 cm / 4-6 cm")
+    - keunggulan: Array of 3 advantages
+    - warna: Card color (success, primary, danger)
+    - icon: Bootstrap icon class
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  tips_ukuran:
+    - kategori: "Dekorasi Ringan"
+      aplikasi: "Pagar, Taman"
+      diameter: "2-3 cm / 4-6 cm"
+      keunggulan:
+        - "Lebih ekonomis dan mudah dipasang"
+        - "Estetika lebih ringan dan elegan"
+        - "Cocok untuk taman minimalis dan pagar residential"
+      warna: "success"
+      icon: "bi-tree"
+  ---
+
+  In content:
+  <section id="tips-memilih-ukuran">
+    {% include block--tips-memilih-ukuran-kayu-dolken.html %}
+  </section>
+
+  ============================================================================
+{% endcomment %}
+
+  <!-- Header Section -->
+  <div class="my-5">
+    <div class="card border-0 shadow-lg">
+      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
+        <i class="bi bi-lightbulb-fill mb-2" style="font-size: 2.5rem;"></i>
+        <h2 class="h2 mb-0 fw-bold text-white">Tips Memilih Ukuran Kayu Dolken</h2>
+        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+          <i class="bi bi-ruler me-1"></i>
+          Pilih diameter yang tepat sesuai kebutuhan proyek
+          <i class="bi bi-ruler ms-1"></i>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {% if page.tips_ukuran %}
+  <!-- H3: Panduan Pemilihan Berdasarkan Jenis Proyek -->
+  <div class="my-4">
+    <div class="d-flex align-items-center mb-3">
+      <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+        <h3 class="h4 mb-0 text-wood fw-bold">
+          <i class="bi bi-diagram-3 text-success me-2"></i>Panduan Pemilihan Berdasarkan Jenis Proyek
+        </h3>
+        <p class="small text-muted mb-0 mt-1">Pilih diameter yang tepat untuk hasil maksimal</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      {% for tip in page.tips_ukuran %}
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100 hover-lift">
+          <div class="card-header bg-{{ tip.warna | default: 'primary' }} text-white">
+            <div class="d-flex align-items-center">
+              <i class="bi {{ tip.icon | default: 'bi-building' }} me-2" style="font-size: 1.5rem;"></i>
+              <h4 class="h5 mb-0 fw-bold">{{ tip.kategori }}</h4>
+            </div>
+            <small style="opacity: 0.85;">{{ tip.aplikasi }}</small>
+          </div>
+          <div class="card-body">
+            <!-- H5: Diameter Rekomendasi -->
+            <h5 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-rulers me-1"></i>Diameter Rekomendasi
+            </h5>
+            <div class="bg-{{ tip.warna | default: 'primary' }} bg-opacity-10 rounded p-3 mb-3 text-center">
+              <h6 class="text-{{ tip.warna | default: 'primary' }} mb-0 fw-bold">{{ tip.diameter }}</h6>
+            </div>
+
+            <!-- H5: Keunggulan dan Aplikasi -->
+            <h5 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-star me-1"></i>Keunggulan dan Aplikasi
+            </h5>
+            <ul class="list-unstyled small mb-0">
+              {% for keunggulan in tip.keunggulan %}
+              <li class="{% if forloop.last %}mb-0{% else %}mb-2{% endif %}">
+                <i class="bi bi-check-circle-fill text-{{ tip.warna | default: 'primary' }} me-2"></i>{{ keunggulan }}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="card border-0 shadow-sm my-4">
+    <div class="card-body text-center py-4" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);">
+      <i class="bi bi-headset text-primary mb-3" style="font-size: 2.5rem;"></i>
+      <h5 class="fw-bold text-primary mb-2">Butuh Konsultasi?</h5>
+      <p class="text-muted mb-3">Tim kami siap bantu hitung kebutuhan kayu dolken untuk proyek Anda!</p>
+      <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20butuh%20konsultasi%20memilih%20ukuran%20kayu%20dolken" class="btn btn-primary px-4" target="_blank">
+        <i class="bi bi-telephone-fill me-2"></i>Hubungi {{ site.business.phone }}
+      </a>
+    </div>
+  </div>
