@@ -40,6 +40,7 @@ Pembagian menjadi 2 tahap bertujuan agar AI bisa menghasilkan lebih banyak tulis
 - **Total: 2,500-3,000 kata**
 
 **Kunci Sukses:**
+- ✅ Keyword Jual Kayu Dolken [di kota tujuan jika terkait kota] muncul 8-10x
 - ✅ Nomor 081311400177 muncul 8-10x
 - ✅ Product list include setelah section 2
 - ✅ Format markdown simple (NO HTML/CSS)
@@ -60,8 +61,8 @@ Pembagian menjadi 2 tahap bertujuan agar AI bisa menghasilkan lebih banyak tulis
 
 **Step 1: Rename di folder sumber (buat nama final)**
 ```bash
-# Contoh path: /home/mkt01/Documents/ANDRI/Dolken/foto/WhatsApp Unknown 2025-11-15 at 09.05.21/
-cd /home/mkt01/Documents/ANDRI/Dolken/foto/[folder-name]/
+# pindah folder ke folder sumber foto
+cd [FOLDER_SUMBER]
 
 # Rename ke nama final yang akan dipakai
 mv "WhatsApp Image 2025-08-30 at 15.35.22.jpeg" "[slug]-001.jpeg"
@@ -79,10 +80,10 @@ mkdir -p assets/images/posts/[slug]
 **Step 3: Move ke Jekyll (sekaligus hapus dari source)**
 ```bash
 # Move (bukan copy) - file langsung pindah dari source ke Jekyll
-mv /home/mkt01/Documents/ANDRI/Dolken/foto/[folder-name]/[slug]-001.jpeg assets/images/posts/[slug]/[slug]-001.jpeg
-mv /home/mkt01/Documents/ANDRI/Dolken/foto/[folder-name]/[slug]-002.jpeg assets/images/posts/[slug]/[slug]-002.jpeg
-mv /home/mkt01/Documents/ANDRI/Dolken/foto/[folder-name]/[slug]-003.jpeg assets/images/posts/[slug]/[slug]-003.jpeg
-mv /home/mkt01/Documents/ANDRI/Dolken/foto/[folder-name]/[slug]-004.jpeg assets/images/posts/[slug]/[slug]-004.jpeg
+mv [Folder sumber foto]/[folder-name]/[slug]-001.jpeg assets/images/posts/[slug]/[slug]-001.jpeg
+mv [Folder sumber foto]/[folder-name]/[slug]-002.jpeg assets/images/posts/[slug]/[slug]-002.jpeg
+mv [Folder sumber foto]/[folder-name]/[slug]-003.jpeg assets/images/posts/[slug]/[slug]-003.jpeg
+mv [Folder sumber foto]/[folder-name]/[slug]-004.jpeg assets/images/posts/[slug]/[slug]-004.jpeg
 ```
 
 **Step 4: Convert ke WebP**
@@ -154,51 +155,6 @@ share_count: 8
      - `agent`: User yang melakukan action
      - `target`: URL artikel
 
-**Contoh Schema.org JSON-LD di Layout:**
-```liquid
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "{{ page.title }}",
-  "image": "{{ page.image | absolute_url }}",
-  "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{{ page.date | date_to_xmlschema }}",
-  "author": {
-    "@type": "Person",
-    "name": "{{ page.author }}",
-    "url": "{{ page.author_url | default: site.url }}"
-  },
-  {% if page.like_count or page.comment_count or page.share_count %}
-  "interactionStatistic": [
-    {% if page.like_count %}
-    {
-      "@type": "InteractionCounter",
-      "interactionType": "https://schema.org/LikeAction",
-      "userInteractionCount": {{ page.like_count }}
-    }{% if page.comment_count or page.share_count %},{% endif %}
-    {% endif %}
-    {% if page.comment_count %}
-    {
-      "@type": "InteractionCounter",
-      "interactionType": "https://schema.org/CommentAction",
-      "userInteractionCount": {{ page.comment_count }}
-    }{% if page.share_count %},{% endif %}
-    {% endif %}
-    {% if page.share_count %}
-    {
-      "@type": "InteractionCounter",
-      "interactionType": "https://schema.org/ShareAction",
-      "userInteractionCount": {{ page.share_count }}
-    }
-    {% endif %}
-  ],
-  {% endif %}
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ page.url | absolute_url }}"
-  }
-}
-```
 
 **Checklist Schema.org Like:**
 - [ ] Tambahkan `like_count`, `comment_count`, `share_count` di front matter (opsional)
@@ -319,6 +275,8 @@ share_count: 8
   - Kekuatan maksimal
   - Tahan beban berat jangka panjang
 
+  ** Berikan variasi kata untuk bagian ini**
+
   **Butuh Konsultasi?** Hubungi **081311400177** - tim kami siap bantu hitung kebutuhan Anda!
   ```
 - [ ] **10. FAQ Singkat (300-400 kata)** - 5 pertanyaan umum dengan format:
@@ -362,6 +320,8 @@ share_count: 8
   ✅ Rekomendasi ukuran sesuai kebutuhan
 
   ✅ Harga nego untuk pembelian partai besar
+
+  ** item checklist ini tidak selalu harus sama, agar tidak banyak duplicate content**
 
   **Jam Operasional:** Senin - Sabtu, 08:00 - 17:00 WIB (WhatsApp 24/7)
 
