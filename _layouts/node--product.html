@@ -140,33 +140,38 @@ by page--product.html wrapper, NOT in this node template.
         <p class="small text-success"><i class="bi bi-check-circle-fill me-1"></i> Harga sudah termasuk ongkir</p>
       </div>
 
-      <!-- Product Features -->
-      <div class="card border-0 shadow-sm mb-4">
-        <div class="card-body">
-          <h5 class="text-wood mb-3"><i class="bi bi-info-circle me-2"></i>Spesifikasi</h5>
+      <!-- H2: Informasi Produk -->
+      <div class="mb-4">
+        <h2 class="visually-hidden">Informasi Produk</h2>
+
+        <!-- H3: Spesifikasi -->
+        <div class="card border-0 shadow-sm mb-4">
+          <div class="card-body">
+            <h3 class="h5 text-wood mb-3"><i class="bi bi-info-circle me-2"></i>Spesifikasi</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2"><strong>Diameter:</strong> {{ page.diameter }}</li>
+              <li class="mb-2"><strong>Panjang:</strong> 4 meter</li>
+              <li class="mb-2"><strong>Material:</strong> Kayu Gelam Asli</li>
+              <li class="mb-2"><strong>SKU:</strong> {{ page.sku }}</li>
+              <li class="mb-2"><strong>Stok:</strong> <span class="text-success">Ready Stock</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- H3: Keunggulan -->
+        {% if page.features %}
+        <div class="mb-4">
+          <h3 class="h5 text-wood mb-3">Keunggulan:</h3>
           <ul class="list-unstyled">
-            <li class="mb-2"><strong>Diameter:</strong> {{ page.diameter }}</li>
-            <li class="mb-2"><strong>Panjang:</strong> 4 meter</li>
-            <li class="mb-2"><strong>Material:</strong> Kayu Gelam Asli</li>
-            <li class="mb-2"><strong>SKU:</strong> {{ page.sku }}</li>
-            <li class="mb-2"><strong>Stok:</strong> <span class="text-success">Ready Stock</span></li>
+            {% for feature in page.features %}
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>{{ feature }}
+            </li>
+            {% endfor %}
           </ul>
         </div>
+        {% endif %}
       </div>
-
-      <!-- Features List -->
-      {% if page.features %}
-      <div class="mb-4">
-        <h5 class="text-wood mb-3">Keunggulan:</h5>
-        <ul class="list-unstyled">
-          {% for feature in page.features %}
-          <li class="mb-2">
-            <i class="bi bi-check-circle-fill text-success me-2"></i>{{ feature }}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
 
       <!-- CTA Buttons -->
       <div class="d-grid gap-2">
@@ -182,13 +187,13 @@ by page--product.html wrapper, NOT in this node template.
     </div>
   </div>
 
-  <!-- Product Description -->
+  <!-- H2: Deskripsi Produk -->
   {% if content != '' %}
   <div class="row mt-5">
     <div class="col-12">
       <div class="card border-0 shadow-sm">
         <div class="card-header bg-wood text-white">
-          <h4 class="mb-0"><i class="bi bi-file-text me-2"></i>Deskripsi Produk</h4>
+          <h2 class="h4 mb-0"><i class="bi bi-file-text me-2"></i>Deskripsi Produk</h2>
         </div>
         <div class="card-body p-4">
           <div class="product-description">
