@@ -149,6 +149,18 @@ faq_pengiriman:
   - pertanyaan: "Berapa lama pengiriman ke Semarang?"
     jawaban: "Untuk area Kota Semarang, pengiriman biasanya 1-3 hari kerja setelah konfirmasi pesanan. Pengiriman gratis untuk seluruh wilayah Semarang termasuk Tembalang, Banyumanik, Kota Lama, Simpang Lima, Pedurungan, dan area lainnya. Kami gunakan armada terpercaya untuk memastikan barang sampai dengan aman."
     icon: "bi-truck"
+relevansi_kayu_dolken:
+  karakteristik_iklim: "Dengan karakteristik Semarang sebagai <strong>kota pesisir</strong> dengan kelembaban tinggi, cuaca tropis, dan potensi rob di area pantai, kayu dolken gelam menjadi pilihan ideal untuk konstruksi outdoor."
+  keunggulan_lokal: "Sifat kayu yang <strong>tahan air, tahan rayap, dan tahan cuaca ekstrem</strong> sangat cocok untuk aplikasi seperti:"
+  aplikasi_lokal:
+    - nama: "Gazebo di area Kota Lama"
+      icon: "bi-check-circle-fill"
+    - nama: "Pergola cafe di Simpang Lima"
+      icon: "bi-check-circle-fill"
+    - nama: "Pagar villa di Tembalang"
+      icon: "bi-check-circle-fill"
+    - nama: "Landscaping Pelabuhan Tanjung Emas"
+      icon: "bi-check-circle-fill"
 like_count: 3
 comment_count: 0
 share_count: 1
@@ -1015,6 +1027,7 @@ share_count: 1
       </a>
     </div>
   </div>
+  
 </section>
 
 <section id="testimoni-pelanggan">
@@ -1029,7 +1042,7 @@ share_count: 1
   {% include block--faq-kayu-dolken.html %}
 </section>
 
-<section id="tentang-semarang">
+<section id="tentang-kota-kami">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);">
@@ -1180,54 +1193,8 @@ share_count: 1
   </div>
 </section>
 
-<section id ="relevansi-kayu-dolken">
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-warning bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h2 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-tree-fill text-warning me-2"></i>Relevansi Kayu Dolken untuk Semarang
-        </h2>
-        <p class="small text-muted mb-0 mt-1">Mengapa kayu dolken gelam menjadi pilihan tepat untuk iklim dan karakteristik Kota Semarang</p>
-      </div>
-    </div>
-
-    <!-- H3: Solusi untuk Kondisi Pesisir Semarang -->
-    <div class="card border-0 shadow-lg" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">
-      <div class="card-header bg-warning text-white">
-        <div class="d-flex align-items-center">
-          <i class="bi bi-water me-2" style="font-size: 1.5rem;"></i>
-          <h3 class="h4 mb-0 fw-bold">Solusi untuk Kondisi Pesisir Semarang</h3>
-        </div>
-      </div>
-      <div class="card-body py-4">
-        <!-- H4: Karakteristik Iklim Semarang -->
-        <h4 class="h5 fw-bold text-wood mb-2">
-          <i class="bi bi-cloud-rain me-1"></i>Karakteristik Iklim Semarang
-        </h4>
-        <p class="small mb-3">Dengan karakteristik Semarang sebagai <strong>kota pesisir</strong> dengan kelembaban tinggi, cuaca tropis, dan potensi rob di area pantai, kayu dolken gelam menjadi pilihan ideal untuk konstruksi outdoor.</p>
-
-        <!-- H4: Keunggulan untuk Aplikasi Lokal -->
-        <h4 class="h5 fw-bold text-wood mb-2">
-          <i class="bi bi-shield-check me-1"></i>Keunggulan untuk Aplikasi Lokal
-        </h4>
-        <p class="small mb-3">Sifat kayu yang <strong>tahan air, tahan rayap, dan tahan cuaca ekstrem</strong> sangat cocok untuk aplikasi seperti:</p>
-        <div class="row g-2">
-          <div class="col-md-6">
-            <ul class="list-unstyled small mb-0">
-              <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Gazebo di area Kota Lama</li>
-              <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Pergola cafe di Simpang Lima</li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <ul class="list-unstyled small mb-0">
-              <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Pagar villa di Tembalang</li>
-              <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Landscaping Pelabuhan Tanjung Emas</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section id="relevansi-kayu-dolken">
+  {% include block--relevansi-kayu-dolken.html %}
 </section>
 
 <section id="hubungi-kami">

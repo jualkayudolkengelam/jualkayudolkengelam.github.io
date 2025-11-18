@@ -1,0 +1,114 @@
+{% comment %}
+  ============================================================================
+  Relevansi Kayu Dolken Block Component
+  ============================================================================
+
+  @file        _includes/block--relevansi-kayu-dolken.html
+  @description Reusable component for relevance section showing why wooden poles suit local climate
+
+  @version     1.0.0
+  @date        2025-11-19
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading for SEO with dynamic city
+  - Climate characteristics section
+  - Local application advantages
+  - Dynamic application examples (4 items)
+  - Flexible array structure
+
+  Parameters:
+  -----------
+  - page.nama_kota: City name for dynamic content (required)
+  - page.relevansi_kayu_dolken: Object containing:
+    - karakteristik_iklim: Climate description text
+    - keunggulan_lokal: Advantages description text
+    - aplikasi_lokal: Array of 4 local applications
+      Each with: nama, icon (optional)
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  nama_kota: Semarang
+  relevansi_kayu_dolken:
+    karakteristik_iklim: "Dengan karakteristik Semarang sebagai kota pesisir..."
+    keunggulan_lokal: "Sifat kayu yang tahan air, tahan rayap..."
+    aplikasi_lokal:
+      - nama: "Gazebo di area Kota Lama"
+        icon: "bi-building"
+      - nama: "Pergola cafe di Simpang Lima"
+        icon: "bi-shop"
+      - nama: "Pagar villa di Tembalang"
+        icon: "bi-house"
+      - nama: "Landscaping Pelabuhan Tanjung Emas"
+        icon: "bi-water"
+  ---
+
+  In content:
+  <section id="relevansi-kayu-dolken">
+    {% include block--relevansi-kayu-dolken.html %}
+  </section>
+
+  ============================================================================
+{% endcomment %}
+
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-warning bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h2 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-tree-fill text-warning me-2"></i>Relevansi Kayu Dolken untuk{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}
+      </h2>
+      <p class="small text-muted mb-0 mt-1">Mengapa kayu dolken gelam menjadi pilihan tepat untuk iklim dan karakteristik{% if page.nama_kota %} Kota {{ page.nama_kota }}{% endif %}</p>
+    </div>
+  </div>
+
+  {% if page.relevansi_kayu_dolken %}
+  <!-- H3: Solusi untuk Kondisi Pesisir/Iklim -->
+  <div class="card border-0 shadow-lg" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">
+    <div class="card-header bg-warning text-white">
+      <div class="d-flex align-items-center">
+        <i class="bi bi-water me-2" style="font-size: 1.5rem;"></i>
+        <h3 class="h4 mb-0 fw-bold">Solusi untuk Kondisi{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}</h3>
+      </div>
+    </div>
+    <div class="card-body py-4">
+      <!-- H4: Karakteristik Iklim -->
+      <h4 class="h5 fw-bold text-wood mb-2">
+        <i class="bi bi-cloud-rain me-1"></i>Karakteristik Iklim{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}
+      </h4>
+      <p class="small mb-3">{{ page.relevansi_kayu_dolken.karakteristik_iklim | default: "Dengan karakteristik iklim tropis dengan kelembaban tinggi, kayu dolken gelam menjadi pilihan ideal untuk konstruksi outdoor." }}</p>
+
+      <!-- H4: Keunggulan untuk Aplikasi Lokal -->
+      <h4 class="h5 fw-bold text-wood mb-2">
+        <i class="bi bi-shield-check me-1"></i>Keunggulan untuk Aplikasi Lokal
+      </h4>
+      <p class="small mb-3">{{ page.relevansi_kayu_dolken.keunggulan_lokal | default: "Sifat kayu yang tahan air, tahan rayap, dan tahan cuaca ekstrem sangat cocok untuk berbagai aplikasi outdoor." }}</p>
+
+      {% if page.relevansi_kayu_dolken.aplikasi_lokal %}
+      <div class="row g-2">
+        <div class="col-md-6">
+          <ul class="list-unstyled small mb-0">
+            {% for aplikasi in page.relevansi_kayu_dolken.aplikasi_lokal limit:2 %}
+            <li class="mb-1">
+              <i class="bi {{ aplikasi.icon | default: 'bi-check-circle-fill' }} text-success me-2"></i>{{ aplikasi.nama }}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="list-unstyled small mb-0">
+            {% for aplikasi in page.relevansi_kayu_dolken.aplikasi_lokal offset:2 %}
+            <li class="mb-1">
+              <i class="bi {{ aplikasi.icon | default: 'bi-check-circle-fill' }} text-success me-2"></i>{{ aplikasi.nama }}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+</div>
