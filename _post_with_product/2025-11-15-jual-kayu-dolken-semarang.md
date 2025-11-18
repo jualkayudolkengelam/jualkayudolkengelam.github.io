@@ -464,3 +464,9 @@ share_count: 1
 <section id="hubungi-kami">
   {% include block--hubungi-kami.html %}
 </section>
+
+
+<!-- Related Products Section (Part of article content) -->
+<div id="related-products" class="article-related-products mt-5">
+  {% include block--related-product-last-modified.html %}
+</div>
