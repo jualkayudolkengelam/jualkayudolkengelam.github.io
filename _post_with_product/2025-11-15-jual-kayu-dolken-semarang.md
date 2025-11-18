@@ -161,6 +161,48 @@ relevansi_kayu_dolken:
       icon: "bi-check-circle-fill"
     - nama: "Landscaping Pelabuhan Tanjung Emas"
       icon: "bi-check-circle-fill"
+tentang_kota:
+  tagline: "Ibu Kota Jawa Tengah"
+  deskripsi_singkat: "Pusat pemerintahan, ekonomi, dan budaya Jawa Tengah"
+  overview: "Semarang adalah ibu kota dan kota terbesar di Provinsi Jawa Tengah, Indonesia. Kota ini memiliki luas wilayah <strong>373,78 km²</strong> dengan populasi sekitar <strong>1,65 juta jiwa</strong> pada tahun 2017 dan kepadatan <strong>4.422 jiwa/km²</strong>. Semarang terbagi menjadi <strong>16 kecamatan</strong> dan <strong>177 kelurahan</strong>, menjadikannya pusat pemerintahan, ekonomi, dan budaya Jawa Tengah."
+  sejarah_ekonomi:
+    - judul: "Sejarah Semarang"
+      icon: "bi-clock-history"
+      subjudul: "Asal-usul Nama dan Perkembangan"
+      icon_subjudul: "bi-book"
+      deskripsi: "Sejarah Semarang berawal kurang lebih pada <strong>abad ke-6 Masehi</strong>, yaitu daerah pesisir yang bernama Pragota (sekarang Bergota) yang merupakan bagian dari Kerajaan Mataram Kuno."
+      fakta:
+        - "Secara etimologis, nama \"Semarang\" berasal dari kata <strong>\"asem\"</strong> (pohon asam) dan <strong>\"arang\"</strong> (jarang). Penamaan ini bermula ketika Ki Ageng Pandanaran I datang ke Pulau Tirang dekat pelabuhan Bergota dan melihat pohon asam yang jarang-jarang tumbuh."
+        - "Sejak masa penjajahan Belanda, Semarang merupakan salah satu dari tiga pusat pelabuhan penting (bersama Jakarta dan Surabaya)."
+    - judul: "Pelabuhan Tanjung Emas"
+      icon: "bi-shop"
+      subjudul: "Peran Ekonomi dan Perdagangan"
+      icon_subjudul: "bi-graph-up"
+      deskripsi: "Pelabuhan Tanjung Emas merupakan <strong>landmark ekonomi penting</strong> Semarang yang masih beroperasi hingga kini. Pelabuhan ini menjadi pintu gerbang perdagangan Jawa Tengah dan sekitarnya."
+      fakta:
+        - "Melayani ekspor-impor berbagai komoditas, keberadaan pelabuhan ini menjadikan Semarang sebagai kota pelabuhan utama pada masa kolonial."
+        - "Terus berkembang sebagai pusat regional hingga saat ini."
+  kehidupan_modern:
+    - judul: "Landmark & Pusat Bisnis Modern"
+      icon: "bi-building"
+      subjudul: "Destinasi Wisata dan Ekonomi"
+      icon_subjudul: "bi-pin-map"
+      deskripsi: "Semarang memiliki banyak landmark bersejarah yang terkenal:"
+      list_item:
+        - "<strong>Kota Lama Semarang</strong> - Bangunan kolonial bergaya Eropa"
+        - "<strong>Gereja Blenduk</strong> - Landmark ikonik"
+        - "<strong>Klenteng Sam Po Kong</strong> - Di Simongan"
+        - "<strong>Lawang Sewu</strong> - Destinasi wisata populer"
+        - "<strong>Simpang Lima</strong> - Pusat bisnis modern"
+    - judul: "Pusat Pendidikan & Pembangunan"
+      icon: "bi-mortarboard"
+      subjudul: "Kampus dan Kawasan Berkembang"
+      icon_subjudul: "bi-globe"
+      deskripsi: "Semarang dikenal sebagai <strong>kota pendidikan</strong> dengan keberadaan universitas-universitas terkemuka:"
+      list_item:
+        - "<strong>Universitas Diponegoro (Undip)</strong> di Tembalang"
+        - "<strong>Universitas Negeri Semarang (Unnes)</strong> di Sekaran"
+      info_tambahan: "Wilayah Tembalang dan Banyumanik berkembang pesat sebagai area residential dan komersial."
 like_count: 3
 comment_count: 0
 share_count: 1
@@ -1027,7 +1069,6 @@ share_count: 1
       </a>
     </div>
   </div>
-  
 </section>
 
 <section id="testimoni-pelanggan">
@@ -1043,154 +1084,7 @@ share_count: 1
 </section>
 
 <section id="tentang-kota-kami">
-  <div class="my-5">
-    <div class="card border-0 shadow-lg">
-      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);">
-        <i class="bi bi-buildings-fill mb-2" style="font-size: 2.5rem;"></i>
-        <h2 class="h2 mb-0 fw-bold text-white">Tentang Semarang: Ibu Kota Jawa Tengah</h2>
-        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
-          <i class="bi bi-geo-alt me-1"></i>
-          Pusat pemerintahan, ekonomi, dan budaya Jawa Tengah
-          <i class="bi bi-geo-alt ms-1"></i>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="card border-0 shadow-sm my-4">
-    <div class="card-body">
-      <p class="mb-0">Semarang adalah ibu kota dan kota terbesar di Provinsi Jawa Tengah, Indonesia. Kota ini memiliki luas wilayah <strong>373,78 km²</strong> dengan populasi sekitar <strong>1,65 juta jiwa</strong> pada tahun 2017 dan kepadatan <strong>4.422 jiwa/km²</strong>. Semarang terbagi menjadi <strong>16 kecamatan</strong> dan <strong>177 kelurahan</strong>, menjadikannya pusat pemerintahan, ekonomi, dan budaya Jawa Tengah.</p>
-    </div>
-  </div>
-
-  <!-- H3: Sejarah dan Ekonomi -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-clock-history text-primary me-2"></i>Sejarah dan Ekonomi
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Perjalanan panjang Semarang sebagai kota pelabuhan penting</p>
-      </div>
-    </div>
-
-    <div class="row g-4">
-      <!-- H4: Sejarah Semarang -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-primary text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-clock-history me-2" style="font-size: 1.5rem;"></i>
-              <h4 class="h5 mb-0 fw-bold">Sejarah Semarang</h4>
-            </div>
-          </div>
-          <div class="card-body">
-            <!-- H5: Asal-usul Nama dan Perkembangan -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-book me-1"></i>Asal-usul Nama dan Perkembangan
-            </h5>
-            <p class="small mb-3">Sejarah Semarang berawal kurang lebih pada <strong>abad ke-6 Masehi</strong>, yaitu daerah pesisir yang bernama Pragota (sekarang Bergota) yang merupakan bagian dari Kerajaan Mataram Kuno.</p>
-            <p class="small mb-3">Secara etimologis, nama "Semarang" berasal dari kata <strong>"asem"</strong> (pohon asam) dan <strong>"arang"</strong> (jarang). Penamaan ini bermula ketika Ki Ageng Pandanaran I datang ke Pulau Tirang dekat pelabuhan Bergota dan melihat pohon asam yang jarang-jarang tumbuh.</p>
-            <p class="small mb-0 text-muted">
-              <i class="bi bi-info-circle me-1"></i>
-              Sejak masa penjajahan Belanda, Semarang merupakan salah satu dari tiga pusat pelabuhan penting (bersama Jakarta dan Surabaya).
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- H4: Pelabuhan Tanjung Emas -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-primary text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-shop me-2" style="font-size: 1.5rem;"></i>
-              <h4 class="h5 mb-0 fw-bold">Pelabuhan Tanjung Emas</h4>
-            </div>
-          </div>
-          <div class="card-body">
-            <!-- H5: Peran Ekonomi dan Perdagangan -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-graph-up me-1"></i>Peran Ekonomi dan Perdagangan
-            </h5>
-            <p class="small mb-3">Pelabuhan Tanjung Emas merupakan <strong>landmark ekonomi penting</strong> Semarang yang masih beroperasi hingga kini. Pelabuhan ini menjadi pintu gerbang perdagangan Jawa Tengah dan sekitarnya.</p>
-            <p class="small mb-3">Melayani ekspor-impor berbagai komoditas, keberadaan pelabuhan ini menjadikan Semarang sebagai kota pelabuhan utama pada masa kolonial.</p>
-            <p class="small mb-0 text-muted">
-              <i class="bi bi-info-circle me-1"></i>
-              Terus berkembang sebagai pusat regional hingga saat ini.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Kehidupan Modern Semarang -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-building text-success me-2"></i>Kehidupan Modern Semarang
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Destinasi wisata, pendidikan, dan pusat bisnis</p>
-      </div>
-    </div>
-
-    <div class="row g-4">
-      <!-- H4: Landmark & Pusat Bisnis Modern -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-success text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-building me-2" style="font-size: 1.5rem;"></i>
-              <h4 class="h5 mb-0 fw-bold">Landmark & Pusat Bisnis Modern</h4>
-            </div>
-          </div>
-          <div class="card-body">
-            <!-- H5: Destinasi Wisata dan Ekonomi -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-pin-map me-1"></i>Destinasi Wisata dan Ekonomi
-            </h5>
-            <p class="small mb-3">Semarang memiliki banyak landmark bersejarah yang terkenal:</p>
-            <ul class="list-unstyled small mb-0">
-              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Kota Lama Semarang</strong> - Bangunan kolonial bergaya Eropa</li>
-              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Gereja Blenduk</strong> - Landmark ikonik</li>
-              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Klenteng Sam Po Kong</strong> - Di Simongan</li>
-              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Lawang Sewu</strong> - Destinasi wisata populer</li>
-              <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Simpang Lima</strong> - Pusat bisnis modern</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- H4: Pusat Pendidikan & Pembangunan -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-success text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-mortarboard me-2" style="font-size: 1.5rem;"></i>
-              <h4 class="h5 mb-0 fw-bold">Pusat Pendidikan & Pembangunan</h4>
-            </div>
-          </div>
-          <div class="card-body">
-            <!-- H5: Kampus dan Kawasan Berkembang -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-globe me-1"></i>Kampus dan Kawasan Berkembang
-            </h5>
-            <p class="small mb-3">Semarang dikenal sebagai <strong>kota pendidikan</strong> dengan keberadaan universitas-universitas terkemuka:</p>
-            <ul class="list-unstyled small mb-3">
-              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Universitas Diponegoro (Undip)</strong> di Tembalang</li>
-              <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Universitas Negeri Semarang (Unnes)</strong> di Sekaran</li>
-            </ul>
-            <p class="small mb-0 text-muted">
-              <i class="bi bi-info-circle me-1"></i>
-              Wilayah Tembalang dan Banyumanik berkembang pesat sebagai area residential dan komersial.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include block--tentang-kota-kami.html %}
 </section>
 
 <section id="relevansi-kayu-dolken">
@@ -1200,4 +1094,3 @@ share_count: 1
 <section id="hubungi-kami">
   {% include block--hubungi-kami.html %}
 </section>
-

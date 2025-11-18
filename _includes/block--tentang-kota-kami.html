@@ -1,0 +1,195 @@
+{% comment %}
+  ============================================================================
+  Tentang Kota Kami Block Component
+  ============================================================================
+
+  @file        _includes/block--tentang-kota-kami.html
+  @description Reusable component for city information section with history and modern life
+
+  @version     1.0.0
+  @date        2025-11-19
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading for SEO with dynamic city and tagline
+  - City overview with statistics
+  - 2 main categories (Sejarah & Ekonomi, Kehidupan Modern)
+  - 2 cards per category (4 cards total)
+  - Flexible array structure for facts/landmarks
+
+  Parameters:
+  -----------
+  - page.nama_kota: City name (required)
+  - page.tentang_kota: Object containing:
+    - tagline: City tagline (e.g., "Ibu Kota Jawa Tengah")
+    - deskripsi_singkat: Brief description text
+    - overview: City overview with statistics
+    - sejarah_ekonomi: Array of 2 history/economy cards
+      Each with: judul, icon, subjudul, deskripsi, fakta (array)
+    - kehidupan_modern: Array of 2 modern life cards
+      Each with: judul, icon, subjudul, deskripsi, list_item (array)
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  nama_kota: Semarang
+  tentang_kota:
+    tagline: "Ibu Kota Jawa Tengah"
+    deskripsi_singkat: "Pusat pemerintahan, ekonomi, dan budaya Jawa Tengah"
+    overview: "Semarang adalah ibu kota dan kota terbesar di Provinsi Jawa Tengah..."
+    sejarah_ekonomi:
+      - judul: "Sejarah Semarang"
+        icon: "bi-clock-history"
+        subjudul: "Asal-usul Nama dan Perkembangan"
+        deskripsi: "Sejarah Semarang berawal kurang lebih pada abad ke-6..."
+        fakta:
+          - "Berasal dari kata asem (pohon asam) dan arang (jarang)"
+          - "Sejak masa penjajahan Belanda..."
+    kehidupan_modern:
+      - judul: "Landmark & Pusat Bisnis Modern"
+        icon: "bi-building"
+        subjudul: "Destinasi Wisata dan Ekonomi"
+        deskripsi: "Semarang memiliki banyak landmark bersejarah..."
+        list_item:
+          - "Kota Lama Semarang - Bangunan kolonial"
+          - "Simpang Lima - Pusat bisnis modern"
+  ---
+
+  In content:
+  <section id="tentang-kota-kami">
+    {% include block--tentang-kota-kami.html %}
+  </section>
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.tentang_kota %}
+<!-- Header Section -->
+<div class="my-5">
+  <div class="card border-0 shadow-lg">
+    <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);">
+      <i class="bi bi-buildings-fill mb-2" style="font-size: 2.5rem;"></i>
+      <h2 class="h2 mb-0 fw-bold text-white">Tentang{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}{% if page.tentang_kota.tagline %}: {{ page.tentang_kota.tagline }}{% endif %}</h2>
+      <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+        <i class="bi bi-geo-alt me-1"></i>
+        {{ page.tentang_kota.deskripsi_singkat | default: "Informasi lengkap tentang kota kami" }}
+        <i class="bi bi-geo-alt ms-1"></i>
+      </p>
+    </div>
+  </div>
+</div>
+
+{% if page.tentang_kota.overview %}
+<div class="card border-0 shadow-sm my-4">
+  <div class="card-body">
+    <p class="mb-0">{{ page.tentang_kota.overview }}</p>
+  </div>
+</div>
+{% endif %}
+
+{% if page.tentang_kota.sejarah_ekonomi %}
+<!-- H3: Sejarah dan Ekonomi -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-clock-history text-primary me-2"></i>Sejarah dan Ekonomi
+      </h3>
+      <p class="small text-muted mb-0 mt-1">Perjalanan panjang{% if page.nama_kota %} {{ page.nama_kota }}{% endif %} sebagai kota penting</p>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    {% for item in page.tentang_kota.sejarah_ekonomi %}
+    <!-- H4: Card Title -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header bg-primary text-white">
+          <div class="d-flex align-items-center">
+            <i class="bi {{ item.icon | default: 'bi-info-circle' }} me-2" style="font-size: 1.5rem;"></i>
+            <h4 class="h5 mb-0 fw-bold">{{ item.judul }}</h4>
+          </div>
+        </div>
+        <div class="card-body">
+          <!-- H5: Subjudul -->
+          <h5 class="h6 fw-bold text-wood mb-2">
+            <i class="bi {{ item.icon_subjudul | default: 'bi-book' }} me-1"></i>{{ item.subjudul }}
+          </h5>
+
+          {% if item.deskripsi %}
+          <p class="small mb-3">{{ item.deskripsi }}</p>
+          {% endif %}
+
+          {% if item.fakta %}
+            {% for fakta in item.fakta %}
+            <p class="small {% if forloop.last %}mb-0 text-muted{% else %}mb-3{% endif %}">
+              <i class="bi bi-info-circle me-1"></i>{{ fakta }}
+            </p>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if page.tentang_kota.kehidupan_modern %}
+<!-- H3: Kehidupan Modern -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-building text-success me-2"></i>Kehidupan Modern{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}
+      </h3>
+      <p class="small text-muted mb-0 mt-1">Destinasi wisata, pendidikan, dan pusat bisnis</p>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    {% for item in page.tentang_kota.kehidupan_modern %}
+    <!-- H4: Card Title -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header bg-success text-white">
+          <div class="d-flex align-items-center">
+            <i class="bi {{ item.icon | default: 'bi-building' }} me-2" style="font-size: 1.5rem;"></i>
+            <h4 class="h5 mb-0 fw-bold">{{ item.judul }}</h4>
+          </div>
+        </div>
+        <div class="card-body">
+          <!-- H5: Subjudul -->
+          <h5 class="h6 fw-bold text-wood mb-2">
+            <i class="bi {{ item.icon_subjudul | default: 'bi-pin-map' }} me-1"></i>{{ item.subjudul }}
+          </h5>
+
+          {% if item.deskripsi %}
+          <p class="small mb-3">{{ item.deskripsi }}</p>
+          {% endif %}
+
+          {% if item.list_item %}
+          <ul class="list-unstyled small {% if item.info_tambahan %}mb-3{% else %}mb-0{% endif %}">
+            {% for list in item.list_item %}
+            <li class="{% if forloop.last %}mb-0{% else %}mb-2{% endif %}">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>{{ list }}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          {% if item.info_tambahan %}
+          <p class="small mb-0 text-muted">
+            <i class="bi bi-info-circle me-1"></i>{{ item.info_tambahan }}
+          </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+{% endif %}
