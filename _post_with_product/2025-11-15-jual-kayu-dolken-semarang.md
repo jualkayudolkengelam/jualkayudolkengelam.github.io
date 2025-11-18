@@ -315,6 +315,94 @@ studi_kasus_proyek:
       hasil: "Memberikan kesan natural di area olahraga outdoor dengan durabilitas tinggi"
       warna: "info"
       icon: "bi-bicycle"
+area_pengiriman_detail:
+  wilayah_pusat:
+    - nama: "Semarang Tengah"
+      kelurahan:
+        - "Purwodinatan, Gabahan"
+        - "Miroto, Pekunden"
+      warna: "primary"
+    - nama: "Semarang Barat"
+      kelurahan:
+        - "Tawang, Krobokan"
+        - "Ngemplak Simongan, Bongsari"
+      warna: "success"
+    - nama: "Semarang Timur"
+      kelurahan:
+        - "Rejomulyo, Sarirejo"
+        - "Mlatiharjo, Bugangan"
+      warna: "info"
+  wilayah_utara_selatan:
+    - nama: "Semarang Utara"
+      kelurahan:
+        - "Bandarharjo, Tanjung Mas"
+        - "Kuningan, Plombokan"
+      warna: "danger"
+    - nama: "Semarang Selatan"
+      kelurahan:
+        - "Lamper Tengah, Mugassari"
+        - "Randusari, Bulustalan"
+      warna: "warning"
+  wilayah_pengembangan:
+    - nama: "Tembalang"
+      kelurahan:
+        - "Tembalang, Sendangmulyo"
+        - "Mangunharjo, Kedungmundu"
+      warna: "primary"
+    - nama: "Banyumanik"
+      kelurahan:
+        - "Banyumanik, Srondol Wetan"
+        - "Tinjomoyo, Pedalangan"
+      warna: "info"
+    - nama: "Pedurungan"
+      kelurahan:
+        - "Pedurungan Lor, Gemah"
+        - "Tlogosari Kulon & Wetan"
+      warna: "wood"
+    - nama: "Genuk"
+      kelurahan:
+        - "Genuk, Terboyo Kulon"
+        - "Bangetayu Kulon & Wetan"
+      warna: "wood"
+  kecamatan_lainnya:
+    - "Candisari"
+    - "Gajah Mungkur"
+    - "Ngaliyan"
+    - "Mijen"
+    - "Gayamsari, Tugu"
+    - "Gunungpati"
+  landmark_wisata:
+    - nama: "Kota Lama Semarang"
+      icon: "bi-building"
+      warna: "warning"
+    - nama: "Klenteng Sam Po Kong"
+      icon: "bi-building"
+      warna: "warning"
+    - nama: "Gereja Blenduk"
+      icon: "bi-building"
+      warna: "warning"
+    - nama: "Lawang Sewu"
+      icon: "bi-building"
+      warna: "warning"
+    - nama: "Simpang Lima"
+      icon: "bi-building"
+      warna: "warning"
+  landmark_fasilitas:
+    - nama: "Pelabuhan Tanjung Emas"
+      icon: "bi-shop"
+      warna: "info"
+    - nama: "Undip Tembalang"
+      icon: "bi-mortarboard"
+      warna: "success"
+    - nama: "Unnes Sekaran"
+      icon: "bi-mortarboard"
+      warna: "success"
+    - nama: "Paragon Mall"
+      icon: "bi-cart"
+      warna: "primary"
+    - nama: "Java Mall"
+      icon: "bi-cart"
+      warna: "primary"
 like_count: 3
 comment_count: 0
 share_count: 1
@@ -323,291 +411,8 @@ share_count: 1
   {% include block--mengapa-memilih-kami.html %}
 </section>
 
-<section id="area-pengiriman-semarang">
-  <div class="my-5">
-    <div class="card border-0 shadow-lg">
-      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
-        <i class="bi bi-geo-alt-fill mb-2" style="font-size: 2.5rem;"></i>
-        <h2 class="h2 mb-0 fw-bold text-white">Area Pengiriman Semarang</h2>
-        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
-          <i class="bi bi-truck me-1"></i>
-          Gratis ongkir ke seluruh wilayah Kota Semarang
-          <i class="bi bi-truck ms-1"></i>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Jangkauan Pengiriman Lengkap -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-truck text-primary me-2"></i>Jangkauan Pengiriman Lengkap
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Kami melayani pengiriman gratis ke seluruh wilayah Kota Semarang, mencakup 16 kecamatan dan ratusan kelurahan untuk kemudahan proyek Anda</p>
-      </div>
-    </div>
-
-  <div class="card border-0 shadow-sm">
-    <div class="card-body bg-light py-3">
-      <h4 class="h4 text-wood mb-2 fw-bold">
-        <i class="bi bi-geo-fill me-2"></i>Wilayah Pusat Kota Semarang
-      </h4>
-      <p class="small text-muted mb-0">Lima kecamatan utama di pusat Kota Semarang dengan akses mudah dan pengiriman cepat.</p>
-    </div>
-  </div>
-
-  <div class="row g-3 my-4">
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-header bg-primary text-white">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-pin-map-fill me-2"></i>Semarang Tengah
-          </h5>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Purwodinatan, Gabahan</li>
-            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Miroto, Pekunden</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-header bg-success text-white">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-pin-map-fill me-2"></i>Semarang Barat
-          </h5>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Tawang, Krobokan</li>
-            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Ngemplak Simongan, Bongsari</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-header bg-info text-white">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-pin-map-fill me-2"></i>Semarang Timur
-          </h5>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Rejomulyo, Sarirejo</li>
-            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Mlatiharjo, Bugangan</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card border-0 shadow-sm my-4">
-    <div class="card-body bg-light py-3">
-      <h4 class="h4 text-wood mb-2 fw-bold">
-        <i class="bi bi-geo-alt-fill me-2"></i>Wilayah Utara & Selatan
-      </h4>
-      <p class="small text-muted mb-0">Kawasan pelabuhan, industri, dan perumahan di sisi utara dan selatan Kota Semarang.</p>
-    </div>
-  </div>
-
-  <div class="row g-3 my-4">
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-header bg-danger text-white">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-pin-map-fill me-2"></i>Semarang Utara
-          </h5>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Bandarharjo, Tanjung Mas</li>
-            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Kuningan, Plombokan</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-header bg-warning text-dark">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-pin-map-fill me-2"></i>Semarang Selatan
-          </h5>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Lamper Tengah, Mugassari</li>
-            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Randusari, Bulustalan</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card border-0 shadow-sm my-4">
-    <div class="card-body bg-light py-3">
-      <h4 class="h4 text-wood mb-2 fw-bold">
-        <i class="bi bi-map-fill me-2"></i>Wilayah Pengembangan & Pinggiran
-      </h4>
-      <p class="small text-muted mb-0">Area pengembangan dengan pertumbuhan pesat, termasuk kawasan pendidikan dan perumahan baru.</p>
-    </div>
-  </div>
-
-  <div class="row g-3 my-4">
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-header bg-primary text-white">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-pin-map-fill me-2"></i>Tembalang
-          </h5>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Tembalang, Sendangmulyo</li>
-            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Mangunharjo, Kedungmundu</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-header bg-info text-white">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-pin-map-fill me-2"></i>Banyumanik
-          </h5>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Banyumanik, Srondol Wetan</li>
-            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Tinjomoyo, Pedalangan</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-header bg-wood text-white">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-pin-map-fill me-2"></i>Pedurungan
-          </h5>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Pedurungan Lor, Gemah</li>
-            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Tlogosari Kulon & Wetan</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-header bg-wood text-white">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-pin-map-fill me-2"></i>Genuk
-          </h5>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Genuk, Terboyo Kulon</li>
-            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Bangetayu Kulon & Wetan</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12">
-      <div class="card border-0 shadow-sm">
-        <div class="card-header bg-secondary text-white">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-pin-map-fill me-2"></i>Kecamatan Lainnya
-          </h5>
-        </div>
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md-6">
-              <ul class="list-unstyled small mb-0">
-                <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Candisari</li>
-                <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Gajah Mungkur</li>
-                <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Ngaliyan</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <ul class="list-unstyled small mb-0">
-                <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Mijen</li>
-                <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Gayamsari, Tugu</li>
-                <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>Gunungpati</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <!-- H3: Landmark & Lokasi Strategis -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-warning bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-star-fill text-warning me-2"></i>Landmark & Lokasi Strategis
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Kami juga melayani area landmark terkenal dan lokasi strategis di Semarang untuk kemudahan proyek komersial Anda</p>
-      </div>
-    </div>
-
-  <div class="row g-3">
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-body bg-light py-3">
-          <h4 class="h4 text-wood mb-2 fw-bold">
-            <i class="bi bi-building-fill me-2"></i>Destinasi Wisata & Sejarah
-          </h4>
-          <p class="small text-muted mb-3">Landmark bersejarah dan destinasi wisata terkenal di Semarang.</p>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-2"><i class="bi bi-building text-warning me-2"></i><strong>Kota Lama Semarang</strong></li>
-            <li class="mb-2"><i class="bi bi-building text-warning me-2"></i><strong>Klenteng Sam Po Kong</strong></li>
-            <li class="mb-2"><i class="bi bi-building text-warning me-2"></i><strong>Gereja Blenduk</strong></li>
-            <li class="mb-2"><i class="bi bi-building text-warning me-2"></i><strong>Lawang Sewu</strong></li>
-            <li class="mb-0"><i class="bi bi-building text-warning me-2"></i><strong>Simpang Lima</strong></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-body bg-light py-3">
-          <h4 class="h4 text-wood mb-2 fw-bold">
-            <i class="bi bi-shop-window me-2"></i>Fasilitas Pendidikan & Komersial
-          </h4>
-          <p class="small text-muted mb-3">Kampus, pelabuhan, dan pusat perbelanjaan strategis di Semarang.</p>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-2"><i class="bi bi-shop text-info me-2"></i><strong>Pelabuhan Tanjung Emas</strong></li>
-            <li class="mb-2"><i class="bi bi-mortarboard text-success me-2"></i><strong>Undip Tembalang</strong></li>
-            <li class="mb-2"><i class="bi bi-mortarboard text-success me-2"></i><strong>Unnes Sekaran</strong></li>
-            <li class="mb-2"><i class="bi bi-cart text-primary me-2"></i><strong>Paragon Mall</strong></li>
-            <li class="mb-0"><i class="bi bi-cart text-primary me-2"></i><strong>Java Mall</strong></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+<section id="area-pengiriman-kayu-dolken">
+  {% include block--area-pengiriman-kayu-dolken.html %}
 </section>
 
 <section id="keunggulan-kayu-dolken-gelam">
