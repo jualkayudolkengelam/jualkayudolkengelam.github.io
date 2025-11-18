@@ -203,6 +203,50 @@ tentang_kota:
         - "<strong>Universitas Diponegoro (Undip)</strong> di Tembalang"
         - "<strong>Universitas Negeri Semarang (Unnes)</strong> di Sekaran"
       info_tambahan: "Wilayah Tembalang dan Banyumanik berkembang pesat sebagai area residential dan komersial."
+aplikasi_kayu_dolken:
+  deskripsi: "Kayu dolken gelam memiliki fleksibilitas tinggi untuk berbagai aplikasi, dari konstruksi bangunan hingga dekorasi dan furniture."
+  konstruksi_dekorasi:
+    - judul: "Konstruksi & Bangunan"
+      icon: "bi-building"
+      warna: "wood"
+      aplikasi:
+        - "Tiang penyangga struktur bangunan"
+        - "Pondasi bangunan ringan (gazebo, pergola)"
+        - "Scaffolding tradisional untuk renovasi"
+        - "Rangka atap dan dinding"
+        - "Tiang pancang area rawa atau basah"
+    - judul: "Dekorasi & Landscaping"
+      icon: "bi-palette-fill"
+      warna: "primary"
+      aplikasi:
+        - "Pagar rumah dan taman minimalis"
+        - "Gazebo & pergola outdoor"
+        - "Interior hotel, cafe, restoran (rustic theme)"
+        - "Landscaping taman dan area hijau"
+        - "Art installation & display seni"
+        - "Tiang lampu taman"
+        - "Pembatas area parkir"
+  furniture_komersial:
+    - judul: "Furniture & Lain-lain"
+      icon: "bi-chair-fill"
+      warna: "info"
+      aplikasi:
+        - "Penyangga tanaman vertikal garden"
+        - "Pembatas area (barrier) indoor/outdoor"
+        - "Furniture outdoor (bench, table)"
+        - "Jalur pedestrian"
+        - "Dermaga kecil atau jembatan"
+        - "Kolam ikan & aquascape"
+    - judul: "Proyek Komersial"
+      icon: "bi-briefcase-fill"
+      warna: "success"
+      deskripsi: "Kami telah dipercaya oleh berbagai proyek komersial"
+      aplikasi:
+        - "Hotel di Simpang Lima"
+        - "Cafe di Kota Lama"
+        - "Restoran di area Undip"
+        - "Mall & apartment"
+        - "Developer perumahan"
 like_count: 3
 comment_count: 0
 share_count: 1
@@ -509,133 +553,7 @@ share_count: 1
 </section>
 
 <section id="aplikasi-kayu-dolken-gelam">
-  <div class="my-5">
-    <div class="card border-0 shadow-lg">
-      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);">
-        <i class="bi bi-grid-3x3-gap-fill mb-2" style="font-size: 2.5rem;"></i>
-        <h2 class="h2 mb-0 fw-bold text-white">Aplikasi Kayu Dolken Gelam</h2>
-        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
-          <i class="bi bi-hammer me-1"></i>
-          Banyak digunakan untuk berbagai kebutuhan di Semarang
-          <i class="bi bi-hammer ms-1"></i>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Beragam Penggunaan Kayu Dolken Gelam -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-info bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-hammer text-info me-2"></i>Beragam Penggunaan Kayu Dolken Gelam
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Kayu dolken gelam memiliki fleksibilitas tinggi untuk berbagai aplikasi, dari konstruksi bangunan hingga dekorasi dan furniture. Berikut adalah berbagai penggunaan kayu dolken gelam yang telah terbukti di Semarang</p>
-      </div>
-    </div>
-
-  <div class="card border-0 shadow-sm">
-    <div class="card-body bg-light py-3">
-      <h4 class="h4 text-wood mb-2 fw-bold">
-        <i class="bi bi-hammer me-2"></i>Aplikasi Konstruksi & Dekorasi
-      </h4>
-      <p class="small text-muted mb-0">Penggunaan utama kayu dolken gelam untuk konstruksi bangunan dan dekorasi outdoor maupun indoor.</p>
-    </div>
-  </div>
-
-  <div class="row g-4 my-4">
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-header bg-wood text-white">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-building me-2"></i>Konstruksi & Bangunan
-          </h5>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Tiang penyangga struktur bangunan</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Pondasi bangunan ringan (gazebo, pergola)</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Scaffolding tradisional untuk renovasi</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Rangka atap dan dinding</li>
-            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Tiang pancang area rawa atau basah</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-header bg-primary text-white">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-palette-fill me-2"></i>Dekorasi & Landscaping
-          </h5>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Pagar rumah dan taman minimalis</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Gazebo & pergola outdoor</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Interior hotel, cafe, restoran (rustic theme)</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Landscaping taman dan area hijau</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Art installation & display seni</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Tiang lampu taman</li>
-            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Pembatas area parkir</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card border-0 shadow-sm my-4">
-    <div class="card-body bg-light py-3">
-      <h4 class="h4 text-wood mb-2 fw-bold">
-        <i class="bi bi-briefcase me-2"></i>Aplikasi Furniture & Proyek Komersial
-      </h4>
-      <p class="small text-muted mb-0">Berbagai aplikasi lainnya termasuk furniture outdoor dan proyek-proyek komersial yang telah kami tangani.</p>
-    </div>
-  </div>
-
-  <div class="row g-4 my-4">
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-header bg-info text-white">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-chair-fill me-2"></i>Furniture & Lain-lain
-          </h5>
-        </div>
-        <div class="card-body">
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Penyangga tanaman vertikal garden</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Pembatas area (barrier) indoor/outdoor</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Furniture outdoor (bench, table)</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Jalur pedestrian</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Dermaga kecil atau jembatan</li>
-            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Kolam ikan & aquascape</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-header bg-success text-white">
-          <h5 class="h5 mb-0">
-            <i class="bi bi-briefcase-fill me-2"></i>Proyek Komersial
-          </h5>
-        </div>
-        <div class="card-body">
-          <p class="small mb-3">Kami telah dipercaya oleh berbagai proyek komersial di Semarang:</p>
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Hotel di Simpang Lima</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Cafe di Kota Lama</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Restoran di area Undip</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Mall & apartment</li>
-            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Developer perumahan</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+  {% include block--aplikasi-kayu-dolken-gelam.html %}
 </section>
 
 <section id="cara-pemesanan">

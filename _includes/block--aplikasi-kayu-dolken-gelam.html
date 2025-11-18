@@ -1,0 +1,181 @@
+{% comment %}
+  ============================================================================
+  Aplikasi Kayu Dolken Gelam Block Component
+  ============================================================================
+
+  @file        _includes/block--aplikasi-kayu-dolken-gelam.html
+  @description Reusable component for applications section with categorized use cases
+
+  @version     1.0.0
+  @date        2025-11-19
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading for SEO with dynamic city
+  - 2 main categories (Konstruksi & Dekorasi, Furniture & Proyek Komersial)
+  - 2 cards per category (4 cards total)
+  - H4 section headers for each category
+  - H5 card titles
+  - Flexible array structure for applications
+
+  Parameters:
+  -----------
+  - page.nama_kota: City name for dynamic content
+  - page.aplikasi_kayu_dolken: Object containing:
+    - deskripsi: General description text
+    - konstruksi_dekorasi: Array of 2 cards
+      Each with: judul, icon, warna, aplikasi (array of use cases)
+    - furniture_komersial: Array of 2 cards
+      Each with: judul, icon, warna, deskripsi, aplikasi (array)
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  nama_kota: Semarang
+  aplikasi_kayu_dolken:
+    deskripsi: "Kayu dolken gelam memiliki fleksibilitas tinggi untuk berbagai aplikasi..."
+    konstruksi_dekorasi:
+      - judul: "Konstruksi & Bangunan"
+        icon: "bi-building"
+        warna: "wood"
+        aplikasi:
+          - "Tiang penyangga struktur bangunan"
+          - "Pondasi bangunan ringan (gazebo, pergola)"
+      - judul: "Dekorasi & Landscaping"
+        icon: "bi-palette-fill"
+        warna: "primary"
+        aplikasi:
+          - "Pagar rumah dan taman minimalis"
+          - "Gazebo & pergola outdoor"
+    furniture_komersial:
+      - judul: "Furniture & Lain-lain"
+        icon: "bi-chair-fill"
+        warna: "info"
+        aplikasi:
+          - "Penyangga tanaman vertikal garden"
+          - "Furniture outdoor (bench, table)"
+      - judul: "Proyek Komersial"
+        icon: "bi-briefcase-fill"
+        warna: "success"
+        deskripsi: "Kami telah dipercaya oleh berbagai proyek komersial..."
+        aplikasi:
+          - "Hotel di Simpang Lima"
+          - "Cafe di Kota Lama"
+  ---
+
+  In content:
+  <section id="aplikasi-kayu-dolken-gelam">
+    {% include block--aplikasi-kayu-dolken-gelam.html %}
+  </section>
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.aplikasi_kayu_dolken %}
+<!-- Header Section -->
+<div class="my-5">
+  <div class="card border-0 shadow-lg">
+    <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);">
+      <i class="bi bi-grid-3x3-gap-fill mb-2" style="font-size: 2.5rem;"></i>
+      <h2 class="h2 mb-0 fw-bold text-white">Aplikasi Kayu Dolken Gelam</h2>
+      <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+        <i class="bi bi-hammer me-1"></i>
+        Banyak digunakan untuk berbagai kebutuhan{% if page.nama_kota %} di {{ page.nama_kota }}{% endif %}
+        <i class="bi bi-hammer ms-1"></i>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- H3: Beragam Penggunaan Kayu Dolken Gelam -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-info bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-hammer text-info me-2"></i>Beragam Penggunaan Kayu Dolken Gelam
+      </h3>
+      <p class="small text-muted mb-0 mt-1">{{ page.aplikasi_kayu_dolken.deskripsi | default: "Kayu dolken gelam memiliki fleksibilitas tinggi untuk berbagai aplikasi, dari konstruksi bangunan hingga dekorasi dan furniture." }}{% if page.nama_kota %} Berikut adalah berbagai penggunaan kayu dolken gelam yang telah terbukti di {{ page.nama_kota }}{% endif %}</p>
+    </div>
+  </div>
+
+  {% if page.aplikasi_kayu_dolken.konstruksi_dekorasi %}
+  <!-- H4: Aplikasi Konstruksi & Dekorasi -->
+  <div class="card border-0 shadow-sm">
+    <div class="card-body bg-light py-3">
+      <h4 class="h4 text-wood mb-2 fw-bold">
+        <i class="bi bi-hammer me-2"></i>Aplikasi Konstruksi & Dekorasi
+      </h4>
+      <p class="small text-muted mb-0">Penggunaan utama kayu dolken gelam untuk konstruksi bangunan dan dekorasi outdoor maupun indoor.</p>
+    </div>
+  </div>
+
+  <div class="row g-4 my-4">
+    {% for item in page.aplikasi_kayu_dolken.konstruksi_dekorasi %}
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header bg-{{ item.warna | default: 'primary' }} text-white">
+          <h5 class="h5 mb-0">
+            <i class="bi {{ item.icon | default: 'bi-hammer' }} me-2"></i>{{ item.judul }}
+          </h5>
+        </div>
+        <div class="card-body">
+          {% if item.aplikasi %}
+          <ul class="list-unstyled small mb-0">
+            {% for aplikasi in item.aplikasi %}
+            <li class="{% if forloop.last %}mb-0{% else %}mb-2{% endif %}">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>{{ aplikasi }}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.aplikasi_kayu_dolken.furniture_komersial %}
+  <!-- H4: Aplikasi Furniture & Proyek Komersial -->
+  <div class="card border-0 shadow-sm my-4">
+    <div class="card-body bg-light py-3">
+      <h4 class="h4 text-wood mb-2 fw-bold">
+        <i class="bi bi-briefcase me-2"></i>Aplikasi Furniture & Proyek Komersial
+      </h4>
+      <p class="small text-muted mb-0">Berbagai aplikasi lainnya termasuk furniture outdoor dan proyek-proyek komersial yang telah kami tangani.</p>
+    </div>
+  </div>
+
+  <div class="row g-4 my-4">
+    {% for item in page.aplikasi_kayu_dolken.furniture_komersial %}
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header bg-{{ item.warna | default: 'info' }} text-white">
+          <h5 class="h5 mb-0">
+            <i class="bi {{ item.icon | default: 'bi-briefcase' }} me-2"></i>{{ item.judul }}
+          </h5>
+        </div>
+        <div class="card-body">
+          {% if item.deskripsi %}
+          <p class="small mb-3">{{ item.deskripsi }}{% if page.nama_kota and item.deskripsi contains "proyek komersial" %} di {{ page.nama_kota }}{% endif %}:</p>
+          {% endif %}
+
+          {% if item.aplikasi %}
+          <ul class="list-unstyled small mb-0">
+            {% for aplikasi in item.aplikasi %}
+            <li class="{% if forloop.last %}mb-0{% else %}mb-2{% endif %}">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>{{ aplikasi }}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endif %}
