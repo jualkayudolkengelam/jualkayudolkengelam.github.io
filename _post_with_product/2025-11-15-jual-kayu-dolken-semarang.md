@@ -73,7 +73,7 @@ share_count: 1
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);">
       <i class="bi bi-patch-check-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h2 class="h2 mb-0 fw-bold text-white">Mengapa Memilih Kami?</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Mengapa Memilih Kami?</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-stars me-1"></i>
         Supplier terpercaya dengan layanan terbaik di Semarang
@@ -83,26 +83,27 @@ share_count: 1
   </div>
 </div>
 
-<div class="row g-4 my-4">
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm h-100 hover-lift">
-      <div class="card-body text-center">
-        <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-          <i class="bi bi-truck text-success" style="font-size: 2rem;"></i>
-        </div>
-        <h4 class="h6 text-wood mb-2">Pengiriman Gratis Semarang</h4>
-        <p class="small text-muted mb-0">Gratis ongkir untuk area Kota Semarang, hemat biaya pengiriman untuk proyek Anda</p>
-      </div>
-    </div>
-  </div>
+### Keunggulan Layanan Kami
 
+Kami menyediakan solusi lengkap untuk kebutuhan kayu dolken gelam Anda di Semarang dengan berbagai keunggulan yang membedakan kami dari kompetitor:
+
+<div class="card border-0 shadow-sm my-4">
+  <div class="card-body bg-light py-3">
+    <h4 class="h4 text-wood mb-2 fw-bold">
+      <i class="bi bi-star-fill me-2"></i>Kualitas Produk & Harga Kompetitif
+    </h4>
+    <p class="small text-muted mb-0">Kami berkomitmen memberikan kayu dolken gelam berkualitas premium dengan harga terbaik langsung dari supplier tanpa perantara.</p>
+  </div>
+</div>
+
+<div class="row g-4 my-4">
   <div class="col-md-6 col-lg-4">
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-body text-center">
         <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-award-fill text-warning" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2">Kualitas Premium Grade A</h4>
+        <h5 class="h5 text-wood mb-2">Kualitas Premium Grade A</h5>
         <p class="small text-muted mb-0">Kayu gelam asli premium, tahan rayap alami dan tahan cuaca ekstrem, cocok untuk iklim Semarang</p>
       </div>
     </div>
@@ -114,20 +115,8 @@ share_count: 1
         <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-cash-coin text-danger" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2">Harga Terbaik</h4>
+        <h5 class="h5 text-wood mb-2">Harga Terbaik</h5>
         <p class="small text-muted mb-0">Langsung dari supplier, harga mulai Rp 15.000/batang tanpa markup perantara</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm h-100 hover-lift">
-      <div class="card-body text-center">
-        <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-          <i class="bi bi-shield-check text-primary" style="font-size: 2rem;"></i>
-        </div>
-        <h4 class="h6 text-wood mb-2">COD Tersedia</h4>
-        <p class="small text-muted mb-0">Bayar setelah barang sampai dan Anda cek kualitasnya, aman dan terpercaya</p>
       </div>
     </div>
   </div>
@@ -138,8 +127,43 @@ share_count: 1
         <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-boxes text-info" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2">Stok Selalu Ready</h4>
+        <h5 class="h5 text-wood mb-2">Stok Selalu Ready</h5>
         <p class="small text-muted mb-0">Tersedia berbagai ukuran diameter 2-3 cm hingga 10-12 cm untuk semua kebutuhan proyek</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card border-0 shadow-sm my-4">
+  <div class="card-body bg-light py-3">
+    <h4 class="h4 text-wood mb-2 fw-bold">
+      <i class="bi bi-truck-front-fill me-2"></i>Layanan Pengiriman & Customer Service
+    </h4>
+    <p class="small text-muted mb-0">Kemudahan dan kenyamanan Anda adalah prioritas kami dengan layanan pengiriman gratis dan dukungan pelanggan 24/7.</p>
+  </div>
+</div>
+
+<div class="row g-4 my-4">
+  <div class="col-md-6 col-lg-4">
+    <div class="card border-0 shadow-sm h-100 hover-lift">
+      <div class="card-body text-center">
+        <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+          <i class="bi bi-truck text-success" style="font-size: 2rem;"></i>
+        </div>
+        <h5 class="h5 text-wood mb-2">Pengiriman Gratis Semarang</h5>
+        <p class="small text-muted mb-0">Gratis ongkir untuk area Kota Semarang, hemat biaya pengiriman untuk proyek Anda</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4">
+    <div class="card border-0 shadow-sm h-100 hover-lift">
+      <div class="card-body text-center">
+        <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+          <i class="bi bi-shield-check text-primary" style="font-size: 2rem;"></i>
+        </div>
+        <h5 class="h5 text-wood mb-2">COD Tersedia</h5>
+        <p class="small text-muted mb-0">Bayar setelah barang sampai dan Anda cek kualitasnya, aman dan terpercaya</p>
       </div>
     </div>
   </div>
@@ -150,7 +174,7 @@ share_count: 1
         <div class="bg-secondary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
           <i class="bi bi-headset text-secondary" style="font-size: 2rem;"></i>
         </div>
-        <h4 class="h6 text-wood mb-2">Fast Response 24/7</h4>
+        <h5 class="h5 text-wood mb-2">Fast Response 24/7</h5>
         <p class="small text-muted mb-0">Tim kami siap melayani Anda kapan saja untuk konsultasi gratis dan pemesanan cepat</p>
       </div>
     </div>
@@ -173,7 +197,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
       <i class="bi bi-geo-alt-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h2 class="h2 mb-0 fw-bold text-white">Area Pengiriman Semarang</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Area Pengiriman Semarang</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-truck me-1"></i>
         Gratis ongkir ke seluruh wilayah Kota Semarang
@@ -391,7 +415,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
       <i class="bi bi-shield-shaded mb-2" style="font-size: 2.5rem;"></i>
-      <h2 class="h2 mb-0 fw-bold text-white">Keunggulan Kayu Dolken Gelam</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Keunggulan Kayu Dolken Gelam</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-tree me-1"></i>
         Pilihan terbaik untuk konstruksi dan dekorasi di Semarang
@@ -483,7 +507,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);">
       <i class="bi bi-grid-3x3-gap-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h2 class="h2 mb-0 fw-bold text-white">Aplikasi Kayu Dolken Gelam</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Aplikasi Kayu Dolken Gelam</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-hammer me-1"></i>
         Banyak digunakan untuk berbagai kebutuhan di Semarang
@@ -579,7 +603,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 50%, #be185d 100%);">
       <i class="bi bi-cart-check-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h2 class="h2 mb-0 fw-bold text-white">Cara Pemesanan Kayu Dolken Semarang</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Cara Pemesanan Kayu Dolken Semarang</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-phone me-1"></i>
         Hubungi: 081311400177 (Telepon / WhatsApp)
@@ -720,7 +744,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);">
       <i class="bi bi-briefcase-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h2 class="h2 mb-0 fw-bold text-white">Studi Kasus Proyek Semarang</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Studi Kasus Proyek Semarang</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-star me-1"></i>
         Proyek nyata menggunakan kayu dolken gelam berkualitas
@@ -922,7 +946,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
       <i class="bi bi-chat-quote-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h2 class="h2 mb-0 fw-bold text-white">Testimoni Pelanggan Semarang</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Testimoni Pelanggan Semarang</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-star-fill me-1"></i>
         Kepuasan pelanggan adalah prioritas kami
@@ -1073,7 +1097,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
       <i class="bi bi-lightbulb-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h2 class="h2 mb-0 fw-bold text-white">Tips Memilih Ukuran Kayu Dolken</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Tips Memilih Ukuran Kayu Dolken</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-ruler me-1"></i>
         Pilih diameter yang tepat sesuai kebutuhan proyek
@@ -1169,7 +1193,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);">
       <i class="bi bi-question-circle-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h2 class="h2 mb-0 fw-bold text-white">FAQ Seputar Kayu Dolken Semarang</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">FAQ Seputar Kayu Dolken Semarang</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-chat-dots me-1"></i>
         Pertanyaan yang sering diajukan pelanggan kami
@@ -1265,7 +1289,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);">
       <i class="bi bi-buildings-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h2 class="h2 mb-0 fw-bold text-white">Tentang Semarang: Ibu Kota Jawa Tengah</h3>
+      <h2 class="h2 mb-0 fw-bold text-white">Tentang Semarang: Ibu Kota Jawa Tengah</h2>
       <p class="mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-geo-alt me-1"></i>
         Pusat pemerintahan, ekonomi, dan budaya Jawa Tengah

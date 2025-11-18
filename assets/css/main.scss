@@ -481,6 +481,22 @@ h4.h4 {
   line-height: 1.4;
 }
 
+.post-body h5,
+h5.h5 {
+  font-size: 1.1rem !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
+.post-body h6,
+h6.h6 {
+  font-size: 1rem !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
 /* Desktop layout: h4 and description on separate lines */
 @media (min-width: 769px) {
   .card-body li,
