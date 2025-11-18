@@ -18,7 +18,7 @@ like_count: 3
 comment_count: 0
 share_count: 1
 ---
-<section>
+<section id="cari-kayu-dolken-di-semarang">
   <div class="card border-0 shadow-lg my-4" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);">
     <div class="card-body text-white py-4">
       <div class="row align-items-center">
@@ -70,7 +70,7 @@ share_count: 1
   </div>
 </section>
 
-<section>
+<section id="mengapa-memilih-kami">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);">
@@ -192,7 +192,7 @@ share_count: 1
   </div>
 </section>
 
-<section>
+<section id="daftar-harga">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
@@ -222,7 +222,7 @@ share_count: 1
   </div>
 </section>
 
-<section>
+<section id="area-pengiriman-semarang">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
@@ -509,7 +509,7 @@ share_count: 1
   </div>
 </section>
 
-<section>
+<section id="keunggulan-kayu-dolken-gelam">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
@@ -637,7 +637,7 @@ share_count: 1
 %}
 </section>
 
-<section>
+<section id="aplikasi-kayu-dolken-gelam">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);">
@@ -767,7 +767,7 @@ share_count: 1
   </div>
 </section>
 
-<section>
+<section id="cara-pemesanan">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 50%, #be185d 100%);">
@@ -942,7 +942,7 @@ share_count: 1
   </div>
 </section>
 
-<section>
+<section id="studi-kasus-proyek">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);">
@@ -1371,7 +1371,7 @@ share_count: 1
   </div>
 </section>
 
-<section>
+<section id="testimoni-pelanggan">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
@@ -1613,7 +1613,7 @@ share_count: 1
   </div>
 </section>
 
-<section>
+<section id="tips-memilih-ukuran">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
@@ -1750,7 +1750,7 @@ share_count: 1
   </div>
 </section>
 
-<section>
+<section id="faq-kayu-dolken">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);">
@@ -1908,7 +1908,7 @@ share_count: 1
   </div>
 </section>
 
-<section>
+<section id="tentang-semarang">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);">
@@ -2126,7 +2126,7 @@ share_count: 1
   </div>
 </section>
 
-<section>
+<section id="hubungi-kami">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-5 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
