@@ -1,0 +1,173 @@
+{% comment %}
+  ============================================================================
+  Testimoni Pelanggan Block Component
+  ============================================================================
+
+  @file        _includes/block--testimoni-pelanggan.html
+  @description Reusable component for customer testimonials with categories
+
+  @version     1.0.0
+  @date        2025-11-18
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading for SEO with dynamic city
+  - Categorized testimonials (residential & commercial)
+  - Dynamic testimonial cards with ratings
+  - Avatar icons with color variants
+  - Flexible array structure
+
+  Parameters:
+  -----------
+  - page.nama_kota: City name for title
+  - page.testimoni_residential: Array of residential testimonials
+    Each item:
+    - nama: Customer name
+    - lokasi: Location/job title
+    - rating: Star rating (1-5)
+    - judul: Review title
+    - komentar: Review comment
+    - warna: Icon color (primary, success, danger, secondary)
+  - page.testimoni_komersial: Array of commercial testimonials
+    (same structure as residential)
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  nama_kota: Semarang
+  testimoni_residential:
+    - nama: "Pak Agus"
+      lokasi: "Kontraktor Tembalang"
+      rating: 5
+      judul: "Review Kualitas dan Pengiriman"
+      komentar: "Kualitas kayu dolken bagus sekali..."
+      warna: "primary"
+  testimoni_komersial:
+    - nama: "Pak Dedi"
+      lokasi: "Owner Cafe Kota Lama"
+      rating: 5
+      judul: "Review Harga dan Kualitas"
+      komentar: "Harga bersaing..."
+      warna: "warning"
+  ---
+
+  In content:
+  <section id="testimoni-pelanggan">
+    {% include block--testimoni-pelanggan.html %}
+  </section>
+
+  ============================================================================
+{% endcomment %}
+
+  <!-- Header Section -->
+  <div class="my-5">
+    <div class="card border-0 shadow-lg">
+      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
+        <i class="bi bi-chat-quote-fill mb-2" style="font-size: 2.5rem;"></i>
+        <h2 class="h2 mb-0 fw-bold text-white">Testimoni Pelanggan{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}</h2>
+        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+          <i class="bi bi-star-fill me-1"></i>
+          Kepuasan pelanggan adalah prioritas kami
+          <i class="bi bi-star-fill ms-1"></i>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {% if page.testimoni_residential %}
+  <!-- H3: Testimoni Pelanggan Residential -->
+  <div class="my-4">
+    <div class="d-flex align-items-center mb-3">
+      <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+        <h3 class="h4 mb-0 text-wood fw-bold">
+          <i class="bi bi-house-heart text-success me-2"></i>Testimoni Pelanggan Residential
+        </h3>
+        <p class="small text-muted mb-0 mt-1">Review dari pelanggan untuk proyek hunian dan villa</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      {% for testi in page.testimoni_residential %}
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100 hover-lift">
+          <div class="card-body">
+            <div class="d-flex mb-3">
+              <div class="bg-{{ testi.warna | default: 'primary' }} bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
+                <i class="bi bi-person-fill text-{{ testi.warna | default: 'primary' }}" style="font-size: 1.5rem;"></i>
+              </div>
+              <div class="flex-grow-1">
+                <h4 class="h6 mb-1 fw-bold text-wood">{{ testi.nama }}</h4>
+                <small class="text-muted">{{ testi.lokasi }}</small>
+                <div class="text-warning mt-1">
+                  {% assign rating = testi.rating | default: 5 %}
+                  {% for i in (1..rating) %}
+                  <i class="bi bi-star-fill"></i>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+
+            <h5 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-chat-left-quote me-1"></i>{{ testi.judul }}
+            </h5>
+            <p class="small text-muted fst-italic mb-0">
+              <i class="bi bi-quote text-wood me-1" style="font-size: 1.5rem; vertical-align: middle;"></i>
+              {{ testi.komentar }}
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.testimoni_komersial %}
+  <!-- H3: Testimoni Pelanggan Komersial -->
+  <div class="my-4">
+    <div class="d-flex align-items-center mb-3">
+      <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+        <h3 class="h4 mb-0 text-wood fw-bold">
+          <i class="bi bi-briefcase text-primary me-2"></i>Testimoni Pelanggan Komersial
+        </h3>
+        <p class="small text-muted mb-0 mt-1">Review dari pelanggan untuk proyek bisnis dan properti</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      {% for testi in page.testimoni_komersial %}
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100 hover-lift">
+          <div class="card-body">
+            <div class="d-flex mb-3">
+              <div class="bg-{{ testi.warna | default: 'warning' }} bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
+                <i class="bi bi-person-fill text-{{ testi.warna | default: 'warning' }}" style="font-size: 1.5rem;"></i>
+              </div>
+              <div class="flex-grow-1">
+                <h4 class="h6 mb-1 fw-bold text-wood">{{ testi.nama }}</h4>
+                <small class="text-muted">{{ testi.lokasi }}</small>
+                <div class="text-warning mt-1">
+                  {% assign rating = testi.rating | default: 5 %}
+                  {% for i in (1..rating) %}
+                  <i class="bi bi-star-fill"></i>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+
+            <h5 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-chat-left-quote me-1"></i>{{ testi.judul }}
+            </h5>
+            <p class="small text-muted fst-italic mb-0">
+              <i class="bi bi-quote text-wood me-1" style="font-size: 1.5rem; vertical-align: middle;"></i>
+              {{ testi.komentar }}
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}

@@ -31,6 +31,52 @@ keunggulan_durabilitas:
 keunggulan_nilai:
   ramah_lingkungan: "Material kayu natural dan sustainable, ramah lingkungan dan biodegradable, mendukung green building"
   estetika: "Warna coklat natural yang indah, cocok untuk dekorasi modern maupun tradisional, mempercantik bangunan"
+proses_awal_pemesanan:
+  pilih_ukuran: "Lihat daftar produk lengkap di atas, pilih diameter sesuai kebutuhan proyek Anda"
+  hubungi: "081311400177"
+  konsultasi_gratis: "Tim kami akan bantu hitung kebutuhan dan berikan rekomendasi terbaik untuk proyek Anda"
+finalisasi_pengiriman:
+  konfirmasi_pesanan: "Pastikan jumlah, ukuran, dan alamat pengiriman di Semarang sudah benar"
+  pengiriman_gratis: "Kami antar langsung ke lokasi Anda dengan armada terpercaya, tepat waktu"
+  bayar_cod: "Bayar setelah barang sampai dan Anda cek kualitasnya, tidak ada risiko"
+testimoni_residential:
+  - nama: "Pak Agus"
+    lokasi: "Kontraktor Tembalang"
+    rating: 5
+    judul: "Review Kualitas dan Pengiriman"
+    komentar: "Kualitas kayu dolken bagus sekali, pengiriman ke Tembalang cepat dan tepat waktu!"
+    warna: "primary"
+  - nama: "Bu Rina"
+    lokasi: "Banyumanik"
+    rating: 5
+    judul: "Review Pelayanan dan Hasil"
+    komentar: "Puas dengan pelayanan dan produknya. Untuk gazebo di rumah saya di Banyumanik hasilnya sempurna!"
+    warna: "success"
+  - nama: "Bu Sari"
+    lokasi: "Pedurungan"
+    rating: 5
+    judul: "Review Durabilitas Produk"
+    komentar: "Kayu dolken tahan lama dan anti rayap. Sudah 2 tahun pagar rumah saya di Pedurungan masih bagus."
+    warna: "danger"
+  - nama: "Pak Joko"
+    lokasi: "Ngaliyan"
+    rating: 5
+    judul: "Review Harga Terjangkau"
+    komentar: "Harga terjangkau untuk proyek gazebo rumah di Ngaliyan. Tim responsif dan proses cepat!"
+    warna: "secondary"
+testimoni_komersial:
+  - nama: "Pak Dedi"
+    lokasi: "Owner Cafe Kota Lama"
+    rating: 5
+    judul: "Review Harga dan Kualitas"
+    komentar: "Harga bersaing, kualitas oke. Cocok untuk proyek cafe saya di Kota Lama. Highly recommended!"
+    warna: "warning"
+  - nama: "Pak Budi"
+    lokasi: "Developer Properti Semarang Selatan"
+    rating: 5
+    judul: "Review Pelayanan Profesional"
+    komentar: "Pelayanan profesional, COD tersedia jadi aman. Terima kasih untuk pengiriman gratis ke Semarang Selatan!"
+    warna: "info"
 like_count: 3
 comment_count: 0
 share_count: 1
@@ -589,180 +635,8 @@ share_count: 1
 </section>
 
 <section id="cara-pemesanan">
-  <div class="my-5">
-    <div class="card border-0 shadow-lg">
-      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 50%, #be185d 100%);">
-        <i class="bi bi-cart-check-fill mb-2" style="font-size: 2.5rem;"></i>
-        <h2 class="h2 mb-0 fw-bold text-white">Cara Pemesanan Kayu Dolken Semarang</h2>
-        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
-          <i class="bi bi-phone me-1"></i>
-          Hubungi: 081311400177 (Telepon / WhatsApp)
-          <i class="bi bi-phone ms-1"></i>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Langkah Mudah Pemesanan -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-danger bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-list-check text-danger me-2"></i>Langkah Mudah Pemesanan
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Proses pemesanan kayu dolken gelam di Semarang sangat mudah dan praktis. Ikuti 6 langkah sederhana berikut untuk mendapatkan kayu dolken berkualitas dengan pelayanan terbaik</p>
-      </div>
-    </div>
-
-  <div class="card border-0 shadow-sm">
-    <div class="card-body bg-light py-3">
-      <h4 class="h4 text-wood mb-2 fw-bold">
-        <i class="bi bi-clipboard-check me-2"></i>Proses Awal Pemesanan
-      </h4>
-      <p class="small text-muted mb-0">Langkah 1-3: Dari pemilihan produk hingga konsultasi kebutuhan proyek Anda.</p>
-    </div>
-  </div>
-
-  <div class="row g-4 my-4">
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center position-relative">
-          <div class="position-absolute top-0 start-50 translate-middle">
-            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px; font-size: 1.25rem;">
-              1
-            </div>
-          </div>
-          <div class="mt-4 pt-2">
-            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-              <i class="bi bi-list-check text-primary" style="font-size: 2rem;"></i>
-            </div>
-            <h4 class="h6 text-wood mb-2 fw-bold">Pilih Ukuran</h4>
-            <p class="small text-muted mb-0">Lihat daftar produk lengkap di atas, pilih diameter sesuai kebutuhan proyek Anda</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center position-relative">
-          <div class="position-absolute top-0 start-50 translate-middle">
-            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px; font-size: 1.25rem;">
-              2
-            </div>
-          </div>
-          <div class="mt-4 pt-2">
-            <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-              <i class="bi bi-telephone-fill text-success" style="font-size: 2rem;"></i>
-            </div>
-            <h4 class="h6 text-wood mb-2 fw-bold">Hubungi 081311400177</h4>
-            <p class="small text-muted mb-0">Langsung via telepon atau WhatsApp untuk respon cepat dan pelayanan ramah</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center position-relative">
-          <div class="position-absolute top-0 start-50 translate-middle">
-            <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px; font-size: 1.25rem;">
-              3
-            </div>
-          </div>
-          <div class="mt-4 pt-2">
-            <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-              <i class="bi bi-chat-dots-fill text-warning" style="font-size: 2rem;"></i>
-            </div>
-            <h4 class="h6 text-wood mb-2 fw-bold">Konsultasi Gratis</h4>
-            <p class="small text-muted mb-0">Tim kami akan bantu hitung kebutuhan dan berikan rekomendasi terbaik untuk proyek Anda</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card border-0 shadow-sm my-4">
-    <div class="card-body bg-light py-3">
-      <h4 class="h4 text-wood mb-2 fw-bold">
-        <i class="bi bi-truck me-2"></i>Finalisasi & Pengiriman
-      </h4>
-      <p class="small text-muted mb-0">Langkah 4-6: Konfirmasi pesanan, pengiriman gratis, hingga pembayaran COD yang aman.</p>
-    </div>
-  </div>
-
-  <div class="row g-4 my-4">
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center position-relative">
-          <div class="position-absolute top-0 start-50 translate-middle">
-            <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px; font-size: 1.25rem;">
-              4
-            </div>
-          </div>
-          <div class="mt-4 pt-2">
-            <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-              <i class="bi bi-clipboard-check text-info" style="font-size: 2rem;"></i>
-            </div>
-            <h4 class="h6 text-wood mb-2 fw-bold">Konfirmasi Pesanan</h4>
-            <p class="small text-muted mb-0">Pastikan jumlah, ukuran, dan alamat pengiriman di Semarang sudah benar</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center position-relative">
-          <div class="position-absolute top-0 start-50 translate-middle">
-            <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px; font-size: 1.25rem;">
-              5
-            </div>
-          </div>
-          <div class="mt-4 pt-2">
-            <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-              <i class="bi bi-truck text-danger" style="font-size: 2rem;"></i>
-            </div>
-            <h4 class="h6 text-wood mb-2 fw-bold">Pengiriman Gratis</h4>
-            <p class="small text-muted mb-0">Kami antar langsung ke lokasi Anda dengan armada terpercaya, tepat waktu</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center position-relative">
-          <div class="position-absolute top-0 start-50 translate-middle">
-            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px; font-size: 1.25rem;">
-              6
-            </div>
-          </div>
-          <div class="mt-4 pt-2">
-            <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-              <i class="bi bi-cash-coin text-success" style="font-size: 2rem;"></i>
-            </div>
-            <h4 class="h6 text-wood mb-2 fw-bold">Bayar COD</h4>
-            <p class="small text-muted mb-0">Bayar setelah barang sampai dan Anda cek kualitasnya, tidak ada risiko</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card border-0 shadow-lg my-4" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-    <div class="card-body text-white text-center py-4">
-      <i class="bi bi-whatsapp mb-3" style="font-size: 3rem;"></i>
-      <h4 class="h5 mb-3 fw-bold">Chat WhatsApp Sekarang!</h4>
-      <p class="mb-3">Klik tombol WhatsApp di bawah atau langsung hubungi <strong>081311400177</strong> untuk info lengkap, cek stok, dan penawaran khusus!</p>
-      <a href="https://wa.me/6281311400177?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20gelam%20untuk%20Semarang" class="btn btn-light btn-lg px-5" target="_blank">
-        <i class="bi bi-whatsapp me-2"></i>Hubungi WhatsApp
-      </a>
-    </div>
-  </div>
-  </div>
+  {% include block--cara-pemesanan-kayu-dolken.html %}
 </section>
-
 <section id="studi-kasus-proyek">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -1193,247 +1067,8 @@ share_count: 1
 </section>
 
 <section id="testimoni-pelanggan">
-  <div class="my-5">
-    <div class="card border-0 shadow-lg">
-      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
-        <i class="bi bi-chat-quote-fill mb-2" style="font-size: 2.5rem;"></i>
-        <h2 class="h2 mb-0 fw-bold text-white">Testimoni Pelanggan Semarang</h2>
-        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
-          <i class="bi bi-star-fill me-1"></i>
-          Kepuasan pelanggan adalah prioritas kami
-          <i class="bi bi-star-fill ms-1"></i>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Testimoni Pelanggan Residential -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-house-heart text-success me-2"></i>Testimoni Pelanggan Residential
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Review dari pelanggan untuk proyek hunian dan villa</p>
-      </div>
-    </div>
-
-    <div class="row g-4">
-      <!-- H4: Pak Agus -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-body">
-            <div class="d-flex mb-3">
-              <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
-                <i class="bi bi-person-fill text-primary" style="font-size: 1.5rem;"></i>
-              </div>
-              <div class="flex-grow-1">
-                <h4 class="h6 mb-1 fw-bold text-wood">Pak Agus</h4>
-                <small class="text-muted">Kontraktor Tembalang</small>
-                <div class="text-warning mt-1">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- H5: Review Kualitas dan Pengiriman -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-chat-left-quote me-1"></i>Review Kualitas dan Pengiriman
-            </h5>
-            <p class="small text-muted fst-italic mb-0">
-              <i class="bi bi-quote text-wood me-1" style="font-size: 1.5rem; vertical-align: middle;"></i>
-              Kualitas kayu dolken bagus sekali, pengiriman ke Tembalang cepat dan tepat waktu!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- H4: Bu Rina -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-body">
-            <div class="d-flex mb-3">
-              <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
-                <i class="bi bi-person-fill text-success" style="font-size: 1.5rem;"></i>
-              </div>
-              <div class="flex-grow-1">
-                <h4 class="h6 mb-1 fw-bold text-wood">Bu Rina</h4>
-                <small class="text-muted">Banyumanik</small>
-                <div class="text-warning mt-1">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- H5: Review Pelayanan dan Hasil -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-chat-left-quote me-1"></i>Review Pelayanan dan Hasil
-            </h5>
-            <p class="small text-muted fst-italic mb-0">
-              <i class="bi bi-quote text-wood me-1" style="font-size: 1.5rem; vertical-align: middle;"></i>
-              Puas dengan pelayanan dan produknya. Untuk gazebo di rumah saya di Banyumanik hasilnya sempurna!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- H4: Bu Sari -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-body">
-            <div class="d-flex mb-3">
-              <div class="bg-danger bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
-                <i class="bi bi-person-fill text-danger" style="font-size: 1.5rem;"></i>
-              </div>
-              <div class="flex-grow-1">
-                <h4 class="h6 mb-1 fw-bold text-wood">Bu Sari</h4>
-                <small class="text-muted">Pedurungan</small>
-                <div class="text-warning mt-1">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- H5: Review Durabilitas Produk -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-chat-left-quote me-1"></i>Review Durabilitas Produk
-            </h5>
-            <p class="small text-muted fst-italic mb-0">
-              <i class="bi bi-quote text-wood me-1" style="font-size: 1.5rem; vertical-align: middle;"></i>
-              Kayu dolken tahan lama dan anti rayap. Sudah 2 tahun pagar rumah saya di Pedurungan masih bagus.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- H4: Pak Joko -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-body">
-            <div class="d-flex mb-3">
-              <div class="bg-secondary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
-                <i class="bi bi-person-fill text-secondary" style="font-size: 1.5rem;"></i>
-              </div>
-              <div class="flex-grow-1">
-                <h4 class="h6 mb-1 fw-bold text-wood">Pak Joko</h4>
-                <small class="text-muted">Ngaliyan</small>
-                <div class="text-warning mt-1">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- H5: Review Harga Terjangkau -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-chat-left-quote me-1"></i>Review Harga Terjangkau
-            </h5>
-            <p class="small text-muted fst-italic mb-0">
-              <i class="bi bi-quote text-wood me-1" style="font-size: 1.5rem; vertical-align: middle;"></i>
-              Harga terjangkau untuk proyek gazebo rumah di Ngaliyan. Tim responsif dan proses cepat!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Testimoni Pelanggan Komersial -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-briefcase text-primary me-2"></i>Testimoni Pelanggan Komersial
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Review dari pelanggan untuk proyek bisnis dan properti</p>
-      </div>
-    </div>
-
-    <div class="row g-4">
-      <!-- H4: Pak Dedi -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-body">
-            <div class="d-flex mb-3">
-              <div class="bg-warning bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
-                <i class="bi bi-person-fill text-warning" style="font-size: 1.5rem;"></i>
-              </div>
-              <div class="flex-grow-1">
-                <h4 class="h6 mb-1 fw-bold text-wood">Pak Dedi</h4>
-                <small class="text-muted">Owner Cafe Kota Lama</small>
-                <div class="text-warning mt-1">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- H5: Review Harga dan Kualitas -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-chat-left-quote me-1"></i>Review Harga dan Kualitas
-            </h5>
-            <p class="small text-muted fst-italic mb-0">
-              <i class="bi bi-quote text-wood me-1" style="font-size: 1.5rem; vertical-align: middle;"></i>
-              Harga bersaing, kualitas oke. Cocok untuk proyek cafe saya di Kota Lama. Highly recommended!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- H4: Pak Budi -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-body">
-            <div class="d-flex mb-3">
-              <div class="bg-info bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
-                <i class="bi bi-person-fill text-info" style="font-size: 1.5rem;"></i>
-              </div>
-              <div class="flex-grow-1">
-                <h4 class="h6 mb-1 fw-bold text-wood">Pak Budi</h4>
-                <small class="text-muted">Developer Properti Semarang Selatan</small>
-                <div class="text-warning mt-1">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- H5: Review Pelayanan Profesional -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-chat-left-quote me-1"></i>Review Pelayanan Profesional
-            </h5>
-            <p class="small text-muted fst-italic mb-0">
-              <i class="bi bi-quote text-wood me-1" style="font-size: 1.5rem; vertical-align: middle;"></i>
-              Pelayanan profesional, COD tersedia jadi aman. Terima kasih untuk pengiriman gratis ke Semarang Selatan!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include block--testimoni-pelanggan.html %}
 </section>
-
 <section id="tips-memilih-ukuran">
   <div class="my-5">
     <div class="card border-0 shadow-lg">

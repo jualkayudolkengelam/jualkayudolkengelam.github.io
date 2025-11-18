@@ -1,0 +1,228 @@
+{% comment %}
+  ============================================================================
+  Cara Pemesanan Kayu Dolken Block Component
+  ============================================================================
+
+  @file        _includes/block--cara-pemesanan-kayu-dolken.html
+  @description Reusable component for order process steps with dynamic content
+
+  @version     1.0.0
+  @date        2025-11-18
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading for SEO
+  - Dynamic location-specific content
+  - 6-step order process (3 initial + 3 finalization)
+  - Numbered card layout with icons
+  - WhatsApp CTA with dynamic city and phone
+
+  Parameters:
+  -----------
+  - page.nama_kota: City name for title and CTA
+  - page.proses_awal_pemesanan: Object with 3 initial steps
+    - pilih_ukuran: Step 1 description
+    - hubungi: Phone number for Step 2
+    - konsultasi_gratis: Step 3 description
+  - page.finalisasi_pengiriman: Object with 3 finalization steps
+    - konfirmasi_pesanan: Step 4 description
+    - pengiriman_gratis: Step 5 description
+    - bayar_cod: Step 6 description
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  nama_kota: Semarang
+  proses_awal_pemesanan:
+    pilih_ukuran: "Lihat daftar produk lengkap di atas..."
+    hubungi: "081311400177"
+    konsultasi_gratis: "Tim kami akan bantu hitung kebutuhan..."
+  finalisasi_pengiriman:
+    konfirmasi_pesanan: "Pastikan jumlah, ukuran, dan alamat..."
+    pengiriman_gratis: "Kami antar langsung ke lokasi Anda..."
+    bayar_cod: "Bayar setelah barang sampai..."
+  ---
+
+  In content:
+  <section id="cara-pemesanan">
+    {% include block--cara-pemesanan-kayu-dolken.html %}
+  </section>
+
+  ============================================================================
+{% endcomment %}
+
+  <!-- Header Section -->
+  <div class="my-5">
+    <div class="card border-0 shadow-lg">
+      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 50%, #be185d 100%);">
+        <i class="bi bi-cart-check-fill mb-2" style="font-size: 2.5rem;"></i>
+        <h2 class="h2 mb-0 fw-bold text-white">Cara Pemesanan Kayu Dolken{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}</h2>
+        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+          <i class="bi bi-phone me-1"></i>
+          Hubungi: {{ page.proses_awal_pemesanan.hubungi | default: site.business.phone }} (Telepon / WhatsApp)
+          <i class="bi bi-phone ms-1"></i>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- H3: Langkah Mudah Pemesanan -->
+  <div class="my-4">
+    <div class="d-flex align-items-center mb-3">
+      <div class="bg-danger bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+        <h3 class="h4 mb-0 text-wood fw-bold">
+          <i class="bi bi-list-check text-danger me-2"></i>Langkah Mudah Pemesanan
+        </h3>
+        <p class="small text-muted mb-0 mt-1">Proses pemesanan kayu dolken gelam{% if page.nama_kota %} di {{ page.nama_kota }}{% endif %} sangat mudah dan praktis. Ikuti 6 langkah sederhana berikut untuk mendapatkan kayu dolken berkualitas dengan pelayanan terbaik</p>
+      </div>
+    </div>
+
+  <div class="card border-0 shadow-sm">
+    <div class="card-body bg-light py-3">
+      <h4 class="h4 text-wood mb-2 fw-bold">
+        <i class="bi bi-clipboard-check me-2"></i>Proses Awal Pemesanan
+      </h4>
+      <p class="small text-muted mb-0">Langkah 1-3: Dari pemilihan produk hingga konsultasi kebutuhan proyek Anda.</p>
+    </div>
+  </div>
+
+  <div class="row g-4 my-4">
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center position-relative">
+          <div class="position-absolute top-0 start-50 translate-middle">
+            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px; font-size: 1.25rem;">
+              1
+            </div>
+          </div>
+          <div class="mt-4 pt-2">
+            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+              <i class="bi bi-list-check text-primary" style="font-size: 2rem;"></i>
+            </div>
+            <h4 class="h6 text-wood mb-2 fw-bold">Pilih Ukuran</h4>
+            <p class="small text-muted mb-0">{{ page.proses_awal_pemesanan.pilih_ukuran | default: "Lihat daftar produk lengkap di atas, pilih diameter sesuai kebutuhan proyek Anda" }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center position-relative">
+          <div class="position-absolute top-0 start-50 translate-middle">
+            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px; font-size: 1.25rem;">
+              2
+            </div>
+          </div>
+          <div class="mt-4 pt-2">
+            <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+              <i class="bi bi-telephone-fill text-success" style="font-size: 2rem;"></i>
+            </div>
+            <h4 class="h6 text-wood mb-2 fw-bold">Hubungi {{ page.proses_awal_pemesanan.hubungi | default: site.business.phone }}</h4>
+            <p class="small text-muted mb-0">Langsung via telepon atau WhatsApp untuk respon cepat dan pelayanan ramah</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center position-relative">
+          <div class="position-absolute top-0 start-50 translate-middle">
+            <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px; font-size: 1.25rem;">
+              3
+            </div>
+          </div>
+          <div class="mt-4 pt-2">
+            <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+              <i class="bi bi-chat-dots-fill text-warning" style="font-size: 2rem;"></i>
+            </div>
+            <h4 class="h6 text-wood mb-2 fw-bold">Konsultasi Gratis</h4>
+            <p class="small text-muted mb-0">{{ page.proses_awal_pemesanan.konsultasi_gratis | default: "Tim kami akan bantu hitung kebutuhan dan berikan rekomendasi terbaik untuk proyek Anda" }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card border-0 shadow-sm my-4">
+    <div class="card-body bg-light py-3">
+      <h4 class="h4 text-wood mb-2 fw-bold">
+        <i class="bi bi-truck me-2"></i>Finalisasi & Pengiriman
+      </h4>
+      <p class="small text-muted mb-0">Langkah 4-6: Konfirmasi pesanan, pengiriman gratis, hingga pembayaran COD yang aman.</p>
+    </div>
+  </div>
+
+  <div class="row g-4 my-4">
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center position-relative">
+          <div class="position-absolute top-0 start-50 translate-middle">
+            <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px; font-size: 1.25rem;">
+              4
+            </div>
+          </div>
+          <div class="mt-4 pt-2">
+            <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+              <i class="bi bi-clipboard-check text-info" style="font-size: 2rem;"></i>
+            </div>
+            <h4 class="h6 text-wood mb-2 fw-bold">Konfirmasi Pesanan</h4>
+            <p class="small text-muted mb-0">{{ page.finalisasi_pengiriman.konfirmasi_pesanan | default: "Pastikan jumlah, ukuran, dan alamat pengiriman sudah benar" }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center position-relative">
+          <div class="position-absolute top-0 start-50 translate-middle">
+            <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px; font-size: 1.25rem;">
+              5
+            </div>
+          </div>
+          <div class="mt-4 pt-2">
+            <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+              <i class="bi bi-truck text-danger" style="font-size: 2rem;"></i>
+            </div>
+            <h4 class="h6 text-wood mb-2 fw-bold">Pengiriman Gratis</h4>
+            <p class="small text-muted mb-0">{{ page.finalisasi_pengiriman.pengiriman_gratis | default: "Kami antar langsung ke lokasi Anda dengan armada terpercaya, tepat waktu" }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center position-relative">
+          <div class="position-absolute top-0 start-50 translate-middle">
+            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 50px; height: 50px; font-size: 1.25rem;">
+              6
+            </div>
+          </div>
+          <div class="mt-4 pt-2">
+            <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+              <i class="bi bi-cash-coin text-success" style="font-size: 2rem;"></i>
+            </div>
+            <h4 class="h6 text-wood mb-2 fw-bold">Bayar COD</h4>
+            <p class="small text-muted mb-0">{{ page.finalisasi_pengiriman.bayar_cod | default: "Bayar setelah barang sampai dan Anda cek kualitasnya, tidak ada risiko" }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card border-0 shadow-lg my-4" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+    <div class="card-body text-white text-center py-4">
+      <i class="bi bi-whatsapp mb-3" style="font-size: 3rem;"></i>
+      <h4 class="h5 mb-3 fw-bold">Chat WhatsApp Sekarang!</h4>
+      <p class="mb-3">Klik tombol WhatsApp di bawah atau langsung hubungi <strong>{{ page.proses_awal_pemesanan.hubungi | default: site.business.phone }}</strong> untuk info lengkap, cek stok, dan penawaran khusus!</p>
+      <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20gelam{% if page.nama_kota %}%20untuk%20{{ page.nama_kota | url_encode }}{% endif %}" class="btn btn-light btn-lg px-5" target="_blank">
+        <i class="bi bi-whatsapp me-2"></i>Hubungi WhatsApp
+      </a>
+    </div>
+  </div>
+  </div>
