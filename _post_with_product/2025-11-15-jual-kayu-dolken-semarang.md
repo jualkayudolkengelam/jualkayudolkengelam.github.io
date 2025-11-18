@@ -69,7 +69,7 @@ share_count: 1
     </div>
   </div>
 </section>
----
+
 <section>
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -191,7 +191,7 @@ share_count: 1
   </div>
   </div>
 </section>
----
+
 <section>
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -221,7 +221,7 @@ share_count: 1
     </div>
   </div>
 </section>
----
+
 <section>
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -508,7 +508,7 @@ share_count: 1
   </div>
   </div>
 </section>
----
+
 <section>
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -615,7 +615,7 @@ share_count: 1
         </div>
       </div>
     </div>
----
+
     <div class="col-md-6">
       <div class="card border-0 shadow-sm h-100 hover-lift">
         <div class="card-body text-center">
@@ -630,13 +630,13 @@ share_count: 1
   </div>
   </div>
 </section>
----
+
 <section>
 {% include block--card--link.html
    nama_kota="Semarang"
 %}
 </section>
----
+
 <section>
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -766,7 +766,7 @@ share_count: 1
   </div>
   </div>
 </section>
----
+
 <section>
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -941,7 +941,7 @@ share_count: 1
   </div>
   </div>
 </section>
----
+
 <section>
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -1358,7 +1358,7 @@ share_count: 1
       </div>
     </div>
   </div>
-  ---
+  
   <div class="card border-0 shadow-sm my-4">
     <div class="card-body text-center py-4" style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);">
       <i class="bi bi-chat-left-dots-fill text-wood mb-3" style="font-size: 2.5rem;"></i>
@@ -1370,7 +1370,7 @@ share_count: 1
     </div>
   </div>
 </section>
----
+
 <section>
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -1612,7 +1612,7 @@ share_count: 1
     </div>
   </div>
 </section>
----
+
 <section>
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -1749,7 +1749,7 @@ share_count: 1
     </div>
   </div>
 </section>
----
+
 <section>
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -1907,7 +1907,7 @@ share_count: 1
     </div>
   </div>
 </section>
----
+
 <section>
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -2125,7 +2125,7 @@ share_count: 1
     </div>
   </div>
 </section>
----
+
 <section>
   <div class="my-5">
     <div class="card border-0 shadow-lg">
