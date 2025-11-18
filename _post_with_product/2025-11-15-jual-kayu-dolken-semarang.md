@@ -83,11 +83,18 @@ share_count: 1
   </div>
 </div>
 
-<h3 class="h3 text-wood mb-3 fw-bold">Keunggulan Layanan Kami</h3>
+<!-- H3: Keunggulan Layanan Kami -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-award text-success me-2"></i>Keunggulan Layanan Kami
+      </h3>
+      <p class="small text-muted mb-0 mt-1">Kami menyediakan solusi lengkap untuk kebutuhan kayu dolken gelam Anda di Semarang dengan berbagai keunggulan yang membedakan kami dari kompetitor</p>
+    </div>
+  </div>
 
-<p>Kami menyediakan solusi lengkap untuk kebutuhan kayu dolken gelam Anda di Semarang dengan berbagai keunggulan yang membedakan kami dari kompetitor:</p>
-
-<div class="card border-0 shadow-sm my-4">
+<div class="card border-0 shadow-sm">
   <div class="card-body bg-light py-3">
     <h4 class="h4 text-wood mb-2 fw-bold">
       <i class="bi bi-star-fill me-2"></i>Kualitas Produk & Harga Kompetitif
@@ -180,6 +187,7 @@ share_count: 1
     </div>
   </div>
 </div>
+</div>
 
 ---
 
@@ -207,11 +215,18 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   </div>
 </div>
 
-<h3 class="h3 text-wood mb-3 fw-bold">Jangkauan Pengiriman Lengkap</h3>
+<!-- H3: Jangkauan Pengiriman Lengkap -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-truck text-primary me-2"></i>Jangkauan Pengiriman Lengkap
+      </h3>
+      <p class="small text-muted mb-0 mt-1">Kami melayani pengiriman gratis ke seluruh wilayah Kota Semarang, mencakup 16 kecamatan dan ratusan kelurahan untuk kemudahan proyek Anda</p>
+    </div>
+  </div>
 
-<p>Kami melayani pengiriman gratis ke seluruh wilayah Kota Semarang, mencakup 16 kecamatan dan ratusan kelurahan untuk kemudahan proyek Anda.</p>
-
-<div class="card border-0 shadow-sm my-4">
+<div class="card border-0 shadow-sm">
   <div class="card-body bg-light py-3">
     <h4 class="h4 text-wood mb-2 fw-bold">
       <i class="bi bi-geo-fill me-2"></i>Wilayah Pusat Kota Semarang
@@ -415,14 +430,20 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
     </div>
   </div>
 </div>
+</div>
 
-<h3 class="h3 text-wood mb-3 fw-bold mt-5">
-  <i class="bi bi-star-fill me-2"></i>Landmark & Lokasi Strategis
-</h3>
+<!-- H3: Landmark & Lokasi Strategis -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-warning bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-star-fill text-warning me-2"></i>Landmark & Lokasi Strategis
+      </h3>
+      <p class="small text-muted mb-0 mt-1">Kami juga melayani area landmark terkenal dan lokasi strategis di Semarang untuk kemudahan proyek komersial Anda</p>
+    </div>
+  </div>
 
-<p>Kami juga melayani area landmark terkenal dan lokasi strategis di Semarang untuk kemudahan proyek komersial Anda.</p>
-
-<div class="row g-3 my-4">
+<div class="row g-3">
   <div class="col-md-6">
     <div class="card border-0 shadow-sm h-100">
       <div class="card-body bg-light py-3">
@@ -463,6 +484,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
     </div>
   </div>
 </div>
+</div>
 
 <div class="my-5">
   <div class="card border-0 shadow-lg">
@@ -478,11 +500,18 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   </div>
 </div>
 
-<h3 class="h3 text-wood mb-3 fw-bold">Karakteristik Unggul Kayu Gelam</h3>
+<!-- H3: Karakteristik Unggul Kayu Gelam -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-shield-fill-check text-success me-2"></i>Karakteristik Unggul Kayu Gelam
+      </h3>
+      <p class="small text-muted mb-0 mt-1">Kayu dolken gelam memiliki berbagai keunggulan yang menjadikannya pilihan utama untuk konstruksi dan dekorasi di Semarang, dari ketahanan ekstrem hingga nilai estetika yang tinggi</p>
+    </div>
+  </div>
 
-<p>Kayu dolken gelam memiliki berbagai keunggulan yang menjadikannya pilihan utama untuk konstruksi dan dekorasi di Semarang, dari ketahanan ekstrem hingga nilai estetika yang tinggi.</p>
-
-<div class="card border-0 shadow-sm my-4">
+<div class="card border-0 shadow-sm">
   <div class="card-body bg-light py-3">
     <h4 class="h4 text-wood mb-2 fw-bold">
       <i class="bi bi-shield-fill-check me-2"></i>Durabilitas & Ketahanan
@@ -575,6 +604,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
     </div>
   </div>
 </div>
+</div>
 
 {% include block--card--link.html
    nama_kota="Semarang"
@@ -594,11 +624,18 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   </div>
 </div>
 
-<h3 class="h3 text-wood mb-3 fw-bold">Beragam Penggunaan Kayu Dolken Gelam</h3>
+<!-- H3: Beragam Penggunaan Kayu Dolken Gelam -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-info bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-hammer text-info me-2"></i>Beragam Penggunaan Kayu Dolken Gelam
+      </h3>
+      <p class="small text-muted mb-0 mt-1">Kayu dolken gelam memiliki fleksibilitas tinggi untuk berbagai aplikasi, dari konstruksi bangunan hingga dekorasi dan furniture. Berikut adalah berbagai penggunaan kayu dolken gelam yang telah terbukti di Semarang</p>
+    </div>
+  </div>
 
-<p>Kayu dolken gelam memiliki fleksibilitas tinggi untuk berbagai aplikasi, dari konstruksi bangunan hingga dekorasi dan furniture. Berikut adalah berbagai penggunaan kayu dolken gelam yang telah terbukti di Semarang:</p>
-
-<div class="card border-0 shadow-sm my-4">
+<div class="card border-0 shadow-sm">
   <div class="card-body bg-light py-3">
     <h4 class="h4 text-wood mb-2 fw-bold">
       <i class="bi bi-hammer me-2"></i>Aplikasi Konstruksi & Dekorasi
@@ -699,6 +736,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
     </div>
   </div>
 </div>
+</div>
 
 <div class="my-5">
   <div class="card border-0 shadow-lg">
@@ -714,11 +752,18 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
   </div>
 </div>
 
-<h3 class="h3 text-wood mb-3 fw-bold">Langkah Mudah Pemesanan</h3>
+<!-- H3: Langkah Mudah Pemesanan -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-danger bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-list-check text-danger me-2"></i>Langkah Mudah Pemesanan
+      </h3>
+      <p class="small text-muted mb-0 mt-1">Proses pemesanan kayu dolken gelam di Semarang sangat mudah dan praktis. Ikuti 6 langkah sederhana berikut untuk mendapatkan kayu dolken berkualitas dengan pelayanan terbaik</p>
+    </div>
+  </div>
 
-<p>Proses pemesanan kayu dolken gelam di Semarang sangat mudah dan praktis. Ikuti 6 langkah sederhana berikut untuk mendapatkan kayu dolken berkualitas dengan pelayanan terbaik:</p>
-
-<div class="card border-0 shadow-sm my-4">
+<div class="card border-0 shadow-sm">
   <div class="card-body bg-light py-3">
     <h4 class="h4 text-wood mb-2 fw-bold">
       <i class="bi bi-clipboard-check me-2"></i>Proses Awal Pemesanan
@@ -863,6 +908,7 @@ Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengir
       <i class="bi bi-whatsapp me-2"></i>Hubungi WhatsApp
     </a>
   </div>
+</div>
 </div>
 
 <div class="my-5">
