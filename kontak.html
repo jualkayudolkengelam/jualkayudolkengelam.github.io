@@ -51,7 +51,7 @@ schema_type: ContactPage
     <div class="card border-0 shadow-sm h-100 text-center hover-lift">
       <div class="card-body p-4">
         <div class="mb-3">
-          <i class="bi bi-whatsapp text-success" style="font-size: 4rem;"></i>
+          <i class="bi bi-whatsapp text-success" class="fs-4rem"></i>
         </div>
         <h5 class="card-title">WhatsApp</h5>
         <p class="text-muted mb-3">Cara tercepat untuk menghubungi kami</p>
@@ -68,7 +68,7 @@ schema_type: ContactPage
     <div class="card border-0 shadow-sm h-100 text-center hover-lift">
       <div class="card-body p-4">
         <div class="mb-3">
-          <i class="bi bi-telephone-fill text-primary" style="font-size: 4rem;"></i>
+          <i class="bi bi-telephone-fill text-primary" class="fs-4rem"></i>
         </div>
         <h5 class="card-title">Telepon</h5>
         <p class="text-muted mb-3">Hubungi langsung untuk konsultasi</p>
@@ -85,7 +85,7 @@ schema_type: ContactPage
     <div class="card border-0 shadow-sm h-100 text-center hover-lift">
       <div class="card-body p-4">
         <div class="mb-3">
-          <i class="bi bi-geo-alt-fill text-danger" style="font-size: 4rem;"></i>
+          <i class="bi bi-geo-alt-fill text-danger" class="fs-4rem"></i>
         </div>
         <h5 class="card-title">Lokasi</h5>
         <p class="text-muted mb-3">Supplier yang jual kayu dolken terdekat di kota Anda</p>
@@ -161,7 +161,7 @@ schema_type: ContactPage
         <p class="text-muted mb-4">Isi form di bawah ini dan kami akan menghubungi Anda via WhatsApp</p>
 
         <div class="contact-form">
-          <form id="quickContactForm">
+          <form id="quickContactForm" data-whatsapp="{{ site.business.whatsapp }}">
             <div class="row g-3">
               <div class="col-md-6">
                 <label for="name" class="form-label">Nama Lengkap *</label>
@@ -332,42 +332,6 @@ schema_type: ContactPage
 }
 </script>
 
-<!-- JavaScript for Contact Form -->
-<script>
-document.getElementById('quickContactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const name = document.getElementById('name').value;
-  const phone = document.getElementById('phone').value;
-  const productType = document.getElementById('productType').value;
-  const quantity = document.getElementById('quantity').value;
-  const city = document.getElementById('city').value;
-  const message = document.getElementById('message').value;
-
-  let whatsappMessage = `Halo, saya ${name}.\n\n`;
-
-  if (productType) {
-    whatsappMessage += `Saya tertarik dengan kayu dolken diameter ${productType}.\n`;
-  }
-
-  if (quantity) {
-    whatsappMessage += `Kebutuhan: ${quantity}\n`;
-  }
-
-  if (city) {
-    whatsappMessage += `Lokasi pengiriman: ${city}\n`;
-  }
-
-  if (message) {
-    whatsappMessage += `\nPesan:\n${message}\n`;
-  }
-
-  whatsappMessage += `\nNomor WhatsApp saya: ${phone}`;
-
-  const encodedMessage = encodeURIComponent(whatsappMessage);
-  const whatsappURL = `https://wa.me/{{ site.business.whatsapp }}?text=${encodedMessage}`;
-
-  window.open(whatsappURL, '_blank');
-});
-</script>
+<!-- Initialize Contact Form -->
+<script src="{{ '/assets/js/contact-form.js' | relative_url }}" defer></script>
 </div><!-- /.container -->
