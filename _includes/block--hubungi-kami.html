@@ -62,7 +62,7 @@
           Telepon / WhatsApp: <strong>{{ site.business.phone }}</strong>
         </p>
         <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20gelam{% if page.nama_kota %}%20untuk%20{{ page.nama_kota | url_encode }}{% endif %}" class="btn btn-light btn-lg px-5 py-3" target="_blank">
-          <i class="bi bi-whatsapp me-2" style="font-size: 1.5rem;"></i>
+          <i class="bi bi-whatsapp me-2 fs-1-5rem"></i>
           <span class="fw-bold">Chat WhatsApp Sekarang</span>
         </a>
       </div>
@@ -92,7 +92,7 @@
             {% for layanan in page.layanan_konsultasi %}
             <div class="col-md-6">
               <div class="d-flex align-items-start">
-                <i class="bi bi-check-circle-fill text-success me-3" style="font-size: 1.25rem;"></i>
+                <i class="bi bi-check-circle-fill text-success me-3 fs-1-25rem"></i>
                 <div>
                   <h5 class="h6 mb-1 fw-bold">{{ layanan.judul }}</h5>
                   <p class="small text-muted mb-0">{{ layanan.deskripsi }}</p>
@@ -105,7 +105,7 @@
               {% assign parts = item | split: "|" %}
               <div class="col-md-6">
                 <div class="d-flex align-items-start">
-                  <i class="bi bi-check-circle-fill text-success me-3" style="font-size: 1.25rem;"></i>
+                  <i class="bi bi-check-circle-fill text-success me-3 fs-1-25rem"></i>
                   <div>
                     <h5 class="h6 mb-1 fw-bold">{{ parts[0] }}{% if page.nama_kota and parts[0] contains "pengiriman" %} {{ page.nama_kota }}{% endif %}</h5>
                     <p class="small text-muted mb-0">{{ parts[1] }}{% if page.nama_kota and parts[1] contains "ongkir" %} {{ page.nama_kota }}{% endif %}</p>
@@ -135,7 +135,7 @@
         <div class="card border-0 shadow-sm h-100">
           <div class="card-header bg-primary text-white">
             <div class="d-flex align-items-center justify-content-center">
-              <i class="bi bi-clock-fill me-2" style="font-size: 1.5rem;"></i>
+              <i class="bi bi-clock-fill me-2 fs-1-5rem"></i>
               <h4 class="h5 mb-0 fw-bold">Jam Operasional</h4>
             </div>
           </div>
@@ -154,7 +154,7 @@
         <div class="card border-0 shadow-sm h-100">
           <div class="card-header bg-primary text-white">
             <div class="d-flex align-items-center justify-content-center">
-              <i class="bi bi-people-fill me-2" style="font-size: 1.5rem;"></i>
+              <i class="bi bi-people-fill me-2 fs-1-5rem"></i>
               <h4 class="h5 mb-0 fw-bold">Melayani Semua Kebutuhan</h4>
             </div>
           </div>

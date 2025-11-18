@@ -62,3 +62,33 @@
 .bg-wood-gradient {
   background: linear-gradient(135deg, $wood-brown 0%, #A0522D 50%, #CD853F 100%);
 }
+
+/* Width & Height Utilities */
+.w-50 {
+  width: 50px;
+}
+
+.w-70 {
+  width: 70px;
+}
+
+.h-50 {
+  height: 50px;
+}
+
+.h-70 {
+  height: 70px;
+}
+
+/* Font Size REM Utilities */
+.fs-1-25rem {
+  font-size: 1.25rem;
+}
+
+.fs-1-5rem {
+  font-size: 1.5rem;
+}
+
+.fs-2-5rem {
+  font-size: 2.5rem;
+}
