@@ -247,6 +247,74 @@ aplikasi_kayu_dolken:
         - "Restoran di area Undip"
         - "Mall & apartment"
         - "Developer perumahan"
+studi_kasus_proyek:
+  proyek_komersial:
+    - judul: "Gazebo Cafe di Kota Lama"
+      tahun: "2024"
+      deskripsi: "Pembangunan gazebo outdoor untuk cafe heritage di kawasan Kota Lama Semarang ukuran 5x5 meter."
+      jumlah: "60 batang"
+      diameter: "8-10 cm"
+      hasil: "Sesuai konsep heritage dan tahan kelembaban tinggi area Kota Lama"
+      warna: "primary"
+      icon: "bi-building"
+    - judul: "Landscaping Restoran Simpang Lima"
+      tahun: "2024"
+      deskripsi: "Dekorasi exterior restoran modern di area Simpang Lima menggunakan kayu dolken untuk pembatas area outdoor seating dan penyangga tanaman vertikal garden."
+      jumlah: "150 batang"
+      diameter: "4-6 cm"
+      hasil: "Dengan finishing natural coating untuk proteksi tambahan"
+      warna: "warning"
+      icon: "bi-tree"
+    - judul: "Pergola Rooftop Hotel"
+      tahun: "2024"
+      deskripsi: "Instalasi pergola rooftop di hotel bintang 4 area Semarang Tengah untuk area lounge dengan view kota."
+      jumlah: "45 batang"
+      diameter: "8-10 cm"
+      hasil: "Mampu menahan angin kencang dan cuaca ekstrem Semarang"
+      warna: "danger"
+      icon: "bi-building-add"
+    - judul: "Kanopi Outlet Marina"
+      tahun: "2024"
+      deskripsi: "Pemasangan kanopi kayu dolken untuk outlet fashion di area Marina untuk area display outdoor dan smoking area."
+      jumlah: "80 batang"
+      diameter: "6-8 cm"
+      hasil: "Desain modern industrial yang menarik perhatian pengunjung"
+      warna: "secondary"
+      icon: "bi-shop"
+  proyek_residensial:
+    - judul: "Pagar Villa di Tembalang"
+      tahun: "2024"
+      deskripsi: "Pemasangan pagar kayu dolken untuk villa di area Tembalang dekat Undip sepanjang 30 meter dengan tinggi 2 meter."
+      jumlah: "200 batang"
+      diameter: "6-8 cm"
+      hasil: "Hasil kokoh dan estetik natural yang menyatu dengan lingkungan kampus"
+      warna: "success"
+      icon: "bi-house-door"
+    - judul: "Gazebo Rumah Cluster Ngaliyan"
+      tahun: "2024"
+      deskripsi: "Pembangunan gazebo taman belakang rumah di perumahan cluster elite Ngaliyan untuk area santai keluarga ukuran 3x3 meter."
+      jumlah: "35 batang"
+      diameter: "8-10 cm"
+      hasil: "Menciptakan nuansa tropis dan tahan terhadap panas terik Semarang"
+      warna: "success"
+      icon: "bi-sun"
+  proyek_publik:
+    - judul: "Taman Kota Area Tanjung Mas"
+      tahun: "2023"
+      deskripsi: "Proyek landscaping taman kota di area Pelabuhan Tanjung Emas menggunakan kayu dolken untuk tiang lampu taman dan pembatas area."
+      jumlah: "100 batang"
+      diameter: "6-8 cm"
+      hasil: "Tahan terhadap kelembaban tinggi area pelabuhan"
+      warna: "info"
+      icon: "bi-signpost-2"
+    - judul: "Jogging Track Bukit Candi Golf"
+      tahun: "2024"
+      deskripsi: "Pemasangan pagar pembatas jogging track di area Bukit Candi Golf sepanjang 50 meter untuk keamanan dan estetika jalur olahraga."
+      jumlah: "120 batang"
+      diameter: "4-6 cm"
+      hasil: "Memberikan kesan natural di area olahraga outdoor dengan durabilitas tinggi"
+      warna: "info"
+      icon: "bi-bicycle"
 like_count: 3
 comment_count: 0
 share_count: 1
@@ -561,432 +629,7 @@ share_count: 1
 </section>
 
 <section id="studi-kasus-proyek">
-  <div class="my-5">
-    <div class="card border-0 shadow-lg">
-      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);">
-        <i class="bi bi-briefcase-fill mb-2" style="font-size: 2.5rem;"></i>
-        <h2 class="h2 mb-0 fw-bold text-white">Studi Kasus Proyek Semarang</h2>
-        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
-          <i class="bi bi-star me-1"></i>
-          Proyek nyata menggunakan kayu dolken gelam berkualitas
-          <i class="bi bi-star ms-1"></i>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Kategori Proyek Komersial -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-building text-primary me-2"></i>Proyek Komersial
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Aplikasi kayu dolken gelam untuk bisnis dan usaha di Semarang</p>
-      </div>
-    </div>
-
-    <div class="row g-4">
-      <!-- H4: Gazebo Cafe di Kota Lama -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-primary text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-building me-2" style="font-size: 1.5rem;"></i>
-              <div>
-                <h4 class="h5 mb-0 fw-bold">Gazebo Cafe di Kota Lama</h4>
-                <small style="opacity: 0.85;">2024</small>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="small mb-3">Pembangunan gazebo outdoor untuk cafe heritage di kawasan Kota Lama Semarang ukuran 5x5 meter.</p>
-
-
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-clipboard-data me-1"></i>Spesifikasi Proyek
-            </h5>
-            <div class="row g-2 mb-3">
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Jumlah</small>
-                  <strong class="text-wood">60 batang</strong>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Diameter</small>
-                  <strong class="text-wood">8-10 cm</strong>
-                </div>
-              </div>
-            </div>
-
-
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-award me-1"></i>Hasil dan Keunggulan
-            </h5>
-            <p class="small text-muted mb-0">
-              <i class="bi bi-check-circle-fill text-success me-1"></i>
-              Sesuai konsep heritage dan tahan kelembaban tinggi area Kota Lama
-            </p>
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-warning text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-tree me-2" style="font-size: 1.5rem;"></i>
-              <div>
-                <h4 class="h5 mb-0 fw-bold">Landscaping Restoran Simpang Lima</h4>
-                <small style="opacity: 0.85;">2024</small>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="small mb-3">Dekorasi exterior restoran modern di area Simpang Lima menggunakan kayu dolken untuk pembatas area outdoor seating dan penyangga tanaman vertikal garden.</p>
-
-            <!-- H5: Spesifikasi Proyek -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-clipboard-data me-1"></i>Spesifikasi Proyek
-            </h5>
-            <div class="row g-2 mb-3">
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Jumlah</small>
-                  <strong class="text-wood">150 batang</strong>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Diameter</small>
-                  <strong class="text-wood">4-6 cm</strong>
-                </div>
-              </div>
-            </div>
-
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-award me-1"></i>Hasil dan Keunggulan
-            </h5>
-            <p class="small text-muted mb-0">
-              <i class="bi bi-check-circle-fill text-success me-1"></i>
-              Dengan finishing natural coating untuk proteksi tambahan
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-danger text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-building-add me-2" style="font-size: 1.5rem;"></i>
-              <div>
-                <h4 class="h5 mb-0 fw-bold">Pergola Rooftop Hotel</h4>
-                <small style="opacity: 0.85;">2024</small>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="small mb-3">Instalasi pergola rooftop di hotel bintang 4 area Semarang Tengah untuk area lounge dengan view kota.</p>
-
-            <!-- H5: Spesifikasi Proyek -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-clipboard-data me-1"></i>Spesifikasi Proyek
-            </h5>
-            <div class="row g-2 mb-3">
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Jumlah</small>
-                  <strong class="text-wood">45 batang</strong>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Diameter</small>
-                  <strong class="text-wood">8-10 cm</strong>
-                </div>
-              </div>
-            </div>
-
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-award me-1"></i>Hasil dan Keunggulan
-            </h5>
-            <p class="small text-muted mb-0">
-              <i class="bi bi-check-circle-fill text-success me-1"></i>
-              Mampu menahan angin kencang dan cuaca ekstrem Semarang
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-secondary text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-shop me-2" style="font-size: 1.5rem;"></i>
-              <div>
-                <h4 class="h5 mb-0 fw-bold">Kanopi Outlet Marina</h4>
-                <small style="opacity: 0.85;">2024</small>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="small mb-3">Pemasangan kanopi kayu dolken untuk outlet fashion di area Marina untuk area display outdoor dan smoking area.</p>
-
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-clipboard-data me-1"></i>Spesifikasi Proyek
-            </h5>
-            <div class="row g-2 mb-3">
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Jumlah</small>
-                  <strong class="text-wood">80 batang</strong>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Diameter</small>
-                  <strong class="text-wood">6-8 cm</strong>
-                </div>
-              </div>
-            </div>
-
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-award me-1"></i>Hasil dan Keunggulan
-            </h5>
-            <p class="small text-muted mb-0">
-              <i class="bi bi-check-circle-fill text-success me-1"></i>
-              Desain modern industrial yang menarik perhatian pengunjung
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Kategori Proyek Residensial -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-house-door text-success me-2"></i>Proyek Residensial
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Aplikasi kayu dolken gelam untuk hunian pribadi dan villa</p>
-      </div>
-    </div>
-
-    <div class="row g-4">
-      <!-- H4: Pagar Villa di Tembalang -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-success text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-house-door me-2" style="font-size: 1.5rem;"></i>
-              <div>
-                <h4 class="h5 mb-0 fw-bold">Pagar Villa di Tembalang</h4>
-                <small style="opacity: 0.85;">2024</small>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="small mb-3">Pemasangan pagar kayu dolken untuk villa di area Tembalang dekat Undip sepanjang 30 meter dengan tinggi 2 meter.</p>
-
-            <!-- H5: Spesifikasi Proyek -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-clipboard-data me-1"></i>Spesifikasi Proyek
-            </h5>
-            <div class="row g-2 mb-3">
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Jumlah</small>
-                  <strong class="text-wood">200 batang</strong>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Diameter</small>
-                  <strong class="text-wood">6-8 cm</strong>
-                </div>
-              </div>
-            </div>
-
-            <!-- H5: Hasil dan Keunggulan -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-award me-1"></i>Hasil dan Keunggulan
-            </h5>
-            <p class="small text-muted mb-0">
-              <i class="bi bi-check-circle-fill text-success me-1"></i>
-              Hasil kokoh dan estetik natural yang menyatu dengan lingkungan kampus
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- H4: Gazebo Rumah Cluster Ngaliyan -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-success text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-sun me-2" style="font-size: 1.5rem;"></i>
-              <div>
-                <h4 class="h5 mb-0 fw-bold">Gazebo Rumah Cluster Ngaliyan</h4>
-                <small style="opacity: 0.85;">2024</small>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="small mb-3">Pembangunan gazebo taman belakang rumah di perumahan cluster elite Ngaliyan untuk area santai keluarga ukuran 3x3 meter.</p>
-
-            <!-- H5: Spesifikasi Proyek -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-clipboard-data me-1"></i>Spesifikasi Proyek
-            </h5>
-            <div class="row g-2 mb-3">
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Jumlah</small>
-                  <strong class="text-wood">35 batang</strong>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Diameter</small>
-                  <strong class="text-wood">8-10 cm</strong>
-                </div>
-              </div>
-            </div>
-
-            <!-- H5: Hasil dan Keunggulan -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-award me-1"></i>Hasil dan Keunggulan
-            </h5>
-            <p class="small text-muted mb-0">
-              <i class="bi bi-check-circle-fill text-success me-1"></i>
-              Menciptakan nuansa tropis dan tahan terhadap panas terik Semarang
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Kategori Proyek Publik -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-info bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-signpost-2 text-info me-2"></i>Proyek Publik
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Aplikasi kayu dolken gelam untuk fasilitas umum dan taman kota</p>
-      </div>
-    </div>
-    <div class="row g-4">
-      <!-- H4: Taman Kota Area Tanjung Mas -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-info text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-signpost-2 me-2" style="font-size: 1.5rem;"></i>
-              <div>
-                <h4 class="h5 mb-0 fw-bold">Taman Kota Area Tanjung Mas</h4>
-                <small style="opacity: 0.85;">2023</small>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="small mb-3">Proyek landscaping taman kota di area Pelabuhan Tanjung Emas menggunakan kayu dolken untuk tiang lampu taman dan pembatas area.</p>
-
-            <!-- H5: Spesifikasi Proyek -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-clipboard-data me-1"></i>Spesifikasi Proyek
-            </h5>
-            <div class="row g-2 mb-3">
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Jumlah</small>
-                  <strong class="text-wood">100 batang</strong>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Diameter</small>
-                  <strong class="text-wood">6-8 cm</strong>
-                </div>
-              </div>
-            </div>
-
-            <!-- H5: Hasil dan Keunggulan -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-award me-1"></i>Hasil dan Keunggulan
-            </h5>
-            <p class="small text-muted mb-0">
-              <i class="bi bi-check-circle-fill text-success me-1"></i>
-              Tahan terhadap kelembaban tinggi area pelabuhan
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- H4: Jogging Track Bukit Candi Golf -->
-      <div class="col-md-6">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <div class="card-header bg-info text-white">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-bicycle me-2" style="font-size: 1.5rem;"></i>
-              <div>
-                <h4 class="h5 mb-0 fw-bold">Jogging Track Bukit Candi Golf</h4>
-                <small style="opacity: 0.85;">2024</small>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="small mb-3">Pemasangan pagar pembatas jogging track di area Bukit Candi Golf sepanjang 50 meter untuk keamanan dan estetika jalur olahraga.</p>
-
-            <!-- H5: Spesifikasi Proyek -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-clipboard-data me-1"></i>Spesifikasi Proyek
-            </h5>
-            <div class="row g-2 mb-3">
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Jumlah</small>
-                  <strong class="text-wood">120 batang</strong>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="bg-light p-2 rounded text-center">
-                  <small class="text-muted d-block">Diameter</small>
-                  <strong class="text-wood">4-6 cm</strong>
-                </div>
-              </div>
-            </div>
-
-            <!-- H5: Hasil dan Keunggulan -->
-            <h5 class="h6 fw-bold text-wood mb-2">
-              <i class="bi bi-award me-1"></i>Hasil dan Keunggulan
-            </h5>
-            <p class="small text-muted mb-0">
-              <i class="bi bi-check-circle-fill text-success me-1"></i>
-              Memberikan kesan natural di area olahraga outdoor dengan durabilitas tinggi
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="card border-0 shadow-sm my-4">
-    <div class="card-body text-center py-4" style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);">
-      <i class="bi bi-chat-left-dots-fill text-wood mb-3" style="font-size: 2.5rem;"></i>
-      <h5 class="fw-bold text-wood mb-2">Butuh Konsultasi untuk Proyek Anda?</h5>
-      <p class="text-muted mb-3">Hubungi kami untuk diskusi kebutuhan dan estimasi biaya proyek di Semarang</p>
-      <a href="https://wa.me/6281311400177?text=Halo,%20saya%20ingin%20konsultasi%20proyek%20kayu%20dolken%20di%20Semarang" class="btn btn-wood px-4" target="_blank">
-        <i class="bi bi-whatsapp me-2"></i>Hubungi 081311400177
-      </a>
-    </div>
-  </div>
+  {% include block--studi-kasus-proyek.html %}
 </section>
 
 <section id="testimoni-pelanggan">
