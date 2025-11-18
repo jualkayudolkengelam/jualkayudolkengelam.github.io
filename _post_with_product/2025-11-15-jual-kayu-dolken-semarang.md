@@ -2105,24 +2105,6 @@ share_count: 1
         </div>
       </div>
     </div>
-
-    <!-- H4: Layanan Pengiriman Semarang -->
-    <div class="card border-0 shadow-sm mt-3">
-      <div class="card-header bg-success text-white">
-        <div class="d-flex align-items-center justify-content-center">
-          <i class="bi bi-whatsapp me-2" style="font-size: 1.5rem;"></i>
-          <h4 class="h5 mb-0 fw-bold">Siap Melayani Kebutuhan Kayu Dolken di Semarang!</h4>
-        </div>
-      </div>
-      <div class="card-body text-center py-4" style="background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);">
-        <!-- H5: Informasi Pengiriman -->
-        <h5 class="visually-hidden">Informasi Pengiriman Gratis Semarang</h5>
-        <p class="text-muted mb-3 fw-bold">Pengiriman gratis ke seluruh wilayah Kota Semarang</p>
-        <a href="https://wa.me/6281311400177?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20untuk%20Semarang" class="btn btn-success px-4" target="_blank">
-          <i class="bi bi-telephone-fill me-2"></i>Hubungi 081311400177
-        </a>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -2132,6 +2114,10 @@ share_count: 1
       <div class="card-body text-white text-center py-5 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
         <i class="bi bi-telephone-fill mb-3" style="font-size: 3.5rem;"></i>
         <h2 class="h2 mb-3 fw-bold text-white">Hubungi Kami Sekarang!</h2>
+        <div class="d-flex align-items-center justify-content-center">
+          <h3 class="h5 mb-0 fw-bold">Siap Melayani Kebutuhan Kayu Dolken di Semarang!</h3>
+        </div>
+        <h4 class="visually-hidden">Informasi Pengiriman Gratis Semarang</h4>
         <p class="h5 mb-4" style="opacity: 0.95;">
           <i class="bi bi-whatsapp me-2"></i>
           Telepon / WhatsApp: <strong>081311400177</strong>
