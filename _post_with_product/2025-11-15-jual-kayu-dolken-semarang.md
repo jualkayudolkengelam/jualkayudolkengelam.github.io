@@ -131,6 +131,24 @@ keunggulan_layanan:
     deskripsi: "Tim kami siap melayani Anda kapan saja untuk konsultasi gratis dan pemesanan cepat"
     warna: "secondary"
     icon: "bi-headset"
+faq_pemesanan:
+  - pertanyaan: "Berapa minimal pemesanan kayu dolken?"
+    jawaban: "Kami melayani pemesanan mulai dari 10 batang hingga proyek besar ratusan batang. Untuk pembelian partai besar di area Semarang, kami berikan harga khusus yang lebih kompetitif. Hubungi 081311400177 untuk konsultasi jumlah yang sesuai budget dan kebutuhan proyek Anda."
+    icon: "bi-cart-check"
+  - pertanyaan: "Bagaimana cara mengecek kualitas kayu dolken sebelum bayar?"
+    jawaban: "Kami menyediakan sistem COD (Cash on Delivery) sehingga Anda bisa cek kualitas kayu dolken terlebih dahulu sebelum membayar. Pastikan kayu tidak bengkok, tidak ada retakan besar, diameter sesuai pesanan, dan kondisi fisik bagus. Tim kami akan dampingi proses pengecekan untuk kepuasan Anda."
+    icon: "bi-clipboard-check"
+faq_produk:
+  - pertanyaan: "Apakah kayu dolken perlu perawatan khusus di Semarang?"
+    jawaban: "Kayu dolken gelam tidak memerlukan perawatan khusus karena sudah tahan rayap dan cuaca secara alami, sangat cocok untuk iklim Semarang yang lembab. Namun untuk aplikasi outdoor di area pesisir seperti Tanjung Mas, Anda bisa menambahkan coating atau vernis untuk mempercantik tampilan dan menambah daya tahan warna natural kayu."
+    icon: "bi-tools"
+  - pertanyaan: "Apakah bisa custom panjang kayu dolken?"
+    jawaban: "Ya, kami melayani custom panjang sesuai kebutuhan proyek Anda di Semarang. Standar panjang kami 4 meter, namun bisa dipotong atau disesuaikan dengan spesifikasi yang Anda inginkan untuk proyek spesifik seperti gazebo, pergola, atau pagar. Hubungi tim kami di 081311400177 untuk diskusi detail ukuran custom."
+    icon: "bi-rulers"
+faq_pengiriman:
+  - pertanyaan: "Berapa lama pengiriman ke Semarang?"
+    jawaban: "Untuk area Kota Semarang, pengiriman biasanya 1-3 hari kerja setelah konfirmasi pesanan. Pengiriman gratis untuk seluruh wilayah Semarang termasuk Tembalang, Banyumanik, Kota Lama, Simpang Lima, Pedurungan, dan area lainnya. Kami gunakan armada terpercaya untuk memastikan barang sampai dengan aman."
+    icon: "bi-truck"
 like_count: 3
 comment_count: 0
 share_count: 1
@@ -138,6 +156,12 @@ share_count: 1
 <section id="mengapa-memilih-kami">
   {% include block--mengapa-memilih-kami.html %}
 </section>
+
+<section id="area-pengiriman-semarang">
+  <div class="my-5">
+    <div class="card border-0 shadow-lg">
+      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
+        <i class="bi bi-geo-alt-fill mb-2" style="font-size: 2.5rem;"></i>
         <h2 class="h2 mb-0 fw-bold text-white">Area Pengiriman Semarang</h2>
         <p class="mb-0 mt-2 small" style="opacity: 0.85;">
           <i class="bi bi-truck me-1"></i>
@@ -563,6 +587,7 @@ share_count: 1
 <section id="cara-pemesanan">
   {% include block--cara-pemesanan-kayu-dolken.html %}
 </section>
+
 <section id="studi-kasus-proyek">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -995,164 +1020,13 @@ share_count: 1
 <section id="testimoni-pelanggan">
   {% include block--testimoni-pelanggan.html %}
 </section>
+
 <section id="tips-memilih-ukuran">
   {% include block--tips-memilih-ukuran-kayu-dolken.html %}
 </section>
-  <div class="my-5">
-    <div class="card border-0 shadow-lg">
-      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);">
-        <i class="bi bi-question-circle-fill mb-2" style="font-size: 2.5rem;"></i>
-        <h2 class="h2 mb-0 fw-bold text-white">FAQ Seputar Kayu Dolken Semarang</h2>
-        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
-          <i class="bi bi-chat-dots me-1"></i>
-          Pertanyaan yang sering diajukan pelanggan kami
-          <i class="bi bi-chat-dots ms-1"></i>
-        </p>
-      </div>
-    </div>
-  </div>
 
-  <!-- H3: Pemesanan dan Harga -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-cart-check text-primary me-2"></i>Pemesanan dan Harga
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Informasi seputar cara pesan dan sistem pembayaran</p>
-      </div>
-    </div>
-
-    <div class="row g-4">
-      <!-- H4: Berapa minimal pemesanan kayu dolken? -->
-      <div class="col-12">
-        <div class="card border-0 shadow-sm hover-lift">
-          <div class="card-body">
-            <div class="d-flex align-items-start">
-              <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
-                <i class="bi bi-cart-check text-primary" style="font-size: 1.5rem;"></i>
-              </div>
-              <div class="flex-grow-1">
-                <h4 class="h6 fw-bold text-wood mb-2">Berapa minimal pemesanan kayu dolken?</h4>
-
-                <!-- H5: Jawaban Detail -->
-                <h5 class="visually-hidden">Jawaban Detail Minimal Pemesanan</h5>
-                <p class="small text-muted mb-0">Kami melayani pemesanan mulai dari 10 batang hingga proyek besar ratusan batang. Untuk pembelian partai besar di area Semarang, kami berikan harga khusus yang lebih kompetitif. Hubungi <strong>081311400177</strong> untuk konsultasi jumlah yang sesuai budget dan kebutuhan proyek Anda.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- H4: Bagaimana cara mengecek kualitas kayu dolken sebelum bayar? -->
-      <div class="col-12">
-        <div class="card border-0 shadow-sm hover-lift">
-          <div class="card-body">
-            <div class="d-flex align-items-start">
-              <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
-                <i class="bi bi-clipboard-check text-primary" style="font-size: 1.5rem;"></i>
-              </div>
-              <div class="flex-grow-1">
-                <h4 class="h6 fw-bold text-wood mb-2">Bagaimana cara mengecek kualitas kayu dolken sebelum bayar?</h4>
-
-                <!-- H5: Jawaban Detail -->
-                <h5 class="visually-hidden">Jawaban Detail Pengecekan Kualitas</h5>
-                <p class="small text-muted mb-0">Kami menyediakan sistem COD (Cash on Delivery) sehingga Anda bisa cek kualitas kayu dolken terlebih dahulu sebelum membayar. Pastikan kayu tidak bengkok, tidak ada retakan besar, diameter sesuai pesanan, dan kondisi fisik bagus. Tim kami akan dampingi proses pengecekan untuk kepuasan Anda.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Produk dan Perawatan -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-tools text-success me-2"></i>Produk dan Perawatan
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Informasi seputar spesifikasi dan perawatan produk</p>
-      </div>
-    </div>
-
-    <div class="row g-4">
-      <!-- H4: Apakah kayu dolken perlu perawatan khusus di Semarang? -->
-      <div class="col-12">
-        <div class="card border-0 shadow-sm hover-lift">
-          <div class="card-body">
-            <div class="d-flex align-items-start">
-              <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
-                <i class="bi bi-tools text-success" style="font-size: 1.5rem;"></i>
-              </div>
-              <div class="flex-grow-1">
-                <h4 class="h6 fw-bold text-wood mb-2">Apakah kayu dolken perlu perawatan khusus di Semarang?</h4>
-
-                <!-- H5: Jawaban Detail -->
-                <h5 class="visually-hidden">Jawaban Detail Perawatan</h5>
-                <p class="small text-muted mb-0">Kayu dolken gelam tidak memerlukan perawatan khusus karena sudah tahan rayap dan cuaca secara alami, sangat cocok untuk iklim Semarang yang lembab. Namun untuk aplikasi outdoor di area pesisir seperti Tanjung Mas, Anda bisa menambahkan coating atau vernis untuk mempercantik tampilan dan menambah daya tahan warna natural kayu.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- H4: Apakah bisa custom panjang kayu dolken? -->
-      <div class="col-12">
-        <div class="card border-0 shadow-sm hover-lift">
-          <div class="card-body">
-            <div class="d-flex align-items-start">
-              <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
-                <i class="bi bi-rulers text-success" style="font-size: 1.5rem;"></i>
-              </div>
-              <div class="flex-grow-1">
-                <h4 class="h6 fw-bold text-wood mb-2">Apakah bisa custom panjang kayu dolken?</h4>
-
-                <!-- H5: Jawaban Detail -->
-                <h5 class="visually-hidden">Jawaban Detail Custom Panjang</h5>
-                <p class="small text-muted mb-0">Ya, kami melayani custom panjang sesuai kebutuhan proyek Anda di Semarang. Standar panjang kami 4 meter, namun bisa dipotong atau disesuaikan dengan spesifikasi yang Anda inginkan untuk proyek spesifik seperti gazebo, pergola, atau pagar. Hubungi tim kami di <strong>081311400177</strong> untuk diskusi detail ukuran custom.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Pengiriman dan Layanan -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-warning bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-truck text-warning me-2"></i>Pengiriman dan Layanan
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Informasi seputar pengiriman dan layanan pelanggan</p>
-      </div>
-    </div>
-
-    <div class="row g-4">
-      <!-- H4: Berapa lama pengiriman ke Semarang? -->
-      <div class="col-12">
-        <div class="card border-0 shadow-sm hover-lift">
-          <div class="card-body">
-            <div class="d-flex align-items-start">
-              <div class="bg-warning bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
-                <i class="bi bi-truck text-warning" style="font-size: 1.5rem;"></i>
-              </div>
-              <div class="flex-grow-1">
-                <h4 class="h6 fw-bold text-wood mb-2">Berapa lama pengiriman ke Semarang?</h4>
-
-                <!-- H5: Jawaban Detail -->
-                <h5 class="visually-hidden">Jawaban Detail Waktu Pengiriman</h5>
-                <p class="small text-muted mb-0">Untuk area Kota Semarang, pengiriman biasanya 1-3 hari kerja setelah konfirmasi pesanan. Pengiriman gratis untuk seluruh wilayah Semarang termasuk Tembalang, Banyumanik, Kota Lama, Simpang Lima, Pedurungan, dan area lainnya. Kami gunakan armada terpercaya untuk memastikan barang sampai dengan aman.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section id="faq-kayu-dolken">
+  {% include block--faq-kayu-dolken.html %}
 </section>
 
 <section id="tentang-semarang">
@@ -1304,37 +1178,38 @@ share_count: 1
       </div>
     </div>
   </div>
+</section>
 
-  <!-- H3: Relevansi Kayu Dolken untuk Semarang -->
+<section id ="relevansi-kayu-dolken">
   <div class="my-4">
     <div class="d-flex align-items-center mb-3">
       <div class="bg-warning bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
+        <h2 class="h4 mb-0 text-wood fw-bold">
           <i class="bi bi-tree-fill text-warning me-2"></i>Relevansi Kayu Dolken untuk Semarang
-        </h3>
+        </h2>
         <p class="small text-muted mb-0 mt-1">Mengapa kayu dolken gelam menjadi pilihan tepat untuk iklim dan karakteristik Kota Semarang</p>
       </div>
     </div>
 
-    <!-- H4: Solusi untuk Kondisi Pesisir Semarang -->
+    <!-- H3: Solusi untuk Kondisi Pesisir Semarang -->
     <div class="card border-0 shadow-lg" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">
       <div class="card-header bg-warning text-white">
         <div class="d-flex align-items-center">
           <i class="bi bi-water me-2" style="font-size: 1.5rem;"></i>
-          <h4 class="h5 mb-0 fw-bold">Solusi untuk Kondisi Pesisir Semarang</h4>
+          <h3 class="h4 mb-0 fw-bold">Solusi untuk Kondisi Pesisir Semarang</h3>
         </div>
       </div>
       <div class="card-body py-4">
-        <!-- H5: Karakteristik Iklim Semarang -->
-        <h5 class="h6 fw-bold text-wood mb-2">
+        <!-- H4: Karakteristik Iklim Semarang -->
+        <h4 class="h5 fw-bold text-wood mb-2">
           <i class="bi bi-cloud-rain me-1"></i>Karakteristik Iklim Semarang
-        </h5>
+        </h4>
         <p class="small mb-3">Dengan karakteristik Semarang sebagai <strong>kota pesisir</strong> dengan kelembaban tinggi, cuaca tropis, dan potensi rob di area pantai, kayu dolken gelam menjadi pilihan ideal untuk konstruksi outdoor.</p>
 
-        <!-- H5: Keunggulan untuk Aplikasi Lokal -->
-        <h5 class="h6 fw-bold text-wood mb-2">
+        <!-- H4: Keunggulan untuk Aplikasi Lokal -->
+        <h4 class="h5 fw-bold text-wood mb-2">
           <i class="bi bi-shield-check me-1"></i>Keunggulan untuk Aplikasi Lokal
-        </h5>
+        </h4>
         <p class="small mb-3">Sifat kayu yang <strong>tahan air, tahan rayap, dan tahan cuaca ekstrem</strong> sangat cocok untuk aplikasi seperti:</p>
         <div class="row g-2">
           <div class="col-md-6">
