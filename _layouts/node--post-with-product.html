@@ -34,7 +34,7 @@ Features:
 - Blog post content rendering
 - Embedded product catalog (full or filtered)
 - Engagement metrics (likes, comments, shares)
-- Related content/articles section
+- Related content/articles div
 - Schema.org BlogPosting + ItemList markup
 
 Styling:
@@ -142,19 +142,19 @@ page.html (wrapper with header/footer)
     {% endif %}
 
     <!-- Article Content -->
-    <section id="article-content" class="post-content mb-5">
+    <div id="article-content" class="post-content mb-5">
       {{ content }}
-    </section>
+    </div>
 
     <!-- Related Products Section (Part of article content) -->
-    <section id="related-products" class="article-related-products mt-5">
+    <div id="related-products" class="article-related-products mt-5">
       {% include block--related-product-last-modified.html %}
-    </section>
+    </div>
   </article>
 
 
   <!-- CTA Section -->
-  <section id="cta-konsultasi" class="cta-section mt-5">
+  <div id="cta-konsultasi" class="cta-div mt-5">
     <div class="card border-0 bg-wood text-white shadow-lg">
       <div class="card-body p-5 text-center">
         <h2 class="h3 mb-3">Butuh Konsultasi?</h2>
@@ -169,7 +169,7 @@ page.html (wrapper with header/footer)
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 
 <!-- Schema.org Article Markup -->
