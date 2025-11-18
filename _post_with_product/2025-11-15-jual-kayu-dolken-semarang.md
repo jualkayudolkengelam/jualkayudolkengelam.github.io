@@ -407,6 +407,10 @@ like_count: 3
 comment_count: 0
 share_count: 1
 ---
+<section id="hero-jual-kayu-dolken">
+  {% include block--hero-jual-kayu-dolken.html %}
+</section>
+
 <section id="mengapa-memilih-kami">
   {% include block--mengapa-memilih-kami.html %}
 </section>
