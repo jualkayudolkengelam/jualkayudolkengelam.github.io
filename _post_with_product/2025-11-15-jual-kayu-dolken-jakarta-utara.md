@@ -429,9 +429,11 @@ share_count: 2
   </div>
 </div>
 
-{% include block--card--link.html
+<section id="jual-kayu-dolken-terdekat">
+{% include block--jual-kayu-dolken-terdekat.html
    nama_kota="Jakarta Utara"
 %}
+</section>
 
 <div class="my-5">
   <div class="card border-0 shadow-lg">

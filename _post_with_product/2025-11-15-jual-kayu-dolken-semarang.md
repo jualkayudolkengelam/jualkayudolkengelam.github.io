@@ -14,62 +14,27 @@ images:
 keywords: jual kayu dolken semarang, dolken gelam semarang, supplier kayu dolken semarang, kayu dolken kota lama, dolken tembalang, kayu dolken banyumanik
 url: /2025/11/15/jual-kayu-dolken-semarang/
 show_products: true
+nama_kota: Semarang
+area_pengiriman:
+  - Semarang Tengah
+  - Semarang Barat
+  - Semarang Timur
+  - Semarang Utara
+  - Tembalang
+  - Banyumanik
+  - Pedurungan
+keunggulan_durabilitas:
+  tahan_lama: "Kayu gelam dapat bertahan 20-30 tahun tanpa treatment khusus, hemat biaya perawatan jangka panjang bahkan dalam iklim pesisir Semarang"
+  anti_rayap: "Tidak memerlukan obat anti rayap karena tekstur kayu gelam yang padat dan keras secara alami menolak rayap dan hama"
+  tahan_cuaca: "Cocok untuk aplikasi outdoor maupun indoor, tahan hujan deras, panas terik, dan kelembaban tinggi khas Semarang"
+  kuat_padat: "Kepadatan tinggi memberikan kekuatan maksimal, cocok untuk beban berat dan struktur penyangga permanen"
+keunggulan_nilai:
+  ramah_lingkungan: "Material kayu natural dan sustainable, ramah lingkungan dan biodegradable, mendukung green building"
+  estetika: "Warna coklat natural yang indah, cocok untuk dekorasi modern maupun tradisional, mempercantik bangunan"
 like_count: 3
 comment_count: 0
 share_count: 1
 ---
-<section id="cari-kayu-dolken-di-semarang">
-  <div class="card border-0 shadow-lg my-4" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);">
-    <div class="card-body text-white py-4">
-      <div class="row align-items-center">
-        <div class="col-lg-8">
-          <h2 class="h2 fw-bold mb-3">
-            <i class="bi bi-geo-alt-fill me-2"></i>Cari Kayu Dolken di Semarang?
-          </h2>
-          <p class="mb-3" style="opacity: 0.95; font-size: 1.05rem;">
-            Sedang mencari <strong>jual kayu dolken Semarang</strong> dengan harga terbaik dan kualitas terjamin? Kami adalah supplier kayu dolken gelam terpercaya yang melayani seluruh wilayah Semarang dengan <strong>pengiriman gratis</strong> dan sistem COD (Cash on Delivery).
-          </p>
-          <div class="bg-white bg-opacity-10 p-3 rounded mb-3">
-            <p class="mb-2" style="opacity: 0.95;">
-              <i class="bi bi-truck me-2"></i>
-              <strong>Melayani Pengiriman ke:</strong>
-            </p>
-            <p class="mb-0 small" style="opacity: 0.9;">
-              Semarang Tengah, Semarang Barat, Semarang Timur, Semarang Utara, Semarang Selatan, Tembalang, Banyumanik, Pedurungan, Genuk, dan seluruh wilayah Kota Semarang
-            </p>
-          </div>
-          <div class="d-flex flex-wrap gap-2 align-items-center">
-            <span class="badge bg-white text-danger px-3 py-2">
-              <i class="bi bi-check-circle-fill me-1"></i>Stok Ready
-            </span>
-            <span class="badge bg-white text-danger px-3 py-2">
-              <i class="bi bi-lightning-fill me-1"></i>Pengiriman Cepat
-            </span>
-            <span class="badge bg-white text-danger px-3 py-2">
-              <i class="bi bi-cash-coin me-1"></i>Harga Kompetitif
-            </span>
-          </div>
-        </div>
-        <div class="col-lg-4 text-center mt-4 mt-lg-0">
-          <div class="bg-white p-4 rounded shadow-lg">
-            <i class="bi bi-telephone-fill text-danger mb-3" style="font-size: 3rem;"></i>
-            <h4 class="h5 fw-bold text-danger mb-2">Hubungi Kami Sekarang!</h4>
-            <p class="h3 fw-bold text-dark mb-3">081311400177</p>
-            <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20untuk%20Semarang"
-               class="btn btn-success btn-lg w-100 shadow-sm"
-               target="_blank">
-              <i class="bi bi-whatsapp me-2"></i>Chat WhatsApp
-            </a>
-            <p class="small text-muted mt-2 mb-0">
-              <i class="bi bi-clock-fill me-1"></i>Respon cepat 24/7
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="mengapa-memilih-kami">
   <div class="my-5">
     <div class="card border-0 shadow-lg">
@@ -193,33 +158,7 @@ share_count: 1
 </section>
 
 <section id="daftar-harga">
-  <div class="my-5">
-    <div class="card border-0 shadow-lg">
-      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
-        <i class="bi bi-tag-fill mb-2" style="font-size: 2.5rem;"></i>
-        <h3 class="h2 mb-0 fw-bold text-white">💰 Daftar Harga Kayu Dolken Semarang</h3>
-        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
-          <i class="bi bi-truck me-1"></i>
-  Berikut daftar lengkap harga kayu dolken gelam untuk area Semarang dengan pengiriman gratis:
-          <i class="bi bi-truck ms-1"></i>
-        </p>
-      </div>
-    </div>
-  </div>
-
   {% include block--product-list.html %}
-
-  <div class="my-4">
-    <div class="card border-0 shadow-sm">
-      <div class="card-body text-center py-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-        <p class="mb-0 text-white fw-bold">
-          <i class="bi bi-telephone-fill me-2"></i>
-          📞 Hubungi 081311400177 untuk info harga terbaru dan penawaran khusus!
-          <i class="bi bi-telephone-fill ms-2"></i>
-        </p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section id="area-pengiriman-semarang">
@@ -510,129 +449,11 @@ share_count: 1
 </section>
 
 <section id="keunggulan-kayu-dolken-gelam">
-  <div class="my-5">
-    <div class="card border-0 shadow-lg">
-      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
-        <i class="bi bi-shield-shaded mb-2" style="font-size: 2.5rem;"></i>
-        <h2 class="h2 mb-0 fw-bold text-white">Keunggulan Kayu Dolken Gelam</h2>
-        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
-          <i class="bi bi-tree me-1"></i>
-          Pilihan terbaik untuk konstruksi dan dekorasi di Semarang
-          <i class="bi bi-tree ms-1"></i>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Karakteristik Unggul Kayu Gelam -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-shield-fill-check text-success me-2"></i>Karakteristik Unggul Kayu Gelam
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Kayu dolken gelam memiliki berbagai keunggulan yang menjadikannya pilihan utama untuk konstruksi dan dekorasi di Semarang, dari ketahanan ekstrem hingga nilai estetika yang tinggi</p>
-      </div>
-    </div>
-
-  <div class="card border-0 shadow-sm">
-    <div class="card-body bg-light py-3">
-      <h4 class="h4 text-wood mb-2 fw-bold">
-        <i class="bi bi-shield-fill-check me-2"></i>Durabilitas & Ketahanan
-      </h4>
-      <p class="small text-muted mb-0">Keunggulan teknis kayu gelam yang menjamin kekuatan dan ketahanan luar biasa untuk berbagai kondisi.</p>
-    </div>
-  </div>
-
-  <div class="row g-4 my-4">
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center">
-          <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-            <i class="bi bi-clock-history text-success" style="font-size: 2rem;"></i>
-          </div>
-          <h5 class="h5 text-wood mb-2 fw-bold">Tahan Lama Puluhan Tahun</h5>
-          <p class="small text-muted mb-0">Kayu gelam dapat bertahan 20-30 tahun tanpa treatment khusus, hemat biaya perawatan jangka panjang bahkan dalam iklim pesisir Semarang</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center">
-          <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-            <i class="bi bi-bug text-danger" style="font-size: 2rem;"></i>
-          </div>
-          <h5 class="h5 text-wood mb-2 fw-bold">Anti Rayap Alami</h5>
-          <p class="small text-muted mb-0">Tidak memerlukan obat anti rayap karena tekstur kayu gelam yang padat dan keras secara alami menolak rayap dan hama</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center">
-          <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-            <i class="bi bi-cloud-rain text-primary" style="font-size: 2rem;"></i>
-          </div>
-          <h5 class="h5 text-wood mb-2 fw-bold">Tahan Air & Cuaca Ekstrem</h5>
-          <p class="small text-muted mb-0">Cocok untuk aplikasi outdoor maupun indoor, tahan hujan deras, panas terik, dan kelembaban tinggi khas Semarang</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center">
-          <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-            <i class="bi bi-hammer text-warning" style="font-size: 2rem;"></i>
-          </div>
-          <h5 class="h5 text-wood mb-2 fw-bold">Kuat & Padat</h5>
-          <p class="small text-muted mb-0">Kepadatan tinggi memberikan kekuatan maksimal, cocok untuk beban berat dan struktur penyangga permanen</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card border-0 shadow-sm my-4">
-    <div class="card-body bg-light py-3">
-      <h4 class="h4 text-wood mb-2 fw-bold">
-        <i class="bi bi-heart-fill me-2"></i>Nilai Tambah & Estetika
-      </h4>
-      <p class="small text-muted mb-0">Keunggulan tambahan yang memberikan nilai lebih untuk lingkungan dan estetika bangunan Anda.</p>
-    </div>
-  </div>
-
-  <div class="row g-4 my-4">
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center">
-          <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-            <i class="bi bi-recycle text-success" style="font-size: 2rem;"></i>
-          </div>
-          <h5 class="h5 text-wood mb-2 fw-bold">Ramah Lingkungan</h5>
-          <p class="small text-muted mb-0">Material kayu natural dan sustainable, ramah lingkungan dan biodegradable, mendukung green building</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center">
-          <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-            <i class="bi bi-palette text-info" style="font-size: 2rem;"></i>
-          </div>
-          <h5 class="h5 text-wood mb-2 fw-bold">Estetika Natural</h5>
-          <p class="small text-muted mb-0">Warna coklat natural yang indah, cocok untuk dekorasi modern maupun tradisional, mempercantik bangunan</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+  {% include block--keunggulan-kayu-dolken-gelam.html %}
 </section>
 
-<section>
-{% include block--card--link.html
+<section id="jual-kayu-dolken-terdekat">
+{% include block--jual-kayu-dolken-terdekat.html
    nama_kota="Semarang"
 %}
 </section>
