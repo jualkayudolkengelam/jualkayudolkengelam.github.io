@@ -105,141 +105,39 @@ tips_ukuran:
       - "Perfect untuk proyek komersial dan bangunan permanen"
     warna: "danger"
     icon: "bi-building-fill"
+keunggulan_produk:
+  - judul: "Kualitas Premium Grade A"
+    deskripsi: "Kayu gelam asli premium, tahan rayap alami dan tahan cuaca ekstrem, cocok untuk iklim Semarang"
+    warna: "warning"
+    icon: "bi-award-fill"
+  - judul: "Harga Terbaik"
+    deskripsi: "Langsung dari supplier, harga mulai Rp 15.000/batang tanpa markup perantara"
+    warna: "danger"
+    icon: "bi-cash-coin"
+  - judul: "Stok Selalu Ready"
+    deskripsi: "Tersedia berbagai ukuran diameter 2-3 cm hingga 10-12 cm untuk semua kebutuhan proyek"
+    warna: "info"
+    icon: "bi-boxes"
+keunggulan_layanan:
+  - judul: "Pengiriman Gratis Semarang"
+    deskripsi: "Gratis ongkir untuk area Kota Semarang, hemat biaya pengiriman untuk proyek Anda"
+    warna: "success"
+    icon: "bi-truck"
+  - judul: "COD Tersedia"
+    deskripsi: "Bayar setelah barang sampai dan Anda cek kualitasnya, aman dan terpercaya"
+    warna: "primary"
+    icon: "bi-shield-check"
+  - judul: "Fast Response 24/7"
+    deskripsi: "Tim kami siap melayani Anda kapan saja untuk konsultasi gratis dan pemesanan cepat"
+    warna: "secondary"
+    icon: "bi-headset"
 like_count: 3
 comment_count: 0
 share_count: 1
 ---
 <section id="mengapa-memilih-kami">
-  <div class="my-5">
-    <div class="card border-0 shadow-lg">
-      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);">
-        <i class="bi bi-patch-check-fill mb-2" style="font-size: 2.5rem;"></i>
-        <h2 class="h2 mb-0 fw-bold text-white">Mengapa Memilih Kami?</h2>
-        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
-          <i class="bi bi-stars me-1"></i>
-          Supplier terpercaya dengan layanan terbaik di Semarang
-          <i class="bi bi-stars ms-1"></i>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Keunggulan Layanan Kami -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-award text-success me-2"></i>Keunggulan Layanan Kami
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Kami menyediakan solusi lengkap untuk kebutuhan kayu dolken gelam Anda di Semarang dengan berbagai keunggulan yang membedakan kami dari kompetitor</p>
-      </div>
-    </div>
-
-  <div class="card border-0 shadow-sm">
-    <div class="card-body bg-light py-3">
-      <h4 class="h4 text-wood mb-2 fw-bold">
-        <i class="bi bi-star-fill me-2"></i>Kualitas Produk & Harga Kompetitif
-      </h4>
-      <p class="small text-muted mb-0">Kami berkomitmen memberikan kayu dolken gelam berkualitas premium dengan harga terbaik langsung dari supplier tanpa perantara.</p>
-    </div>
-  </div>
-
-  <div class="row g-4 my-4">
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center">
-          <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-            <i class="bi bi-award-fill text-warning" style="font-size: 2rem;"></i>
-          </div>
-          <h5 class="h5 text-wood mb-2">Kualitas Premium Grade A</h5>
-          <p class="small text-muted mb-0">Kayu gelam asli premium, tahan rayap alami dan tahan cuaca ekstrem, cocok untuk iklim Semarang</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center">
-          <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-            <i class="bi bi-cash-coin text-danger" style="font-size: 2rem;"></i>
-          </div>
-          <h5 class="h5 text-wood mb-2">Harga Terbaik</h5>
-          <p class="small text-muted mb-0">Langsung dari supplier, harga mulai Rp 15.000/batang tanpa markup perantara</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center">
-          <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-            <i class="bi bi-boxes text-info" style="font-size: 2rem;"></i>
-          </div>
-          <h5 class="h5 text-wood mb-2">Stok Selalu Ready</h5>
-          <p class="small text-muted mb-0">Tersedia berbagai ukuran diameter 2-3 cm hingga 10-12 cm untuk semua kebutuhan proyek</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card border-0 shadow-sm my-4">
-    <div class="card-body bg-light py-3">
-      <h4 class="h4 text-wood mb-2 fw-bold">
-        <i class="bi bi-truck-front-fill me-2"></i>Layanan Pengiriman & Customer Service
-      </h4>
-      <p class="small text-muted mb-0">Kemudahan dan kenyamanan Anda adalah prioritas kami dengan layanan pengiriman gratis dan dukungan pelanggan 24/7.</p>
-    </div>
-  </div>
-
-  <div class="row g-4 my-4">
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center">
-          <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-            <i class="bi bi-truck text-success" style="font-size: 2rem;"></i>
-          </div>
-          <h5 class="h5 text-wood mb-2">Pengiriman Gratis Semarang</h5>
-          <p class="small text-muted mb-0">Gratis ongkir untuk area Kota Semarang, hemat biaya pengiriman untuk proyek Anda</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center">
-          <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-            <i class="bi bi-shield-check text-primary" style="font-size: 2rem;"></i>
-          </div>
-          <h5 class="h5 text-wood mb-2">COD Tersedia</h5>
-          <p class="small text-muted mb-0">Bayar setelah barang sampai dan Anda cek kualitasnya, aman dan terpercaya</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card border-0 shadow-sm h-100 hover-lift">
-        <div class="card-body text-center">
-          <div class="bg-secondary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
-            <i class="bi bi-headset text-secondary" style="font-size: 2rem;"></i>
-          </div>
-          <h5 class="h5 text-wood mb-2">Fast Response 24/7</h5>
-          <p class="small text-muted mb-0">Tim kami siap melayani Anda kapan saja untuk konsultasi gratis dan pemesanan cepat</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+  {% include block--mengapa-memilih-kami.html %}
 </section>
-
-<section id="daftar-harga">
-  {% include block--product-list.html %}
-</section>
-
-<section id="area-pengiriman-semarang">
-  <div class="my-5">
-    <div class="card border-0 shadow-lg">
-      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
-        <i class="bi bi-geo-alt-fill mb-2" style="font-size: 2.5rem;"></i>
         <h2 class="h2 mb-0 fw-bold text-white">Area Pengiriman Semarang</h2>
         <p class="mb-0 mt-2 small" style="opacity: 0.85;">
           <i class="bi bi-truck me-1"></i>
@@ -1458,234 +1356,6 @@ share_count: 1
 </section>
 
 <section id="hubungi-kami">
-  <div class="my-5">
-    <div class="card border-0 shadow-lg">
-      <div class="card-body text-white text-center py-5 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
-        <i class="bi bi-telephone-fill mb-3" style="font-size: 3.5rem;"></i>
-        <h2 class="h2 mb-3 fw-bold text-white">Hubungi Kami Sekarang!</h2>
-        <div class="d-flex align-items-center justify-content-center">
-          <h3 class="h5 mb-0 fw-bold">Siap Melayani Kebutuhan Kayu Dolken di Semarang!</h3>
-        </div>
-        <h4 class="visually-hidden">Informasi Pengiriman Gratis Semarang</h4>
-        <p class="h5 mb-4" style="opacity: 0.95;">
-          <i class="bi bi-whatsapp me-2"></i>
-          Telepon / WhatsApp: <strong>081311400177</strong>
-        </p>
-        <a href="https://wa.me/6281311400177?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20gelam%20untuk%20Semarang" class="btn btn-light btn-lg px-5 py-3" target="_blank">
-          <i class="bi bi-whatsapp me-2" style="font-size: 1.5rem;"></i>
-          <span class="fw-bold">Chat WhatsApp Sekarang</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Layanan Konsultasi & Pemesanan -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-chat-dots text-success me-2"></i>Layanan Konsultasi & Pemesanan
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Dapatkan konsultasi gratis dan informasi lengkap seputar pemesanan kayu dolken</p>
-      </div>
-    </div>
-
-    <!-- H4: Siap memesan kayu dolken untuk proyek di Semarang? -->
-    <div class="card border-0 shadow-sm">
-      <div class="card-header bg-success text-white">
-        <h4 class="h5 mb-0 fw-bold text-center">
-          <i class="bi bi-cart-check me-2"></i>Siap memesan kayu dolken untuk proyek di Semarang?
-        </h4>
-      </div>
-      <div class="card-body py-4">
-        <div class="row g-3">
-          <div class="col-md-6">
-            <div class="d-flex align-items-start">
-              <i class="bi bi-check-circle-fill text-success me-3" style="font-size: 1.25rem;"></i>
-              <div>
-                <!-- H5: Konsultasi gratis -->
-                <h5 class="h6 mb-1 fw-bold">Konsultasi gratis kebutuhan proyek Anda</h5>
-                <p class="small text-muted mb-0">Tim ahli siap membantu</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="d-flex align-items-start">
-              <i class="bi bi-check-circle-fill text-success me-3" style="font-size: 1.25rem;"></i>
-              <div>
-                <!-- H5: Cek stok -->
-                <h5 class="h6 mb-1 fw-bold">Cek ketersediaan stok real-time</h5>
-                <p class="small text-muted mb-0">Update stok setiap hari</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="d-flex align-items-start">
-              <i class="bi bi-check-circle-fill text-success me-3" style="font-size: 1.25rem;"></i>
-              <div>
-                <!-- H5: Info harga -->
-                <h5 class="h6 mb-1 fw-bold">Info harga terbaru dan penawaran khusus</h5>
-                <p class="small text-muted mb-0">Dapatkan promo terbaik</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="d-flex align-items-start">
-              <i class="bi bi-check-circle-fill text-success me-3" style="font-size: 1.25rem;"></i>
-              <div>
-                <!-- H5: Jadwal pengiriman -->
-                <h5 class="h6 mb-1 fw-bold">Jadwal pengiriman gratis Semarang</h5>
-                <p class="small text-muted mb-0">Gratis ongkir seluruh Semarang</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="d-flex align-items-start">
-              <i class="bi bi-check-circle-fill text-success me-3" style="font-size: 1.25rem;"></i>
-              <div>
-                <!-- H5: Rekomendasi ukuran -->
-                <h5 class="h6 mb-1 fw-bold">Rekomendasi ukuran sesuai kebutuhan</h5>
-                <p class="small text-muted mb-0">Pilih diameter yang tepat</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="d-flex align-items-start">
-              <i class="bi bi-check-circle-fill text-success me-3" style="font-size: 1.25rem;"></i>
-              <div>
-                <!-- H5: Harga nego -->
-                <h5 class="h6 mb-1 fw-bold">Harga nego untuk pembelian partai besar</h5>
-                <p class="small text-muted mb-0">Diskon khusus proyek besar</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Informasi Layanan Kami -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-info-circle text-primary me-2"></i>Informasi Layanan Kami
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Jam operasional dan jenis layanan yang kami sediakan untuk Anda</p>
-      </div>
-    </div>
-
-    <div class="row g-4">
-      <div class="col-md-6">
-        <!-- H4: Jam Operasional -->
-        <div class="card border-0 shadow-sm h-100">
-          <div class="card-header bg-primary text-white">
-            <div class="d-flex align-items-center justify-content-center">
-              <i class="bi bi-clock-fill me-2" style="font-size: 1.5rem;"></i>
-              <h4 class="h5 mb-0 fw-bold">Jam Operasional</h4>
-            </div>
-          </div>
-          <div class="card-body text-center">
-            <!-- H5: Hari Kerja -->
-            <h5 class="visually-hidden">Jadwal Hari Kerja</h5>
-            <p class="mb-2"><strong class="text-primary">Senin - Sabtu</strong></p>
-            <p class="mb-2">08:00 - 17:00 WIB</p>
-            <div class="badge bg-success mt-2">
-              <i class="bi bi-whatsapp me-1"></i>WhatsApp 24/7
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <!-- H4: Melayani Semua Kebutuhan -->
-        <div class="card border-0 shadow-sm h-100">
-          <div class="card-header bg-primary text-white">
-            <div class="d-flex align-items-center justify-content-center">
-              <i class="bi bi-people-fill me-2" style="font-size: 1.5rem;"></i>
-              <h4 class="h5 mb-0 fw-bold">Melayani Semua Kebutuhan</h4>
-            </div>
-          </div>
-          <div class="card-body">
-            <!-- H5: Jenis Pelanggan -->
-            <h5 class="visually-hidden">Jenis Pelanggan yang Kami Layani</h5>
-            <ul class="list-unstyled small mb-0">
-              <li class="mb-2"><i class="bi bi-building text-primary me-2"></i>Proyek komersial (hotel, cafe, restoran, mall)</li>
-              <li class="mb-2"><i class="bi bi-hammer text-primary me-2"></i>Kontraktor & developer properti</li>
-              <li class="mb-2"><i class="bi bi-palette text-primary me-2"></i>Arsitek & interior designer</li>
-              <li class="mb-2"><i class="bi bi-person text-primary me-2"></i>Perorangan / retail / homeowner</li>
-              <li class="mb-0"><i class="bi bi-box-seam text-primary me-2"></i>Pembelian partai besar (harga spesial & nego)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Keunggulan Layanan Kami -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-warning bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-star-fill text-warning me-2"></i>Keunggulan Layanan Kami
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Benefit khusus yang Anda dapatkan saat memesan dari kami</p>
-      </div>
-    </div>
-
-    <!-- H4: Benefit Utama (visually-hidden) -->
-    <div class="card border-0 shadow-lg" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);">
-      <div class="card-body text-center py-4">
-        <h4 class="visually-hidden">Benefit Utama Pemesanan</h4>
-        <div class="row align-items-center">
-          <div class="col-md-4 mb-3 mb-md-0">
-            <i class="bi bi-truck text-white" style="font-size: 3rem;"></i>
-            <!-- H5: Pengiriman Gratis -->
-            <h5 class="h6 text-white mt-2 mb-0 fw-bold">Pengiriman Gratis Semarang</h5>
-          </div>
-          <div class="col-md-4 mb-3 mb-md-0">
-            <i class="bi bi-cash-coin text-white" style="font-size: 3rem;"></i>
-            <!-- H5: COD Tersedia -->
-            <h5 class="h6 text-white mt-2 mb-0 fw-bold">COD Tersedia</h5>
-          </div>
-          <div class="col-md-4">
-            <i class="bi bi-box-seam text-white" style="font-size: 3rem;"></i>
-            <!-- H5: Stok Ready -->
-            <h5 class="h6 text-white mt-2 mb-0 fw-bold">Stok Ready!</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- H3: Hubungi Kami untuk Konsultasi -->
-  <div class="my-4">
-    <div class="d-flex align-items-center mb-3">
-      <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-        <h3 class="h4 mb-0 text-wood fw-bold">
-          <i class="bi bi-chat-heart text-primary me-2"></i>Hubungi Kami untuk Konsultasi
-        </h3>
-        <p class="small text-muted mb-0 mt-1">Tim kami siap membantu menjawab semua pertanyaan Anda seputar kayu dolken</p>
-      </div>
-    </div>
-
-    <!-- H4: Jangan ragu untuk bertanya! -->
-    <div class="card border-0 shadow-sm">
-      <div class="card-header bg-primary text-white">
-        <h4 class="h5 mb-0 fw-bold text-center">
-          <i class="bi bi-chat-dots me-2"></i>Jangan ragu untuk bertanya!
-        </h4>
-      </div>
-      <div class="card-body text-center py-5" style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);">
-        <!-- H5: Informasi Konsultasi -->
-        <h5 class="visually-hidden">Informasi Konsultasi Gratis</h5>
-        <i class="bi bi-chat-heart-fill text-primary mb-3" style="font-size: 3rem;"></i>
-        <p class="text-muted mb-4 fw-bold">Konsultasi gratis tanpa biaya - Tim kami siap membantu Anda</p>
-        <a href="https://wa.me/6281311400177?text=Halo,%20saya%20ingin%20konsultasi%20tentang%20kayu%20dolken%20gelam" class="btn btn-primary btn-lg px-5" target="_blank">
-          <i class="bi bi-telephone-fill me-2"></i>Hubungi 081311400177 Sekarang
-        </a>
-      </div>
-    </div>
-  </div>
+  {% include block--hubungi-kami.html %}
 </section>
 
