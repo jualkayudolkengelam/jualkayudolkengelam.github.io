@@ -9,10 +9,23 @@
 #
 # CARA PENGGUNAAN:
 # 1. Copy file ini ke _post_with_product/ dengan nama: YYYY-MM-DD-jual-kayu-dolken-{kota}.md
-# 2. Baca INSTRUKSI di setiap field (yang ditulis dengan huruf kecil)
-# 3. Ganti instruksi dengan konten yang sesuai untuk kota tersebut
-# 4. Field yang sudah ada teksnya (UPPERCASE) bisa dipakai langsung atau disesuaikan
-# 5. Test dengan rebuild.sh sebelum commit
+# 2. Siapkan 4 foto produk (PENTING: harus format WebP):
+#    a. Buat direktori:
+#       mkdir -p assets/images/posts/jual-kayu-dolken-{kota}/
+#    b. Copy 4 foto ke direktori dan rename:
+#       cp foto1.jpg assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-001.jpeg
+#       cp foto2.jpg assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-002.jpeg
+#       (dst untuk 003 dan 004)
+#    c. Convert semua JPEG ke WebP (akan menghasilkan file .webp baru):
+#       cd assets/images/posts/jual-kayu-dolken-{kota}/
+#       for file in *.jpeg; do cwebp -q 85 "$file" -o "${file%.jpeg}.webp"; done
+#    d. Hapus file JPEG yang lama (sekarang ada 2x file: .jpeg dan .webp):
+#       rm *.jpeg
+#    e. Pastikan hanya ada 4 file .webp: 001.webp, 002.webp, 003.webp, 004.webp
+# 3. Baca INSTRUKSI di setiap field (yang ditulis dengan huruf kecil)
+# 4. Ganti instruksi dengan konten yang sesuai untuk kota tersebut
+# 5. Field yang sudah ada teksnya (UPPERCASE) bisa dipakai langsung atau disesuaikan
+# 6. Test dengan rebuild.sh sebelum commit
 #
 # CATATAN PENTING:
 # - Field dengan "isi ..." atau "tulis ..." atau "berikan ..." = HARUS DITULIS MANUAL
@@ -20,6 +33,7 @@
 # - Jangan ubah struktur frontmatter (nama field, hierarki, indentasi)
 # - Semua section dengan REQUIRED wajib diisi
 # - Section OPTIONAL boleh dihapus jika tidak relevan
+# - PENTING: Semua foto HARUS dalam format WebP (bukan JPEG/PNG) untuk optimasi performa
 # ============================================================================
 
 # ============================================================================
@@ -31,12 +45,12 @@ description: "tulis meta description untuk SEO (150-160 karakter), mention kota,
 date: YYYY-MM-DD  # Ganti dengan tanggal publikasi, format: 2025-11-20
 author: Admin
 author_url: https://jualkayudolkengelam.github.io
-image: /assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-001.jpeg
+image: /assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-001.webp
 images:
-  - /assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-001.jpeg
-  - /assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-002.jpeg
-  - /assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-003.jpeg
-  - /assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-004.jpeg
+  - /assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-001.webp
+  - /assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-002.webp
+  - /assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-003.webp
+  - /assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-004.webp
 keywords: "tulis 6-8 keywords untuk SEO, variasikan dengan nama kota dan area-area populer di kota ini"
 show_products: true
 nama_kota: isi nama kota lengkap (misal: Semarang, Jakarta Utara, Bandung)
