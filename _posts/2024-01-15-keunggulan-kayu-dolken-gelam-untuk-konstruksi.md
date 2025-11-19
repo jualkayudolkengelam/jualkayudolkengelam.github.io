@@ -186,25 +186,25 @@ kesimpulan:
 </div>
 
 <section id="definisi-kayu-dolken">
-  {% include posts/block--definisi-kayu-dolken.html %}
+  {% include posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/block--definisi-kayu-dolken.html %}
 </section>
 
 <section id="keunggulan-utama">
-  {% include posts/block--keunggulan-utama-kayu-dolken.html %}
+  {% include posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/block--keunggulan-utama-kayu-dolken.html %}
 </section>
 
 <section id="aplikasi-umum">
-  {% include posts/block--aplikasi-umum-kayu-dolken.html %}
+  {% include posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/block--aplikasi-umum-kayu-dolken.html %}
 </section>
 
 <section id="tips-memilih">
-  {% include posts/block--tips-memilih-kayu-dolken.html %}
+  {% include posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/block--tips-memilih-kayu-dolken.html %}
 </section>
 
 <section id="perawatan">
-  {% include posts/block--perawatan-kayu-dolken.html %}
+  {% include posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/block--perawatan-kayu-dolken.html %}
 </section>
 
 <section id="kesimpulan">
-  {% include posts/block--kesimpulan-artikel.html %}
+  {% include posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/block--kesimpulan-artikel.html %}
 </section>

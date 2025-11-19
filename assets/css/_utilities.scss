@@ -226,3 +226,42 @@
   height: 50px;
   min-width: 50px;
 }
+
+/* Comparison Table */
+.comparison-table {
+  th {
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    padding: 1rem;
+  }
+
+  td {
+    padding: 0.75rem 1rem;
+    vertical-align: middle;
+  }
+
+  tbody tr {
+    transition: $transition-fast;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.02);
+    }
+  }
+}
+
+/* Testimoni Card */
+.testimoni-card {
+  transition: $transition-default;
+
+  &:hover {
+    transform: translateX(5px);
+    box-shadow: $shadow-md !important;
+  }
+}
+
+.testimoni-icon-wrapper {
+  min-width: 70px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
