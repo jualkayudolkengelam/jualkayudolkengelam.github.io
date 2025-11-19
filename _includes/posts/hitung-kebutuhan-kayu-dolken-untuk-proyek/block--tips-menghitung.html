@@ -1,0 +1,79 @@
+{% comment %}
+============================================================================
+Block: Tips Menghitung
+============================================================================
+
+@file        block--tips-menghitung.html
+@path        _includes/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/block--tips-menghitung.html
+@type        Content Block
+@description Tips praktis untuk menghitung kebutuhan kayu dolken
+@usage       {% include posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/block--tips-menghitung.html %}
+
+Data yang digunakan dari frontmatter:
+- page.labels.tips_menghitung_title
+- page.tips_menghitung
+
+============================================================================
+{% endcomment %}
+
+<div class="tips-menghitung py-5">
+  <div class="container-fluid px-0">
+
+    <!-- H2: Main Section Header -->
+    <div class="my-4">
+      <div class="card border-0 shadow-lg">
+        <div class="card-body text-white text-center py-4 px-3 bg-gradient-cyan-header">
+          <i class="bi bi-lightbulb-fill mb-2 fs-2-5rem"></i>
+          <h2 class="h2 mb-0 fw-bold text-white">{{ page.labels.tips_menghitung_title | default: "Tips Menghitung" }}</h2>
+          <p class="mb-0 mt-2 small opacity-85">
+            <i class="bi bi-star me-1"></i>
+            Panduan praktis agar perhitungan lebih akurat
+            <i class="bi bi-star ms-1"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tips Cards -->
+    {% if page.tips_menghitung %}
+    <div class="row g-4 my-4">
+      {% for tip in page.tips_menghitung %}
+      {% assign card_color = tip.warna | default: 'primary' %}
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-lg h-100 hover-lift">
+          <div class="card-header py-3 text-white bg-gradient-card-{{ card_color }}">
+            <div class="d-flex align-items-center">
+              <div class="bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3 w-50 h-50">
+                <span class="text-white fw-bold fs-5">{{ tip.nomor }}</span>
+              </div>
+              <div class="flex-grow-1">
+                <h3 class="h5 fw-bold mb-0">{{ tip.judul }}</h3>
+              </div>
+              {% if tip.icon %}
+              <i class="bi {{ tip.icon }} fs-3rem opacity-85 ms-2"></i>
+              {% endif %}
+            </div>
+          </div>
+          <div class="card-body p-4">
+            {% if tip.poin %}
+            <ul class="mb-0">
+              {% for poin in tip.poin %}
+              <li class="mb-2 text-dark">{{ poin }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            {% if tip.contoh %}
+            <div class="mt-3">
+              <strong class="text-{{ card_color }} small">Contoh:</strong>
+              <pre class="bg-light rounded-3 p-3 mt-2 small mb-0"><code>{{ tip.contoh }}</code></pre>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+</div>
