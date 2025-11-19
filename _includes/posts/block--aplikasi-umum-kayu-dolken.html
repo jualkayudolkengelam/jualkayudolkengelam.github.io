@@ -40,12 +40,12 @@ Data yang digunakan dari frontmatter:
               {% assign card_color = kategori.warna | default: 'wood' %}
 
               <!-- Card Header -->
-              <div class="card-header bg-{{ card_color }} bg-opacity-10 border-0 py-4">
+              <div class="card-header bg-{{ card_color }} border-0 py-4">
                 <div class="d-flex align-items-center">
-                  <div class="icon-wrapper bg-{{ card_color }} text-white rounded-3 p-3 me-3">
+                  <div class="icon-wrapper bg-white text-{{ card_color }} rounded-3 p-3 me-3">
                     <i class="bi {{ kategori.icon }} fs-3"></i>
                   </div>
-                  <h3 class="h4 fw-bold mb-0 text-{{ card_color }}">
+                  <h3 class="h4 fw-bold mb-0 text-white">
                     {{ kategori.kategori }}
                   </h3>
                 </div>
@@ -58,9 +58,9 @@ Data yang digunakan dari frontmatter:
                   {% for sub in kategori.sub_aplikasi %}
                   <div class="col-md-6">
                     <div class="aplikasi-sub-section">
-                      <h4 class="h6 fw-bold text-dark mb-3 pb-2 border-bottom border-{{ card_color }}">
-                        <i class="bi bi-arrow-right-circle-fill text-{{ card_color }} me-2"></i>
-                        {{ sub.judul }}
+                      <h4 class="h6 fw-bold text-dark mb-3 pb-2 border-bottom border-{{ card_color }} d-flex align-items-start">
+                        <i class="bi bi-arrow-right-circle-fill text-{{ card_color }} me-2 flex-shrink-0 icon-align-h4"></i>
+                        <span>{{ sub.judul }}</span>
                       </h4>
                       {% if sub.items %}
                       <ul class="list-unstyled mb-0">

@@ -168,11 +168,19 @@
 .aplikasi-sub-section {
   h4 {
     transition: $transition-default;
+
+    span {
+      transition: $transition-default;
+    }
   }
 
-  &:hover h4 {
+  &:hover h4 span {
     padding-left: 5px;
   }
+}
+
+.icon-align-h4 {
+  margin-top: 2px;
 }
 
 .aplikasi-umum-kayu-dolken {
@@ -201,4 +209,20 @@
     border-color: $wood-dark;
     color: white;
   }
+}
+
+/* Post Body Heading Margin Fix */
+.post-body .card-header h2, .post-body .card-header h3, .post-body .card-header h4, .post-body .card-header h5, .post-body .card-header h6{
+  margin-top:0;
+}
+
+.post-body .card-body h2, .post-body .card-body h3, .post-body .card-body h4, .post-body .card-body h5, .post-body .card-body h6{
+  margin-top:0;
+}
+
+/* Tips Icon Circle */
+.tip-icon-circle {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
 }
