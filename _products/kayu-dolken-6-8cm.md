@@ -15,84 +15,86 @@ popular: false
 rating: 4.7
 review_count: 68
 total_updates: 0
-features:
-  - Kayu gelam asli kualitas super
-  - Diameter besar untuk konstruksi kuat
-  - Cocok untuk tiang pancang
-  - Panjang standar 4 meter
-  - Daya dukung beban tinggi
-  - Harga sudah termasuk ongkir
-  - Pembayaran setelah barang sampai
+last_modified_at: '2025-11-19 00:00:00 +0700'
+show_bulk_offer: false
+
+# Product Description
+deskripsi_intro: "Kayu dolken gelam diameter 6-8 cm adalah pilihan untuk konstruksi yang membutuhkan kekuatan ekstra. Dengan diameter yang lebih besar, kayu dolken ini sangat cocok untuk tiang pancang, pagar pembatas permanen, dan berbagai proyek struktural yang memerlukan daya dukung tinggi."
+
+# Technical Specifications
+spesifikasi:
+  panjang: "4 meter standar"
+  material: "100% kayu gelam asli premium"
+  kondisi: "Kering udara, siap pakai"
+  kekuatan: "Sangat tinggi, konstruksi berat"
+  ketahanan: "Maksimal terhadap air, rayap, jamur"
+  finishing: "Natural (dapat dicat/divernish)"
+
+# Product Advantages
+keunggulan:
+  - judul: "Keunggulan Utama Produk"
+    aplikasi:
+      - "Kayu gelam asli kualitas super"
+      - "Diameter besar untuk konstruksi kuat"
+      - "Cocok untuk tiang pancang"
+      - "Panjang standar 4 meter"
+      - "Daya dukung beban tinggi"
+      - "Harga sudah termasuk ongkir"
+      - "Pembayaran setelah barang sampai"
+  - judul: "Kekuatan Maksimal"
+    deskripsi: "Diameter 6-8 cm memberikan kekuatan struktural yang sangat baik untuk berbagai aplikasi konstruksi. Mampu menahan beban berat dan tekanan struktural yang signifikan."
+  - judul: "Aplikasi Konstruksi Berat"
+    aplikasi:
+      - "Tiang pancang fondasi ringan"
+      - "Pagar permanen yang sangat kuat"
+      - "Tiang penyangga struktur berat"
+      - "Konstruksi dermaga kecil"
+      - "Pembatas lahan permanen"
+      - "Tiang utilitas"
+      - "Konstruksi jembatan kecil"
+  - judul: "Investasi Jangka Panjang"
+    deskripsi: "Dengan ukuran dan kekuatan ini, kayu dolken gelam dapat bertahan puluhan tahun bahkan dalam kondisi ekstrem. Sangat ekonomis untuk proyek jangka panjang."
+
+# Recommendations
+rekomendasi:
+  tipe: "penggunaan"
+  sections:
+    - heading: "Untuk Tiang Pancang Fondasi:"
+      deskripsi: "Ideal untuk fondasi ringan hingga sedang, dapat dipancang 1-1.5 meter ke dalam tanah untuk stabilitas maksimal. Jarak antar tiang 1.5-2 meter sesuai beban struktur."
+    - heading: "Untuk Pagar Permanen:"
+      deskripsi: "Jarak ideal 15-20 cm antar tiang untuk kekuatan optimal. Tinggi pagar 2-2.5 meter untuk keamanan maksimal. Dapat bertahan 20-30 tahun tanpa perawatan khusus."
+    - heading: "Untuk Konstruksi Dermaga:"
+      deskripsi: "Sangat cocok untuk dermaga kecil hingga sedang. Tahan terendam air laut dan air tawar puluhan tahun tanpa pembusukan."
+    - heading: "Untuk Gazebo & Pergola Besar:"
+      deskripsi: "Cocok sebagai tiang penyangga utama untuk gazebo ukuran 4x4 hingga 6x6 meter dengan kapasitas beban tinggi."
+    - heading: "Untuk Turap & Penahan Tanah:"
+      deskripsi: "Efektif untuk penahan tanah setinggi 1-2 meter. Dapat dipasang rapat atau dengan jarak tertentu sesuai kebutuhan."
 ---
 
-## Deskripsi Produk
+<section id="product-deskripsi">
+{% include products/block--product-deskripsi.html %}
+</section>
 
-Kayu dolken gelam diameter 6-8 cm adalah pilihan untuk konstruksi yang membutuhkan kekuatan ekstra. Dengan diameter yang lebih besar, kayu dolken ini sangat cocok untuk tiang pancang, pagar pembatas permanen, dan berbagai proyek struktural yang memerlukan daya dukung tinggi.
+<section id="product-keunggulan">
+{% include products/block--product-keunggulan.html %}
+</section>
 
-### Keunggulan Kayu Dolken Gelam 6-8 cm
+<section id="product-spesifikasi-teknis">
+{% include products/block--product-spesifikasi-teknis.html %}
+</section>
 
-**Kekuatan Maksimal**
-Diameter 6-8 cm memberikan kekuatan struktural yang sangat baik untuk berbagai aplikasi konstruksi. Mampu menahan beban berat dan tekanan struktural yang signifikan.
+<section id="product-harga-pengiriman">
+{% include products/block--product-harga-pengiriman.html %}
+</section>
 
-**Aplikasi Konstruksi Berat**
-- Tiang pancang fondasi ringan
-- Pagar permanen yang sangat kuat
-- Tiang penyangga struktur berat
-- Konstruksi dermaga kecil
-- Pembatas lahan permanen
-- Tiang utilitas
-- Konstruksi jembatan kecil
+<section id="product-rekomendasi">
+{% include products/block--product-rekomendasi.html %}
+</section>
 
-**Investasi Jangka Panjang**
-Dengan ukuran dan kekuatan ini, kayu dolken gelam dapat bertahan puluhan tahun bahkan dalam kondisi ekstrem. Sangat ekonomis untuk proyek jangka panjang.
+<section id="product-cara-pemesanan">
+{% include products/block--product-cara-pemesanan.html %}
+</section>
 
-### Spesifikasi Teknis
-
-- **Diameter:** 6 - 8 cm (konsisten)
-- **Panjang:** 4 meter standar
-- **Material:** 100% kayu gelam asli premium
-- **Kondisi:** Kering udara, siap pakai
-- **Kekuatan:** Sangat tinggi, konstruksi berat
-- **Ketahanan:** Maksimal terhadap air, rayap, jamur
-- **Finishing:** Natural (dapat dicat/divernish)
-
-### Harga dan Pengiriman
-
-**Rp {{ page.price | rupiah }} per batang** - Harga sudah termasuk ongkos kirim ke lokasi Anda!
-
-Kami menerapkan sistem pembayaran COD (Cash on Delivery):
-- ✅ Tidak perlu DP atau transfer di muka
-- ✅ Bayar setelah barang sampai di lokasi
-- ✅ Cek kualitas dulu, baru bayar
-- ✅ Aman dan terpercaya
-
-### Rekomendasi Penggunaan
-
-**Untuk Tiang Pancang:**
-Ideal untuk fondasi ringan, dapat dipancang 1-1.5 meter ke dalam tanah untuk stabilitas maksimal.
-
-**Untuk Pagar Permanen:**
-Jarak ideal 15-20 cm antar tiang untuk kekuatan optimal. Dapat bertahan 20+ tahun.
-
-**Untuk Konstruksi Struktural:**
-Cocok sebagai tiang penyangga dengan kapasitas beban sesuai perhitungan struktural.
-
-### Cara Pemesanan
-
-1. **Hubungi Kami** - Klik tombol WhatsApp atau telepon di atas
-2. **Konsultasi Kebutuhan** - Tim kami akan bantu hitung jumlah yang dibutuhkan
-3. **Konfirmasi Pesanan** - Pastikan jumlah dan alamat pengiriman
-4. **Pengiriman** - Kami antar langsung menggunakan truk kami
-5. **Pembayaran** - Bayar setelah barang sampai dan dicek
-
-### Area Pengiriman
-
-Melayani pengiriman ke seluruh Jawa dan Bali:
-- DKI Jakarta
-- Jawa Barat (Bandung, Bogor, Bekasi, Depok)
-- Banten (Tangerang, Serang, Cilegon)
-- Jawa Tengah (Semarang, Solo, Yogyakarta)
-- Jawa Timur (Surabaya, Malang, Sidoarjo)
-- Bali (Denpasar dan sekitarnya)
-
-**Siap melayani kebutuhan kayu dolken Anda!**
+<section id="product-area-pengiriman">
+{% include products/block--product-area-pengiriman.html %}
+</section>

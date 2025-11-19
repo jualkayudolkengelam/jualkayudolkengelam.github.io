@@ -1,0 +1,80 @@
+{% comment %}
+  ============================================================================
+  Product Deskripsi Block Component
+  ============================================================================
+
+  @file        _includes/products/block--product-deskripsi.html
+  @description Reusable component for product description intro section
+
+  @version     1.0.0
+  @date        2025-11-19
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading "Deskripsi Produk" (main section)
+  - H3 subheading for product overview
+  - Dynamic intro paragraph from frontmatter
+  - Fallback to page.description if custom intro not provided
+  - Supports custom HTML formatting in frontmatter
+  - Card-based layout with visual elements
+
+  Parameters:
+  -----------
+  - page.deskripsi_intro: Custom intro paragraph (optional)
+  - page.description: Meta description as fallback
+  - page.diameter: Product diameter for context
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  layout: node--product
+  title: "Jual Kayu Dolken Gelam Diameter 8-10 cm"
+  description: "Jual kayu dolken gelam diameter 8-10 cm panjang 4 meter..."
+  diameter: "8 - 10 cm"
+  deskripsi_intro: "Kayu dolken gelam diameter 8-10 cm adalah produk paling populer kami! Ukuran ini menjadi favorit kontraktor dan developer karena memberikan kekuatan optimal untuk berbagai jenis konstruksi permanen."
+  ---
+
+  In content:
+  {% include products/block--product-deskripsi.html %}
+
+  ============================================================================
+{% endcomment %}
+
+<!-- H2: Main Section Header -->
+<div class="my-5">
+  <div class="card border-0 shadow-lg">
+    <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5a3c 0%, #6d4c41 50%, #5d4037 100%);">
+      <i class="bi bi-file-text mb-2 fs-2-5rem"></i>
+      <h2 class="h2 mb-0 fw-bold text-white">Deskripsi Produk</h2>
+      <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+        <i class="bi bi-info-circle me-1"></i>
+        Informasi lengkap tentang kayu dolken gelam diameter {{ page.diameter }}
+        <i class="bi bi-info-circle ms-1"></i>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- H3: Product Overview -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-wood bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-card-text text-wood me-2"></i>Tentang Produk Ini
+      </h3>
+      <p class="small text-muted mb-0 mt-1">Kenali lebih dalam produk kayu dolken gelam berkualitas premium kami</p>
+    </div>
+  </div>
+
+  <div class="card border-0 shadow-sm">
+    <div class="card-body">
+      {% if page.deskripsi_intro %}
+      <p class="mb-0 text-muted">{{ page.deskripsi_intro }}</p>
+      {% else %}
+      <p class="mb-0 text-muted">{{ page.description }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>

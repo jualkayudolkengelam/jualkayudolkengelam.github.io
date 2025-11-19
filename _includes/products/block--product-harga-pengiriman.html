@@ -1,0 +1,161 @@
+{% comment %}
+  ============================================================================
+  Product Harga dan Pengiriman Block Component
+  ============================================================================
+
+  @file        _includes/products/block--product-harga-pengiriman.html
+  @description Reusable component for product pricing and COD information
+
+  @version     1.0.0
+  @date        2025-11-19
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading "Harga dan Pengiriman" (main section)
+  - H3 subheading for price details
+  - Dynamic price display with rupiah filter
+  - COD (Cash on Delivery) explanation
+  - Optional special offer for bulk purchase (10-12cm only)
+  - Checkmark list for COD benefits
+  - Card-based layout with visual elements
+
+  Parameters:
+  -----------
+  - page.price: Product price per unit (required)
+  - page.diameter: Product diameter for context (optional)
+  - page.show_bulk_offer: Boolean to show bulk purchase offer (optional, for 8-10cm, 10-12cm)
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  layout: node--product
+  price: 35000
+  diameter: "8 - 10 cm"
+  show_bulk_offer: true
+  ---
+
+  In content:
+  {% include products/block--product-harga-pengiriman.html %}
+
+  ============================================================================
+{% endcomment %}
+
+<!-- H2: Main Section Header -->
+<div class="my-5">
+  <div class="card border-0 shadow-sm">
+    <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
+      <i class="bi bi-cash-coin mb-2 fs-2-5rem"></i>
+      <h2 class="h2 mb-0 fw-bold text-white">Harga dan Pengiriman</h2>
+      <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+        <i class="bi bi-shield-check me-1"></i>
+        Harga terjangkau dengan sistem pembayaran COD yang aman
+        <i class="bi bi-shield-check ms-1"></i>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- H3: Price Information -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-tag text-success me-2"></i>Informasi Harga
+      </h3>
+      <p class="small text-muted mb-0 mt-1">Harga kompetitif langsung dari supplier dengan sistem pembayaran yang aman</p>
+    </div>
+  </div>
+
+  <div class="card border-0 shadow-sm mb-4">
+    <div class="card-body bg-light">
+      <div class="text-center py-3">
+        <p class="h3 fw-bold text-success mb-2">
+          <i class="bi bi-currency-dollar me-2"></i>Rp {{ page.price | divided_by: 1000 }}.000
+        </p>
+        <p class="mb-0 text-muted">per batang (sudah termasuk ongkos kirim)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- H4: Sistem Pembayaran COD -->
+  <div class="card border-0 shadow-sm my-4">
+    <div class="card-body bg-light py-3">
+      <h4 class="h4 text-wood mb-2 fw-bold">
+        <i class="bi bi-shield-check me-2"></i>Sistem Pembayaran COD
+      </h4>
+      <p class="small text-muted mb-0">Bayar setelah barang sampai dan Anda cek kualitasnya - Aman, Mudah, Terpercaya!</p>
+    </div>
+  </div>
+
+  <!-- COD Benefits Cards -->
+  <div class="row g-3 my-4">
+    <!-- Tidak Perlu DP -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center">
+          <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 w-70 h-70">
+            <i class="bi bi-x-circle text-success" style="font-size: 2rem;"></i>
+          </div>
+          <h5 class="h6 text-wood mb-2 fw-bold">Tidak Perlu DP</h5>
+          <p class="small text-muted mb-0">Tidak perlu transfer uang muka atau DP. Cukup pesan, kami kirim!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bayar Setelah Sampai -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center">
+          <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 w-70 h-70">
+            <i class="bi bi-truck text-primary" style="font-size: 2rem;"></i>
+          </div>
+          <h5 class="h6 text-wood mb-2 fw-bold">Bayar Setelah Sampai</h5>
+          <p class="small text-muted mb-0">Bayar langsung saat barang tiba di lokasi Anda, tidak ada risiko</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cek Kualitas Dulu -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center">
+          <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 w-70 h-70">
+            <i class="bi bi-search text-warning" style="font-size: 2rem;"></i>
+          </div>
+          <h5 class="h6 text-wood mb-2 fw-bold">Cek Kualitas Dulu</h5>
+          <p class="small text-muted mb-0">Periksa kondisi, ukuran, dan kualitas kayu sebelum melakukan pembayaran</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aman dan Terpercaya -->
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center">
+          <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 w-70 h-70">
+            <i class="bi bi-shield-check text-info" style="font-size: 2rem;"></i>
+          </div>
+          <h5 class="h6 text-wood mb-2 fw-bold">Aman & Terpercaya</h5>
+          <p class="small text-muted mb-0">Sistem pembayaran yang aman, tanpa risiko penipuan atau kerugian</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if page.show_bulk_offer %}
+  <!-- Bulk Purchase Offer -->
+  <div class="card border-0 shadow-sm mt-4" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+    <div class="card-body text-white py-3">
+      <div class="d-flex align-items-center">
+        <i class="bi bi-star-fill fs-3 me-3"></i>
+        <div>
+          <p class="mb-1 fw-bold">Harga Spesial untuk Pembelian Partai Besar!</p>
+          <p class="mb-0 small">Dapatkan penawaran terbaik untuk proyek skala besar. Hubungi kami untuk negosiasi harga khusus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>

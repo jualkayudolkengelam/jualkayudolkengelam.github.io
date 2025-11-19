@@ -14,74 +14,84 @@ images:
 - "/assets/images/products/jual-kayu-dolken-gelam-2-3cm-004.jpeg"
 sku: DOLKEN-2-3
 popular: false
-features:
-- Kayu gelam asli berkualitas tinggi
-- Tahan rayap dan cuaca ekstrem
-- Diameter konsisten 2-3 cm
-- Panjang standar 4 meter
-- Ideal untuk dekorasi hotel, cafe, dan rumah mewah
-- Harga sudah termasuk ongkir
-- Pembayaran setelah barang sampai
+rating: 4.5
 review_count: 2
 total_updates: 2
-rating: 4.5
 last_modified_at: '2025-11-15 20:54:00 +0700'
+show_bulk_offer: false
+
+# Product Description
+deskripsi_intro: "Kayu dolken gelam diameter 2-3 cm adalah pilihan ideal untuk berbagai kebutuhan **dekorasi dan hiasan**. Dengan diameter yang ramping dan elegan, kayu dolken ini sangat cocok untuk menciptakan aksen natural di hotel, cafe, restoran, atau rumah mewah. **Ukuran ini tidak direkomendasikan untuk konstruksi struktural**."
+
+# Technical Specifications
+spesifikasi:
+  panjang: "4 meter standar"
+  material: "100% kayu gelam asli"
+  kondisi: "Kering udara, siap pakai"
+  finishing: "Natural (dapat dicat/divernish sesuai kebutuhan)"
+
+# Product Advantages
+keunggulan:
+  - judul: "Keunggulan Utama Produk"
+    aplikasi:
+      - "Kayu gelam asli berkualitas tinggi"
+      - "Tahan rayap dan cuaca ekstrem"
+      - "Diameter konsisten 2-3 cm"
+      - "Panjang standar 4 meter"
+      - "Ideal untuk dekorasi hotel, cafe, dan rumah mewah"
+      - "Harga sudah termasuk ongkir"
+      - "Pembayaran setelah barang sampai"
+  - judul: "Material Berkualitas Premium"
+    deskripsi: "Kayu gelam yang kami sediakan berasal dari pohon gelam pilihan yang sudah matang, sehingga memiliki kepadatan tinggi dan daya tahan maksimal terhadap berbagai kondisi cuaca."
+  - judul: "Aplikasi Dekoratif"
+    aplikasi:
+      - "Dekorasi dinding interior hotel dan cafe"
+      - "Aksen natural untuk ruang lounge"
+      - "Hiasan taman dan landscape"
+      - "Border dekoratif untuk taman vertikal"
+      - "Penyangga tanaman hias merambat"
+      - "Art installation dan display"
+  - judul: "Tahan Lama"
+    deskripsi: "Kayu gelam terkenal dengan ketahanannya terhadap rayap, jamur, dan pembusukan. Bahkan tanpa treatment khusus, kayu dolken gelam dapat bertahan puluhan tahun."
+
+# Recommendations
+rekomendasi:
+  tipe: "penggunaan"
+  sections:
+    - heading: "Untuk Dekorasi Interior:"
+      deskripsi: "Sempurna untuk aksen dinding hotel, cafe, dan restoran. Pasang vertikal atau horizontal untuk menciptakan texture natural yang menarik."
+    - heading: "Untuk Taman & Landscape:"
+      deskripsi: "Ideal sebagai border dekoratif, penyangga tanaman merambat, atau pembatas area taman dengan jarak 5-8 cm antar batang."
+    - heading: "Untuk Art Installation:"
+      deskripsi: "Cocok untuk instalasi seni, display produk, atau dekorasi event dengan kreativitas tinggi."
+    - heading: "Catatan Penting:"
+      deskripsi: "Diameter 2-3 cm ideal untuk aplikasi dekoratif dan hiasan. Tidak direkomendasikan untuk konstruksi struktural yang memerlukan beban berat."
 ---
 
-## Deskripsi Produk
+<section id="product-deskripsi">
+{% include products/block--product-deskripsi.html %}
+</section>
 
-Kayu dolken gelam diameter 2-3 cm adalah pilihan ideal untuk berbagai kebutuhan **dekorasi dan hiasan**. Dengan diameter yang ramping dan elegan, kayu dolken ini sangat cocok untuk menciptakan aksen natural di hotel, cafe, restoran, atau rumah mewah. **Ukuran ini tidak direkomendasikan untuk konstruksi struktural**.
+<section id="product-keunggulan">
+{% include products/block--product-keunggulan.html %}
+</section>
 
-### Keunggulan Kayu Dolken Gelam 2-3 cm
+<section id="product-spesifikasi-teknis">
+{% include products/block--product-spesifikasi-teknis.html %}
+</section>
 
-**Material Berkualitas Premium**
-Kayu gelam yang kami sediakan berasal dari pohon gelam pilihan yang sudah matang, sehingga memiliki kepadatan tinggi dan daya tahan maksimal terhadap berbagai kondisi cuaca.
+<section id="product-harga-pengiriman">
+{% include products/block--product-harga-pengiriman.html %}
+</section>
 
-**Aplikasi Dekoratif**
-- Dekorasi dinding interior hotel dan cafe
-- Aksen natural untuk ruang lounge
-- Hiasan taman dan landscape
-- Border dekoratif untuk taman vertikal
-- Penyangga tanaman hias merambat
-- Art installation dan display
+<section id="product-cara-pemesanan">
+{% include products/block--product-cara-pemesanan.html %}
+</section>
 
-**Tahan Lama**
-Kayu gelam terkenal dengan ketahanannya terhadap rayap, jamur, dan pembusukan. Bahkan tanpa treatment khusus, kayu dolken gelam dapat bertahan puluhan tahun.
+<section id="product-area-pengiriman">
+{% include products/block--product-area-pengiriman.html %}
+</section>
 
-### Spesifikasi Teknis
-
-- **Diameter:** 2 - 3 cm (konsisten)
-- **Panjang:** 4 meter standar
-- **Material:** 100% kayu gelam asli
-- **Kondisi:** Kering udara, siap pakai
-- **Finishing:** Natural (dapat dicat/divernish sesuai kebutuhan)
-
-### Harga dan Pengiriman
-
-**Rp {{ page.price | rupiah }} per batang** - Harga sudah termasuk ongkos kirim ke lokasi Anda!
-
-Kami menerapkan sistem pembayaran COD (Cash on Delivery):
-- ✅ Tidak perlu DP atau transfer di muka
-- ✅ Bayar setelah barang sampai di lokasi
-- ✅ Cek kualitas dulu, baru bayar
-- ✅ Aman dan terpercaya
-
-### Cara Pemesanan
-
-1. **Hubungi Kami** - Klik tombol WhatsApp atau telepon di atas
-2. **Konsultasi Kebutuhan** - Tim kami akan bantu hitung jumlah yang dibutuhkan
-3. **Konfirmasi Pesanan** - Pastikan jumlah dan alamat pengiriman
-4. **Pengiriman** - Kami antar langsung menggunakan truk kami
-5. **Pembayaran** - Bayar setelah barang sampai dan dicek
-
-### Area Pengiriman
-
-Melayani pengiriman ke seluruh Jawa dan Bali:
-- DKI Jakarta
-- Jawa Barat (Bandung, Bogor, Bekasi, Depok)
-- Banten (Tangerang, Serang, Cilegon)
-- Jawa Tengah (Semarang, Solo, Yogyakarta)
-- Jawa Timur (Surabaya, Malang, Sidoarjo)
-- Bali (Denpasar dan sekitarnya)
-
-**Siap melayani kebutuhan kayu dolken Anda!**
+<section id="product-rekomendasi">
+{% include products/block--product-rekomendasi.html %}
+</section>

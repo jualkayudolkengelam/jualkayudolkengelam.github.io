@@ -1,0 +1,139 @@
+{% comment %}
+  ============================================================================
+  Product Keunggulan Block Component
+  ============================================================================
+
+  @file        _includes/products/block--product-keunggulan.html
+  @description Reusable component for product advantages section
+               Flexible structure for different diameter variations
+
+  @version     1.0.0
+  @date        2025-11-19
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading "Keunggulan Kayu Dolken Gelam [diameter] cm" (main section)
+  - H3 subheading for advantages overview
+  - H4 for each advantage category
+  - Flexible sub-sections with dynamic content
+  - Supports multiple advantage categories
+  - Application lists with icons
+  - Adapts to different product types (decorative vs construction)
+  - Card-based layout
+
+  Parameters:
+  -----------
+  - page.diameter: Product diameter for title
+  - page.keunggulan: Array of advantage objects, each with:
+    - judul: Bold heading (e.g., "Material Berkualitas Premium", "Kekuatan Struktural Optimal")
+    - deskripsi: Description paragraph (optional)
+    - aplikasi_judul: Application list title (optional, e.g., "Aplikasi Dekoratif", "Aplikasi Beragam")
+    - aplikasi: Array of application items (optional)
+
+  Usage:
+  ------
+  In frontmatter (2-3cm - Decorative):
+  ---
+  diameter: "2 - 3 cm"
+  keunggulan:
+    - judul: "Material Berkualitas Premium"
+      deskripsi: "Kayu gelam yang kami sediakan berasal dari pohon gelam pilihan yang sudah matang..."
+    - judul: "Aplikasi Dekoratif"
+      aplikasi:
+        - "Dekorasi dinding interior hotel dan cafe"
+        - "Aksen natural untuk ruang lounge"
+        - "Hiasan taman dan landscape"
+    - judul: "Tahan Lama"
+      deskripsi: "Kayu gelam terkenal dengan ketahanannya terhadap rayap, jamur, dan pembusukan..."
+  ---
+
+  In frontmatter (4-6cm - Medium Construction):
+  ---
+  diameter: "4 - 6 cm"
+  keunggulan:
+    - judul: "Kekuatan Struktural Optimal"
+      deskripsi: "Diameter 4-6 cm memberikan keseimbangan sempurna antara kekuatan dan kemudahan pemasangan..."
+    - judul: "Aplikasi Beragam"
+      aplikasi:
+        - "Pagar rumah dan perumahan"
+        - "Tiang penyangga pergola"
+        - "Konstruksi gazebo"
+    - judul: "Daya Tahan Luar Biasa"
+      deskripsi: "Kayu gelam dengan diameter ini memiliki masa pakai yang sangat panjang..."
+  ---
+
+  In content:
+  {% include products/block--product-keunggulan.html %}
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.keunggulan %}
+<!-- H2: Main Section Header -->
+<div class="my-5">
+  <div class="card border-0 shadow-lg">
+    <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
+      <i class="bi bi-award-fill mb-2 fs-2-5rem"></i>
+      <h2 class="h2 mb-0 fw-bold text-white">Keunggulan Kayu Dolken Gelam {{ page.diameter }}</h2>
+      <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+        <i class="bi bi-star me-1"></i>
+        Mengapa produk ini menjadi pilihan terbaik untuk proyek Anda
+        <i class="bi bi-star ms-1"></i>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- H3: Advantages Overview -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-warning bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-list-stars text-warning me-2"></i>Keunggulan Utama Produk
+      </h3>
+      <p class="small text-muted mb-0 mt-1">Berbagai keunggulan yang menjadikan kayu dolken gelam diameter {{ page.diameter }} pilihan terbaik</p>
+    </div>
+  </div>
+
+  <div class="row g-3">
+    {% for item in page.keunggulan %}
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body">
+          <!-- Icon & Title -->
+          <div class="d-flex align-items-start mb-3">
+            <div class="bg-warning bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 w-60 h-60 me-3">
+              <i class="bi bi-award-fill text-warning" style="font-size: 1.5rem;"></i>
+            </div>
+            <div class="flex-grow-1">
+              <!-- H4: Advantage Category -->
+              <h4 class="h5 text-wood mb-2 fw-bold">{{ item.judul }}</h4>
+              {% if item.deskripsi %}
+              <p class="text-muted small mb-0">{{ item.deskripsi }}</p>
+              {% endif %}
+            </div>
+          </div>
+
+          {% if item.aplikasi_judul %}
+          <p class="fw-bold mb-2 text-wood small">
+            <i class="bi bi-arrow-right-circle text-primary me-2"></i>{{ item.aplikasi_judul }}
+          </p>
+          {% endif %}
+
+          {% if item.aplikasi %}
+          <ul class="list-unstyled mb-0">
+            {% for app in item.aplikasi %}
+            <li class="mb-1 small">
+              <i class="bi bi-check2 text-success me-2"></i>{{ app }}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

@@ -158,31 +158,33 @@ by page--product.html wrapper, NOT in this node template.
           </div>
         </div>
 
-        <!-- H3: Keunggulan -->
-        {% if page.features %}
-        <div class="mb-4">
-          <h3 class="h5 text-wood mb-3">Keunggulan:</h3>
-          <ul class="list-unstyled">
-            {% for feature in page.features %}
-            <li class="mb-2">
-              <i class="bi bi-check-circle-fill text-success me-2"></i>{{ feature }}
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endif %}
       </div>
 
-      <!-- CTA Buttons -->
-      <div class="d-grid gap-2">
-        <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20{{ page.title }}%20-%20Rp%20{{ page.price }}"
-           class="btn btn-success btn-lg"
-           target="_blank">
-          <i class="bi bi-whatsapp me-2"></i>Pesan via WhatsApp
-        </a>
-        <a href="tel:{{ site.business.phone }}" class="btn btn-outline-wood btn-lg">
-          <i class="bi bi-telephone me-2"></i>Telepon Langsung
-        </a>
+    </div>
+  </div>
+
+  <!-- CTA Section (Full Width) -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <div class="card border-0 shadow-lg" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+        <div class="card-body text-center py-5 px-4">
+          <div class="mb-3">
+            <i class="bi bi-telephone-fill text-white mb-3" style="font-size: 3rem;"></i>
+          </div>
+          <h2 class="h3 text-white fw-bold mb-2">Hubungi Kami Sekarang!</h2>
+          <p class="text-white mb-2" style="opacity: 0.95; font-size: 1.1rem;">
+            Siap Melayani Kebutuhan {{ page.title }}!
+          </p>
+          <p class="text-white mb-4" style="opacity: 0.9;">
+            <i class="bi bi-whatsapp me-2"></i>Telepon / WhatsApp: <strong>{{ site.business.phone }}</strong>
+          </p>
+          <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20{{ page.title }}%20-%20Rp%20{{ page.price | rupiah }}"
+             class="btn btn-light btn-lg px-5 py-3"
+             target="_blank"
+             style="font-size: 1.2rem; font-weight: 600; border-radius: 50px;">
+            <i class="bi bi-whatsapp me-2"></i>Chat WhatsApp Sekarang
+          </a>
+        </div>
       </div>
     </div>
   </div>

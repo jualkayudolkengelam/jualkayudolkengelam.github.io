@@ -1,0 +1,210 @@
+{% comment %}
+  ============================================================================
+  Product Spesifikasi Teknis Block Component
+  ============================================================================
+
+  @file        _includes/products/block--product-spesifikasi-teknis.html
+  @description Reusable component for product technical specifications section
+
+  @version     1.0.0
+  @date        2025-11-19
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading "Spesifikasi Teknis" (main section)
+  - H3 subheading for technical details
+  - Bullet list with dynamic data from frontmatter
+  - Flexible field support (different specs per diameter)
+  - Fallback default values
+  - Card-based layout with icons
+
+  Parameters:
+  -----------
+  - page.diameter: Product diameter (required)
+  - page.spesifikasi: Object containing:
+    - panjang: Length specification (default: "4 meter standar")
+    - material: Material description (default: "100% kayu gelam asli")
+    - kondisi: Condition (default: "Kering udara, siap pakai")
+    - kekuatan: Strength level (optional, for larger diameters)
+    - ketahanan: Durability info (optional)
+    - kepadatan: Density info (optional)
+    - berat: Weight info (optional, for 10-12cm)
+    - finishing: Finishing options (default: "Natural (dapat dicat/divernish)")
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  layout: node--product
+  diameter: "8 - 10 cm"
+  spesifikasi:
+    panjang: "4 meter standar"
+    material: "100% kayu gelam asli pilihan"
+    kondisi: "Kering udara, siap pakai"
+    kekuatan: "Maksimal untuk konstruksi permanen"
+    ketahanan: "30-50 tahun"
+    kepadatan: "Tinggi (tenggelam di air)"
+    finishing: "Natural (dapat dicat/divernish)"
+  ---
+
+  In content:
+  {% include products/block--product-spesifikasi-teknis.html %}
+
+  ============================================================================
+{% endcomment %}
+
+<!-- H2: Main Section Header -->
+<div class="my-5">
+  <div class="card border-0 shadow-sm">
+    <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);">
+      <i class="bi bi-list-check mb-2 fs-2-5rem"></i>
+      <h2 class="h2 mb-0 fw-bold text-white">Spesifikasi Teknis</h2>
+      <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+        <i class="bi bi-gear me-1"></i>
+        Detail teknis kayu dolken gelam diameter {{ page.diameter }}
+        <i class="bi bi-gear ms-1"></i>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- H3: Technical Details -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-info-circle text-primary me-2"></i>Informasi Detail Produk
+      </h3>
+      <p class="small text-muted mb-0 mt-1">Spesifikasi lengkap kayu dolken gelam untuk memastikan produk sesuai kebutuhan proyek Anda</p>
+    </div>
+  </div>
+
+  <!-- Specification Cards -->
+  <div class="row g-3 my-4">
+    <!-- Diameter -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center">
+          <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 w-70 h-70">
+            <i class="bi bi-arrow-left-right text-primary" style="font-size: 2rem;"></i>
+          </div>
+          <h5 class="h6 text-wood mb-2 fw-bold">Diameter</h5>
+          <p class="small text-muted mb-0">{{ page.diameter }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panjang -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center">
+          <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 w-70 h-70">
+            <i class="bi bi-arrows-expand text-success" style="font-size: 2rem;"></i>
+          </div>
+          <h5 class="h6 text-wood mb-2 fw-bold">Panjang</h5>
+          <p class="small text-muted mb-0">{{ page.spesifikasi.panjang | default: "4 meter standar" }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Material -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center">
+          <div class="bg-wood bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 w-70 h-70">
+            <i class="bi bi-tree text-wood" style="font-size: 2rem;"></i>
+          </div>
+          <h5 class="h6 text-wood mb-2 fw-bold">Material</h5>
+          <p class="small text-muted mb-0">{{ page.spesifikasi.material | default: "100% kayu gelam asli" }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kondisi -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center">
+          <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 w-70 h-70">
+            <i class="bi bi-check-circle text-info" style="font-size: 2rem;"></i>
+          </div>
+          <h5 class="h6 text-wood mb-2 fw-bold">Kondisi</h5>
+          <p class="small text-muted mb-0">{{ page.spesifikasi.kondisi | default: "Kering udara, siap pakai" }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kekuatan (Optional) -->
+    {% if page.spesifikasi.kekuatan %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center">
+          <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 w-70 h-70">
+            <i class="bi bi-hammer text-warning" style="font-size: 2rem;"></i>
+          </div>
+          <h5 class="h6 text-wood mb-2 fw-bold">Kekuatan</h5>
+          <p class="small text-muted mb-0">{{ page.spesifikasi.kekuatan }}</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Ketahanan (Optional) -->
+    {% if page.spesifikasi.ketahanan %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center">
+          <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 w-70 h-70">
+            <i class="bi bi-clock-history text-danger" style="font-size: 2rem;"></i>
+          </div>
+          <h5 class="h6 text-wood mb-2 fw-bold">Ketahanan</h5>
+          <p class="small text-muted mb-0">{{ page.spesifikasi.ketahanan }}</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Kepadatan (Optional) -->
+    {% if page.spesifikasi.kepadatan %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center">
+          <div class="bg-secondary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 w-70 h-70">
+            <i class="bi bi-box-fill text-secondary" style="font-size: 2rem;"></i>
+          </div>
+          <h5 class="h6 text-wood mb-2 fw-bold">Kepadatan</h5>
+          <p class="small text-muted mb-0">{{ page.spesifikasi.kepadatan }}</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Berat (Optional) -->
+    {% if page.spesifikasi.berat %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center">
+          <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 w-70 h-70">
+            <i class="bi bi-speedometer2 text-primary" style="font-size: 2rem;"></i>
+          </div>
+          <h5 class="h6 text-wood mb-2 fw-bold">Berat</h5>
+          <p class="small text-muted mb-0">{{ page.spesifikasi.berat }}</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Finishing -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-body text-center">
+          <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 w-70 h-70">
+            <i class="bi bi-palette text-success" style="font-size: 2rem;"></i>
+          </div>
+          <h5 class="h6 text-wood mb-2 fw-bold">Finishing</h5>
+          <p class="small text-muted mb-0">{{ page.spesifikasi.finishing | default: "Natural (dapat dicat/divernish)" }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

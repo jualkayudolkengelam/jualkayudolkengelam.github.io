@@ -1,0 +1,155 @@
+{% comment %}
+  ============================================================================
+  Product Rekomendasi Block Component
+  ============================================================================
+
+  @file        _includes/products/block--product-rekomendasi.html
+  @description Reusable component for product recommendations section
+               Supports 3 variations: General, Why Popular, vs Material Comparison
+
+  @version     1.0.0
+  @date        2025-11-19
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading (main section with 3 variations)
+  - H3 subheading for recommendations overview
+  - H4 for each recommendation category
+  - Flexible content structure
+  - Supports sub-sections with dynamic content
+  - Numbered lists or bullet points
+  - Conditional rendering based on frontmatter
+  - Card-based layout with icons
+
+  Parameters:
+  -----------
+  - page.rekomendasi: Object containing:
+    - tipe: Type of recommendation section (optional)
+      - "penggunaan" (default): General usage recommendations
+      - "why_popular": Why this diameter is popular (8-10cm)
+      - "vs_material": Comparison vs other materials (10-12cm)
+    - judul: Custom H3 title (optional, overrides default)
+    - sections: Array of section objects, each with:
+      - heading: Bold section heading
+      - deskripsi: Description text (optional)
+      - items: Array of items (numbered or bulleted)
+
+  Usage:
+  ------
+  In frontmatter (4-6cm, 6-8cm - General Recommendations):
+  ---
+  rekomendasi:
+    tipe: "penggunaan"
+    sections:
+      - heading: "Untuk Pagar:"
+        deskripsi: "Jarak ideal antar dolken 10-15 cm untuk pagar yang kuat dan rapat."
+      - heading: "Untuk Pergola/Gazebo:"
+        deskripsi: "Dapat digunakan sebagai tiang penyangga dengan jarak sesuai desain struktur."
+  ---
+
+  In frontmatter (8-10cm - Why Popular):
+  ---
+  rekomendasi:
+    tipe: "why_popular"
+    judul: "Mengapa Diameter 8-10 cm Paling Populer?"
+    sections:
+      - items:
+          - "Keseimbangan Sempurna - Kuat namun tidak terlalu berat untuk handling"
+          - "Standar Industri - Banyak digunakan kontraktor profesional"
+          - "Cost Effective - Harga per kekuatan paling ekonomis"
+  ---
+
+  In frontmatter (10-12cm - vs Material Comparison):
+  ---
+  rekomendasi:
+    tipe: "vs_material"
+    judul: "Keunggulan Kayu Gelam vs Material Lain"
+    sections:
+      - heading: "vs Beton:"
+        items:
+          - "Lebih fleksibel, tidak retak"
+          - "Lebih mudah dipasang dan dipindahkan"
+      - heading: "vs Kayu Biasa:"
+        items:
+          - "Tidak perlu pengawetan kimia"
+          - "Tahan rayap dan jamur alami"
+  ---
+
+  In content:
+  {% include products/block--product-rekomendasi.html %}
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.rekomendasi %}
+<!-- H2: Main Section Header -->
+<div class="my-5">
+  <div class="card border-0 shadow-lg">
+    <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);">
+      <i class="bi bi-lightbulb-fill mb-2 fs-2-5rem"></i>
+      {% if page.rekomendasi.judul %}
+      <h2 class="h2 mb-0 fw-bold text-white">{{ page.rekomendasi.judul }}</h2>
+      {% else %}
+      <h2 class="h2 mb-0 fw-bold text-white">Rekomendasi Penggunaan</h2>
+      {% endif %}
+      <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+        <i class="bi bi-bookmark-star me-1"></i>
+        Tips dan rekomendasi untuk hasil optimal
+        <i class="bi bi-bookmark-star ms-1"></i>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- H3: Recommendations Overview -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-info bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-stars text-info me-2"></i>Panduan dan Saran Penggunaan
+      </h3>
+      <p class="small text-muted mb-0 mt-1">Rekomendasi dari para profesional untuk memaksimalkan penggunaan produk ini</p>
+    </div>
+  </div>
+
+  {% if page.rekomendasi.sections %}
+    {% for section in page.rekomendasi.sections %}
+    <div class="card border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <!-- H4: Recommendation Category -->
+        {% if section.heading %}
+        <h4 class="h5 text-wood mb-2 fw-bold">
+          <i class="bi bi-arrow-right-circle-fill text-info me-2"></i>{{ section.heading }}
+        </h4>
+        {% endif %}
+
+        {% if section.deskripsi %}
+        <p class="text-muted mb-3">{{ section.deskripsi }}</p>
+        {% endif %}
+
+        {% if section.items %}
+          {% if page.rekomendasi.tipe == "why_popular" or page.rekomendasi.tipe == "vs_material" %}
+          <ul class="list-unstyled mb-0">
+            {% for item in section.items %}
+            <li class="mb-1">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>{{ item }}
+            </li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <div class="mb-0">
+            {% for item in section.items %}
+            <p class="mb-2 text-muted">
+              <i class="bi bi-dot text-info me-1"></i>{{ item }}
+            </p>
+            {% endfor %}
+          </div>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  {% endif %}
+</div>
+{% endif %}
