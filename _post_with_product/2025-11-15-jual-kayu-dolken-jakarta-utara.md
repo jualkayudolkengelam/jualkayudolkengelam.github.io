@@ -474,18 +474,18 @@ studi_kasus_proyek:
 # TESTIMONI - RESIDENTIAL
 # ============================================================================
 testimoni_residential:
-  - nama: "Pak Budi"
-    profesi: "Kontraktor Kelapa Gading"
-    lokasi: "Kelapa Gading"
+  - nama: "Pak Budi Santoso"
+    lokasi: "Kelapa Gading, Jakarta Utara"
     rating: 5
-    quote: "Kualitas bagus, pengiriman ke Kelapa Gading cepat, harga bersaing!"
+    judul: "Kualitas Terjamin & Pengiriman Cepat"
+    komentar: "Kualitas kayu dolken bagus sekali, pengiriman ke Kelapa Gading cepat dan tepat waktu. Harga juga bersaing untuk kualitas premium. Puas dengan pelayanannya!"
     warna: "primary"
 
-  - nama: "Bu Santi"
-    profesi: "Homeowner"
-    lokasi: "Sunter"
+  - nama: "Bu Santi Wulandari"
+    lokasi: "Sunter, Jakarta Utara"
     rating: 5
-    quote: "Puas dengan kualitas dolken gelam nya. Untuk gazebo rumah saya di Sunter perfect!"
+    judul: "Perfect untuk Gazebo Rumah"
+    komentar: "Puas dengan kualitas dolken gelam nya. Untuk gazebo rumah saya di Sunter hasilnya perfect! Kayu nya kokoh dan tahan cuaca pesisir Jakarta Utara."
     warna: "success"
 
 # ============================================================================
