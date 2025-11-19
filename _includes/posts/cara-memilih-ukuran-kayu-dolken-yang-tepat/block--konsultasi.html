@@ -44,9 +44,7 @@ Data yang digunakan dari frontmatter:
           <div class="card-body p-5">
 
             <div class="text-center mb-4">
-              <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
-                <i class="bi bi-chat-dots-fill text-success" style="font-size: 2.5rem;"></i>
-              </div>
+              <i class="bi bi-chat-dots-fill text-success fs-2-5rem mb-3 opacity-85"></i>
               <h3 class="h4 fw-bold text-success mb-2">Layanan Konsultasi</h3>
               {% if page.konsultasi.deskripsi %}
               <p class="text-muted mb-0">{{ page.konsultasi.deskripsi }}</p>
@@ -65,9 +63,7 @@ Data yang digunakan dari frontmatter:
                 {% for info in page.konsultasi.info_perlu_disiapkan %}
                 <div class="col-md-6">
                   <div class="d-flex align-items-start p-3 rounded-3 bg-success bg-opacity-10">
-                    <div class="bg-success bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3" style="width: 32px; height: 32px;">
-                      <span class="text-success fw-bold small">{{ forloop.index }}</span>
-                    </div>
+                    <span class="badge bg-success bg-opacity-25 me-3 flex-shrink-0">{{ forloop.index }}</span>
                     <span class="pt-1">{{ info }}</span>
                   </div>
                 </div>

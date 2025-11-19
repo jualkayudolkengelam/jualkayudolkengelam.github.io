@@ -45,18 +45,21 @@ Data yang digunakan dari frontmatter:
         <!-- Card Header -->
         <div class="card-header py-4 text-white bg-gradient-card-{{ card_color }}">
           <div class="d-flex align-items-center justify-content-between flex-wrap">
-            <div class="d-flex align-items-center">
-              <div class="bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3 w-60 h-60">
-                <i class="bi {{ item.icon }} text-white fs-4"></i>
-              </div>
+            <div class="d-flex align-items-center flex-grow-1">
               <div>
-                <h3 class="h4 fw-bold mb-0">{{ item.nomor }}. {{ item.nama }}</h3>
-                <p class="mb-0 mt-1 small opacity-90">{{ item.scenario }}</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge bg-white bg-opacity-25 me-2 px-3 py-2">{{ item.nomor }}</span>
+                  <h3 class="h4 fw-bold mb-0">{{ item.nama }}</h3>
+                </div>
+                <p class="mb-0 small opacity-90">{{ item.scenario }}</p>
                 {% if item.instalasi_type %}
                 <p class="mb-0 mt-1 small opacity-90"><em>{{ item.instalasi_type }}</em></p>
                 {% endif %}
               </div>
             </div>
+            {% if item.icon %}
+            <i class="bi {{ item.icon }} fs-3rem opacity-85 ms-3"></i>
+            {% endif %}
           </div>
         </div>
 

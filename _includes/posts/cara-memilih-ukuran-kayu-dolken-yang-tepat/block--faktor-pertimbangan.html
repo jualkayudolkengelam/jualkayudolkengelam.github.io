@@ -59,9 +59,7 @@ Data yang digunakan dari frontmatter:
             {% if card_color == 'danger' %}#ef4444 0%, #dc2626 50%, #b91c1c 100%{% endif %}
           );">
             <div class="d-flex align-items-center">
-              <div class="bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3" style="width: 50px; height: 50px;">
-                <span class="text-white fw-bold fs-4">{{ item.nomor }}</span>
-              </div>
+              <span class="badge bg-white bg-opacity-25 me-3 px-3 py-2 fs-6">{{ item.nomor }}</span>
               <div class="flex-grow-1">
                 <h3 class="h4 fw-bold mb-0 text-white">{{ item.judul }}</h3>
                 {% if item.subtitle %}
@@ -82,9 +80,7 @@ Data yang digunakan dari frontmatter:
             <ul class="list-unstyled mb-0">
               {% for poin in item.poin %}
               <li class="mb-3 d-flex align-items-start">
-                <div class="bg-{{ card_color }} bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3" style="width: 32px; height: 32px;">
-                  <i class="bi bi-check-lg text-{{ card_color }} fw-bold"></i>
-                </div>
+                <i class="bi bi-check-circle-fill text-{{ card_color }} me-2 flex-shrink-0"></i>
                 <div class="pt-1">
                   <strong class="text-dark">{{ poin.label }}:</strong>
                   <span class="text-dark">{{ poin.nilai }}</span>

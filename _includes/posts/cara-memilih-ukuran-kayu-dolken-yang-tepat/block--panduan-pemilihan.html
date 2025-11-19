@@ -60,9 +60,7 @@ Data yang digunakan dari frontmatter:
           );">
             <div class="d-flex align-items-center justify-content-between flex-wrap">
               <div class="d-flex align-items-center">
-                <div class="bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3" style="width: 60px; height: 60px;">
-                  <i class="bi bi-rulers text-white" style="font-size: 1.75rem;"></i>
-                </div>
+                <i class="bi bi-rulers text-white fs-2-5rem me-3 opacity-85"></i>
                 <div>
                   <h3 class="h3 fw-bold mb-0 text-white">{{ item.ukuran }}</h3>
                   <p class="mb-0 mt-1 text-white" style="opacity: 0.9;">{{ item.kategori }}</p>
@@ -86,9 +84,7 @@ Data yang digunakan dari frontmatter:
                 {% for app in item.aplikasi %}
                 <div class="col-md-6">
                   <div class="d-flex align-items-start p-3 rounded-3 bg-{{ card_color }} bg-opacity-10">
-                    <div class="bg-{{ card_color }} bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3" style="width: 40px; height: 40px;">
-                      <i class="bi bi-star-fill text-{{ card_color }}"></i>
-                    </div>
+                    <i class="bi bi-star-fill text-{{ card_color }} fs-4 me-3 flex-shrink-0"></i>
                     <div>
                       <p class="fw-bold mb-1 text-dark">{{ app.nama }}</p>
                       <p class="mb-0 small text-muted">{{ app.deskripsi }}</p>

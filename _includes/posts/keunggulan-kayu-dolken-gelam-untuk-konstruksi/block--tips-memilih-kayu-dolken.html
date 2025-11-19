@@ -39,15 +39,11 @@ Data yang digunakan dari frontmatter:
               <div class="tip-item d-flex align-items-start mb-4 pb-4 {% unless forloop.last %}border-bottom{% endunless %}">
 
                 <!-- Icon/Number -->
-                <div class="tip-number me-3">
-                  <div class="tip-icon-circle rounded-circle bg-wood bg-opacity-10 d-flex align-items-center justify-content-center">
-                    {% if tip.icon %}
-                      <i class="bi {{ tip.icon }} text-wood fs-4"></i>
-                    {% else %}
-                      <span class="fw-bold text-wood fs-5">{{ forloop.index }}</span>
-                    {% endif %}
-                  </div>
-                </div>
+                {% if tip.icon %}
+                <i class="bi {{ tip.icon }} text-wood fs-3rem flex-shrink-0 me-3 opacity-85"></i>
+                {% else %}
+                <span class="badge bg-wood bg-opacity-10 text-wood me-3 px-3 py-2 fs-5">{{ forloop.index }}</span>
+                {% endif %}
 
                 <!-- Content -->
                 <div class="tip-content flex-grow-1">

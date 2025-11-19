@@ -62,13 +62,11 @@ Data yang digunakan dari frontmatter:
             {% if card_color == 'danger' %}#ef4444 0%, #dc2626 50%, #b91c1c 100%{% endif %}
           );">
             <div class="d-flex align-items-center">
-              <div class="bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3" style="width: 50px; height: 50px;">
-                {% if item.icon %}
-                <i class="bi {{ item.icon }} text-white fs-4"></i>
-                {% else %}
-                <i class="bi bi-calculator text-white fs-4"></i>
-                {% endif %}
-              </div>
+              {% if item.icon %}
+              <i class="bi {{ item.icon }} text-white fs-3rem me-3 opacity-85"></i>
+              {% else %}
+              <i class="bi bi-calculator text-white fs-3rem me-3 opacity-85"></i>
+              {% endif %}
               <div>
                 <h3 class="h5 fw-bold mb-0 text-white">{{ item.judul }}</h3>
                 {% if item.subtitle %}
@@ -111,9 +109,7 @@ Data yang digunakan dari frontmatter:
               <ul class="list-unstyled mb-0">
                 {% for komp in item.komponen %}
                 <li class="mb-2 d-flex align-items-start">
-                  <div class="bg-{{ card_color }} bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-2" style="width: 24px; height: 24px;">
-                    <i class="bi bi-dot text-{{ card_color }}"></i>
-                  </div>
+                  <i class="bi bi-dot text-{{ card_color }} me-2 flex-shrink-0"></i>
                   <span class="small"><strong>{{ komp.nama }}:</strong> {{ komp.jumlah }}</span>
                 </li>
                 {% endfor %}

@@ -42,11 +42,9 @@ Data yang digunakan dari frontmatter:
       <div class="col-lg-6">
         <div class="card border-0 shadow-lg h-100 hover-lift">
           <div class="card-header py-3 text-white bg-gradient-card-{{ card_color }}">
-            <div class="d-flex align-items-center">
-              <div class="bg-white bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3 w-50 h-50">
-                <span class="text-white fw-bold fs-5">{{ tip.nomor }}</span>
-              </div>
-              <div class="flex-grow-1">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center flex-grow-1">
+                <span class="badge bg-white bg-opacity-25 me-3 px-3 py-2 fs-6">{{ tip.nomor }}</span>
                 <h3 class="h5 fw-bold mb-0">{{ tip.judul }}</h3>
               </div>
               {% if tip.icon %}

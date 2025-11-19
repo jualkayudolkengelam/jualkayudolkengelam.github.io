@@ -47,14 +47,7 @@ Data yang digunakan dari frontmatter:
             {% if card_color == 'danger' %}#ef4444 0%, #dc2626 100%{% endif %}
             {% if card_color == 'info' %}#0891b2 0%, #0e7490 100%{% endif %}
           );">
-            <div class="rounded-circle bg-white d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-              <span class="fw-bold" style="font-size: 1.5rem; color:
-                {% if card_color == 'warning' %}#d97706{% endif %}
-                {% if card_color == 'primary' %}#2563eb{% endif %}
-                {% if card_color == 'danger' %}#dc2626{% endif %}
-                {% if card_color == 'info' %}#0e7490{% endif %}
-              ;">{{ mistake.nomor }}</span>
-            </div>
+            <span class="badge bg-white bg-opacity-25 me-3 px-3 py-2 fs-6">{{ mistake.nomor }}</span>
             <div>
               <h3 class="h5 mb-0 fw-bold">{{ mistake.mistake }}</h3>
             </div>
