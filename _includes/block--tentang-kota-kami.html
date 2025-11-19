@@ -25,9 +25,9 @@
     - tagline: City tagline (e.g., "Ibu Kota Jawa Tengah")
     - deskripsi_singkat: Brief description text
     - overview: City overview with statistics
-    - sejarah_ekonomi: Array of 2 history/economy cards
+    - tentang_kota_1: Array of 2 cards (any topic - history, economy, culture, etc.)
       Each with: judul, icon, subjudul, deskripsi, fakta (array)
-    - kehidupan_modern: Array of 2 modern life cards
+    - tentang_kota_2: Array of 2 cards (any topic - landmarks, business, tourism, etc.)
       Each with: judul, icon, subjudul, deskripsi, list_item (array)
 
   Usage:
@@ -39,16 +39,16 @@
     tagline: "Ibu Kota Jawa Tengah"
     deskripsi_singkat: "Pusat pemerintahan, ekonomi, dan budaya Jawa Tengah"
     overview: "Semarang adalah ibu kota dan kota terbesar di Provinsi Jawa Tengah..."
-    sejarah_ekonomi:
-      - judul: "Sejarah Semarang"
+    tentang_kota_1:
+      - judul: "Sejarah Semarang"  # Topik bebas
         icon: "bi-clock-history"
         subjudul: "Asal-usul Nama dan Perkembangan"
         deskripsi: "Sejarah Semarang berawal kurang lebih pada abad ke-6..."
         fakta:
           - "Berasal dari kata asem (pohon asam) dan arang (jarang)"
           - "Sejak masa penjajahan Belanda..."
-    kehidupan_modern:
-      - judul: "Landmark & Pusat Bisnis Modern"
+    tentang_kota_2:
+      - judul: "Landmark & Pusat Bisnis Modern"  # Topik bebas
         icon: "bi-building"
         subjudul: "Destinasi Wisata dan Ekonomi"
         deskripsi: "Semarang memiliki banyak landmark bersejarah..."
@@ -89,20 +89,20 @@
 </div>
 {% endif %}
 
-{% if page.tentang_kota.sejarah_ekonomi %}
-<!-- H3: Sejarah dan Ekonomi -->
+{% if page.tentang_kota.tentang_kota_1 %}
+<!-- H3: Section 1 (Flexible topic) -->
 <div class="my-4">
   <div class="d-flex align-items-center mb-3">
     <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
       <h3 class="h4 mb-0 text-wood fw-bold">
-        <i class="bi bi-clock-history text-primary me-2"></i>Sejarah dan Ekonomi
+        <i class="bi bi-info-circle text-primary me-2"></i>Informasi{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}
       </h3>
-      <p class="small text-muted mb-0 mt-1">Perjalanan panjang{% if page.nama_kota %} {{ page.nama_kota }}{% endif %} sebagai kota penting</p>
+      <p class="small text-muted mb-0 mt-1">Mengenal lebih dekat tentang kota ini</p>
     </div>
   </div>
 
   <div class="row g-4">
-    {% for item in page.tentang_kota.sejarah_ekonomi %}
+    {% for item in page.tentang_kota.tentang_kota_1 %}
     <!-- H4: Card Title -->
     <div class="col-md-6">
       <div class="card border-0 shadow-sm h-100 hover-lift">
@@ -137,20 +137,20 @@
 </div>
 {% endif %}
 
-{% if page.tentang_kota.kehidupan_modern %}
-<!-- H3: Kehidupan Modern -->
+{% if page.tentang_kota.tentang_kota_2 %}
+<!-- H3: Section 2 (Flexible topic) -->
 <div class="my-4">
   <div class="d-flex align-items-center mb-3">
     <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
       <h3 class="h4 mb-0 text-wood fw-bold">
-        <i class="bi bi-building text-success me-2"></i>Kehidupan Modern{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}
+        <i class="bi bi-building text-success me-2"></i>Lebih Lanjut tentang{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}
       </h3>
-      <p class="small text-muted mb-0 mt-1">Destinasi wisata, pendidikan, dan pusat bisnis</p>
+      <p class="small text-muted mb-0 mt-1">Hal menarik lainnya yang perlu Anda ketahui</p>
     </div>
   </div>
 
   <div class="row g-4">
-    {% for item in page.tentang_kota.kehidupan_modern %}
+    {% for item in page.tentang_kota.tentang_kota_2 %}
     <!-- H4: Card Title -->
     <div class="col-md-6">
       <div class="card border-0 shadow-sm h-100 hover-lift">

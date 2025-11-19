@@ -1,4 +1,7 @@
 ---
+# ============================================================================
+# META INFORMATION
+# ============================================================================
 layout: node--post-with-product
 title: "Jual Kayu Dolken Jakarta Utara - Hub 081311400177 - Gratis Ongkir"
 description: "Jual kayu dolken Jakarta Utara dengan harga terbaik. Melayani pengiriman gratis ke seluruh Jakarta Utara. Hubungi 081311400177 untuk info dan pemesanan."
@@ -13,12 +16,11 @@ images:
   - /assets/images/posts/jual-kayu-dolken-jakarta-utara/jual-kayu-dolken-jakarta-utara-004.jpeg
 keywords: jual kayu dolken jakarta utara, dolken gelam jakarta utara, supplier kayu dolken jakarta utara, kayu dolken kelapa gading, dolken ancol, kayu dolken pademangan, kayu dolken sunter
 show_products: true
-like_count: 5
-comment_count: 1
-share_count: 2
-
-# Section 1: Hero Data
 nama_kota: Jakarta Utara
+
+# ============================================================================
+# AREA PENGIRIMAN (SIMPLE LIST)
+# ============================================================================
 area_pengiriman:
   - Kelapa Gading
   - Ancol
@@ -29,7 +31,9 @@ area_pengiriman:
   - Koja
   - Cilincing
 
-# Section 2: Mengapa Memilih Kami
+# ============================================================================
+# KEUNGGULAN - PRODUK
+# ============================================================================
 keunggulan_produk:
   - judul: "Kualitas Premium Grade A"
     deskripsi: "Kayu gelam asli premium, tahan rayap alami dan tahan cuaca ekstrem, cocok untuk iklim Jakarta Utara"
@@ -44,6 +48,9 @@ keunggulan_produk:
     warna: "info"
     icon: "bi-boxes"
 
+# ============================================================================
+# KEUNGGULAN - LAYANAN
+# ============================================================================
 keunggulan_layanan:
   - judul: "Pengiriman Gratis Jakarta Utara"
     deskripsi: "Gratis ongkir untuk area Jakarta Utara, hemat biaya pengiriman untuk proyek Anda"
@@ -58,9 +65,27 @@ keunggulan_layanan:
     warna: "secondary"
     icon: "bi-headset"
 
-# Section 4: Area Pengiriman Detail
+# ============================================================================
+# AREA PENGIRIMAN DETAIL - TEKS JUDUL & DESKRIPSI
+# ============================================================================
 area_pengiriman_detail:
-  kecamatan:
+  judul_jangkauan: "Jangkauan Pengiriman Lengkap"
+  deskripsi_jangkauan: "Kami melayani pengiriman gratis ke seluruh wilayah Jakarta Utara, mencakup 6 kecamatan dan puluhan kelurahan untuk kemudahan proyek Anda"
+  judul_pusat: "Kecamatan Utama Jakarta Utara"
+  deskripsi_pusat: "Tiga kecamatan utama di Jakarta Utara dengan akses mudah dan pengiriman cepat."
+  judul_pengembangan: "Kecamatan Lainnya"
+  deskripsi_pengembangan: "Kecamatan lain di Jakarta Utara dengan jangkauan pengiriman lengkap."
+  judul_landmark: "Area Populer & Landmark Strategis"
+  deskripsi_landmark: "Kami melayani pengiriman ke lokasi-lokasi populer dan landmark strategis di Jakarta Utara"
+  judul_wisata: "Destinasi Wisata & Rekreasi"
+  deskripsi_wisata: "Lokasi wisata dan rekreasi terkenal di Jakarta Utara."
+  judul_fasilitas: "Fasilitas Komersial & Pelabuhan"
+  deskripsi_fasilitas: "Mall, pusat perbelanjaan, dan pelabuhan strategis di Jakarta Utara."
+
+# ============================================================================
+# AREA PENGIRIMAN DETAIL - WILAYAH PUSAT (KECAMATAN UTAMA)
+# ============================================================================
+  wilayah_pusat:
     - nama: "Kelapa Gading"
       warna: "primary"
       kelurahan:
@@ -76,6 +101,11 @@ area_pengiriman_detail:
       kelurahan:
         - "Pademangan Barat, Pademangan Timur"
         - "Ancol"
+
+# ============================================================================
+# AREA PENGIRIMAN DETAIL - WILAYAH PENGEMBANGAN
+# ============================================================================
+  wilayah_pengembangan:
     - nama: "Penjaringan"
       warna: "info"
       kelurahan:
@@ -92,6 +122,9 @@ area_pengiriman_detail:
         - "Cilincing, Kalibaru"
         - "Marunda, Semper"
 
+# ============================================================================
+# AREA PENGIRIMAN DETAIL - AREA POPULER (OPTIONAL LIST)
+# ============================================================================
   area_populer:
     - "Kelapa Gading Square & MOI"
     - "Sunter Mall & Danau Sunter"
@@ -100,24 +133,43 @@ area_pengiriman_detail:
     - "Tanjung Priok Port Area"
     - "Kelapa Gading Boulevard"
 
-  landmark:
-    - nama: "Mall Kelapa Gading (MKG)"
-      icon: "bi-cart"
-      warna: "warning"
-    - nama: "La Piazza Kelapa Gading"
-      icon: "bi-cart"
-      warna: "warning"
-    - nama: "Mangga Dua Mall"
-      icon: "bi-cart"
-      warna: "warning"
-    - nama: "ITC Cempaka Mas"
-      icon: "bi-cart"
+# ============================================================================
+# AREA PENGIRIMAN DETAIL - LANDMARK WISATA
+# ============================================================================
+  landmark_wisata:
+    - nama: "Ancol & Taman Impian Jaya"
+      icon: "bi-building"
       warna: "warning"
     - nama: "Kota Tua Jakarta"
       icon: "bi-building"
+      warna: "warning"
+
+# ============================================================================
+# AREA PENGIRIMAN DETAIL - LANDMARK FASILITAS
+# ============================================================================
+  landmark_fasilitas:
+    - nama: "Mall Kelapa Gading (MKG)"
+      icon: "bi-cart"
+      warna: "info"
+    - nama: "La Piazza Kelapa Gading"
+      icon: "bi-cart"
+      warna: "info"
+    - nama: "Mangga Dua Mall"
+      icon: "bi-cart"
+      warna: "primary"
+    - nama: "ITC Cempaka Mas"
+      icon: "bi-cart"
+      warna: "primary"
+    - nama: "Pelabuhan Tanjung Priok"
+      icon: "bi-shop"
+      warna: "info"
+    - nama: "Pelabuhan Sunda Kelapa"
+      icon: "bi-shop"
       warna: "info"
 
-# Section 5: Keunggulan Kayu Dolken Gelam
+# ============================================================================
+# KEUNGGULAN KAYU DOLKEN GELAM
+# ============================================================================
 keunggulan_kayu_dolken:
   - judul: "Tahan Lama Puluhan Tahun"
     deskripsi: "Kayu gelam dapat bertahan 20-30 tahun tanpa treatment khusus, hemat biaya perawatan jangka panjang bahkan di area pesisir Jakarta Utara"
@@ -144,7 +196,9 @@ keunggulan_kayu_dolken:
     warna: "info"
     icon: "bi-palette"
 
-# Section 6: Aplikasi Kayu Dolken Gelam
+# ============================================================================
+# APLIKASI KAYU DOLKEN GELAM
+# ============================================================================
 aplikasi_kayu_dolken:
   konstruksi:
     judul: "Konstruksi & Bangunan"
@@ -214,7 +268,9 @@ aplikasi_kayu_dolken:
       - "Developer Perumahan"
     catatan: "Dipercaya oleh kontraktor profesional dan developer ternama di Jakarta Utara"
 
-# Section 7: Cara Pemesanan
+# ============================================================================
+# PROSES PEMESANAN - TAHAP AWAL
+# ============================================================================
 proses_awal_pemesanan:
   step1:
     nomor: 1
@@ -235,6 +291,9 @@ proses_awal_pemesanan:
     deskripsi: "Tim kami akan bantu hitung kebutuhan dan berikan rekomendasi terbaik"
     warna: "info"
 
+# ============================================================================
+# PROSES PEMESANAN - FINALISASI & PENGIRIMAN
+# ============================================================================
 finalisasi_pengiriman:
   step4:
     nomor: 4
@@ -256,7 +315,9 @@ finalisasi_pengiriman:
     warna: "success"
     gradient: "linear-gradient(135deg, #10b981 0%, #059669 100%)"
 
-# Section 8: Studi Kasus Proyek
+# ============================================================================
+# STUDI KASUS PROYEK - RESIDENSIAL
+# ============================================================================
 studi_kasus_proyek:
   residential:
     - judul: "Proyek Gazebo Rumah di Kelapa Gading"
@@ -293,6 +354,9 @@ studi_kasus_proyek:
           value: "6-8 cm"
       hasil: "Tahan kelembaban tinggi area pantai dan memberikan kesan natural luxury"
 
+# ============================================================================
+# STUDI KASUS PROYEK - KOMERSIAL
+# ============================================================================
   komersial:
     - judul: "Landscaping Cafe Rustic di Sunter"
       icon: "bi-cup-hot-fill"
@@ -339,7 +403,9 @@ studi_kasus_proyek:
           value: "Rooftop dengan view laut"
       hasil: "Mampu menahan angin kencang dan panas terik tanpa treatment khusus"
 
-# Section 9: Testimoni Pelanggan
+# ============================================================================
+# TESTIMONI - RESIDENTIAL
+# ============================================================================
 testimoni_residential:
   - nama: "Pak Budi"
     profesi: "Kontraktor Kelapa Gading"
@@ -362,12 +428,17 @@ testimoni_residential:
     quote: "Pelayanan ramah, produk sesuai ekspektasi. Recommended untuk area Jakarta Utara."
     warna: "info"
 
+# ============================================================================
+# TRUST STATS
+# ============================================================================
 trust_stats:
   pelanggan: "500+"
   rating: "4.9/5.0"
   pengiriman: "1000+"
 
-# Section 10: Tips Memilih Ukuran
+# ============================================================================
+# TIPS MEMILIH UKURAN
+# ============================================================================
 tips_ukuran:
   - kategori: "Dekorasi Ringan"
     aplikasi: "Pagar, Taman, Dekorasi"
@@ -400,7 +471,9 @@ tips_ukuran:
       - "Tahan beban berat jangka panjang"
       - "Ideal untuk struktur permanen"
 
-# Section 11: FAQ
+# ============================================================================
+# FAQ - PEMESANAN
+# ============================================================================
 faq_pemesanan:
   - pertanyaan: "Berapa minimal pemesanan kayu dolken?"
     jawaban: "Kami melayani pemesanan mulai dari <strong>10 batang</strong> hingga proyek besar ratusan batang. Untuk pemesanan partai besar, kami berikan harga khusus yang lebih kompetitif."
@@ -412,6 +485,9 @@ faq_pemesanan:
     cta: "081311400177 untuk diskusi lebih detail."
     warna: "info"
 
+# ============================================================================
+# FAQ - PRODUK
+# ============================================================================
 faq_produk:
   - pertanyaan: "Apakah kayu dolken perlu perawatan khusus?"
     jawaban: "Kayu dolken gelam <strong>tidak memerlukan perawatan khusus</strong> karena sudah tahan rayap dan cuaca secara alami."
@@ -426,69 +502,66 @@ faq_produk:
       - "Diameter sesuai pesanan"
     warna: "danger"
 
+# ============================================================================
+# FAQ - PENGIRIMAN
+# ============================================================================
 faq_pengiriman:
   - pertanyaan: "Berapa lama pengiriman ke Jakarta Utara?"
     jawaban: "Untuk area Jakarta Utara, pengiriman biasanya <strong>1-3 hari kerja</strong> setelah konfirmasi pesanan."
     info: "<strong>Pengiriman gratis</strong> untuk seluruh wilayah Jakarta Utara termasuk Kelapa Gading, Sunter, Pluit, Ancol, dan sekitarnya."
     warna: "warning"
 
-# Section 12: Tentang Jakarta Utara
+# ============================================================================
+# TENTANG KOTA
+# ============================================================================
 tentang_kota:
-  nama: "Jakarta Utara"
   tagline: "Pusat Bisnis & Pelabuhan"
+  deskripsi_singkat: "Kota administrasi di DKI Jakarta dengan pelabuhan tersibuk di Indonesia"
+  overview: "Jakarta Utara adalah salah satu kota administrasi di DKI Jakarta dengan luas wilayah <strong>146,66 km²</strong> dan populasi sekitar <strong>1,8 juta jiwa</strong>. Kota ini mencakup <strong>6 kecamatan</strong> atau <strong>22,06%</strong> dari total luas DKI Jakarta. Sejak 1966, Jakarta Utara memiliki status otonomi khusus sebagai Kota Administrasi bagian dari Provinsi DKI Jakarta (PP No. 25 Tahun 1978). Dengan Pelabuhan Tanjung Priok dan Pelabuhan Sunda Kelapa, Jakarta Utara menjadi jantung ekonomi dan perdagangan Indonesia."
 
-  statistik:
-    luas: "146,66 km²"
-    populasi: "1,8 Juta"
-    kecamatan: "6 Kecamatan"
-    persentase: "22,06%"
-    keterangan: "dari Total DKI Jakarta"
+  tentang_kota_1:
+    - judul: "Sejarah Jakarta Utara"
+      icon: "bi-clock-history"
+      subjudul: "Dari Kerajaan Tarumanegara hingga Era Modern"
+      icon_subjudul: "bi-book"
+      deskripsi: "Pada abad ke-5 Masehi, kawasan Jakarta Utara menjadi pusat pemerintahan <strong>Kerajaan Tarumanegara</strong> yang terletak di muara Sungai Ciliwung area Angke."
+      fakta:
+        - "Melalui akses pelabuhan yang terbuka untuk perdagangan, penyebaran agama, dan budaya, Jakarta Utara menjadi pusat pertumbuhan peradaban dari era kerajaan hingga masa kolonial."
+        - "Sejak 1966: Status otonomi khusus sebagai Kota Administrasi bagian dari Provinsi DKI Jakarta (PP No. 25 Tahun 1978)"
 
-  sejarah:
-    judul: "Sejarah Jakarta Utara"
-    isi:
-      - "Pada abad ke-5 Masehi, kawasan Jakarta Utara menjadi pusat pemerintahan <strong>Kerajaan Tarumanegara</strong> yang terletak di muara Sungai Ciliwung area Angke."
-      - "Melalui akses pelabuhan yang terbuka untuk perdagangan, penyebaran agama, dan budaya, Jakarta Utara menjadi pusat pertumbuhan peradaban dari era kerajaan hingga masa kolonial."
-    fakta: "Sejak 1966: Status otonomi khusus sebagai Kota Administrasi bagian dari Provinsi DKI Jakarta (PP No. 25 Tahun 1978)"
+    - judul: "Pelabuhan Tanjung Priok"
+      icon: "bi-shop"
+      subjudul: "Jantung Ekonomi Indonesia"
+      icon_subjudul: "bi-graph-up"
+      deskripsi: "Jakarta Utara dikenal sebagai kota pelabuhan dengan <strong>Pelabuhan Tanjung Priok</strong> dan <strong>Pelabuhan Sunda Kelapa</strong> sebagai landmark utama. Pembangunan dimulai <strong>Mei 1877</strong> dan selesai pada <strong>1886</strong>."
+      fakta:
+        - "Pelabuhan tersibuk di Indonesia yang berperan penting dalam melayani arus barang antar pulau dan negara, mendorong perekonomian melalui sektor ekspor-impor."
+        - "Menjadi gerbang utama perdagangan Indonesia dengan negara-negara di dunia."
 
-  pelabuhan:
-    judul: "Pelabuhan Tanjung Priok: Jantung Ekonomi"
-    deskripsi: "Jakarta Utara dikenal sebagai kota pelabuhan dengan <strong>Pelabuhan Tanjung Priok</strong> dan <strong>Pelabuhan Sunda Kelapa</strong> sebagai landmark utama."
-    pembangunan: "Mei 1877"
-    selesai: "1886"
-    peran: "Pelabuhan tersibuk di Indonesia yang berperan penting dalam melayani arus barang antar pulau dan negara, mendorong perekonomian melalui sektor ekspor-impor."
+  tentang_kota_2:
+    - judul: "Pusat Bisnis & Komersial Modern"
+      icon: "bi-building"
+      subjudul: "Destinasi Belanja dan Hunian Mewah"
+      icon_subjudul: "bi-pin-map"
+      deskripsi: "Selain sebagai kawasan pelabuhan, Jakarta Utara juga berkembang menjadi <strong>pusat bisnis dan komersial modern</strong> dengan berbagai area strategis:"
+      list_item:
+        - "<strong>Kelapa Gading</strong> - MOI, Mall Kelapa Gading, La Piazza sebagai pusat perbelanjaan premium"
+        - "<strong>Pluit & PIK</strong> - Area hunian mewah dengan infrastruktur modern dan lifestyle eksklusif"
+        - "<strong>Sunter</strong> - Kawasan industri dan pergudangan strategis untuk bisnis"
 
-  bisnis:
-    judul: "Pusat Bisnis & Komersial Modern"
-    deskripsi: "Selain sebagai kawasan pelabuhan, Jakarta Utara juga berkembang menjadi <strong>pusat bisnis dan komersial modern.</strong>"
-    area:
-      - nama: "Kelapa Gading"
-        deskripsi: "MOI, Mall Kelapa Gading, La Piazza"
-        icon: "bi-shop"
-        warna: "primary"
-      - nama: "Pluit & PIK"
-        deskripsi: "Area hunian mewah dengan infrastruktur modern"
-        icon: "bi-house-heart"
-        warna: "warning"
-      - nama: "Sunter"
-        deskripsi: "Kawasan industri dan pergudangan strategis"
-        icon: "bi-boxes"
-        warna: "info"
+    - judul: "Pembangunan & Infrastruktur"
+      icon: "bi-hammer"
+      subjudul: "Kebutuhan Material Konstruksi Berkualitas"
+      icon_subjudul: "bi-globe"
+      deskripsi: "Sebagai wilayah yang terus berkembang, Jakarta Utara membutuhkan banyak <strong>material konstruksi berkualitas</strong> termasuk kayu dolken gelam untuk berbagai sektor:"
+      list_item:
+        - "<strong>Komersial</strong> - Hotel, Restoran, Mall yang terus bermunculan"
+        - "<strong>Residential</strong> - Perumahan, Apartment, Villa dengan konsep modern"
+      info_tambahan: "Permintaan kayu dolken terus meningkat seiring pertumbuhan properti di Jakarta Utara"
 
-  pembangunan:
-    judul: "Pembangunan & Infrastruktur"
-    deskripsi: "Sebagai wilayah yang terus berkembang, Jakarta Utara membutuhkan banyak <strong>material konstruksi berkualitas</strong> termasuk kayu dolken gelam."
-    sektor:
-      - nama: "Komersial"
-        deskripsi: "Hotel, Restoran, Mall"
-        icon: "bi-buildings"
-        warna: "primary"
-      - nama: "Residential"
-        deskripsi: "Perumahan, Apartment, Villa"
-        icon: "bi-house-door"
-        warna: "success"
-
-# Section 13: Relevansi Kayu Dolken
+# ============================================================================
+# RELEVANSI KAYU DOLKEN
+# ============================================================================
 relevansi_kayu_dolken:
   judul: "Kenapa Kayu Dolken Penting untuk Jakarta Utara?"
   deskripsi: "Dengan karakteristik wilayah Jakarta Utara yang <strong>dekat dengan laut, kelembaban tinggi, dan cuaca tropis</strong>, kayu dolken gelam menjadi pilihan ideal karena:"
@@ -497,7 +570,9 @@ relevansi_kayu_dolken:
     - "Tahan rayap secara alami"
     - "Tahan cuaca ekstrem tanpa treatment khusus"
 
-# Contact & Services
+# ============================================================================
+# LAYANAN KAMI
+# ============================================================================
 layanan_kami:
   target_pasar:
     - nama: "Proyek komersial"
@@ -529,6 +604,9 @@ layanan_kami:
       deskripsi: "Stok tersedia dan siap kirim"
       icon: "bi-box-seam"
 
+# ============================================================================
+# HUBUNGI KAMI
+# ============================================================================
 hubungi_kami:
   alasan:
     - judul: "Konsultasi gratis kebutuhan proyek Anda"
@@ -546,6 +624,13 @@ hubungi_kami:
 
   jam_operasional: "Senin - Sabtu, 08:00 - 17:00 WIB"
   whatsapp_24_7: true
+
+# ============================================================================
+# SOCIAL METRICS
+# ============================================================================
+like_count: 5
+comment_count: 1
+share_count: 2
 ---
 
 <section id="hero-jual-kayu-dolken">
@@ -566,7 +651,7 @@ hubungi_kami:
 
 <section id="jual-kayu-dolken-terdekat">
 {% include block--jual-kayu-dolken-terdekat.html
-   nama_kota="Semarang"
+   nama_kota="Jakarta Utara"
 %}
 </section>
 

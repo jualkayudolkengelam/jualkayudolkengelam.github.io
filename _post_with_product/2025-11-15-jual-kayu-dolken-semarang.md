@@ -1,4 +1,7 @@
 ---
+# ============================================================================
+# META INFORMATION
+# ============================================================================
 layout: node--post-with-product
 title: "Jual Kayu Dolken Semarang - Hub 081311400177 - Gratis Ongkir"
 description: "Jual kayu dolken Semarang dengan harga terbaik. Melayani pengiriman gratis ke seluruh Semarang. Hubungi 081311400177 untuk info dan pemesanan."
@@ -15,6 +18,10 @@ keywords: jual kayu dolken semarang, dolken gelam semarang, supplier kayu dolken
 url: /2025/11/15/jual-kayu-dolken-semarang/
 show_products: true
 nama_kota: Semarang
+
+# ============================================================================
+# AREA PENGIRIMAN (SIMPLE LIST)
+# ============================================================================
 area_pengiriman:
   - Semarang Tengah
   - Semarang Barat
@@ -23,22 +30,42 @@ area_pengiriman:
   - Tembalang
   - Banyumanik
   - Pedurungan
+
+# ============================================================================
+# KEUNGGULAN PRODUK - DURABILITAS
+# ============================================================================
 keunggulan_durabilitas:
   tahan_lama: "Kayu gelam dapat bertahan 20-30 tahun tanpa treatment khusus, hemat biaya perawatan jangka panjang bahkan dalam iklim pesisir Semarang"
   anti_rayap: "Tidak memerlukan obat anti rayap karena tekstur kayu gelam yang padat dan keras secara alami menolak rayap dan hama"
   tahan_cuaca: "Cocok untuk aplikasi outdoor maupun indoor, tahan hujan deras, panas terik, dan kelembaban tinggi khas Semarang"
   kuat_padat: "Kepadatan tinggi memberikan kekuatan maksimal, cocok untuk beban berat dan struktur penyangga permanen"
+
+# ============================================================================
+# KEUNGGULAN PRODUK - NILAI
+# ============================================================================
 keunggulan_nilai:
   ramah_lingkungan: "Material kayu natural dan sustainable, ramah lingkungan dan biodegradable, mendukung green building"
   estetika: "Warna coklat natural yang indah, cocok untuk dekorasi modern maupun tradisional, mempercantik bangunan"
+
+# ============================================================================
+# PROSES PEMESANAN - TAHAP AWAL
+# ============================================================================
 proses_awal_pemesanan:
   pilih_ukuran: "Lihat daftar produk lengkap di atas, pilih diameter sesuai kebutuhan proyek Anda"
   hubungi: "081311400177"
   konsultasi_gratis: "Tim kami akan bantu hitung kebutuhan dan berikan rekomendasi terbaik untuk proyek Anda"
+
+# ============================================================================
+# PROSES PEMESANAN - FINALISASI & PENGIRIMAN
+# ============================================================================
 finalisasi_pengiriman:
   konfirmasi_pesanan: "Pastikan jumlah, ukuran, dan alamat pengiriman di Semarang sudah benar"
   pengiriman_gratis: "Kami antar langsung ke lokasi Anda dengan armada terpercaya, tepat waktu"
   bayar_cod: "Bayar setelah barang sampai dan Anda cek kualitasnya, tidak ada risiko"
+
+# ============================================================================
+# TESTIMONI - RESIDENTIAL
+# ============================================================================
 testimoni_residential:
   - nama: "Pak Agus"
     lokasi: "Kontraktor Tembalang"
@@ -64,6 +91,10 @@ testimoni_residential:
     judul: "Review Harga Terjangkau"
     komentar: "Harga terjangkau untuk proyek gazebo rumah di Ngaliyan. Tim responsif dan proses cepat!"
     warna: "secondary"
+
+# ============================================================================
+# TESTIMONI - KOMERSIAL
+# ============================================================================
 testimoni_komersial:
   - nama: "Pak Dedi"
     lokasi: "Owner Cafe Kota Lama"
@@ -77,6 +108,10 @@ testimoni_komersial:
     judul: "Review Pelayanan Profesional"
     komentar: "Pelayanan profesional, COD tersedia jadi aman. Terima kasih untuk pengiriman gratis ke Semarang Selatan!"
     warna: "info"
+
+# ============================================================================
+# TIPS MEMILIH UKURAN
+# ============================================================================
 tips_ukuran:
   - kategori: "Dekorasi Ringan"
     aplikasi: "Pagar, Taman"
@@ -105,6 +140,10 @@ tips_ukuran:
       - "Perfect untuk proyek komersial dan bangunan permanen"
     warna: "danger"
     icon: "bi-building-fill"
+
+# ============================================================================
+# KEUNGGULAN - PRODUK
+# ============================================================================
 keunggulan_produk:
   - judul: "Kualitas Premium Grade A"
     deskripsi: "Kayu gelam asli premium, tahan rayap alami dan tahan cuaca ekstrem, cocok untuk iklim Semarang"
@@ -118,6 +157,10 @@ keunggulan_produk:
     deskripsi: "Tersedia berbagai ukuran diameter 2-3 cm hingga 10-12 cm untuk semua kebutuhan proyek"
     warna: "info"
     icon: "bi-boxes"
+
+# ============================================================================
+# KEUNGGULAN - LAYANAN
+# ============================================================================
 keunggulan_layanan:
   - judul: "Pengiriman Gratis Semarang"
     deskripsi: "Gratis ongkir untuk area Kota Semarang, hemat biaya pengiriman untuk proyek Anda"
@@ -131,6 +174,10 @@ keunggulan_layanan:
     deskripsi: "Tim kami siap melayani Anda kapan saja untuk konsultasi gratis dan pemesanan cepat"
     warna: "secondary"
     icon: "bi-headset"
+
+# ============================================================================
+# FAQ - PEMESANAN
+# ============================================================================
 faq_pemesanan:
   - pertanyaan: "Berapa minimal pemesanan kayu dolken?"
     jawaban: "Kami melayani pemesanan mulai dari 10 batang hingga proyek besar ratusan batang. Untuk pembelian partai besar di area Semarang, kami berikan harga khusus yang lebih kompetitif. Hubungi 081311400177 untuk konsultasi jumlah yang sesuai budget dan kebutuhan proyek Anda."
@@ -138,6 +185,10 @@ faq_pemesanan:
   - pertanyaan: "Bagaimana cara mengecek kualitas kayu dolken sebelum bayar?"
     jawaban: "Kami menyediakan sistem COD (Cash on Delivery) sehingga Anda bisa cek kualitas kayu dolken terlebih dahulu sebelum membayar. Pastikan kayu tidak bengkok, tidak ada retakan besar, diameter sesuai pesanan, dan kondisi fisik bagus. Tim kami akan dampingi proses pengecekan untuk kepuasan Anda."
     icon: "bi-clipboard-check"
+
+# ============================================================================
+# FAQ - PRODUK
+# ============================================================================
 faq_produk:
   - pertanyaan: "Apakah kayu dolken perlu perawatan khusus di Semarang?"
     jawaban: "Kayu dolken gelam tidak memerlukan perawatan khusus karena sudah tahan rayap dan cuaca secara alami, sangat cocok untuk iklim Semarang yang lembab. Namun untuk aplikasi outdoor di area pesisir seperti Tanjung Mas, Anda bisa menambahkan coating atau vernis untuk mempercantik tampilan dan menambah daya tahan warna natural kayu."
@@ -145,10 +196,18 @@ faq_produk:
   - pertanyaan: "Apakah bisa custom panjang kayu dolken?"
     jawaban: "Ya, kami melayani custom panjang sesuai kebutuhan proyek Anda di Semarang. Standar panjang kami 4 meter, namun bisa dipotong atau disesuaikan dengan spesifikasi yang Anda inginkan untuk proyek spesifik seperti gazebo, pergola, atau pagar. Hubungi tim kami di 081311400177 untuk diskusi detail ukuran custom."
     icon: "bi-rulers"
+
+# ============================================================================
+# FAQ - PENGIRIMAN
+# ============================================================================
 faq_pengiriman:
   - pertanyaan: "Berapa lama pengiriman ke Semarang?"
     jawaban: "Untuk area Kota Semarang, pengiriman biasanya 1-3 hari kerja setelah konfirmasi pesanan. Pengiriman gratis untuk seluruh wilayah Semarang termasuk Tembalang, Banyumanik, Kota Lama, Simpang Lima, Pedurungan, dan area lainnya. Kami gunakan armada terpercaya untuk memastikan barang sampai dengan aman."
     icon: "bi-truck"
+
+# ============================================================================
+# RELEVANSI KAYU DOLKEN
+# ============================================================================
 relevansi_kayu_dolken:
   karakteristik_iklim: "Dengan karakteristik Semarang sebagai <strong>kota pesisir</strong> dengan kelembaban tinggi, cuaca tropis, dan potensi rob di area pantai, kayu dolken gelam menjadi pilihan ideal untuk konstruksi outdoor."
   keunggulan_lokal: "Sifat kayu yang <strong>tahan air, tahan rayap, dan tahan cuaca ekstrem</strong> sangat cocok untuk aplikasi seperti:"
@@ -161,11 +220,15 @@ relevansi_kayu_dolken:
       icon: "bi-check-circle-fill"
     - nama: "Landscaping Pelabuhan Tanjung Emas"
       icon: "bi-check-circle-fill"
+
+# ============================================================================
+# TENTANG KOTA
+# ============================================================================
 tentang_kota:
   tagline: "Ibu Kota Jawa Tengah"
   deskripsi_singkat: "Pusat pemerintahan, ekonomi, dan budaya Jawa Tengah"
   overview: "Semarang adalah ibu kota dan kota terbesar di Provinsi Jawa Tengah, Indonesia. Kota ini memiliki luas wilayah <strong>373,78 km²</strong> dengan populasi sekitar <strong>1,65 juta jiwa</strong> pada tahun 2017 dan kepadatan <strong>4.422 jiwa/km²</strong>. Semarang terbagi menjadi <strong>16 kecamatan</strong> dan <strong>177 kelurahan</strong>, menjadikannya pusat pemerintahan, ekonomi, dan budaya Jawa Tengah."
-  sejarah_ekonomi:
+  tentang_kota_1:
     - judul: "Sejarah Semarang"
       icon: "bi-clock-history"
       subjudul: "Asal-usul Nama dan Perkembangan"
@@ -182,7 +245,7 @@ tentang_kota:
       fakta:
         - "Melayani ekspor-impor berbagai komoditas, keberadaan pelabuhan ini menjadikan Semarang sebagai kota pelabuhan utama pada masa kolonial."
         - "Terus berkembang sebagai pusat regional hingga saat ini."
-  kehidupan_modern:
+  tentang_kota_2:
     - judul: "Landmark & Pusat Bisnis Modern"
       icon: "bi-building"
       subjudul: "Destinasi Wisata dan Ekonomi"
@@ -203,6 +266,10 @@ tentang_kota:
         - "<strong>Universitas Diponegoro (Undip)</strong> di Tembalang"
         - "<strong>Universitas Negeri Semarang (Unnes)</strong> di Sekaran"
       info_tambahan: "Wilayah Tembalang dan Banyumanik berkembang pesat sebagai area residential dan komersial."
+
+# ============================================================================
+# APLIKASI KAYU DOLKEN
+# ============================================================================
 aplikasi_kayu_dolken:
   deskripsi: "Kayu dolken gelam memiliki fleksibilitas tinggi untuk berbagai aplikasi, dari konstruksi bangunan hingga dekorasi dan furniture."
   konstruksi_dekorasi:
@@ -247,6 +314,10 @@ aplikasi_kayu_dolken:
         - "Restoran di area Undip"
         - "Mall & apartment"
         - "Developer perumahan"
+
+# ============================================================================
+# STUDI KASUS PROYEK - KOMERSIAL
+# ============================================================================
 studi_kasus_proyek:
   proyek_komersial:
     - judul: "Gazebo Cafe di Kota Lama"
@@ -281,6 +352,10 @@ studi_kasus_proyek:
       hasil: "Desain modern industrial yang menarik perhatian pengunjung"
       warna: "secondary"
       icon: "bi-shop"
+
+# ============================================================================
+# STUDI KASUS PROYEK - RESIDENSIAL
+# ============================================================================
   proyek_residensial:
     - judul: "Pagar Villa di Tembalang"
       tahun: "2024"
@@ -298,6 +373,10 @@ studi_kasus_proyek:
       hasil: "Menciptakan nuansa tropis dan tahan terhadap panas terik Semarang"
       warna: "success"
       icon: "bi-sun"
+
+# ============================================================================
+# STUDI KASUS PROYEK - PUBLIK
+# ============================================================================
   proyek_publik:
     - judul: "Taman Kota Area Tanjung Mas"
       tahun: "2023"
@@ -315,7 +394,30 @@ studi_kasus_proyek:
       hasil: "Memberikan kesan natural di area olahraga outdoor dengan durabilitas tinggi"
       warna: "info"
       icon: "bi-bicycle"
+
+# ============================================================================
+# AREA PENGIRIMAN DETAIL - TEKS JUDUL & DESKRIPSI
+# ============================================================================
 area_pengiriman_detail:
+  judul_jangkauan: "Jangkauan Pengiriman Lengkap"
+  deskripsi_jangkauan: "Kami melayani pengiriman gratis ke seluruh wilayah Kota Semarang, mencakup 16 kecamatan dan ratusan kelurahan untuk kemudahan proyek Anda"
+  judul_pusat: "Wilayah Pusat Kota Semarang"
+  deskripsi_pusat: "Lima kecamatan utama di pusat Kota Semarang dengan akses mudah dan pengiriman cepat."
+  judul_utara_selatan: "Wilayah Utara & Selatan"
+  deskripsi_utara_selatan: "Kawasan pelabuhan, industri, dan perumahan di sisi utara dan selatan Kota Semarang."
+  judul_pengembangan: "Wilayah Pengembangan & Pinggiran"
+  deskripsi_pengembangan: "Area pengembangan dengan pertumbuhan pesat, termasuk kawasan pendidikan dan perumahan baru."
+  judul_lainnya: "Kecamatan Lainnya"
+  judul_landmark: "Landmark & Lokasi Strategis"
+  deskripsi_landmark: "Kami juga melayani area landmark terkenal dan lokasi strategis di Semarang untuk kemudahan proyek komersial Anda"
+  judul_wisata: "Destinasi Wisata & Sejarah"
+  deskripsi_wisata: "Landmark bersejarah dan destinasi wisata terkenal di Semarang."
+  judul_fasilitas: "Fasilitas Pendidikan & Komersial"
+  deskripsi_fasilitas: "Kampus, pelabuhan, dan pusat perbelanjaan strategis di Semarang."
+
+# ============================================================================
+# AREA PENGIRIMAN DETAIL - WILAYAH PUSAT
+# ============================================================================
   wilayah_pusat:
     - nama: "Semarang Tengah"
       kelurahan:
@@ -332,6 +434,10 @@ area_pengiriman_detail:
         - "Rejomulyo, Sarirejo"
         - "Mlatiharjo, Bugangan"
       warna: "info"
+
+# ============================================================================
+# AREA PENGIRIMAN DETAIL - WILAYAH UTARA & SELATAN
+# ============================================================================
   wilayah_utara_selatan:
     - nama: "Semarang Utara"
       kelurahan:
@@ -343,6 +449,10 @@ area_pengiriman_detail:
         - "Lamper Tengah, Mugassari"
         - "Randusari, Bulustalan"
       warna: "warning"
+
+# ============================================================================
+# AREA PENGIRIMAN DETAIL - WILAYAH PENGEMBANGAN
+# ============================================================================
   wilayah_pengembangan:
     - nama: "Tembalang"
       kelurahan:
@@ -364,6 +474,10 @@ area_pengiriman_detail:
         - "Genuk, Terboyo Kulon"
         - "Bangetayu Kulon & Wetan"
       warna: "wood"
+
+# ============================================================================
+# AREA PENGIRIMAN DETAIL - KECAMATAN LAINNYA
+# ============================================================================
   kecamatan_lainnya:
     - "Candisari"
     - "Gajah Mungkur"
@@ -371,6 +485,10 @@ area_pengiriman_detail:
     - "Mijen"
     - "Gayamsari, Tugu"
     - "Gunungpati"
+
+# ============================================================================
+# AREA PENGIRIMAN DETAIL - LANDMARK WISATA
+# ============================================================================
   landmark_wisata:
     - nama: "Kota Lama Semarang"
       icon: "bi-building"
@@ -387,6 +505,10 @@ area_pengiriman_detail:
     - nama: "Simpang Lima"
       icon: "bi-building"
       warna: "warning"
+
+# ============================================================================
+# AREA PENGIRIMAN DETAIL - LANDMARK FASILITAS
+# ============================================================================
   landmark_fasilitas:
     - nama: "Pelabuhan Tanjung Emas"
       icon: "bi-shop"
@@ -403,6 +525,10 @@ area_pengiriman_detail:
     - nama: "Java Mall"
       icon: "bi-cart"
       warna: "primary"
+
+# ============================================================================
+# SOCIAL METRICS
+# ============================================================================
 like_count: 3
 comment_count: 0
 share_count: 1
