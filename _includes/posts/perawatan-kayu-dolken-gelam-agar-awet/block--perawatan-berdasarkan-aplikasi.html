@@ -1,0 +1,270 @@
+{% comment %}
+============================================================================
+Block: Perawatan Berdasarkan Aplikasi
+============================================================================
+
+@file        block--perawatan-berdasarkan-aplikasi.html
+@path        _includes/posts/perawatan-kayu-dolken-gelam-agar-awet/block--perawatan-berdasarkan-aplikasi.html
+@type        Content Block
+@description Panduan perawatan untuk aplikasi outdoor dan indoor
+@usage       {% include posts/perawatan-kayu-dolken-gelam-agar-awet/block--perawatan-berdasarkan-aplikasi.html %}
+
+Data yang digunakan dari frontmatter:
+- page.perawatan_aplikasi.outdoor (object)
+- page.perawatan_aplikasi.indoor (object)
+
+============================================================================
+{% endcomment %}
+
+<div class="perawatan-berdasarkan-aplikasi py-5">
+  <div class="container-xxl">
+
+    <!-- H2: Main Section Header -->
+    <div class="my-4">
+      <div class="card border-0 shadow-lg">
+        <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);">
+          <i class="bi bi-gear-fill mb-2" style="font-size: 2.5rem;"></i>
+          <h2 class="h2 mb-0 fw-bold text-white">Perawatan Berdasarkan Aplikasi</h2>
+          <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+            <i class="bi bi-star me-1"></i>
+            Panduan khusus untuk outdoor dan indoor
+            <i class="bi bi-star ms-1"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {% if page.perawatan_aplikasi %}
+
+    <!-- Outdoor Section -->
+    {% if page.perawatan_aplikasi.outdoor %}
+    <div class="my-4">
+      <div class="card border-0 shadow-lg">
+        <div class="card-header py-3 text-white" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">
+          <h3 class="h4 mb-0 fw-bold">
+            <i class="bi bi-cloud-sun-fill me-2"></i>{{ page.perawatan_aplikasi.outdoor.judul }}
+          </h3>
+          <p class="small mb-0 mt-1" style="opacity: 0.9;">{{ page.perawatan_aplikasi.outdoor.subtitle }}</p>
+        </div>
+        <div class="card-body p-4">
+
+          <div class="accordion" id="accordionOutdoor">
+            {% for treatment in page.perawatan_aplikasi.outdoor.treatments %}
+            <div class="accordion-item border-0 shadow-sm mb-3">
+              <h4 class="accordion-header">
+                <button class="accordion-button {% unless forloop.first %}collapsed{% endunless %} fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#outdoor{{ forloop.index }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}">
+                  <i class="bi {{ treatment.icon }} text-primary me-2"></i>
+                  {{ treatment.nama }}
+                  <span class="badge bg-primary ms-2">{{ treatment.frekuensi }}</span>
+                </button>
+              </h4>
+              <div id="outdoor{{ forloop.index }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" data-bs-parent="#accordionOutdoor">
+                <div class="accordion-body">
+
+                  <!-- Fungsi (if exists) -->
+                  {% if treatment.fungsi %}
+                  <div class="mb-3">
+                    <h5 class="h6 fw-bold text-success mb-2">
+                      <i class="bi bi-check-circle-fill me-1"></i>Fungsi:
+                    </h5>
+                    <ul class="mb-0">
+                      {% for fungsi in treatment.fungsi %}
+                      <li>{{ fungsi }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                  {% endif %}
+
+                  <!-- Produk Rekomendasi (if exists) -->
+                  {% if treatment.produk %}
+                  <div class="mb-3">
+                    <h5 class="h6 fw-bold text-info mb-2">
+                      <i class="bi bi-cart-fill me-1"></i>Produk Rekomendasi:
+                    </h5>
+                    <div class="d-flex flex-wrap gap-2">
+                      {% for produk in treatment.produk %}
+                      <span class="badge bg-info">{{ produk }}</span>
+                      {% endfor %}
+                    </div>
+                  </div>
+                  {% endif %}
+
+                  <!-- Steps -->
+                  {% if treatment.steps %}
+                  <div class="mb-3">
+                    <h5 class="h6 fw-bold text-primary mb-2">
+                      <i class="bi bi-list-ol me-1"></i>Cara:
+                    </h5>
+                    <div class="card bg-light border-0">
+                      <div class="card-body p-3">
+                        <ol class="mb-0">
+                          {% for step in treatment.steps %}
+                          <li class="mb-1">{{ step }}</li>
+                          {% endfor %}
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  {% endif %}
+
+                  <!-- Don't (if exists) -->
+                  {% if treatment.dont %}
+                  <div class="mb-3">
+                    <h5 class="h6 fw-bold text-danger mb-2">
+                      <i class="bi bi-x-circle-fill me-1"></i>Jangan:
+                    </h5>
+                    <ul class="mb-0">
+                      {% for dont in treatment.dont %}
+                      <li class="text-danger">❌ {{ dont }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                  {% endif %}
+
+                  <!-- Tips (if exists) -->
+                  {% if treatment.tips %}
+                  <div class="alert alert-warning mb-0">
+                    <h5 class="h6 fw-bold mb-2">
+                      <i class="bi bi-lightbulb-fill me-1"></i>Tips Pro:
+                    </h5>
+                    <ul class="mb-0 small">
+                      {% for tip in treatment.tips %}
+                      <li>{{ tip }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                  {% endif %}
+
+                  <!-- Checkpoints (if exists) -->
+                  {% if treatment.checkpoints %}
+                  <div>
+                    {% for checkpoint in treatment.checkpoints %}
+                    <div class="mb-3">
+                      <h5 class="h6 fw-bold text-success">
+                        <i class="bi bi-check-square-fill me-1"></i>{{ checkpoint.judul }}
+                      </h5>
+                      <ul class="mb-0">
+                        {% for item in checkpoint.items %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Indoor Section -->
+    {% if page.perawatan_aplikasi.indoor %}
+    <div class="my-4">
+      <div class="card border-0 shadow-lg">
+        <div class="card-header py-3 text-white" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+          <h3 class="h4 mb-0 fw-bold">
+            <i class="bi bi-house-fill me-2"></i>{{ page.perawatan_aplikasi.indoor.judul }}
+          </h3>
+          <p class="small mb-0 mt-1" style="opacity: 0.9;">{{ page.perawatan_aplikasi.indoor.subtitle }}</p>
+        </div>
+        <div class="card-body p-4">
+
+          <div class="accordion" id="accordionIndoor">
+            {% for treatment in page.perawatan_aplikasi.indoor.treatments %}
+            <div class="accordion-item border-0 shadow-sm mb-3">
+              <h4 class="accordion-header">
+                <button class="accordion-button {% unless forloop.first %}collapsed{% endunless %} fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#indoor{{ forloop.index }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}">
+                  <i class="bi {{ treatment.icon }} text-success me-2"></i>
+                  {{ treatment.nama }}
+                  <span class="badge bg-success ms-2">{{ treatment.frekuensi }}</span>
+                </button>
+              </h4>
+              <div id="indoor{{ forloop.index }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" data-bs-parent="#accordionIndoor">
+                <div class="accordion-body">
+
+                  <!-- Steps -->
+                  {% if treatment.steps %}
+                  <div class="mb-3">
+                    <h5 class="h6 fw-bold text-success mb-2">
+                      <i class="bi bi-list-ol me-1"></i>Cara:
+                    </h5>
+                    <div class="card bg-light border-0">
+                      <div class="card-body p-3">
+                        <ol class="mb-0">
+                          {% for step in treatment.steps %}
+                          <li class="mb-1">{{ step }}</li>
+                          {% endfor %}
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  {% endif %}
+
+                  <!-- Monthly Deep Clean -->
+                  {% if treatment.monthly %}
+                  <div class="mb-3">
+                    <h5 class="h6 fw-bold text-info mb-2">
+                      <i class="bi bi-calendar-month-fill me-1"></i>Monthly Deep Clean:
+                    </h5>
+                    <div class="card bg-light border-0">
+                      <div class="card-body p-3">
+                        <ol class="mb-0">
+                          {% for item in treatment.monthly %}
+                          <li class="mb-1">{{ item }}</li>
+                          {% endfor %}
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  {% endif %}
+
+                  <!-- Wall/Ceiling -->
+                  {% if treatment.wall_ceiling %}
+                  <div class="mb-3">
+                    <h5 class="h6 fw-bold text-primary mb-2">
+                      <i class="bi bi-bricks me-1"></i>Untuk Feature Wall/Ceiling:
+                    </h5>
+                    <ol class="mb-0">
+                      {% for item in treatment.wall_ceiling %}
+                      <li>{{ item }}</li>
+                      {% endfor %}
+                    </ol>
+                  </div>
+                  {% endif %}
+
+                  <!-- Furniture -->
+                  {% if treatment.furniture %}
+                  <div class="mb-0">
+                    <h5 class="h6 fw-bold text-warning mb-2">
+                      <i class="bi bi-lamp-fill me-1"></i>Untuk Furniture:
+                    </h5>
+                    <ol class="mb-0">
+                      {% for item in treatment.furniture %}
+                      <li>{{ item }}</li>
+                      {% endfor %}
+                    </ol>
+                  </div>
+                  {% endif %}
+
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {% endif %}
+
+  </div>
+</div>
