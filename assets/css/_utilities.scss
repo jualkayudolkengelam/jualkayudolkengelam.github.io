@@ -133,3 +133,72 @@
 .opacity-95 {
   opacity: 0.95;
 }
+
+/* ==========================================================================
+   Posts Block Utilities
+   ========================================================================== */
+
+/* Hover Effects */
+.hover-lift {
+  transition: $transition-transform;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-md !important;
+  }
+}
+
+/* Icon Box */
+.icon-box {
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Icon Wrapper for Posts */
+.icon-wrapper {
+  min-width: 60px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $shadow-sm;
+}
+
+/* Aplikasi Section */
+.aplikasi-sub-section {
+  h4 {
+    transition: $transition-default;
+  }
+
+  &:hover h4 {
+    padding-left: 5px;
+  }
+}
+
+.aplikasi-umum-kayu-dolken {
+  .card-header {
+    transition: $transition-default;
+  }
+
+  .card:hover .card-header {
+    transform: translateX(5px);
+  }
+}
+
+/* Kesimpulan Background Gradient */
+.bg-gradient {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Button Wood */
+.btn-wood {
+  background-color: $wood-brown;
+  border-color: $wood-brown;
+  color: white;
+
+  &:hover {
+    background-color: $wood-dark;
+    border-color: $wood-dark;
+    color: white;
+  }
+}

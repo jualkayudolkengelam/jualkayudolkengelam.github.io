@@ -18,113 +18,193 @@ like_count: 68
 comment_count: 12
 share_count: 23
 last_modified_at: 2025-11-17 03:41:44 +0000
+
+# Data untuk Block: Definisi Kayu Dolken
+definisi_kayu:
+  nama_latin: "Melaleuca cajuputi"
+  deskripsi: "Kayu gelam adalah jenis kayu keras yang tumbuh di daerah berawa-rawa dan memiliki karakteristik unik. Kayu ini diolah menjadi dolken atau kayu bulat yang digunakan untuk berbagai keperluan."
+  karakteristik:
+    - "Tumbuh di daerah berawa-rawa"
+    - "Kayu keras dengan kepadatan tinggi"
+    - "Diolah menjadi bentuk dolken (bulat)"
+    - "Cocok untuk berbagai aplikasi konstruksi"
+
+# Data untuk Block: Keunggulan Utama
+keunggulan_utama:
+  - judul: "Kekuatan Luar Biasa"
+    icon: "bi-shield-fill-check"
+    warna: "primary"
+    deskripsi: "Kayu gelam memiliki tingkat kepadatan yang sangat tinggi, mencapai 900-1000 kg/m³. Kepadatan ini membuatnya:"
+    poin:
+      - "Sangat kuat menahan beban"
+      - "Tahan terhadap benturan"
+      - "Tidak mudah patah atau retak"
+      - "Cocok untuk struktur penyangga"
+
+  - judul: "Tahan Air dan Kelembaban"
+    icon: "bi-droplet-fill"
+    warna: "info"
+    deskripsi: "Salah satu keunggulan paling menonjol dari kayu gelam adalah ketahanannya terhadap air:"
+    poin:
+      - "Tidak mudah busuk meski terendam air"
+      - "Tahan terhadap kelembaban tinggi"
+      - "Cocok untuk aplikasi outdoor"
+      - "Sering digunakan untuk pondasi di daerah rawa"
+
+  - judul: "Anti Rayap dan Serangga"
+    icon: "bi-bug-fill"
+    warna: "success"
+    deskripsi: "Kayu gelam secara alami mengandung zat yang tidak disukai rayap dan serangga perusak kayu:"
+    poin:
+      - "Tidak memerlukan treatment kimia tambahan"
+      - "Hemat biaya perawatan"
+      - "Lebih aman untuk lingkungan"
+      - "Tahan terhadap serangan jamur"
+
+  - judul: "Daya Tahan Jangka Panjang"
+    icon: "bi-clock-history"
+    warna: "warning"
+    deskripsi: "Dengan perawatan minimal, kayu dolken gelam bisa bertahan:"
+    poin:
+      - "20-30 tahun untuk penggunaan outdoor"
+      - "Lebih dari 50 tahun untuk indoor"
+      - "Tetap kuat meski terpapar cuaca ekstrem"
+      - "Investasi jangka panjang yang menguntungkan"
+
+# Data untuk Block: Aplikasi Umum
+aplikasi_umum:
+  - kategori: "Konstruksi Bangunan"
+    icon: "bi-building-fill"
+    warna: "wood"
+    sub_aplikasi:
+      - judul: "Struktur Utama"
+        items:
+          - "Tiang penyangga struktur"
+          - "Pondasi rumah tradisional"
+      - judul: "Perancah dan Rangka"
+        items:
+          - "Scaffolding untuk bangunan bertingkat"
+          - "Rangka atap yang kokoh dan tahan lama"
+
+  - kategori: "Landscaping dan Dekorasi"
+    icon: "bi-tree-fill"
+    warna: "success"
+    sub_aplikasi:
+      - judul: "Elemen Taman"
+        items:
+          - "Pagar taman yang estetis"
+          - "Jembatan taman yang kuat"
+      - judul: "Struktur Outdoor"
+        items:
+          - "Gazebo dan pergola"
+          - "Dekorasi outdoor area"
+
+  - kategori: "Proyek Komersial"
+    icon: "bi-briefcase-fill"
+    warna: "primary"
+    sub_aplikasi:
+      - judul: "Hospitality dan F&B"
+        items:
+          - "Interior hotel dan resort"
+          - "Dekorasi cafe dan restoran"
+      - judul: "Fasilitas Publik"
+        items:
+          - "Pagar pembatas area publik"
+          - "Furniture outdoor untuk area komersial"
+
+# Data untuk Block: Tips Memilih
+tips_memilih:
+  - kriteria: "Perhatikan Warna"
+    penjelasan: "Kayu gelam berkualitas memiliki warna coklat gelap yang merata"
+    icon: "bi-palette-fill"
+
+  - kriteria: "Cek Kepadatan"
+    penjelasan: "Kayu yang baik terasa berat dan padat saat diangkat"
+    icon: "bi-box-seam-fill"
+
+  - kriteria: "Pastikan Lurus"
+    penjelasan: "Pilih kayu yang tidak bengkok atau melengkung"
+    icon: "bi-rulers"
+
+  - kriteria: "Bebas Cacat"
+    penjelasan: "Hindari kayu dengan retakan atau lubang bekas serangga"
+    icon: "bi-shield-check"
+
+  - kriteria: "Serat Rapat"
+    penjelasan: "Kayu berkualitas memiliki serat yang rapat dan halus"
+    icon: "bi-grid-3x3-gap-fill"
+
+# Data untuk Block: Perawatan
+perawatan:
+  intro: "Meskipun kayu gelam sangat tahan lama, beberapa langkah perawatan dapat memperpanjang usia pakainya:"
+  langkah:
+    - judul: "Pembersihan Rutin"
+      deskripsi: "Bersihkan secara berkala dari kotoran dan debu"
+      icon: "bi-droplet-fill"
+      warna: "info"
+
+    - judul: "Aplikasi Wood Oil"
+      deskripsi: "Aplikasikan wood oil setiap 6-12 bulan untuk mempertahankan warna"
+      icon: "bi-brush-fill"
+      warna: "warning"
+
+    - judul: "Drainase Air"
+      deskripsi: "Pastikan drainase air berjalan baik untuk menghindari genangan"
+      icon: "bi-moisture"
+      warna: "primary"
+
+    - judul: "Inspeksi Berkala"
+      deskripsi: "Cek secara rutin kondisi kayu, terutama di titik-titik sambungan"
+      icon: "bi-search"
+      warna: "success"
+
+# Data untuk Block: Kesimpulan
+kesimpulan:
+  ringkasan: "Kayu dolken gelam adalah pilihan yang sangat baik untuk berbagai keperluan konstruksi dan dekorasi. Dengan kekuatan luar biasa, ketahanan terhadap air dan rayap, serta daya tahan jangka panjang, kayu ini menawarkan nilai investasi yang sangat baik."
+  poin_penting:
+    - "Kekuatan luar biasa dengan kepadatan 900-1000 kg/m³"
+    - "Tahan air dan kelembaban tinggi"
+    - "Anti rayap dan serangga secara alami"
+    - "Daya tahan 20-30 tahun outdoor, 50+ tahun indoor"
+    - "Cocok untuk berbagai aplikasi konstruksi dan dekorasi"
+    - "Investasi jangka panjang yang menguntungkan"
+  cta_text: "Butuh Kayu Dolken Gelam Berkualitas?"
+  cta_link: "/kontak"
 ---
 
-Kayu dolken gelam telah lama dikenal sebagai salah satu jenis kayu terkuat dan paling tahan lama. Tidak heran jika kayu ini menjadi pilihan favorit untuk berbagai proyek konstruksi, dari yang skala kecil hingga besar.
+<div class="article-intro py-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-9">
+        <p class="lead text-muted">
+          Kayu dolken gelam telah lama dikenal sebagai salah satu jenis kayu terkuat dan paling tahan lama.
+          Tidak heran jika kayu ini menjadi pilihan favorit untuk berbagai proyek konstruksi, dari yang skala kecil hingga besar.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-## Apa Itu Kayu Dolken Gelam?
+<section id="definisi-kayu-dolken">
+  {% include posts/block--definisi-kayu-dolken.html %}
+</section>
 
-Kayu gelam (Melaleuca cajuputi) adalah jenis kayu keras yang tumbuh di daerah berawa-rawa dan memiliki karakteristik unik. Kayu ini diolah menjadi dolken atau kayu bulat yang digunakan untuk berbagai keperluan.
+<section id="keunggulan-utama">
+  {% include posts/block--keunggulan-utama-kayu-dolken.html %}
+</section>
 
-## Keunggulan Utama Kayu Dolken Gelam
+<section id="aplikasi-umum">
+  {% include posts/block--aplikasi-umum-kayu-dolken.html %}
+</section>
 
-### 1. Kekuatan Luar Biasa
+<section id="tips-memilih">
+  {% include posts/block--tips-memilih-kayu-dolken.html %}
+</section>
 
-Kayu gelam memiliki tingkat kepadatan yang sangat tinggi, mencapai 900-1000 kg/m³. Kepadatan ini membuatnya:
+<section id="perawatan">
+  {% include posts/block--perawatan-kayu-dolken.html %}
+</section>
 
-- Sangat kuat menahan beban
-- Tahan terhadap benturan
-- Tidak mudah patah atau retak
-- Cocok untuk struktur penyangga
-
-### 2. Tahan Air dan Kelembaban
-
-Salah satu keunggulan paling menonjol dari kayu gelam adalah ketahanannya terhadap air:
-
-- Tidak mudah busuk meski terendam air
-- Tahan terhadap kelembaban tinggi
-- Cocok untuk aplikasi outdoor
-- Sering digunakan untuk pondasi di daerah rawa
-
-### 3. Anti Rayap dan Serangga
-
-Kayu gelam secara alami mengandung zat yang tidak disukai rayap dan serangga perusak kayu:
-
-- Tidak memerlukan treatment kimia tambahan
-- Hemat biaya perawatan
-- Lebih aman untuk lingkungan
-- Tahan terhadap serangan jamur
-
-### 4. Daya Tahan Jangka Panjang
-
-Dengan perawatan minimal, kayu dolken gelam bisa bertahan:
-
-- 20-30 tahun untuk penggunaan outdoor
-- Lebih dari 50 tahun untuk indoor
-- Tetap kuat meski terpapar cuaca ekstrem
-- Investasi jangka panjang yang menguntungkan
-
-## Aplikasi Umum Kayu Dolken Gelam
-
-### Konstruksi Bangunan
-
-#### Struktur Utama
-- Tiang penyangga struktur
-- Pondasi rumah tradisional
-
-#### Perancah dan Rangka
-- Scaffolding untuk bangunan bertingkat
-- Rangka atap yang kokoh dan tahan lama
-
-### Landscaping dan Dekorasi
-
-#### Elemen Taman
-- Pagar taman yang estetis
-- Jembatan taman yang kuat
-
-#### Struktur Outdoor
-- Gazebo dan pergola
-- Dekorasi outdoor area
-
-### Proyek Komersial
-
-#### Hospitality dan F&B
-- Interior hotel dan resort
-- Dekorasi cafe dan restoran
-
-#### Fasilitas Publik
-- Pagar pembatas area publik
-- Furniture outdoor untuk area komersial
-
-## Tips Memilih Kayu Dolken Gelam Berkualitas
-
-#### Kriteria Pemilihan
-
-1. **Perhatikan Warna**: Kayu gelam berkualitas memiliki warna coklat gelap yang merata
-2. **Cek Kepadatan**: Kayu yang baik terasa berat dan padat saat diangkat
-3. **Pastikan Lurus**: Pilih kayu yang tidak bengkok atau melengkung
-4. **Bebas Cacat**: Hindari kayu dengan retakan atau lubang bekas serangga
-5. **Serat Rapat**: Kayu berkualitas memiliki serat yang rapat dan halus
-
-## Perawatan Kayu Dolken Gelam
-
-#### Langkah Perawatan Optimal
-
-Meskipun kayu gelam sangat tahan lama, beberapa langkah perawatan dapat memperpanjang usia pakainya:
-
-- Bersihkan secara berkala dari kotoran dan debu
-- Aplikasikan wood oil setiap 6-12 bulan untuk mempertahankan warna
-- Pastikan drainase air berjalan baik untuk menghindari genangan
-- Cek secara rutin kondisi kayu, terutama di titik-titik sambungan
-
-## Kesimpulan
-
-Kayu dolken gelam adalah pilihan yang sangat baik untuk berbagai keperluan konstruksi dan dekorasi. Dengan kekuatan luar biasa, ketahanan terhadap air dan rayap, serta daya tahan jangka panjang, kayu ini menawarkan nilai investasi yang sangat baik.
-
-Jika Anda mencari supplier kayu dolken gelam berkualitas dengan harga kompetitif, kami siap melayani kebutuhan Anda. Hubungi kami untuk konsultasi gratis dan penawaran terbaik!
-
----
-
-**Butuh Kayu Dolken Gelam Berkualitas?**
-
-Kami menyediakan berbagai ukuran diameter kayu dolken gelam panjang 4 meter. [Hubungi kami sekarang]({{ '/kontak' | relative_url }}) untuk informasi lebih lanjut!
+<section id="kesimpulan">
+  {% include posts/block--kesimpulan-artikel.html %}
+</section>

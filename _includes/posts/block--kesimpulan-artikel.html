@@ -1,0 +1,88 @@
+{% comment %}
+============================================================================
+Block: Kesimpulan Artikel
+============================================================================
+
+@file        block--kesimpulan-artikel.html
+@path        _includes/posts/block--kesimpulan-artikel.html
+@type        Content Block
+@description Menampilkan kesimpulan artikel dengan CTA
+@usage       {% include posts/block--kesimpulan-artikel.html %}
+
+Data yang digunakan dari frontmatter:
+- page.kesimpulan.ringkasan: string
+- page.kesimpulan.poin_penting: array of strings
+- page.kesimpulan.cta_text: string
+- page.kesimpulan.cta_link: string
+
+============================================================================
+{% endcomment %}
+
+<div class="kesimpulan-artikel py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-9">
+
+        <h2 class="h3 fw-bold text-wood mb-4 text-center">
+          <i class="bi bi-check2-circle me-2"></i>
+          Kesimpulan
+        </h2>
+
+        {% if page.kesimpulan %}
+        <div class="card border-0 shadow-sm bg-gradient">
+          <div class="card-body p-4 p-md-5">
+
+            {% if page.kesimpulan.ringkasan %}
+            <p class="lead mb-4">{{ page.kesimpulan.ringkasan }}</p>
+            {% endif %}
+
+            {% if page.kesimpulan.poin_penting %}
+            <div class="poin-penting mb-4">
+              <h3 class="h6 fw-bold text-secondary mb-3">Poin-Poin Penting:</h3>
+              <div class="row g-2">
+                {% for poin in page.kesimpulan.poin_penting %}
+                <div class="col-md-6">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                    <span>{{ poin }}</span>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+
+            <!-- CTA Section -->
+            <div class="cta-section mt-4 pt-4 border-top">
+              <div class="row align-items-center">
+                <div class="col-md-8">
+                  <h3 class="h5 fw-bold mb-2">
+                    {% if page.kesimpulan.cta_text %}
+                      {{ page.kesimpulan.cta_text }}
+                    {% else %}
+                      Butuh Kayu Dolken Gelam Berkualitas?
+                    {% endif %}
+                  </h3>
+                  <p class="text-muted mb-md-0 small">
+                    Kami menyediakan berbagai ukuran diameter kayu dolken gelam panjang 4 meter.
+                    Hubungi kami untuk informasi lebih lanjut dan penawaran terbaik!
+                  </p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                  <a href="{{ page.kesimpulan.cta_link | default: '/kontak' | relative_url }}"
+                     class="btn btn-wood btn-lg shadow-sm">
+                    <i class="bi bi-whatsapp me-2"></i>
+                    Hubungi Kami
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
