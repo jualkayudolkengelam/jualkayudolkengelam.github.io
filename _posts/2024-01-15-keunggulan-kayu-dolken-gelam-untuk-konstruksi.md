@@ -68,26 +68,37 @@ Dengan perawatan minimal, kayu dolken gelam bisa bertahan:
 
 ### Konstruksi Bangunan
 
+#### Struktur Utama
 - Tiang penyangga struktur
 - Pondasi rumah tradisional
-- Scaffolding
-- Rangka atap
+
+#### Perancah dan Rangka
+- Scaffolding untuk bangunan bertingkat
+- Rangka atap yang kokoh dan tahan lama
 
 ### Landscaping dan Dekorasi
 
-- Pagar taman
+#### Elemen Taman
+- Pagar taman yang estetis
+- Jembatan taman yang kuat
+
+#### Struktur Outdoor
 - Gazebo dan pergola
-- Jembatan taman
-- Dekorasi outdoor
+- Dekorasi outdoor area
 
 ### Proyek Komersial
 
+#### Hospitality dan F&B
 - Interior hotel dan resort
 - Dekorasi cafe dan restoran
+
+#### Fasilitas Publik
 - Pagar pembatas area publik
-- Furniture outdoor
+- Furniture outdoor untuk area komersial
 
 ## Tips Memilih Kayu Dolken Gelam Berkualitas
+
+#### Kriteria Pemilihan
 
 1. **Perhatikan Warna**: Kayu gelam berkualitas memiliki warna coklat gelap yang merata
 2. **Cek Kepadatan**: Kayu yang baik terasa berat dan padat saat diangkat
@@ -96,6 +107,8 @@ Dengan perawatan minimal, kayu dolken gelam bisa bertahan:
 5. **Serat Rapat**: Kayu berkualitas memiliki serat yang rapat dan halus
 
 ## Perawatan Kayu Dolken Gelam
+
+#### Langkah Perawatan Optimal
 
 Meskipun kayu gelam sangat tahan lama, beberapa langkah perawatan dapat memperpanjang usia pakainya:
 

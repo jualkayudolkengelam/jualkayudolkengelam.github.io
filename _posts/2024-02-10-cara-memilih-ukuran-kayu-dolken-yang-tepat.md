@@ -24,6 +24,8 @@ Memilih ukuran kayu dolken yang tepat adalah langkah penting dalam memastikan ke
 
 ## Memahami Ukuran Kayu Dolken Gelam
 
+#### Pilihan Ukuran Tersedia
+
 Kayu dolken gelam kami tersedia dalam berbagai ukuran diameter dengan panjang standar 4 meter:
 
 - **2-3 cm**: Diameter kecil untuk aplikasi ringan
@@ -35,6 +37,8 @@ Kayu dolken gelam kami tersedia dalam berbagai ukuran diameter dengan panjang st
 ## Panduan Pemilihan Berdasarkan Fungsi
 
 ### Untuk Dekorasi (2-3 cm)
+
+#### Aplikasi Dekoratif
 
 Ukuran ini ideal untuk:
 
@@ -49,6 +53,8 @@ Ukuran ini ideal untuk:
 
 ### Untuk Pagar & Pembatas (4-6 cm)
 
+#### Fungsi Pagar dan Pembatas
+
 Diameter ini sempurna untuk:
 
 - **Pagar Taman Rumah**: Pagar pembatas yang kuat namun tidak terlalu berat
@@ -61,6 +67,8 @@ Diameter ini sempurna untuk:
 **Tips**: Tambahkan finishing coating untuk memperpanjang umur di outdoor.
 
 ### Untuk Konstruksi Ringan (6-8 cm)
+
+#### Struktur Ringan
 
 Aplikasi yang cocok:
 
@@ -75,6 +83,8 @@ Aplikasi yang cocok:
 
 ### Untuk Konstruksi Sedang (8-10 cm)
 
+#### Konstruksi Medium
+
 Ideal untuk:
 
 - **Pondasi Ringan**: Pondasi rumah panggung atau bangunan kayu
@@ -87,6 +97,8 @@ Ideal untuk:
 **Tips**: Cocok untuk proyek yang membutuhkan kekuatan ekstra.
 
 ### Untuk Konstruksi Berat (10-12 cm)
+
+#### Proyek Skala Besar
 
 Penggunaan optimal:
 
@@ -103,17 +115,23 @@ Penggunaan optimal:
 
 ### 1. Beban yang Akan Ditanggung
 
+#### Klasifikasi Beban
+
 - **Beban Ringan** (dekorasi saja): 2-4 cm
 - **Beban Sedang** (pagar, pergola): 4-8 cm
 - **Beban Berat** (konstruksi, pondasi): 8-12 cm
 
 ### 2. Lokasi Pemasangan
 
+#### Pertimbangan Lokasi
+
 - **Indoor**: Ukuran lebih kecil bisa digunakan (lebih ekonomis)
 - **Outdoor**: Pertimbangkan ukuran lebih besar untuk ketahanan
 - **Area Basah**: Gunakan diameter lebih besar untuk keamanan
 
 ### 3. Budget Proyek
+
+#### Perhitungan Biaya
 
 Hitung total kebutuhan:
 
@@ -127,6 +145,8 @@ Contoh perhitungan:
 
 ### 4. Estetika dan Desain
 
+#### Gaya Desain
+
 - **Minimalis Modern**: Diameter seragam, biasanya 4-6 cm
 - **Rustic/Natural**: Variasi diameter untuk tampilan organik
 - **Industrial**: Diameter besar 8-12 cm untuk kesan kokoh
@@ -134,6 +154,8 @@ Contoh perhitungan:
 ## Cara Menghitung Kebutuhan Kayu Dolken
 
 ### Untuk Pagar
+
+#### Rumus Perhitungan Pagar
 
 ```
 Jumlah Batang = (Panjang Pagar ÷ Jarak Antar Dolken) × Jumlah Baris
@@ -147,12 +169,16 @@ Jumlah Batang = (Panjang Pagar ÷ Jarak Antar Dolken) × Jumlah Baris
 
 ### Untuk Gazebo
 
+#### Komponen Gazebo
+
 Hitung per komponen:
 - **Tiang utama**: 4-6 batang (diameter besar)
 - **Rangka atap**: 20-30 batang (diameter sedang)
 - **Dekorasi**: sesuai desain
 
 ### Untuk Dekorasi Dinding
+
+#### Formula Dekorasi
 
 ```
 Jumlah Batang = (Luas Area ÷ (Panjang Dolken × Diameter)) × Faktor Kepadatan
@@ -161,6 +187,8 @@ Jumlah Batang = (Luas Area ÷ (Panjang Dolken × Diameter)) × Faktor Kepadatan
 ## Kesalahan Umum yang Harus Dihindari
 
 ### 1. Memilih Ukuran Terlalu Kecil
+
+#### Risiko dan Solusi
 
 **Risiko**:
 - Struktur tidak kuat
@@ -171,6 +199,8 @@ Jumlah Batang = (Luas Area ÷ (Panjang Dolken × Diameter)) × Faktor Kepadatan
 
 ### 2. Memilih Ukuran Terlalu Besar
 
+#### Dampak Oversize
+
 **Risiko**:
 - Pemborosan budget
 - Terlalu berat untuk struktur pendukung
@@ -180,6 +210,8 @@ Jumlah Batang = (Luas Area ÷ (Panjang Dolken × Diameter)) × Faktor Kepadatan
 
 ### 3. Tidak Memperhitungkan Cadangan
 
+#### Pentingnya Buffer Stock
+
 **Risiko**:
 - Kekurangan material di tengah proyek
 - Perbedaan warna/batch jika beli lagi
@@ -187,6 +219,8 @@ Jumlah Batang = (Luas Area ÷ (Panjang Dolken × Diameter)) × Faktor Kepadatan
 **Solusi**: Tambahkan 10-15% untuk cadangan
 
 ## Konsultasi Gratis dengan Kami
+
+#### Layanan Konsultasi
 
 Masih bingung memilih ukuran yang tepat? Kami siap membantu!
 

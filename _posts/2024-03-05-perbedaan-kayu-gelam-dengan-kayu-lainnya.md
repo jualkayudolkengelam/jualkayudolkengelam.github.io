@@ -23,6 +23,8 @@ Dalam dunia konstruksi dan woodworking, pemilihan jenis kayu yang tepat sangat m
 
 ## Karakteristik Unik Kayu Gelam
 
+#### Spesifikasi Dasar
+
 Sebelum membandingkan, mari kita pahami dulu karakteristik dasar kayu gelam:
 
 - **Nama Ilmiah**: Melaleuca cajuputi
@@ -34,6 +36,8 @@ Sebelum membandingkan, mari kita pahami dulu karakteristik dasar kayu gelam:
 ## Perbandingan dengan Jenis Kayu Lainnya
 
 ### Kayu Gelam vs Kayu Jati
+
+#### Tabel Perbandingan
 
 | Aspek | Kayu Gelam | Kayu Jati |
 |-------|------------|-----------|
@@ -48,6 +52,8 @@ Sebelum membandingkan, mari kita pahami dulu karakteristik dasar kayu gelam:
 
 ### Kayu Gelam vs Kayu Ulin
 
+#### Perbandingan Detail
+
 | Aspek | Kayu Gelam | Kayu Ulin (Ironwood) |
 |-------|------------|---------------------|
 | **Harga** | Terjangkau | Sangat mahal |
@@ -61,6 +67,8 @@ Sebelum membandingkan, mari kita pahami dulu karakteristik dasar kayu gelam:
 
 ### Kayu Gelam vs Kayu Merbau
 
+#### Analisis Komparatif
+
 | Aspek | Kayu Gelam | Kayu Merbau |
 |-------|------------|-------------|
 | **Aplikasi Utama** | Konstruksi outdoor | Flooring, furniture |
@@ -72,6 +80,8 @@ Sebelum membandingkan, mari kita pahami dulu karakteristik dasar kayu gelam:
 **Kesimpulan**: Gelam lebih cocok untuk konstruksi outdoor dan pondasi.
 
 ### Kayu Gelam vs Kayu Pinus/Cemara
+
+#### Perbedaan Mendasar
 
 | Aspek | Kayu Gelam | Kayu Pinus |
 |-------|------------|-----------|
@@ -85,6 +95,8 @@ Sebelum membandingkan, mari kita pahami dulu karakteristik dasar kayu gelam:
 **Kesimpulan**: Pinus lebih murah untuk indoor, tapi gelam jauh superior untuk outdoor.
 
 ### Kayu Gelam vs Kayu Bengkirai
+
+#### Komparasi Kualitas
 
 | Aspek | Kayu Gelam | Kayu Bengkirai |
 |-------|------------|----------------|
@@ -100,6 +112,8 @@ Sebelum membandingkan, mari kita pahami dulu karakteristik dasar kayu gelam:
 
 ### 1. Ekonomis dengan Performa Tinggi
 
+#### Nilai Investasi
+
 Kayu gelam menawarkan sweet spot antara harga dan kualitas:
 
 - Harga 30-50% lebih murah dari jati
@@ -108,11 +122,15 @@ Kayu gelam menawarkan sweet spot antara harga dan kualitas:
 
 ### 2. Availability dan Sustainability
 
+#### Aspek Keberlanjutan
+
 - **Lebih Mudah Didapat**: Tidak langka seperti ulin
 - **Legal dan Aman**: Tidak masuk kategori dilindungi
 - **Renewable**: Dapat ditanam ulang
 
 ### 3. Ketahanan Alami Tanpa Treatment
+
+#### Perlindungan Natural
 
 Berbeda dengan kayu lain yang memerlukan:
 
@@ -127,6 +145,8 @@ Kayu gelam sudah **naturally resistant** terhadap:
 
 ### 4. Kesesuaian untuk Aplikasi Spesifik
 
+#### Aplikasi Unggulan
+
 Kayu gelam adalah **pilihan terbaik** untuk:
 
 - **Pondasi di Area Basah**: Ketahanan air superior
@@ -138,6 +158,8 @@ Kayu gelam adalah **pilihan terbaik** untuk:
 
 ### Pilih Kayu Gelam Jika:
 
+#### Kondisi Ideal
+
 ✅ Proyek outdoor atau area basah
 ✅ Budget terbatas namun butuh kualitas tinggi
 ✅ Memerlukan kekuatan struktural maksimal
@@ -146,6 +168,8 @@ Kayu gelam adalah **pilihan terbaik** untuk:
 ✅ Area rawan rayap
 
 ### Pertimbangkan Alternatif Jika:
+
+#### Skenario Lain
 
 ❌ Proyek indoor furniture mewah → Pilih jati
 ❌ Flooring indoor → Pilih merbau atau parket
@@ -156,17 +180,25 @@ Kayu gelam adalah **pilihan terbaik** untuk:
 
 ### Kontraktor Berpengalaman
 
+#### Pengalaman Konstruksi
+
 > "Saya sudah 15 tahun menggunakan kayu gelam untuk pondasi rumah panggung. Tidak ada satu pun yang mengalami kerusakan signifikan. Untuk harganya, ini investasi terbaik." - Pak Budi, Kontraktor Serang
 
 ### Owner Cafe
+
+#### Aplikasi Komersial
 
 > "Dekorasi outdoor cafe kami menggunakan dolken gelam diameter 4 cm. Sudah 5 tahun tidak ada perawatan khusus, masih kuat dan cantik." - Ibu Linda, Pemilik Cafe di Jakarta
 
 ### Landscape Architect
 
+#### Perspektif Profesional
+
 > "Untuk proyek landscaping, kayu gelam adalah pilihan favorit saya. Tahan cuaca, anti rayap, dan klien puas dengan harganya." - Ahmad, Arsitek Landscape
 
 ## Tips Maksimalkan Nilai Kayu Gelam
+
+#### Panduan Praktis
 
 1. **Pilih Grade yang Tepat**: Untuk konstruksi struktur, pastikan grade A
 2. **Perhatikan Ukuran**: Sesuaikan diameter dengan beban
