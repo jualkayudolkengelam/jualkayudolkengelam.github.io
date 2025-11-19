@@ -548,104 +548,66 @@ hubungi_kami:
   whatsapp_24_7: true
 ---
 
-<!-- Section 1: Hero -->
-{% include block--hero-jual-kayu-dolken.html %}
+<section id="hero-jual-kayu-dolken">
+  {% include block--hero-jual-kayu-dolken.html %}
+</section>
 
-<!-- Section 2: Mengapa Memilih Kami -->
 <section id="mengapa-memilih-kami">
   {% include block--mengapa-memilih-kami.html %}
 </section>
 
-<!-- Section 3: Daftar Harga -->
-<div class="my-5">
-  <div class="card border-0 shadow-lg">
-    <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
-      <h2 class="h2 mb-0 fw-bold text-white">💰 Daftar Harga Kayu Dolken Jakarta Utara</h2>
-      <p class="mb-0 mt-2 small" style="opacity: 0.85;">
-        <i class="bi bi-truck me-1"></i>
-        Gratis ongkir ke seluruh wilayah Jakarta Utara
-        <i class="bi bi-truck ms-1"></i>
-      </p>
-    </div>
-  </div>
-</div>
-
-{% include block--product-list.html %}
-
-<div class="my-4">
-  <div class="card border-0 shadow-sm">
-    <div class="card-body text-center py-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-      <p class="mb-0 text-white fw-bold">
-        <i class="bi bi-telephone-fill me-2"></i>
-        📞 Hubungi 081311400177 untuk info harga terbaru dan penawaran khusus!
-        <i class="bi bi-telephone-fill ms-2"></i>
-      </p>
-    </div>
-  </div>
-</div>
-
----
-
-<!-- Section 4: Area Pengiriman -->
-<section id="area-pengiriman">
+<section id="area-pengiriman-kayu-dolken">
   {% include block--area-pengiriman-kayu-dolken.html %}
 </section>
 
-<!-- Section 5: Keunggulan -->
-<section id="keunggulan">
+<section id="keunggulan-kayu-dolken-gelam">
   {% include block--keunggulan-kayu-dolken-gelam.html %}
 </section>
 
-<!-- Section 6: Aplikasi -->
 <section id="jual-kayu-dolken-terdekat">
 {% include block--jual-kayu-dolken-terdekat.html
-   nama_kota="Jakarta Utara"
+   nama_kota="Semarang"
 %}
 </section>
 
-<section id="aplikasi">
+<section id="aplikasi-kayu-dolken-gelam">
   {% include block--aplikasi-kayu-dolken-gelam.html %}
 </section>
 
-<!-- Section 7: Cara Pemesanan -->
 <section id="cara-pemesanan">
   {% include block--cara-pemesanan-kayu-dolken.html %}
 </section>
 
-<!-- Section 8: Studi Kasus -->
-<section id="studi-kasus">
+<section id="studi-kasus-proyek">
   {% include block--studi-kasus-proyek.html %}
 </section>
 
-<!-- Section 9: Testimoni -->
-<section id="testimoni">
+<section id="testimoni-pelanggan">
   {% include block--testimoni-pelanggan.html %}
 </section>
 
-<!-- Section 10: Tips Ukuran -->
-<section id="tips-ukuran">
+<section id="tips-memilih-ukuran">
   {% include block--tips-memilih-ukuran-kayu-dolken.html %}
 </section>
 
-<!-- Section 11: FAQ -->
-<section id="faq">
+<section id="faq-kayu-dolken">
   {% include block--faq-kayu-dolken.html %}
 </section>
 
-<!-- Section 12: Tentang Jakarta Utara -->
-<section id="tentang-kota">
+<section id="tentang-kota-kami">
   {% include block--tentang-kota-kami.html %}
 </section>
 
-<section id="relevansi">
+<section id="relevansi-kayu-dolken">
   {% include block--relevansi-kayu-dolken.html %}
 </section>
 
----
-
-<!-- Section 13: Hubungi Kami -->
 <section id="hubungi-kami">
   {% include block--hubungi-kami.html %}
 </section>
 
-{% include block--related-product-last-modified.html %}
+
+<!-- Related Products Section (Part of article content) -->
+<div id="related-products" class="article-related-products mt-5">
+  {% include block--related-product-last-modified.html %}
+</div>
