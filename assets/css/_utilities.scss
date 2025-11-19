@@ -265,3 +265,15 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Testimonial Quote Background Decoration */
+.testimonial-quote-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 4rem;
+  line-height: 1;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  opacity: 0.1;
+}
