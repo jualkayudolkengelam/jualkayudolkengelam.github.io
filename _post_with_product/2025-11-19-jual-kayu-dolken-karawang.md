@@ -359,6 +359,14 @@ studi_kasus_proyek:
       hasil: "Struktur sangat kokoh menahan beban berat. Setelah 1 tahun operasional warehouse, tidak ada kerusakan atau keluhan. Highly recommended."
       warna: "success"
       icon: "bi-shop"
+    - judul: "Gazebo Kantor Pabrik di Surya Cipta"
+      tahun: "2024"
+      deskripsi: "Pembangunan gazebo dan area outdoor untuk kantor pabrik di kawasan Surya Cipta. Digunakan untuk area istirahat dan meeting outdoor karyawan."
+      jumlah: "170 batang"
+      diameter: "8-10 cm"
+      hasil: "Gazebo nyaman dan kokoh untuk ratusan karyawan. Material tahan panas dan hujan area industri tanpa perawatan khusus."
+      warna: "secondary"
+      icon: "bi-building"
 
 # ============================================================================
 # STUDI KASUS PROYEK - RESIDENSIAL (REQUIRED - min 2 items)
@@ -388,6 +396,14 @@ studi_kasus_proyek:
       hasil: "Taman terlihat lebih rapi dan natural. Material kayu awet meski terkena hujan dan panas bergantian."
       warna: "info"
       icon: "bi-tree-fill"
+    - judul: "Pergola Rumah di Klari"
+      tahun: "2024"
+      deskripsi: "Pembangunan pergola halaman untuk rumah tinggal di Klari. Pemilik menginginkan area outdoor yang sejuk dan estetis untuk keluarga."
+      jumlah: "110 batang"
+      diameter: "8-10 cm"
+      hasil: "Pergola kokoh dan indah menciptakan area outdoor yang nyaman. Tahan cuaca panas Karawang tanpa perawatan khusus."
+      warna: "success"
+      icon: "bi-sun"
 
 # ============================================================================
 # STUDI KASUS PROYEK - PUBLIK (OPTIONAL - min 2 items)
@@ -401,9 +417,17 @@ studi_kasus_proyek:
       hasil: "Area istirahat karyawan menjadi lebih nyaman dan asri. Gazebo tahan cuaca dan penggunaan intensif ribuan karyawan."
       warna: "info"
       icon: "bi-signpost-2"
+    - judul: "Jogging Track Taman Kota Karawang"
+      tahun: "2024"
+      deskripsi: "Proyek pembatas jogging track dan landscaping taman kota di pusat Karawang. Menggunakan kayu dolken untuk border jalur dan area hijau publik."
+      jumlah: "160 batang"
+      diameter: "6-8 cm"
+      hasil: "Taman kota lebih tertata dan aman untuk pengunjung. Material kayu tahan penggunaan publik intensif harian."
+      warna: "primary"
+      icon: "bi-bicycle"
 
 # ============================================================================
-# TESTIMONI - RESIDENTIAL (REQUIRED - min 3 items)
+# TESTIMONI - RESIDENTIAL (REQUIRED - min 2 items)
 # ============================================================================
 testimoni_residential:
   - nama: "Pak Agung Nugroho"
@@ -418,21 +442,9 @@ testimoni_residential:
     judul: "Pelayanan Profesional & Cepat"
     komentar: "Order untuk pagar perumahan cluster kami di Telukjambe. Prosesnya sangat mudah, tim nya membantu konsultasi sampai detail. Kayu nya bagus, tidak ada yang bengkok. Harga juga kompetitif. Puas!"
     warna: "success"
-  - nama: "Pak Budi Santoso"
-    lokasi: "Cikampek, Karawang"
-    rating: 5
-    judul: "Terbaik untuk Proyek Warehouse"
-    komentar: "Sudah 3x order untuk proyek warehouse di Cikampek. Kualitas konsisten bagus, stok selalu ready, dan harga terbaik. Tim nya responsif dan profesional. Jadi supplier langganan kami."
-    warna: "danger"
-  - nama: "Ibu Dewi Lestari"
-    lokasi: "Karawang Barat"
-    rating: 5
-    judul: "COD Aman & Terpercaya"
-    komentar: "Senang bisa COD untuk pembelian retail. Kayu dolken nya premium semua, warna natural cantik. Untuk gazebo rumah saya sangat cocok. Terima kasih pelayanan nya memuaskan!"
-    warna: "info"
 
 # ============================================================================
-# TESTIMONI - KOMERSIAL (OPTIONAL - min 2 items)
+# TESTIMONI - KOMERSIAL (REQUIRED - min 4 items)
 # ============================================================================
 testimoni_komersial:
   - nama: "Pak Hendra Wijaya"
@@ -453,6 +465,12 @@ testimoni_komersial:
     judul: "Material Berkualitas Harga Bersaing"
     komentar: "Untuk proyek konstruksi, kualitas material sangat penting. Kayu dolken nya premium, cocok untuk berbagai aplikasi. Harga kompetitif dan pelayanan profesional. Sudah jadi partner terpercaya kami."
     warna: "success"
+  - nama: "Pak Budi Santoso"
+    lokasi: "Manager Warehouse di Cikampek"
+    rating: 5
+    judul: "Tahan Beban Berat untuk Warehouse"
+    komentar: "Sudah 3x order untuk proyek warehouse di Cikampek. Kualitas konsisten bagus untuk menahan beban berat, stok selalu ready, dan harga terbaik untuk volume besar. Tim nya responsif dan profesional. Jadi supplier langganan kami!"
+    warna: "primary"
 
 # ============================================================================
 # TIPS MEMILIH UKURAN (REQUIRED)

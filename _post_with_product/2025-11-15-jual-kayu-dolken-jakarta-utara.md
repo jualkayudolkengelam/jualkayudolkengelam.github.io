@@ -319,7 +319,7 @@ finalisasi_pengiriman:
 # STUDI KASUS PROYEK - RESIDENSIAL
 # ============================================================================
 studi_kasus_proyek:
-  residential:
+  proyek_residensial:
     - judul: "Proyek Gazebo Rumah di Kelapa Gading"
       icon: "bi-house-heart-fill"
       warna: "success"
@@ -354,10 +354,40 @@ studi_kasus_proyek:
           value: "6-8 cm"
       hasil: "Tahan kelembaban tinggi area pantai dan memberikan kesan natural luxury"
 
+    - judul: "Landscaping Taman Rumah di Tanjung Priok"
+      icon: "bi-tree-fill"
+      warna: "info"
+      tahun: "2024"
+      kategori: "Residensial"
+      deskripsi: "Dekorasi taman dan border landscape untuk rumah cluster di area Tanjung Priok. Menggunakan kayu dolken untuk pembatas taman, penyangga tanaman, dan aksen natural modern."
+      spesifikasi:
+        - label: "Material"
+          value: "65 batang"
+        - label: "Diameter"
+          value: "4-6 cm"
+        - label: "Area"
+          value: "Taman 5x6 meter"
+      hasil: "Taman terlihat lebih rapi dan natural, kayu tetap awet meski area pesisir dengan kelembaban tinggi"
+
+    - judul: "Pergola Halaman Rumah di Pademangan"
+      icon: "bi-sun"
+      warna: "success"
+      tahun: "2024"
+      kategori: "Residensial"
+      deskripsi: "Pembangunan pergola untuk halaman belakang rumah di Pademangan sebagai area bersantai keluarga. Menggunakan kayu dolken diameter 8-10 cm untuk struktur utama."
+      spesifikasi:
+        - label: "Material"
+          value: "75 batang"
+        - label: "Diameter"
+          value: "8-10 cm"
+        - label: "Ukuran"
+          value: "3x4 meter"
+      hasil: "Pergola kokoh dan indah, menjadi spot favorit keluarga untuk bersantai"
+
 # ============================================================================
 # STUDI KASUS PROYEK - KOMERSIAL
 # ============================================================================
-  komersial:
+  proyek_komersial:
     - judul: "Landscaping Cafe Rustic di Sunter"
       icon: "bi-cup-hot-fill"
       warna: "warning"
@@ -403,6 +433,43 @@ studi_kasus_proyek:
           value: "Rooftop dengan view laut"
       hasil: "Mampu menahan angin kencang dan panas terik tanpa treatment khusus"
 
+    - judul: "Kanopi Showroom di Kelapa Gading"
+      icon: "bi-shop"
+      warna: "primary"
+      tahun: "2024"
+      kategori: "Komersial"
+      deskripsi: "Pemasangan kanopi outdoor untuk showroom furniture di kawasan Kelapa Gading Boulevard. Menggunakan kayu dolken untuk struktur utama dan aksen dekorasi natural yang elegan."
+      spesifikasi:
+        - label: "Material"
+          value: "95 batang"
+        - label: "Diameter"
+          value: "6-8 cm"
+        - label: "Area"
+          value: "Kanopi 6x8 meter"
+      hasil: "Struktur kokoh dan estetis, meningkatkan daya tarik visual showroom"
+
+# ============================================================================
+# STUDI KASUS PROYEK - PUBLIK
+# ============================================================================
+  proyek_publik:
+    - judul: "Gazebo Taman Kota di Sunter"
+      tahun: "2024"
+      deskripsi: "Pembangunan gazebo dan fasilitas publik di taman kota Sunter untuk warga Jakarta Utara. Membutuhkan material tahan lama dengan perawatan minimal untuk penggunaan publik intensif."
+      jumlah: "180 batang"
+      diameter: "8-10 cm"
+      hasil: "Gazebo kokoh digunakan ribuan pengunjung, masih dalam kondisi prima setelah 6 bulan tanpa perawatan khusus"
+      warna: "info"
+      icon: "bi-signpost-2"
+
+    - judul: "Landscaping Taman Pantai Ancol"
+      tahun: "2024"
+      deskripsi: "Proyek landscaping area hijau dan pembatas jogging track di kawasan wisata Ancol. Menggunakan kayu dolken untuk border taman dan penyangga tanaman area publik."
+      jumlah: "220 batang"
+      diameter: "6-8 cm"
+      hasil: "Area taman lebih tertata dan estetis, material kayu tahan kelembaban tinggi pesisir pantai"
+      warna: "primary"
+      icon: "bi-tree"
+
 # ============================================================================
 # TESTIMONI - RESIDENTIAL
 # ============================================================================
@@ -421,12 +488,37 @@ testimoni_residential:
     quote: "Puas dengan kualitas dolken gelam nya. Untuk gazebo rumah saya di Sunter perfect!"
     warna: "success"
 
-  - nama: "Pak Herman"
-    profesi: "Developer"
-    lokasi: "Pluit"
+# ============================================================================
+# TESTIMONI - KOMERSIAL
+# ============================================================================
+testimoni_komersial:
+  - nama: "Pak Anton Wijaya"
+    lokasi: "Owner Cafe di Sunter"
     rating: 5
-    quote: "Pelayanan ramah, produk sesuai ekspektasi. Recommended untuk area Jakarta Utara."
+    judul: "Cocok untuk Bisnis Cafe"
+    komentar: "Pakai kayu dolken untuk landscaping cafe saya di Sunter Mall. Customer suka dengan nuansa natural nya. Sudah 8 bulan masih bagus, tahan hujan Jakarta. Mantap!"
+    warna: "warning"
+
+  - nama: "Pak Rudi Hermawan"
+    lokasi: "Kontraktor di Jakarta Utara"
+    rating: 5
+    judul: "Partner Terpercaya untuk Proyek"
+    komentar: "Sudah beberapa kali order untuk proyek villa dan dermaga di area Jakarta Utara. Kualitas konsisten bagus, stok selalu ready, pengiriman tepat waktu. Jadi partner supplier terpercaya saya."
     warna: "info"
+
+  - nama: "Bu Lisa Anggraini"
+    lokasi: "Owner Restoran di Kelapa Gading"
+    rating: 5
+    judul: "Material Terbaik untuk Restoran"
+    komentar: "Restoran saya di Kelapa Gading pakai kayu dolken ini untuk pergola outdoor dan dekorasi. Sangat cocok untuk area pesisir Jakarta Utara. Kayu nya kuat dan estetis. Highly recommended!"
+    warna: "success"
+
+  - nama: "Pak Hendra Susanto"
+    lokasi: "Developer Apartment Pluit"
+    rating: 5
+    judul: "Solusi Terbaik untuk Developer"
+    komentar: "Sebagai developer, kami butuh supplier yang reliable. Sudah pakai untuk 2 project apartment di Pluit dan PIK, hasilnya selalu memuaskan. Stok ready, kualitas premium, harga kompetitif. Mantap!"
+    warna: "primary"
 
 # ============================================================================
 # TRUST STATS

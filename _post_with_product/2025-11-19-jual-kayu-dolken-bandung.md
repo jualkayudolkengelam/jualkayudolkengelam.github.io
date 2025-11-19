@@ -378,6 +378,14 @@ studi_kasus_proyek:
       hasil: "Pergola megah dan kokoh, menambah nilai estetika restoran. Customer puas dengan finishing natural yang indah."
       warna: "success"
       icon: "bi-shop"
+    - judul: "Kanopi Outdoor Mall di Paris Van Java"
+      tahun: "2024"
+      deskripsi: "Instalasi kanopi dan pergola untuk area outdoor seating mall Paris Van Java. Menggunakan kayu dolken untuk struktur utama dengan finishing natural coating premium."
+      jumlah: "280 batang"
+      diameter: "8-10 cm dan 10-12 cm"
+      hasil: "Kanopi kokoh dan estetis menciptakan area outdoor yang nyaman. Tahan cuaca hujan Bandung dan tetap elegan setelah 8 bulan."
+      warna: "danger"
+      icon: "bi-building-add"
 
 # ============================================================================
 # STUDI KASUS PROYEK - RESIDENSIAL (REQUIRED - min 2 items)
@@ -407,6 +415,14 @@ studi_kasus_proyek:
       hasil: "Taman terlihat lebih rapi dan natural. Kayu tetap awet meski terkena hujan rutin khas Bandung."
       warna: "info"
       icon: "bi-tree-fill"
+    - judul: "Pergola Villa di Lembang"
+      tahun: "2024"
+      deskripsi: "Pembangunan pergola outdoor untuk villa resort di kawasan Lembang. Area pegunungan dengan kelembaban tinggi dan suhu dingin membutuhkan material tahan lama."
+      jumlah: "140 batang"
+      diameter: "8-10 cm"
+      hasil: "Pergola kokoh menahan angin pegunungan dan hujan deras. Setelah 7 bulan masih dalam kondisi prima tanpa perawatan."
+      warna: "success"
+      icon: "bi-house-heart-fill"
 
 # ============================================================================
 # STUDI KASUS PROYEK - PUBLIK (OPTIONAL - min 2 items)
@@ -430,7 +446,7 @@ studi_kasus_proyek:
       icon: "bi-tree"
 
 # ============================================================================
-# TESTIMONI - RESIDENTIAL (REQUIRED - min 3 items)
+# TESTIMONI - RESIDENTIAL (REQUIRED - min 2 items)
 # ============================================================================
 testimoni_residential:
   - nama: "Pak Dedi Kurniawan"
@@ -445,21 +461,9 @@ testimoni_residential:
     judul: "Pelayanan Cepat & Profesional"
     komentar: "Order untuk pagar rumah di Ciumbuleuit, prosesnya mudah dan cepat. Tim nya membantu konsultasi kebutuhan dengan detail. Kayu nya bagus, warna natural coklat cantik. Puas dengan hasilnya!"
     warna: "success"
-  - nama: "Pak Budi Santoso"
-    lokasi: "Antapani, Bandung"
-    rating: 5
-    judul: "Harga Bersaing Kualitas Oke"
-    komentar: "Sempat compare harga dengan supplier lain, ini paling worth it. Kualitas kayu nya premium, harga kompetitif, plus gratis ongkir ke Antapani. Untuk gazebo rumah saya sangat cocok. Terima kasih!"
-    warna: "danger"
-  - nama: "Ibu Rina Marlina"
-    lokasi: "Sukajadi, Bandung"
-    rating: 5
-    judul: "COD Aman & Terpercaya"
-    komentar: "Senang bisa COD, jadi bisa cek dulu kualitas kayu sebelum bayar. Kayu dolken nya bagus semua, tidak ada yang bengkok. Cocok untuk taman rumah saya di Sukajadi yang sering hujan."
-    warna: "info"
 
 # ============================================================================
-# TESTIMONI - KOMERSIAL (OPTIONAL - min 2 items)
+# TESTIMONI - KOMERSIAL (REQUIRED - min 4 items)
 # ============================================================================
 testimoni_komersial:
   - nama: "Pak Anton Wijaya"
@@ -480,6 +484,12 @@ testimoni_komersial:
     judul: "Material Terbaik untuk Villa"
     komentar: "Villa saya di Lembang pakai kayu dolken ini untuk gazebo dan pergola. Sangat cocok untuk iklim dingin dan lembab Lembang. Kayu nya kuat, estetis, dan tahan lama. Highly recommended untuk resort!"
     warna: "success"
+  - nama: "Pak Hendra Wijaya"
+    lokasi: "Developer di Bandung"
+    rating: 5
+    judul: "Solusi Terbaik untuk Developer"
+    komentar: "Sebagai developer, kami butuh supplier yang reliable dengan harga terbaik. Sudah pakai untuk 3 project perumahan di Bandung, hasilnya selalu memuaskan. Stok ready, kualitas bagus, harga bersaing. Mantap!"
+    warna: "primary"
 
 # ============================================================================
 # TIPS MEMILIH UKURAN (REQUIRED)

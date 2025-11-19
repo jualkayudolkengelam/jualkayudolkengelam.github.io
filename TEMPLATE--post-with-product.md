@@ -332,7 +332,7 @@ finalisasi_pengiriman:
   bayar_cod: "jelaskan sistem COD, bayar setelah barang sampai dan dicek kualitas, aman tanpa risiko"
 
 # ============================================================================
-# STUDI KASUS PROYEK - KOMERSIAL (REQUIRED - min 2 items)
+# STUDI KASUS PROYEK - KOMERSIAL (REQUIRED - min 4 items)
 # ============================================================================
 # Instruksi: HARUS custom per kota! Gunakan lokasi SPESIFIK yang ada di kota ini
 studi_kasus_proyek:
@@ -353,9 +353,25 @@ studi_kasus_proyek:
       hasil: "jelaskan hasil akhir"
       warna: "warning"
       icon: "bi-tree"
+    - judul: "tulis nama proyek komersial #3 dengan lokasi berbeda"
+      tahun: "2024"
+      deskripsi: "jelaskan detail proyek ketiga"
+      jumlah: "isi jumlah batang"
+      diameter: "isi diameter"
+      hasil: "jelaskan hasil akhir"
+      warna: "success"
+      icon: "bi-shop"
+    - judul: "tulis nama proyek komersial #4 dengan lokasi berbeda"
+      tahun: "2024"
+      deskripsi: "jelaskan detail proyek keempat"
+      jumlah: "isi jumlah batang"
+      diameter: "isi diameter"
+      hasil: "jelaskan hasil akhir"
+      warna: "danger"
+      icon: "bi-building-add"
 
 # ============================================================================
-# STUDI KASUS PROYEK - RESIDENSIAL (REQUIRED - min 2 items)
+# STUDI KASUS PROYEK - RESIDENSIAL (REQUIRED - min 4 items)
 # ============================================================================
 # Instruksi: HARUS custom per kota! Gunakan nama area/kecamatan NYATA di kota ini
   proyek_residensial:
@@ -375,6 +391,22 @@ studi_kasus_proyek:
       hasil: "jelaskan hasil"
       warna: "success"
       icon: "bi-sun"
+    - judul: "tulis nama proyek residensial #3"
+      tahun: "2024"
+      deskripsi: "jelaskan detail proyek ketiga"
+      jumlah: "isi jumlah batang"
+      diameter: "isi diameter"
+      hasil: "jelaskan hasil"
+      warna: "info"
+      icon: "bi-tree-fill"
+    - judul: "tulis nama proyek residensial #4"
+      tahun: "2024"
+      deskripsi: "jelaskan detail proyek keempat"
+      jumlah: "isi jumlah batang"
+      diameter: "isi diameter"
+      hasil: "jelaskan hasil"
+      warna: "success"
+      icon: "bi-house-heart-fill"
 
 # ============================================================================
 # STUDI KASUS PROYEK - PUBLIK (OPTIONAL - min 2 items)
@@ -391,7 +423,7 @@ studi_kasus_proyek:
       icon: "bi-signpost-2"
 
 # ============================================================================
-# TESTIMONI - RESIDENTIAL (REQUIRED - min 3 items)
+# TESTIMONI - RESIDENTIAL (REQUIRED - min 2 items)
 # ============================================================================
 # Instruksi: HARUS custom per kota! Gunakan nama area/kecamatan NYATA di kota ini
 testimoni_residential:
@@ -407,17 +439,11 @@ testimoni_residential:
     judul: "tulis judul testimoni"
     komentar: "tulis testimoni natural"
     warna: "success"
-  - nama: "tulis nama customer #3"
-    lokasi: "isi nama area NYATA lainnya"
-    rating: 5
-    judul: "tulis judul testimoni"
-    komentar: "tulis testimoni natural"
-    warna: "danger"
 
 # ============================================================================
-# TESTIMONI - KOMERSIAL (OPTIONAL - min 2 items)
+# TESTIMONI - KOMERSIAL (REQUIRED - min 4 items)
 # ============================================================================
-# Instruksi: OPTIONAL - hapus jika tidak ada. Gunakan profesi/bisnis yang relevan
+# Instruksi: HARUS custom per kota! Gunakan profesi/bisnis yang relevan dengan kota
 testimoni_komersial:
   - nama: "tulis nama customer komersial (misal: Pak Anton)"
     lokasi: "isi profesi/bisnis (misal: Owner Cafe di Area X)"
@@ -431,6 +457,18 @@ testimoni_komersial:
     judul: "tulis judul testimoni"
     komentar: "tulis testimoni"
     warna: "info"
+  - nama: "tulis nama customer komersial #3"
+    lokasi: "isi profesi/bisnis"
+    rating: 5
+    judul: "tulis judul testimoni"
+    komentar: "tulis testimoni"
+    warna: "success"
+  - nama: "tulis nama customer komersial #4"
+    lokasi: "isi profesi/bisnis"
+    rating: 5
+    judul: "tulis judul testimoni"
+    komentar: "tulis testimoni"
+    warna: "primary"
 
 # ============================================================================
 # TIPS MEMILIH UKURAN (REQUIRED) - BOLEH PAKAI LANGSUNG

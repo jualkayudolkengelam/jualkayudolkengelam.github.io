@@ -79,18 +79,6 @@ testimoni_residential:
     judul: "Review Pelayanan dan Hasil"
     komentar: "Puas dengan pelayanan dan produknya. Untuk gazebo di rumah saya di Banyumanik hasilnya sempurna!"
     warna: "success"
-  - nama: "Bu Sari"
-    lokasi: "Pedurungan"
-    rating: 5
-    judul: "Review Durabilitas Produk"
-    komentar: "Kayu dolken tahan lama dan anti rayap. Sudah 2 tahun pagar rumah saya di Pedurungan masih bagus."
-    warna: "danger"
-  - nama: "Pak Joko"
-    lokasi: "Ngaliyan"
-    rating: 5
-    judul: "Review Harga Terjangkau"
-    komentar: "Harga terjangkau untuk proyek gazebo rumah di Ngaliyan. Tim responsif dan proses cepat!"
-    warna: "secondary"
 
 # ============================================================================
 # TESTIMONI - KOMERSIAL
@@ -108,6 +96,18 @@ testimoni_komersial:
     judul: "Review Pelayanan Profesional"
     komentar: "Pelayanan profesional, COD tersedia jadi aman. Terima kasih untuk pengiriman gratis ke Semarang Selatan!"
     warna: "info"
+  - nama: "Bu Sari Wulandari"
+    lokasi: "Owner Restoran di Simpang Lima"
+    rating: 5
+    judul: "Material Terbaik untuk Restoran"
+    komentar: "Restoran saya di Simpang Lima pakai kayu dolken untuk pergola outdoor. Sangat cocok untuk cuaca Semarang yang panas dan lembab. Kayu nya kuat dan estetis. Pelanggan suka dengan nuansa natural!"
+    warna: "success"
+  - nama: "Pak Hendra Wijaya"
+    lokasi: "Kontraktor Hotel di Semarang"
+    rating: 5
+    judul: "Partner Terpercaya untuk Proyek Besar"
+    komentar: "Sudah beberapa kali order untuk proyek hotel dan resort di area Semarang dan sekitarnya. Kualitas konsisten bagus, stok selalu ready, pengiriman tepat waktu. Jadi supplier langganan kami!"
+    warna: "primary"
 
 # ============================================================================
 # TIPS MEMILIH UKURAN
@@ -373,6 +373,22 @@ studi_kasus_proyek:
       hasil: "Menciptakan nuansa tropis dan tahan terhadap panas terik Semarang"
       warna: "success"
       icon: "bi-sun"
+    - judul: "Landscaping Rumah di Banyumanik"
+      tahun: "2024"
+      deskripsi: "Dekorasi taman dan border landscape untuk rumah di kawasan Banyumanik. Menggunakan kayu dolken untuk pembatas taman dan penyangga tanaman vertikal garden."
+      jumlah: "90 batang"
+      diameter: "4-6 cm"
+      hasil: "Taman terlihat lebih rapi dan natural dengan aksen kayu yang estetis"
+      warna: "info"
+      icon: "bi-tree-fill"
+    - judul: "Pagar Rumah Cluster di Pedurungan"
+      tahun: "2024"
+      deskripsi: "Pemasangan pagar dan border taman untuk rumah cluster di area Pedurungan sepanjang 20 meter. Kayu dolken memberikan kesan natural yang modern."
+      jumlah: "150 batang"
+      diameter: "6-8 cm"
+      hasil: "Pagar kokoh dan estetis, tahan terhadap cuaca panas dan lembab Semarang"
+      warna: "success"
+      icon: "bi-house-door"
 
 # ============================================================================
 # STUDI KASUS PROYEK - PUBLIK
