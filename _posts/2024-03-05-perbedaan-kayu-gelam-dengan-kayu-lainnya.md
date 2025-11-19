@@ -25,6 +25,7 @@ karakteristik_unik:
   warna: "Coklat gelap hingga kehitaman"
   habitat: "Tumbuh di area berawa dan lahan basah"
   kelas_kekuatan: "Kelas kuat I-II"
+  daya_tahan: "20-30 tahun (outdoor)"
   subtitle: "Sebelum membandingkan, mari kita pahami dulu karakteristik dasar kayu gelam"
 
 # Data untuk Block: Perbandingan Kayu
