@@ -206,5 +206,5 @@ kesimpulan:
 </section>
 
 <section id="kesimpulan">
-  {% include posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/block--kesimpulan-artikel.html %}
+  {% include posts/shared-block/block--kesimpulan-artikel.html %}
 </section>
