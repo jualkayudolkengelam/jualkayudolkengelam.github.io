@@ -18,6 +18,34 @@ like_count: 74
 comment_count: 16
 share_count: 27
 
+# Labels & Headings (dapat diedit untuk kustomisasi)
+labels:
+  # Block: Perawatan Berdasarkan Aplikasi
+  monthly_deep_clean: "Pembersihan Mendalam Bulanan:"
+  feature_wall_ceiling: "Untuk Dinding/Plafon Dekoratif:"
+  untuk_furniture: "Untuk Furniture:"
+
+  # Block: Seasonal Care
+  seasonal_care_title: "Perawatan Musiman"
+  challenges: "Tantangan:"
+  extra_care: "Perawatan Ekstra:"
+
+  # Block: Products & Tools
+  products_tools_title: "Produk & Peralatan Rekomendasi"
+
+  # Block: Cost Breakdown
+  cost_breakdown_title: "Rincian Biaya Perawatan"
+  table_item: "Item"
+  table_frequency: "Frekuensi"
+  table_cost: "Biaya"
+
+  # Block: Common Mistakes
+  common_mistakes_title: "Kesalahan Umum yang Harus Dihindari"
+  solution: "Solusi:"
+
+  # Block: DIY vs Professional
+  diy_vs_professional_title: "DIY vs Jasa Profesional"
+
 # Data untuk Block: Mengapa Perawatan Penting
 mengapa_perawatan:
   naturally_resistant:

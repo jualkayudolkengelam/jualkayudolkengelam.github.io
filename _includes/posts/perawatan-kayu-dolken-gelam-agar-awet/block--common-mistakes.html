@@ -23,7 +23,7 @@ Data yang digunakan dari frontmatter:
       <div class="card border-0 shadow-lg">
         <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);">
           <i class="bi bi-exclamation-triangle-fill mb-2" style="font-size: 2.5rem;"></i>
-          <h2 class="h2 mb-0 fw-bold text-white">Kesalahan Umum yang Harus Dihindari</h2>
+          <h2 class="h2 mb-0 fw-bold text-white">{{ page.labels.common_mistakes_title | default: "Kesalahan Umum yang Harus Dihindari" }}</h2>
           <p class="mb-0 mt-2 small" style="opacity: 0.85;">
             <i class="bi bi-star me-1"></i>
             Kesalahan umum yang harus dihindari
@@ -84,7 +84,7 @@ Data yang digunakan dari frontmatter:
             <!-- Solution -->
             <div class="alert alert-success mb-0">
               <h4 class="h6 fw-bold mb-2">
-                <i class="bi bi-lightbulb-fill me-1"></i>Solusi:
+                <i class="bi bi-lightbulb-fill me-1"></i>{{ page.labels.solution | default: "Solusi:" }}
               </h4>
               <p class="mb-0">{{ mistake.solution }}</p>
             </div>

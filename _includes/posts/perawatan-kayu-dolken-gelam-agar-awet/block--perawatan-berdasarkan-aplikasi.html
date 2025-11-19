@@ -211,7 +211,7 @@ Data yang digunakan dari frontmatter:
                   {% if treatment.monthly %}
                   <div class="mb-3">
                     <h5 class="h6 fw-bold text-info mb-2">
-                      <i class="bi bi-calendar-month-fill me-1"></i>Pembersihan Mendalam Bulanan:
+                      <i class="bi bi-calendar-month-fill me-1"></i>{{ page.labels.monthly_deep_clean | default: "Pembersihan Mendalam Bulanan:" }}
                     </h5>
                     <div class="card bg-light border-0">
                       <div class="card-body p-3">
@@ -229,7 +229,7 @@ Data yang digunakan dari frontmatter:
                   {% if treatment.wall_ceiling %}
                   <div class="mb-3">
                     <h5 class="h6 fw-bold text-primary mb-2">
-                      <i class="bi bi-bricks me-1"></i>Untuk Dinding/Plafon Dekoratif:
+                      <i class="bi bi-bricks me-1"></i>{{ page.labels.feature_wall_ceiling | default: "Untuk Dinding/Plafon Dekoratif:" }}
                     </h5>
                     <ol class="mb-0">
                       {% for item in treatment.wall_ceiling %}
@@ -243,7 +243,7 @@ Data yang digunakan dari frontmatter:
                   {% if treatment.furniture %}
                   <div class="mb-0">
                     <h5 class="h6 fw-bold text-warning mb-2">
-                      <i class="bi bi-lamp-fill me-1"></i>Untuk Furniture:
+                      <i class="bi bi-lamp-fill me-1"></i>{{ page.labels.untuk_furniture | default: "Untuk Furniture:" }}
                     </h5>
                     <ol class="mb-0">
                       {% for item in treatment.furniture %}
