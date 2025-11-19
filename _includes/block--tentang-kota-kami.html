@@ -82,7 +82,7 @@
 </div>
 
 {% if page.tentang_kota.overview %}
-<div class="card border-0 shadow-sm my-4">
+<div class="tentang-kota-overview card border-0 shadow-sm my-4">
   <div class="card-body">
     <p class="mb-0">{{ page.tentang_kota.overview }}</p>
   </div>
@@ -91,7 +91,7 @@
 
 {% if page.tentang_kota.tentang_kota_1 %}
 <!-- H3: Section 1 (Flexible topic) -->
-<div class="my-4">
+<div class="tentang-kota-1 my-4">
   <div class="d-flex align-items-center mb-3">
     <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
       <h3 class="h4 mb-0 text-wood fw-bold">
@@ -139,7 +139,7 @@
 
 {% if page.tentang_kota.tentang_kota_2 %}
 <!-- H3: Section 2 (Flexible topic) -->
-<div class="my-4">
+<div class="tentang-kota-2 my-4">
   <div class="d-flex align-items-center mb-3">
     <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
       <h3 class="h4 mb-0 text-wood fw-bold">
@@ -171,10 +171,11 @@
           {% endif %}
 
           {% if item.list_item %}
-          <ul class="list-unstyled small {% if item.info_tambahan %}mb-3{% else %}mb-0{% endif %}">
+          <ul class="tentang-kota-list list-unstyled small {% if item.info_tambahan %}mb-3{% else %}mb-0{% endif %}">
             {% for list in item.list_item %}
-            <li class="{% if forloop.last %}mb-0{% else %}mb-2{% endif %}">
-              <i class="bi bi-check-circle-fill text-success me-2"></i>{{ list }}
+            <li class="{% if forloop.last %}mb-0{% else %}mb-3{% endif %}">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              <span class="tentang-kota-list-content">{{ list }}</span>
             </li>
             {% endfor %}
           </ul>

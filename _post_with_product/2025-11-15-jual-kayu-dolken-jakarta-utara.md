@@ -637,9 +637,9 @@ tentang_kota:
       icon_subjudul: "bi-pin-map"
       deskripsi: "Selain sebagai kawasan pelabuhan, Jakarta Utara juga berkembang menjadi <strong>pusat bisnis dan komersial modern</strong> dengan berbagai area strategis:"
       list_item:
-        - "<strong>Kelapa Gading</strong> - MOI, Mall Kelapa Gading, La Piazza sebagai pusat perbelanjaan premium"
-        - "<strong>Pluit & PIK</strong> - Area hunian mewah dengan infrastruktur modern dan lifestyle eksklusif"
-        - "<strong>Sunter</strong> - Kawasan industri dan pergudangan strategis untuk bisnis"
+        - "<strong>Kelapa Gading</strong> MOI, Mall Kelapa Gading, La Piazza sebagai pusat perbelanjaan premium"
+        - "<strong>Pluit & PIK</strong> Area hunian mewah dengan infrastruktur modern dan lifestyle eksklusif"
+        - "<strong>Sunter</strong> Kawasan industri dan pergudangan strategis untuk bisnis"
 
     - judul: "Pembangunan & Infrastruktur"
       icon: "bi-hammer"
@@ -647,8 +647,8 @@ tentang_kota:
       icon_subjudul: "bi-globe"
       deskripsi: "Sebagai wilayah yang terus berkembang, Jakarta Utara membutuhkan banyak <strong>material konstruksi berkualitas</strong> termasuk kayu dolken gelam untuk berbagai sektor:"
       list_item:
-        - "<strong>Komersial</strong> - Hotel, Restoran, Mall yang terus bermunculan"
-        - "<strong>Residential</strong> - Perumahan, Apartment, Villa dengan konsep modern"
+        - "<strong>Komersial</strong> Hotel, Restoran, Mall yang terus bermunculan"
+        - "<strong>Residential</strong> Perumahan, Apartment, Villa dengan konsep modern"
       info_tambahan: "Permintaan kayu dolken terus meningkat seiring pertumbuhan properti di Jakarta Utara"
 
 # ============================================================================

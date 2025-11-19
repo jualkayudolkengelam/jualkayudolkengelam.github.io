@@ -597,11 +597,11 @@ tentang_kota:
       icon_subjudul: "bi-star-fill"
       deskripsi: "Karawang memiliki beberapa kawasan industri kelas dunia yang menjadi pilihan investor global:"
       list_item:
-        - "<strong>KIIC (Karawang International Industrial City)</strong> - Kawasan industri terbesar dengan 400+ perusahaan manufaktur multinasional"
-        - "<strong>Surya Cipta City</strong> - Kawasan industri modern dengan konsep kota mandiri, dilengkapi perumahan dan fasilitas lengkap"
-        - "<strong>Kawasan Industri Cikampek</strong> - Fokus pada industri logam, kimia, dan logistik di wilayah timur Karawang"
-        - "<strong>Kawasan Industri Kosambi</strong> - Area industri di bagian barat dekat perbatasan Bekasi"
-        - "<strong>Pelabuhan Tanjung Pakis</strong> - Pelabuhan khusus industri untuk ekspor-impor"
+        - "<strong>KIIC (Karawang International Industrial City)</strong> Kawasan industri terbesar dengan 400+ perusahaan manufaktur multinasional"
+        - "<strong>Surya Cipta City</strong> Kawasan industri modern dengan konsep kota mandiri, dilengkapi perumahan dan fasilitas lengkap"
+        - "<strong>Kawasan Industri Cikampek</strong> Fokus pada industri logam, kimia, dan logistik di wilayah timur Karawang"
+        - "<strong>Kawasan Industri Kosambi</strong> Area industri di bagian barat dekat perbatasan Bekasi"
+        - "<strong>Pelabuhan Tanjung Pakis</strong> Pelabuhan khusus industri untuk ekspor-impor"
 
     - judul: "Infrastruktur & Akses"
       icon: "bi-signpost-2"
@@ -609,10 +609,10 @@ tentang_kota:
       icon_subjudul: "bi-truck"
       deskripsi: "Lokasi strategis Karawang didukung infrastruktur yang memadai untuk kebutuhan industri:"
       list_item:
-        - "<strong>Tol Jakarta-Cikampek</strong> - Akses cepat ke Jakarta (60 km, 1 jam perjalanan) dan Bandung (100 km)"
-        - "<strong>Jalur Kereta Api Pantura</strong> - Konektivitas ke Jakarta, Bandung, Cirebon, dan Semarang"
-        - "<strong>Pelabuhan Tanjung Priok</strong> - Akses mudah untuk ekspor-impor (60 km)"
-        - "<strong>Bandara Soekarno-Hatta</strong> - Dekat dengan bandara internasional terbesar Indonesia (50 km)"
+        - "<strong>Tol Jakarta-Cikampek</strong> Akses cepat ke Jakarta (60 km, 1 jam perjalanan) dan Bandung (100 km)"
+        - "<strong>Jalur Kereta Api Pantura</strong> Konektivitas ke Jakarta, Bandung, Cirebon, dan Semarang"
+        - "<strong>Pelabuhan Tanjung Priok</strong> Akses mudah untuk ekspor-impor (60 km)"
+        - "<strong>Bandara Soekarno-Hatta</strong> Dekat dengan bandara internasional terbesar Indonesia (50 km)"
       info_tambahan: "Pembangunan Patimban Port dan tol layang Jakarta-Cikampek II semakin memperkuat posisi Karawang sebagai pusat industri dan logistik nasional."
 
 # ============================================================================

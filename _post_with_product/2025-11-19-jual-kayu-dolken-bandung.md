@@ -616,12 +616,12 @@ tentang_kota:
       icon_subjudul: "bi-star-fill"
       deskripsi: "Bandung kaya akan landmark ikonik yang menjadi kebanggaan warga dan destinasi favorit wisatawan:"
       list_item:
-        - "<strong>Gedung Sate</strong> - Ikon arsitektur Art Deco dengan ornamen tusuk sate di puncak menara, kini menjadi kantor Gubernur Jawa Barat"
-        - "<strong>Gedung Asia Afrika</strong> - Saksi bersejarah Konferensi Asia-Afrika 1955 yang menghasilkan Dasasila Bandung"
-        - "<strong>Jalan Braga</strong> - Kawasan heritage dengan bangunan kolonial, cafe klasik, dan galeri seni"
-        - "<strong>Trans Studio Mall</strong> - Mall terbesar di Bandung dengan theme park indoor"
-        - "<strong>Paris Van Java (PVJ)</strong> - Pusat perbelanjaan modern dengan konsep terbuka yang populer"
-        - "<strong>Alun-Alun Bandung</strong> - Pusat kota yang dikelilingi Masjid Raya dan kawasan kuliner"
+        - "<strong>Gedung Sate</strong> Ikon arsitektur Art Deco dengan ornamen tusuk sate di puncak menara, kini menjadi kantor Gubernur Jawa Barat"
+        - "<strong>Gedung Asia Afrika</strong> Saksi bersejarah Konferensi Asia-Afrika 1955 yang menghasilkan Dasasila Bandung"
+        - "<strong>Jalan Braga</strong> Kawasan heritage dengan bangunan kolonial, cafe klasik, dan galeri seni"
+        - "<strong>Trans Studio Mall</strong> Mall terbesar di Bandung dengan theme park indoor"
+        - "<strong>Paris Van Java (PVJ)</strong> Pusat perbelanjaan modern dengan konsep terbuka yang populer"
+        - "<strong>Alun-Alun Bandung</strong> Pusat kota yang dikelilingi Masjid Raya dan kawasan kuliner"
 
     - judul: "Pendidikan & Teknologi"
       icon: "bi-mortarboard"
@@ -629,10 +629,10 @@ tentang_kota:
       icon_subjudul: "bi-book-fill"
       deskripsi: "Bandung dikenal sebagai kota pendidikan dengan berbagai universitas dan institusi terkemuka:"
       list_item:
-        - "<strong>Institut Teknologi Bandung (ITB)</strong> - Kampus teknik terbaik di Indonesia dengan kampus ikonik di Jalan Ganesha"
-        - "<strong>Universitas Padjadjaran (UNPAD)</strong> - Salah satu universitas negeri terbaik dengan kampus modern di Jatinangor"
-        - "<strong>Universitas Pendidikan Indonesia (UPI)</strong> - Pusat pendidikan guru terkemuka di Indonesia"
-        - "<strong>UNPAR, UNISBA, Telkom University</strong> - Kampus swasta berkualitas dengan ribuan mahasiswa"
+        - "<strong>Institut Teknologi Bandung (ITB)</strong> Kampus teknik terbaik di Indonesia dengan kampus ikonik di Jalan Ganesha"
+        - "<strong>Universitas Padjadjaran (UNPAD)</strong> Salah satu universitas negeri terbaik dengan kampus modern di Jatinangor"
+        - "<strong>Universitas Pendidikan Indonesia (UPI)</strong> Pusat pendidikan guru terkemuka di Indonesia"
+        - "<strong>UNPAR, UNISBA, Telkom University</strong> Kampus swasta berkualitas dengan ribuan mahasiswa"
       info_tambahan: "Keberadaan puluhan kampus menjadikan Bandung kota dengan populasi mahasiswa terbesar di Indonesia, menciptakan ekosistem bisnis kuliner, kos-kosan, dan industri kreatif yang dinamis."
 
 # ============================================================================

@@ -592,7 +592,7 @@ tentang_kota:
         - "tulis fakta menarik #3"
 
   # REQUIRED: EXACTLY 2 cards - Topik bebas, format tetap!
-  # Card bisa tentang: landmark, pendidikan, bisnis, infrastruktur, atau apapun tentang kota modern ini
+  # Card bisa tentang: landmark, pendidikan, bisnis, infrastruktur, atau apapun tentang kota ini
   tentang_kota_2:
     - judul: "tulis judul tentang aspek kota #3 (bebas topik: landmark/bisnis/wisata/dll)"
       icon: "pilih icon yang sesuai (bi-building, bi-pin-map, bi-briefcase, dll)"
@@ -600,9 +600,9 @@ tentang_kota:
       icon_subjudul: "pilih icon untuk subjudul"
       deskripsi: "tulis 1-2 kalimat intro tentang topik ini"
       list_item:
-        - "tulis <strong>Item #1</strong> - deskripsi singkat (bisa nama tempat, institusi, atau hal menarik lainnya)"
-        - "tulis <strong>Item #2</strong> - deskripsi singkat"
-        - "tulis <strong>Item #3</strong> - deskripsi singkat"
+        - "tulis <strong>Item #1</strong> deskripsi singkat (bisa nama tempat, institusi, atau hal menarik lainnya)"
+        - "tulis <strong>Item #2</strong> deskripsi singkat"
+        - "tulis <strong>Item #3</strong> deskripsi singkat"
         - "tulis item tambahan jika ada (opsional)"
 
     - judul: "tulis judul tentang aspek kota #4 (bebas topik: landmark/bisnis/wisata/dll)"
@@ -611,8 +611,8 @@ tentang_kota:
       icon_subjudul: "pilih icon untuk subjudul"
       deskripsi: "tulis 1-2 kalimat tentang topik ini"
       list_item:
-        - "tulis <strong>Item #1</strong> - deskripsi singkat"
-        - "tulis <strong>Item #2</strong> - deskripsi singkat"
+        - "tulis <strong>Item #1</strong> deskripsi singkat"
+        - "tulis <strong>Item #2</strong> deskripsi singkat"
         - "tulis item tambahan jika perlu (opsional)"
       info_tambahan: "tulis info tambahan 1 kalimat (opsional, bisa dihapus jika tidak perlu)"
 
