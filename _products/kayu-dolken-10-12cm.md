@@ -60,37 +60,34 @@ keunggulan:
   - judul: "Investasi Terbaik Jangka Panjang"
     deskripsi: "Dengan kualitas premium dan ukuran maksimal, kayu dolken ini dapat bertahan 50 tahun lebih. Sangat ekonomis untuk proyek permanen skala besar."
 
-# Recommendations Array (Usage + Material Comparison)
+# Recommendations (Single Object Format)
 rekomendasi:
-  - tipe: "penggunaan"
-    sections:
-      - heading: "Untuk Tiang Pancang Bangunan Bertingkat:"
-        deskripsi: "Ideal untuk fondasi rumah 2-3 lantai atau bangunan komersial. Dapat dipancang 2-3 meter ke dalam tanah dengan jarak antar tiang 1.5-2 meter."
-      - heading: "Untuk Dermaga dan Pelabuhan:"
-        deskripsi: "Mampu menahan beban kapal dan aktivitas pelabuhan dengan aman. Tahan terendam air laut puluhan tahun."
-      - heading: "Untuk Turap:"
-        deskripsi: "Sangat efektif untuk penahan tanah setinggi 2-3 meter. Dapat dipasang rapat atau dengan jarak tertentu sesuai kebutuhan."
-  - tipe: "vs_material"
-    judul: "Keunggulan Kayu Gelam vs Material Lain"
-    sections:
-      - heading: "vs Beton:"
-        items:
-          - "Lebih fleksibel, tidak retak"
-          - "Lebih mudah dipasang dan dipindahkan"
-          - "Lebih ekonomis untuk lokasi sulit dijangkau"
-          - "Ramah lingkungan"
-      - heading: "vs Kayu Biasa:"
-        items:
-          - "Tidak perlu pengawetan kimia"
-          - "Tahan rayap dan jamur alami"
-          - "Jauh lebih awet (50+ tahun vs 5-10 tahun)"
-          - "Dapat terendam air tanpa pembusukan"
-      - heading: "vs Baja:"
-        items:
-          - "Tidak berkarat"
-          - "Lebih ekonomis untuk jangka panjang"
-          - "Tidak perlu perawatan khusus"
-          - "Tetap kuat meski terendam air"
+  tipe: "penggunaan"
+  sections:
+    - heading: "Untuk Tiang Pancang Bangunan Bertingkat:"
+      deskripsi: "Ideal untuk fondasi rumah 2-3 lantai atau bangunan komersial. Dapat dipancang 2-3 meter ke dalam tanah dengan jarak antar tiang 1.5-2 meter."
+    - heading: "Untuk Dermaga dan Pelabuhan:"
+      deskripsi: "Mampu menahan beban kapal dan aktivitas pelabuhan dengan aman. Tahan terendam air laut puluhan tahun."
+    - heading: "Untuk Turap:"
+      deskripsi: "Sangat efektif untuk penahan tanah setinggi 2-3 meter. Dapat dipasang rapat atau dengan jarak tertentu sesuai kebutuhan."
+    - heading: "Keunggulan vs Beton:"
+      items:
+        - "Lebih fleksibel, tidak retak"
+        - "Lebih mudah dipasang dan dipindahkan"
+        - "Lebih ekonomis untuk lokasi sulit dijangkau"
+        - "Ramah lingkungan"
+    - heading: "Keunggulan vs Kayu Biasa:"
+      items:
+        - "Tidak perlu pengawetan kimia"
+        - "Tahan rayap dan jamur alami"
+        - "Jauh lebih awet (50+ tahun vs 5-10 tahun)"
+        - "Dapat terendam air tanpa pembusukan"
+    - heading: "Keunggulan vs Baja:"
+      items:
+        - "Tidak berkarat"
+        - "Lebih ekonomis untuk jangka panjang"
+        - "Tidak perlu perawatan khusus"
+        - "Tetap kuat meski terendam air"
 ---
 
 <section id="product-deskripsi">
@@ -109,14 +106,9 @@ rekomendasi:
 {% include products/block--product-harga-pengiriman.html %}
 </section>
 
-{% for rekomendasi_item in page.rekomendasi %}
-<section id="product-rekomendasi-{{ forloop.index }}">
-{% assign page_rekomendasi_temp = rekomendasi_item %}
-{% assign page.rekomendasi = page_rekomendasi_temp %}
+<section id="product-rekomendasi">
 {% include products/block--product-rekomendasi.html %}
 </section>
-{% endfor %}
-{% assign page.rekomendasi = page.rekomendasi %}
 
 <section id="product-cara-pemesanan">
 {% include products/block--product-cara-pemesanan.html %}
