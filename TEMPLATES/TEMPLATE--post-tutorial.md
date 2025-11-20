@@ -9,24 +9,33 @@
 # Example: Cara Menghitung Kebutuhan Kayu Dolken, Tutorial Pemasangan Pagar
 #
 # CARA PENGGUNAAN:
-# 1. Copy file ini ke _posts/ dengan nama: YYYY-MM-DD-judul-artikel-anda.md
-# 2. Siapkan 4 foto artikel (PENTING: harus format WebP):
-#    a. Buat direktori:
-#       mkdir -p assets/images/posts/{slug}/
-#    b. Copy 4 foto ke direktori dan rename:
-#       cp foto1.jpg assets/images/posts/{slug}/{slug}-001.jpeg
-#       cp foto2.jpg assets/images/posts/{slug}/{slug}-002.jpeg
-#       (dst untuk 003 dan 004)
-#    c. Convert semua JPEG ke WebP:
-#       cd assets/images/posts/{slug}/
-#       for file in *.jpeg; do cwebp -q 85 "$file" -o "${file%.jpeg}.webp"; done
-#    d. Hapus file JPEG:
-#       rm *.jpeg
-#    e. Pastikan hanya ada 4 file .webp: 001.webp, 002.webp, 003.webp, 004.webp
-# 3. Baca INSTRUKSI di setiap field (yang ditulis dengan huruf kecil)
-# 4. Ganti instruksi dengan konten yang sesuai untuk artikel
-# 5. Field yang sudah ada teksnya (UPPERCASE) bisa dipakai langsung atau disesuaikan
-# 6. Test dengan rebuild.sh sebelum commit
+#
+# RULE UTAMA:
+# APAPUN nama folder foto user, APAPUN nama file asal → RENAME sesuai slug artikel!
+#
+# LANGKAH:
+# 1. Tentukan JUDUL artikel (dari user atau tentukan sendiri)
+# 2. Buat SLUG dari judul (lowercase, spasi jadi dash)
+#    Contoh: "Cara Memasang Pagar Dolken" → "cara-memasang-pagar-dolken"
+# 3. Tulis konten artikel sesuai topik di judul
+# 4. Proses foto (RENAME dari folder asalnya):
+#    mkdir -p assets/images/posts/{slug}/
+#    cp /path/asli/apapun-nama-folder/foto-001.jpeg assets/images/posts/{slug}/{slug}-001.jpeg
+#    cp /path/asli/apapun-nama-folder/foto-002.jpeg assets/images/posts/{slug}/{slug}-002.jpeg
+#    cp /path/asli/apapun-nama-folder/foto-003.jpeg assets/images/posts/{slug}/{slug}-003.jpeg
+#    cp /path/asli/apapun-nama-folder/foto-004.jpeg assets/images/posts/{slug}/{slug}-004.jpeg
+#    cd assets/images/posts/{slug}/
+#    for file in *.jpeg; do cwebp -q 85 "$file" -o "${file%.jpeg}.webp"; done
+#    rm *.jpeg
+#    chmod 644 *.webp
+# 5. Test: rebuild.sh
+# 6. Commit jika build sukses
+#
+# CONTOH:
+# User kasih: /Documents/FOTO/gambar1.jpg, gambar2.jpg
+# Judul artikel: "Cara Memasang Pagar Dolken"
+# Slug: "cara-memasang-pagar-dolken"
+# Hasil: assets/images/posts/cara-memasang-pagar-dolken/cara-memasang-pagar-dolken-001.webp
 #
 # CATATAN PENTING:
 # - Field dengan "isi ..." atau "tulis ..." atau "berikan ..." = HARUS DITULIS MANUAL
