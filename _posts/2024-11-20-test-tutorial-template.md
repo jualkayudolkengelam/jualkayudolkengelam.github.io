@@ -234,20 +234,16 @@ calculator:
   title: "Kalkulator Kebutuhan Dolken"
   description: "Hitung kebutuhan dolken Anda secara otomatis"
   inputs:
-    - id: "panjang"
+    - name: "panjang"
       label: "Total Panjang Pagar (meter)"
       type: "number"
       placeholder: "Contoh: 40"
-      required: true
-    - id: "jarak"
+    - name: "jarak"
       label: "Jarak Antar Tiang (meter)"
       type: "number"
       placeholder: "Contoh: 1.5"
-      required: true
-      default: "1.5"
   formula: "(panjang * 100) / jarak"
-  result_text: "Jumlah Dolken yang Dibutuhkan"
-  result_suffix: " batang"
+  result_label: "Jumlah Dolken yang Dibutuhkan"
 
 # Kesimpulan
 kesimpulan:
