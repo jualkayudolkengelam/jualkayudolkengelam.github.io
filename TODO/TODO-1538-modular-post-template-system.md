@@ -53,124 +53,97 @@ Create a modular template system for regular blog posts (`_posts/`) following th
 ### New Folders in `_includes/`:
 ```
 _includes/
-├── posts/                    # ✅ Existing (custom blocks per post)
-│   ├── hitung-kebutuhan-kayu-dolken-untuk-proyek/
-│   └── perawatan-kayu-dolken-gelam-agar-awet/
+├── posts/                       # Post template blocks (organized by type)
+│   ├── tutorial/                # 🆕 Tutorial template blocks (standalone/complete)
+│   │   ├── block--intro-section.html
+│   │   ├── block--tutorial-meta.html
+│   │   ├── block--content-section.html
+│   │   ├── block--tips-list.html
+│   │   ├── block--common-mistakes.html
+│   │   ├── block--calculator-tool.html
+│   │   ├── block--kesimpulan.html
+│   │   ├── block--faq.html
+│   │   └── block--cta-box.html
+│   │
+│   ├── comparison/              # 🆕 Comparison template blocks (standalone/complete)
+│   │   ├── block--intro-section.html
+│   │   ├── block--comparison-table.html
+│   │   ├── block--pros-cons.html
+│   │   ├── block--feature-matrix.html
+│   │   ├── block--recommendation.html
+│   │   ├── block--kesimpulan.html
+│   │   └── block--faq.html
+│   │
+│   ├── guide/                   # 🆕 Guide template blocks (standalone/complete)
+│   │   ├── block--intro-section.html
+│   │   ├── block--guide-sections.html
+│   │   ├── block--best-practices.html
+│   │   ├── block--quick-reference.html
+│   │   ├── block--do-dont-list.html
+│   │   ├── block--kesimpulan.html
+│   │   └── block--faq.html
+│   │
+│   ├── shared-block/            # ⚠️ OLD pattern (will be deprecated)
+│   └── [custom per-post]/       # ✅ Existing (custom blocks per specific post)
+│       ├── hitung-kebutuhan-kayu-dolken-untuk-proyek/
+│       └── perawatan-kayu-dolken-gelam-agar-awet/
 │
-├── products/                 # ✅ Existing (product-specific blocks)
-│   ├── block--product-rekomendasi.html
-│   └── block--product-keunggulan.html
-│
-├── post-base/                # 🆕 Base template blocks (universal)
-│   ├── block--intro-section.html
-│   ├── block--kesimpulan.html
-│   ├── block--image-carousel.html
-│   └── block--social-metrics.html
-│
-├── post-tutorial/            # 🆕 Tutorial-specific blocks
-│   ├── block--step-by-step-guide.html
-│   ├── block--tips-list.html
-│   ├── block--common-mistakes.html
-│   ├── block--calculator-tool.html
-│   └── block--worksheet-template.html
-│
-├── post-comparison/          # 🆕 Comparison-specific blocks
-│   ├── block--comparison-table.html
-│   ├── block--pros-cons.html
-│   ├── block--feature-matrix.html
-│   └── block--recommendation.html
-│
-├── post-guide/               # 🆕 Guide-specific blocks
-│   ├── block--guide-sections.html
-│   ├── block--best-practices.html
-│   ├── block--quick-reference.html
-│   └── block--do-dont-list.html
-│
-└── [existing shared blocks] # ✅ Keep existing
-    ├── block--faq-kayu-dolken.html
-    ├── block--cara-pemesanan-kayu-dolken.html
-    └── block--testimoni-pelanggan.html
+└── products/                    # ✅ Existing (product-specific blocks)
+    ├── block--product-rekomendasi.html
+    └── block--product-keunggulan.html
 ```
+
+**Note:** Each template type (tutorial, comparison, guide) has its own **complete set of blocks**. No inheritance or shared blocks between templates - each is standalone.
 
 ---
 
 ## 📝 Template Files to Create
 
-### Phase 1: Foundation (Priority: High)
+### Phase 1: Core Templates (Priority: High)
 ```
-├── TEMPLATE--post-base.md          # Base template (all templates extend this)
-├── DOCS--post-template-guide.md    # Documentation for using templates
-├── README--post-templates.md       # Quick reference guide
-└── checklist-post-creation.md      # Content creation workflow
-```
-
-### Phase 2: Specific Templates (Priority: High)
-```
-├── TEMPLATE--post-tutorial.md      # How-to / Step-by-step guides
-├── TEMPLATE--post-comparison.md    # Versus / Comparison articles
-└── TEMPLATE--post-guide.md         # Comprehensive guides
+TEMPLATES/
+├── TEMPLATE--post-tutorial.md      # ✅ CREATED - How-to / Step-by-step guides
+├── TEMPLATE--post-comparison.md    # 🔜 TODO - Versus / Comparison articles
+└── TEMPLATE--post-guide.md         # 🔜 TODO - Comprehensive guides
 ```
 
-### Phase 3: Additional Templates (Priority: Medium)
+### Phase 2: Additional Templates (Priority: Medium)
 ```
+TEMPLATES/
 ├── TEMPLATE--post-listicle.md      # Top 10, Tips, Lists
 ├── TEMPLATE--post-case-study.md    # Project case studies
 └── TEMPLATE--post-review.md        # Product reviews
 ```
 
+### Phase 3: Documentation (Priority: Medium)
+```
+TEMPLATES/
+├── DOCS--post-template-guide.md    # Documentation for using templates
+├── README--post-templates.md       # Quick reference guide
+└── checklist-post-creation.md      # Content creation workflow
+```
+
+**Note:** Each template is **standalone and complete**. No base template or inheritance pattern.
+
 ---
 
 ## 🎯 Template Specifications
 
-### TEMPLATE--post-base.md
-**Purpose:** Foundation for all templates
-**Blocks Required:**
-- ✅ `post-base/block--intro-section.html`
-- ✅ `post-base/block--kesimpulan.html`
-- ✅ `post-base/block--image-carousel.html`
-- ✅ Reuse: `block--faq-kayu-dolken.html`
-- ✅ Reuse: `block--cara-pemesanan-kayu-dolken.html`
-
-**Frontmatter Structure:**
-```yaml
-layout: node--post
-title: "..."
-date: YYYY-MM-DD
-category: [Tutorial, Comparison, Guide, Tips]
-tags: [...]
-author: Admin
-image: /assets/images/posts/{slug}/{slug}-001.webp
-images: [001.webp, 002.webp, 003.webp, 004.webp]
-
-# Social metrics
-like_count: 0
-comment_count: 0
-share_count: 0
-
-# Intro section
-intro:
-  headline: "..."
-  deskripsi: "..."
-  highlight_points: [...]
-
-# Kesimpulan section
-kesimpulan:
-  ringkasan: "..."
-  key_takeaways: [...]
-  cta: "..."
-```
-
----
-
-### TEMPLATE--post-tutorial.md
+### TEMPLATE--post-tutorial.md ✅ CREATED
 **Purpose:** Step-by-step how-to guides
-**Extends:** TEMPLATE--post-base.md
-**Blocks Required:**
-- ✅ All base blocks
-- ✅ `post-tutorial/block--step-by-step-guide.html`
-- ✅ `post-tutorial/block--tips-list.html`
-- ✅ `post-tutorial/block--common-mistakes.html`
-- ✅ `post-tutorial/block--calculator-tool.html` (optional)
+**Status:** Complete
+**Location:** `TEMPLATES/TEMPLATE--post-tutorial.md`
+
+**Blocks Required (all in `_includes/posts/tutorial/`):**
+- ✅ `block--intro-section.html`
+- ✅ `block--tutorial-meta.html` (difficulty, time, tools)
+- ✅ `block--content-section.html` (H2→3×H3→3×H4 structure)
+- ✅ `block--tips-list.html`
+- ✅ `block--common-mistakes.html`
+- ✅ `block--calculator-tool.html` (optional)
+- ✅ `block--kesimpulan.html`
+- ✅ `block--faq.html`
+- ✅ `block--cta-box.html`
 
 **Additional Frontmatter:**
 ```yaml

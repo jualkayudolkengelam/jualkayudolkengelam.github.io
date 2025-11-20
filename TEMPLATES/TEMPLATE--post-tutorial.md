@@ -441,13 +441,13 @@ cta_box:
 
 <!-- Intro Section -->
 <section id="intro-section">
-  {% include post-base/block--intro-section.html %}
+  {% include posts/tutorial/block--intro-section.html %}
 </section>
 
 <!-- Tutorial Meta (difficulty, time, tools) -->
 {% if page.tutorial_meta %}
 <section id="tutorial-meta">
-  {% include post-tutorial/block--tutorial-meta.html %}
+  {% include posts/tutorial/block--tutorial-meta.html %}
 </section>
 {% endif %}
 
@@ -455,65 +455,65 @@ cta_box:
 {% for item in page.sections %}
 <section id="{{ item.section.id | default: 'section' }}"
          class="content-section {{ item.section.css_class | default: '' }}">
-  {% include post-base/block--content-section.html section=item.section %}
+  {% include posts/tutorial/block--content-section.html section=item.section %}
 </section>
 {% endfor %}
 
 <!-- Tips Section (Tutorial specific) -->
 {% if page.tips %}
 <section id="tips-section">
-  {% include post-tutorial/block--tips-list.html %}
+  {% include posts/tutorial/block--tips-list.html %}
 </section>
 {% endif %}
 
 <!-- Common Mistakes Section (Tutorial specific) -->
 {% if page.common_mistakes %}
 <section id="common-mistakes-section">
-  {% include post-tutorial/block--common-mistakes.html %}
+  {% include posts/tutorial/block--common-mistakes.html %}
 </section>
 {% endif %}
 
 <!-- Calculator Tool (Tutorial specific) -->
 {% if page.calculator.show %}
 <section id="calculator-section">
-  {% include post-tutorial/block--calculator-tool.html %}
+  {% include posts/tutorial/block--calculator-tool.html %}
 </section>
 {% endif %}
 
 <!-- Image Carousel (if multiple images) -->
 {% if page.images.size > 1 %}
 <section id="image-carousel">
-  {% include post-base/block--image-carousel.html %}
+  {% include posts/tutorial/block--image-carousel.html %}
 </section>
 {% endif %}
 
 <!-- Kesimpulan Section -->
 <section id="kesimpulan-section">
-  {% include post-base/block--kesimpulan.html %}
+  {% include posts/tutorial/block--kesimpulan.html %}
 </section>
 
 <!-- FAQ Section -->
 {% if page.faq %}
 <section id="faq-section">
-  {% include post-base/block--faq.html %}
+  {% include posts/tutorial/block--faq.html %}
 </section>
 {% endif %}
 
 <!-- Related Products -->
 {% if page.related_products.show %}
 <section id="related-products">
-  {% include post-base/block--related-products.html %}
+  {% include posts/tutorial/block--related-products.html %}
 </section>
 {% endif %}
 
 <!-- CTA Box -->
 {% if page.cta_box.show %}
 <section id="cta-box">
-  {% include post-base/block--cta-box.html %}
+  {% include posts/tutorial/block--cta-box.html %}
 </section>
 {% endif %}
 
 <!-- Social Sharing -->
 <section id="social-sharing">
-  {% include post-base/block--social-sharing.html %}
+  {% include posts/tutorial/block--social-sharing.html %}
 </section>

@@ -535,9 +535,14 @@ section:
 ### Layer 2: Block Include
 ```liquid
 {% for item in page.sections %}
-  {% include post-base/block--section.html section=item.section %}
+  {% include posts/tutorial/block--content-section.html section=item.section %}
 {% endfor %}
 ```
+
+**Note:** Path depends on template type:
+- Tutorial: `posts/tutorial/`
+- Comparison: `posts/comparison/`
+- Guide: `posts/guide/`
 
 ### Layer 3: HTML Block
 ```html
