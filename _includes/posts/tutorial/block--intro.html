@@ -1,0 +1,79 @@
+{% comment %}
+  ============================================================================
+  Intro Block Component
+  ============================================================================
+
+  @file        _includes/posts/tutorial/block--intro.html
+  @description Reusable component for tutorial intro section with headline and highlights
+
+  @version     1.0.0
+  @date        2025-11-20
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - Intro section dengan headline catchy
+  - Deskripsi pembuka artikel
+  - Highlight points (bullet list dengan icon)
+  - Clean card design dengan shadow
+
+  Parameters:
+  -----------
+  - page.intro: Object containing:
+    - headline: Catchy headline (1 kalimat)
+    - deskripsi: Deskripsi pembuka (2-3 kalimat)
+    - highlight_points: Array of key takeaways/benefits
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  intro:
+    headline: "Panduan Lengkap untuk Pemula"
+    deskripsi: "Dalam artikel ini, Anda akan mempelajari..."
+    highlight_points:
+      - "Memahami dasar-dasar kayu dolken"
+      - "Cara memilih ukuran yang tepat"
+      - "Tips menghemat budget"
+  ---
+
+  In content:
+  <section id="intro">
+    {% include posts/tutorial/block--intro.html %}
+  </section>
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.intro %}
+<!-- Intro Card -->
+<div class="card border-0 shadow-sm my-4">
+    <div class="card-body p-4">
+      {% if page.intro.headline %}
+      <h2 class="h3 text-wood fw-bold mb-3">
+        <i class="bi bi-book-half me-2 text-primary"></i>{{ page.intro.headline }}
+      </h2>
+      {% endif %}
+
+      {% if page.intro.deskripsi %}
+      <p class="mb-4 text-muted">{{ page.intro.deskripsi }}</p>
+      {% endif %}
+
+      {% if page.intro.highlight_points %}
+      <div class="bg-light p-3 rounded-3">
+        <h3 class="h6 fw-bold text-wood mb-3">
+          <i class="bi bi-stars text-warning me-2"></i>Yang Akan Anda Pelajari:
+        </h3>
+        <ul class="list-unstyled mb-0">
+          {% for point in page.intro.highlight_points %}
+          <li class="{% if forloop.last %}mb-0{% else %}mb-2{% endif %}">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            <span class="small">{{ point }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,167 @@
+<!-- Section 1: Hardcoded, No Loop -->
+<div class="my-5">
+  <div class="card border-0 shadow-lg">
+    <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);">
+      <i class="{{ page.section_1.icon }} mb-2" style="font-size: 2.5rem;"></i>
+      <h2 class="h2 mb-0 fw-bold text-white">{{ page.section_1.title }}</h2>
+      <p class="mb-0 mt-3 lead" style="opacity: 0.95;">{{ page.section_1.intro }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Overview (Optional) -->
+{% if page.section_1.overview_title %}
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3 bg-{{ page.section_1.overview_color | default: 'primary' }} bg-opacity-10 px-3 py-2 rounded-3">
+    <div class="flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="{{ page.section_1.overview_icon }} text-{{ page.section_1.overview_color | default: 'primary' }} me-2"></i>{{ page.section_1.overview_title }}
+      </h3>
+      {% if page.section_1.overview_subtitle %}
+      <p class="small text-muted mb-0 mt-1">{{ page.section_1.overview_subtitle }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<!-- Cards: Hardcoded card-1, card-2, card-3 -->
+<div class="row g-3 my-4">
+
+  <!-- Card 1 -->
+  <div class="col-12 col-sm-6 col-lg-4">
+    <div id="card-1" class="card border-0 shadow-sm h-100 hover-lift">
+      <div class="card-body">
+        <div class="d-flex align-items-start mb-3">
+          <div class="bg-{{ page.section_1.card_1.color | default: 'primary' }} bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3" style="width: 50px; height: 50px;">
+            <i class="{{ page.section_1.card_1.icon }} text-{{ page.section_1.card_1.color | default: 'primary' }}" style="font-size: 1.5rem;"></i>
+          </div>
+          <div class="flex-grow-1">
+            <h3 class="h5 text-wood mb-0 fw-bold">{{ page.section_1.card_1.title }}</h3>
+          </div>
+        </div>
+
+        <p class="text-muted mb-2">{{ page.section_1.card_1.paragraph_1 }}</p>
+        <p class="text-muted mb-3">{{ page.section_1.card_1.paragraph_2 }}</p>
+
+        <div class="mt-3">
+          <div id="detail-1" class="mb-3 pb-3 border-bottom">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-arrow-right-circle text-{{ page.section_1.card_1.color | default: 'primary' }} me-2"></i>{{ page.section_1.card_1.detail_1.h4 }}
+            </h4>
+            <p class="small text-muted mb-0">{{ page.section_1.card_1.detail_1.paragraph }}</p>
+          </div>
+
+          <div id="detail-2" class="mb-3 pb-3 border-bottom">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-arrow-right-circle text-{{ page.section_1.card_1.color | default: 'primary' }} me-2"></i>{{ page.section_1.card_1.detail_2.h4 }}
+            </h4>
+            <p class="small text-muted mb-0">{{ page.section_1.card_1.detail_2.paragraph }}</p>
+          </div>
+
+          <div id="detail-3" class="mb-3">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-arrow-right-circle text-{{ page.section_1.card_1.color | default: 'primary' }} me-2"></i>{{ page.section_1.card_1.detail_3.h4 }}
+            </h4>
+            <p class="small text-muted mb-0">{{ page.section_1.card_1.detail_3.paragraph }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="col-12 col-sm-6 col-lg-4">
+    <div id="card-2" class="card border-0 shadow-sm h-100 hover-lift">
+      <div class="card-body">
+        <div class="d-flex align-items-start mb-3">
+          <div class="bg-{{ page.section_1.card_2.color | default: 'primary' }} bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3" style="width: 50px; height: 50px;">
+            <i class="{{ page.section_1.card_2.icon }} text-{{ page.section_1.card_2.color | default: 'primary' }}" style="font-size: 1.5rem;"></i>
+          </div>
+          <div class="flex-grow-1">
+            <h3 class="h5 text-wood mb-0 fw-bold">{{ page.section_1.card_2.title }}</h3>
+          </div>
+        </div>
+
+        <p class="text-muted mb-2">{{ page.section_1.card_2.paragraph_1 }}</p>
+        <p class="text-muted mb-3">{{ page.section_1.card_2.paragraph_2 }}</p>
+
+        <div class="mt-3">
+          <div id="detail-1" class="mb-3 pb-3 border-bottom">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-arrow-right-circle text-{{ page.section_1.card_2.color | default: 'primary' }} me-2"></i>{{ page.section_1.card_2.detail_1.h4 }}
+            </h4>
+            <p class="small text-muted mb-0">{{ page.section_1.card_2.detail_1.paragraph }}</p>
+          </div>
+
+          <div id="detail-2" class="mb-3 pb-3 border-bottom">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-arrow-right-circle text-{{ page.section_1.card_2.color | default: 'primary' }} me-2"></i>{{ page.section_1.card_2.detail_2.h4 }}
+            </h4>
+            <p class="small text-muted mb-0">{{ page.section_1.card_2.detail_2.paragraph }}</p>
+          </div>
+
+          <div id="detail-3" class="mb-3">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-arrow-right-circle text-{{ page.section_1.card_2.color | default: 'primary' }} me-2"></i>{{ page.section_1.card_2.detail_3.h4 }}
+            </h4>
+            <p class="small text-muted mb-0">{{ page.section_1.card_2.detail_3.paragraph }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="col-12 col-sm-6 col-lg-4">
+    <div id="card-3" class="card border-0 shadow-sm h-100 hover-lift">
+      <div class="card-body">
+        <div class="d-flex align-items-start mb-3">
+          <div class="bg-{{ page.section_1.card_3.color | default: 'primary' }} bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3" style="width: 50px; height: 50px;">
+            <i class="{{ page.section_1.card_3.icon }} text-{{ page.section_1.card_3.color | default: 'primary' }}" style="font-size: 1.5rem;"></i>
+          </div>
+          <div class="flex-grow-1">
+            <h3 class="h5 text-wood mb-0 fw-bold">{{ page.section_1.card_3.title }}</h3>
+          </div>
+        </div>
+
+        <p class="text-muted mb-2">{{ page.section_1.card_3.paragraph_1 }}</p>
+        <p class="text-muted mb-3">{{ page.section_1.card_3.paragraph_2 }}</p>
+
+        <div class="mt-3">
+          <div id="detail-1" class="mb-3 pb-3 border-bottom">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-arrow-right-circle text-{{ page.section_1.card_3.color | default: 'primary' }} me-2"></i>{{ page.section_1.card_3.detail_1.h4 }}
+            </h4>
+            <p class="small text-muted mb-0">{{ page.section_1.card_3.detail_1.paragraph }}</p>
+          </div>
+
+          <div id="detail-2" class="mb-3 pb-3 border-bottom">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-arrow-right-circle text-{{ page.section_1.card_3.color | default: 'primary' }} me-2"></i>{{ page.section_1.card_3.detail_2.h4 }}
+            </h4>
+            <p class="small text-muted mb-0">{{ page.section_1.card_3.detail_2.paragraph }}</p>
+          </div>
+
+          <div id="detail-3" class="mb-3">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-arrow-right-circle text-{{ page.section_1.card_3.color | default: 'primary' }} me-2"></i>{{ page.section_1.card_3.detail_3.h4 }}
+            </h4>
+            <p class="small text-muted mb-0">{{ page.section_1.card_3.detail_3.paragraph }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<style>
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+}
+</style>

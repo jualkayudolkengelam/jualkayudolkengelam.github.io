@@ -1,0 +1,163 @@
+{% comment %}
+  ============================================================================
+  Tutorial Calculator Tool Block Component
+  ============================================================================
+
+  @file        _includes/posts/tutorial/block--calculator-tool.html
+  @description Interactive calculator tool for tutorial calculations
+  @version     1.0.0
+  @date        2025-11-20
+  @author      arisciwek
+
+  Features:
+  ---------
+  - Dynamic input fields based on configuration
+  - JavaScript-powered real-time calculation
+  - Result display with formatting
+  - Form validation
+  - Mobile-responsive layout
+
+  Parameters:
+  -----------
+  - page.calculator_section.show: true/false
+  - page.calculator_section.title: Calculator title
+  - page.calculator_section.description: Short description
+  - page.calculator_section.inputs: Array of input objects
+    - name: Input field name
+    - label: Display label
+    - type: "number" | "text"
+    - placeholder: Placeholder text
+  - page.calculator_section.formula: JavaScript formula string
+  - page.calculator_section.result_label: Result label text
+
+  Usage:
+  ------
+  {% include posts/tutorial/block--calculator-tool.html %}
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.calculator_section.show %}
+<div class="my-5 calculator-section-wrapper">
+  <!-- Section Header -->
+  <div class="card border-0 calculator-section-header-card shadow-lg mb-4">
+    <div class="card-body text-white text-center py-4" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);">
+      <i class="bi bi-calculator-fill mb-2" style="font-size: 2.5rem;"></i>
+      <h2 class="h2 mb-0 fw-bold text-white">{{ page.calculator_section.title | default: "Kalkulator" }}</h2>
+      <p class="mb-0 mt-2 small" style="opacity: 0.9;">{{ page.calculator_section.description | default: "Hitung kebutuhan Anda dengan mudah" }}</p>
+    </div>
+  </div>
+
+  <!-- Calculator Form -->
+  <div class="card border-0 calculator-form-card shadow-sm">
+    <div class="card-body p-4">
+      <form id="calculator-form" class="needs-validation calculator-form" novalidate>
+        <div class="row g-3 calculator-inputs-grid">
+          {% for input in page.calculator_section.inputs %}
+          <div class="col-12 col-sm-6 calculator-input-col">
+            <label for="calc-{{ input.name }}" class="form-label fw-bold">{{ input.label }}</label>
+            <input
+              type="{{ input.type | default: 'number' }}"
+              class="form-control form-control-lg calculator-input-field"
+              id="calc-{{ input.name }}"
+              name="{{ input.name }}"
+              placeholder="{{ input.placeholder }}"
+              {% if input.type == 'number' or input.type == nil %}
+              min="0" step="any"
+              {% endif %}
+              required>
+            <div class="invalid-feedback">
+              Mohon isi {{ input.label | downcase }}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="d-grid gap-2 mt-4">
+          <button type="submit" class="btn btn-primary btn-lg calculator-submit-btn">
+            <i class="bi bi-calculator me-2"></i>Hitung Sekarang
+          </button>
+        </div>
+      </form>
+
+      <!-- Result Display -->
+      <div id="calculator-result" class="mt-4 d-none calculator-result-wrapper">
+        <div class="alert alert-success border-0 shadow-sm calculator-result-alert" role="alert">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-check-circle-fill fs-3 me-3"></i>
+            <div class="flex-grow-1">
+              <h3 class="h5 mb-1 fw-bold">{{ page.calculator_section.result_label | default: "Hasil Perhitungan" }}</h3>
+              <p class="mb-2 fs-4 fw-bold text-success" id="result-value">-</p>
+              <div class="d-flex align-items-center gap-2 calculator-rounded-result">
+                <span class="small text-muted">Dibulatkan menjadi:</span>
+                <span class="badge bg-success fs-6 px-3 py-2" id="result-rounded">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const form = document.getElementById('calculator-form');
+  const resultDiv = document.getElementById('calculator-result');
+  const resultValue = document.getElementById('result-value');
+
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      e.stopPropagation();
+      form.classList.add('was-validated');
+      return;
+    }
+
+    // Get form values
+    const formData = new FormData(form);
+    const values = {};
+    for (let [key, value] of formData.entries()) {
+      values[key] = parseFloat(value) || 0;
+    }
+
+    // Calculate result
+    {% if page.calculator_section.formula %}
+    try {
+      // Eval formula with values
+      {% assign formula = page.calculator_section.formula %}
+      const result = {{ formula | replace: 'panjang', 'values.panjang' | replace: 'jarak', 'values.jarak' }};
+      const rounded = Math.ceil(result);
+
+      // Display result with decimals
+      resultValue.textContent = result.toLocaleString('id-ID', {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 3
+      }) + ' batang';
+
+      // Display rounded result
+      const roundedElement = document.getElementById('result-rounded');
+      if (roundedElement) {
+        roundedElement.textContent = rounded.toLocaleString('id-ID') + ' batang';
+      }
+
+      resultDiv.classList.remove('d-none');
+
+      // Scroll to result
+      resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } catch (error) {
+      console.error('Calculation error:', error);
+      resultValue.textContent = 'Error dalam perhitungan';
+      resultDiv.classList.remove('d-none');
+    }
+    {% else %}
+    resultValue.textContent = 'Formula tidak tersedia';
+    resultDiv.classList.remove('d-none');
+    {% endif %}
+  });
+})();
+</script>
+{% endif %}
