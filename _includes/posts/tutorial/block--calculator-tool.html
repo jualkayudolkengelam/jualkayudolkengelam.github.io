@@ -87,7 +87,11 @@
             <i class="bi bi-check-circle-fill fs-3 me-3"></i>
             <div class="flex-grow-1">
               <h3 class="h5 mb-1 fw-bold">{{ page.calculator.result_label | default: "Hasil Perhitungan" }}</h3>
-              <p class="mb-0 fs-4 fw-bold text-success" id="result-value">-</p>
+              <p class="mb-2 fs-4 fw-bold text-success" id="result-value">-</p>
+              <div class="d-flex align-items-center gap-2 calculator-rounded-result">
+                <span class="small text-muted">Dibulatkan menjadi:</span>
+                <span class="badge bg-success fs-6 px-3 py-2" id="result-rounded">-</span>
+              </div>
             </div>
           </div>
         </div>
@@ -126,9 +130,20 @@
       // Eval formula with values
       {% assign formula = page.calculator.formula %}
       const result = {{ formula | replace: 'panjang', 'values.panjang' | replace: 'jarak', 'values.jarak' }};
+      const rounded = Math.ceil(result);
 
-      // Display result
-      resultValue.textContent = Math.ceil(result).toLocaleString('id-ID') + ' batang';
+      // Display result with decimals
+      resultValue.textContent = result.toLocaleString('id-ID', {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 3
+      }) + ' batang';
+
+      // Display rounded result
+      const roundedElement = document.getElementById('result-rounded');
+      if (roundedElement) {
+        roundedElement.textContent = rounded.toLocaleString('id-ID') + ' batang';
+      }
+
       resultDiv.classList.remove('d-none');
 
       // Scroll to result
