@@ -1,0 +1,51 @@
+{% comment %}
+  ============================================================================
+  Tutorial CTA Box Block Component
+  ============================================================================
+
+  @file        _includes/posts/tutorial/block--cta-box.html
+  @description Call-to-Action box with button
+  @version     1.0.0
+  @date        2025-11-20
+  @author      arisciwek
+
+  Features:
+  ---------
+  - Eye-catching CTA box
+  - Icon and color customization
+  - Action button with link
+  - Responsive layout
+
+  Parameters:
+  -----------
+  - page.cta_box.show: true/false
+  - page.cta_box.title: CTA title
+  - page.cta_box.description: CTA description
+  - page.cta_box.button_text: Button text
+  - page.cta_box.button_url: Button link URL
+  - page.cta_box.icon: Bootstrap icon
+  - page.cta_box.color: Bootstrap color (success, primary, warning, etc)
+
+  Usage:
+  ------
+  {% include posts/tutorial/block--cta-box.html %}
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.cta_box.show %}
+<div class="my-5">
+  <div class="card border-0 shadow-lg bg-{{ page.cta_box.color | default: 'success' }} bg-opacity-10 border-{{ page.cta_box.color | default: 'success' }} border-4">
+    <div class="card-body text-center py-5">
+      <div class="mb-3">
+        <i class="{{ page.cta_box.icon | default: 'bi-whatsapp' }} text-{{ page.cta_box.color | default: 'success' }}" style="font-size: 3rem;"></i>
+      </div>
+      <h2 class="h3 mb-3 fw-bold text-wood">{{ page.cta_box.title | default: "Butuh Bantuan?" }}</h2>
+      <p class="lead mb-4 text-muted">{{ page.cta_box.description | default: "Hubungi kami untuk konsultasi gratis" }}</p>
+      <a href="{{ page.cta_box.button_url | default: 'https://wa.me/6281311400177' }}" class="btn btn-{{ page.cta_box.color | default: 'success' }} btn-lg shadow-sm" target="_blank" rel="noopener">
+        <i class="{{ page.cta_box.icon | default: 'bi-whatsapp' }} me-2"></i>{{ page.cta_box.button_text | default: "Hubungi Sekarang" }}
+      </a>
+    </div>
+  </div>
+</div>
+{% endif %}

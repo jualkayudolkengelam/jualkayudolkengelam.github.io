@@ -1,0 +1,77 @@
+{% comment %}
+  ============================================================================
+  Tutorial Related Products Block Component
+  ============================================================================
+
+  @file        _includes/posts/tutorial/block--related-products.html
+  @description Display related products at end of tutorial
+  @version     1.0.0
+  @date        2025-11-20
+  @author      arisciwek
+
+  Features:
+  ---------
+  - Product cards with images
+  - Responsive grid layout
+  - Hover effects
+  - Link to product pages
+
+  Parameters:
+  -----------
+  - page.related_products.show: true/false
+  - page.related_products.title: Section title
+  - page.related_products.products: Array of product objects
+    - title: Product title
+    - url: Product page URL
+    - image: Product image URL
+
+  Usage:
+  ------
+  {% include posts/tutorial/block--related-products.html %}
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.related_products.show and page.related_products.products %}
+<div class="my-5">
+  <!-- Section Header -->
+  <div class="card border-0 shadow-lg mb-4">
+    <div class="card-body text-white text-center py-4" style="background: linear-gradient(135deg, #8b5a3c 0%, #6d4c41 50%, #5d4037 100%);">
+      <i class="bi bi-box-seam-fill mb-2" style="font-size: 2.5rem;"></i>
+      <h2 class="h2 mb-0 fw-bold text-white">{{ page.related_products.title | default: "Produk Terkait" }}</h2>
+      <p class="mb-0 mt-2 small" style="opacity: 0.9;">Produk yang mungkin Anda butuhkan</p>
+    </div>
+  </div>
+
+  <!-- Products Grid -->
+  <div class="row g-3">
+    {% for product in page.related_products.products %}
+    <div class="col-md-6 col-lg-4">
+      <a href="{{ product.url }}" class="text-decoration-none">
+        <div class="card border-0 shadow-sm h-100 hover-lift">
+          <img src="{{ product.image }}" class="card-img-top" alt="{{ product.title }}" loading="lazy">
+          <div class="card-body">
+            <h3 class="h6 fw-bold text-wood mb-0">{{ product.title }}</h3>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <span class="btn btn-sm btn-outline-primary">
+              Lihat Produk <i class="bi bi-arrow-right ms-1"></i>
+            </span>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+}
+</style>
+{% endif %}

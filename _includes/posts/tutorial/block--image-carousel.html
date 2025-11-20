@@ -1,0 +1,63 @@
+{% comment %}
+  ============================================================================
+  Tutorial Image Carousel Block Component
+  ============================================================================
+
+  @file        _includes/posts/tutorial/block--image-carousel.html
+  @description Bootstrap carousel for tutorial images
+  @version     1.0.0
+  @date        2025-11-20
+  @author      arisciwek
+
+  Features:
+  ---------
+  - Bootstrap 5 carousel
+  - Responsive images
+  - Navigation controls
+  - Indicators
+  - Auto-play option
+
+  Parameters:
+  -----------
+  - page.images: Array of image URLs
+
+  Usage:
+  ------
+  {% include posts/tutorial/block--image-carousel.html %}
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.images and page.images.size > 1 %}
+<div class="my-5">
+  <div class="card border-0 shadow-lg">
+    <div id="tutorialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        {% for image in page.images %}
+        <button type="button" data-bs-target="#tutorialCarousel" data-bs-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active" aria-current="true"{% endif %} aria-label="Slide {{ forloop.index }}"></button>
+        {% endfor %}
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+        {% for image in page.images %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <img src="{{ image }}" class="d-block w-100" alt="{{ page.title }} - Gambar {{ forloop.index }}" loading="lazy">
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#tutorialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#tutorialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+{% endif %}
