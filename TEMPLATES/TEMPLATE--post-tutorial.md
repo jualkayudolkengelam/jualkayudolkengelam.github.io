@@ -466,7 +466,7 @@ cta_box:
 {% for item in page.sections %}
 <section id="{{ item.section.id | default: 'section' }}"
          class="content-section {{ item.section.css_class | default: '' }}">
-  {% include posts/tutorial/block--content-section.html section=item.section %}
+  {% include posts/tutorial/block--content-section.html item=item %}
 </section>
 {% endfor %}
 

@@ -78,14 +78,14 @@
 
 {% if data %}
   {% assign section = data.section %}
+{% elsif item %}
+  {% assign section = item.section %}
 {% elsif section %}
   {% comment %}section already passed{% endcomment %}
 {% else %}
-  <!-- ERROR: Neither data nor section parameter provided -->
+  <!-- ERROR: Neither data, item, nor section parameter provided -->
 {% endif %}
 
-<!-- DEBUG data: {{ data | jsonify | slice: 0, 200 }} -->
-<!-- DEBUG section: {{ section | jsonify | slice: 0, 200 }} -->
 
 <!-- H2: Main Section Header -->
 <div class="my-5 content-section-header-wrapper">
