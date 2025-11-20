@@ -242,7 +242,7 @@ calculator:
       label: "Jarak Antar Tiang (meter)"
       type: "number"
       placeholder: "Contoh: 1.5"
-  formula: "(panjang * 100) / jarak"
+  formula: "panjang / jarak"
   result_label: "Jumlah Dolken yang Dibutuhkan"
 
 # Kesimpulan
