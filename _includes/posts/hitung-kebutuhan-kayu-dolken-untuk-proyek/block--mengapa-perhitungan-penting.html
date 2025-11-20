@@ -1,0 +1,122 @@
+{% comment %}
+============================================================================
+Block: Mengapa Perhitungan Akurat Penting
+============================================================================
+
+@file        block--mengapa-perhitungan-penting.html
+@path        _includes/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/block--mengapa-perhitungan-penting.html
+@type        Content Block
+@description Menjelaskan pentingnya perhitungan yang akurat
+@usage       {% include posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/block--mengapa-perhitungan-penting.html %}
+
+Data yang digunakan dari frontmatter:
+- page.labels.mengapa_perhitungan_title
+- page.mengapa_perhitungan.terlalu_sedikit
+- page.mengapa_perhitungan.terlalu_banyak
+- page.mengapa_perhitungan.perhitungan_tepat
+
+============================================================================
+{% endcomment %}
+
+<div class="mengapa-perhitungan-penting py-5">
+  <div class="container-fluid px-0">
+
+    <!-- H2: Main Section Header -->
+    <div class="my-4">
+      <div class="card border-0 shadow-lg">
+        <div class="card-body text-white text-center py-4 px-3 bg-gradient-blue-header">
+          <i class="bi bi-calculator-fill mb-2 fs-2-5rem"></i>
+          <h2 class="h2 mb-0 fw-bold text-white">{{ page.labels.mengapa_perhitungan_title | default: "Mengapa Perhitungan Akurat Penting?" }}</h2>
+          <p class="mb-0 mt-2 small opacity-85">
+            <i class="bi bi-star me-1"></i>
+            Dampak dari perhitungan yang tidak tepat
+            <i class="bi bi-star ms-1"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison Cards -->
+    {% if page.mengapa_perhitungan %}
+    <div class="row g-4 my-4">
+
+      <!-- Terlalu Sedikit -->
+      {% assign sedikit = page.mengapa_perhitungan.terlalu_sedikit %}
+      <div class="col-lg-4">
+        <div class="card border-0 shadow-lg h-100 hover-lift">
+          <div class="card-header py-3 text-white bg-gradient-{{ sedikit.warna }}-card">
+            <div class="text-center">
+              <i class="bi {{ sedikit.icon }} fs-3rem"></i>
+              <h3 class="h4 fw-bold mb-0 mt-2">{{ sedikit.judul }}</h3>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <ul class="list-unstyled mb-0">
+              {% for poin in sedikit.poin %}
+              <li class="mb-3">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-x-circle-fill text-{{ sedikit.warna }} me-2 mt-1"></i>
+                  <span class="text-dark">{{ poin }}</span>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terlalu Banyak -->
+      {% assign banyak = page.mengapa_perhitungan.terlalu_banyak %}
+      <div class="col-lg-4">
+        <div class="card border-0 shadow-lg h-100 hover-lift">
+          <div class="card-header py-3 text-white bg-gradient-{{ banyak.warna }}-card">
+            <div class="text-center">
+              <i class="bi {{ banyak.icon }} fs-3rem"></i>
+              <h3 class="h4 fw-bold mb-0 mt-2">{{ banyak.judul }}</h3>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <ul class="list-unstyled mb-0">
+              {% for poin in banyak.poin %}
+              <li class="mb-3">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-x-circle-fill text-{{ banyak.warna }} me-2 mt-1"></i>
+                  <span class="text-dark">{{ poin }}</span>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Perhitungan Tepat -->
+      {% assign tepat = page.mengapa_perhitungan.perhitungan_tepat %}
+      <div class="col-lg-4">
+        <div class="card border-0 shadow-lg h-100 hover-lift">
+          <div class="card-header py-3 text-white bg-gradient-{{ tepat.warna }}-card">
+            <div class="text-center">
+              <i class="bi {{ tepat.icon }} fs-3rem"></i>
+              <h3 class="h4 fw-bold mb-0 mt-2">{{ tepat.judul }}</h3>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <ul class="list-unstyled mb-0">
+              {% for poin in tepat.poin %}
+              <li class="mb-3">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill text-{{ tepat.warna }} me-2 mt-1"></i>
+                  <span class="text-dark">{{ poin }}</span>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    {% endif %}
+
+  </div>
+</div>

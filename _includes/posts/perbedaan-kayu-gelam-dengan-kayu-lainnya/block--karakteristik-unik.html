@@ -1,0 +1,146 @@
+{% comment %}
+============================================================================
+Block: Karakteristik Unik Kayu Gelam
+============================================================================
+
+@file        block--karakteristik-unik.html
+@path        _includes/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/block--karakteristik-unik.html
+@type        Content Block
+@description Menampilkan karakteristik unik dan spesifikasi dasar kayu gelam
+@usage       {% include posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/block--karakteristik-unik.html %}
+
+Data yang digunakan dari frontmatter:
+- page.karakteristik_unik (object)
+  - nama_ilmiah: string
+  - kepadatan: string
+  - warna: string
+  - habitat: string
+  - kelas_kekuatan: string
+  - subtitle: string
+
+============================================================================
+{% endcomment %}
+
+<div class="karakteristik-unik py-5">
+  <div class="container-fluid px-0">
+
+    <!-- H2: Main Section Header -->
+    <div class="my-4">
+      <div class="card border-0 shadow-lg">
+        <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);">
+          <i class="bi bi-star-fill mb-2" style="font-size: 2.5rem;"></i>
+          <h2 class="h2 mb-0 fw-bold text-white">Karakteristik Unik Kayu Gelam</h2>
+          <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+            <i class="bi bi-star me-1"></i>
+            Spesifikasi dasar yang membedakan kayu gelam dari yang lain
+            <i class="bi bi-star ms-1"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {% if page.karakteristik_unik %}
+    <div class="my-4">
+      <div class="d-flex align-items-center mb-3">
+        <div class="bg-purple bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+          <h3 class="h4 mb-0 fw-bold" style="color: #7c3aed;">
+            <i class="bi bi-info-circle-fill me-2" style="color: #7c3aed;"></i>Spesifikasi Dasar
+          </h3>
+          {% if page.karakteristik_unik.subtitle %}
+          <p class="small text-muted mb-0 mt-1">{{ page.karakteristik_unik.subtitle }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="card border-0 shadow-sm h-100 hover-lift">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <i class="bi bi-clipboard-data-fill fs-3rem me-3 flex-shrink-0 opacity-85" style="color: #7c3aed;"></i>
+                <div class="flex-grow-1">
+                  <h4 class="h6 fw-bold mb-2" style="color: #7c3aed;">Nama Ilmiah</h4>
+                  <p class="mb-0 text-dark">{{ page.karakteristik_unik.nama_ilmiah }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card border-0 shadow-sm h-100 hover-lift">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <i class="bi bi-speedometer text-success fs-3rem me-3 flex-shrink-0 opacity-85"></i>
+                <div class="flex-grow-1">
+                  <h4 class="h6 fw-bold mb-2 text-success">Kepadatan</h4>
+                  <p class="mb-0 text-dark">{{ page.karakteristik_unik.kepadatan }}</p>
+                  <small class="text-muted">(sangat padat)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card border-0 shadow-sm h-100 hover-lift">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <i class="bi bi-palette-fill text-warning fs-3rem me-3 flex-shrink-0 opacity-85"></i>
+                <div class="flex-grow-1">
+                  <h4 class="h6 fw-bold mb-2 text-warning">Warna</h4>
+                  <p class="mb-0 text-dark">{{ page.karakteristik_unik.warna }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card border-0 shadow-sm h-100 hover-lift">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <i class="bi bi-geo-alt-fill text-info fs-3rem me-3 flex-shrink-0 opacity-85"></i>
+                <div class="flex-grow-1">
+                  <h4 class="h6 fw-bold mb-2 text-info">Habitat</h4>
+                  <p class="mb-0 text-dark">{{ page.karakteristik_unik.habitat }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card border-0 shadow-sm h-100 hover-lift">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <i class="bi bi-award-fill text-danger fs-3rem me-3 flex-shrink-0 opacity-85"></i>
+                <div class="flex-grow-1">
+                  <h4 class="h6 fw-bold mb-2 text-danger">Kelas Kekuatan</h4>
+                  <p class="mb-0 text-dark">{{ page.karakteristik_unik.kelas_kekuatan }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card border-0 shadow-sm h-100 hover-lift">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <i class="bi bi-clock-history fs-3rem me-3 flex-shrink-0 opacity-85" style="color: #7c3aed;"></i>
+                <div class="flex-grow-1">
+                  <h4 class="h6 fw-bold mb-2" style="color: #7c3aed;">Daya Tahan</h4>
+                  <p class="mb-0 text-dark">{{ page.karakteristik_unik.daya_tahan }}</p>
+                  <small class="text-muted">(penggunaan outdoor)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</div>

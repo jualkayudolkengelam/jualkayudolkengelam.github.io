@@ -1,0 +1,116 @@
+{% comment %}
+============================================================================
+Block: DIY vs Professional Service
+============================================================================
+
+@file        block--diy-vs-professional.html
+@path        _includes/posts/perawatan-kayu-dolken-gelam-agar-awet/block--diy-vs-professional.html
+@type        Content Block
+@description Kapan cukup DIY dan kapan perlu profesional
+@usage       {% include posts/perawatan-kayu-dolken-gelam-agar-awet/block--diy-vs-professional.html %}
+
+Data yang digunakan dari frontmatter:
+- page.diy_vs_professional.diy (object)
+- page.diy_vs_professional.professional (object)
+
+============================================================================
+{% endcomment %}
+
+<div class="diy-vs-professional py-5">
+  <div class="container-xxl">
+
+    <!-- H2: Main Section Header -->
+    <div class="my-4">
+      <div class="card border-0 shadow-lg">
+        <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);">
+          <i class="bi bi-person-fill-gear mb-2" style="font-size: 2.5rem;"></i>
+          <h2 class="h2 mb-0 fw-bold text-white">{{ page.labels.diy_vs_professional_title | default: "DIY vs Jasa Profesional" }}</h2>
+          <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+            <i class="bi bi-star me-1"></i>
+            Pilih pendekatan yang tepat untuk perawatan Anda
+            <i class="bi bi-star ms-1"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {% if page.diy_vs_professional %}
+    <div class="row g-4 my-4">
+
+      <!-- DIY -->
+      {% if page.diy_vs_professional.diy %}
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-lg h-100 hover-lift">
+
+          <div class="card-header py-3 text-white" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+            <div class="d-flex align-items-center">
+              <i class="bi {{ page.diy_vs_professional.diy.icon }} me-3" style="font-size: 2.5rem;"></i>
+              <h3 class="h4 mb-0 fw-bold">{{ page.diy_vs_professional.diy.judul }}</h3>
+            </div>
+          </div>
+
+          <div class="card-body p-4">
+            <ul class="list-unstyled mb-0">
+              {% for item in page.diy_vs_professional.diy.items %}
+              <li class="mb-3">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill text-success me-2 mt-1" style="font-size: 1.25rem;"></i>
+                  <span class="text-dark">{{ item }}</span>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="card-footer bg-success bg-opacity-10 border-0 py-3">
+            <p class="small text-muted mb-0 text-center">
+              <i class="bi bi-lightbulb-fill text-success me-1"></i>
+              <strong>Cocok untuk:</strong> Perawatan rutin dan pekerjaan sederhana
+            </p>
+          </div>
+
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Professional -->
+      {% if page.diy_vs_professional.professional %}
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-lg h-100 hover-lift">
+
+          <div class="card-header py-3 text-white" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+            <div class="d-flex align-items-center">
+              <i class="bi {{ page.diy_vs_professional.professional.icon }} me-3" style="font-size: 2.5rem;"></i>
+              <h3 class="h4 mb-0 fw-bold">{{ page.diy_vs_professional.professional.judul }}</h3>
+            </div>
+          </div>
+
+          <div class="card-body p-4">
+            <ul class="list-unstyled mb-0">
+              {% for item in page.diy_vs_professional.professional.items %}
+              <li class="mb-3">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill text-warning me-2 mt-1" style="font-size: 1.25rem;"></i>
+                  <span class="text-dark">{{ item }}</span>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="card-footer bg-warning bg-opacity-10 border-0 py-3">
+            <p class="small text-muted mb-0 text-center">
+              <i class="bi bi-lightbulb-fill text-warning me-1"></i>
+              <strong>Cocok untuk:</strong> Proyek besar dan pekerjaan kompleks
+            </p>
+          </div>
+
+        </div>
+      </div>
+      {% endif %}
+
+    </div>
+    {% endif %}
+
+  </div>
+</div>

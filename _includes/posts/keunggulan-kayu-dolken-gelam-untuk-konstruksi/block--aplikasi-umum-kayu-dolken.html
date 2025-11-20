@@ -1,0 +1,91 @@
+{% comment %}
+============================================================================
+Block: Aplikasi Umum Kayu Dolken Gelam
+============================================================================
+
+@file        block--aplikasi-umum-kayu-dolken.html
+@path        _includes/posts/block--aplikasi-umum-kayu-dolken.html
+@type        Content Block
+@description Menampilkan berbagai aplikasi/kegunaan kayu dolken gelam
+@usage       {% include posts/block--aplikasi-umum-kayu-dolken.html %}
+
+Data yang digunakan dari frontmatter:
+- page.aplikasi_umum (array of objects)
+  - kategori: string
+  - icon: string (bootstrap icon class)
+  - warna: string (bootstrap color variant)
+  - sub_aplikasi: array of objects
+    - judul: string
+    - items: array of strings
+
+============================================================================
+{% endcomment %}
+
+<div class="aplikasi-umum-kayu-dolken py-5 bg-light">
+  <div class="container-fluid px-0">
+    <div class="row g-0">
+      <div class="col-12">
+
+        <h2 class="h3 fw-bold text-wood mb-4 text-center">
+          <i class="bi bi-grid-3x3-gap-fill me-2"></i>
+          Aplikasi Umum Kayu Dolken Gelam
+        </h2>
+
+        {% if page.aplikasi_umum %}
+        <div class="row g-3 mt-3">
+          {% for kategori in page.aplikasi_umum %}
+          <div class="col-lg-12">
+            <div class="card border-0 shadow-sm">
+
+              {% assign card_color = kategori.warna | default: 'wood' %}
+
+              <!-- Card Header -->
+              <div class="card-header bg-{{ card_color }} border-0 py-4">
+                <div class="d-flex align-items-center">
+                  <div class="icon-wrapper bg-white text-{{ card_color }} rounded-3 p-3 me-3">
+                    <i class="bi {{ kategori.icon }} fs-3"></i>
+                  </div>
+                  <h3 class="h4 fw-bold mb-0 text-white">
+                    {{ kategori.kategori }}
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Card Body -->
+              <div class="card-body p-4">
+                {% if kategori.sub_aplikasi %}
+                <div class="row g-4">
+                  {% for sub in kategori.sub_aplikasi %}
+                  <div class="col-md-6">
+                    <div class="aplikasi-sub-section">
+                      <h4 class="h6 fw-bold text-dark mb-3 pb-2 border-bottom border-{{ card_color }} d-flex align-items-start">
+                        <i class="bi bi-arrow-right-circle-fill text-{{ card_color }} me-2 flex-shrink-0 icon-align-h4"></i>
+                        <span>{{ sub.judul }}</span>
+                      </h4>
+                      {% if sub.items %}
+                      <ul class="list-unstyled mb-0">
+                        {% for item in sub.items %}
+                        <li class="mb-2 d-flex align-items-start">
+                          <i class="bi bi-check2 text-{{ card_color }} me-2 mt-1 flex-shrink-0"></i>
+                          <span>{{ item }}</span>
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+                {% endif %}
+              </div>
+
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>

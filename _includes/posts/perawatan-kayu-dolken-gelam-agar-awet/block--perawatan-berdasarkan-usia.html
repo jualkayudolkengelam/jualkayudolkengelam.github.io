@@ -1,0 +1,96 @@
+{% comment %}
+============================================================================
+Block: Perawatan Berdasarkan Usia Kayu
+============================================================================
+
+@file        block--perawatan-berdasarkan-usia.html
+@path        _includes/posts/perawatan-kayu-dolken-gelam-agar-awet/block--perawatan-berdasarkan-usia.html
+@type        Content Block
+@description Panduan perawatan berdasarkan umur kayu (1-5, 5-15, 15+)
+@usage       {% include posts/perawatan-kayu-dolken-gelam-agar-awet/block--perawatan-berdasarkan-usia.html %}
+
+Data yang digunakan dari frontmatter:
+- page.perawatan_usia (array of objects)
+
+============================================================================
+{% endcomment %}
+
+<div class="perawatan-berdasarkan-usia py-5">
+  <div class="container-xxl">
+
+    <!-- H2: Main Section Header -->
+    <div class="my-4">
+      <div class="card border-0 shadow-lg">
+        <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
+          <i class="bi bi-clock-history mb-2" style="font-size: 2.5rem;"></i>
+          <h2 class="h2 mb-0 fw-bold text-white">Perawatan Berdasarkan Usia Kayu</h2>
+          <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+            <i class="bi bi-star me-1"></i>
+            Panduan khusus untuk setiap tahap kehidupan kayu
+            <i class="bi bi-star ms-1"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {% if page.perawatan_usia %}
+    <div class="row g-4 my-4">
+      {% for periode in page.perawatan_usia %}
+      {% assign card_color = periode.warna | default: 'primary' %}
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-lg h-100 hover-lift">
+
+          <!-- Card Header -->
+          <div class="card-header text-white py-3" style="background: linear-gradient(135deg,
+            {% if card_color == 'info' %}#0891b2 0%, #0e7490 100%{% endif %}
+            {% if card_color == 'primary' %}#3b82f6 0%, #2563eb 100%{% endif %}
+            {% if card_color == 'success' %}#10b981 0%, #059669 100%{% endif %}
+            {% if card_color == 'warning' %}#f59e0b 0%, #d97706 100%{% endif %}
+          );">
+            <div class="text-center">
+              <i class="bi {{ periode.icon }}" style="font-size: 3rem;"></i>
+              <h3 class="h4 fw-bold mb-0 mt-2">{{ periode.periode }}</h3>
+              <p class="small mb-0" style="opacity: 0.9;">{{ periode.subtitle }}</p>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="card-body p-4">
+
+            <!-- Karakteristik -->
+            <div class="mb-4">
+              <h4 class="h6 fw-bold text-{{ card_color }} mb-3">
+                <i class="bi bi-info-circle-fill me-1"></i>Karakteristik:
+              </h4>
+              <ul class="list-unstyled">
+                {% for item in periode.karakteristik %}
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-{{ card_color }} me-2"></i>
+                  <span class="text-dark">{{ item }}</span>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+
+            <!-- Perawatan -->
+            <div>
+              <h4 class="h6 fw-bold text-{{ card_color }} mb-3">
+                <i class="bi bi-tools me-1"></i>Perawatan:
+              </h4>
+              <ul class="mb-0">
+                {% for item in periode.perawatan %}
+                <li class="mb-2 text-dark">{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+</div>

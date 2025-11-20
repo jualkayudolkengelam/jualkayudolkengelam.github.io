@@ -1,0 +1,71 @@
+{% comment %}
+============================================================================
+Block: Tips Maksimalkan Nilai Kayu Gelam
+============================================================================
+
+@file        block--tips-maksimalkan.html
+@path        _includes/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/block--tips-maksimalkan.html
+@type        Content Block
+@description Menampilkan tips untuk memaksimalkan nilai kayu gelam
+@usage       {% include posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/block--tips-maksimalkan.html %}
+
+Data yang digunakan dari frontmatter:
+- page.tips_maksimalkan (array of objects)
+  - nomor: number
+  - judul: string
+  - deskripsi: string
+  - icon: string (optional)
+  - warna: string (optional)
+
+============================================================================
+{% endcomment %}
+
+<div class="tips-maksimalkan py-5">
+  <div class="container-fluid px-0">
+
+    <!-- H2: Main Section Header -->
+    <div class="my-4">
+      <div class="card border-0 shadow-lg">
+        <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">
+          <i class="bi bi-lightbulb-fill mb-2" style="font-size: 2.5rem;"></i>
+          <h2 class="h2 mb-0 fw-bold text-white">Tips Maksimalkan Nilai Kayu Gelam</h2>
+          <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+            <i class="bi bi-star me-1"></i>
+            Panduan praktis untuk hasil optimal
+            <i class="bi bi-star ms-1"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {% if page.tips_maksimalkan %}
+    <div class="my-4">
+      <div class="row g-3">
+        {% for item in page.tips_maksimalkan %}
+        {% assign card_color = item.warna | default: 'warning' %}
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card border-0 shadow-sm h-100 hover-lift">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start mb-3">
+                {% if item.icon %}
+                <i class="bi {{ item.icon }} text-{{ card_color }} fs-3rem me-3 flex-shrink-0 opacity-85"></i>
+                {% else %}
+                <span class="badge bg-{{ card_color }} bg-opacity-25 text-{{ card_color }} me-3 px-3 py-2 fs-5 flex-shrink-0">{{ item.nomor }}</span>
+                {% endif %}
+                <div class="flex-grow-1">
+                  <h3 class="h6 fw-bold mb-2 text-{{ card_color }}">{{ item.judul }}</h3>
+                  <p class="mb-0 small text-muted">{{ item.deskripsi }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</div>

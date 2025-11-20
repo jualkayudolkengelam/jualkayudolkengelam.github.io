@@ -1,0 +1,82 @@
+{% comment %}
+============================================================================
+Block: Common Mistakes
+============================================================================
+
+@file        block--common-mistakes.html
+@path        _includes/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/block--common-mistakes.html
+@type        Content Block
+@description Kesalahan umum dalam menghitung kebutuhan kayu
+@usage       {% include posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/block--common-mistakes.html %}
+
+Data yang digunakan dari frontmatter:
+- page.labels.common_mistakes_title
+- page.common_mistakes
+
+============================================================================
+{% endcomment %}
+
+<div class="common-mistakes py-5">
+  <div class="container-fluid px-0">
+
+    <!-- H2: Main Section Header -->
+    <div class="my-4">
+      <div class="card border-0 shadow-lg">
+        <div class="card-body text-white text-center py-4 px-3 bg-gradient-red-header">
+          <i class="bi bi-exclamation-triangle-fill mb-2 fs-2-5rem"></i>
+          <h2 class="h2 mb-0 fw-bold text-white">{{ page.labels.common_mistakes_title | default: "Common Mistakes" }}</h2>
+          <p class="mb-0 mt-2 small opacity-85">
+            <i class="bi bi-star me-1"></i>
+            Kesalahan yang sering terjadi dan cara menghindarinya
+            <i class="bi bi-star ms-1"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mistakes Cards -->
+    {% if page.common_mistakes %}
+    <div class="row g-4 my-4">
+      {% for mistake in page.common_mistakes %}
+      {% assign card_color = mistake.warna | default: 'danger' %}
+      <div class="col-md-6">
+        <div class="card border-0 shadow-lg h-100 hover-lift">
+          <div class="card-header py-3 text-white bg-gradient-card-{{ card_color }}">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center flex-grow-1">
+                <span class="badge bg-white bg-opacity-25 me-3 px-3 py-2 fs-6">{{ mistake.nomor }}</span>
+                <h3 class="h5 fw-bold mb-0">{{ mistake.mistake }}</h3>
+              </div>
+              {% if mistake.icon %}
+              <i class="bi {{ mistake.icon }} fs-3rem opacity-85 ms-2"></i>
+              {% endif %}
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="mb-3">
+              <strong class="text-danger d-block mb-2">
+                <i class="bi bi-x-circle-fill me-1"></i>Issue:
+              </strong>
+              <p class="mb-0 text-muted">{{ mistake.issue }}</p>
+            </div>
+            <div class="mb-3">
+              <strong class="text-warning d-block mb-2">
+                <i class="bi bi-exclamation-circle-fill me-1"></i>Reality:
+              </strong>
+              <p class="mb-0 text-dark">{{ mistake.reality }}</p>
+            </div>
+            <div class="alert alert-success mb-0 border-0">
+              <strong class="d-block mb-2">
+                <i class="bi bi-check-circle-fill me-1"></i>Solution:
+              </strong>
+              <p class="mb-0">{{ mistake.solution }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+</div>

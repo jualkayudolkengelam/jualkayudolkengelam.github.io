@@ -1,0 +1,75 @@
+{% comment %}
+============================================================================
+Block: Keunggulan Utama Kayu Dolken Gelam
+============================================================================
+
+@file        block--keunggulan-utama-kayu-dolken.html
+@path        _includes/posts/block--keunggulan-utama-kayu-dolken.html
+@type        Content Block
+@description Menampilkan keunggulan utama kayu dolken gelam dengan icon dan detail
+@usage       {% include posts/block--keunggulan-utama-kayu-dolken.html %}
+
+Data yang digunakan dari frontmatter:
+- page.keunggulan_utama (array of objects)
+  - judul: string
+  - icon: string (bootstrap icon class)
+  - deskripsi: string
+  - poin: array of strings
+  - warna: string (bootstrap color variant)
+
+============================================================================
+{% endcomment %}
+
+<div class="keunggulan-utama-kayu-dolken py-5">
+  <div class="container-fluid px-0">
+    <div class="row g-0">
+      <div class="col-12">
+
+        <h2 class="h3 fw-bold text-wood mb-4 text-center">
+          <i class="bi bi-award-fill me-2"></i>
+          Keunggulan Utama Kayu Dolken Gelam
+        </h2>
+
+        {% if page.keunggulan_utama %}
+        <div class="row g-3 mt-3">
+          {% for item in page.keunggulan_utama %}
+          <div class="col-md-12">
+            <div class="card border-0 shadow-sm hover-lift">
+              <div class="card-body p-4">
+
+                {% assign card_color = item.warna | default: 'primary' %}
+                <div class="d-flex align-items-start mb-3">
+                  <div class="icon-box bg-{{ card_color }} bg-opacity-10 p-3 rounded-3 me-3">
+                    <i class="bi {{ item.icon }} text-{{ card_color }} fs-3"></i>
+                  </div>
+                  <div class="flex-grow-1">
+                    <h3 class="h5 fw-bold mb-2">{{ item.judul }}</h3>
+                  </div>
+                </div>
+
+                {% if item.deskripsi %}
+                <p class="text-muted mb-3">{{ item.deskripsi }}</p>
+                {% endif %}
+
+                {% if item.poin %}
+                <ul class="list-unstyled mb-0">
+                  {% for poin in item.poin %}
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-{{ card_color }} me-2"></i>
+                    <span>{{ poin }}</span>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
