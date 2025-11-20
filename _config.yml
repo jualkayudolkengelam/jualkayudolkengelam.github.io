@@ -73,3 +73,5 @@ exclude:
   - checklist-post.md
   - validate-post.sh
   - rebuild.sh
+  - TEMPLATES/
+  - TODO/

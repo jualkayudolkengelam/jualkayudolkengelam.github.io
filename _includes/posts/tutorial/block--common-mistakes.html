@@ -46,13 +46,13 @@
   <div class="row g-3">
     {% for item in page.common_mistakes %}
     <div class="col-md-6">
-      <div class="card border-0 shadow-sm h-100 border-start border-{{ item.color | default: 'danger' }} border-4">
+      <div id="{{ item.id | default: '' }}" class="card border-0 shadow-sm h-100 border-start border-{{ item.severity | default: 'danger' }} border-4 {{ item.css_class | default: '' }}">
         <div class="card-body">
           <!-- Mistake -->
           <div class="mb-3">
             <div class="d-flex align-items-start mb-2">
-              <i class="{{ item.icon }} text-{{ item.color | default: 'danger' }} me-2" style="font-size: 1.25rem;"></i>
-              <h3 class="h6 fw-bold text-{{ item.color | default: 'danger' }} mb-0">Kesalahan:</h3>
+              <i class="bi bi-x-circle-fill text-{{ item.severity | default: 'danger' }} me-2" style="font-size: 1.25rem;"></i>
+              <h3 class="h6 fw-bold text-{{ item.severity | default: 'danger' }} mb-0">Kesalahan:</h3>
             </div>
             <p class="text-muted small mb-0 ps-4">{{ item.mistake }}</p>
           </div>

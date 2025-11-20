@@ -45,16 +45,16 @@
   <!-- FAQ Accordion -->
   <div class="accordion accordion-flush" id="faqAccordion">
     {% for item in page.faq %}
-    <div class="accordion-item border-0 shadow-sm mb-3">
-      <h3 class="accordion-header" id="faq-heading-{{ forloop.index }}">
+    <div class="accordion-item border-0 shadow-sm mb-3 {{ item.css_class | default: '' }}">
+      <h3 class="accordion-header" id="{{ item.id | default: 'faq-heading' }}-{{ forloop.index }}">
         <button class="accordion-button {% unless forloop.first %}collapsed{% endunless %} fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-{{ forloop.index }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="faq-collapse-{{ forloop.index }}">
           <i class="{{ item.icon | default: 'bi-question-circle' }} text-primary me-2"></i>
-          {{ item.pertanyaan }}
+          {{ item.question | default: item.pertanyaan }}
         </button>
       </h3>
-      <div id="faq-collapse-{{ forloop.index }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="faq-heading-{{ forloop.index }}" data-bs-parent="#faqAccordion">
+      <div id="faq-collapse-{{ forloop.index }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="{{ item.id | default: 'faq-heading' }}-{{ forloop.index }}" data-bs-parent="#faqAccordion">
         <div class="accordion-body text-muted">
-          {{ item.jawaban }}
+          {{ item.answer | default: item.jawaban }}
         </div>
       </div>
     </div>

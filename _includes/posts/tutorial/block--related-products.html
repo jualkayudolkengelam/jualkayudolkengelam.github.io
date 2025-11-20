@@ -48,10 +48,12 @@
     {% for product in page.related_products.products %}
     <div class="col-md-6 col-lg-4">
       <a href="{{ product.url }}" class="text-decoration-none">
-        <div class="card border-0 shadow-sm h-100 hover-lift">
-          <img src="{{ product.image }}" class="card-img-top" alt="{{ product.title }}" loading="lazy">
+        <div id="{{ product.id | default: '' }}" class="card border-0 shadow-sm h-100 hover-lift {{ product.css_class | default: '' }}">
+          <img src="{{ product.image }}" class="card-img-top" alt="{{ product.name | default: product.title }}" loading="lazy">
           <div class="card-body">
-            <h3 class="h6 fw-bold text-wood mb-0">{{ product.title }}</h3>
+            <h3 class="h6 fw-bold text-wood mb-2">{{ product.name | default: product.title }}</h3>
+            {% if product.price %}<p class="text-primary fw-bold mb-1">{{ product.price }}</p>{% endif %}
+            {% if product.description %}<p class="small text-muted mb-0">{{ product.description }}</p>{% endif %}
           </div>
           <div class="card-footer bg-transparent border-0">
             <span class="btn btn-sm btn-outline-primary">
