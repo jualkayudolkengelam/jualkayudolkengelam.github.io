@@ -224,6 +224,10 @@ common_mistakes:
     solution: "Panjang dolken = tinggi pagar + kedalaman tanam (minimal 40cm, ideal 50-60cm). Dolken untuk pagar 1.5m harus minimal 2m panjangnya."
     severity: "info"
 
+  - mistake: "Komunikasi tidak jelas saat memesan"
+    solution: "Gunakan class identifier seperti 'mistakes-item-card' untuk memudahkan komunikasi dengan supplier atau tukang. Spesifikasi yang jelas mencegah kesalahan pengiriman."
+    severity: "warning"
+
 # Calculator
 calculator:
   show: true

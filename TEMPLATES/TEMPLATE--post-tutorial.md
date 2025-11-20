@@ -337,21 +337,23 @@ tips:
 # COMMON MISTAKES (OPTIONAL - recommended untuk tutorial)
 # ============================================================================
 # Instruksi: Kesalahan umum dan cara menghindarinya
+# Note: Gunakan 4 items untuk tampilan seimbang (2 rows × 2 columns)
 common_mistakes:
   - mistake: "tulis kesalahan umum #1 (misal: Tidak Menambahkan Buffer)"
     solution: "tulis solusi untuk kesalahan #1, jelaskan cara yang benar"
-    icon: "bi-x-circle-fill"
-    color: "danger"
+    severity: "danger"
 
   - mistake: "tulis kesalahan umum #2"
     solution: "tulis solusi untuk kesalahan #2"
-    icon: "bi-exclamation-triangle-fill"
-    color: "warning"
+    severity: "warning"
 
-  - mistake: "tulis kesalahan umum #3 (opsional)"
+  - mistake: "tulis kesalahan umum #3"
     solution: "tulis solusi untuk kesalahan #3"
-    icon: "bi-info-circle-fill"
-    color: "info"
+    severity: "info"
+
+  - mistake: "tulis kesalahan umum #4"
+    solution: "tulis solusi untuk kesalahan #4"
+    severity: "warning"
 
 # ============================================================================
 # CALCULATOR TOOL (OPTIONAL - jika ada kalkulator interaktif)
