@@ -1,11 +1,23 @@
 ---
 layout: node--post
-title: "Test Tutorial - Cara Menghitung Kebutuhan Kayu Dolken"
+title: "Cara Menghitung Kebutuhan Kayu Dolken"
 date: 2024-11-20
+category: Tutorial
 categories: [tutorial, kayu-dolken]
-tags: [tutorial, perhitungan, tips]
-author: arisciwek
-excerpt: "Tutorial test untuk validasi template modular system"
+tags: [kayu dolken, konstruksi, perhitungan, pagar]
+author: Admin
+author_url: https://jualkayudolkengelam.github.io
+excerpt: "Panduan lengkap menghitung kebutuhan kayu dolken untuk pagar. Hemat biaya dan waktu dengan metode perhitungan yang tepat."
+image: /assets/images/posts/cara-menghitung-kebutuhan-kayu-dolken/cara-menghitung-kebutuhan-kayu-dolken-001.webp
+images:
+  - /assets/images/posts/cara-menghitung-kebutuhan-kayu-dolken/cara-menghitung-kebutuhan-kayu-dolken-001.webp
+  - /assets/images/posts/cara-menghitung-kebutuhan-kayu-dolken/cara-menghitung-kebutuhan-kayu-dolken-002.webp
+  - /assets/images/posts/cara-menghitung-kebutuhan-kayu-dolken/cara-menghitung-kebutuhan-kayu-dolken-003.webp
+  - /assets/images/posts/cara-menghitung-kebutuhan-kayu-dolken/cara-menghitung-kebutuhan-kayu-dolken-004.webp
+keywords: "cara menghitung kayu dolken, kebutuhan dolken pagar, perhitungan dolken, estimasi dolken, kayu dolken gelam"
+like_count: 0
+comment_count: 0
+share_count: 0
 
 # Tutorial Meta
 tutorial_meta:
