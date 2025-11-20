@@ -38,9 +38,9 @@
 {% endcomment %}
 
 {% if page.calculator.show %}
-<div class="my-5">
+<div class="my-5 calculator-section-wrapper">
   <!-- Section Header -->
-  <div class="card border-0 shadow-lg mb-4">
+  <div class="card border-0 calculator-section-header-card shadow-lg mb-4">
     <div class="card-body text-white text-center py-4" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);">
       <i class="bi bi-calculator-fill mb-2" style="font-size: 2.5rem;"></i>
       <h2 class="h2 mb-0 fw-bold text-white">{{ page.calculator.title | default: "Kalkulator" }}</h2>
@@ -49,16 +49,16 @@
   </div>
 
   <!-- Calculator Form -->
-  <div class="card border-0 shadow-sm">
+  <div class="card border-0 calculator-form-card shadow-sm">
     <div class="card-body p-4">
-      <form id="calculator-form" class="needs-validation" novalidate>
-        <div class="row g-3">
+      <form id="calculator-form" class="needs-validation calculator-form" novalidate>
+        <div class="row g-3 calculator-inputs-grid">
           {% for input in page.calculator.inputs %}
-          <div class="col-md-6">
+          <div class="col-12 col-sm-6 calculator-input-col">
             <label for="calc-{{ input.name }}" class="form-label fw-bold">{{ input.label }}</label>
             <input
               type="{{ input.type | default: 'number' }}"
-              class="form-control form-control-lg"
+              class="form-control form-control-lg calculator-input-field"
               id="calc-{{ input.name }}"
               name="{{ input.name }}"
               placeholder="{{ input.placeholder }}"
@@ -74,15 +74,15 @@
         </div>
 
         <div class="d-grid gap-2 mt-4">
-          <button type="submit" class="btn btn-primary btn-lg">
+          <button type="submit" class="btn btn-primary btn-lg calculator-submit-btn">
             <i class="bi bi-calculator me-2"></i>Hitung Sekarang
           </button>
         </div>
       </form>
 
       <!-- Result Display -->
-      <div id="calculator-result" class="mt-4 d-none">
-        <div class="alert alert-success border-0 shadow-sm" role="alert">
+      <div id="calculator-result" class="mt-4 d-none calculator-result-wrapper">
+        <div class="alert alert-success border-0 shadow-sm calculator-result-alert" role="alert">
           <div class="d-flex align-items-center">
             <i class="bi bi-check-circle-fill fs-3 me-3"></i>
             <div class="flex-grow-1">

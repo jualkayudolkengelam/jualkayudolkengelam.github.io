@@ -328,11 +328,7 @@ related_products:
 {% include posts/tutorial/block--tutorial-meta.html %}
 </section>
 
-{% for item in page.sections %}
-<section id="{{ item.section.id | default: 'content-section' }}" class="block-content-section {{ item.section.css_class | default: '' }}">
-{% include posts/tutorial/block--content-section.html section=item.section %}
-</section>
-{% endfor %}
+{% include posts/tutorial/block--content-sections-loop.html %}
 
 <section id="block-tips-list">
 {% include posts/tutorial/block--tips-list.html %}

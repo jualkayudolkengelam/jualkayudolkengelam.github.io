@@ -29,31 +29,31 @@
 {% endcomment %}
 
 {% if page.images and page.images.size > 1 %}
-<div class="my-5">
-  <div class="card border-0 shadow-lg">
-    <div id="tutorialCarousel" class="carousel slide" data-bs-ride="carousel">
+<div class="my-5 carousel-section-wrapper">
+  <div class="card border-0 carousel-card shadow-lg">
+    <div id="tutorialCarousel" class="carousel slide tutorial-carousel" data-bs-ride="carousel">
       <!-- Indicators -->
-      <div class="carousel-indicators">
+      <div class="carousel-indicators carousel-indicators-custom">
         {% for image in page.images %}
         <button type="button" data-bs-target="#tutorialCarousel" data-bs-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active" aria-current="true"{% endif %} aria-label="Slide {{ forloop.index }}"></button>
         {% endfor %}
       </div>
 
       <!-- Slides -->
-      <div class="carousel-inner">
+      <div class="carousel-inner carousel-slides">
         {% for image in page.images %}
-        <div class="carousel-item {% if forloop.first %}active{% endif %}">
-          <img src="{{ image }}" class="d-block w-100" alt="{{ page.title }} - Gambar {{ forloop.index }}" loading="lazy">
+        <div class="carousel-item carousel-slide-item {% if forloop.first %}active{% endif %}">
+          <img src="{{ image }}" class="d-block w-100 carousel-slide-image" alt="{{ page.title }} - Gambar {{ forloop.index }}" loading="lazy">
         </div>
         {% endfor %}
       </div>
 
       <!-- Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#tutorialCarousel" data-bs-slide="prev">
+      <button class="carousel-control-prev carousel-control-custom" type="button" data-bs-target="#tutorialCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#tutorialCarousel" data-bs-slide="next">
+      <button class="carousel-control-next carousel-control-custom" type="button" data-bs-target="#tutorialCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>

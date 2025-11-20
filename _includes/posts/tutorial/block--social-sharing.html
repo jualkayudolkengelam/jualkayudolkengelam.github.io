@@ -29,47 +29,47 @@
   ============================================================================
 {% endcomment %}
 
-<div class="my-5">
-  <div class="card border-0 shadow-sm">
+<div class="my-5 social-sharing-section-wrapper">
+  <div class="card border-0 social-sharing-card shadow-sm">
     <div class="card-body text-center py-4">
-      <h2 class="h5 mb-3 fw-bold text-wood">
+      <h2 class="h5 mb-3 fw-bold text-wood social-sharing-title">
         <i class="bi bi-share-fill text-primary me-2"></i>Bagikan Artikel Ini
       </h2>
-      <p class="small text-muted mb-3">Bantu orang lain dengan membagikan tutorial ini</p>
+      <p class="small text-muted mb-3 social-sharing-subtitle">Bantu orang lain dengan membagikan tutorial ini</p>
 
-      <div class="d-flex flex-wrap justify-content-center gap-2">
+      <div class="d-flex flex-wrap justify-content-center gap-2 social-sharing-buttons">
         <!-- WhatsApp -->
         <a href="https://wa.me/?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}"
-           class="btn btn-success btn-sm" target="_blank" rel="noopener">
+           class="btn btn-success btn-sm social-sharing-button-whatsapp" target="_blank" rel="noopener">
           <i class="bi bi-whatsapp me-1"></i>WhatsApp
         </a>
 
         <!-- Facebook -->
         <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}"
-           class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+           class="btn btn-primary btn-sm social-sharing-button-facebook" target="_blank" rel="noopener">
           <i class="bi bi-facebook me-1"></i>Facebook
         </a>
 
         <!-- Twitter -->
         <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}"
-           class="btn btn-info btn-sm text-white" target="_blank" rel="noopener">
+           class="btn btn-info btn-sm text-white social-sharing-button-twitter" target="_blank" rel="noopener">
           <i class="bi bi-twitter me-1"></i>Twitter
         </a>
 
         <!-- LinkedIn -->
         <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}"
-           class="btn btn-primary btn-sm" target="_blank" rel="noopener" style="background-color: #0077b5; border-color: #0077b5;">
+           class="btn btn-primary btn-sm social-sharing-button-linkedin" target="_blank" rel="noopener" style="background-color: #0077b5; border-color: #0077b5;">
           <i class="bi bi-linkedin me-1"></i>LinkedIn
         </a>
 
         <!-- Copy Link -->
-        <button class="btn btn-secondary btn-sm" id="copyLinkBtn" onclick="copyLink()">
+        <button class="btn btn-secondary btn-sm social-sharing-button-copy" id="copyLinkBtn" onclick="copyLink()">
           <i class="bi bi-link-45deg me-1"></i>Salin Link
         </button>
       </div>
 
       <!-- Success message -->
-      <div id="copySuccess" class="alert alert-success mt-3 d-none" role="alert">
+      <div id="copySuccess" class="alert alert-success mt-3 d-none social-sharing-copy-success" role="alert">
         <i class="bi bi-check-circle-fill me-2"></i>Link berhasil disalin!
       </div>
     </div>

@@ -43,13 +43,13 @@
 {% endcomment %}
 
 {% if page.tutorial_meta %}
-<div class="my-4">
-  <div class="card border-0 shadow-sm bg-light">
+<div class="my-4 tutorial-meta-wrapper">
+  <div class="card border-0 tutorial-meta-card shadow-sm bg-light">
     <div class="card-body">
       <div class="row g-3 align-items-center">
 
         <!-- Difficulty Level -->
-        <div class="col-md-4">
+        <div class="col-md-4 tutorial-meta-difficulty">
           <div class="d-flex align-items-center">
             <i class="bi bi-speedometer2 fs-3 me-3 {% if page.tutorial_meta.difficulty == 'Pemula' %}text-success{% elsif page.tutorial_meta.difficulty == 'Menengah' %}text-warning{% else %}text-danger{% endif %}"></i>
             <div>
@@ -64,7 +64,7 @@
         </div>
 
         <!-- Estimated Time -->
-        <div class="col-md-4">
+        <div class="col-md-4 tutorial-meta-time">
           <div class="d-flex align-items-center">
             <i class="bi bi-clock-history fs-3 text-primary me-3"></i>
             <div>
@@ -76,14 +76,14 @@
 
         <!-- Tools Needed -->
         {% if page.tutorial_meta.tools_needed %}
-        <div class="col-md-4">
+        <div class="col-md-4 tutorial-meta-tools">
           <div class="d-flex align-items-start">
             <i class="bi bi-tools fs-3 text-secondary me-3"></i>
             <div>
               <p class="small text-muted mb-1">Alat yang Dibutuhkan</p>
-              <ul class="list-unstyled mb-0">
+              <ul class="list-unstyled mb-0 tutorial-meta-tools-list">
                 {% for tool in page.tutorial_meta.tools_needed limit:3 %}
-                <li class="small">
+                <li class="small tutorial-meta-tool-item">
                   <i class="bi bi-check2 text-success me-1"></i>{{ tool }}
                 </li>
                 {% endfor %}

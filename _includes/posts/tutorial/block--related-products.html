@@ -33,9 +33,9 @@
 {% endcomment %}
 
 {% if page.related_products.show and page.related_products.products %}
-<div class="my-5">
+<div class="my-5 related-products-section-wrapper">
   <!-- Section Header -->
-  <div class="card border-0 shadow-lg mb-4">
+  <div class="card border-0 related-products-section-header-card shadow-lg mb-4">
     <div class="card-body text-white text-center py-4" style="background: linear-gradient(135deg, #8b5a3c 0%, #6d4c41 50%, #5d4037 100%);">
       <i class="bi bi-box-seam-fill mb-2" style="font-size: 2.5rem;"></i>
       <h2 class="h2 mb-0 fw-bold text-white">{{ page.related_products.title | default: "Produk Terkait" }}</h2>
@@ -44,19 +44,19 @@
   </div>
 
   <!-- Products Grid -->
-  <div class="row g-3">
+  <div class="row g-3 related-products-grid">
     {% for product in page.related_products.products %}
-    <div class="col-md-6 col-lg-4">
+    <div class="col-12 col-sm-6 col-lg-4 related-products-item-col">
       <a href="{{ product.url }}" class="text-decoration-none">
-        <div id="{{ product.id | default: '' }}" class="card border-0 shadow-sm h-100 hover-lift {{ product.css_class | default: '' }}">
-          <img src="{{ product.image }}" class="card-img-top" alt="{{ product.name | default: product.title }}" loading="lazy">
+        <div id="{{ product.id | default: '' }}" class="card border-0 related-products-item-card shadow-sm h-100 hover-lift {{ product.css_class | default: '' }}">
+          <img src="{{ product.image }}" class="card-img-top related-products-item-image" alt="{{ product.name | default: product.title }}" loading="lazy">
           <div class="card-body">
             <h3 class="h6 fw-bold text-wood mb-2">{{ product.name | default: product.title }}</h3>
-            {% if product.price %}<p class="text-primary fw-bold mb-1">{{ product.price }}</p>{% endif %}
-            {% if product.description %}<p class="small text-muted mb-0">{{ product.description }}</p>{% endif %}
+            {% if product.price %}<p class="text-primary fw-bold mb-1 related-products-item-price">{{ product.price }}</p>{% endif %}
+            {% if product.description %}<p class="small text-muted mb-0 related-products-item-description">{{ product.description }}</p>{% endif %}
           </div>
           <div class="card-footer bg-transparent border-0">
-            <span class="btn btn-sm btn-outline-primary">
+            <span class="btn btn-sm btn-outline-primary related-products-item-button">
               Lihat Produk <i class="bi bi-arrow-right ms-1"></i>
             </span>
           </div>

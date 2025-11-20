@@ -32,9 +32,9 @@
 {% endcomment %}
 
 {% if page.common_mistakes %}
-<div class="my-5">
+<div class="my-5 mistakes-section-wrapper">
   <!-- Section Header -->
-  <div class="card border-0 shadow-lg mb-4">
+  <div class="card border-0 mistakes-section-header-card shadow-lg mb-4">
     <div class="card-body text-white text-center py-4" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);">
       <i class="bi bi-exclamation-triangle-fill mb-2" style="font-size: 2.5rem;"></i>
       <h2 class="h2 mb-0 fw-bold text-white">Kesalahan Umum & Solusinya</h2>
@@ -43,13 +43,13 @@
   </div>
 
   <!-- Mistakes Grid -->
-  <div class="row g-3">
+  <div class="row g-3 mistakes-grid">
     {% for item in page.common_mistakes %}
-    <div class="col-md-6">
-      <div id="{{ item.id | default: '' }}" class="card border-0 shadow-sm h-100 border-start border-{{ item.severity | default: 'danger' }} border-4 {{ item.css_class | default: '' }}">
+    <div class="col-12 col-md-6 mistakes-item-col">
+      <div id="{{ item.id | default: '' }}" class="card border-0 mistakes-item-card shadow-sm h-100 border-start border-{{ item.severity | default: 'danger' }} border-4 {{ item.css_class | default: '' }}">
         <div class="card-body">
           <!-- Mistake -->
-          <div class="mb-3">
+          <div class="mb-3 mistakes-item-mistake">
             <div class="d-flex align-items-start mb-2">
               <i class="bi bi-x-circle-fill text-{{ item.severity | default: 'danger' }} me-2" style="font-size: 1.25rem;"></i>
               <h3 class="h6 fw-bold text-{{ item.severity | default: 'danger' }} mb-0">Kesalahan:</h3>
@@ -58,7 +58,7 @@
           </div>
 
           <!-- Solution -->
-          <div class="bg-success bg-opacity-10 p-3 rounded">
+          <div class="bg-success bg-opacity-10 p-3 rounded mistakes-item-solution">
             <div class="d-flex align-items-start mb-2">
               <i class="bi bi-check-circle-fill text-success me-2"></i>
               <h4 class="h6 fw-bold text-success mb-0">Solusi:</h4>

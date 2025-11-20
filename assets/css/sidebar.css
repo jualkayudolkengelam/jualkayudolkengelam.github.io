@@ -1,0 +1,138 @@
+/**
+ * ============================================================================
+ * Sidebar Styles
+ * ============================================================================
+ *
+ * @file        sidebar.css
+ * @path        assets/css/sidebar.css
+ * @description Styling for blog post sidebar widgets
+ * @version     1.0.0
+ * @date        2025-11-20
+ * @author      arisciwek
+ *
+ * Widgets:
+ * --------
+ * - Table of Contents (collapsible)
+ * - Popular Posts
+ * - Categories
+ * - CTA WhatsApp
+ *
+ * ============================================================================
+ */
+
+/* ============================================================================
+   Table of Contents Widget
+   ============================================================================ */
+
+.sidebar-toc-widget .btn-link {
+  color: var(--bs-wood, #6d4c41);
+}
+
+.sidebar-toc-widget .btn-link:hover {
+  color: var(--bs-wood, #6d4c41);
+  opacity: 0.8;
+}
+
+.sidebar-toc-widget .btn-link:focus {
+  box-shadow: none;
+}
+
+.sidebar-toc a:hover {
+  color: var(--bs-primary, #0d6efd) !important;
+}
+
+/* ============================================================================
+   Popular Posts Widget
+   ============================================================================ */
+
+.sidebar-popular-widget .list-group-item {
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-popular-widget .list-group-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.sidebar-popular-widget img {
+  transition: transform 0.2s ease;
+}
+
+.sidebar-popular-widget .list-group-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================================================
+   Categories Widget
+   ============================================================================ */
+
+.sidebar-categories-widget .list-group-item {
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-categories-widget .list-group-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.sidebar-categories-widget .badge {
+  transition: transform 0.2s ease;
+}
+
+.sidebar-categories-widget .list-group-item:hover .badge {
+  transform: scale(1.1);
+}
+
+/* ============================================================================
+   CTA Widget
+   ============================================================================ */
+
+.sidebar-cta-widget .btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sidebar-cta-widget .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================================================
+   Sticky Sidebar
+   ============================================================================ */
+
+.sidebar-sticky {
+  position: sticky;
+  top: 80px;
+}
+
+/* Adjust sticky position on scroll for better UX */
+@media (min-width: 992px) {
+  .sidebar-sticky {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+
+  /* Custom scrollbar for sidebar */
+  .sidebar-sticky::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .sidebar-sticky::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .sidebar-sticky::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+  }
+
+  .sidebar-sticky::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Mobile: disable sticky */
+@media (max-width: 991px) {
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+  }
+}
