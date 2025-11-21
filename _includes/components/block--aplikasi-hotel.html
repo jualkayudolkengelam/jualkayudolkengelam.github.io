@@ -37,6 +37,8 @@
     - subtitle: Subtitle below title → class="subtitle"
     - icon: Main header icon (Bootstrap icon class)
     - gradient: Gradient color (purple, red, blue, green, orange, wood)
+    - paragraph_1: First paragraph after H2 (REQUIRED for SEO) → class="paragraph_1"
+    - paragraph_2: Second paragraph after H2 (REQUIRED for SEO) → class="paragraph_2"
     - layout: Card layout ("2col" for col-lg-6, "3col" for col-lg-4)
     - card_1, card_2, card_3, card_4, card_5, card_6: Cards (NO LOOP!)
       Each card:
@@ -60,6 +62,8 @@
   - title (header card) → <div class="card title border-0 shadow-lg">
   - title (h2 text) → <h2 class="h2 mb-0 fw-bold text-white">
   - subtitle → <p class="subtitle mb-0 mt-2 small">
+  - paragraph_1 → <p class="paragraph_1">
+  - paragraph_2 → <p class="paragraph_2">
 
   Cards:
   - card_1 → <div class="card_1">
@@ -104,6 +108,11 @@
     subtitle: "isi subtitle di bawah title (OPTIONAL - hapus jika tidak perlu)"
     icon: "bi-buildings-fill"  # Bootstrap icon class
     gradient: "purple"  # Options: purple, red, blue, green, orange, wood
+
+    # Paragraphs (REQUIRED - untuk SEO & Accessibility)
+    paragraph_1: "isi paragraf pertama setelah H2, sebelum masuk ke cards. Jelaskan konteks umum atau overview dari section ini."
+    paragraph_2: "isi paragraf kedua untuk melengkapi penjelasan. Bisa digunakan untuk statistik, benefit umum, atau call-to-action."
+
     layout: "2col"  # Options: "2col" (col-lg-6) atau "3col" (col-lg-4)
 
     # CARD 1
@@ -266,6 +275,19 @@
     </div>
   </div>
 </div>
+
+<!-- Paragraphs (after H2, before H3 cards) -->
+{% if section.paragraph_1 %}
+<div class="my-4">
+  <p class="paragraph_1 lead">{{ section.paragraph_1 }}</p>
+</div>
+{% endif %}
+
+{% if section.paragraph_2 %}
+<div class="mb-4">
+  <p class="paragraph_2">{{ section.paragraph_2 }}</p>
+</div>
+{% endif %}
 
 <!-- Cards Grid -->
 <div class="row g-4 my-4">
