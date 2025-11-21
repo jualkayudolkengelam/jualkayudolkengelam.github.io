@@ -102,6 +102,9 @@ Architecture Principle:
 
   <!-- Collect all schemas at bottom before </body> -->
 
+  <!-- Breadcrumb Schema (BreadcrumbList) -->
+  {% include schema--breadcrumb.html current_title=page.title %}
+
   <!-- Related Products Schema (ItemList with Product items) -->
   {% comment %}
   NOTE: final_products is set inside block--related-product--by-node.html

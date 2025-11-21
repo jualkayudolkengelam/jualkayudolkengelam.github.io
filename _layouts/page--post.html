@@ -93,6 +93,9 @@ Architecture Principle:
 
   <!-- Collect all schemas at bottom before </body> -->
 
+  <!-- Breadcrumb Schema (BreadcrumbList) -->
+  {% include schema--breadcrumb.html current_title=page.title parent_name="Blog" parent_url="/blog/" %}
+
   <!-- Article Schema (BlogPosting/Article) -->
   <script type="application/ld+json">
   {
