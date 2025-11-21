@@ -1,0 +1,353 @@
+{% comment %}
+  ============================================================================
+  Case Study Block Component
+  ============================================================================
+
+  @file        _includes/components/block--case-study.html
+  @description Reusable component for case study section with profile,
+               application details, investment, and ROI metrics
+               HARDCODED - NO LOOPS!
+
+  @version     1.0.0
+  @date        2025-11-21
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 main title
+  - Profile card with 3 info boxes (icon + label + value)
+  - Application section title (H3)
+  - 3 application cards with details and budget
+  - Total investment summary card
+  - ROI metrics section with 4 metrics cards
+
+  Parameters:
+  -----------
+  - page.case_study: Object containing:
+    - title: H2 main section title → class="title"
+    - profil_title: H3 profile section title → class="profil_title"
+    - profil_info_1, profil_info_2, profil_info_3: Profile info boxes
+      Each:
+      - icon: Bootstrap icon class
+      - label: Info label → class="label"
+      - value: Info value → class="value"
+    - aplikasi_title: H3 aplikasi section title → class="aplikasi_title"
+    - aplikasi_card_1, aplikasi_card_2, aplikasi_card_3: Application cards
+      Each card:
+      - title: H4 card title → class="title"
+      - luas: Luas/size info → class="luas"
+      - detail_1, detail_2: Detail items → class="detail_1", "detail_2"
+      - budget: Budget value → class="budget"
+    - investment_title: Investment card title → class="investment_title"
+    - investment_value: Investment value → class="investment_value"
+    - roi_title: H3 ROI section title → class="roi_title"
+    - roi_metric_1, roi_metric_2, roi_metric_3, roi_metric_4: ROI metrics
+      Each metric:
+      - icon: Bootstrap icon class
+      - color: Metric color (primary, success, warning, info)
+      - label: Metric label → class="label"
+      - value: Metric value → class="value"
+      - note: Optional note → class="note"
+
+  Class Mapping (Best Practice Pattern):
+  ---------------------------------------
+  Frontmatter key → HTML class name
+  - title → <h2 class="title">
+  - profil_title → <h3 class="profil_title">
+  - label → <p class="label">
+  - value → <p class="value">
+  - aplikasi_title → <h3 class="aplikasi_title">
+  - budget → <div class="budget">
+  - investment_title → <h4 class="investment_title">
+  - investment_value → <p class="investment_value">
+  - roi_title → <h3 class="roi_title">
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  case_study:
+    title: "Case Study: Cafe di Jakarta"
+    profil_title: "Profil Cafe"
+    profil_info_1:
+      icon: "bi-shop"
+      label: "Nama"
+      value: "[Cafe XYZ]"
+    aplikasi_title: "Aplikasi Dolken"
+    aplikasi_card_1:
+      title: "Feature Wall"
+      luas: "30 m²"
+      detail_1: "900 batang dolken 2-3 cm"
+      detail_2: "Pattern: Vertical variasi panjang"
+      budget: "Rp 13.5 juta"
+    investment_title: "Total Investment Material"
+    investment_value: "± Rp 32.25 juta"
+    roi_title: "Return on Investment (ROI)"
+    roi_metric_1:
+      icon: "bi-instagram"
+      color: "primary"
+      label: "Instagram Mentions"
+      value: "↑ 300%"
+  ---
+
+  In content:
+  <section id="case-study">
+    {% include components/block--case-study.html %}
+  </section>
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.case_study %}
+{% assign section = page.case_study %}
+
+<!-- Main Title (H2) -->
+<div class="my-5">
+  {% if section.title %}
+  <h2 class="title h2 fw-bold text-wood mb-4">{{ section.title }}</h2>
+  {% endif %}
+
+  <!-- Profile Card -->
+  <div class="card border-0 shadow-lg mb-4">
+    <div class="card-header bg-wood text-white py-3">
+      {% if section.profil_title %}
+      <h3 class="profil_title h5 mb-0">
+        <i class="bi bi-cup-hot me-2"></i>{{ section.profil_title }}
+      </h3>
+      {% endif %}
+    </div>
+    <div class="card-body bg-light">
+      <div class="row">
+        <!-- Profile Info 1 -->
+        {% if section.profil_info_1 %}
+        <div class="col-md-4 text-center mb-3 mb-md-0 profil_info_1">
+          <div class="p-3">
+            <i class="bi {{ section.profil_info_1.icon | default: 'bi-info-circle' }} text-wood" style="font-size: 2.5rem;"></i>
+            <p class="label mb-1 mt-2"><strong>{{ section.profil_info_1.label }}</strong></p>
+            <p class="value text-muted mb-0">{{ section.profil_info_1.value }}</p>
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Profile Info 2 -->
+        {% if section.profil_info_2 %}
+        <div class="col-md-4 text-center mb-3 mb-md-0 profil_info_2">
+          <div class="p-3">
+            <i class="bi {{ section.profil_info_2.icon | default: 'bi-info-circle' }} text-wood" style="font-size: 2.5rem;"></i>
+            <p class="label mb-1 mt-2"><strong>{{ section.profil_info_2.label }}</strong></p>
+            <p class="value text-muted mb-0">{{ section.profil_info_2.value }}</p>
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Profile Info 3 -->
+        {% if section.profil_info_3 %}
+        <div class="col-md-4 text-center profil_info_3">
+          <div class="p-3">
+            <i class="bi {{ section.profil_info_3.icon | default: 'bi-info-circle' }} text-wood" style="font-size: 2.5rem;"></i>
+            <p class="label mb-1 mt-2"><strong>{{ section.profil_info_3.label }}</strong></p>
+            <p class="value text-muted mb-0">{{ section.profil_info_3.value }}</p>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Aplikasi Section -->
+  {% if section.aplikasi_title %}
+  <h3 class="aplikasi_title h5 text-wood mb-3">
+    <i class="bi bi-hammer me-2"></i>{{ section.aplikasi_title }}
+  </h3>
+  {% endif %}
+
+  <div class="row g-3 mb-4">
+    <!-- Aplikasi Card 1 -->
+    {% if section.aplikasi_card_1 %}
+    <div class="col-md-4 aplikasi_card_1">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body text-center">
+          <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+            <span class="h4 mb-0 text-primary fw-bold">1</span>
+          </div>
+          <h4 class="title h6 text-wood mb-3">{{ section.aplikasi_card_1.title }}</h4>
+          {% if section.aplikasi_card_1.luas %}
+          <p class="luas small text-muted mb-2">
+            <i class="bi bi-rulers me-1"></i>{{ section.aplikasi_card_1.luas }}
+          </p>
+          {% endif %}
+          <ul class="list-unstyled small mb-3">
+            {% if section.aplikasi_card_1.detail_1 %}
+            <li class="detail_1 mb-1">{{ section.aplikasi_card_1.detail_1 }}</li>
+            {% endif %}
+            {% if section.aplikasi_card_1.detail_2 %}
+            <li class="detail_2 mb-1">{{ section.aplikasi_card_1.detail_2 }}</li>
+            {% endif %}
+          </ul>
+          {% if section.aplikasi_card_1.budget %}
+          <div class="budget alert alert-success mb-0 py-2">
+            <strong>{{ section.aplikasi_card_1.budget }}</strong>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Aplikasi Card 2 -->
+    {% if section.aplikasi_card_2 %}
+    <div class="col-md-4 aplikasi_card_2">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body text-center">
+          <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+            <span class="h4 mb-0 text-info fw-bold">2</span>
+          </div>
+          <h4 class="title h6 text-wood mb-3">{{ section.aplikasi_card_2.title }}</h4>
+          {% if section.aplikasi_card_2.luas %}
+          <p class="luas small text-muted mb-2">
+            <i class="bi bi-rulers me-1"></i>{{ section.aplikasi_card_2.luas }}
+          </p>
+          {% endif %}
+          <ul class="list-unstyled small mb-3">
+            {% if section.aplikasi_card_2.detail_1 %}
+            <li class="detail_1 mb-1">{{ section.aplikasi_card_2.detail_1 }}</li>
+            {% endif %}
+            {% if section.aplikasi_card_2.detail_2 %}
+            <li class="detail_2 mb-1">{{ section.aplikasi_card_2.detail_2 }}</li>
+            {% endif %}
+          </ul>
+          {% if section.aplikasi_card_2.budget %}
+          <div class="budget alert alert-success mb-0 py-2">
+            <strong>{{ section.aplikasi_card_2.budget }}</strong>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Aplikasi Card 3 -->
+    {% if section.aplikasi_card_3 %}
+    <div class="col-md-4 aplikasi_card_3">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body text-center">
+          <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+            <span class="h4 mb-0 text-warning fw-bold">3</span>
+          </div>
+          <h4 class="title h6 text-wood mb-3">{{ section.aplikasi_card_3.title }}</h4>
+          {% if section.aplikasi_card_3.luas %}
+          <p class="luas small text-muted mb-2">
+            <i class="bi bi-rulers me-1"></i>{{ section.aplikasi_card_3.luas }}
+          </p>
+          {% endif %}
+          <ul class="list-unstyled small mb-3">
+            {% if section.aplikasi_card_3.detail_1 %}
+            <li class="detail_1 mb-1">{{ section.aplikasi_card_3.detail_1 }}</li>
+            {% endif %}
+            {% if section.aplikasi_card_3.detail_2 %}
+            <li class="detail_2 mb-1">{{ section.aplikasi_card_3.detail_2 }}</li>
+            {% endif %}
+          </ul>
+          {% if section.aplikasi_card_3.budget %}
+          <div class="budget alert alert-success mb-0 py-2">
+            <strong>{{ section.aplikasi_card_3.budget }}</strong>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- Total Investment Card -->
+  {% if section.investment_title and section.investment_value %}
+  <div class="card border-0 shadow-sm bg-success bg-opacity-10 mb-4">
+    <div class="card-body text-center">
+      <h4 class="investment_title h6 text-success mb-2">
+        <i class="bi bi-cash-stack me-2"></i>{{ section.investment_title }}
+      </h4>
+      <p class="investment_value h4 text-success mb-0 fw-bold">{{ section.investment_value }}</p>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- ROI Section -->
+  {% if section.roi_title %}
+  <div class="card border-0 shadow-lg">
+    <div class="card-header bg-gradient text-white py-3" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+      <h3 class="roi_title h5 mb-0">
+        <i class="bi bi-graph-up-arrow me-2"></i>{{ section.roi_title }}
+      </h3>
+    </div>
+    <div class="card-body">
+      <div class="row g-4">
+        <!-- ROI Metric 1 -->
+        {% if section.roi_metric_1 %}
+        <div class="col-md-6 col-lg-3 roi_metric_1">
+          <div class="text-center">
+            <div class="bg-{{ section.roi_metric_1.color | default: 'primary' }} bg-opacity-10 rounded-3 p-3 mb-2">
+              <i class="bi {{ section.roi_metric_1.icon | default: 'bi-graph-up' }} text-{{ section.roi_metric_1.color | default: 'primary' }}" style="font-size: 2.5rem;"></i>
+            </div>
+            <p class="label mb-1 small text-muted">{{ section.roi_metric_1.label }}</p>
+            <p class="value h4 text-{{ section.roi_metric_1.color | default: 'primary' }} mb-0 fw-bold">{{ section.roi_metric_1.value }}</p>
+            {% if section.roi_metric_1.note %}
+            <p class="note small text-muted mb-0">{{ section.roi_metric_1.note }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- ROI Metric 2 -->
+        {% if section.roi_metric_2 %}
+        <div class="col-md-6 col-lg-3 roi_metric_2">
+          <div class="text-center">
+            <div class="bg-{{ section.roi_metric_2.color | default: 'success' }} bg-opacity-10 rounded-3 p-3 mb-2">
+              <i class="bi {{ section.roi_metric_2.icon | default: 'bi-graph-up' }} text-{{ section.roi_metric_2.color | default: 'success' }}" style="font-size: 2.5rem;"></i>
+            </div>
+            <p class="label mb-1 small text-muted">{{ section.roi_metric_2.label }}</p>
+            <p class="value h4 text-{{ section.roi_metric_2.color | default: 'success' }} mb-0 fw-bold">{{ section.roi_metric_2.value }}</p>
+            {% if section.roi_metric_2.note %}
+            <p class="note small text-muted mb-0">{{ section.roi_metric_2.note }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- ROI Metric 3 -->
+        {% if section.roi_metric_3 %}
+        <div class="col-md-6 col-lg-3 roi_metric_3">
+          <div class="text-center">
+            <div class="bg-{{ section.roi_metric_3.color | default: 'warning' }} bg-opacity-10 rounded-3 p-3 mb-2">
+              <i class="bi {{ section.roi_metric_3.icon | default: 'bi-graph-up' }} text-{{ section.roi_metric_3.color | default: 'warning' }}" style="font-size: 2.5rem;"></i>
+            </div>
+            <p class="label mb-1 small text-muted">{{ section.roi_metric_3.label }}</p>
+            <p class="value h4 text-{{ section.roi_metric_3.color | default: 'warning' }} mb-0 fw-bold">{{ section.roi_metric_3.value }}</p>
+            {% if section.roi_metric_3.note %}
+            <p class="note small text-muted mb-0">{{ section.roi_metric_3.note }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- ROI Metric 4 -->
+        {% if section.roi_metric_4 %}
+        <div class="col-md-6 col-lg-3 roi_metric_4">
+          <div class="text-center">
+            <div class="bg-{{ section.roi_metric_4.color | default: 'info' }} bg-opacity-10 rounded-3 p-3 mb-2">
+              <i class="bi {{ section.roi_metric_4.icon | default: 'bi-graph-up' }} text-{{ section.roi_metric_4.color | default: 'info' }}" style="font-size: 2.5rem;"></i>
+            </div>
+            <p class="label mb-1 small text-muted">{{ section.roi_metric_4.label }}</p>
+            <p class="value h4 text-{{ section.roi_metric_4.color | default: 'info' }} mb-0 fw-bold">{{ section.roi_metric_4.value }}</p>
+            {% if section.roi_metric_4.note %}
+            <p class="note small text-muted mb-0">{{ section.roi_metric_4.note }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+{% endif %}
