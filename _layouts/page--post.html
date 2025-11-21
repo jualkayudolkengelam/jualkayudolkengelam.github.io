@@ -1,0 +1,96 @@
+{% comment %}
+============================================================================
+Page Wrapper: Blog Post Pages (page--post.html)
+============================================================================
+
+@file        page--post.html
+@path        _layouts/page--post.html
+@type        Page (wrapper - variant)
+@variant     post (blog post pages)
+@description Blog post page wrapper with post-specific includes
+@author      arisciwek
+
+Drupal-style naming: page--post.html (variant of page.html)
+
+This is the blog post page wrapper, created to separate post-specific
+includes from the pure entity content (node--post.html, node--post-with-city.html).
+
+Architecture Principle:
+- Node templates = Pure entity content (no includes)
+- Page wrappers = Container for page-type-specific includes
+
+Related templates:
+- page.html (base page wrapper)
+- node--post.html (blog post entity content)
+- node--post-with-city.html (city post entity content)
+
+Used by:
+- _posts/*.md (all blog posts)
+- _post_with_city/*.md (all city-based posts)
+
+Site Structure:
+- HTML doctype and lang attribute
+- head.html (meta tags, CSS, scripts)
+- Article schema (WebPage + BlogPosting in @graph)
+- header.html (logo, navigation menu)
+- main.main-content:
+  - {{ content }} renders node--post.html or node--post-with-city.html
+  - block--related-content--by-node.html (related articles)
+  - block--product-list.html (optional product catalog for conversions)
+- footer.html (site footer with business info)
+- block--cta--whatsapp.html (floating WhatsApp button)
+
+Usage:
+Set in node--post.html or node--post-with-city.html frontmatter:
+  ---
+  layout: page--post
+  ---
+
+Hierarchy:
+_posts/2025-11-20-article-title.md (frontmatter: layout: node--post)
+└── node--post.html (layout: page--post)
+    └── page--post.html (this file - post wrapper)
+        ├── Article schema
+        ├── header.html
+        ├── {{ content }} renders node--post.html
+        ├── block--related-content--by-node.html (artikel terkait)
+        ├── block--product-list.html (katalog produk untuk konversi)
+        └── footer.html
+
+Architecture Principle:
+- Node = Pure entity (artikel itu sendiri)
+- Page wrapper = Site structure + related blocks
+- All includes belong in page wrapper, NOT in node template!
+
+============================================================================
+{% endcomment %}
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'id' }}">
+{% include head.html %}
+
+<body>
+  <!-- Article Schema will be included within node template -->
+
+  {% include header.html %}
+
+  <main class="main-content">
+    {{ content }}
+
+    <!-- Post-specific includes -->
+    <div class="container">
+      <!-- Product Catalog for Conversion -->
+      <div class="row mt-5">
+        <div class="col-12">
+          {% include block--product-list.html
+             title="Produk Kayu Dolken Gelam Kami"
+             show_footer=true
+          %}
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {% include footer.html %}
+  {% include block--cta--whatsapp.html %}
+</body>
+</html>
