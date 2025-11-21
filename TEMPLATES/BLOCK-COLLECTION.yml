@@ -1,0 +1,209 @@
+# ============================================================================
+# BLOCK COLLECTION - Component Registry
+# ============================================================================
+#
+# @file        TEMPLATES/BLOCK-COLLECTION.yml
+# @description Central registry untuk semua block components. File ini berisi
+#              metadata dan struktur heading dari setiap block component yang
+#              tersedia. Digunakan oleh TEMPLATE--multi-purpose.md untuk
+#              memilih block yang sesuai tanpa perlu scan semua files.
+#
+# @version     1.0.0
+# @date        2025-11-21
+# @author      jualkayudolkengelam
+#
+# WAJIB: Setiap block baru harus didaftarkan di file ini!
+#
+# ============================================================================
+
+blocks:
+  - id: mengapa-memilih-dolken
+    file: block--mengapa-memilih-dolken.html
+    name: "Mengapa Memilih Dolken"
+    category: product
+    tags:
+      - product-benefits
+      - features
+      - value-proposition
+      - 2-column
+    use_cases:
+      - product_focus
+      - product_comparison
+      - general
+    description: |
+      Block untuk menjelaskan keunggulan kayu dolken dengan 2 card layout.
+      Cocok untuk artikel yang fokus ke product benefits dan fitur unggulan.
+      Menyoroti value proposition dari dua perspektif: estetika/desain dan aspek praktis/fungsional.
+
+    heading_structure:
+      h2: 1  # Main title
+      h3: 2  # Card titles
+      h4: 0
+      h5: 0
+      h6: 0
+      total: 3
+
+  - id: mengapa-memilih-kami
+    file: block--mengapa-memilih-kami.html
+    name: "Mengapa Memilih Kami"
+    category: company
+    tags:
+      - company-benefits
+      - why-us
+      - competitive-advantage
+      - 2-column
+    use_cases:
+      - company_focus
+      - about_us
+      - general
+    description: |
+      Block untuk menjelaskan keunggulan perusahaan/toko dengan 2 card layout.
+      Cocok untuk artikel yang fokus ke company benefits dan keunggulan kompetitif.
+      Membangun trust dengan menyoroti value proposition perusahaan.
+
+    heading_structure:
+      h2: 1  # Main title
+      h3: 2  # Card titles
+      h4: 0
+      h5: 0
+      h6: 0
+      total: 3
+
+  - id: aplikasi-hotel
+    file: block--aplikasi-hotel.html
+    name: "Aplikasi Kayu Dolken untuk Hotel/Cafe"
+    category: application
+    tags:
+      - use-cases
+      - hotel
+      - cafe
+      - commercial
+      - 2-6-column
+    use_cases:
+      - hotel
+      - cafe
+      - resort
+      - commercial
+      - application_showcase
+    description: |
+      Block untuk showcase aplikasi kayu dolken di berbagai area hotel/cafe/resort.
+      Support layout 2-column atau 3-column. Ideal untuk menampilkan implementasi konkret.
+      Setiap card bisa berisi implementasi detail, keunggulan, dan estimasi budget.
+
+    heading_structure:
+      h2: 1   # Header title
+      h3: 6   # Card titles (card_1 to card_6)
+      h4: 12  # Sub-headings (h4_1, h4_2 per card)
+      h5: 0
+      h6: 0
+      total: 19
+
+  - id: tips-desain
+    file: block--tips-desain.html
+    name: "Tips Desain Kayu Dolken"
+    category: tips
+    tags:
+      - design-tips
+      - how-to
+      - best-practices
+      - tutorial
+      - 3-6-column
+    use_cases:
+      - design_guide
+      - tips_advice
+      - tutorial
+      - inspiration
+      - general
+    description: |
+      Block untuk memberikan tips desain dan saran penggunaan dolken.
+      Support layout 3-column atau 4-column untuk tips yang banyak.
+      Cocok untuk artikel how-to, panduan desain, dan best practices.
+
+    heading_structure:
+      h2: 1   # Header title
+      h3: 6   # Card titles (card_1 to card_6)
+      h4: 12  # Sub-headings (h4_1, h4_2 per card)
+      h5: 0
+      h6: 0
+      total: 19
+
+  - id: case-study
+    file: block--case-study.html
+    name: "Case Study Implementasi"
+    category: case-study
+    tags:
+      - case-study
+      - proof
+      - roi
+      - social-proof
+      - testimonial
+    use_cases:
+      - case_study
+      - success_story
+      - proof_of_concept
+    description: |
+      Block untuk menyajikan studi kasus nyata implementasi produk.
+      Menampilkan profil bisnis, aplikasi detail, total investment, dan analisis ROI.
+      Ideal untuk membangun kredibilitas dan menunjukkan track record dengan hasil terukur.
+
+    heading_structure:
+      h2: 1  # Main title
+      h3: 3  # profil_title, aplikasi_title, roi_title
+      h4: 4  # 3 card titles + investment_title
+      h5: 6  # Sub-headings (h5_1, h5_2 per card)
+      h6: 0
+      total: 14
+
+  - id: tentang-kota-ini
+    file: block--tentang-kota-ini.html
+    name: "Tentang Kota Kami"
+    category: location
+    tags:
+      - location
+      - city-info
+      - local-authority
+      - geography
+      - about
+    use_cases:
+      - location_specific
+      - local_business
+      - about_city
+    description: |
+      Block untuk menyajikan informasi tentang kota/daerah untuk membangun local authority.
+      Menampilkan sejarah, ekonomi, landmark, dan kehidupan modern dalam format terstruktur.
+      Ideal untuk halaman About, landing page daerah, dan artikel lokasi-spesifik.
+
+    heading_structure:
+      h2: 1  # Main title (Tentang [nama_kota]: [tagline])
+      h3: 2  # Section headers (tentang_kota_1.title, tentang_kota_2.title)
+      h4: 4  # Card titles (card_1 to card_4)
+      h5: 4  # Card subtitles (subjudul)
+      h6: 0
+      total: 11
+
+# ============================================================================
+# USAGE NOTES
+# ============================================================================
+#
+# Categories:
+# -----------
+# - product: Fokus ke produk (dolken)
+# - company: Fokus ke perusahaan/toko
+# - application: Showcase aplikasi/use cases
+# - tips: Tips, panduan, tutorial
+# - case-study: Studi kasus nyata
+# - location: Informasi lokasi/daerah
+#
+# Use Cases:
+# ----------
+# - product_focus: Artikel fokus produk
+# - company_focus: Artikel fokus perusahaan
+# - hotel/cafe/resort: Artikel spesifik industri
+# - commercial: Proyek komersial
+# - design_guide: Panduan desain
+# - tips_advice: Tips dan saran
+# - case_study: Studi kasus
+# - location_specific: Artikel dengan konteks lokasi
+# - general: Bisa untuk berbagai jenis artikel
+#
+# ============================================================================

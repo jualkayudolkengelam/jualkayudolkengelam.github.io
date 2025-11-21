@@ -32,34 +32,52 @@
 # - "Generate landing page untuk toko kami"
 # - "Case study implementasi dolken di Cafe XYZ"
 #
-# STEP 2: SCAN AVAILABLE BLOCKS
+# STEP 2: LOAD BLOCK COLLECTION
 # ------------------------------
-# Scan folder: _includes/components/
-# Pattern: block--*.html
+# Read file: TEMPLATES/BLOCK-COLLECTION.yml
 #
-# Untuk setiap block yang ditemukan:
-# 1. Read file untuk mendapatkan @description
-# 2. Extract informasi:
-#    - Purpose (untuk apa block ini?)
-#    - Heading structure (berapa H2, H3, H4, dll?)
-#    - Cards (berapa cards?)
-#    - YAML key (key apa yang dipakai di frontmatter?)
-#    - Use cases (kapan block ini cocok dipakai?)
+# File ini berisi metadata semua available blocks:
+# - id: Block identifier
+# - name: Block name
+# - category: Block category (product/company/application/tips/case-study/location)
+# - tags: Tags untuk filtering
+# - use_cases: Kapan block ini cocok dipakai
+# - description: Purpose dan use case detail
+# - heading_structure: Jumlah H2, H3, H4, H5, H6, dan total
+#
+# Keuntungan menggunakan BLOCK-COLLECTION.yml:
+# - Tidak perlu scan dan read semua block files
+# - Single source of truth untuk block metadata
+# - Lebih cepat dan efisien
+# - Easy filtering berdasarkan category, tags, use_cases
 #
 # STEP 3: ANALISA & MATCH BLOCKS
 # -------------------------------
-# Berdasarkan kebutuhan user (Step 1) dan available blocks (Step 2):
+# Berdasarkan kebutuhan user (Step 1) dan BLOCK-COLLECTION.yml (Step 2):
+# - Filter blocks berdasarkan category, tags, dan use_cases
 # - Tentukan blocks mana yang SANGAT RELEVAN (✅)
 # - Tentukan blocks mana yang OPTIONAL/CONDITIONAL (⚠️)
 # - Tentukan blocks mana yang TIDAK RELEVAN (❌)
 #
-# Kriteria matching:
-# - Lokasi spesifik disebutkan? → Pertimbangkan block--tentang-kota-ini.html
-# - Fokus pada produk? → Pertimbangkan block--mengapa-memilih-dolken.html
-# - Fokus pada toko/penjual? → Pertimbangkan block--mengapa-memilih-kami.html
-# - Ada case study? → Pertimbangkan block--case-study.html
-# - Ada aplikasi/use cases? → Pertimbangkan block--aplikasi-hotel.html
-# - Ada tips/inspirasi? → Pertimbangkan block--tips-desain.html
+# Kriteria matching berdasarkan BLOCK-COLLECTION.yml:
+#
+# Category-based:
+# - Fokus produk? → Filter category: "product" (mengapa-memilih-dolken)
+# - Fokus perusahaan? → Filter category: "company" (mengapa-memilih-kami)
+# - Showcase aplikasi? → Filter category: "application" (aplikasi-hotel)
+# - Tips/tutorial? → Filter category: "tips" (tips-desain)
+# - Case study? → Filter category: "case-study" (case-study)
+# - Info lokasi? → Filter category: "location" (tentang-kota-ini)
+#
+# Tag-based:
+# - Hotel/cafe/resort? → Filter tags: hotel, cafe, commercial
+# - Design guide? → Filter tags: design-tips, how-to, best-practices
+# - Product benefits? → Filter tags: product-benefits, features
+#
+# Use-case-based:
+# - Artikel hotel? → Filter use_cases: hotel, commercial
+# - Artikel general? → Cari blocks dengan use_cases: general
+# - Location-specific? → Filter use_cases: location_specific
 #
 # STEP 4: TAWARKAN BLOCKS KE USER
 # --------------------------------
@@ -578,6 +596,16 @@ share_count: 0
 # - AI harus interactive: present recommendation → get approval → execute
 # - FRONTMATTER TEMPLATE di atas WAJIB dipakai untuk setiap konten baru
 # - Jangan pernah skip Meta Information - semua fields REQUIRED harus diisi
+#
+# BLOCK COLLECTION (WAJIB!):
+# ---------------------------
+# - Semua block metadata ada di: TEMPLATES/BLOCK-COLLECTION.yml
+# - Step 2 WAJIB read file ini untuk mendapatkan available blocks
+# - JANGAN scan folder _includes/components/ secara langsung
+# - Jika membuat block baru, WAJIB register di BLOCK-COLLECTION.yml
+# - Format registrasi: lihat contoh di BLOCK-COLLECTION.yml
+# - Setiap block entry harus punya: id, file, name, category, tags, use_cases,
+#   description, dan heading_structure
 #
 # ============================================================================
 
