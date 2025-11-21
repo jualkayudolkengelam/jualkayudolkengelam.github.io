@@ -69,9 +69,6 @@ Architecture Principle:
 {% include head.html %}
 
 <body>
-  <!-- Combined Product Page Schema (WebPage + Breadcrumb + Product in @graph) -->
-  {% include schema--product-page.html product=page %}
-
   {% include header.html %}
 
   <main class="main-content">
@@ -101,6 +98,9 @@ Architecture Principle:
   {% include block--cta--whatsapp.html %}
 
   <!-- Collect all schemas at bottom before </body> -->
+
+  <!-- Product Page Schema (WebPage + Product in @graph) -->
+  {% include schema--product-page.html product=page %}
 
   <!-- Breadcrumb Schema (BreadcrumbList) -->
   {% include schema--breadcrumb.html current_title=page.title %}
