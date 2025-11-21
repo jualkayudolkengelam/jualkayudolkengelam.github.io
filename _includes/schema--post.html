@@ -1,0 +1,113 @@
+{% comment %}
+============================================================================
+Shared Schema: BlogPosting/Article
+============================================================================
+
+@file        schema--post.html
+@path        _includes/schema--post.html
+@type        Schema (shared component)
+@description Reusable BlogPosting/Article schema for all post displays
+@author      jualkayudolkengelam
+@version     1.0.0
+@date        2025-11-22
+
+This is a shared schema component that provides BlogPosting/Article structured
+data for consistency across all post displays (detail pages, cards, lists).
+
+Parameters:
+-----------
+- post: (required) post object
+- raw: (optional) output raw JSON without <script> tags (default: false)
+
+Usage:
+------
+In node--post.html (single post page):
+{% include schema--post.html post=page %}
+
+In block--post.html (post card with schema):
+{% include schema--post.html post=include.post %}
+
+In schema--blog-list.html (ItemList with BlogPosting):
+"item": {% include schema--post.html post=post raw=true %}
+
+Benefits:
+---------
+- DRY: Single source of truth for BlogPosting schema
+- Consistency: Same fields across all post displays
+- Maintainability: Update once, applies everywhere
+- Flexible: Can output with/without script tags
+
+Used by:
+--------
+- _layouts/node--post.html (post detail page)
+- _includes/block--post.html (single post card)
+- _includes/schema--blog-list.html (blog archive/listing)
+
+Schema Fields:
+--------------
+- BlogPosting basics: headline, description, image, url
+- Author information
+- Publisher (Organization)
+- Dates: datePublished, dateModified
+- articleBody excerpt
+- mainEntityOfPage
+- InteractionStatistic (likes, comments, shares if available)
+
+============================================================================
+{% endcomment %}
+
+{% assign raw_output = include.raw | default: false %}
+{% assign post = include.post %}
+
+{% unless raw_output %}<script type="application/ld+json">
+{% endunless %}{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{ post.url | absolute_url }}#article",
+  "headline": "{{ post.title | strip_html | strip_newlines | escape }}",
+  "description": "{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 200 | escape }}",
+  "image": "{{ post.image | default: site.default_image | absolute_url }}",
+  "url": "{{ post.url | absolute_url }}",
+  "datePublished": "{{ post.date | date_to_xmlschema }}",
+  {% if post.last_modified_at %}"dateModified": "{{ post.last_modified_at | date_to_xmlschema }}",{% else %}"dateModified": "{{ post.date | date_to_xmlschema }}",{% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "{{ post.author | default: site.author | default: site.business.name }}",
+    "url": "{{ site.url }}{{ site.baseurl }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.business.name }}",
+    "url": "{{ site.url }}{{ site.baseurl }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.logo | default: '/assets/images/logo.png' | absolute_url }}",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ post.url | absolute_url }}"
+  }{% if post.categories.size > 0 %},
+  "articleSection": "{{ post.categories | first }}"{% endif %}{% if post.tags.size > 0 %},
+  "keywords": "{{ post.tags | join: ', ' }}"{% endif %}{% if post.like_count or post.comment_count or post.share_count %},
+  "interactionStatistic": [
+    {% if post.like_count %}{
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/LikeAction",
+      "userInteractionCount": {{ post.like_count }}
+    }{% if post.comment_count or post.share_count %},{% endif %}{% endif %}
+    {% if post.comment_count %}{
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/CommentAction",
+      "userInteractionCount": {{ post.comment_count }}
+    }{% if post.share_count %},{% endif %}{% endif %}
+    {% if post.share_count %}{
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/ShareAction",
+      "userInteractionCount": {{ post.share_count }}
+    }{% endif %}
+  ]{% endif %}
+}{% unless raw_output %}
+</script>{% endunless %}

@@ -1,0 +1,84 @@
+{% comment %}
+  ============================================================================
+  Schema Include - Blog List (ItemList with BlogPosting items)
+  ============================================================================
+
+  @file        _includes/schema--blog-list.html
+  @description Dedicated schema include for blog archive/listing ItemList markup.
+               Separated from blog.html for better architecture and schema
+               centralization.
+
+  @version     1.0.0
+  @date        2025-11-22
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Architecture:
+  -------------
+  - Block (_includes/block--post-list.html): Visual blog post display (if exists)
+  - Schema (_includes/schema--blog-list.html): ItemList schema markup
+  - Page (blog.html): Include schema at bottom before </body>
+
+  Features:
+  ---------
+  - Schema.org ItemList with complete BlogPosting items
+  - All blog posts from site.posts and site.post_with_city
+  - Sorted by last_modified_at (recent updates first)
+  - Complete BlogPosting fields (author, dates, interaction stats)
+  - Perfect schema/visual accuracy
+  - Maximum SEO value for blog archive
+
+  Parameters:
+  -----------
+  - title: Custom section heading (default: "Blog & Artikel")
+
+  Usage:
+  ------
+  {% include schema--blog-list.html %}
+
+  {% include schema--blog-list.html title="Artikel Terbaru" %}
+
+  Called from:
+  ------------
+  - blog.html (blog archive/listing page, before </body> tag)
+  - Any page displaying complete blog listing
+
+  ============================================================================
+{% endcomment %}
+
+{% assign list_title = include.title | default: "Blog & Artikel" %}
+
+{% comment %} Combine regular posts and posts with products {% endcomment %}
+{% assign all_posts = site.posts | concat: site.post_with_city %}
+
+{% comment %}
+Sort posts by last_modified_at (DESC) for fresh content priority.
+Posts with last_modified_at appear first, then posts sorted by publish date.
+This ensures recently updated posts with new metrics rise to the top.
+{% endcomment %}
+{% assign posts_with_modified = all_posts | where_exp: "post", "post.last_modified_at" | sort: "last_modified_at" | reverse %}
+{% assign posts_without_modified = all_posts | where_exp: "post", "post.last_modified_at == nil" | sort: "date" | reverse %}
+{% assign sorted_posts = posts_with_modified | concat: posts_without_modified %}
+
+{% comment %} Schema.org ItemList for Blog Archive {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "{{ page.url | absolute_url }}#blog-list",
+  "name": "{{ list_title }}",
+  "description": "Daftar lengkap artikel dan informasi seputar kayu dolken gelam",
+  "numberOfItems": {{ sorted_posts.size }},
+  "itemListElement": [
+    {% for post in sorted_posts %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "name": "{{ post.title | strip_html | strip_newlines | escape }}",
+      "item": {% include schema--post.html post=post raw=true %}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
