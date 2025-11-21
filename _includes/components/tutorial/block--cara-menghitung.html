@@ -1,29 +1,83 @@
 {% comment %}
-============================================================================
-Block: Cara Menghitung Kebutuhan Kayu Dolken
-============================================================================
+  ============================================================================
+  Cara Menghitung Block Component (Interactive Calculator)
+  ============================================================================
 
-@file        block--cara-menghitung.html
-@path        _includes/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/block--cara-menghitung.html
-@type        Content Block
-@description Menampilkan cara menghitung kebutuhan kayu dolken
-@usage       {% include posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/block--cara-menghitung.html %}
+  @file        _includes/components/tutorial/block--cara-menghitung.html
+  @description Kalkulator interaktif untuk menghitung kebutuhan kayu dolken.
+               Menyediakan form input dan menampilkan hasil perhitungan secara real-time.
+               HARDCODED CALCULATOR - tidak menggunakan data dari frontmatter.
 
-Data yang digunakan dari frontmatter:
-- page.cara_menghitung (array of objects)
-  - judul: string
-  - subtitle: string
-  - icon: string
-  - warna: string
-  - rumus: string (optional)
-  - contoh: object (optional)
-    - deskripsi: string
-    - items: array of strings
-  - komponen: array of objects (optional)
-    - nama: string
-    - jumlah: string
+  @version     1.0.0
+  @date        2025-11-21
+  @author      jualkayudolkengelam
 
-============================================================================
+  Heading Structure (SEO & Accessibility):
+  -----------------------------------------
+  - 1 × H2: "Kalkulator Kebutuhan Dolken" (id="heading-25")
+  - 1 × H3: "Jumlah Dolken yang Dibutuhkan" (id="heading-26", in result section)
+  - 0 × H4, H5, H6: Not used in this block
+
+  Total Headings: 2
+
+  Features:
+  ---------
+  - Gradient header with calculator icon and H2 title
+  - Interactive form with 2 input fields:
+    - Total Panjang Pagar (meter)
+    - Jarak Antar Tiang (meter)
+  - Real-time validation (HTML5 required fields)
+  - Calculate button with icon
+  - Result display section with:
+    - H3 heading for result
+    - Calculated value (with decimals)
+    - Rounded value badge
+  - JavaScript calculator logic (formula: panjang ÷ jarak)
+  - Smooth scroll to result
+  - Responsive form layout (2-column on desktop, 1-column on mobile)
+
+  Calculator Logic:
+  -----------------
+  Formula: Jumlah Dolken = Total Panjang Pagar ÷ Jarak Antar Tiang
+  Example: 40 meter ÷ 1.5 meter = 26.67 batang → dibulatkan menjadi 27 batang
+
+  Class Mapping (Semantic Classes):
+  ----------------------------------
+  - calculator-section-wrapper: Main wrapper
+  - calculator-section-header-card: Header card container
+  - calculator-form-card: Form card container
+  - calculator-form: Form element
+  - calculator-inputs-grid: Input fields grid
+  - calculator-input-col: Input column wrapper
+  - calculator-input-field: Input field
+  - calculator-submit-btn: Submit button
+  - calculator-result-wrapper: Result wrapper (initially hidden)
+  - calculator-result-alert: Result alert box
+  - calculator-rounded-result: Rounded result display
+
+  Usage:
+  ------
+  IMPORTANT: This block is HARDCODED and does NOT use frontmatter data.
+  Simply include the block in your content:
+
+  <section id="cara-menghitung">
+    {% include components/tutorial/block--cara-menghitung.html %}
+  </section>
+
+  ============================================================================
+  NO YAML STRUCTURE NEEDED - HARDCODED CALCULATOR
+  ============================================================================
+
+  This block does NOT require frontmatter configuration. All content, labels,
+  and calculation logic are hardcoded in the HTML and JavaScript.
+
+  To customize this calculator:
+  1. Edit the HTML directly in this file
+  2. Modify input labels, placeholders, and validation messages
+  3. Update calculation formula in JavaScript (line 120)
+  4. Adjust result display format and styling
+
+  ============================================================================
 {% endcomment %}
 
 
