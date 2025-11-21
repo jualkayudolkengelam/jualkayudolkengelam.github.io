@@ -18,6 +18,205 @@ like_count: 94
 comment_count: 24
 share_count: 38
 last_modified_at: 2025-09-20 16:45:00 +0700
+
+# Tips Desain Block Component
+tips_desain:
+  title: "Tips Desain dengan Kayu Dolken"
+  subtitle: "Panduan praktis untuk hasil maksimal"
+  icon: "bi-palette-fill"
+  gradient: "wood"
+
+  # Paragraphs (REQUIRED - untuk SEO & Accessibility)
+  paragraph_1: "Merancang desain dengan kayu dolken membutuhkan pemahaman yang tepat tentang material ini dan bagaimana mengaplikasikannya secara efektif. Berikut adalah panduan lengkap yang akan membantu Anda menciptakan ruang yang stunning dengan kayu dolken."
+  paragraph_2: "Dari pemilihan focal point hingga maintenance jangka panjang, tips-tips ini sudah terbukti menghasilkan desain yang tidak hanya indah secara visual, tetapi juga sustainable dan mudah dirawat untuk hospitality business."
+
+  layout: "3col"
+
+  # CARD 1
+  card_1:
+    title: "1. Jangan Over-do"
+    icon: "bi-x-circle"
+    color: "danger"
+
+    intro: "Kesalahan paling umum dalam menggunakan kayu dolken adalah terlalu banyak menggunakannya. Less is more - prinsip ini sangat penting untuk menciptakan ruang yang balanced dan tidak overwhelming."
+
+    h4_1: "Kesalahan yang Sering Terjadi"
+    paragraph_h4_1: "Banyak desainer pemula yang terlalu excited dan akhirnya menggunakan dolken di hampir seluruh area. Hasilnya: ruangan terasa claustrophobic dan kehilangan focal point yang jelas."
+
+    h4_2: "Prinsip Balance yang Benar"
+    paragraph_h4_2: "Kayu dolken paling efektif ketika dijadikan aksen, bukan elemen dominan. Kombinasikan dengan material industrial seperti concrete, metal, atau glass untuk kontras yang menarik."
+
+    item_1:
+      icon: "bi-check2"
+      color: "success"
+      text: "Pilih 1-2 focal point saja"
+    item_2:
+      icon: "bi-check2"
+      color: "success"
+      text: "Balance dengan material lain (concrete, metal, glass)"
+    item_3:
+      icon: "bi-check2"
+      color: "success"
+      text: "Biarkan kayu menjadi aksen, bukan dominan"
+
+  # CARD 2
+  card_2:
+    title: "2. Lighting is Key"
+    icon: "bi-lightbulb-fill"
+    color: "warning"
+
+    intro: "Pencahayaan adalah elemen yang paling mengubah penampilan kayu dolken. Tanpa lighting yang tepat, tekstur natural dan warmth dari kayu tidak akan maksimal."
+
+    h4_1: "Jenis Lighting yang Recommended"
+    paragraph_h4_1: "Warm white light (2700-3000K) adalah pilihan terbaik untuk kayu dolken. Temperature ini menonjolkan natural tone kayu tanpa membuat ruangan terasa terlalu kuning atau orange."
+
+    h4_2: "Teknik Shadow Play"
+    paragraph_h4_2: "Dengan menempatkan lighting di sudut tertentu, shadow yang dihasilkan oleh dolken vertikal bisa menjadi elemen desain tersendiri. Ini menciptakan depth dan movement pada dinding."
+
+    item_1:
+      icon: "bi-check2"
+      color: "success"
+      text: "Dolken + lighting = magic"
+    item_2:
+      icon: "bi-check2"
+      color: "success"
+      text: "Gunakan warm light (2700-3000K)"
+    item_3:
+      icon: "bi-check2"
+      color: "success"
+      text: "Coba strip LED, spotlight, atau pendant lights"
+    item_4:
+      icon: "bi-check2"
+      color: "success"
+      text: "Shadow play bisa jadi elemen desain"
+
+  # CARD 3
+  card_3:
+    title: "3. Variasi Diameter untuk Depth"
+    icon: "bi-layers-fill"
+    color: "info"
+
+    intro: "Menggunakan satu ukuran diameter saja akan menghasilkan tampilan yang flat dan monoton. Mixing different sizes adalah kunci untuk menciptakan visual interest."
+
+    h4_1: "Kombinasi Diameter yang Efektif"
+    paragraph_h4_1: "Mix 2-3 cm diameter untuk base layer, kemudian tambahkan accent dengan 4-6 cm diameter. Perbedaan size ini menciptakan dimensi dan depth yang tidak bisa dicapai dengan monotone installation."
+
+    h4_2: "Pattern dan Arrangement"
+    paragraph_h4_2: "Jangan arrange secara random. Buat pattern dengan grouping size tertentu, atau create gradient dari kecil ke besar. Ini memberikan visual flow yang lebih intentional."
+
+    item_1:
+      icon: "bi-check2"
+      color: "success"
+      text: "Jangan monoton satu ukuran"
+    item_2:
+      icon: "bi-check2"
+      color: "success"
+      text: "Mix 2-3 cm dengan 4-6 cm"
+    item_3:
+      icon: "bi-check2"
+      color: "success"
+      text: "Ciptakan layer dan dimensi"
+    item_4:
+      icon: "bi-check2"
+      color: "success"
+      text: "Lebih dynamic dan interesting"
+
+  # CARD 4
+  card_4:
+    title: "4. Finishing Matters"
+    icon: "bi-brush-fill"
+    color: "primary"
+
+    intro: "Finishing adalah step yang menentukan durability dan aesthetic final dari instalasi dolken. Pilihan finish yang tepat akan melindungi investment Anda sekaligus enhance visual appeal."
+
+    h4_1: "Opsi Finishing untuk Different Looks"
+    paragraph_h4_1: "Natural oil memberikan protection ringan dengan satin finish yang subtle. Matte clear coat lebih durable untuk high-traffic area. Charred finish trend Shou Sugi Ban untuk darker dramatic tone. Whitewash perfect untuk Scandinavian vibe."
+
+    h4_2: "Maintenance per Finishing Type"
+    paragraph_h4_2: "Natural oil perlu re-application setiap 6-12 bulan. Clear coat lebih low-maintenance, hanya perlu dibersihkan. Charred finish hampir tidak perlu maintenance. Whitewash mungkin perlu touch-up di high-traffic spots."
+
+    item_1:
+      icon: "bi-droplet-fill"
+      color: "success"
+      title: "Natural Oil"
+      text: "Tampilan natural, satin finish"
+    item_2:
+      icon: "bi-shield-check"
+      color: "primary"
+      title: "Matte Clear Coat"
+      text: "Protection tanpa kilap berlebihan"
+    item_3:
+      icon: "bi-fire"
+      color: "danger"
+      title: "Charred/Burnt"
+      text: "Trend Shou Sugi Ban untuk darker tone"
+    item_4:
+      icon: "bi-water"
+      color: "info"
+      title: "Whitewash"
+      text: "Untuk Scandinavian/beach vibe"
+
+  # CARD 5
+  card_5:
+    title: "5. Maintenance Plan"
+    icon: "bi-tools"
+    color: "success"
+
+    intro: "Kayu dolken yang well-maintained bisa bertahan 10+ tahun bahkan di outdoor environment. Kunci nya adalah consistent maintenance routine yang tidak perlu complicated."
+
+    h4_1: "Routine Cleaning Schedule"
+    paragraph_h4_1: "Weekly dusting dengan microfiber cloth sudah cukup untuk indoor installation. Untuk outdoor, monthly deep cleaning dengan mild soap dan air pressure rendah. Hindari harsh chemicals yang bisa damage finishing."
+
+    h4_2: "Long-term Care Strategy"
+    paragraph_h4_2: "Re-oil treatment setiap 6-12 bulan untuk high-touch area seperti partition atau railing. Bi-annual inspection untuk crack atau split, especially di outdoor installation. Individual piece replacement sangat mudah - one of dolken's biggest advantages."
+
+    item_1:
+      icon: "bi-calendar-week"
+      color: "primary"
+      text: "Bersihkan debu setiap minggu"
+    item_2:
+      icon: "bi-calendar-range"
+      color: "info"
+      text: "Re-oil setiap 6-12 bulan (high-touch area)"
+    item_3:
+      icon: "bi-search"
+      color: "warning"
+      text: "Check untuk crack/split setiap 6 bulan"
+    item_4:
+      icon: "bi-arrow-repeat"
+      color: "success"
+      text: "Replace individual piece jika perlu (easy!)"
+
+  # CARD 6
+  card_6:
+    title: "6. Combine with Greenery"
+    icon: "bi-tree"
+    color: "success"
+
+    intro: "Kayu dan tanaman adalah kombinasi natural yang selalu work. Biophilic design approach ini tidak hanya aesthetic, tapi juga proven meningkatkan well-being dan productivity."
+
+    h4_1: "Plant Selection yang Cocok"
+    paragraph_h4_1: "Pilih tanaman yang low-maintenance untuk hospitality setting. Hanging plants seperti pothos atau string of pearls cantik di pergola dolken. Philodendron atau monstera bagus untuk floor level near partition dolken."
+
+    h4_2: "Integration Techniques"
+    paragraph_h4_2: "Built-in planters bisa diintegrate langsung ke dolken partition. Hanging systems dari dolken pergola menciptakan green canopy. Wall-mounted pots pada dolken wall cladding. Spacing yang tepat antara kayu dan tanaman penting untuk air circulation."
+
+    item_1:
+      icon: "bi-flower1"
+      color: "success"
+      text: "Tambahkan tanaman gantung atau merambat"
+    item_2:
+      icon: "bi-droplet"
+      color: "primary"
+      text: "Hanging plants di pergola dolken"
+    item_3:
+      icon: "bi-grid-3x3"
+      color: "info"
+      text: "Pot tanaman di base partition dolken"
+    item_4:
+      icon: "bi-stars"
+      color: "warning"
+      text: "Biophilic design meningkatkan wellness"
 ---
 
 Kayu dolken gelam diameter kecil hingga sedang (2-6 cm) menjadi trending dalam desain interior dan eksterior hotel serta cafe modern. Material natural ini memberikan sentuhan rustic yang hangat namun tetap elegan.
@@ -714,196 +913,10 @@ Kayu dolken gelam diameter kecil hingga sedang (2-6 cm) menjadi trending dalam d
   </div>
 </div>
 
-<div class="my-5">
-  <div class="card border-0 shadow-lg">
-    <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #D4A574 0%, #8B6914 50%, #6B5310 100%);">
-      <i class="bi bi-palette-fill mb-2" style="font-size: 2.5rem;"></i>
-      <h2 class="h3 mb-0 fw-bold text-white">Tips Desain dengan Kayu Dolken</h2>
-      <p class="mb-0 mt-2 small" style="opacity: 0.85;">
-        <i class="bi bi-stars me-1"></i>
-        Panduan praktis untuk hasil maksimal
-        <i class="bi bi-stars ms-1"></i>
-      </p>
-    </div>
-  </div>
-</div>
+<section id="tips-desain">
+{% include components/block--tips-desain.html %}
+</section>
 
-<div class="row g-4 my-4">
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm h-100">
-      <div class="card-body">
-        <div class="d-flex align-items-center mb-3">
-          <div class="bg-danger bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-            <i class="bi bi-x-circle text-danger" style="font-size: 1.5rem;"></i>
-          </div>
-          <h3 class="h6 mb-0 text-wood">1. Jangan Over-do</h3>
-        </div>
-        <ul class="list-unstyled mb-0">
-          <li class="mb-2">
-            <i class="bi bi-check2 text-success me-2"></i>Pilih 1-2 focal point saja
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-check2 text-success me-2"></i>Balance dengan material lain (concrete, metal, glass)
-          </li>
-          <li class="mb-0">
-            <i class="bi bi-check2 text-success me-2"></i>Biarkan kayu menjadi aksen, bukan dominan
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm h-100">
-      <div class="card-body">
-        <div class="d-flex align-items-center mb-3">
-          <div class="bg-warning bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-            <i class="bi bi-lightbulb-fill text-warning" style="font-size: 1.5rem;"></i>
-          </div>
-          <h3 class="h6 mb-0 text-wood">2. Lighting is Key</h3>
-        </div>
-        <ul class="list-unstyled mb-0">
-          <li class="mb-2">
-            <i class="bi bi-check2 text-success me-2"></i>Dolken + lighting = magic
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-check2 text-success me-2"></i>Gunakan warm light (2700-3000K)
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-check2 text-success me-2"></i>Coba strip LED, spotlight, atau pendant lights
-          </li>
-          <li class="mb-0">
-            <i class="bi bi-check2 text-success me-2"></i>Shadow play bisa jadi elemen desain
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm h-100">
-      <div class="card-body">
-        <div class="d-flex align-items-center mb-3">
-          <div class="bg-info bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-            <i class="bi bi-layers-fill text-info" style="font-size: 1.5rem;"></i>
-          </div>
-          <h3 class="h6 mb-0 text-wood">3. Variasi Diameter untuk Depth</h3>
-        </div>
-        <ul class="list-unstyled mb-0">
-          <li class="mb-2">
-            <i class="bi bi-check2 text-success me-2"></i>Jangan monoton satu ukuran
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-check2 text-success me-2"></i>Mix 2-3 cm dengan 4-6 cm
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-check2 text-success me-2"></i>Ciptakan layer dan dimensi
-          </li>
-          <li class="mb-0">
-            <i class="bi bi-check2 text-success me-2"></i>Lebih dynamic dan interesting
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm h-100">
-      <div class="card-body">
-        <div class="d-flex align-items-center mb-3">
-          <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-            <i class="bi bi-brush-fill text-primary" style="font-size: 1.5rem;"></i>
-          </div>
-          <h3 class="h6 mb-0 text-wood">4. Finishing Matters</h3>
-        </div>
-        <div class="mb-2">
-          <i class="bi bi-droplet-fill text-success me-2"></i>
-          <strong class="small">Natural Oil:</strong>
-          <span class="small text-muted">Tampilan natural, satin finish</span>
-        </div>
-        <div class="mb-2">
-          <i class="bi bi-shield-check text-primary me-2"></i>
-          <strong class="small">Matte Clear Coat:</strong>
-          <span class="small text-muted">Protection tanpa kilap berlebihan</span>
-        </div>
-        <div class="mb-2">
-          <i class="bi bi-fire text-danger me-2"></i>
-          <strong class="small">Charred/Burnt:</strong>
-          <span class="small text-muted">Trend Shou Sugi Ban untuk darker tone</span>
-        </div>
-        <div class="mb-0">
-          <i class="bi bi-water text-info me-2"></i>
-          <strong class="small">Whitewash:</strong>
-          <span class="small text-muted">Untuk Scandinavian/beach vibe</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm h-100">
-      <div class="card-body">
-        <div class="d-flex align-items-center mb-3">
-          <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-            <i class="bi bi-tools text-success" style="font-size: 1.5rem;"></i>
-          </div>
-          <h3 class="h6 mb-0 text-wood">5. Maintenance Plan</h3>
-        </div>
-        <p class="small mb-3 text-muted">Agar tetap bagus:</p>
-        <ul class="list-unstyled mb-0">
-          <li class="mb-2">
-            <i class="bi bi-calendar-week text-primary me-2"></i>
-            <span class="small">Bersihkan debu setiap minggu</span>
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-calendar-range text-info me-2"></i>
-            <span class="small">Re-oil setiap 6-12 bulan (high-touch area)</span>
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-search text-warning me-2"></i>
-            <span class="small">Check untuk crack/split setiap 6 bulan</span>
-          </li>
-          <li class="mb-0">
-            <i class="bi bi-arrow-repeat text-success me-2"></i>
-            <span class="small">Replace individual piece jika perlu (easy!)</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm h-100">
-      <div class="card-body">
-        <div class="d-flex align-items-center mb-3">
-          <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-            <i class="bi bi-tree text-success" style="font-size: 1.5rem;"></i>
-          </div>
-          <h3 class="h6 mb-0 text-wood">6. Combine with Greenery</h3>
-        </div>
-        <p class="small mb-3 text-muted">Kayu + tanaman = perfect match:</p>
-        <ul class="list-unstyled mb-0">
-          <li class="mb-2">
-            <i class="bi bi-flower1 text-success me-2"></i>
-            <span class="small">Tambahkan tanaman gantung atau merambat</span>
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-droplet text-primary me-2"></i>
-            <span class="small">Hanging plants di pergola dolken</span>
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-grid-3x3 text-info me-2"></i>
-            <span class="small">Pot tanaman di base partition dolken</span>
-          </li>
-          <li class="mb-0">
-            <i class="bi bi-stars text-warning me-2"></i>
-            <span class="small">Biophilic design meningkatkan wellness</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 
 ## Supplier Checklist
 
