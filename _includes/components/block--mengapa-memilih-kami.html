@@ -1,0 +1,369 @@
+{% comment %}
+  ============================================================================
+  Mengapa Memilih Block Component
+  ============================================================================
+
+  @file        _includes/components/block--mengapa-memilih.html
+  @description Menyajikan value proposition dan keunggulan produk melalui
+               dua perspektif utama: estetika/desain dan aspek praktis/fungsional.
+               Membantu prospek memahami mengapa produk ini menjadi pilihan tepat
+               dengan menyoroti benefit yang relevan dengan kebutuhan bisnis mereka.
+               Ideal untuk halaman produk, landing page, dan artikel persuasif.
+
+  @version     1.0.0
+  @date        2025-11-21
+  @author      jualkayudolkengelam
+
+  Heading Structure (SEO & Accessibility):
+  -----------------------------------------
+  - 1 × H2: Main section title (mengapa_memilih.title)
+  - 2 × H3: Card titles (card_1.title, card_2.title)
+  - 0 × H4, H5, H6: Not used in this block
+
+  Total Headings: 3 (1×H2 + 2×H3)
+
+  Paragraphs (REQUIRED for SEO):
+  - 1 after H2: paragraph_1
+  - 2 after H3 cards: card_1.intro, card_2.intro
+
+  Total Paragraphs: 3
+
+  Features:
+  ---------
+  - H2 heading for main section title
+  - 2 hardcoded cards side-by-side (card_1, card_2)
+  - Each card has H3 title
+  - Multiple items per card with icon, title & description
+  - Responsive card grid layout
+  - Clean bg-light card design
+
+  Parameters:
+  -----------
+  - page.mengapa_memilih: Object containing:
+    - title: H2 main section title → class="title"
+    - paragraph_1: Paragraph after H2 (REQUIRED for SEO) → class="paragraph_1"
+    - card_1, card_2: Hardcoded cards (NO LOOP!) → class="card_1", "card_2"
+      Each card:
+      - title: H3 card title → class="title"
+      - icon: Bootstrap icon class
+      - intro: Optional intro paragraph → class="intro"
+      - items: Array of items (NO LOOP - hardcoded item_1, item_2, etc)
+        Each item:
+        - icon: Bootstrap icon class
+        - color: Icon color (success, primary, danger, warning, info)
+        - title: Item title → class="item_title"
+        - deskripsi: Item description → class="item_deskripsi"
+
+  Class Mapping (Best Practice Pattern):
+  ---------------------------------------
+  Frontmatter key → HTML class name
+  - title → <h2 class="title">
+  - paragraph_1 → <p class="paragraph_1">
+  - card_1 → <div class="card_1">
+  - card_2 → <div class="card_2">
+  - intro → <p class="intro">
+  - item_1 → <div class="item_1">
+  - item_title → <strong class="item_title">
+  - item_deskripsi → <p class="item_deskripsi">
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  mengapa_memilih:
+    title: "Mengapa Hotel & Cafe Memilih Kayu Dolken?"
+    paragraph_1: "Kayu dolken gelam bukan sekadar elemen dekoratif—ini adalah investasi jangka panjang yang memberikan nilai tambah signifikan untuk bisnis hospitality Anda."
+    card_1:
+      title: "Estetika Natural yang Timeless"
+      icon: "bi-stars"
+      intro: "Tren desain saat ini mengarah pada:"
+      item_1:
+        icon: "bi-check-circle-fill"
+        color: "success"
+        title: "Biophilic Design"
+        deskripsi: "Membawa elemen alam ke dalam ruangan"
+      item_2:
+        icon: "bi-check-circle-fill"
+        color: "success"
+        title: "Sustainable Material"
+        deskripsi: "Konsumen lebih appreciate material eco-friendly"
+    card_2:
+      title: "Praktis dan Tahan Lama"
+      icon: "bi-shield-check"
+      intro: "Berbeda dengan dekorasi kayu biasa:"
+      item_1:
+        icon: "bi-droplet-fill"
+        color: "primary"
+        title: "Tahan Kelembaban Tinggi"
+        deskripsi: "Cocok untuk area basah seperti restroom"
+  ---
+
+  In content:
+  <section id="mengapa-memilih">
+    {% include components/block--mengapa-memilih.html %}
+  </section>
+
+  ============================================================================
+  COMPLETE YAML STRUCTURE - COPY & PASTE KE FRONTMATTER
+  ============================================================================
+
+  Instruksi Penggunaan:
+  1. Copy seluruh structure YAML di bawah ini
+  2. Paste ke frontmatter artikel Anda
+  3. Ganti semua teks "isi ..." dengan konten Anda
+  4. Setiap card bisa punya 1-4 items (item_1 sampai item_4)
+  5. Hapus item yang tidak digunakan (misal: jika card hanya perlu 2 items, hapus item_3 & item_4)
+
+  ---
+  # Section: Mengapa Memilih
+  mengapa_memilih:
+    # Main Section
+    title: "isi judul H2 (misal: Mengapa Hotel & Cafe Memilih Kayu Dolken?)"
+    paragraph_1: "isi paragraf setelah H2 - REQUIRED untuk SEO. Jelaskan value proposition utama atau overview mengapa produk ini pilihan tepat."
+
+    # CARD 1 - Perspektif Estetika/Desain
+    card_1:
+      title: "isi judul H3 card #1 (misal: Estetika Natural yang Timeless)"
+      icon: "bi-stars"  # Bootstrap icon class
+      intro: "isi intro paragraph setelah H3 - REQUIRED untuk SEO (misal: Tren desain saat ini mengarah pada:)"
+
+      # Item 1
+      item_1:
+        icon: "bi-check-circle-fill"  # Bootstrap icon class
+        color: "success"  # Options: success, primary, danger, warning, info
+        title: "isi title item #1 (misal: Biophilic Design)"
+        deskripsi: "isi deskripsi item #1 (misal: Membawa elemen alam ke dalam ruangan)"
+
+      # Item 2
+      item_2:
+        icon: "bi-check-circle-fill"
+        color: "success"
+        title: "isi title item #2 (misal: Sustainable Material)"
+        deskripsi: "isi deskripsi item #2"
+
+      # Item 3 (OPTIONAL - hapus jika tidak perlu)
+      item_3:
+        icon: "bi-check-circle-fill"
+        color: "success"
+        title: "isi title item #3"
+        deskripsi: "isi deskripsi item #3"
+
+      # Item 4 (OPTIONAL - hapus jika tidak perlu)
+      item_4:
+        icon: "bi-check-circle-fill"
+        color: "success"
+        title: "isi title item #4"
+        deskripsi: "isi deskripsi item #4"
+
+    # CARD 2 - Perspektif Praktis/Fungsional
+    card_2:
+      title: "isi judul H3 card #2 (misal: Praktis dan Tahan Lama)"
+      icon: "bi-shield-check"
+      intro: "isi intro paragraph setelah H3 - REQUIRED untuk SEO (misal: Berbeda dengan dekorasi kayu biasa:)"
+
+      # Item 1
+      item_1:
+        icon: "bi-droplet-fill"
+        color: "primary"
+        title: "isi title item #1 (misal: Tahan Kelembaban Tinggi)"
+        deskripsi: "isi deskripsi item #1"
+
+      # Item 2
+      item_2:
+        icon: "bi-check-circle-fill"
+        color: "primary"
+        title: "isi title item #2"
+        deskripsi: "isi deskripsi item #2"
+
+      # Item 3 (OPTIONAL)
+      item_3:
+        icon: "bi-check-circle-fill"
+        color: "primary"
+        title: "isi title item #3"
+        deskripsi: "isi deskripsi item #3"
+
+      # Item 4 (OPTIONAL)
+      item_4:
+        icon: "bi-check-circle-fill"
+        color: "primary"
+        title: "isi title item #4"
+        deskripsi: "isi deskripsi item #4"
+  ---
+
+  Notes:
+  - Card 1 biasanya fokus pada estetika/desain/visual appeal
+  - Card 2 biasanya fokus pada aspek praktis/durabilitas/fungsional
+  - Icon list: https://icons.getbootstrap.com/
+  - Color options: success (green), primary (blue), danger (red),
+                   warning (yellow), info (cyan)
+  - Setiap card bisa punya 1-4 items, tidak harus sama jumlahnya
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.mengapa_memilih %}
+{% assign section = page.mengapa_memilih %}
+
+<!-- Main Title (H2) -->
+<div class="my-5">
+  {% if section.title %}
+  <h2 class="title h2 fw-bold text-wood text-center mb-4">{{ section.title }}</h2>
+  {% endif %}
+
+  <!-- Paragraph after H2 (REQUIRED for SEO) -->
+  {% if section.paragraph_1 %}
+  <p class="paragraph_1 text-center mb-4">{{ section.paragraph_1 }}</p>
+  {% endif %}
+
+  <div class="row g-4">
+    <!-- CARD 1 -->
+    {% if section.card_1 %}
+    <div class="col-md-6 card_1">
+      <div class="card border-0 shadow-sm h-100 bg-light">
+        <div class="card-body">
+          {% if section.card_1.title %}
+          <h3 class="title h5 card-title text-wood mb-4">
+            {% if section.card_1.icon %}
+            <i class="bi {{ section.card_1.icon }} me-2"></i>
+            {% endif %}
+            {{ section.card_1.title }}
+          </h3>
+          {% endif %}
+
+          {% if section.card_1.intro %}
+          <p class="intro mb-3">{{ section.card_1.intro }}</p>
+          {% endif %}
+
+          <!-- Item 1 -->
+          {% if section.card_1.item_1 %}
+          <div class="item_1 d-flex mb-3">
+            <div class="me-3">
+              <i class="bi {{ section.card_1.item_1.icon | default: 'bi-check-circle-fill' }} text-{{ section.card_1.item_1.color | default: 'success' }}" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <strong class="item_title text-wood">{{ section.card_1.item_1.title }}</strong>
+              <p class="item_deskripsi mb-0 text-muted small">{{ section.card_1.item_1.deskripsi }}</p>
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Item 2 -->
+          {% if section.card_1.item_2 %}
+          <div class="item_2 d-flex mb-3">
+            <div class="me-3">
+              <i class="bi {{ section.card_1.item_2.icon | default: 'bi-check-circle-fill' }} text-{{ section.card_1.item_2.color | default: 'success' }}" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <strong class="item_title text-wood">{{ section.card_1.item_2.title }}</strong>
+              <p class="item_deskripsi mb-0 text-muted small">{{ section.card_1.item_2.deskripsi }}</p>
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Item 3 -->
+          {% if section.card_1.item_3 %}
+          <div class="item_3 d-flex mb-3">
+            <div class="me-3">
+              <i class="bi {{ section.card_1.item_3.icon | default: 'bi-check-circle-fill' }} text-{{ section.card_1.item_3.color | default: 'success' }}" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <strong class="item_title text-wood">{{ section.card_1.item_3.title }}</strong>
+              <p class="item_deskripsi mb-0 text-muted small">{{ section.card_1.item_3.deskripsi }}</p>
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Item 4 -->
+          {% if section.card_1.item_4 %}
+          <div class="item_4 d-flex">
+            <div class="me-3">
+              <i class="bi {{ section.card_1.item_4.icon | default: 'bi-check-circle-fill' }} text-{{ section.card_1.item_4.color | default: 'success' }}" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <strong class="item_title text-wood">{{ section.card_1.item_4.title }}</strong>
+              <p class="item_deskripsi mb-0 text-muted small">{{ section.card_1.item_4.deskripsi }}</p>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- CARD 2 -->
+    {% if section.card_2 %}
+    <div class="col-md-6 card_2">
+      <div class="card border-0 shadow-sm h-100 bg-light">
+        <div class="card-body">
+          {% if section.card_2.title %}
+          <h3 class="title h5 card-title text-wood mb-4">
+            {% if section.card_2.icon %}
+            <i class="bi {{ section.card_2.icon }} me-2"></i>
+            {% endif %}
+            {{ section.card_2.title }}
+          </h3>
+          {% endif %}
+
+          {% if section.card_2.intro %}
+          <p class="intro mb-3">{{ section.card_2.intro }}</p>
+          {% endif %}
+
+          <!-- Item 1 -->
+          {% if section.card_2.item_1 %}
+          <div class="item_1 d-flex mb-3">
+            <div class="me-3">
+              <i class="bi {{ section.card_2.item_1.icon | default: 'bi-check-circle-fill' }} text-{{ section.card_2.item_1.color | default: 'success' }}" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <strong class="item_title text-wood">{{ section.card_2.item_1.title }}</strong>
+              <p class="item_deskripsi mb-0 text-muted small">{{ section.card_2.item_1.deskripsi }}</p>
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Item 2 -->
+          {% if section.card_2.item_2 %}
+          <div class="item_2 d-flex mb-3">
+            <div class="me-3">
+              <i class="bi {{ section.card_2.item_2.icon | default: 'bi-check-circle-fill' }} text-{{ section.card_2.item_2.color | default: 'success' }}" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <strong class="item_title text-wood">{{ section.card_2.item_2.title }}</strong>
+              <p class="item_deskripsi mb-0 text-muted small">{{ section.card_2.item_2.deskripsi }}</p>
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Item 3 -->
+          {% if section.card_2.item_3 %}
+          <div class="item_3 d-flex mb-3">
+            <div class="me-3">
+              <i class="bi {{ section.card_2.item_3.icon | default: 'bi-check-circle-fill' }} text-{{ section.card_2.item_3.color | default: 'success' }}" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <strong class="item_title text-wood">{{ section.card_2.item_3.title }}</strong>
+              <p class="item_deskripsi mb-0 text-muted small">{{ section.card_2.item_3.deskripsi }}</p>
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Item 4 -->
+          {% if section.card_2.item_4 %}
+          <div class="item_4 d-flex">
+            <div class="me-3">
+              <i class="bi {{ section.card_2.item_4.icon | default: 'bi-check-circle-fill' }} text-{{ section.card_2.item_4.color | default: 'success' }}" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <strong class="item_title text-wood">{{ section.card_2.item_4.title }}</strong>
+              <p class="item_deskripsi mb-0 text-muted small">{{ section.card_2.item_4.deskripsi }}</p>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{% endif %}
