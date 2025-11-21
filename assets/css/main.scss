@@ -500,23 +500,23 @@ h6.h6 {
 
 /* Desktop layout: h4 and description on separate lines */
 @media (min-width: 769px) {
-  .card-body li,
-  .post-body li {
+  .card-body li:not(.tips-desain-list li),
+  .post-body li:not(.tips-desain-list li) {
     display: flex;
     flex-wrap: wrap !important;
     align-items: flex-start !important;
   }
 
   /* Icon and h4 on first line */
-  .card-body li > i,
-  .post-body li > i {
+  .card-body li:not(.tips-desain-list li) > i,
+  .post-body li:not(.tips-desain-list li) > i {
     flex-shrink: 0;
     margin-right: 0.5rem;
   }
 
   /* h4 stays inline with icon */
-  .card-body li h4.h4,
-  .post-body li h4.h4 {
+  .card-body li:not(.tips-desain-list li) h4.h4,
+  .post-body li:not(.tips-desain-list li) h4.h4 {
     display: inline !important;
     margin-bottom: 0.25rem;
   }
@@ -528,6 +528,23 @@ h6.h6 {
     width: 100%;
     margin-left: 1.75rem !important; /* Align with h4 text, accounting for icon width */
     padding-left: 0 !important;
+  }
+
+  /* Tips Desain List - Exception for proper icon/text alignment */
+  .card-body .tips-desain-list li {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+  }
+
+  .card-body .tips-desain-list li .bi {
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+    margin-right: 0.5rem;
+  }
+
+  .card-body .tips-desain-list .tips-item-content {
+    flex: 1;
   }
 }
 
@@ -562,17 +579,34 @@ h6.h6 {
   }
 
   /* Keep list items in row layout but allow wrapping */
-  .card-body li,
-  .post-body li {
+  .card-body li:not(.tips-desain-list li),
+  .post-body li:not(.tips-desain-list li) {
     display: flex;
     flex-wrap: wrap !important;
     align-items: flex-start !important;
   }
 
   /* Icon stays inline with h4 */
-  .card-body li > i,
-  .post-body li > i {
+  .card-body li:not(.tips-desain-list li) > i,
+  .post-body li:not(.tips-desain-list li) > i {
     flex-shrink: 0;
     margin-right: 0.5rem;
+  }
+
+  /* Tips Desain List - Exception for proper icon/text alignment on mobile */
+  .card-body .tips-desain-list li {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+  }
+
+  .card-body .tips-desain-list li .bi {
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+    margin-right: 0.5rem;
+  }
+
+  .card-body .tips-desain-list .tips-item-content {
+    flex: 1;
   }
 }

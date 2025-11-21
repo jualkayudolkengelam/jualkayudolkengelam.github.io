@@ -103,9 +103,40 @@
 # STEP 5: TUNGGU APPROVAL USER
 # -----------------------------
 # Tunggu response user:
-# - Jika "OK" / "Setuju" / "Ya" → Lanjut ke Step 6
+# - Jika "OK" / "Setuju" / "Ya" → Lanjut ke Step 5A
 # - Jika ada revisi → Kembali ke Step 3 dengan adjustment
 # - Jika user minta tambah/kurangi block tertentu → Adjust dan konfirmasi ulang
+#
+# STEP 5A: TANYA IMAGE AVAILABILITY (WAJIB!)
+# -------------------------------------------
+# ⚠️ CRITICAL: Sebelum generate konten, WAJIB tanya user tentang foto!
+#
+# Tanyakan ke user:
+# ```
+# 📸 PERTANYAAN TENTANG IMAGE:
+#
+# Apakah Anda sudah punya foto untuk artikel ini?
+#
+# A. PUNYA FOTO:
+#    - Berapa banyak foto yang tersedia? (minimal 3-4 recommended)
+#    - Di mana lokasi foto? (path lengkap)
+#    - Nama file foto? (akan saya gunakan untuk image paths)
+#
+# B. BELUM PUNYA FOTO:
+#    - Saya akan gunakan placeholder image paths
+#    - Anda bisa upload foto nanti ke folder yang saya tentukan
+#    - Format: /assets/images/posts/{slug}/{slug}-001.webp
+#
+# Silakan pilih A atau B, atau beri info foto yang Anda punya.
+# ```
+#
+# Tunggu response user:
+# - Jika user PUNYA foto → Dapatkan info lengkap (jumlah, path, nama file)
+# - Jika user BELUM punya → Gunakan placeholder paths
+# - Generate slug dari topik artikel
+# - Tentukan image paths berdasarkan info user
+#
+# Setelah dapat info image → Lanjut ke Step 6
 #
 # STEP 6: GENERATE KONTEN
 # ------------------------
@@ -214,6 +245,11 @@
 # User: "OK, tapi tambahkan case study juga"
 # [AI adjust: pindahkan case-study dari optional ke main blocks]
 #
+# STEP 5A - TANYA IMAGE:
+# AI: "📸 Apakah Anda sudah punya foto untuk artikel ini?"
+# User: "Belum punya"
+# [AI: gunakan placeholder paths /assets/images/posts/inspirasi-dolken-pagar-hotel/...]
+#
 # STEP 6 - GENERATE:
 # [AI generate file lengkap dengan semua YAML dan content]
 #
@@ -251,6 +287,11 @@
 #
 # STEP 5 - APPROVAL:
 # User: "Setuju"
+#
+# STEP 5A - TANYA IMAGE:
+# AI: "📸 Apakah Anda sudah punya foto untuk artikel ini?"
+# User: "Punya 5 foto di folder /home/user/foto-dolken-bandung/"
+# [AI: gunakan paths actual dari folder user]
 #
 # STEP 6 - GENERATE:
 # [Generate dengan special attention to Bandung-specific content]
@@ -292,6 +333,11 @@
 # STEP 5 - APPROVAL:
 # User: "Ya, kami di Semarang"
 # [AI adjust: tambahkan block--tentang-kota-ini.html dengan nama_kota: Semarang]
+#
+# STEP 5A - TANYA IMAGE:
+# AI: "📸 Apakah Anda sudah punya foto toko/team untuk artikel ini?"
+# User: "Belum, nanti saya upload sendiri"
+# [AI: gunakan placeholder paths, beri instruksi folder upload]
 #
 # STEP 6 - GENERATE:
 # [Generate dengan 3 blocks termasuk info Semarang]

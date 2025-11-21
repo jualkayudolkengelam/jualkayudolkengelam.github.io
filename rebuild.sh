@@ -70,7 +70,7 @@ build_site() {
     print_info "Building Jekyll site..."
     print_info "Config: $config_file"
 
-    if bundle exec jekyll build --config "$config_file"; then
+    if bundle exec jekyll build --config "$config_file" --future; then
         print_success "Build completed successfully!"
 
         # Show build info
@@ -96,7 +96,7 @@ serve_site() {
     print_warning "Press Ctrl+C to stop the server"
     echo ""
 
-    bundle exec jekyll serve --config "$config_file" --port "$port" --livereload
+    bundle exec jekyll serve --config "$config_file" --port "$port" --livereload --future
 }
 
 # Function to show usage

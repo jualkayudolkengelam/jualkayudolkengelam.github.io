@@ -435,3 +435,24 @@
   }
 }
 
+/* Tips Desain List - Icon & Text Alignment */
+.card-body .tips-desain-list {
+  li {
+    display: flex !important;
+    align-items: flex-start !important;
+    line-height: 1.6;
+    flex-wrap: nowrap !important;
+
+    .bi {
+      flex-shrink: 0;
+      margin-top: 0.125rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .tips-item-content {
+    flex: 1;
+    display: block;
+  }
+}
+

@@ -411,47 +411,53 @@
         {% endif %}
         {% endif %}
 
-        <ul class="list-unstyled mb-0">
+        <ul class="list-unstyled tips-desain-list mb-0">
           {% if section.card_1.item_1 %}
           <li class="item_1 mb-2">
             {% if section.card_1.item_1.icon %}<i class="bi {{ section.card_1.item_1.icon }} text-{{ section.card_1.item_1.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_1.item_1.title %}<strong class="item_title">{{ section.card_1.item_1.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_1.item_1.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_1.item_1.title %}<strong class="item_title">{{ section.card_1.item_1.title }}:</strong> {% endif %}{{ section.card_1.item_1.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_1.item_2 %}
           <li class="item_2 mb-2">
             {% if section.card_1.item_2.icon %}<i class="bi {{ section.card_1.item_2.icon }} text-{{ section.card_1.item_2.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_1.item_2.title %}<strong class="item_title">{{ section.card_1.item_2.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_1.item_2.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_1.item_2.title %}<strong class="item_title">{{ section.card_1.item_2.title }}:</strong> {% endif %}{{ section.card_1.item_2.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_1.item_3 %}
           <li class="item_3 mb-2">
             {% if section.card_1.item_3.icon %}<i class="bi {{ section.card_1.item_3.icon }} text-{{ section.card_1.item_3.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_1.item_3.title %}<strong class="item_title">{{ section.card_1.item_3.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_1.item_3.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_1.item_3.title %}<strong class="item_title">{{ section.card_1.item_3.title }}:</strong> {% endif %}{{ section.card_1.item_3.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_1.item_4 %}
           <li class="item_4 mb-2">
             {% if section.card_1.item_4.icon %}<i class="bi {{ section.card_1.item_4.icon }} text-{{ section.card_1.item_4.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_1.item_4.title %}<strong class="item_title">{{ section.card_1.item_4.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_1.item_4.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_1.item_4.title %}<strong class="item_title">{{ section.card_1.item_4.title }}:</strong> {% endif %}{{ section.card_1.item_4.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_1.item_5 %}
           <li class="item_5 mb-2">
             {% if section.card_1.item_5.icon %}<i class="bi {{ section.card_1.item_5.icon }} text-{{ section.card_1.item_5.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_1.item_5.title %}<strong class="item_title">{{ section.card_1.item_5.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_1.item_5.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_1.item_5.title %}<strong class="item_title">{{ section.card_1.item_5.title }}:</strong> {% endif %}{{ section.card_1.item_5.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_1.item_6 %}
           <li class="item_6 mb-0">
             {% if section.card_1.item_6.icon %}<i class="bi {{ section.card_1.item_6.icon }} text-{{ section.card_1.item_6.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_1.item_6.title %}<strong class="item_title">{{ section.card_1.item_6.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_1.item_6.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_1.item_6.title %}<strong class="item_title">{{ section.card_1.item_6.title }}:</strong> {% endif %}{{ section.card_1.item_6.text }}</span>
+            </div>
           </li>
           {% endif %}
         </ul>
@@ -492,47 +498,53 @@
         {% endif %}
         {% endif %}
 
-        <ul class="list-unstyled mb-0">
+        <ul class="list-unstyled tips-desain-list mb-0">
           {% if section.card_2.item_1 %}
           <li class="item_1 mb-2">
             {% if section.card_2.item_1.icon %}<i class="bi {{ section.card_2.item_1.icon }} text-{{ section.card_2.item_1.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_2.item_1.title %}<strong class="item_title">{{ section.card_2.item_1.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_2.item_1.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_2.item_1.title %}<strong class="item_title">{{ section.card_2.item_1.title }}:</strong> {% endif %}{{ section.card_2.item_1.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_2.item_2 %}
           <li class="item_2 mb-2">
             {% if section.card_2.item_2.icon %}<i class="bi {{ section.card_2.item_2.icon }} text-{{ section.card_2.item_2.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_2.item_2.title %}<strong class="item_title">{{ section.card_2.item_2.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_2.item_2.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_2.item_2.title %}<strong class="item_title">{{ section.card_2.item_2.title }}:</strong> {% endif %}{{ section.card_2.item_2.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_2.item_3 %}
           <li class="item_3 mb-2">
             {% if section.card_2.item_3.icon %}<i class="bi {{ section.card_2.item_3.icon }} text-{{ section.card_2.item_3.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_2.item_3.title %}<strong class="item_title">{{ section.card_2.item_3.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_2.item_3.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_2.item_3.title %}<strong class="item_title">{{ section.card_2.item_3.title }}:</strong> {% endif %}{{ section.card_2.item_3.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_2.item_4 %}
           <li class="item_4 mb-2">
             {% if section.card_2.item_4.icon %}<i class="bi {{ section.card_2.item_4.icon }} text-{{ section.card_2.item_4.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_2.item_4.title %}<strong class="item_title">{{ section.card_2.item_4.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_2.item_4.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_2.item_4.title %}<strong class="item_title">{{ section.card_2.item_4.title }}:</strong> {% endif %}{{ section.card_2.item_4.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_2.item_5 %}
           <li class="item_5 mb-2">
             {% if section.card_2.item_5.icon %}<i class="bi {{ section.card_2.item_5.icon }} text-{{ section.card_2.item_5.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_2.item_5.title %}<strong class="item_title">{{ section.card_2.item_5.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_2.item_5.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_2.item_5.title %}<strong class="item_title">{{ section.card_2.item_5.title }}:</strong> {% endif %}{{ section.card_2.item_5.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_2.item_6 %}
           <li class="item_6 mb-0">
             {% if section.card_2.item_6.icon %}<i class="bi {{ section.card_2.item_6.icon }} text-{{ section.card_2.item_6.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_2.item_6.title %}<strong class="item_title">{{ section.card_2.item_6.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_2.item_6.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_2.item_6.title %}<strong class="item_title">{{ section.card_2.item_6.title }}:</strong> {% endif %}{{ section.card_2.item_6.text }}</span>
+            </div>
           </li>
           {% endif %}
         </ul>
@@ -573,47 +585,53 @@
         {% endif %}
         {% endif %}
 
-        <ul class="list-unstyled mb-0">
+        <ul class="list-unstyled tips-desain-list mb-0">
           {% if section.card_3.item_1 %}
           <li class="item_1 mb-2">
             {% if section.card_3.item_1.icon %}<i class="bi {{ section.card_3.item_1.icon }} text-{{ section.card_3.item_1.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_3.item_1.title %}<strong class="item_title">{{ section.card_3.item_1.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_3.item_1.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_3.item_1.title %}<strong class="item_title">{{ section.card_3.item_1.title }}:</strong> {% endif %}{{ section.card_3.item_1.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_3.item_2 %}
           <li class="item_2 mb-2">
             {% if section.card_3.item_2.icon %}<i class="bi {{ section.card_3.item_2.icon }} text-{{ section.card_3.item_2.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_3.item_2.title %}<strong class="item_title">{{ section.card_3.item_2.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_3.item_2.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_3.item_2.title %}<strong class="item_title">{{ section.card_3.item_2.title }}:</strong> {% endif %}{{ section.card_3.item_2.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_3.item_3 %}
           <li class="item_3 mb-2">
             {% if section.card_3.item_3.icon %}<i class="bi {{ section.card_3.item_3.icon }} text-{{ section.card_3.item_3.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_3.item_3.title %}<strong class="item_title">{{ section.card_3.item_3.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_3.item_3.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_3.item_3.title %}<strong class="item_title">{{ section.card_3.item_3.title }}:</strong> {% endif %}{{ section.card_3.item_3.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_3.item_4 %}
           <li class="item_4 mb-2">
             {% if section.card_3.item_4.icon %}<i class="bi {{ section.card_3.item_4.icon }} text-{{ section.card_3.item_4.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_3.item_4.title %}<strong class="item_title">{{ section.card_3.item_4.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_3.item_4.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_3.item_4.title %}<strong class="item_title">{{ section.card_3.item_4.title }}:</strong> {% endif %}{{ section.card_3.item_4.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_3.item_5 %}
           <li class="item_5 mb-2">
             {% if section.card_3.item_5.icon %}<i class="bi {{ section.card_3.item_5.icon }} text-{{ section.card_3.item_5.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_3.item_5.title %}<strong class="item_title">{{ section.card_3.item_5.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_3.item_5.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_3.item_5.title %}<strong class="item_title">{{ section.card_3.item_5.title }}:</strong> {% endif %}{{ section.card_3.item_5.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_3.item_6 %}
           <li class="item_6 mb-0">
             {% if section.card_3.item_6.icon %}<i class="bi {{ section.card_3.item_6.icon }} text-{{ section.card_3.item_6.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_3.item_6.title %}<strong class="item_title">{{ section.card_3.item_6.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_3.item_6.text }}</span>
+            <div class="tips-item-content">
+              <span class="item_text small">{% if section.card_3.item_6.title %}<strong class="item_title">{{ section.card_3.item_6.title }}:</strong> {% endif %}{{ section.card_3.item_6.text }}</span>
+            </div>
           </li>
           {% endif %}
         </ul>
@@ -654,47 +672,59 @@
         {% endif %}
         {% endif %}
 
-        <ul class="list-unstyled mb-0">
+        <ul class="list-unstyled tips-desain-list mb-0">
           {% if section.card_4.item_1 %}
           <li class="item_1 mb-2">
             {% if section.card_4.item_1.icon %}<i class="bi {{ section.card_4.item_1.icon }} text-{{ section.card_4.item_1.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_4.item_1.title %}<strong class="item_title">{{ section.card_4.item_1.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_4.item_1.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_4.item_1.title %}<strong class="item_title">{{ section.card_4.item_1.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_4.item_1.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_4.item_2 %}
           <li class="item_2 mb-2">
             {% if section.card_4.item_2.icon %}<i class="bi {{ section.card_4.item_2.icon }} text-{{ section.card_4.item_2.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_4.item_2.title %}<strong class="item_title">{{ section.card_4.item_2.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_4.item_2.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_4.item_2.title %}<strong class="item_title">{{ section.card_4.item_2.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_4.item_2.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_4.item_3 %}
           <li class="item_3 mb-2">
             {% if section.card_4.item_3.icon %}<i class="bi {{ section.card_4.item_3.icon }} text-{{ section.card_4.item_3.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_4.item_3.title %}<strong class="item_title">{{ section.card_4.item_3.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_4.item_3.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_4.item_3.title %}<strong class="item_title">{{ section.card_4.item_3.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_4.item_3.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_4.item_4 %}
           <li class="item_4 mb-2">
             {% if section.card_4.item_4.icon %}<i class="bi {{ section.card_4.item_4.icon }} text-{{ section.card_4.item_4.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_4.item_4.title %}<strong class="item_title">{{ section.card_4.item_4.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_4.item_4.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_4.item_4.title %}<strong class="item_title">{{ section.card_4.item_4.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_4.item_4.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_4.item_5 %}
           <li class="item_5 mb-2">
             {% if section.card_4.item_5.icon %}<i class="bi {{ section.card_4.item_5.icon }} text-{{ section.card_4.item_5.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_4.item_5.title %}<strong class="item_title">{{ section.card_4.item_5.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_4.item_5.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_4.item_5.title %}<strong class="item_title">{{ section.card_4.item_5.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_4.item_5.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_4.item_6 %}
           <li class="item_6 mb-0">
             {% if section.card_4.item_6.icon %}<i class="bi {{ section.card_4.item_6.icon }} text-{{ section.card_4.item_6.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_4.item_6.title %}<strong class="item_title">{{ section.card_4.item_6.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_4.item_6.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_4.item_6.title %}<strong class="item_title">{{ section.card_4.item_6.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_4.item_6.text }}</span>
+            </div>
           </li>
           {% endif %}
         </ul>
@@ -735,47 +765,59 @@
         {% endif %}
         {% endif %}
 
-        <ul class="list-unstyled mb-0">
+        <ul class="list-unstyled tips-desain-list mb-0">
           {% if section.card_5.item_1 %}
           <li class="item_1 mb-2">
             {% if section.card_5.item_1.icon %}<i class="bi {{ section.card_5.item_1.icon }} text-{{ section.card_5.item_1.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_5.item_1.title %}<strong class="item_title">{{ section.card_5.item_1.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_5.item_1.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_5.item_1.title %}<strong class="item_title">{{ section.card_5.item_1.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_5.item_1.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_5.item_2 %}
           <li class="item_2 mb-2">
             {% if section.card_5.item_2.icon %}<i class="bi {{ section.card_5.item_2.icon }} text-{{ section.card_5.item_2.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_5.item_2.title %}<strong class="item_title">{{ section.card_5.item_2.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_5.item_2.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_5.item_2.title %}<strong class="item_title">{{ section.card_5.item_2.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_5.item_2.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_5.item_3 %}
           <li class="item_3 mb-2">
             {% if section.card_5.item_3.icon %}<i class="bi {{ section.card_5.item_3.icon }} text-{{ section.card_5.item_3.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_5.item_3.title %}<strong class="item_title">{{ section.card_5.item_3.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_5.item_3.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_5.item_3.title %}<strong class="item_title">{{ section.card_5.item_3.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_5.item_3.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_5.item_4 %}
           <li class="item_4 mb-2">
             {% if section.card_5.item_4.icon %}<i class="bi {{ section.card_5.item_4.icon }} text-{{ section.card_5.item_4.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_5.item_4.title %}<strong class="item_title">{{ section.card_5.item_4.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_5.item_4.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_5.item_4.title %}<strong class="item_title">{{ section.card_5.item_4.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_5.item_4.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_5.item_5 %}
           <li class="item_5 mb-2">
             {% if section.card_5.item_5.icon %}<i class="bi {{ section.card_5.item_5.icon }} text-{{ section.card_5.item_5.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_5.item_5.title %}<strong class="item_title">{{ section.card_5.item_5.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_5.item_5.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_5.item_5.title %}<strong class="item_title">{{ section.card_5.item_5.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_5.item_5.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_5.item_6 %}
           <li class="item_6 mb-0">
             {% if section.card_5.item_6.icon %}<i class="bi {{ section.card_5.item_6.icon }} text-{{ section.card_5.item_6.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_5.item_6.title %}<strong class="item_title">{{ section.card_5.item_6.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_5.item_6.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_5.item_6.title %}<strong class="item_title">{{ section.card_5.item_6.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_5.item_6.text }}</span>
+            </div>
           </li>
           {% endif %}
         </ul>
@@ -816,47 +858,59 @@
         {% endif %}
         {% endif %}
 
-        <ul class="list-unstyled mb-0">
+        <ul class="list-unstyled tips-desain-list mb-0">
           {% if section.card_6.item_1 %}
           <li class="item_1 mb-2">
             {% if section.card_6.item_1.icon %}<i class="bi {{ section.card_6.item_1.icon }} text-{{ section.card_6.item_1.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_6.item_1.title %}<strong class="item_title">{{ section.card_6.item_1.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_6.item_1.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_6.item_1.title %}<strong class="item_title">{{ section.card_6.item_1.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_6.item_1.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_6.item_2 %}
           <li class="item_2 mb-2">
             {% if section.card_6.item_2.icon %}<i class="bi {{ section.card_6.item_2.icon }} text-{{ section.card_6.item_2.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_6.item_2.title %}<strong class="item_title">{{ section.card_6.item_2.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_6.item_2.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_6.item_2.title %}<strong class="item_title">{{ section.card_6.item_2.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_6.item_2.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_6.item_3 %}
           <li class="item_3 mb-2">
             {% if section.card_6.item_3.icon %}<i class="bi {{ section.card_6.item_3.icon }} text-{{ section.card_6.item_3.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_6.item_3.title %}<strong class="item_title">{{ section.card_6.item_3.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_6.item_3.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_6.item_3.title %}<strong class="item_title">{{ section.card_6.item_3.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_6.item_3.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_6.item_4 %}
           <li class="item_4 mb-2">
             {% if section.card_6.item_4.icon %}<i class="bi {{ section.card_6.item_4.icon }} text-{{ section.card_6.item_4.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_6.item_4.title %}<strong class="item_title">{{ section.card_6.item_4.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_6.item_4.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_6.item_4.title %}<strong class="item_title">{{ section.card_6.item_4.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_6.item_4.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_6.item_5 %}
           <li class="item_5 mb-2">
             {% if section.card_6.item_5.icon %}<i class="bi {{ section.card_6.item_5.icon }} text-{{ section.card_6.item_5.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_6.item_5.title %}<strong class="item_title">{{ section.card_6.item_5.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_6.item_5.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_6.item_5.title %}<strong class="item_title">{{ section.card_6.item_5.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_6.item_5.text }}</span>
+            </div>
           </li>
           {% endif %}
           {% if section.card_6.item_6 %}
           <li class="item_6 mb-0">
             {% if section.card_6.item_6.icon %}<i class="bi {{ section.card_6.item_6.icon }} text-{{ section.card_6.item_6.color | default: 'success' }} me-2"></i>{% endif %}
-            {% if section.card_6.item_6.title %}<strong class="item_title">{{ section.card_6.item_6.title }}:</strong> {% endif %}
-            <span class="item_text small">{{ section.card_6.item_6.text }}</span>
+            <div class="tips-item-content">
+              {% if section.card_6.item_6.title %}<strong class="item_title">{{ section.card_6.item_6.title }}:</strong> {% endif %}
+              <span class="item_text small">{{ section.card_6.item_6.text }}</span>
+            </div>
           </li>
           {% endif %}
         </ul>
