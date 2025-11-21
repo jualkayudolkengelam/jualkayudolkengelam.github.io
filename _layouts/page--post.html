@@ -75,19 +75,6 @@ Architecture Principle:
 
   <main class="main-content">
     {{ content }}
-
-    <!-- Post-specific includes -->
-    <div class="container">
-      <!-- Product Catalog for Conversion -->
-      <div class="row mt-5">
-        <div class="col-12">
-          {% include block--product-list.html
-             title="Produk Kayu Dolken Gelam Kami"
-             show_footer=true
-          %}
-        </div>
-      </div>
-    </div>
   </main>
 
   {% include footer.html %}
