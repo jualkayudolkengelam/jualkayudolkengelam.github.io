@@ -504,7 +504,7 @@ skip_page_schema: true
             <h5 class="card-title">
               <a href="{{ post.url | relative_url }}" class="text-decoration-none text-dark">{{ post.title }}</a>
             </h5>
-            <p class="card-text">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+            <p class="card-text">{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
 
             <!-- Engagement Stats -->
             {% if post.like_count or post.comment_count or post.share_count %}

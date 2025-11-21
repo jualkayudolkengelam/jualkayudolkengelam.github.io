@@ -81,7 +81,7 @@ schema_type: CollectionPage
           <h5 class="card-title mt-2">
             <a href="{{ post.url | relative_url }}" class="text-decoration-none text-dark">{{ post.title }}</a>
           </h5>
-          <p class="card-text text-muted">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+          <p class="card-text text-muted">{{ post.description | default: post.excerpt | strip_html | truncate: 150 }}</p>
 
           {% if post.like_count or post.comment_count or post.share_count %}
           <div class="mb-3 d-flex align-items-center flex-wrap gap-3" class="text-sm">
