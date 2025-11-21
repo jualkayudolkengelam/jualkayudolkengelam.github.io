@@ -534,13 +534,13 @@ tips_desain:
 <!-- ========================================================================== -->
 
 <section id="mengapa-memilih">
-  {% include components/block--mengapa-memilih-dolken.html %}
+  {% include components/inspirasi/block--mengapa-memilih-dolken.html %}
 </section>
 
 <section id="aplikasi-cafe">
-  {% include components/block--aplikasi-hotel.html data=page.aplikasi_hotel %}
+  {% include components/inspirasi/block--aplikasi-hotel.html data=page.aplikasi_hotel %}
 </section>
 
 <section id="tips-desain">
-  {% include components/block--tips-desain.html %}
+  {% include components/inspirasi/block--tips-desain.html %}
 </section>

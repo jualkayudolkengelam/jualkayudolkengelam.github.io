@@ -914,7 +914,7 @@ Kayu dolken gelam diameter kecil hingga sedang (2-6 cm) menjadi trending dalam d
 </div>
 
 <section id="tips-desain">
-{% include components/block--tips-desain.html %}
+{% include components/inspirasi/block--tips-desain.html %}
 </section>
 
 
