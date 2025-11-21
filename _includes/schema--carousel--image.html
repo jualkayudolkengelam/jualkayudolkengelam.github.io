@@ -1,0 +1,85 @@
+{% comment %}
+  ============================================================================
+  Schema Include - Image Carousel (ImageGallery)
+  ============================================================================
+
+  @file        _includes/schema--carousel--image.html
+  @description Dedicated schema include for ImageGallery markup.
+               Separated from block--carousel--image.html for better
+               architecture and schema centralization at page wrapper level.
+
+  @version     1.0.0
+  @date        2025-11-21
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Architecture:
+  -------------
+  - Block (_includes/block--carousel--image.html): Visual carousel display
+  - Schema (_includes/schema--carousel--image.html): ImageGallery schema markup
+  - Page wrapper (_layouts/page--*.html): Include schema before </body>
+
+  Features:
+  ---------
+  - Schema.org ImageGallery with ImageObject items
+  - Complete image metadata (url, name, caption)
+  - Unique @id for entity identification
+  - representativeOfPage: false (gallery images are supplementary)
+  - Google Image Search optimization
+
+  Parameters:
+  -----------
+  - images: Array of image paths (required)
+  - title: Page/product title for alt text (required)
+  - gallery_name: Gallery name for schema (default: uses title)
+  - description: Optional description for images
+
+  Usage:
+  ------
+  {% include schema--carousel--image.html
+     images=page.images
+     title=page.title
+     gallery_name="Galeri Produk Kayu Dolken"
+  %}
+
+  Called from:
+  ------------
+  - _layouts/page--product.html (before </body> tag)
+  - _layouts/page--post.html (before </body> tag)
+  - Only included on pages that have images array
+
+  ============================================================================
+{% endcomment %}
+
+{% assign carousel_images = include.images %}
+{% assign carousel_title = include.title %}
+{% assign gallery_name = include.gallery_name | default: carousel_title %}
+{% assign carousel_description = include.description | default: "" %}
+
+{% if carousel_images and carousel_images.size > 0 %}
+<!-- Schema.org ImageGallery Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "@id": "{{ page.url | absolute_url }}#gallery",
+  "name": "{{ gallery_name }}",
+  "description": "{% if carousel_description != '' %}{{ carousel_description }}{% else %}Galeri foto {{ carousel_title }}{% endif %}",
+  "image": [
+    {% for image in carousel_images %}
+    {
+      "@type": "ImageObject",
+      "@id": "{{ page.url | absolute_url }}#image-{{ forloop.index }}",
+      "url": "{{ image | absolute_url }}",
+      "name": "{{ carousel_title }} - Foto {{ forloop.index }}",
+      "caption": "{{ carousel_title }} gambar {{ forloop.index }} dari {{ carousel_images.size }}",
+      "representativeOfPage": false{% if page.width and page.height %},
+      "width": "{{ page.width }}",
+      "height": "{{ page.height }}"{% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

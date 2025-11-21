@@ -96,6 +96,11 @@ Architecture Principle:
   <!-- Breadcrumb Schema (BreadcrumbList) -->
   {% include schema--breadcrumb.html current_title=page.title parent_name="Blog" parent_url="/blog/" %}
 
+  <!-- Image Gallery Schema (ImageGallery) -->
+  {% if page.images.size > 0 %}
+    {% include schema--carousel--image.html images=page.images title=page.title %}
+  {% endif %}
+
   <!-- Article Schema (BlogPosting/Article) -->
   <script type="application/ld+json">
   {

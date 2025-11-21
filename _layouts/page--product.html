@@ -105,6 +105,11 @@ Architecture Principle:
   <!-- Breadcrumb Schema (BreadcrumbList) -->
   {% include schema--breadcrumb.html current_title=page.title %}
 
+  <!-- Image Gallery Schema (ImageGallery) -->
+  {% if page.images.size > 0 %}
+    {% include schema--carousel--image.html images=page.images title=page.title %}
+  {% endif %}
+
   <!-- Related Products Schema (ItemList with Product items) -->
   {% comment %}
   NOTE: final_products is set inside block--related-product--by-node.html
