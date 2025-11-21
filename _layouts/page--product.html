@@ -101,12 +101,23 @@ Architecture Principle:
   {% include block--cta--whatsapp.html %}
 
   <!-- Collect all schemas at bottom before </body> -->
+
+  <!-- Related Products Schema (ItemList with Product items) -->
   {% comment %}
   NOTE: final_products is set inside block--related-product--by-node.html
-  Testing if variable is available in parent scope
+  Variable is available in parent scope
   {% endcomment %}
   {% if final_products.size > 0 %}
     {% include schema--related-product--by-node.html products=final_products %}
+  {% endif %}
+
+  <!-- Related Articles Schema (ItemList with BlogPosting items) -->
+  {% comment %}
+  NOTE: final_posts is set inside block--related-content--by-node.html
+  Variable is available in parent scope
+  {% endcomment %}
+  {% if final_posts.size > 0 %}
+    {% include schema--related-content--by-node.html posts=final_posts title="Artikel Panduan & Tips" %}
   {% endif %}
 </body>
 </html>
