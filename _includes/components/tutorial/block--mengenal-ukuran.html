@@ -3,25 +3,45 @@
   Mengenal Ukuran Block Component
   ============================================================================
 
-  @file        _includes/posts/tutorial/block--mengenal-ukuran.html
-  @description Reusable component for mengenal ukuran section with 5 cards
-               HARDCODED - NO LOOPS!
+  @file        _includes/components/tutorial/block--mengenal-ukuran.html
+  @description Menyajikan informasi lengkap tentang berbagai ukuran produk dengan 5 kartu.
+               Membantu pengguna memahami karakteristik, kegunaan, dan rekomendasi untuk setiap ukuran.
+               Ideal untuk artikel panduan pemilihan ukuran dan katalog produk.
 
   @version     1.0.0
-  @date        2025-11-20
+  @date        2025-11-21
   @author      jualkayudolkengelam
+
+  Heading Structure (SEO & Accessibility):
+  -----------------------------------------
+  - 1 × H2: Main section title (header card)
+  - 1 × H3: Overview title (optional)
+  - 5 × H3: Card titles (card_1 to card_5)
+  - 15 × H4: Detail headings (3 per card: detail_1, detail_2, detail_3)
+  - 0 × H5, H6: Not used in this block
+
+  Total Headings: 22 (with overview) or 21 (without overview)
+
+  Paragraphs (REQUIRED for SEO):
+  - 1 intro paragraph (optional)
+  - 10 card paragraphs (paragraph_1, paragraph_2 × 5 cards)
+  - 15 detail paragraphs (detail_1.paragraph to detail_3.paragraph × 5 cards)
+
+  Total Paragraphs: 26 (with all optional fields)
 
   Features:
   ---------
-  - H2 heading for main section title
-  - H3 for overview (optional)
+  - Gradient header with icon, title (H2), and subtitle
+  - H3 overview section (optional)
   - 5 hardcoded cards (card_1, card_2, card_3, card_4, card_5)
   - Layout: 4 cards (col-lg-6) + 1 card (col-lg-12 full width)
-  - Each card has H3 title
-  - 2 paragraphs per card
-  - 3 details per card (H4 + paragraph)
+  - Each card has:
+    - H3 title with colored header
+    - 2 paragraphs for context
+    - 3 detail sections (H4 + paragraph)
   - Dynamic gradient colors
   - Icon-based visual design
+  - Hover lift effect
   - Responsive card grid layout
 
   Parameters:
@@ -69,28 +89,125 @@
 
   Usage:
   ------
-  In frontmatter:
-  ---
-  mengenal_ukuran:
-    title: "Mengenal Ukuran Kayu Dolken"
-    subtitle: "Pilih ukuran yang sesuai kebutuhan"  # optional
-    intro: "Berikut adalah variasi ukuran..."
-    icon: "bi-rulers"
-    gradient: "primary"
-    card_1:
-      title: "Dolken Diameter 2-3 cm"
-      icon: "bi-rulers"
-      color: "primary"
-      paragraph_1: "..."
-      detail_1:
-        h4: "Kegunaan Utama"
-        paragraph: "..."
-  ---
-
   In content:
   <section id="mengenal-ukuran">
-    {% include posts/tutorial/block--mengenal-ukuran.html %}
+    {% include components/tutorial/block--mengenal-ukuran.html %}
   </section>
+
+  ============================================================================
+  COMPLETE YAML STRUCTURE - COPY & PASTE KE FRONTMATTER
+  ============================================================================
+
+  Instruksi Penggunaan:
+  1. Copy seluruh structure YAML di bawah ini
+  2. Paste ke frontmatter artikel Anda
+  3. Ganti semua teks "isi ..." dengan konten Anda
+  4. Field yang marked OPTIONAL bisa dihapus jika tidak digunakan
+  5. Setiap card WAJIB punya: title, icon, color, paragraph_1, dan minimal 1 detail
+
+  ---
+  # Section: Mengenal Ukuran
+  mengenal_ukuran:
+    # Header Section
+    title: "isi judul H2 (misal: Mengenal Ukuran Kayu Dolken)"
+    subtitle: "isi subtitle (OPTIONAL, misal: Pilih ukuran yang sesuai kebutuhan proyek Anda)"
+    icon: "bi-rulers"  # Bootstrap icon class
+    gradient: "primary"  # Options: primary, info, warning, success, danger, wood
+
+    # Introduction (OPTIONAL)
+    intro: "isi 1-2 paragraf intro untuk memberikan konteks tentang variasi ukuran yang tersedia"
+
+    # Overview Section (OPTIONAL - hapus semua jika tidak perlu)
+    overview_title: "isi judul H3 overview (misal: Variasi Ukuran yang Tersedia)"
+    overview_subtitle: "isi subtitle overview (OPTIONAL)"
+    overview_icon: "bi-info-circle-fill"  # OPTIONAL
+    overview_color: "primary"  # OPTIONAL
+
+    # CARD 1 (col-lg-6)
+    card_1:
+      title: "isi judul H3 card #1 (misal: Dolken Diameter 2-3 cm)"
+      icon: "bi-rulers"
+      color: "primary"  # Options: primary, info, success, warning, danger
+      paragraph_1: "isi paragraf 1, jelaskan karakteristik ukuran ini"
+      paragraph_2: "isi paragraf 2, lanjutkan penjelasan (OPTIONAL)"
+      detail_1:
+        h4: "isi judul H4 detail #1 (misal: Kegunaan Utama)"
+        paragraph: "isi paragraf untuk detail #1"
+      detail_2:
+        h4: "isi judul H4 detail #2 (misal: Kelebihan)"
+        paragraph: "isi paragraf untuk detail #2"
+      detail_3:
+        h4: "isi judul H4 detail #3 (misal: Rekomendasi Proyek)"
+        paragraph: "isi paragraf untuk detail #3"
+
+    # CARD 2 (col-lg-6)
+    card_2:
+      title: "isi judul H3 card #2 (misal: Dolken Diameter 4-6 cm)"
+      icon: "bi-rulers"
+      color: "info"
+      paragraph_1: "isi paragraf 1 card #2"
+      paragraph_2: "isi paragraf 2 (OPTIONAL)"
+      detail_1:
+        h4: "isi judul H4 detail #1"
+        paragraph: "isi paragraf detail #1"
+      detail_2:
+        h4: "isi judul H4 detail #2"
+        paragraph: "isi paragraf detail #2"
+      detail_3:
+        h4: "isi judul H4 detail #3"
+        paragraph: "isi paragraf detail #3"
+
+    # CARD 3 (col-lg-6)
+    card_3:
+      title: "isi judul H3 card #3 (misal: Dolken Diameter 6-8 cm)"
+      icon: "bi-rulers"
+      color: "success"
+      paragraph_1: "isi paragraf 1 card #3"
+      paragraph_2: "isi paragraf 2 (OPTIONAL)"
+      detail_1:
+        h4: "isi judul H4 detail #1"
+        paragraph: "isi paragraf detail #1"
+      detail_2:
+        h4: "isi judul H4 detail #2"
+        paragraph: "isi paragraf detail #2"
+      detail_3:
+        h4: "isi judul H4 detail #3"
+        paragraph: "isi paragraf detail #3"
+
+    # CARD 4 (col-lg-6)
+    card_4:
+      title: "isi judul H3 card #4 (misal: Dolken Diameter 8-10 cm)"
+      icon: "bi-rulers"
+      color: "warning"
+      paragraph_1: "isi paragraf 1 card #4"
+      paragraph_2: "isi paragraf 2 (OPTIONAL)"
+      detail_1:
+        h4: "isi judul H4 detail #1"
+        paragraph: "isi paragraf detail #1"
+      detail_2:
+        h4: "isi judul H4 detail #2"
+        paragraph: "isi paragraf detail #2"
+      detail_3:
+        h4: "isi judul H4 detail #3"
+        paragraph: "isi paragraf detail #3"
+
+    # CARD 5 (col-lg-12 FULL WIDTH)
+    card_5:
+      title: "isi judul H3 card #5 (misal: Dolken Diameter 10-12 cm)"
+      icon: "bi-rulers"
+      color: "danger"
+      paragraph_1: "isi paragraf 1 card #5 (ukuran terbesar)"
+      paragraph_2: "isi paragraf 2 (OPTIONAL)"
+      detail_1:
+        h4: "isi judul H4 detail #1"
+        paragraph: "isi paragraf detail #1"
+      detail_2:
+        h4: "isi judul H4 detail #2"
+        paragraph: "isi paragraf detail #2"
+      detail_3:
+        h4: "isi judul H4 detail #3"
+        paragraph: "isi paragraf detail #3"
+  ---
 
   ============================================================================
 {% endcomment %}
