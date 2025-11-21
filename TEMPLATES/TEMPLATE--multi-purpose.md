@@ -111,30 +111,57 @@
 # ------------------------
 # Setelah blocks disetujui:
 #
+# ⚠️ CRITICAL: WAJIB ISI META INFORMATION LENGKAP!
+#    Jangan pernah skip section ini. Lihat template lengkap di bawah.
+#
 # 6.1. Buat file artikel baru:
 #     - Path: _posts/YYYY-MM-DD-{slug}.md
-#     - Slug: generate dari topik artikel
+#     - Slug: generate dari topik artikel (lowercase, dash-separated)
+#     - YYYY-MM-DD: Gunakan tanggal hari ini
 #
-# 6.2. Isi Meta Information:
+# 6.2. Isi Meta Information (WAJIB - JANGAN SKIP!):
+#     Gunakan template frontmatter di section "FRONTMATTER TEMPLATE" di bawah.
+#     SEMUA fields REQUIRED harus diisi!
+#
+#     Required fields:
+#     - layout: node--post (fixed)
 #     - title: Generate title SEO-friendly (50-60 char)
 #     - description: Generate meta description (150-160 char)
-#     - category: Tentukan category yang sesuai
-#     - tags: Generate 3-4 tags relevan
-#     - date: Gunakan tanggal hari ini
-#     - keywords: Generate 6-8 keywords
+#     - date: YYYY-MM-DD (tanggal hari ini)
+#     - category: Tutorial/Guide/Tips/Review/Comparison/Case-Study/Landing-Page/About-Us
+#     - tags: Generate 3-4 tags relevan (array format)
+#     - author: Admin (fixed)
+#     - author_url: https://jualkayudolkengelam.github.io (fixed)
+#     - image: /assets/images/posts/{slug}/{slug}-001.webp
+#     - images: Array minimal 3-4 images
+#     - keywords: Generate 6-8 keywords (comma-separated string)
+#     - like_count: 0 (fixed)
+#     - comment_count: 0 (fixed)
+#     - share_count: 0 (fixed)
 #
-# 6.3. Untuk setiap block yang disetujui:
+# 6.3. Isi Optional Meta (jika relevan):
+#     - nama_kota: Jika ada lokasi spesifik
+#     - difficulty: Jika content type = tutorial
+#     - estimated_time: Jika content type = tutorial
+#     - tools_needed: Jika content type = tutorial
+#
+# 6.4. Untuk setiap block yang disetujui:
 #     a. Buka file block di _includes/components/block--{nama}.html
 #     b. Read section "COMPLETE YAML STRUCTURE"
 #     c. Copy YAML structure
 #     d. Generate konten untuk setiap field dalam YAML
-#     e. Paste ke frontmatter
+#     e. Paste ke frontmatter (setelah meta information)
 #
-# 6.4. Di content area:
+# 6.5. Di content area:
 #     - Uncomment include untuk blocks yang dipakai
 #     - Atur urutan blocks yang logical
+#     - WAJIB wrap dengan <section id="...">
+#     - Format:
+#       <section id="nama-section">
+#         {% include components/block--{nama}.html %}
+#       </section>
 #
-# 6.5. Generate konten berkualitas:
+# 6.6. Generate konten berkualitas:
 #     - Setiap heading harus punya paragraph setelahnya (SEO!)
 #     - Konten harus natural, bukan template-like
 #     - Gunakan data/info spesifik, bukan placeholder
@@ -359,6 +386,142 @@
 #   - Atau minta user untuk specify blocks manually
 #
 # ============================================================================
+# FRONTMATTER TEMPLATE (COPY THIS WHEN GENERATING CONTENT)
+# ============================================================================
+#
+# ⚠️ WAJIB: Copy template di bawah ini saat generate konten baru!
+# ⚠️ JANGAN SKIP: Isi semua fields yang marked REQUIRED!
+#
+# Template structure:
+# ---
+# [Meta Information - REQUIRED]
+# [Optional Meta - conditional]
+# [Block Components YAML - dari blocks yang dipilih]
+# ---
+# [Content Area - include blocks]
+#
+# ============================================================================
+
+---
+# ============================================================================
+# META INFORMATION (REQUIRED - WAJIB ISI SEMUA!)
+# ============================================================================
+layout: node--post
+title: "[GENERATE: Title SEO-friendly 50-60 char]"
+description: "[GENERATE: Meta description 150-160 char, mention topik & benefit]"
+date: YYYY-MM-DD  # [GENERATE: Tanggal hari ini, format: 2025-11-21]
+category: [GENERATE]  # Options: Tutorial, Guide, Tips, Review, Comparison, Case-Study, Landing-Page, About-Us
+tags:
+  - "[GENERATE: tag #1]"
+  - "[GENERATE: tag #2]"
+  - "[GENERATE: tag #3]"
+  - "[GENERATE: tag #4 - optional]"
+author: Admin
+author_url: https://jualkayudolkengelam.github.io
+image: /assets/images/posts/{slug}/{slug}-001.webp  # [REPLACE {slug}]
+images:
+  - /assets/images/posts/{slug}/{slug}-001.webp
+  - /assets/images/posts/{slug}/{slug}-002.webp
+  - /assets/images/posts/{slug}/{slug}-003.webp
+  - /assets/images/posts/{slug}/{slug}-004.webp
+keywords: "[GENERATE: 6-8 keywords, comma-separated]"
+
+# ============================================================================
+# SOCIAL METRICS (REQUIRED - FIXED VALUES)
+# ============================================================================
+like_count: 0
+comment_count: 0
+share_count: 0
+
+# ============================================================================
+# OPTIONAL META (Conditional - uncomment jika relevan)
+# ============================================================================
+
+# For Location-specific content:
+# nama_kota: [GENERATE: Nama kota jika ada lokasi spesifik]
+
+# For Tutorial/Guide content:
+# difficulty: "[GENERATE]"  # Options: Pemula, Menengah, Lanjut
+# estimated_time: "[GENERATE: misal: 30 menit]"
+# tools_needed:
+#   - "[GENERATE: Alat #1]"
+#   - "[GENERATE: Alat #2]"
+#   - "[GENERATE: Alat #3]"
+
+# For Case Study content:
+# client_name: "[GENERATE: Nama client]"
+# project_date: "YYYY-MM"
+# project_location: "[GENERATE: Kota]"
+
+# ============================================================================
+# BLOCK COMPONENTS YAML
+# ============================================================================
+#
+# [PASTE YAML STRUCTURES DI SINI]
+# Copy dari setiap block component yang dipilih (approved by user)
+#
+# Contoh:
+# mengapa_memilih_dolken:
+#   title: "..."
+#   paragraph_1: "..."
+#   card_1:
+#     ...
+#
+# aplikasi_hotel:
+#   title: "..."
+#   ...
+#
+# tips_desain:
+#   title: "..."
+#   ...
+#
+# ============================================================================
+
+---
+
+<!-- ========================================================================== -->
+<!-- CONTENT AREA -->
+<!-- ========================================================================== -->
+
+<!-- [UNCOMMENT BLOCKS YANG DIPAKAI - WAJIB WRAP DENGAN <section>] -->
+
+<!--
+<section id="tentang-kota">
+  {% include components/block--tentang-kota-ini.html %}
+</section>
+-->
+
+<!--
+<section id="mengapa-memilih-kami">
+  {% include components/block--mengapa-memilih-kami.html %}
+</section>
+-->
+
+<!--
+<section id="mengapa-memilih-dolken">
+  {% include components/block--mengapa-memilih-dolken.html %}
+</section>
+-->
+
+<!--
+<section id="case-study">
+  {% include components/block--case-study.html %}
+</section>
+-->
+
+<!--
+<section id="aplikasi-hotel">
+  {% include components/block--aplikasi-hotel.html data=page.aplikasi_hotel %}
+</section>
+-->
+
+<!--
+<section id="tips-desain">
+  {% include components/block--tips-desain.html data=page.tips_desain %}
+</section>
+-->
+
+# ============================================================================
 # NOTES
 # ============================================================================
 #
@@ -367,5 +530,8 @@
 # - Workflow ini dijalankan oleh AI saat user request "generate konten baru"
 # - AI harus autonomous dalam menjalankan Steps 1-6
 # - AI harus interactive: present recommendation → get approval → execute
+# - FRONTMATTER TEMPLATE di atas WAJIB dipakai untuk setiap konten baru
+# - Jangan pernah skip Meta Information - semua fields REQUIRED harus diisi
 #
 # ============================================================================
+
