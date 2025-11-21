@@ -1,65 +1,48 @@
 {% comment %}
   ============================================================================
-  Product List Component - Complete Product Catalog with Schema
+  Product List Component (Visual Only)
   ============================================================================
 
   @file        _includes/block--product-list.html
   @description Reusable component that displays complete product catalog in
                responsive table (desktop) and card (mobile) layouts. Shows
                all 5 kayu dolken products with pricing, ratings, and update
-               status. Implements component-level schema architecture with
-               complete ItemList and Product markup for maximum SEO value.
+               status (visual rendering only).
 
-  @version     1.0.1
-  @date        2025-11-16
+  @version     1.1.0
+  @date        2025-11-21
   @author      jualkayudolkengelam
   @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
   @license     All rights reserved
 
   Changelog:
   ----------
+  v1.1.0 (2025-11-21)
+    - Extract ItemList schema to dedicated include (schema--product-list.html)
+    - Component now focuses on visual rendering only
+    - Schema centralized for better architecture
+
   v1.0.1 (2025-11-16)
     - Added ItemList schema with 5 Product items
-    - Complete Product fields (name, sku, image, price, description, brand)
-    - Complete Offer fields (price, availability, shippingDetails, hasMerchantReturnPolicy)
-    - Include aggregateRating for products with reviews
-    - Schema describes all 5 products (matches visual display)
-    - Perfect schema/visual accuracy
 
   v1.0.0 (2025-11-15)
     - Initial component with responsive table/card layouts
-    - Desktop: table view with full details
-    - Mobile: card view with stacked layout
-    - Rating and review count display
-    - Update badges (Updated Today, Recent) for products updated within 7 days
-    - Popular product highlighting
-    - WhatsApp order integration
-    - Customizable title and footer parameters
 
   Features:
   ---------
   - Responsive dual-layout (table for desktop, cards for mobile)
-  - Schema.org ItemList with complete Product details
   - Shows all 5 kayu dolken products sorted by price
-  - Complete Offer fields: price, availability, shipping, returns
-  - AggregateRating display for products with reviews
   - Update status badges (Updated Today, Recent, update count)
   - Popular product highlighting with visual indicators
   - WhatsApp direct order links with pre-filled messages
   - Custom title parameter support
   - Optional footer note with pricing disclaimer
-  - WebP image optimization in schema
   - Last modified date tracking
 
-  Schema Implementation:
-  ----------------------
-  - ItemList with 5 Product items (all products)
-  - Complete Product fields: name, sku, image, description, brand
-  - Complete Offer fields: price, priceCurrency, availability, seller
-  - shippingDetails: free shipping to Indonesia, 3-7 days delivery
-  - hasMerchantReturnPolicy: 7 days return window, free return
-  - aggregateRating: rating value and review count when available
-  - numberOfItems matches visual display (perfect accuracy)
+  Schema:
+  -------
+  Schema for this block is now in: _includes/schema--product-list.html
+  Call from page with: {% include schema--product-list.html %}
 
   Parameters:
   -----------
@@ -90,94 +73,12 @@
 {% comment %} Sort products by price for consistent display {% endcomment %}
 {% assign sorted_products = site.products | sort: "price" %}
 
-{% comment %} Schema.org ItemList for Product Catalog {% endcomment %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "@id": "{{ page.url | absolute_url }}#product-list",
-  "name": "{{ list_title }}",
-  "description": "Daftar lengkap harga kayu dolken gelam dengan pengiriman gratis",
-  "numberOfItems": {{ sorted_products.size }},
-  "itemListElement": [
-    {% for product in sorted_products %}
-    {
-      "@type": "ListItem",
-      "position": {{ forloop.index }},
-      "name": "{{ product.title }}",
-      "item": {
-        "@type": "Product",
-        "name": "{{ product.title }}",
-        "url": "{{ product.url | absolute_url }}",
-        "image": "{{ product.image | absolute_url }}",
-        "sku": "{{ product.sku }}",
-        "description": "{{ product.description | strip_html | strip_newlines | escape }}",
-        "brand": {
-          "@type": "Brand",
-          "name": "{{ site.business.name }}"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "{{ product.price }}",
-          "priceCurrency": "IDR",
-          "availability": "https://schema.org/InStock",
-          "url": "{{ product.url | absolute_url }}",
-          "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
-          "seller": {
-            "@type": "Organization",
-            "name": "{{ site.business.name }}"
-          },
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0",
-              "currency": "IDR"
-            },
-            "shippingDestination": {
-              "@type": "DefinedRegion",
-              "addressCountry": "ID"
-            },
-            "deliveryTime": {
-              "@type": "ShippingDeliveryTime",
-              "handlingTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 1,
-                "maxValue": 2,
-                "unitCode": "DAY"
-              },
-              "transitTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 3,
-                "maxValue": 7,
-                "unitCode": "DAY"
-              }
-            }
-          },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "ID",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 7,
-            "returnMethod": "https://schema.org/ReturnByMail",
-            "returnFees": "https://schema.org/FreeReturn"
-          }
-        }{% if product.rating or product.review_count %},
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "{{ product.rating | default: 4.5 }}",
-          "reviewCount": "{{ product.review_count | default: 45 }}",
-          "bestRating": "5",
-          "worstRating": "1"
-        }{% endif %}
-      }
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
-}
-</script>
+{% comment %}
+Schema for this block is now in: _includes/schema--product-list.html
+Call from page with: {% include schema--product-list.html %}
+{% endcomment %}
 
-  <!-- Header Section -->
+<!-- Header Section -->
   <div class="my-5">
     <div class="card border-0 shadow-lg">
       <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);">

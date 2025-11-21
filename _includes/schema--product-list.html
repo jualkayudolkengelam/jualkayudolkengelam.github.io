@@ -1,0 +1,140 @@
+{% comment %}
+  ============================================================================
+  Schema Include - Product List (ItemList with Product items)
+  ============================================================================
+
+  @file        _includes/schema--product-list.html
+  @description Dedicated schema include for product catalog ItemList markup.
+               Separated from block--product-list.html for better architecture
+               and schema centralization.
+
+  @version     1.0.0
+  @date        2025-11-21
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Architecture:
+  -------------
+  - Block (_includes/block--product-list.html): Visual product catalog display
+  - Schema (_includes/schema--product-list.html): ItemList schema markup
+  - Page (product.html): Include schema at bottom before </body>
+
+  Features:
+  ---------
+  - Schema.org ItemList with complete Product items
+  - All 5 kayu dolken products with full details
+  - Complete Offer fields (price, availability, shipping, returns)
+  - AggregateRating for products with reviews
+  - Perfect schema/visual accuracy
+  - Maximum SEO value for product catalog
+
+  Parameters:
+  -----------
+  - title: Custom section heading (default: "Daftar Harga Kayu Dolken Gelam")
+
+  Usage:
+  ------
+  {% include schema--product-list.html %}
+
+  {% include schema--product-list.html title="Harga Terbaru Kayu Dolken" %}
+
+  Called from:
+  ------------
+  - product.html (standalone catalog page, before </body> tag)
+  - Any page displaying complete product catalog
+
+  ============================================================================
+{% endcomment %}
+
+{% assign list_title = include.title | default: "Daftar Harga Kayu Dolken Gelam" %}
+
+{% comment %} Sort products by price for consistent display {% endcomment %}
+{% assign sorted_products = site.products | sort: "price" %}
+
+{% comment %} Schema.org ItemList for Product Catalog {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "{{ page.url | absolute_url }}#product-list",
+  "name": "{{ list_title }}",
+  "description": "Daftar lengkap harga kayu dolken gelam dengan pengiriman gratis",
+  "numberOfItems": {{ sorted_products.size }},
+  "itemListElement": [
+    {% for product in sorted_products %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "name": "{{ product.title }}",
+      "item": {
+        "@type": "Product",
+        "name": "{{ product.title }}",
+        "url": "{{ product.url | absolute_url }}",
+        "image": "{{ product.image | absolute_url }}",
+        "sku": "{{ product.sku }}",
+        "description": "{{ product.description | strip_html | strip_newlines | escape }}",
+        "brand": {
+          "@type": "Brand",
+          "name": "{{ site.business.name }}"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "{{ product.price }}",
+          "priceCurrency": "IDR",
+          "availability": "https://schema.org/InStock",
+          "url": "{{ product.url | absolute_url }}",
+          "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+          "seller": {
+            "@type": "Organization",
+            "name": "{{ site.business.name }}"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "IDR"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "ID"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 1,
+                "maxValue": 2,
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 3,
+                "maxValue": 7,
+                "unitCode": "DAY"
+              }
+            }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "ID",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          }
+        }{% if product.rating or product.review_count %},
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "{{ product.rating | default: 4.5 }}",
+          "reviewCount": "{{ product.review_count | default: 45 }}",
+          "bestRating": "5",
+          "worstRating": "1"
+        }{% endif %}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
