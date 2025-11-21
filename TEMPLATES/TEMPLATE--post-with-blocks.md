@@ -32,7 +32,9 @@
 # Decision:
 #   ✅ Pakai: block--aplikasi-hotel.html (ada context: hotel)
 #   ✅ Pakai: block--tips-desain.html (ada context: inspirasi)
+#   ✅ Pakai: block--mengapa-memilih-dolken.html (keunggulan produk dolken)
 #   ❌ TIDAK pakai: block--tentang-kota-ini.html (tidak ada lokasi spesifik)
+#   ❌ TIDAK pakai: block--mengapa-memilih-kami.html (bukan tentang toko)
 #
 # CONTOH 2:
 # Instruksi: "Buatkan artikel inspirasi kayu dolken di Bandung"
@@ -40,12 +42,15 @@
 #   ✅ Pakai: block--tentang-kota-ini.html (ada lokasi: Bandung!)
 #   ✅ Pakai: block--aplikasi-hotel.html (aplikasi di area Bandung)
 #   ✅ Pakai: block--tips-desain.html (inspirasi desain)
+#   ✅ Pakai: block--mengapa-memilih-dolken.html (mengapa pilih dolken)
+#   ❌ TIDAK pakai: block--mengapa-memilih-kami.html (bukan tentang toko)
 #
 # CONTOH 3:
 # Instruksi: "Case study implementasi dolken di Cafe XYZ"
 # Decision:
 #   ✅ Pakai: block--case-study.html (ada context: case study)
 #   ❌ TIDAK pakai: block--tentang-kota-ini.html (tidak ada fokus lokasi)
+#   ❌ TIDAK pakai: block--mengapa-memilih-kami.html (bukan tentang toko)
 #
 # CONTOH 4:
 # Instruksi: "Panduan lengkap kayu dolken untuk bisnis di Semarang"
@@ -53,21 +58,26 @@
 #   ✅ Pakai: block--tentang-kota-ini.html (ada lokasi: Semarang!)
 #   ✅ Pakai: block--aplikasi-hotel.html (aplikasi bisnis)
 #   ✅ Pakai: block--tips-desain.html (panduan implementasi)
-#   ❌ TIDAK pakai: block--mengapa-memilih.html (artikel tentang produk, bukan tentang toko)
+#   ✅ Pakai: block--mengapa-memilih-dolken.html (benefit menggunakan dolken)
+#   ❌ TIDAK pakai: block--mengapa-memilih-kami.html (artikel tentang produk, bukan tentang toko)
 #
 # CONTOH 5:
 # Instruksi: "Halaman About Us - Mengapa Anda harus beli dari kami"
 # Decision:
-#   ✅ Pakai: block--mengapa-memilih.html (tentang keunggulan PENJUAL/TOKO!)
+#   ✅ Pakai: block--mengapa-memilih-kami.html (tentang keunggulan PENJUAL/TOKO!)
 #   ✅ Pakai: block--case-study.html (bukti kepuasan pelanggan)
 #   ❌ TIDAK pakai: block--tentang-kota-ini.html (tidak ada fokus lokasi)
+#   ❌ TIDAK pakai: block--mengapa-memilih-dolken.html (bukan tentang produk)
 #
 # KEYWORDS UNTUK DECISION:
 # ------------------------
 # - Lokasi spesifik (Bandung, Semarang, Jakarta, dll) → block--tentang-kota-ini.html
 # - "mengapa pilih kami", "mengapa beli dari kami", "tentang penjual",
-#   "kredibilitas toko", "keunggulan toko/kami" → block--mengapa-memilih.html
+#   "kredibilitas toko", "keunggulan toko/kami" → block--mengapa-memilih-kami.html
 #   (CATATAN: Block ini tentang PENJUAL/TOKO, bukan tentang PRODUK)
+# - "mengapa pilih dolken", "keunggulan dolken", "mengapa pakai dolken",
+#   "benefit dolken" → block--mengapa-memilih-dolken.html
+#   (CATATAN: Block ini tentang PRODUK dolken, bukan tentang TOKO)
 # - "case study", "implementasi", "studi kasus" → block--case-study.html
 # - "hotel", "cafe", "resort", "aplikasi" → block--aplikasi-hotel.html
 # - "tips", "inspirasi", "desain", "ide" → block--tips-desain.html
