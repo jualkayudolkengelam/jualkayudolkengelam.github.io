@@ -321,6 +321,62 @@ blocks:
       h6: 0
       total: 17
 
+  - id: cara-menghitung
+    file: tutorial/block--cara-menghitung.html
+    name: "Cara Menghitung (Calculator)"
+    category: tutorial
+    tags:
+      - tutorial
+      - calculator
+      - interactive
+      - tool
+      - hardcoded
+    use_cases:
+      - calculator_tool
+      - interactive_guide
+      - tutorial
+      - material_estimation
+    description: |
+      Block kalkulator interaktif untuk menghitung kebutuhan kayu dolken.
+      Form input dengan JavaScript real-time calculation. HARDCODED - tidak butuh frontmatter.
+      Ideal untuk artikel tutorial yang butuh tool interaktif untuk estimasi material.
+
+    heading_structure:
+      h2: 1   # Calculator title
+      h3: 1   # Result section title
+      h4: 0
+      h5: 0
+      h6: 0
+      total: 2
+
+  - id: intro
+    file: tutorial/block--intro.html
+    name: "Intro"
+    category: tutorial
+    tags:
+      - tutorial
+      - intro
+      - opening
+      - overview
+      - headline
+    use_cases:
+      - tutorial
+      - article_opening
+      - overview
+      - all_articles
+    description: |
+      Block intro section untuk pembuka artikel tutorial dengan headline, deskripsi, dan highlight points.
+      Memberikan overview singkat dan key takeaways untuk pembaca.
+      Ideal untuk semua jenis artikel tutorial sebagai opening yang engaging.
+
+    heading_structure:
+      h2: 1   # Headline
+      h3: 1   # Highlight title (optional)
+      h4: 0
+      h5: 0
+      h6: 0
+      total: 2
+
 # ============================================================================
 # USAGE NOTES
 # ============================================================================
