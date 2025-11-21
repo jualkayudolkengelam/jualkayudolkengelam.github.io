@@ -73,10 +73,25 @@ Architecture Principle:
 
   <main class="main-content">
     {{ content }}
+
+    <!-- Post-specific includes -->
+    <div class="container">
+      <!-- Related Articles Block -->
+      {% assign all_posts = site.posts | concat: site.post_with_city %}
+      {% if all_posts.size > 1 %}
+      <div class="row mt-5">
+        <div class="col-12">
+          {% include block--related-content--latest.html %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
   </main>
 
   {% include footer.html %}
   {% include block--cta--whatsapp.html %}
+
+  <!-- Collect all schemas at bottom before </body> -->
 
   <!-- Article Schema (BlogPosting/Article) -->
   <script type="application/ld+json">
@@ -108,5 +123,14 @@ Architecture Principle:
     }
   }
   </script>
+
+  <!-- Related Articles Schema (ItemList) -->
+  {% comment %}
+  NOTE: all_related is set inside block--related-content--latest.html (in node--post.html)
+  Variable is available in parent scope
+  {% endcomment %}
+  {% if all_related.size > 0 %}
+    {% include schema--related-content--latest.html posts=all_related %}
+  {% endif %}
 </body>
 </html>

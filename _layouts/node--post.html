@@ -136,12 +136,6 @@ page.html (wrapper with header/footer)
           {{ content }}
         </div>
 
-        <!-- Related Articles Block - IN CONTENT for SEO -->
-        {% assign all_posts = site.posts | concat: site.post_with_city %}
-        {% if all_posts.size > 1 %}
-          {% include block--related-content--latest.html %}
-        {% endif %}
-
         <!-- Post Footer -->
         <footer class="post-footer mt-5 pt-4 border-top">
           {% if page.tags %}

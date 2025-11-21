@@ -118,74 +118,10 @@
   {% assign all_related = latest_posts | concat: older_posts %}
 
   {% if all_related.size > 0 %}
-    <!-- Schema.org ItemList for Related Articles -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "@id": "{{ page.url | absolute_url }}#related-articles",
-      "name": "Artikel Terkait",
-      "description": "Artikel blog terbaru dan lama yang relevan",
-      "numberOfItems": {{ all_related.size }},
-      "itemListElement": [
-        {% for post in all_related %}
-        {
-          "@type": "ListItem",
-          "position": {{ forloop.index }},
-          "name": "{{ post.title }}",
-          "item": {
-            "@type": "BlogPosting",
-            "headline": "{{ post.title }}",
-            "url": "{{ post.url | absolute_url }}",
-            {% if post.image %}
-            "image": "{{ post.image | absolute_url }}",
-            {% endif %}
-            "datePublished": "{{ post.date | date_to_xmlschema }}",
-            {% if post.last_modified_at %}
-            "dateModified": "{{ post.last_modified_at | date_to_xmlschema }}",
-            {% endif %}
-            "author": {
-              "@type": "Person",
-              "name": "{% if post.author %}{{ post.author }}{% else %}Admin{% endif %}"{% if post.author_url %},
-              "url": "{{ post.author_url }}"{% endif %}
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "{{ site.business.name }}",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}"
-              }
-            }{% if post.like_count or post.comment_count or post.share_count %},
-            "interactionStatistic": [
-              {% if post.like_count %}
-              {
-                "@type": "InteractionCounter",
-                "interactionType": "https://schema.org/LikeAction",
-                "userInteractionCount": {{ post.like_count }}
-              }{% if post.comment_count or post.share_count %},{% endif %}
-              {% endif %}
-              {% if post.comment_count %}
-              {
-                "@type": "InteractionCounter",
-                "interactionType": "https://schema.org/CommentAction",
-                "userInteractionCount": {{ post.comment_count }}
-              }{% if post.share_count %},{% endif %}
-              {% endif %}
-              {% if post.share_count %}
-              {
-                "@type": "InteractionCounter",
-                "interactionType": "https://schema.org/ShareAction",
-                "userInteractionCount": {{ post.share_count }}
-              }
-              {% endif %}
-            ]{% endif %}
-          }
-        }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-      ]
-    }
-    </script>
+    {% comment %}
+    Schema for this block is now in: _includes/schema--related-content--latest.html
+    Call from page wrapper with: {% include schema--related-content--latest.html posts=all_related %}
+    {% endcomment %}
 
     <div class="row g-3">
       {% for post in all_related %}
