@@ -1,0 +1,473 @@
+{% comment %}
+  ============================================================================
+  Panduan Pemilihan Block Component
+  ============================================================================
+
+  @file        _includes/posts/tutorial/block--panduan-pemilihan.html
+  @description Reusable component for panduan pemilihan section with 5 cards
+               HARDCODED - NO LOOPS!
+
+  @version     1.0.0
+  @date        2025-11-20
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading for main section title
+  - H3 for overview (optional)
+  - 5 hardcoded cards (card_1, card_2, card_3, card_4, card_5)
+  - Layout: 4 cards (col-lg-6) + 1 card (col-lg-12 full width)
+  - Each card has:
+    - H3 title with ukuran & kategori
+    - Subtitle below title
+    - List aplikasi (4 items with nama & deskripsi)
+    - Keuntungan section
+    - Tips section
+  - Dynamic gradient colors
+  - Icon-based visual design
+  - Responsive card grid layout
+
+  Parameters:
+  -----------
+  - page.panduan_pemilihan: Object containing:
+    - title: H2 main section title → class="title"
+    - subtitle: Subtitle below title (optional) → class="subtitle"
+    - intro: Introduction paragraph → class="intro"
+    - icon: Bootstrap icon class
+    - gradient: Color theme (primary, info, warning, success, danger, wood)
+    - overview_title: H3 overview title (optional) → class="overview_title"
+    - overview_subtitle: Overview subtitle (optional)
+    - overview_icon: Overview icon (optional)
+    - overview_color: Overview color (optional)
+    - card_1, card_2, card_3, card_4, card_5: Hardcoded cards (NO LOOP!)
+      Each card:
+      - ukuran: Card ukuran text → class="ukuran"
+      - kategori: Card kategori text → class="kategori"
+      - subtitle: Card subtitle → class="card_subtitle"
+      - warna: Card color (info, primary, success, warning, danger)
+      - aplikasi: Array of aplikasi items → class="aplikasi"
+        Each aplikasi item:
+        - nama: Aplikasi name → class="aplikasi_nama"
+        - deskripsi: Aplikasi description → class="aplikasi_deskripsi"
+      - keuntungan: Keuntungan text → class="keuntungan"
+      - tips: Tips text → class="tips"
+
+  Class Mapping (Best Practice Pattern):
+  ---------------------------------------
+  Frontmatter key → HTML class name
+  - title → <div class="card title">
+  - subtitle → <p class="subtitle">
+  - intro → <div class="card intro">
+  - overview_title → <div class="overview_title">
+  - card_1 → <div class="card_1">
+  - card_2 → <div class="card_2">
+  - card_3 → <div class="card_3">
+  - card_4 → <div class="card_4">
+  - card_5 → <div class="card_5">
+  - ukuran → <div class="ukuran">
+  - kategori → <h3 class="kategori">
+  - card_subtitle → <p class="card_subtitle">
+  - aplikasi → <ul class="aplikasi">
+  - aplikasi_item → <li class="aplikasi_item">
+  - aplikasi_nama → <strong class="aplikasi_nama">
+  - aplikasi_deskripsi → <span class="aplikasi_deskripsi">
+  - keuntungan → <div class="keuntungan">
+  - tips → <div class="tips">
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  panduan_pemilihan:
+    title: "Panduan Memilih Ukuran yang Tepat"
+    subtitle: "Sesuaikan dengan kebutuhan proyek Anda"
+    intro: "Berikut panduan pemilihan ukuran..."
+    icon: "bi-compass"
+    gradient: "primary"
+    card_1:
+      ukuran: "2-3 cm"
+      kategori: "Untuk Dekorasi"
+      subtitle: "Aplikasi Dekoratif"
+      warna: "info"
+      aplikasi:
+        - nama: "Interior Hotel & Cafe"
+          deskripsi: "Menciptakan aksen natural yang elegan"
+      keuntungan: "Ringan, mudah dipasang, harga terjangkau"
+      tips: "Cocok dikombinasikan dengan elemen dekorasi lain"
+  ---
+
+  In content:
+  <section id="panduan-pemilihan">
+    {% include posts/tutorial/block--panduan-pemilihan.html %}
+  </section>
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.panduan_pemilihan %}
+{% assign section = page.panduan_pemilihan %}
+
+<!-- Header Section -->
+  <div class="my-5">
+    <div class="card title border-0 shadow-lg">
+      <div class="card-body text-white text-center py-4 px-3"
+        {% if section.gradient == 'primary' %}
+          style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);"
+        {% elsif section.gradient == 'info' %}
+          style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);"
+        {% elsif section.gradient == 'warning' %}
+          style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);"
+        {% elsif section.gradient == 'success' %}
+          style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);"
+        {% elsif section.gradient == 'danger' %}
+          style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);"
+        {% elsif section.gradient == 'wood' %}
+          style="background: linear-gradient(135deg, #92400e 0%, #78350f 50%, #451a03 100%);"
+        {% else %}
+          style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);"
+        {% endif %}>
+        <i class="bi {{ section.icon | default: 'bi-compass' }} mb-2 fs-2-5rem"></i>
+        <h2 class="h2 mb-0 fw-bold text-white">{{ section.title }}</h2>
+        {% if section.subtitle %}
+        <p class="subtitle mb-0 mt-2 small" style="opacity: 0.85;">
+          <i class="bi bi-stars me-1"></i>
+          {{ section.subtitle }}
+          <i class="bi bi-stars ms-1"></i>
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Introduction -->
+  {% if section.intro %}
+  <div class="card intro border-0 shadow-sm my-4">
+    <div class="card-body">
+      <p class="mb-0">{{ section.intro }}</p>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- H3: Overview (Optional) -->
+  {% if section.overview_title %}
+  <div class="my-4 overview_title">
+    <div class="d-flex align-items-center mb-3">
+      <div class="bg-{{ section.overview_color | default: 'primary' }} bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+        <h3 class="h4 mb-0 text-wood fw-bold">
+          <i class="bi {{ section.overview_icon | default: 'bi-info-circle-fill' }} text-{{ section.overview_color | default: 'primary' }} me-2"></i>{{ section.overview_title }}
+        </h3>
+        {% if section.overview_subtitle %}
+        <p class="small text-muted mb-0 mt-1">{{ section.overview_subtitle }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- 5 Hardcoded Cards (NO LOOP!) -->
+  <!-- Layout: 4 cards col-lg-6 + 1 card col-lg-12 -->
+  <div class="row g-4 my-4">
+
+    <!-- CARD 1 (col-lg-6) -->
+    {% if section.card_1 %}
+    <div class="col-lg-6 card_1">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header card-header-tutorial bg-{{ section.card_1.warna | default: 'info' }} text-white">
+          <div class="ukuran mb-2">
+            <span class="badge bg-white bg-opacity-25 fs-6">{{ section.card_1.ukuran }}</span>
+          </div>
+          <h3 class="kategori h5 mb-0 fw-bold">{{ section.card_1.kategori }}</h3>
+          {% if section.card_1.subtitle %}
+          <p class="card_subtitle small mb-0 mt-1" style="opacity: 0.85;">{{ section.card_1.subtitle }}</p>
+          {% endif %}
+        </div>
+        <div class="card-body">
+          <!-- Aplikasi List -->
+          {% if section.card_1.aplikasi %}
+          <div class="aplikasi mb-3">
+            <h4 class="h6 fw-bold text-wood mb-3">
+              <i class="bi bi-check-circle-fill text-{{ section.card_1.warna | default: 'info' }} me-2"></i>Aplikasi:
+            </h4>
+            <ul class="list-unstyled mb-0">
+              {% for item in section.card_1.aplikasi %}
+              <li class="aplikasi_item mb-2 d-flex align-items-start">
+                <i class="bi bi-arrow-right-circle-fill text-{{ section.card_1.warna | default: 'info' }} me-2 mt-1 flex-shrink-0"></i>
+                <div>
+                  <strong class="aplikasi_nama d-block">{{ item.nama }}</strong>
+                  <span class="aplikasi_deskripsi small text-muted">{{ item.deskripsi }}</span>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+          <!-- Keuntungan -->
+          {% if section.card_1.keuntungan %}
+          <div class="keuntungan mb-3 p-3 bg-{{ section.card_1.warna | default: 'info' }} bg-opacity-10 rounded-3">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-star-fill text-{{ section.card_1.warna | default: 'info' }} me-2"></i>Keuntungan:
+            </h4>
+            <p class="small mb-0">{{ section.card_1.keuntungan }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Tips -->
+          {% if section.card_1.tips %}
+          <div class="tips p-3 bg-warning bg-opacity-10 rounded-3 border-start border-warning border-3">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-lightbulb-fill text-warning me-2"></i>Tips:
+            </h4>
+            <p class="small mb-0">{{ section.card_1.tips }}</p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- CARD 2 (col-lg-6) -->
+    {% if section.card_2 %}
+    <div class="col-lg-6 card_2">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header card-header-tutorial bg-{{ section.card_2.warna | default: 'primary' }} text-white">
+          <div class="ukuran mb-2">
+            <span class="badge bg-white bg-opacity-25 fs-6">{{ section.card_2.ukuran }}</span>
+          </div>
+          <h3 class="kategori h5 mb-0 fw-bold">{{ section.card_2.kategori }}</h3>
+          {% if section.card_2.subtitle %}
+          <p class="card_subtitle small mb-0 mt-1" style="opacity: 0.85;">{{ section.card_2.subtitle }}</p>
+          {% endif %}
+        </div>
+        <div class="card-body">
+          <!-- Aplikasi List -->
+          {% if section.card_2.aplikasi %}
+          <div class="aplikasi mb-3">
+            <h4 class="h6 fw-bold text-wood mb-3">
+              <i class="bi bi-check-circle-fill text-{{ section.card_2.warna | default: 'primary' }} me-2"></i>Aplikasi:
+            </h4>
+            <ul class="list-unstyled mb-0">
+              {% for item in section.card_2.aplikasi %}
+              <li class="aplikasi_item mb-2 d-flex align-items-start">
+                <i class="bi bi-arrow-right-circle-fill text-{{ section.card_2.warna | default: 'primary' }} me-2 mt-1 flex-shrink-0"></i>
+                <div>
+                  <strong class="aplikasi_nama d-block">{{ item.nama }}</strong>
+                  <span class="aplikasi_deskripsi small text-muted">{{ item.deskripsi }}</span>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+          <!-- Keuntungan -->
+          {% if section.card_2.keuntungan %}
+          <div class="keuntungan mb-3 p-3 bg-{{ section.card_2.warna | default: 'primary' }} bg-opacity-10 rounded-3">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-star-fill text-{{ section.card_2.warna | default: 'primary' }} me-2"></i>Keuntungan:
+            </h4>
+            <p class="small mb-0">{{ section.card_2.keuntungan }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Tips -->
+          {% if section.card_2.tips %}
+          <div class="tips p-3 bg-warning bg-opacity-10 rounded-3 border-start border-warning border-3">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-lightbulb-fill text-warning me-2"></i>Tips:
+            </h4>
+            <p class="small mb-0">{{ section.card_2.tips }}</p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- CARD 3 (col-lg-6) -->
+    {% if section.card_3 %}
+    <div class="col-lg-6 card_3">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header card-header-tutorial bg-{{ section.card_3.warna | default: 'success' }} text-white">
+          <div class="ukuran mb-2">
+            <span class="badge bg-white bg-opacity-25 fs-6">{{ section.card_3.ukuran }}</span>
+          </div>
+          <h3 class="kategori h5 mb-0 fw-bold">{{ section.card_3.kategori }}</h3>
+          {% if section.card_3.subtitle %}
+          <p class="card_subtitle small mb-0 mt-1" style="opacity: 0.85;">{{ section.card_3.subtitle }}</p>
+          {% endif %}
+        </div>
+        <div class="card-body">
+          <!-- Aplikasi List -->
+          {% if section.card_3.aplikasi %}
+          <div class="aplikasi mb-3">
+            <h4 class="h6 fw-bold text-wood mb-3">
+              <i class="bi bi-check-circle-fill text-{{ section.card_3.warna | default: 'success' }} me-2"></i>Aplikasi:
+            </h4>
+            <ul class="list-unstyled mb-0">
+              {% for item in section.card_3.aplikasi %}
+              <li class="aplikasi_item mb-2 d-flex align-items-start">
+                <i class="bi bi-arrow-right-circle-fill text-{{ section.card_3.warna | default: 'success' }} me-2 mt-1 flex-shrink-0"></i>
+                <div>
+                  <strong class="aplikasi_nama d-block">{{ item.nama }}</strong>
+                  <span class="aplikasi_deskripsi small text-muted">{{ item.deskripsi }}</span>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+          <!-- Keuntungan -->
+          {% if section.card_3.keuntungan %}
+          <div class="keuntungan mb-3 p-3 bg-{{ section.card_3.warna | default: 'success' }} bg-opacity-10 rounded-3">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-star-fill text-{{ section.card_3.warna | default: 'success' }} me-2"></i>Keuntungan:
+            </h4>
+            <p class="small mb-0">{{ section.card_3.keuntungan }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Tips -->
+          {% if section.card_3.tips %}
+          <div class="tips p-3 bg-warning bg-opacity-10 rounded-3 border-start border-warning border-3">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-lightbulb-fill text-warning me-2"></i>Tips:
+            </h4>
+            <p class="small mb-0">{{ section.card_3.tips }}</p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- CARD 4 (col-lg-6) -->
+    {% if section.card_4 %}
+    <div class="col-lg-6 card_4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header card-header-tutorial bg-{{ section.card_4.warna | default: 'warning' }} text-white">
+          <div class="ukuran mb-2">
+            <span class="badge bg-white bg-opacity-25 fs-6">{{ section.card_4.ukuran }}</span>
+          </div>
+          <h3 class="kategori h5 mb-0 fw-bold">{{ section.card_4.kategori }}</h3>
+          {% if section.card_4.subtitle %}
+          <p class="card_subtitle small mb-0 mt-1" style="opacity: 0.85;">{{ section.card_4.subtitle }}</p>
+          {% endif %}
+        </div>
+        <div class="card-body">
+          <!-- Aplikasi List -->
+          {% if section.card_4.aplikasi %}
+          <div class="aplikasi mb-3">
+            <h4 class="h6 fw-bold text-wood mb-3">
+              <i class="bi bi-check-circle-fill text-{{ section.card_4.warna | default: 'warning' }} me-2"></i>Aplikasi:
+            </h4>
+            <ul class="list-unstyled mb-0">
+              {% for item in section.card_4.aplikasi %}
+              <li class="aplikasi_item mb-2 d-flex align-items-start">
+                <i class="bi bi-arrow-right-circle-fill text-{{ section.card_4.warna | default: 'warning' }} me-2 mt-1 flex-shrink-0"></i>
+                <div>
+                  <strong class="aplikasi_nama d-block">{{ item.nama }}</strong>
+                  <span class="aplikasi_deskripsi small text-muted">{{ item.deskripsi }}</span>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+          <!-- Keuntungan -->
+          {% if section.card_4.keuntungan %}
+          <div class="keuntungan mb-3 p-3 bg-{{ section.card_4.warna | default: 'warning' }} bg-opacity-10 rounded-3">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-star-fill text-{{ section.card_4.warna | default: 'warning' }} me-2"></i>Keuntungan:
+            </h4>
+            <p class="small mb-0">{{ section.card_4.keuntungan }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Tips -->
+          {% if section.card_4.tips %}
+          <div class="tips p-3 bg-warning bg-opacity-10 rounded-3 border-start border-warning border-3">
+            <h4 class="h6 fw-bold text-wood mb-2">
+              <i class="bi bi-lightbulb-fill text-warning me-2"></i>Tips:
+            </h4>
+            <p class="small mb-0">{{ section.card_4.tips }}</p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- CARD 5 (col-lg-12 FULL WIDTH) -->
+    {% if section.card_5 %}
+    <div class="col-lg-12 card_5">
+      <div class="card border-0 shadow-sm hover-lift">
+        <div class="card-header card-header-tutorial bg-{{ section.card_5.warna | default: 'danger' }} text-white">
+          <div class="ukuran mb-2">
+            <span class="badge bg-white bg-opacity-25 fs-6">{{ section.card_5.ukuran }}</span>
+          </div>
+          <h3 class="kategori h5 mb-0 fw-bold">{{ section.card_5.kategori }}</h3>
+          {% if section.card_5.subtitle %}
+          <p class="card_subtitle small mb-0 mt-1" style="opacity: 0.85;">{{ section.card_5.subtitle }}</p>
+          {% endif %}
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <!-- Aplikasi List (Full Width) -->
+            {% if section.card_5.aplikasi %}
+            <div class="col-lg-12 aplikasi mb-4">
+              <h4 class="h6 fw-bold text-wood mb-3">
+                <i class="bi bi-check-circle-fill text-{{ section.card_5.warna | default: 'danger' }} me-2"></i>Aplikasi:
+              </h4>
+              <div class="row g-3">
+                {% for item in section.card_5.aplikasi %}
+                <div class="col-lg-6 aplikasi_item">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-arrow-right-circle-fill text-{{ section.card_5.warna | default: 'danger' }} me-2 mt-1 flex-shrink-0"></i>
+                    <div>
+                      <strong class="aplikasi_nama d-block">{{ item.nama }}</strong>
+                      <span class="aplikasi_deskripsi small text-muted">{{ item.deskripsi }}</span>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+
+          <div class="row g-3">
+            <!-- Keuntungan (col-lg-6) -->
+            {% if section.card_5.keuntungan %}
+            <div class="col-lg-6 keuntungan">
+              <div class="p-3 bg-{{ section.card_5.warna | default: 'danger' }} bg-opacity-10 rounded-3 h-100">
+                <h4 class="h6 fw-bold text-wood mb-2">
+                  <i class="bi bi-star-fill text-{{ section.card_5.warna | default: 'danger' }} me-2"></i>Keuntungan:
+                </h4>
+                <p class="small mb-0">{{ section.card_5.keuntungan }}</p>
+              </div>
+            </div>
+            {% endif %}
+
+            <!-- Tips (col-lg-6) -->
+            {% if section.card_5.tips %}
+            <div class="col-lg-6 tips">
+              <div class="p-3 bg-warning bg-opacity-10 rounded-3 border-start border-warning border-3 h-100">
+                <h4 class="h6 fw-bold text-wood mb-2">
+                  <i class="bi bi-lightbulb-fill text-warning me-2"></i>Tips:
+                </h4>
+                <p class="small mb-0">{{ section.card_5.tips }}</p>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+{% endif %}
