@@ -3,28 +3,50 @@
   Panduan Pemilihan Block Component
   ============================================================================
 
-  @file        _includes/posts/tutorial/block--panduan-pemilihan.html
-  @description Reusable component for panduan pemilihan section with 5 cards
-               HARDCODED - NO LOOPS!
+  @file        _includes/components/tutorial/block--panduan-pemilihan.html
+  @description Menyajikan panduan pemilihan ukuran dengan format list aplikasi, keuntungan, dan tips.
+               Membantu pengguna memilih ukuran yang tepat berdasarkan aplikasi spesifik dan kebutuhan proyek.
+               Ideal untuk artikel panduan pemilihan produk dan buying guide.
 
   @version     1.0.0
-  @date        2025-11-20
+  @date        2025-11-21
   @author      jualkayudolkengelam
+
+  Heading Structure (SEO & Accessibility):
+  -----------------------------------------
+  - 1 × H2: Main section title (header card)
+  - 1 × H3: Overview title (optional)
+  - 5 × H3: Card titles (card_1 to card_5, kategori field)
+  - 10 × H4: Section headings (2 per card: Aplikasi + Keuntungan/Tips headers)
+  - 0 × H5, H6: Not used in this block
+
+  Total Headings: 17 (with overview) or 16 (without overview)
+
+  Paragraphs & Content (REQUIRED for SEO):
+  - 1 intro paragraph (optional)
+  - 5 card subtitles
+  - 20 aplikasi items (4 per card × 5 cards, each with nama + deskripsi)
+  - 5 keuntungan texts
+  - 5 tips texts
+
+  Total Content Sections: 36 (with all optional fields)
 
   Features:
   ---------
-  - H2 heading for main section title
-  - H3 for overview (optional)
+  - Gradient header with icon, title (H2), and subtitle
+  - H3 overview section (optional)
   - 5 hardcoded cards (card_1, card_2, card_3, card_4, card_5)
   - Layout: 4 cards (col-lg-6) + 1 card (col-lg-12 full width)
   - Each card has:
-    - H3 title with ukuran & kategori
-    - Subtitle below title
-    - List aplikasi (4 items with nama & deskripsi)
-    - Keuntungan section
-    - Tips section
+    - Ukuran badge
+    - H3 kategori title
+    - Card subtitle
+    - H4 Aplikasi section with list (4 items: nama + deskripsi)
+    - H4 Keuntungan section with text
+    - H4 Tips section with text
   - Dynamic gradient colors
   - Icon-based visual design
+  - Hover lift effect
   - Responsive card grid layout
 
   Parameters:
@@ -76,30 +98,130 @@
 
   Usage:
   ------
-  In frontmatter:
-  ---
-  panduan_pemilihan:
-    title: "Panduan Memilih Ukuran yang Tepat"
-    subtitle: "Sesuaikan dengan kebutuhan proyek Anda"
-    intro: "Berikut panduan pemilihan ukuran..."
-    icon: "bi-compass"
-    gradient: "primary"
-    card_1:
-      ukuran: "2-3 cm"
-      kategori: "Untuk Dekorasi"
-      subtitle: "Aplikasi Dekoratif"
-      warna: "info"
-      aplikasi:
-        - nama: "Interior Hotel & Cafe"
-          deskripsi: "Menciptakan aksen natural yang elegan"
-      keuntungan: "Ringan, mudah dipasang, harga terjangkau"
-      tips: "Cocok dikombinasikan dengan elemen dekorasi lain"
-  ---
-
   In content:
   <section id="panduan-pemilihan">
-    {% include posts/tutorial/block--panduan-pemilihan.html %}
+    {% include components/tutorial/block--panduan-pemilihan.html %}
   </section>
+
+  ============================================================================
+  COMPLETE YAML STRUCTURE - COPY & PASTE KE FRONTMATTER
+  ============================================================================
+
+  Instruksi Penggunaan:
+  1. Copy seluruh structure YAML di bawah ini
+  2. Paste ke frontmatter artikel Anda
+  3. Ganti semua teks "isi ..." dengan konten Anda
+  4. Field yang marked OPTIONAL bisa dihapus jika tidak digunakan
+  5. Setiap card WAJIB punya: ukuran, kategori, warna, aplikasi (minimal 1 item)
+
+  ---
+  # Section: Panduan Pemilihan
+  panduan_pemilihan:
+    # Header Section
+    title: "isi judul H2 (misal: Panduan Memilih Ukuran yang Tepat)"
+    subtitle: "isi subtitle (OPTIONAL, misal: Sesuaikan dengan kebutuhan proyek Anda)"
+    icon: "bi-compass"  # Bootstrap icon class
+    gradient: "primary"  # Options: primary, info, warning, success, danger, wood
+
+    # Introduction (OPTIONAL)
+    intro: "isi 1-2 paragraf intro untuk memberikan konteks tentang pentingnya memilih ukuran yang tepat"
+
+    # Overview Section (OPTIONAL - hapus semua jika tidak perlu)
+    overview_title: "isi judul H3 overview (misal: Pilih Berdasarkan Kebutuhan)"
+    overview_subtitle: "isi subtitle overview (OPTIONAL)"
+    overview_icon: "bi-info-circle-fill"  # OPTIONAL
+    overview_color: "primary"  # OPTIONAL
+
+    # CARD 1 (col-lg-6)
+    card_1:
+      ukuran: "isi ukuran (misal: 2-3 cm)"
+      kategori: "isi kategori H3 (misal: Untuk Dekorasi)"
+      subtitle: "isi subtitle card (misal: Aplikasi Dekoratif)"
+      warna: "info"  # Options: info, primary, success, warning, danger
+      aplikasi:
+        - nama: "isi nama aplikasi #1 (misal: Interior Hotel & Cafe)"
+          deskripsi: "isi deskripsi singkat aplikasi #1"
+        - nama: "isi nama aplikasi #2 (misal: Wall Decor)"
+          deskripsi: "isi deskripsi singkat aplikasi #2"
+        - nama: "isi nama aplikasi #3 (misal: Hiasan Taman)"
+          deskripsi: "isi deskripsi singkat aplikasi #3"
+        - nama: "isi nama aplikasi #4 (misal: Art Installation)"
+          deskripsi: "isi deskripsi singkat aplikasi #4"
+      keuntungan: "isi keuntungan utama ukuran ini (1 kalimat)"
+      tips: "isi tips praktis untuk ukuran ini (1-2 kalimat)"
+
+    # CARD 2 (col-lg-6)
+    card_2:
+      ukuran: "isi ukuran (misal: 4-6 cm)"
+      kategori: "isi kategori H3 (misal: Untuk Pagar & Pembatas)"
+      subtitle: "isi subtitle card (misal: Fungsi Pagar dan Pembatas)"
+      warna: "primary"
+      aplikasi:
+        - nama: "isi nama aplikasi #1"
+          deskripsi: "isi deskripsi aplikasi #1"
+        - nama: "isi nama aplikasi #2"
+          deskripsi: "isi deskripsi aplikasi #2"
+        - nama: "isi nama aplikasi #3"
+          deskripsi: "isi deskripsi aplikasi #3"
+        - nama: "isi nama aplikasi #4"
+          deskripsi: "isi deskripsi aplikasi #4"
+      keuntungan: "isi keuntungan utama"
+      tips: "isi tips praktis"
+
+    # CARD 3 (col-lg-6)
+    card_3:
+      ukuran: "isi ukuran (misal: 6-8 cm)"
+      kategori: "isi kategori H3 (misal: Untuk Konstruksi Ringan)"
+      subtitle: "isi subtitle card (misal: Struktur Ringan)"
+      warna: "success"
+      aplikasi:
+        - nama: "isi nama aplikasi #1"
+          deskripsi: "isi deskripsi aplikasi #1"
+        - nama: "isi nama aplikasi #2"
+          deskripsi: "isi deskripsi aplikasi #2"
+        - nama: "isi nama aplikasi #3"
+          deskripsi: "isi deskripsi aplikasi #3"
+        - nama: "isi nama aplikasi #4"
+          deskripsi: "isi deskripsi aplikasi #4"
+      keuntungan: "isi keuntungan utama"
+      tips: "isi tips praktis"
+
+    # CARD 4 (col-lg-6)
+    card_4:
+      ukuran: "isi ukuran (misal: 8-10 cm)"
+      kategori: "isi kategori H3 (misal: Untuk Konstruksi Sedang)"
+      subtitle: "isi subtitle card (misal: Konstruksi Medium)"
+      warna: "warning"
+      aplikasi:
+        - nama: "isi nama aplikasi #1"
+          deskripsi: "isi deskripsi aplikasi #1"
+        - nama: "isi nama aplikasi #2"
+          deskripsi: "isi deskripsi aplikasi #2"
+        - nama: "isi nama aplikasi #3"
+          deskripsi: "isi deskripsi aplikasi #3"
+        - nama: "isi nama aplikasi #4"
+          deskripsi: "isi deskripsi aplikasi #4"
+      keuntungan: "isi keuntungan utama"
+      tips: "isi tips praktis"
+
+    # CARD 5 (col-lg-12 FULL WIDTH)
+    card_5:
+      ukuran: "isi ukuran (misal: 10-12 cm)"
+      kategori: "isi kategori H3 (misal: Untuk Konstruksi Berat)"
+      subtitle: "isi subtitle card (misal: Proyek Skala Besar)"
+      warna: "danger"
+      aplikasi:
+        - nama: "isi nama aplikasi #1"
+          deskripsi: "isi deskripsi aplikasi #1"
+        - nama: "isi nama aplikasi #2"
+          deskripsi: "isi deskripsi aplikasi #2"
+        - nama: "isi nama aplikasi #3"
+          deskripsi: "isi deskripsi aplikasi #3"
+        - nama: "isi nama aplikasi #4"
+          deskripsi: "isi deskripsi aplikasi #4"
+      keuntungan: "isi keuntungan utama ukuran besar"
+      tips: "isi tips praktis untuk ukuran besar"
+  ---
 
   ============================================================================
 {% endcomment %}

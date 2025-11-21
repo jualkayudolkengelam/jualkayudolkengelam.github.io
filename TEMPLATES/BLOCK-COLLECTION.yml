@@ -265,6 +265,62 @@ blocks:
       h6: 0
       total: 12
 
+  - id: mengenal-ukuran
+    file: tutorial/block--mengenal-ukuran.html
+    name: "Mengenal Ukuran"
+    category: tutorial
+    tags:
+      - tutorial
+      - product-catalog
+      - size-guide
+      - buying-guide
+      - 5-column
+    use_cases:
+      - size_guide
+      - product_catalog
+      - tutorial
+      - buying_guide
+    description: |
+      Block untuk menyajikan informasi lengkap tentang berbagai ukuran produk dengan 5 kartu.
+      Membantu pengguna memahami karakteristik, kegunaan, dan rekomendasi untuk setiap ukuran.
+      Ideal untuk artikel panduan pemilihan ukuran dan katalog produk.
+
+    heading_structure:
+      h2: 1   # Header title
+      h3: 6   # 1 overview (optional) + 5 card titles
+      h4: 15  # Detail headings (3 per card × 5 cards)
+      h5: 0
+      h6: 0
+      total: 22
+
+  - id: panduan-pemilihan
+    file: tutorial/block--panduan-pemilihan.html
+    name: "Panduan Pemilihan"
+    category: tutorial
+    tags:
+      - tutorial
+      - buying-guide
+      - product-selection
+      - application-guide
+      - 5-column
+    use_cases:
+      - buying_guide
+      - product_selection
+      - tutorial
+      - application_showcase
+    description: |
+      Block untuk menyajikan panduan pemilihan ukuran dengan format list aplikasi, keuntungan, dan tips.
+      Membantu pengguna memilih ukuran yang tepat berdasarkan aplikasi spesifik dan kebutuhan proyek.
+      Ideal untuk artikel panduan pemilihan produk dan buying guide.
+
+    heading_structure:
+      h2: 1   # Header title
+      h3: 6   # 1 overview (optional) + 5 card titles (kategori)
+      h4: 10  # Section headings (2 per card: Aplikasi + Keuntungan/Tips)
+      h5: 0
+      h6: 0
+      total: 17
+
 # ============================================================================
 # USAGE NOTES
 # ============================================================================
