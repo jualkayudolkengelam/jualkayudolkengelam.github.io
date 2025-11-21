@@ -15,7 +15,8 @@
   -----------------------------------------
   - 1 × H2: Main section title (header card)
   - 6 × H3: Card titles (one per card: card_1 to card_6)
-  - 0 × H4, H5, H6: Not used in this block
+  - 12 × H4: Sub-headings (2 per card: h4_1, h4_2)
+  - 0 × H5, H6: Not used in this block
 
   Features:
   ---------
@@ -37,13 +38,19 @@
     - subtitle: Subtitle below title → class="subtitle"
     - icon: Main header icon (Bootstrap icon class)
     - gradient: Gradient color (wood, purple, blue, green, orange)
+    - paragraph_1: First paragraph after H2 (REQUIRED for SEO) → class="paragraph_1"
+    - paragraph_2: Second paragraph after H2 (REQUIRED for SEO) → class="paragraph_2"
     - layout: Card layout ("3col" for col-lg-4, "4col" for col-lg-3)
     - card_1, card_2, card_3, card_4, card_5, card_6: Tip cards (NO LOOP!)
       Each card:
       - title: H3 card title → class="title"
       - icon: Bootstrap icon class
       - color: Icon color (danger, warning, info, primary, success, secondary)
-      - paragraph: Optional intro paragraph → class="paragraph"
+      - intro: Paragraph after H3 (REQUIRED for SEO) → class="intro"
+      - h4_1: First H4 sub-heading → class="h4_1"
+      - paragraph_h4_1: Paragraph after first H4 → class="paragraph_h4_1"
+      - h4_2: Second H4 sub-heading → class="h4_2"
+      - paragraph_h4_2: Paragraph after second H4 → class="paragraph_h4_2"
       - item_1, item_2, item_3, item_4, item_5, item_6: Tip items
         Each item:
         - icon: Bootstrap icon class (optional)
@@ -53,11 +60,29 @@
 
   Class Mapping (Best Practice Pattern):
   ---------------------------------------
-  Frontmatter key → HTML class name
-  - title → <h2 class="title"> or <h3 class="title">
+  Frontmatter key → HTML class name (Semantic Classes)
+
+  Header Section:
+  - title → <h2 class="title h3">
   - subtitle → <p class="subtitle">
+  - paragraph_1 → <p class="paragraph_1 lead">
+  - paragraph_2 → <p class="paragraph_2">
+
+  Cards:
   - card_1 → <div class="card_1">
-  - paragraph → <p class="paragraph">
+  - card_2 → <div class="card_2">
+  - card_3 → <div class="card_3">
+  - card_4 → <div class="card_4">
+  - card_5 → <div class="card_5">
+  - card_6 → <div class="card_6">
+
+  Card Content:
+  - title (card) → <h3 class="title h6">
+  - intro → <p class="intro">
+  - h4_1 → <h4 class="h4_1 h6">
+  - paragraph_h4_1 → <p class="paragraph_h4_1 small">
+  - h4_2 → <h4 class="h4_2 h6">
+  - paragraph_h4_2 → <p class="paragraph_h4_2 small">
   - item_1 → <div class="item_1"> or <li class="item_1">
   - item_title → <strong class="item_title">
   - item_text → <span class="item_text">
@@ -71,11 +96,28 @@
     subtitle: "Panduan praktis untuk hasil maksimal"
     icon: "bi-palette-fill"
     gradient: "wood"
+
+    # Paragraphs (REQUIRED - untuk SEO & Accessibility)
+    paragraph_1: "isi paragraf pertama setelah H2. Berikan konteks umum tentang tips desain ini."
+    paragraph_2: "isi paragraf kedua untuk melengkapi penjelasan overview section."
+
     layout: "3col"
+
     card_1:
       title: "1. Jangan Over-do"
       icon: "bi-x-circle"
       color: "danger"
+
+      # Paragraph after H3 (REQUIRED for SEO)
+      intro: "isi paragraf penjelasan mengapa tip ini penting."
+
+      # H4 Sub-headings dengan paragraf (REQUIRED for SEO)
+      h4_1: "Kesalahan Umum"
+      paragraph_h4_1: "isi paragraf tentang kesalahan yang sering terjadi."
+
+      h4_2: "Solusi Praktis"
+      paragraph_h4_2: "isi paragraf tentang cara menghindari kesalahan."
+
       item_1:
         icon: "bi-check2"
         color: "success"
@@ -129,6 +171,19 @@
   </div>
 </div>
 
+<!-- Paragraphs (after H2, before H3 cards) -->
+{% if section.paragraph_1 %}
+<div class="my-4">
+  <p class="paragraph_1 lead">{{ section.paragraph_1 }}</p>
+</div>
+{% endif %}
+
+{% if section.paragraph_2 %}
+<div class="mb-4">
+  <p class="paragraph_2">{{ section.paragraph_2 }}</p>
+</div>
+{% endif %}
+
 <!-- Tips Cards Grid -->
 <div class="row g-4 my-4">
 
@@ -143,9 +198,27 @@
           </div>
           <h3 class="title h6 mb-0 text-wood">{{ section.card_1.title }}</h3>
         </div>
-        {% if section.card_1.paragraph %}
-        <p class="paragraph small mb-3 text-muted">{{ section.card_1.paragraph }}</p>
+
+        <!-- Intro paragraph after H3 -->
+        {% if section.card_1.intro %}
+        <p class="intro small mb-3">{{ section.card_1.intro }}</p>
         {% endif %}
+
+        <!-- H4 Sub-headings with paragraphs -->
+        {% if section.card_1.h4_1 %}
+        <h4 class="h4_1 h6 text-wood mb-2">{{ section.card_1.h4_1 }}</h4>
+        {% if section.card_1.paragraph_h4_1 %}
+        <p class="paragraph_h4_1 small mb-3">{{ section.card_1.paragraph_h4_1 }}</p>
+        {% endif %}
+        {% endif %}
+
+        {% if section.card_1.h4_2 %}
+        <h4 class="h4_2 h6 text-wood mb-2">{{ section.card_1.h4_2 }}</h4>
+        {% if section.card_1.paragraph_h4_2 %}
+        <p class="paragraph_h4_2 small mb-3">{{ section.card_1.paragraph_h4_2 }}</p>
+        {% endif %}
+        {% endif %}
+
         <ul class="list-unstyled mb-0">
           {% if section.card_1.item_1 %}
           <li class="item_1 mb-2">
@@ -206,9 +279,27 @@
           </div>
           <h3 class="title h6 mb-0 text-wood">{{ section.card_2.title }}</h3>
         </div>
-        {% if section.card_2.paragraph %}
-        <p class="paragraph small mb-3 text-muted">{{ section.card_2.paragraph }}</p>
+
+        <!-- Intro paragraph after H3 -->
+        {% if section.card_2.intro %}
+        <p class="intro small mb-3">{{ section.card_2.intro }}</p>
         {% endif %}
+
+        <!-- H4 Sub-headings with paragraphs -->
+        {% if section.card_2.h4_1 %}
+        <h4 class="h4_1 h6 text-wood mb-2">{{ section.card_2.h4_1 }}</h4>
+        {% if section.card_2.paragraph_h4_1 %}
+        <p class="paragraph_h4_1 small mb-3">{{ section.card_2.paragraph_h4_1 }}</p>
+        {% endif %}
+        {% endif %}
+
+        {% if section.card_2.h4_2 %}
+        <h4 class="h4_2 h6 text-wood mb-2">{{ section.card_2.h4_2 }}</h4>
+        {% if section.card_2.paragraph_h4_2 %}
+        <p class="paragraph_h4_2 small mb-3">{{ section.card_2.paragraph_h4_2 }}</p>
+        {% endif %}
+        {% endif %}
+
         <ul class="list-unstyled mb-0">
           {% if section.card_2.item_1 %}
           <li class="item_1 mb-2">
@@ -269,9 +360,27 @@
           </div>
           <h3 class="title h6 mb-0 text-wood">{{ section.card_3.title }}</h3>
         </div>
-        {% if section.card_3.paragraph %}
-        <p class="paragraph small mb-3 text-muted">{{ section.card_3.paragraph }}</p>
+
+        <!-- Intro paragraph after H3 -->
+        {% if section.card_3.intro %}
+        <p class="intro small mb-3">{{ section.card_3.intro }}</p>
         {% endif %}
+
+        <!-- H4 Sub-headings with paragraphs -->
+        {% if section.card_3.h4_1 %}
+        <h4 class="h4_1 h6 text-wood mb-2">{{ section.card_3.h4_1 }}</h4>
+        {% if section.card_3.paragraph_h4_1 %}
+        <p class="paragraph_h4_1 small mb-3">{{ section.card_3.paragraph_h4_1 }}</p>
+        {% endif %}
+        {% endif %}
+
+        {% if section.card_3.h4_2 %}
+        <h4 class="h4_2 h6 text-wood mb-2">{{ section.card_3.h4_2 }}</h4>
+        {% if section.card_3.paragraph_h4_2 %}
+        <p class="paragraph_h4_2 small mb-3">{{ section.card_3.paragraph_h4_2 }}</p>
+        {% endif %}
+        {% endif %}
+
         <ul class="list-unstyled mb-0">
           {% if section.card_3.item_1 %}
           <li class="item_1 mb-2">
@@ -332,9 +441,27 @@
           </div>
           <h3 class="title h6 mb-0 text-wood">{{ section.card_4.title }}</h3>
         </div>
-        {% if section.card_4.paragraph %}
-        <p class="paragraph small mb-3 text-muted">{{ section.card_4.paragraph }}</p>
+
+        <!-- Intro paragraph after H3 -->
+        {% if section.card_4.intro %}
+        <p class="intro small mb-3">{{ section.card_4.intro }}</p>
         {% endif %}
+
+        <!-- H4 Sub-headings with paragraphs -->
+        {% if section.card_4.h4_1 %}
+        <h4 class="h4_1 h6 text-wood mb-2">{{ section.card_4.h4_1 }}</h4>
+        {% if section.card_4.paragraph_h4_1 %}
+        <p class="paragraph_h4_1 small mb-3">{{ section.card_4.paragraph_h4_1 }}</p>
+        {% endif %}
+        {% endif %}
+
+        {% if section.card_4.h4_2 %}
+        <h4 class="h4_2 h6 text-wood mb-2">{{ section.card_4.h4_2 }}</h4>
+        {% if section.card_4.paragraph_h4_2 %}
+        <p class="paragraph_h4_2 small mb-3">{{ section.card_4.paragraph_h4_2 }}</p>
+        {% endif %}
+        {% endif %}
+
         <ul class="list-unstyled mb-0">
           {% if section.card_4.item_1 %}
           <li class="item_1 mb-2">
@@ -395,9 +522,27 @@
           </div>
           <h3 class="title h6 mb-0 text-wood">{{ section.card_5.title }}</h3>
         </div>
-        {% if section.card_5.paragraph %}
-        <p class="paragraph small mb-3 text-muted">{{ section.card_5.paragraph }}</p>
+
+        <!-- Intro paragraph after H3 -->
+        {% if section.card_5.intro %}
+        <p class="intro small mb-3">{{ section.card_5.intro }}</p>
         {% endif %}
+
+        <!-- H4 Sub-headings with paragraphs -->
+        {% if section.card_5.h4_1 %}
+        <h4 class="h4_1 h6 text-wood mb-2">{{ section.card_5.h4_1 }}</h4>
+        {% if section.card_5.paragraph_h4_1 %}
+        <p class="paragraph_h4_1 small mb-3">{{ section.card_5.paragraph_h4_1 }}</p>
+        {% endif %}
+        {% endif %}
+
+        {% if section.card_5.h4_2 %}
+        <h4 class="h4_2 h6 text-wood mb-2">{{ section.card_5.h4_2 }}</h4>
+        {% if section.card_5.paragraph_h4_2 %}
+        <p class="paragraph_h4_2 small mb-3">{{ section.card_5.paragraph_h4_2 }}</p>
+        {% endif %}
+        {% endif %}
+
         <ul class="list-unstyled mb-0">
           {% if section.card_5.item_1 %}
           <li class="item_1 mb-2">
@@ -458,9 +603,27 @@
           </div>
           <h3 class="title h6 mb-0 text-wood">{{ section.card_6.title }}</h3>
         </div>
-        {% if section.card_6.paragraph %}
-        <p class="paragraph small mb-3 text-muted">{{ section.card_6.paragraph }}</p>
+
+        <!-- Intro paragraph after H3 -->
+        {% if section.card_6.intro %}
+        <p class="intro small mb-3">{{ section.card_6.intro }}</p>
         {% endif %}
+
+        <!-- H4 Sub-headings with paragraphs -->
+        {% if section.card_6.h4_1 %}
+        <h4 class="h4_1 h6 text-wood mb-2">{{ section.card_6.h4_1 }}</h4>
+        {% if section.card_6.paragraph_h4_1 %}
+        <p class="paragraph_h4_1 small mb-3">{{ section.card_6.paragraph_h4_1 }}</p>
+        {% endif %}
+        {% endif %}
+
+        {% if section.card_6.h4_2 %}
+        <h4 class="h4_2 h6 text-wood mb-2">{{ section.card_6.h4_2 }}</h4>
+        {% if section.card_6.paragraph_h4_2 %}
+        <p class="paragraph_h4_2 small mb-3">{{ section.card_6.paragraph_h4_2 }}</p>
+        {% endif %}
+        {% endif %}
+
         <ul class="list-unstyled mb-0">
           {% if section.card_6.item_1 %}
           <li class="item_1 mb-2">
