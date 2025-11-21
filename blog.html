@@ -3,6 +3,9 @@ layout: page
 title: Blog & Artikel
 description: Informasi, tips, dan artikel seputar kayu dolken gelam, penggunaan, perawatan, dan inspirasi proyek
 schema_type: CollectionPage
+pagination:
+  enabled: true
+  collection: posts, post_with_city
 ---
 
 <div class="container py-4">
@@ -16,43 +19,10 @@ schema_type: CollectionPage
   </ol>
 </nav>
 
-<!-- Breadcrumb Schema (JSON-LD) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Beranda",
-      "item": "{{ site.url }}{{ site.baseurl }}/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Blog",
-      "item": "{{ site.url }}{{ site.baseurl }}/blog"
-    }
-  ]
-}
-</script>
-
+<!-- Content Section -->
 <div class="row g-4 mb-5">
-  {% comment %}Combine regular posts and posts with products{% endcomment %}
-  {% assign all_posts = site.posts | concat: site.post_with_city %}
-
-  {% if all_posts.size > 0 %}
-    {% comment %}
-    Sort posts by last_modified_at (DESC) for fresh content priority.
-    Posts with last_modified_at appear first, then posts sorted by publish date.
-    This ensures recently updated posts with new metrics rise to the top.
-    {% endcomment %}
-    {% assign posts_with_modified = all_posts | where_exp: "post", "post.last_modified_at" | sort: "last_modified_at" | reverse %}
-    {% assign posts_without_modified = all_posts | where_exp: "post", "post.last_modified_at == nil" | sort: "date" | reverse %}
-    {% assign sorted_posts = posts_with_modified | concat: posts_without_modified %}
-
-    {% for post in sorted_posts %}
+  {% if paginator.posts.size > 0 %}
+    {% for post in paginator.posts %}
     <div class="col-md-6 col-lg-4">
       <article class="card blog-card">
         {% if post.image %}
@@ -128,6 +98,59 @@ schema_type: CollectionPage
   {% endif %}
 </div>
 
+<!-- Pagination Navigation -->
+{% if paginator.total_pages > 1 %}
+<nav aria-label="Blog pagination" class="mb-5">
+  <ul class="pagination justify-content-center">
+    {% if paginator.previous_page %}
+    <li class="page-item">
+      <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" aria-label="Previous">
+        <span aria-hidden="true">&laquo; Sebelumnya</span>
+      </a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <span class="page-link">&laquo; Sebelumnya</span>
+    </li>
+    {% endif %}
+
+    {% for page_num in (1..paginator.total_pages) %}
+      {% if page_num == paginator.page %}
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">{{ page_num }}</span>
+      </li>
+      {% elsif page_num == 1 %}
+      <li class="page-item">
+        <a class="page-link" href="{{ '/blog/' | relative_url }}">{{ page_num }}</a>
+      </li>
+      {% else %}
+      <li class="page-item">
+        <a class="page-link" href="{{ '/blog/page/' | append: page_num | append: '/' | relative_url }}">{{ page_num }}</a>
+      </li>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+    <li class="page-item">
+      <a class="page-link" href="{{ paginator.next_page_path | relative_url }}" aria-label="Next">
+        <span aria-hidden="true">Berikutnya &raquo;</span>
+      </a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <span class="page-link">Berikutnya &raquo;</span>
+    </li>
+    {% endif %}
+  </ul>
+
+  <!-- Pagination Info -->
+  <p class="text-center text-muted small">
+    Halaman {{ paginator.page }} dari {{ paginator.total_pages }}
+    ({{ paginator.posts.size }} dari {{ paginator.total_posts }} artikel)
+  </p>
+</nav>
+{% endif %}
+
 <!-- Newsletter Subscription (Optional) -->
 <div class="row mt-5">
   <div class="col-lg-8 mx-auto">
@@ -143,9 +166,34 @@ schema_type: CollectionPage
   </div>
 </div>
 
-<!-- Schemas for this page -->
+</div><!-- /.container -->
+
+<!-- ============================================================================
+     SCHEMAS SECTION
+     Schema markup for SEO - separated from content for better organization
+     ============================================================================ -->
+
+<!-- Breadcrumb Schema (2 levels for blog page) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Beranda",
+      "item": "{{ site.url }}{{ site.baseurl }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "{{ site.url }}{{ site.baseurl }}/blog"
+    }
+  ]
+}
+</script>
 
 <!-- Blog List Schema (ItemList with BlogPosting items) -->
 {% include schema--blog-list.html %}
-
-</div><!-- /.container -->
