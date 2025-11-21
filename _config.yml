@@ -74,4 +74,3 @@ exclude:
   - validate-post.sh
   - rebuild.sh
   - TEMPLATES/
-  - TODO/

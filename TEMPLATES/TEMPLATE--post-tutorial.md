@@ -139,6 +139,7 @@ share_count: 0
 intro:
   headline: "isi headline catchy untuk intro section (1 kalimat singkat)"
   deskripsi: "isi deskripsi pembuka artikel (2-3 kalimat), jelaskan apa yang akan dipelajari pembaca"
+  highlight_title: "isi judul section highlight (OPTIONAL - hapus jika tidak perlu, default: Yang Akan Anda Pelajari:)"
   highlight_points:
     - "isi highlight point #1 (benefit atau key takeaway)"
     - "isi highlight point #2"
@@ -229,6 +230,437 @@ tips_praktis:
       h4: "isi judul H4 detail #3 (misal: Manfaatkan Promo dan Diskon)"
       paragraph: "isi konten detail #3, berikan tips mendapatkan harga terbaik"
 
+# ============================================================================
+# MENGENAL UKURAN SECTION (OPTIONAL) - HARDCODED, NO LOOP!
+# ============================================================================
+# Instruksi: Section mengenal ukuran dengan 5 cards hardcoded
+# NOTE: Nama key "mengenal_ukuran" sesuai dengan HTML id="mengenal-ukuran"
+# Layout: 4 cards (col-lg-6) + 1 card (col-lg-12)
+mengenal_ukuran:
+  # H2: Main Section Header
+  title: "isi judul H2 section mengenal ukuran (misal: Mengenal Ukuran Kayu Dolken)"
+  subtitle: "isi subtitle di bawah title (OPTIONAL - hapus jika tidak perlu, misal: Pilih ukuran yang sesuai kebutuhan proyek Anda)"
+  intro: "isi 1-2 paragraf intro untuk section mengenal ukuran, jelaskan pentingnya memilih ukuran yang tepat"
+  icon: "bi-rulers"  # Bootstrap icon
+  gradient: "primary"  # Options: primary, info, warning, success, danger, wood
+
+  # H3 Overview (OPTIONAL - hapus jika tidak perlu)
+  overview_title: "isi judul H3 overview (misal: Variasi Ukuran yang Tersedia)"
+  overview_subtitle: "isi subtitle singkat untuk overview"
+  overview_icon: "bi-info-circle-fill"
+  overview_color: "primary"
+
+  # CARD 1 - HARDCODED (col-lg-6)
+  card_1:
+    title: "isi judul H3 card #1 (misal: Dolken Diameter 2-3 cm)"
+    icon: "bi-rulers"
+    color: "primary"
+
+    # 2 Paragraphs per card
+    paragraph_1: "isi paragraf 1 di bawah H3 card #1, jelaskan karakteristik ukuran ini"
+    paragraph_2: "isi paragraf 2 di bawah H3 card #1, lanjutkan penjelasan atau tambahkan konteks"
+
+    # 3 Details per card - HARDCODED
+    detail_1:
+      h4: "isi judul H4 detail #1 (misal: Kegunaan Utama)"
+      paragraph: "isi 1 paragraf konten untuk detail #1, jelaskan untuk apa ukuran ini digunakan"
+
+    detail_2:
+      h4: "isi judul H4 detail #2 (misal: Kelebihan)"
+      paragraph: "isi 1 paragraf konten untuk detail #2, jelaskan keunggulan ukuran ini"
+
+    detail_3:
+      h4: "isi judul H4 detail #3 (misal: Rekomendasi Proyek)"
+      paragraph: "isi 1 paragraf konten untuk detail #3, berikan rekomendasi proyek yang cocok"
+
+  # CARD 2 - HARDCODED (col-lg-6)
+  card_2:
+    title: "isi judul H3 card #2 (misal: Dolken Diameter 4-6 cm)"
+    icon: "bi-rulers"
+    color: "info"
+
+    # 2 Paragraphs per card
+    paragraph_1: "isi paragraf 1 card #2, jelaskan karakteristik ukuran 4-6 cm"
+    paragraph_2: "isi paragraf 2 card #2, lanjutkan penjelasan tentang ukuran ini"
+
+    detail_1:
+      h4: "isi judul H4 detail #1 (misal: Kegunaan Utama)"
+      paragraph: "isi konten detail #1, jelaskan penggunaan ukuran ini"
+
+    detail_2:
+      h4: "isi judul H4 detail #2 (misal: Kelebihan)"
+      paragraph: "isi konten detail #2, jelaskan keunggulan ukuran ini"
+
+    detail_3:
+      h4: "isi judul H4 detail #3 (misal: Rekomendasi Proyek)"
+      paragraph: "isi konten detail #3, berikan rekomendasi proyek"
+
+  # CARD 3 - HARDCODED (col-lg-6)
+  card_3:
+    title: "isi judul H3 card #3 (misal: Dolken Diameter 6-8 cm)"
+    icon: "bi-rulers"
+    color: "success"
+
+    # 2 Paragraphs per card
+    paragraph_1: "isi paragraf 1 card #3, jelaskan karakteristik ukuran 6-8 cm"
+    paragraph_2: "isi paragraf 2 card #3, lanjutkan penjelasan tentang ukuran ini"
+
+    detail_1:
+      h4: "isi judul H4 detail #1 (misal: Kegunaan Utama)"
+      paragraph: "isi konten detail #1, jelaskan penggunaan ukuran ini"
+
+    detail_2:
+      h4: "isi judul H4 detail #2 (misal: Kelebihan)"
+      paragraph: "isi konten detail #2, jelaskan keunggulan ukuran ini"
+
+    detail_3:
+      h4: "isi judul H4 detail #3 (misal: Rekomendasi Proyek)"
+      paragraph: "isi konten detail #3, berikan rekomendasi proyek"
+
+  # CARD 4 - HARDCODED (col-lg-6)
+  card_4:
+    title: "isi judul H3 card #4 (misal: Dolken Diameter 8-10 cm)"
+    icon: "bi-rulers"
+    color: "warning"
+
+    # 2 Paragraphs per card
+    paragraph_1: "isi paragraf 1 card #4, jelaskan karakteristik ukuran 8-10 cm"
+    paragraph_2: "isi paragraf 2 card #4, lanjutkan penjelasan tentang ukuran ini"
+
+    detail_1:
+      h4: "isi judul H4 detail #1 (misal: Kegunaan Utama)"
+      paragraph: "isi konten detail #1, jelaskan penggunaan ukuran ini"
+
+    detail_2:
+      h4: "isi judul H4 detail #2 (misal: Kelebihan)"
+      paragraph: "isi konten detail #2, jelaskan keunggulan ukuran ini"
+
+    detail_3:
+      h4: "isi judul H4 detail #3 (misal: Rekomendasi Proyek)"
+      paragraph: "isi konten detail #3, berikan rekomendasi proyek"
+
+  # CARD 5 - HARDCODED (col-lg-12 FULL WIDTH)
+  card_5:
+    title: "isi judul H3 card #5 (misal: Dolken Diameter 10-12 cm)"
+    icon: "bi-rulers"
+    color: "danger"
+
+    # 2 Paragraphs per card
+    paragraph_1: "isi paragraf 1 card #5, jelaskan karakteristik ukuran 10-12 cm (ukuran terbesar)"
+    paragraph_2: "isi paragraf 2 card #5, lanjutkan penjelasan tentang ukuran premium ini"
+
+    detail_1:
+      h4: "isi judul H4 detail #1 (misal: Kegunaan Utama)"
+      paragraph: "isi konten detail #1, jelaskan penggunaan ukuran terbesar ini"
+
+    detail_2:
+      h4: "isi judul H4 detail #2 (misal: Kelebihan)"
+      paragraph: "isi konten detail #2, jelaskan keunggulan ukuran premium ini"
+
+    detail_3:
+      h4: "isi judul H4 detail #3 (misal: Rekomendasi Proyek)"
+      paragraph: "isi konten detail #3, berikan rekomendasi proyek yang cocok untuk ukuran besar"
+
+# ============================================================================
+# PANDUAN PEMILIHAN SECTION (OPTIONAL) - HARDCODED, NO LOOP!
+# ============================================================================
+# Instruksi: Section panduan pemilihan dengan 5 cards hardcoded
+# NOTE: Nama key "panduan_pemilihan" sesuai dengan HTML id="panduan-pemilihan"
+# Layout: 4 cards (col-lg-6) + 1 card (col-lg-12)
+# Format berbeda: menggunakan list aplikasi, keuntungan, dan tips
+panduan_pemilihan:
+  # H2: Main Section Header
+  title: "isi judul H2 section panduan pemilihan (misal: Panduan Memilih Ukuran yang Tepat)"
+  subtitle: "isi subtitle di bawah title (OPTIONAL - hapus jika tidak perlu, misal: Sesuaikan dengan kebutuhan proyek Anda)"
+  intro: "isi 1-2 paragraf intro untuk section panduan pemilihan, jelaskan pentingnya memilih ukuran yang tepat untuk proyek"
+  icon: "bi-compass"  # Bootstrap icon
+  gradient: "primary"  # Options: primary, info, warning, success, danger, wood
+
+  # H3 Overview (OPTIONAL - hapus jika tidak perlu)
+  overview_title: "isi judul H3 overview (misal: Pilih Berdasarkan Kebutuhan)"
+  overview_subtitle: "isi subtitle singkat untuk overview"
+  overview_icon: "bi-info-circle-fill"
+  overview_color: "primary"
+
+  # CARD 1 - HARDCODED (col-lg-6)
+  card_1:
+    ukuran: "isi ukuran (misal: 2-3 cm)"
+    kategori: "isi kategori H3 (misal: Untuk Dekorasi)"
+    subtitle: "isi subtitle card (misal: Aplikasi Dekoratif)"
+    warna: "info"  # Options: info, primary, success, warning, danger
+
+    # List aplikasi (4 items dengan nama dan deskripsi)
+    aplikasi:
+      - nama: "isi nama aplikasi #1 (misal: Interior Hotel & Cafe)"
+        deskripsi: "isi deskripsi aplikasi #1 (1 kalimat singkat)"
+      - nama: "isi nama aplikasi #2 (misal: Wall Decor)"
+        deskripsi: "isi deskripsi aplikasi #2"
+      - nama: "isi nama aplikasi #3 (misal: Hiasan Taman)"
+        deskripsi: "isi deskripsi aplikasi #3"
+      - nama: "isi nama aplikasi #4 (misal: Art Installation)"
+        deskripsi: "isi deskripsi aplikasi #4"
+
+    # Keuntungan dan Tips
+    keuntungan: "isi keuntungan utama ukuran ini (1 kalimat, misal: Ringan, mudah dipasang, harga terjangkau)"
+    tips: "isi tips praktis untuk ukuran ini (1-2 kalimat, misal: Cocok dikombinasikan dengan elemen dekorasi lain)"
+
+  # CARD 2 - HARDCODED (col-lg-6)
+  card_2:
+    ukuran: "isi ukuran (misal: 4-6 cm)"
+    kategori: "isi kategori H3 (misal: Untuk Pagar & Pembatas)"
+    subtitle: "isi subtitle card (misal: Fungsi Pagar dan Pembatas)"
+    warna: "primary"
+
+    aplikasi:
+      - nama: "isi nama aplikasi #1 (misal: Pagar Taman Rumah)"
+        deskripsi: "isi deskripsi aplikasi #1"
+      - nama: "isi nama aplikasi #2 (misal: Pembatas Area)"
+        deskripsi: "isi deskripsi aplikasi #2"
+      - nama: "isi nama aplikasi #3 (misal: Trellis Tanaman)"
+        deskripsi: "isi deskripsi aplikasi #3"
+      - nama: "isi nama aplikasi #4 (misal: Dekorasi Outdoor)"
+        deskripsi: "isi deskripsi aplikasi #4"
+
+    keuntungan: "isi keuntungan utama ukuran ini (1 kalimat)"
+    tips: "isi tips praktis untuk ukuran ini (1-2 kalimat)"
+
+  # CARD 3 - HARDCODED (col-lg-6)
+  card_3:
+    ukuran: "isi ukuran (misal: 6-8 cm)"
+    kategori: "isi kategori H3 (misal: Untuk Konstruksi Ringan)"
+    subtitle: "isi subtitle card (misal: Struktur Ringan)"
+    warna: "success"
+
+    aplikasi:
+      - nama: "isi nama aplikasi #1 (misal: Tiang Pergola)"
+        deskripsi: "isi deskripsi aplikasi #1"
+      - nama: "isi nama aplikasi #2 (misal: Gazebo Kecil)"
+        deskripsi: "isi deskripsi aplikasi #2"
+      - nama: "isi nama aplikasi #3 (misal: Pagar Utama)"
+        deskripsi: "isi deskripsi aplikasi #3"
+      - nama: "isi nama aplikasi #4 (misal: Tiang Penyangga Atap)"
+        deskripsi: "isi deskripsi aplikasi #4"
+
+    keuntungan: "isi keuntungan utama ukuran ini (1 kalimat)"
+    tips: "isi tips praktis untuk ukuran ini (1-2 kalimat)"
+
+  # CARD 4 - HARDCODED (col-lg-6)
+  card_4:
+    ukuran: "isi ukuran (misal: 8-10 cm)"
+    kategori: "isi kategori H3 (misal: Untuk Konstruksi Sedang)"
+    subtitle: "isi subtitle card (misal: Konstruksi Medium)"
+    warna: "warning"
+
+    aplikasi:
+      - nama: "isi nama aplikasi #1 (misal: Pondasi Ringan)"
+        deskripsi: "isi deskripsi aplikasi #1"
+      - nama: "isi nama aplikasi #2 (misal: Tiang Utama Gazebo)"
+        deskripsi: "isi deskripsi aplikasi #2"
+      - nama: "isi nama aplikasi #3 (misal: Bridge Taman)"
+        deskripsi: "isi deskripsi aplikasi #3"
+      - nama: "isi nama aplikasi #4 (misal: Scaffolding)"
+        deskripsi: "isi deskripsi aplikasi #4"
+
+    keuntungan: "isi keuntungan utama ukuran ini (1 kalimat)"
+    tips: "isi tips praktis untuk ukuran ini (1-2 kalimat)"
+
+  # CARD 5 - HARDCODED (col-lg-12 FULL WIDTH)
+  card_5:
+    ukuran: "isi ukuran (misal: 10-12 cm)"
+    kategori: "isi kategori H3 (misal: Untuk Konstruksi Berat)"
+    subtitle: "isi subtitle card (misal: Proyek Skala Besar)"
+    warna: "danger"
+
+    aplikasi:
+      - nama: "isi nama aplikasi #1 (misal: Pondasi Utama)"
+        deskripsi: "isi deskripsi aplikasi #1"
+      - nama: "isi nama aplikasi #2 (misal: Tiang Struktur Besar)"
+        deskripsi: "isi deskripsi aplikasi #2"
+      - nama: "isi nama aplikasi #3 (misal: Dermaga & Pier)"
+        deskripsi: "isi deskripsi aplikasi #3"
+      - nama: "isi nama aplikasi #4 (misal: Proyek Infrastruktur)"
+        deskripsi: "isi deskripsi aplikasi #4"
+
+    keuntungan: "isi keuntungan utama ukuran ini (1 kalimat)"
+    tips: "isi tips praktis untuk ukuran ini (1-2 kalimat)"
+
+# ============================================================================
+# CARA PEMASANGAN SECTION (OPTIONAL) - HARDCODED, NO LOOP!
+# ============================================================================
+# Instruksi: Section cara pemasangan dengan 2 cards hardcoded
+# NOTE: Nama key "cara_pemasangan" sesuai dengan HTML id="cara-pemasangan"
+# Layout: 2 cards (col-lg-6 side by side)
+# Format: 2 H3 (Persiapan + Instalasi), masing-masing 4 details
+cara_pemasangan:
+  # H2: Main Section Header
+  title: "isi judul H2 section cara pemasangan (misal: Cara Memasang Kayu Dolken dengan Benar)"
+  subtitle: "isi subtitle di bawah title (OPTIONAL - hapus jika tidak perlu, misal: Panduan step-by-step instalasi yang tepat)"
+  intro: "isi 1-2 paragraf intro untuk section cara pemasangan, jelaskan pentingnya pemasangan yang benar"
+  icon: "bi-tools"  # Bootstrap icon
+  gradient: "success"  # Options: primary, info, warning, success, danger, wood
+
+  # H3 Overview (OPTIONAL - hapus jika tidak perlu)
+  overview_title: "isi judul H3 overview (misal: Tahapan Pemasangan)"
+  overview_subtitle: "isi subtitle singkat untuk overview"
+  overview_icon: "bi-check-circle-fill"
+  overview_color: "success"
+
+  # CARD 1: PERSIAPAN - HARDCODED (col-lg-6)
+  persiapan:
+    title: "isi judul H3 card persiapan (misal: Persiapan Sebelum Pemasangan)"
+    icon: "bi-clipboard-check"
+    color: "primary"
+
+    # 2 Paragraphs per card
+    paragraph_1: "isi paragraf 1 di bawah H3, jelaskan pentingnya persiapan yang matang"
+    paragraph_2: "isi paragraf 2, lanjutkan penjelasan atau tambahkan konteks"
+
+    # 4 Details - HARDCODED
+    detail_1:
+      h4: "isi judul H4 detail #1 (misal: Cek dan Sortir Material)"
+      paragraph: "isi 1 paragraf konten untuk detail #1, jelaskan cara cek kualitas dan sortir dolken"
+
+    detail_2:
+      h4: "isi judul H4 detail #2 (misal: Siapkan Alat dan Perlengkapan)"
+      paragraph: "isi 1 paragraf konten untuk detail #2, list alat yang dibutuhkan dan fungsinya"
+
+    detail_3:
+      h4: "isi judul H4 detail #3 (misal: Ukur dan Tandai Area Pemasangan)"
+      paragraph: "isi 1 paragraf konten untuk detail #3, jelaskan teknik pengukuran yang akurat"
+
+    detail_4:
+      h4: "isi judul H4 detail #4 (misal: Persiapan Pondasi dan Base)"
+      paragraph: "isi 1 paragraf konten untuk detail #4, jelaskan persiapan foundation yang kuat"
+
+  # CARD 2: INSTALASI - HARDCODED (col-lg-6)
+  instalasi:
+    title: "isi judul H3 card instalasi (misal: Proses Instalasi Step-by-Step)"
+    icon: "bi-hammer"
+    color: "success"
+
+    # 2 Paragraphs per card
+    paragraph_1: "isi paragraf 1 di bawah H3, jelaskan overview proses instalasi"
+    paragraph_2: "isi paragraf 2, tekankan pentingnya mengikuti urutan yang benar"
+
+    # 4 Details - HARDCODED
+    detail_1:
+      h4: "isi judul H4 detail #1 (misal: Pasang Tiang/Dolken Pertama sebagai Base Point)"
+      paragraph: "isi 1 paragraf konten untuk detail #1, jelaskan cara menentukan dan pasang tiang pertama"
+
+    detail_2:
+      h4: "isi judul H4 detail #2 (misal: Setting Jarak dan Alignment)"
+      paragraph: "isi 1 paragraf konten untuk detail #2, jelaskan teknik mengatur jarak dan kelurusan"
+
+    detail_3:
+      h4: "isi judul H4 detail #3 (misal: Pengikatan dan Penguatan Struktur)"
+      paragraph: "isi 1 paragraf konten untuk detail #3, jelaskan cara mengikat dolken dengan kawat atau material lain"
+
+    detail_4:
+      h4: "isi judul H4 detail #4 (misal: Finishing dan Quality Check)"
+      paragraph: "isi 1 paragraf konten untuk detail #4, jelaskan tahap akhir dan cara cek kualitas hasil"
+
+# ============================================================================
+# SECTION 6: CARA MERAWAT
+# ============================================================================
+# Section tentang cara merawat dan memelihara kayu dolken
+# Structure:
+# - 1 H2 (title)
+# - 4 H3 cards (card_1, card_2, card_3, card_4)
+# - Each card: 2 paragraphs + 3 details (H4 + paragraph)
+# ============================================================================
+cara_merawat:
+  title: "isi judul H2 section cara merawat (misal: Cara Merawat Kayu Dolken untuk Ketahanan Maksimal)"
+  subtitle: "isi subtitle (OPTIONAL, misal: Panduan perawatan lengkap agar dolken awet bertahun-tahun)"
+  intro: "isi 1-2 paragraf intro tentang pentingnya perawatan kayu dolken, manfaat perawatan rutin, dan overview aspek-aspek perawatan"
+  icon: "bi-wrench-adjustable"
+  gradient: "info"  # Options: primary, info, warning, success, danger, wood
+
+  # Optional H3 Overview
+  overview_title: "isi judul H3 overview (OPTIONAL, misal: Empat Aspek Perawatan Penting)"
+  overview_subtitle: "isi subtitle overview (OPTIONAL)"
+  overview_icon: "bi-check-circle-fill"  # OPTIONAL
+  overview_color: "info"  # OPTIONAL
+
+  # Card 1: [Tema perawatan pertama, misal: Perawatan Rutin]
+  card_1:
+    title: "isi judul H3 card #1 (misal: Perawatan Rutin Berkala)"
+    icon: "bi-calendar-check"
+    color: "primary"
+    paragraph_1: "isi paragraf 1 untuk card #1, jelaskan tentang perawatan rutin yang perlu dilakukan"
+    paragraph_2: "isi paragraf 2 untuk card #1, tambahkan penjelasan lebih detail atau manfaat dari perawatan rutin"
+
+    detail_1:
+      h4: "isi judul H4 detail #1 (misal: Inspeksi Visual Bulanan)"
+      paragraph: "isi 1 paragraf konten untuk detail #1, jelaskan cara melakukan inspeksi visual"
+
+    detail_2:
+      h4: "isi judul H4 detail #2 (misal: Pembersihan Permukaan)"
+      paragraph: "isi 1 paragraf konten untuk detail #2, jelaskan cara membersihkan permukaan dolken"
+
+    detail_3:
+      h4: "isi judul H4 detail #3 (misal: Pengecekan Kelembaban)"
+      paragraph: "isi 1 paragraf konten untuk detail #3, jelaskan cara mengecek tingkat kelembaban"
+
+  # Card 2: [Tema perawatan kedua, misal: Perlindungan dari Cuaca]
+  card_2:
+    title: "isi judul H3 card #2 (misal: Perlindungan dari Cuaca Ekstrem)"
+    icon: "bi-cloud-rain"
+    color: "success"
+    paragraph_1: "isi paragraf 1 untuk card #2, jelaskan pentingnya perlindungan dari cuaca"
+    paragraph_2: "isi paragraf 2 untuk card #2, tambahkan penjelasan tentang dampak cuaca pada dolken"
+
+    detail_1:
+      h4: "isi judul H4 detail #1 (misal: Coating Pelindung)"
+      paragraph: "isi 1 paragraf konten untuk detail #1, jelaskan jenis coating yang cocok"
+
+    detail_2:
+      h4: "isi judul H4 detail #2 (misal: Drainase yang Baik)"
+      paragraph: "isi 1 paragraf konten untuk detail #2, jelaskan pentingnya sistem drainase"
+
+    detail_3:
+      h4: "isi judul H4 detail #3 (misal: Perawatan Pasca Hujan)"
+      paragraph: "isi 1 paragraf konten untuk detail #3, jelaskan langkah setelah hujan deras"
+
+  # Card 3: [Tema perawatan ketiga, misal: Pencegahan Hama]
+  card_3:
+    title: "isi judul H3 card #3 (misal: Pencegahan dan Pengendalian Hama)"
+    icon: "bi-bug"
+    color: "warning"
+    paragraph_1: "isi paragraf 1 untuk card #3, jelaskan risiko serangan hama pada dolken"
+    paragraph_2: "isi paragraf 2 untuk card #3, tambahkan penjelasan tentang jenis-jenis hama yang umum"
+
+    detail_1:
+      h4: "isi judul H4 detail #1 (misal: Deteksi Dini Rayap)"
+      paragraph: "isi 1 paragraf konten untuk detail #1, jelaskan cara mendeteksi rayap"
+
+    detail_2:
+      h4: "isi judul H4 detail #2 (misal: Treatment Anti-Hama)"
+      paragraph: "isi 1 paragraf konten untuk detail #2, jelaskan metode treatment yang aman"
+
+    detail_3:
+      h4: "isi judul H4 detail #3 (misal: Pencegahan Alami)"
+      paragraph: "isi 1 paragraf konten untuk detail #3, jelaskan metode pencegahan organik"
+
+  # Card 4: [Tema perawatan keempat, misal: Perbaikan dan Penggantian]
+  card_4:
+    title: "isi judul H3 card #4 (misal: Perbaikan dan Penggantian Tepat Waktu)"
+    icon: "bi-hammer"
+    color: "danger"
+    paragraph_1: "isi paragraf 1 untuk card #4, jelaskan kapan perlu dilakukan perbaikan atau penggantian"
+    paragraph_2: "isi paragraf 2 untuk card #4, tambahkan penjelasan tentang tanda-tanda dolken perlu diganti"
+
+    detail_1:
+      h4: "isi judul H4 detail #1 (misal: Perbaikan Minor)"
+      paragraph: "isi 1 paragraf konten untuk detail #1, jelaskan cara memperbaiki kerusakan kecil"
+
+    detail_2:
+      h4: "isi judul H4 detail #2 (misal: Kriteria Penggantian)"
+      paragraph: "isi 1 paragraf konten untuk detail #2, jelaskan kriteria dolken yang harus diganti"
+
+    detail_3:
+      h4: "isi judul H4 detail #3 (misal: Proses Penggantian)"
+      paragraph: "isi 1 paragraf konten untuk detail #3, jelaskan langkah-langkah mengganti dolken rusak"
+
 ---
 
 <!-- Intro Section -->
@@ -239,4 +671,24 @@ tips_praktis:
 <!-- Tips Praktis Section -->
 <section id="tips-praktis">
   {% include posts/tutorial/block--tips-praktis.html %}
+</section>
+
+<!-- Mengenal Ukuran Section -->
+<section id="mengenal-ukuran">
+  {% include posts/tutorial/block--mengenal-ukuran.html %}
+</section>
+
+<!-- Panduan Pemilihan Section -->
+<section id="panduan-pemilihan">
+  {% include posts/tutorial/block--panduan-pemilihan.html %}
+</section>
+
+<!-- Cara Pemasangan Section -->
+<section id="cara-pemasangan">
+  {% include posts/tutorial/block--cara-pemasangan.html %}
+</section>
+
+<!-- Cara Merawat Section -->
+<section id="cara-merawat">
+  {% include posts/tutorial/block--cara-merawat.html %}
 </section>

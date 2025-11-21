@@ -374,6 +374,164 @@ panduan_pemilihan:
     keuntungan: "Kekuatan maksimal, daya tahan luar biasa"
     tips: "Memerlukan alat berat untuk instalasi"
 
+# ============================================================================
+# CARA PEMASANGAN SECTION (OPTIONAL)
+# ============================================================================
+cara_pemasangan:
+  title: "Cara Memasang Kayu Dolken dengan Benar"
+  subtitle: "Panduan step-by-step instalasi untuk hasil optimal"
+  intro: "Setelah menghitung kebutuhan dan memilih ukuran yang tepat, langkah selanjutnya adalah pemasangan yang benar. Instalasi yang tepat tidak hanya mempengaruhi estetika, tetapi juga menentukan kekuatan dan daya tahan struktur. Kesalahan dalam pemasangan bisa mengakibatkan struktur miring, tidak kokoh, atau bahkan roboh. Ikuti panduan langkah demi langkah berikut untuk hasil pemasangan yang maksimal."
+  icon: "bi-tools"
+  gradient: "success"
+
+  overview_title: "Dua Tahapan Utama Pemasangan"
+  overview_subtitle: "Persiapan matang dan eksekusi yang tepat"
+  overview_icon: "bi-check-circle-fill"
+  overview_color: "success"
+
+  persiapan:
+    title: "Persiapan Sebelum Pemasangan"
+    icon: "bi-clipboard-check"
+    color: "primary"
+
+    paragraph_1: "Persiapan yang matang adalah 50% dari kesuksesan proyek pemasangan. Tahap ini sering diabaikan padahal sangat krusial untuk menghindari masalah di tengah proses instalasi. Persiapan mencakup pengecekan material, penyiapan tools, dan planning layout yang detail."
+    paragraph_2: "Luangkan waktu yang cukup untuk tahap persiapan ini. Rushing di tahap ini hanya akan memperlambat proses instalasi dan berpotensi menyebabkan kesalahan yang costly untuk diperbaiki. Better spend extra 2 hours di preparation daripada waste 2 days fixing mistakes."
+
+    detail_1:
+      h4: "Cek dan Sortir Material"
+      paragraph: "Periksa semua dolken yang diterima. Sortir berdasarkan kualitas dan ukuran. Pisahkan dolken yang retak, bengkok, atau cacat. Gunakan yang terbaik untuk area yang paling visible. Dolken grade B bisa untuk area yang tidak terlihat atau sebagai cadangan. Jangan gunakan dolken cacat untuk struktur utama karena bisa jadi titik lemah."
+
+    detail_2:
+      h4: "Siapkan Alat dan Perlengkapan"
+      paragraph: "List alat: meteran (minimal 5m), waterpass/spirit level, palu karet, linggis, kawat galvanis (diameter 1-2mm), tang potong kawat, tali rafia untuk marking, dan sekop untuk galian. Untuk proyek besar, pertimbangkan sewa post hole digger atau auger untuk efficiency. Pastikan semua alat dalam kondisi baik dan ready sebelum mulai."
+
+    detail_3:
+      h4: "Ukur dan Tandai Area Pemasangan"
+      paragraph: "Gunakan tali rafia untuk marking garis lurus. Tentukan titik awal dan akhir dengan patok. Ukur dan tandai posisi setiap dolken dengan jarak yang sudah dihitung (dari section perhitungan sebelumnya). Gunakan waterpass untuk memastikan marking level, terutama di area yang tidak rata. Double check semua measurement sebelum mulai galian."
+
+    detail_4:
+      h4: "Persiapan Pondasi dan Base"
+      paragraph: "Untuk pagar atau struktur vertikal, galian minimal 40-50cm depth untuk dolken hingga 6cm, dan 60-80cm untuk dolken lebih besar. Base galian harus rata dan compact. Tambahkan lapisan kerikil atau batu split 5-10cm sebagai drainage dan pondasi yang lebih stabil. Untuk tanah lembek, pertimbangkan cor beton mini di base untuk extra stability."
+
+  instalasi:
+    title: "Proses Instalasi Step-by-Step"
+    icon: "bi-hammer"
+    color: "success"
+
+    paragraph_1: "Proses instalasi harus dilakukan dengan systematic dan patient. Start dari titik reference yang sudah ditentukan dan work progressively. Jangan skip steps atau rush karena setiap tahap mempengaruhi hasil akhir. Untuk project besar, better work in team minimal 2 orang untuk efficiency dan accuracy."
+    paragraph_2: "Selalu cek alignment dan level setiap 3-5 batang dolken. Koreksi segera jika ada yang miring atau tidak sejajar. Fixing error di early stage jauh lebih mudah daripada setelah struktur setengah jadi. Take your time dan prioritize quality over speed."
+
+    detail_1:
+      h4: "Pasang Dolken Pertama sebagai Base Point"
+      paragraph: "Dolken pertama adalah reference untuk semua dolken berikutnya, jadi harus perfectly vertical dan positioned. Tanam di galian yang sudah disiapkan, cek vertical dengan waterpass dari 2 sisi (depan-belakang dan kiri-kanan). Uruk dengan tanah atau concrete mix, compact dengan linggis sambil terus cek level. Once set, ini jadi patokan untuk alignment seluruh struktur."
+
+    detail_2:
+      h4: "Setting Jarak dan Alignment"
+      paragraph: "Pasang dolken ke-2 di ujung satunya (untuk pagar lurus) atau dolken ke-3 sesuai pattern. Tarik tali rafia tight antara dolken pertama dan terakhir sebagai guide line untuk dolken di antaranya. Setiap dolken harus touching tali tapi not pushing. Ini ensure perfect alignment. Untuk lengkungan, gunakan marking yang lebih frequent dan adjust gradually."
+
+    detail_3:
+      h4: "Pengikatan dan Penguatan Struktur"
+      paragraph: "Setelah semua dolken tertanam, ikat dengan kawat galvanis minimal di 3 titik ketinggian (bawah, tengah, atas) untuk pagar. Teknik ikatan: loop kawat around dolken, twist tight dengan tang. Untuk bronjong atau struktur 3D, tambahkan cross-bracing dengan kawat diagonal untuk extra rigidity. Pastikan semua connection tight dan secure sebelum proceed ke finishing."
+
+    detail_4:
+      h4: "Finishing dan Quality Check"
+      paragraph: "Final step: potong excess kawat dan tekuk ujungnya ke dalam agar tidak exposed dan berbahaya. Cek sekali lagi alignment dari berbagai angle - depan, samping, dan diagonal. Test stability dengan gentle push di beberapa titik. Untuk aesthetic finish, brush off dirt, dan optional apply wood stain atau preservative. Document hasil dengan foto untuk reference future maintenance."
+
+# ============================================================================
+# CARA MERAWAT SECTION
+# ============================================================================
+cara_merawat:
+  title: "Cara Merawat Kayu Dolken untuk Ketahanan Maksimal"
+  subtitle: "Panduan perawatan lengkap agar investasi Anda awet bertahun-tahun"
+  intro: "Pemasangan yang benar adalah langkah awal, tapi perawatan berkala adalah kunci agar kayu dolken Anda awet dan tetap kuat selama bertahun-tahun. Meskipun kayu gelam terkenal dengan daya tahannya, perawatan yang tepat dapat memperpanjang umur hingga 2-3 kali lipat. Investasi kecil waktu dan effort untuk maintenance akan menghemat biaya replacement yang jauh lebih besar di masa depan. Mari kita bahas 4 aspek penting perawatan kayu dolken yang perlu Anda perhatikan."
+  icon: "bi-wrench-adjustable"
+  gradient: "info"
+
+  overview_title: "Empat Pilar Perawatan Kayu Dolken"
+  overview_subtitle: "Rutin, Proteksi, Pencegahan, dan Perbaikan"
+  overview_icon: "bi-check-circle-fill"
+  overview_color: "info"
+
+  # Card 1: Perawatan Rutin
+  card_1:
+    title: "Perawatan Rutin Berkala"
+    icon: "bi-calendar-check"
+    color: "primary"
+    paragraph_1: "Maintenance schedule yang konsisten adalah foundation dari longevity kayu dolken. Seperti servicing mobil, routine check bisa detect masalah kecil sebelum jadi besar dan costly. Ideal schedule: inspeksi ringan setiap bulan, deep maintenance setiap 3-6 bulan tergantung exposure ke elemen."
+    paragraph_2: "Perawatan rutin tidak harus complicated atau time-consuming. 15-30 menit per session sudah cukup untuk residential scale. Yang penting adalah consistency dan thoroughness. Create checklist sederhana dan stick to the schedule - ini lebih effective daripada intensive care yang sporadic."
+
+    detail_1:
+      h4: "Inspeksi Visual Bulanan"
+      paragraph: "Walk along struktur dolken sebulan sekali, perhatikan tanda-tanda: cracks di permukaan kayu, discoloration yang unusual, dolken yang mulai miring atau shifting, dan area yang kelihatan lebih lembab. Note down findings dengan foto dan tanggal untuk track progression. Early detection = easier dan cheaper fix."
+
+    detail_2:
+      h4: "Pembersihan Permukaan"
+      paragraph: "Setiap 3 bulan, brush off accumulated dirt, leaves, dan organic debris dengan sikat berbulu keras. Untuk stubborn stains atau mold, gunakan solution air + sabun mild (avoid harsh chemicals yang bisa damage wood). Rinse dengan air bersih dan let dry completely. Cleanliness prevent moisture retention dan pest attraction."
+
+    detail_3:
+      h4: "Pengecekan Stabilitas Struktur"
+      paragraph: "Test stability dengan gentle shake di berbagai points. Dolken yang properly installed tidak boleh goyang lebih dari 1-2cm. Cek juga kawat pengikat: tidak boleh berkarat excessive atau loose. Re-tighten atau replace kawat yang sudah weak. Untuk bronjong, cek filling masih compact atau sudah settling dan perlu top-up."
+
+  # Card 2: Perlindungan dari Cuaca
+  card_2:
+    title: "Perlindungan dari Cuaca Ekstrem"
+    icon: "bi-cloud-rain"
+    color: "success"
+    paragraph_1: "Cuaca adalah enemy nomor satu kayu outdoor. Kayu gelam memang naturally resistant, tapi prolonged exposure ke sun, rain, dan temperature fluctuation tetap take its toll. UV rays bikin kayu dry dan crack, hujan cause moisture penetration dan rotting. Smart protection strategy bisa dramatically extend service life."
+    paragraph_2: "Protection bukan berarti cover dolken dengan plastic atau tarp (yang justru trap moisture). Tapi lebih ke coating yang breathable, drainage yang proper, dan strategic positioning kalau memungkinkan. Think of it as sunscreen dan rain jacket untuk kayu Anda."
+
+    detail_1:
+      h4: "Aplikasi Coating Pelindung"
+      paragraph: "Apply wood preservative atau sealant setiap 1-2 tahun, especially untuk dolken yang full sun exposure. Pilih product yang water-based, breathable, dan UV-resistant. Application: sand ringan permukaan dulu, clean dari dust, apply 2 coats dengan brush atau spray. Wait for complete drying between coats. Coating create barrier against moisture dan UV."
+
+    detail_2:
+      h4: "Sistem Drainase yang Baik"
+      paragraph: "Ensure area sekitar base dolken tidak water-logged. Slope tanah slightly away dari dolken untuk water runoff. Untuk dolken yang tertanam, consider gravel layer di base untuk drainage. Standing water di base adalah fast track ke rotting, bahkan untuk durable wood seperti gelam. Good drainage = dry base = longer life."
+
+    detail_3:
+      h4: "Perawatan Pasca Cuaca Ekstrem"
+      paragraph: "Setelah heavy rain atau heat wave, lakukan extra check dalam 1-2 hari. Brush off mud atau debris yang menempel, cek ada water pooling di area tertentu, dan assess untuk damage seperti splits atau warping. Untuk coastal areas dengan salt exposure, occasional fresh water rinse helps prevent salt accumulation yang corrosive."
+
+  # Card 3: Pencegahan Hama
+  card_3:
+    title: "Pencegahan dan Pengendalian Hama"
+    icon: "bi-bug"
+    color: "warning"
+    paragraph_1: "Kayu gelam naturally repels banyak insects karena density dan kandungan tanin-nya, but not 100% immune. Termites dan powder post beetles bisa tetap attack, especially kalau kayu already weakened by moisture atau aging. Prevention jauh lebih effective dan murah daripada treatment after infestation."
+    paragraph_2: "Hama kayu typically attack dari inside out, jadi by the time terlihat exterior damage, internal damage bisa sudah extensive. Itulah kenapa proactive prevention dan early detection critical. Kombinasi chemical dan natural methods often paling effective untuk long-term protection."
+
+    detail_1:
+      h4: "Deteksi Dini Serangan Rayap"
+      paragraph: "Check for telltale signs: mud tubes di permukaan dolken (seperti tunnel kecil coklat), hollow sound when tapped dengan hammer, fine powder (frass) di base dolken, atau small holes di kayu. Paling risky area: dolken yang kontak langsung dengan tanah atau yang consistently lembab. Early detection crucial karena rayap bisa decimate structure quickly."
+
+    detail_2:
+      h4: "Treatment Preventif Anti-Hama"
+      paragraph: "Untuk area high-risk (tropical, humid climate), consider annual application of insecticide specifically untuk wood. Apply fokus di base area dan cracks. Alternatively, professional pest control treatment setiap 2-3 tahun untuk comprehensive protection. Untuk new installation, pre-treatment sebelum tanam di ground highly recommended."
+
+    detail_3:
+      h4: "Metode Pencegahan Natural"
+      paragraph: "Natural alternatives: campuran essential oils (cedarwood, tea tree) mixed dengan carrier oil, spray sekitar dolken monthly. Maintain dry conditions - termites thrive in moisture. Keep vegetation trimmed away dari dolken (direct plant contact facilitate pest migration). Consider beneficial nematodes di soil untuk biological control."
+
+  # Card 4: Perbaikan dan Penggantian
+  card_4:
+    title: "Perbaikan dan Penggantian Tepat Waktu"
+    icon: "bi-hammer"
+    color: "danger"
+    paragraph_1: "Bahkan dengan excellent maintenance, individual dolken occasionally perlu repair atau replacement. Key adalah knowing kapan worth it untuk repair vs. when to replace. Generally, surface cracks dan minor damage repairable, tapi structural compromise atau heavy rot = replacement time. Delaying necessary replacement bisa compromise entire structure."
+    paragraph_2: "Good news: karena sistem dolken typically modular, replacing individual pieces relatively straightforward without dismantling entire structure. Plan replacement during dry season untuk easier work dan better curing. Keep spare dolken dari batch yang sama untuk consistency kalau perlu replacement."
+
+    detail_1:
+      h4: "Perbaikan Kerusakan Minor"
+      paragraph: "Small cracks: fill dengan wood filler outdoor-grade, sand smooth setelah dry, dan apply sealant. Loose dolken: re-excavate base, add more compacted fill atau concrete untuk stabilize. Rusted wire: replace section yang corroded dengan galvanized wire baru. Minor repairs typically DIY-able dengan basic tools dan materials."
+
+    detail_2:
+      h4: "Kriteria Dolken Perlu Diganti"
+      paragraph: "Replace kalau: crack lebih dari 1/3 diameter dolken, heavy termite damage dengan hollow interior, significant rot di base (test dengan screwdriver - if penetrates easy = rotted), atau permanent lean lebih dari 15 degrees yang tidak bisa straightened. Jangan compromise safety untuk save cost - damaged dolken bisa collapse unexpectedly."
+
+    detail_3:
+      h4: "Proses Penggantian Dolken"
+      paragraph: "Untuk pagar atau barrier: temporarily support structure di both sides damaged dolken dengan props. Loosen wire bindings sekitar area. Excavate atau cut out damaged piece - untuk tertanam deep, mungkin perlu cut flush dengan ground dan extract stub separately. Install replacement dolken, ensure sama level dan alignment dengan existing, compact fill thoroughly, dan re-wire. Final check untuk stability entire section."
+
 ---
 
 <!-- Intro Section -->
@@ -396,3 +554,12 @@ panduan_pemilihan:
   {% include posts/tutorial/block--tips-praktis.html %}
 </section>
 
+<!-- Cara Pemasangan Section -->
+<section id="cara-pemasangan">
+  {% include posts/tutorial/block--cara-pemasangan.html %}
+</section>
+
+<!-- Cara Merawat Section -->
+<section id="cara-merawat">
+  {% include posts/tutorial/block--cara-merawat.html %}
+</section>

@@ -53,7 +53,7 @@ images:
   - /assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-004.webp
 keywords: "tulis 6-8 keywords untuk SEO, variasikan dengan nama kota dan area-area populer di kota ini"
 show_products: true
-nama_kota: isi nama kota lengkap (misal: Semarang, Jakarta Utara, Bandung)
+nama_kota: "isi nama kota lengkap (misal: Semarang, Jakarta Utara, Bandung)"
 
 # ============================================================================
 # AREA PENGIRIMAN (SIMPLE LIST) - REQUIRED
