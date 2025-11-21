@@ -58,36 +58,151 @@
 
   Usage:
   ------
-  In frontmatter:
-  ---
-  aplikasi_hotel:
-    title: "Aplikasi untuk Hotel"
-    subtitle: "Ciptakan pengalaman menginap yang memorable"
-    icon: "bi-buildings-fill"
-    gradient: "purple"
-    layout: "2col"
-    card_1:
-      title: "Feature Wall Lobby"
-      subtitle: "Wall cladding dolken 2-3 cm"
-      icon: "bi-building"
-      color: "primary"
-      implementasi_title: "Implementasi"
-      implementasi:
-        - "Susun dolken vertikal atau horizontal"
-        - "Kombinasi dengan indirect lighting"
-      benefit_title: "Keunggulan"
-      benefit:
-        - "First impression yang kuat"
-        - "Acoustical benefit"
-      budget:
-        label: "Estimasi Budget"
-        value: "Wall 3×4 m: Rp 12-15 juta (800-1000 batang)"
-  ---
-
   In content:
   <section id="aplikasi-hotel">
     {% include components/block--aplikasi-hotel.html data=page.aplikasi_hotel %}
   </section>
+
+  ============================================================================
+  COMPLETE YAML STRUCTURE - COPY & PASTE KE FRONTMATTER
+  ============================================================================
+
+  Instruksi Penggunaan:
+  1. Copy seluruh structure YAML di bawah ini
+  2. Paste ke frontmatter artikel Anda
+  3. Ganti semua teks "isi ..." dengan konten Anda
+  4. Hapus card yang tidak digunakan (misal: jika hanya perlu 4 cards, hapus card_5 dan card_6)
+  5. Field yang marked OPTIONAL bisa dihapus jika tidak digunakan
+
+  ---
+  # Section: Aplikasi untuk Hotel/Cafe/Villa/dsb
+  aplikasi_hotel:
+    # Header Section
+    title: "isi judul H2 (misal: Aplikasi untuk Hotel)"
+    subtitle: "isi subtitle di bawah title (OPTIONAL - hapus jika tidak perlu)"
+    icon: "bi-buildings-fill"  # Bootstrap icon class
+    gradient: "purple"  # Options: purple, red, blue, green, orange, wood
+    layout: "2col"  # Options: "2col" (col-lg-6) atau "3col" (col-lg-4)
+
+    # CARD 1
+    card_1:
+      title: "isi judul H3 card #1 (misal: Feature Wall Lobby)"
+      subtitle: "isi subtitle card #1 (misal: Wall cladding dolken 2-3 cm)"
+      icon: "bi-building"  # Bootstrap icon class
+      color: "primary"  # Options: primary, info, success, warning, danger, secondary
+      implementasi_title: "Implementasi"  # OPTIONAL - default: "Implementasi"
+      implementasi:
+        - "isi implementasi item #1 (misal: Susun dolken vertikal atau horizontal)"
+        - "isi implementasi item #2 (misal: Kombinasi dengan indirect lighting)"
+        - "isi implementasi item #3 (misal: Variasi panjang untuk efek 3D)"
+        - "isi implementasi item #4 (OPTIONAL)"
+      benefit_title: "Keunggulan"  # OPTIONAL - default: "Keunggulan"
+      benefit:
+        - "isi benefit item #1 (misal: First impression yang kuat)"
+        - "isi benefit item #2 (misal: Acoustical benefit)"
+        - "isi benefit item #3 (misal: Low maintenance)"
+        - "isi benefit item #4 (OPTIONAL)"
+      budget:  # OPTIONAL - hapus jika tidak ada budget info
+        label: "Estimasi Budget"  # OPTIONAL - default: "Estimasi Budget"
+        value: "isi estimasi budget (misal: Wall 3×4 m: Rp 12-15 juta)"
+
+    # CARD 2
+    card_2:
+      title: "isi judul H3 card #2 (misal: Partition Ruangan)"
+      subtitle: "isi subtitle card #2 (misal: Room divider semi-transparan)"
+      icon: "bi-grid-3x3-gap"
+      color: "info"
+      implementasi_title: "Implementasi"
+      implementasi:
+        - "isi implementasi item #1"
+        - "isi implementasi item #2"
+        - "isi implementasi item #3"
+      benefit_title: "Benefit"
+      benefit:
+        - "isi benefit item #1"
+        - "isi benefit item #2"
+        - "isi benefit item #3"
+      # budget: OPTIONAL - bisa dihapus jika tidak perlu
+
+    # CARD 3
+    card_3:
+      title: "isi judul H3 card #3 (misal: Outdoor Gazebo & Pergola)"
+      subtitle: "isi subtitle card #3"
+      icon: "bi-house-door"
+      color: "success"
+      implementasi_title: "Implementasi"
+      implementasi:
+        - "isi implementasi item #1"
+        - "isi implementasi item #2"
+        - "isi implementasi item #3"
+      benefit_title: "Keunggulan"
+      benefit:
+        - "isi benefit item #1"
+        - "isi benefit item #2"
+        - "isi benefit item #3"
+
+    # CARD 4
+    card_4:
+      title: "isi judul H3 card #4 (misal: Headboard Kamar)"
+      subtitle: "isi subtitle card #4"
+      icon: "bi-moon-stars"
+      color: "warning"
+      implementasi_title: "Implementasi"
+      implementasi:
+        - "isi implementasi item #1"
+        - "isi implementasi item #2"
+        - "isi implementasi item #3"
+      benefit_title: "Plus Points"
+      benefit:
+        - "isi benefit item #1"
+        - "isi benefit item #2"
+        - "isi benefit item #3"
+
+    # CARD 5 (OPTIONAL - hapus jika tidak digunakan)
+    card_5:
+      title: "isi judul H3 card #5 (misal: Outdoor Seating Area)"
+      subtitle: "isi subtitle card #5"
+      icon: "bi-tree-fill"
+      color: "danger"
+      implementasi_title: "Implementasi"
+      implementasi:
+        - "isi implementasi item #1"
+        - "isi implementasi item #2"
+        - "isi implementasi item #3"
+      benefit_title: "Why It Works"
+      benefit:
+        - "isi benefit item #1"
+        - "isi benefit item #2"
+        - "isi benefit item #3"
+      budget:  # OPTIONAL
+        value: "isi budget info (misal: Budget: Rp 3-7 juta - HUGE impact!)"
+
+    # CARD 6 (OPTIONAL - hapus jika tidak digunakan)
+    card_6:
+      title: "isi judul H3 card #6 (misal: Furniture Accent)"
+      subtitle: "isi subtitle card #6"
+      icon: "bi-table"
+      color: "secondary"
+      implementasi_title: "Implementasi"
+      implementasi:
+        - "isi implementasi item #1"
+        - "isi implementasi item #2"
+        - "isi implementasi item #3"
+      benefit_title: "Benefit"
+      benefit:
+        - "isi benefit item #1"
+        - "isi benefit item #2"
+        - "isi benefit item #3"
+  ---
+
+  Notes:
+  - Gunakan layout "2col" untuk 4-6 cards (2 columns wide)
+  - Gunakan layout "3col" untuk 3-6 cards (3 columns, lebih compact)
+  - Setiap card bisa punya unlimited items di implementasi & benefit (array)
+  - Budget section bisa ada di beberapa cards saja, tidak harus semua
+  - Icon list: https://icons.getbootstrap.com/
+  - Color options: primary (blue), info (cyan), success (green),
+                   warning (yellow), danger (red), secondary (gray)
 
   ============================================================================
 {% endcomment %}
