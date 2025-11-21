@@ -181,6 +181,34 @@ blocks:
       h6: 0
       total: 11
 
+  - id: cara-merawat
+    file: tutorial/block--cara-merawat.html
+    name: "Cara Merawat"
+    category: tutorial
+    tags:
+      - tutorial
+      - maintenance
+      - how-to
+      - care-guide
+      - 4-column
+    use_cases:
+      - maintenance_guide
+      - tutorial
+      - customer_education
+      - product_care
+    description: |
+      Block untuk menyajikan panduan perawatan produk dengan 4 kartu tematik.
+      Membantu pengguna memahami best practices perawatan rutin, pembersihan, proteksi, dan handling.
+      Ideal untuk artikel tutorial, panduan maintenance, dan customer education.
+
+    heading_structure:
+      h2: 1   # Header title
+      h3: 5   # 1 overview (optional) + 4 card titles
+      h4: 12  # Detail headings (3 per card)
+      h5: 0
+      h6: 0
+      total: 18
+
 # ============================================================================
 # USAGE NOTES
 # ============================================================================
@@ -193,6 +221,7 @@ blocks:
 # - tips: Tips, panduan, tutorial
 # - case-study: Studi kasus nyata
 # - location: Informasi lokasi/daerah
+# - tutorial: Tutorial step-by-step, panduan teknis
 #
 # Use Cases:
 # ----------

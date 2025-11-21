@@ -1,0 +1,494 @@
+{% comment %}
+  ============================================================================
+  Cara Merawat Block Component
+  ============================================================================
+
+  @file        _includes/components/tutorial/block--cara-merawat.html
+  @description Menyajikan panduan perawatan produk dengan struktur terorganisir
+               dalam 4 kartu tematik. Membantu pengguna memahami best practices
+               perawatan rutin, pembersihan, proteksi, dan handling khusus untuk
+               memaksimalkan ketahanan produk. Ideal untuk artikel tutorial,
+               panduan maintenance, dan customer education.
+
+  @version     1.0.0
+  @date        2025-11-21
+  @author      jualkayudolkengelam
+
+  Heading Structure (SEO & Accessibility):
+  -----------------------------------------
+  - 1 × H2: Main section title (header card)
+  - 1 × H3: Overview title (optional)
+  - 4 × H3: Card titles (card_1 to card_4)
+  - 12 × H4: Detail headings (3 per card: detail_1.h4, detail_2.h4, detail_3.h4)
+  - 0 × H5, H6: Not used in this block
+
+  Total Headings: 18 (with overview) or 17 (without overview)
+
+  Paragraphs (REQUIRED for SEO):
+  - 1 intro paragraph (optional)
+  - 8 card paragraphs (paragraph_1, paragraph_2 × 4 cards)
+  - 12 detail paragraphs (detail_1.paragraph to detail_3.paragraph × 4 cards)
+
+  Total Paragraphs: 21 (with all optional fields)
+
+  Features:
+  ---------
+  - H2 heading for main section title
+  - H3 for overview (optional)
+  - 4 hardcoded cards (card_1, card_2, card_3, card_4)
+  - Layout: 4 cards in 2x2 grid (col-lg-6)
+  - Each card has:
+    - H3 title
+    - 2 paragraphs
+    - 3 details (H4 + paragraph)
+  - Dynamic gradient colors
+  - Icon-based visual design
+  - Responsive card grid layout
+
+  Parameters:
+  -----------
+  - page.cara_merawat: Object containing:
+    - title: H2 main section title
+    - subtitle: Subtitle below title (optional)
+    - intro: Introduction paragraph
+    - icon: Bootstrap icon class
+    - gradient: Color theme (primary, info, warning, success, danger, wood)
+    - overview_title: H3 overview title (optional)
+    - overview_subtitle: Overview subtitle (optional)
+    - overview_icon: Overview icon (optional)
+    - overview_color: Overview color (optional)
+    - card_1, card_2, card_3, card_4: Hardcoded cards (NO LOOP!)
+      Each card:
+      - title: H3 card title
+      - icon: Bootstrap icon class
+      - color: Card color (primary, success, warning, danger)
+      - paragraph_1: Text content
+      - paragraph_2: Text content
+      - detail_1, detail_2, detail_3: Detail sections
+        - h4: H4 detail heading
+        - paragraph: Detail text
+
+  Class Mapping (Best Practice Pattern):
+  ---------------------------------------
+  Frontmatter key → HTML class name (Semantic Classes)
+
+  Header Section:
+  - title (header card) → <div class="card title border-0 shadow-lg">
+  - title (h2 text) → <h2 class="h2 mb-0 fw-bold text-white">
+  - subtitle → <p class="subtitle mb-0 mt-2 small">
+  - intro → <div class="card intro border-0 shadow-sm">
+
+  Overview Section (Optional):
+  - overview_title → <div class="overview_title">
+  - overview_title (h3) → <h3 class="h4 mb-0 text-wood fw-bold">
+
+  Cards:
+  - card_1 → <div class="col-lg-6 card_1">
+  - card_2 → <div class="col-lg-6 card_2">
+  - card_3 → <div class="col-lg-6 card_3">
+  - card_4 → <div class="col-lg-6 card_4">
+
+  Card Content:
+  - title (card header) → <h3 class="h5 mb-0 fw-bold">
+  - paragraph_1 → <p class="paragraph_1 small mb-3">
+  - paragraph_2 → <p class="paragraph_2 small mb-3">
+  - detail_1 → <div class="detail_1 mb-3">
+  - detail_2 → <div class="detail_2 mb-3">
+  - detail_3 → <div class="detail_3 mb-0">
+  - h4 (detail) → <h4 class="h4 h6 fw-bold text-wood mb-2">
+  - paragraph (detail) → <p class="paragraph small text-muted mb-0">
+
+  Usage:
+  ------
+  In content:
+  <section id="cara-merawat">
+    {% include components/tutorial/block--cara-merawat.html %}
+  </section>
+
+  ============================================================================
+  COMPLETE YAML STRUCTURE - COPY & PASTE KE FRONTMATTER
+  ============================================================================
+
+  Instruksi Penggunaan:
+  1. Copy seluruh structure YAML di bawah ini
+  2. Paste ke frontmatter artikel Anda
+  3. Ganti semua teks "isi ..." dengan konten Anda
+  4. Field yang marked OPTIONAL bisa dihapus jika tidak digunakan
+  5. Setiap card WAJIB punya minimal: title, icon, color, dan 1 detail
+
+  ---
+  # Section: Cara Merawat
+  cara_merawat:
+    # Header Section
+    title: "isi judul H2 (misal: Cara Merawat Kayu Dolken Gelam)"
+    subtitle: "isi subtitle di bawah title (OPTIONAL - hapus jika tidak perlu)"
+    icon: "bi-wrench-adjustable"  # Bootstrap icon class
+    gradient: "info"  # Options: primary, info, warning, success, danger, wood
+
+    # Introduction (OPTIONAL)
+    intro: "isi paragraf intro untuk memberikan konteks umum tentang pentingnya perawatan. Jelaskan benefit jika merawat dengan benar."
+
+    # Overview Section (OPTIONAL - hapus semua jika tidak perlu)
+    overview_title: "isi judul H3 overview (misal: Prinsip Dasar Perawatan)"
+    overview_subtitle: "isi subtitle overview (OPTIONAL)"
+    overview_icon: "bi-check-circle-fill"  # OPTIONAL
+    overview_color: "info"  # OPTIONAL
+
+    # CARD 1
+    card_1:
+      title: "isi judul H3 card #1 (misal: Perawatan Rutin)"
+      icon: "bi-calendar-check"  # Bootstrap icon class
+      color: "primary"  # Options: primary, success, warning, danger
+
+      # Paragraphs after H3
+      paragraph_1: "isi paragraf pertama untuk card ini. Berikan konteks atau penjelasan umum."
+      paragraph_2: "isi paragraf kedua (OPTIONAL - hapus jika tidak perlu)"
+
+      # Detail 1 (REQUIRED)
+      detail_1:
+        h4: "isi H4 detail #1 (misal: Inspeksi Berkala)"
+        paragraph: "isi paragraf penjelasan untuk detail #1. Jelaskan langkah-langkah atau tips praktis."
+
+      # Detail 2 (OPTIONAL)
+      detail_2:
+        h4: "isi H4 detail #2 (misal: Pembersihan Debu)"
+        paragraph: "isi paragraf penjelasan untuk detail #2."
+
+      # Detail 3 (OPTIONAL)
+      detail_3:
+        h4: "isi H4 detail #3 (misal: Cek Kelembaban)"
+        paragraph: "isi paragraf penjelasan untuk detail #3."
+
+    # CARD 2
+    card_2:
+      title: "isi judul H3 card #2 (misal: Pembersihan)"
+      icon: "bi-droplet-fill"
+      color: "success"
+      paragraph_1: "isi paragraf pertama untuk card #2"
+      paragraph_2: "isi paragraf kedua (OPTIONAL)"
+      detail_1:
+        h4: "isi H4 detail #1 (misal: Metode Pembersihan yang Aman)"
+        paragraph: "isi paragraf untuk detail #1"
+      detail_2:
+        h4: "isi H4 detail #2 (misal: Produk yang Direkomendasikan)"
+        paragraph: "isi paragraf untuk detail #2"
+      detail_3:
+        h4: "isi H4 detail #3 (misal: Frekuensi Pembersihan)"
+        paragraph: "isi paragraf untuk detail #3"
+
+    # CARD 3
+    card_3:
+      title: "isi judul H3 card #3 (misal: Proteksi & Finishing)"
+      icon: "bi-shield-check"
+      color: "warning"
+      paragraph_1: "isi paragraf pertama untuk card #3"
+      paragraph_2: "isi paragraf kedua (OPTIONAL)"
+      detail_1:
+        h4: "isi H4 detail #1 (misal: Aplikasi Wood Oil)"
+        paragraph: "isi paragraf untuk detail #1"
+      detail_2:
+        h4: "isi H4 detail #2 (misal: Sealer atau Varnish)"
+        paragraph: "isi paragraf untuk detail #2"
+      detail_3:
+        h4: "isi H4 detail #3 (misal: Interval Re-coating)"
+        paragraph: "isi paragraf untuk detail #3"
+
+    # CARD 4
+    card_4:
+      title: "isi judul H3 card #4 (misal: Handling Khusus)"
+      icon: "bi-exclamation-triangle"
+      color: "danger"
+      paragraph_1: "isi paragraf pertama untuk card #4"
+      paragraph_2: "isi paragraf kedua (OPTIONAL)"
+      detail_1:
+        h4: "isi H4 detail #1 (misal: Mengatasi Noda)"
+        paragraph: "isi paragraf untuk detail #1"
+      detail_2:
+        h4: "isi H4 detail #2 (misal: Perbaikan Minor)"
+        paragraph: "isi paragraf untuk detail #2"
+      detail_3:
+        h4: "isi H4 detail #3 (misal: Kapan Perlu Profesional)"
+        paragraph: "isi paragraf untuk detail #3"
+  ---
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.cara_merawat %}
+{% assign section = page.cara_merawat %}
+
+<!-- Header Section -->
+  <div class="my-5">
+    <div class="card title border-0 shadow-lg">
+      <div class="card-body text-white text-center py-4 px-3"
+        {% if section.gradient == 'primary' %}
+          style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);"
+        {% elsif section.gradient == 'info' %}
+          style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);"
+        {% elsif section.gradient == 'warning' %}
+          style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);"
+        {% elsif section.gradient == 'success' %}
+          style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);"
+        {% elsif section.gradient == 'danger' %}
+          style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);"
+        {% elsif section.gradient == 'wood' %}
+          style="background: linear-gradient(135deg, #92400e 0%, #78350f 50%, #451a03 100%);"
+        {% else %}
+          style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);"
+        {% endif %}>
+        <i class="bi {{ section.icon | default: 'bi-wrench-adjustable' }} mb-2 fs-2-5rem"></i>
+        <h2 class="h2 mb-0 fw-bold text-white">{{ section.title }}</h2>
+        {% if section.subtitle %}
+        <p class="subtitle mb-0 mt-2 small" style="opacity: 0.85;">
+          <i class="bi bi-stars me-1"></i>
+          {{ section.subtitle }}
+          <i class="bi bi-stars ms-1"></i>
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Introduction -->
+  {% if section.intro %}
+  <div class="card intro border-0 shadow-sm my-4">
+    <div class="card-body">
+      <p class="mb-0">{{ section.intro }}</p>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- H3: Overview (Optional) -->
+  {% if section.overview_title %}
+  <div class="my-4 overview_title">
+    <div class="d-flex align-items-center mb-3">
+      <div class="bg-{{ section.overview_color | default: 'info' }} bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+        <h3 class="h4 mb-0 text-wood fw-bold">
+          <i class="bi {{ section.overview_icon | default: 'bi-check-circle-fill' }} text-{{ section.overview_color | default: 'info' }} me-2"></i>{{ section.overview_title }}
+        </h3>
+        {% if section.overview_subtitle %}
+        <p class="small text-muted mb-0 mt-1">{{ section.overview_subtitle }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- 4 Hardcoded Cards (NO LOOP!) -->
+  <div class="row g-4 my-4">
+
+    <!-- CARD 1 -->
+    {% if section.card_1 %}
+    <div class="col-lg-6 card_1">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header title card-header-tutorial bg-{{ section.card_1.color | default: 'primary' }} text-white">
+          <div class="d-flex align-items-center">
+            <i class="bi {{ section.card_1.icon | default: 'bi-1-circle-fill' }} me-2 fs-1-5rem"></i>
+            <h3 class="h5 mb-0 fw-bold">{{ section.card_1.title }}</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          {% if section.card_1.paragraph_1 %}
+          <p class="paragraph_1 small mb-3">{{ section.card_1.paragraph_1 }}</p>
+          {% endif %}
+
+          {% if section.card_1.paragraph_2 %}
+          <p class="paragraph_2 small mb-3">{{ section.card_1.paragraph_2 }}</p>
+          {% endif %}
+
+          <!-- Detail 1 -->
+          {% if section.card_1.detail_1 %}
+          <div class="detail_1 mb-3">
+            <h4 class="h4 h6 fw-bold text-wood mb-2 h4-icon-text">
+              <i class="bi bi-check-circle-fill text-{{ section.card_1.color | default: 'primary' }}"></i><span>{{ section.card_1.detail_1.h4 }}</span>
+            </h4>
+            <p class="paragraph small text-muted mb-0">{{ section.card_1.detail_1.paragraph }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Detail 2 -->
+          {% if section.card_1.detail_2 %}
+          <div class="detail_2 mb-3">
+            <h4 class="h4 h6 fw-bold text-wood mb-2 h4-icon-text">
+              <i class="bi bi-check-circle-fill text-{{ section.card_1.color | default: 'primary' }}"></i><span>{{ section.card_1.detail_2.h4 }}</span>
+            </h4>
+            <p class="paragraph small text-muted mb-0">{{ section.card_1.detail_2.paragraph }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Detail 3 -->
+          {% if section.card_1.detail_3 %}
+          <div class="detail_3 mb-0">
+            <h4 class="h4 h6 fw-bold text-wood mb-2 h4-icon-text">
+              <i class="bi bi-check-circle-fill text-{{ section.card_1.color | default: 'primary' }}"></i><span>{{ section.card_1.detail_3.h4 }}</span>
+            </h4>
+            <p class="paragraph small text-muted mb-0">{{ section.card_1.detail_3.paragraph }}</p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- CARD 2 -->
+    {% if section.card_2 %}
+    <div class="col-lg-6 card_2">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header title card-header-tutorial bg-{{ section.card_2.color | default: 'success' }} text-white">
+          <div class="d-flex align-items-center">
+            <i class="bi {{ section.card_2.icon | default: 'bi-2-circle-fill' }} me-2 fs-1-5rem"></i>
+            <h3 class="h5 mb-0 fw-bold">{{ section.card_2.title }}</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          {% if section.card_2.paragraph_1 %}
+          <p class="paragraph_1 small mb-3">{{ section.card_2.paragraph_1 }}</p>
+          {% endif %}
+
+          {% if section.card_2.paragraph_2 %}
+          <p class="paragraph_2 small mb-3">{{ section.card_2.paragraph_2 }}</p>
+          {% endif %}
+
+          <!-- Detail 1 -->
+          {% if section.card_2.detail_1 %}
+          <div class="detail_1 mb-3">
+            <h4 class="h4 h6 fw-bold text-wood mb-2 h4-icon-text">
+              <i class="bi bi-check-circle-fill text-{{ section.card_2.color | default: 'success' }}"></i><span>{{ section.card_2.detail_1.h4 }}</span>
+            </h4>
+            <p class="paragraph small text-muted mb-0">{{ section.card_2.detail_1.paragraph }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Detail 2 -->
+          {% if section.card_2.detail_2 %}
+          <div class="detail_2 mb-3">
+            <h4 class="h4 h6 fw-bold text-wood mb-2 h4-icon-text">
+              <i class="bi bi-check-circle-fill text-{{ section.card_2.color | default: 'success' }}"></i><span>{{ section.card_2.detail_2.h4 }}</span>
+            </h4>
+            <p class="paragraph small text-muted mb-0">{{ section.card_2.detail_2.paragraph }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Detail 3 -->
+          {% if section.card_2.detail_3 %}
+          <div class="detail_3 mb-0">
+            <h4 class="h4 h6 fw-bold text-wood mb-2 h4-icon-text">
+              <i class="bi bi-check-circle-fill text-{{ section.card_2.color | default: 'success' }}"></i><span>{{ section.card_2.detail_3.h4 }}</span>
+            </h4>
+            <p class="paragraph small text-muted mb-0">{{ section.card_2.detail_3.paragraph }}</p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- CARD 3 -->
+    {% if section.card_3 %}
+    <div class="col-lg-6 card_3">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header title card-header-tutorial bg-{{ section.card_3.color | default: 'warning' }} text-white">
+          <div class="d-flex align-items-center">
+            <i class="bi {{ section.card_3.icon | default: 'bi-3-circle-fill' }} me-2 fs-1-5rem"></i>
+            <h3 class="h5 mb-0 fw-bold">{{ section.card_3.title }}</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          {% if section.card_3.paragraph_1 %}
+          <p class="paragraph_1 small mb-3">{{ section.card_3.paragraph_1 }}</p>
+          {% endif %}
+
+          {% if section.card_3.paragraph_2 %}
+          <p class="paragraph_2 small mb-3">{{ section.card_3.paragraph_2 }}</p>
+          {% endif %}
+
+          <!-- Detail 1 -->
+          {% if section.card_3.detail_1 %}
+          <div class="detail_1 mb-3">
+            <h4 class="h4 h6 fw-bold text-wood mb-2 h4-icon-text">
+              <i class="bi bi-check-circle-fill text-{{ section.card_3.color | default: 'warning' }}"></i><span>{{ section.card_3.detail_1.h4 }}</span>
+            </h4>
+            <p class="paragraph small text-muted mb-0">{{ section.card_3.detail_1.paragraph }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Detail 2 -->
+          {% if section.card_3.detail_2 %}
+          <div class="detail_2 mb-3">
+            <h4 class="h4 h6 fw-bold text-wood mb-2 h4-icon-text">
+              <i class="bi bi-check-circle-fill text-{{ section.card_3.color | default: 'warning' }}"></i><span>{{ section.card_3.detail_2.h4 }}</span>
+            </h4>
+            <p class="paragraph small text-muted mb-0">{{ section.card_3.detail_2.paragraph }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Detail 3 -->
+          {% if section.card_3.detail_3 %}
+          <div class="detail_3 mb-0">
+            <h4 class="h4 h6 fw-bold text-wood mb-2 h4-icon-text">
+              <i class="bi bi-check-circle-fill text-{{ section.card_3.color | default: 'warning' }}"></i><span>{{ section.card_3.detail_3.h4 }}</span>
+            </h4>
+            <p class="paragraph small text-muted mb-0">{{ section.card_3.detail_3.paragraph }}</p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- CARD 4 -->
+    {% if section.card_4 %}
+    <div class="col-lg-6 card_4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header title card-header-tutorial bg-{{ section.card_4.color | default: 'danger' }} text-white">
+          <div class="d-flex align-items-center">
+            <i class="bi {{ section.card_4.icon | default: 'bi-4-circle-fill' }} me-2 fs-1-5rem"></i>
+            <h3 class="h5 mb-0 fw-bold">{{ section.card_4.title }}</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          {% if section.card_4.paragraph_1 %}
+          <p class="paragraph_1 small mb-3">{{ section.card_4.paragraph_1 }}</p>
+          {% endif %}
+
+          {% if section.card_4.paragraph_2 %}
+          <p class="paragraph_2 small mb-3">{{ section.card_4.paragraph_2 }}</p>
+          {% endif %}
+
+          <!-- Detail 1 -->
+          {% if section.card_4.detail_1 %}
+          <div class="detail_1 mb-3">
+            <h4 class="h4 h6 fw-bold text-wood mb-2 h4-icon-text">
+              <i class="bi bi-check-circle-fill text-{{ section.card_4.color | default: 'danger' }}"></i><span>{{ section.card_4.detail_1.h4 }}</span>
+            </h4>
+            <p class="paragraph small text-muted mb-0">{{ section.card_4.detail_1.paragraph }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Detail 2 -->
+          {% if section.card_4.detail_2 %}
+          <div class="detail_2 mb-3">
+            <h4 class="h4 h6 fw-bold text-wood mb-2 h4-icon-text">
+              <i class="bi bi-check-circle-fill text-{{ section.card_4.color | default: 'danger' }}"></i><span>{{ section.card_4.detail_2.h4 }}</span>
+            </h4>
+            <p class="paragraph small text-muted mb-0">{{ section.card_4.detail_2.paragraph }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Detail 3 -->
+          {% if section.card_4.detail_3 %}
+          <div class="detail_3 mb-0">
+            <h4 class="h4 h6 fw-bold text-wood mb-2 h4-icon-text">
+              <i class="bi bi-check-circle-fill text-{{ section.card_4.color | default: 'danger' }}"></i><span>{{ section.card_4.detail_3.h4 }}</span>
+            </h4>
+            <p class="paragraph small text-muted mb-0">{{ section.card_4.detail_3.paragraph }}</p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+{% endif %}
