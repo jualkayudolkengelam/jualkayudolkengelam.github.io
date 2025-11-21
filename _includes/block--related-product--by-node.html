@@ -96,7 +96,7 @@
 
 {% comment %} If not product page, check if it's an article {% endcomment %}
 {% unless is_product_page %}
-  {% assign all_posts = site.posts | concat: site.post_with_product %}
+  {% assign all_posts = site.posts | concat: site.post_with_city %}
   {% for post in all_posts %}
     {% if post.url == page.url %}
       {% assign current_index = forloop.index0 %}

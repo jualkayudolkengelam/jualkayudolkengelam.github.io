@@ -35,7 +35,7 @@ collections:
   products:
     output: true
     permalink: /product/:name/
-  post_with_product:
+  post_with_city:
     output: true
     permalink: /blog/:year/:month/:day/:title/
 
@@ -49,9 +49,9 @@ defaults:
       author: "Admin"
   - scope:
       path: ""
-      type: "post_with_product"
+      type: "post_with_city"
     values:
-      layout: "post-with-products"
+      layout: "node--post-with-city"
       author: "Admin"
   - scope:
       path: ""
@@ -67,9 +67,9 @@ exclude:
   - vendor
   - .sass-cache
   - .jekyll-cache
-  - TEMPLATE--post-with-product.md
-  - DOCS--post-with-product-guide.md
-  - README--post-with-product.md
+  - TEMPLATE--post-with-city.md
+  - DOCS--post-with-city-guide.md
+  - README--post-with-city.md
   - checklist-post.md
   - validate-post.sh
   - rebuild.sh

@@ -35,7 +35,7 @@
 
   Proximity Algorithm:
   --------------------
-  1. Combine posts from site.posts and site.post_with_product collections
+  1. Combine posts from site.posts and site.post_with_city collections
   2. Find current article's position (index) in combined array
   3. Select N articles BEFORE current position (proximity-based)
   4. If at beginning: wrap to end of array (circular logic)
@@ -94,7 +94,7 @@
 {% assign section_title = include.title | default: "Artikel Terkait Lainnya" %}
 
 {% comment %} Combine all posts from both collections {% endcomment %}
-{% assign all_posts = site.posts | concat: site.post_with_product %}
+{% assign all_posts = site.posts | concat: site.post_with_city %}
 
 {% comment %} Find current page index in all_posts {% endcomment %}
 {% assign current_index = -1 %}

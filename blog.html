@@ -40,7 +40,7 @@ schema_type: CollectionPage
 
 <div class="row g-4 mb-5">
   {% comment %}Combine regular posts and posts with products{% endcomment %}
-  {% assign all_posts = site.posts | concat: site.post_with_product %}
+  {% assign all_posts = site.posts | concat: site.post_with_city %}
 
   {% if all_posts.size > 0 %}
     {% comment %}

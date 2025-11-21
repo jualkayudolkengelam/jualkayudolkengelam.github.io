@@ -444,7 +444,7 @@ skip_page_schema: true
 
 <!-- Latest Blog Posts -->
 {% comment %}Combine all posts from both collections{% endcomment %}
-{% assign all_posts = site.posts | concat: site.post_with_product %}
+{% assign all_posts = site.posts | concat: site.post_with_city %}
 
 {% if all_posts.size > 0 %}
 <section class="blog-preview-section py-5">

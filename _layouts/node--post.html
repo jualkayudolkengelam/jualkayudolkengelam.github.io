@@ -137,7 +137,7 @@ page.html (wrapper with header/footer)
         </div>
 
         <!-- Related Articles Block - IN CONTENT for SEO -->
-        {% assign all_posts = site.posts | concat: site.post_with_product %}
+        {% assign all_posts = site.posts | concat: site.post_with_city %}
         {% if all_posts.size > 1 %}
           {% include block--related-content--latest.html %}
         {% endif %}

@@ -92,7 +92,7 @@
   <h3 class="h4 mb-4 text-wood"><i class="bi bi-newspaper me-2"></i>Artikel Terkait</h3>
 
   {% comment %} Combine all posts from both collections {% endcomment %}
-  {% assign all_posts = site.posts | concat: site.post_with_product %}
+  {% assign all_posts = site.posts | concat: site.post_with_city %}
 
   {% comment %} Get 3 latest posts (excluding current post) {% endcomment %}
   {% assign latest_posts = "" | split: "" %}
