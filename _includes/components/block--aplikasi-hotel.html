@@ -76,7 +76,7 @@
   ------
   In content:
   <section id="aplikasi-hotel">
-    {% include components/block--aplikasi-hotel.html data=page.aplikasi_hotel %}
+    {% include components/block--aplikasi-hotel.html %}
   </section>
 
   ============================================================================
@@ -270,7 +270,7 @@
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header border-0 bg-transparent pt-4">
         <div class="text-center">
-          <div class="bg-{{ section.card_1.color | default: 'primary' }} bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+          <div class="icon bg-{{ section.card_1.color | default: 'primary' }} bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
             <i class="bi {{ section.card_1.icon | default: 'bi-box' }} text-{{ section.card_1.color | default: 'primary' }}" style="font-size: 2rem;"></i>
           </div>
           <h3 class="title h5 text-wood mb-0">{{ section.card_1.title }}</h3>
@@ -281,7 +281,7 @@
       </div>
       <div class="card-body pt-3">
         {% if section.card_1.implementasi %}
-        <div class="mb-3">
+        <div class="implementasi_section mb-3">
           <p class="implementasi_title small mb-2 text-wood fw-semibold">
             <i class="bi bi-gear-fill me-1"></i>{{ section.card_1.implementasi_title | default: "Implementasi" }}
           </p>
@@ -294,7 +294,7 @@
         {% endif %}
 
         {% if section.card_1.benefit %}
-        <div class="{% if section.card_1.budget %}mb-3{% else %}mb-0{% endif %}">
+        <div class="benefit_section {% if section.card_1.budget %}mb-3{% else %}mb-0{% endif %}">
           <p class="benefit_title small mb-2 text-wood fw-semibold">
             <i class="bi bi-check-circle-fill me-1 text-{{ section.card_1.color | default: 'success' }}"></i>{{ section.card_1.benefit_title | default: "Keunggulan" }}
           </p>
@@ -308,10 +308,10 @@
 
         {% if section.card_1.budget %}
         <div class="budget alert alert-{{ section.card_1.color | default: 'success' }} mb-0 py-2">
-          <p class="mb-1 small fw-semibold">
+          <p class="label mb-1 small fw-semibold">
             <i class="bi bi-cash-stack me-1"></i>{{ section.card_1.budget.label | default: "Estimasi Budget" }}
           </p>
-          <p class="mb-0 small">{{ section.card_1.budget.value }}</p>
+          <p class="value mb-0 small">{{ section.card_1.budget.value }}</p>
         </div>
         {% endif %}
       </div>
@@ -325,7 +325,7 @@
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header border-0 bg-transparent pt-4">
         <div class="text-center">
-          <div class="bg-{{ section.card_2.color | default: 'info' }} bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+          <div class="icon bg-{{ section.card_2.color | default: 'info' }} bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
             <i class="bi {{ section.card_2.icon | default: 'bi-box' }} text-{{ section.card_2.color | default: 'info' }}" style="font-size: 2rem;"></i>
           </div>
           <h3 class="title h5 text-wood mb-0">{{ section.card_2.title }}</h3>
@@ -336,7 +336,7 @@
       </div>
       <div class="card-body pt-3">
         {% if section.card_2.implementasi %}
-        <div class="mb-3">
+        <div class="implementasi_section mb-3">
           <p class="implementasi_title small mb-2 text-wood fw-semibold">
             <i class="bi bi-gear-fill me-1"></i>{{ section.card_2.implementasi_title | default: "Implementasi" }}
           </p>
@@ -349,7 +349,7 @@
         {% endif %}
 
         {% if section.card_2.benefit %}
-        <div class="{% if section.card_2.budget %}mb-3{% else %}mb-0{% endif %}">
+        <div class="benefit_section {% if section.card_2.budget %}mb-3{% else %}mb-0{% endif %}">
           <p class="benefit_title small mb-2 text-wood fw-semibold">
             <i class="bi bi-check-circle-fill me-1 text-{{ section.card_2.color | default: 'success' }}"></i>{{ section.card_2.benefit_title | default: "Benefit" }}
           </p>
@@ -363,10 +363,10 @@
 
         {% if section.card_2.budget %}
         <div class="budget alert alert-{{ section.card_2.color | default: 'info' }} mb-0 py-2">
-          <p class="mb-1 small fw-semibold">
+          <p class="label mb-1 small fw-semibold">
             <i class="bi bi-cash-stack me-1"></i>{{ section.card_2.budget.label | default: "Estimasi Budget" }}
           </p>
-          <p class="mb-0 small">{{ section.card_2.budget.value }}</p>
+          <p class="value mb-0 small">{{ section.card_2.budget.value }}</p>
         </div>
         {% endif %}
       </div>
@@ -380,7 +380,7 @@
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header border-0 bg-transparent pt-4">
         <div class="text-center">
-          <div class="bg-{{ section.card_3.color | default: 'success' }} bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+          <div class="icon bg-{{ section.card_3.color | default: 'success' }} bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
             <i class="bi {{ section.card_3.icon | default: 'bi-box' }} text-{{ section.card_3.color | default: 'success' }}" style="font-size: 2rem;"></i>
           </div>
           <h3 class="title h5 text-wood mb-0">{{ section.card_3.title }}</h3>
@@ -391,7 +391,7 @@
       </div>
       <div class="card-body pt-3">
         {% if section.card_3.implementasi %}
-        <div class="mb-3">
+        <div class="implementasi_section mb-3">
           <p class="implementasi_title small mb-2 text-wood fw-semibold">
             <i class="bi bi-gear-fill me-1"></i>{{ section.card_3.implementasi_title | default: "Implementasi" }}
           </p>
@@ -404,7 +404,7 @@
         {% endif %}
 
         {% if section.card_3.benefit %}
-        <div class="{% if section.card_3.budget %}mb-3{% else %}mb-0{% endif %}">
+        <div class="benefit_section {% if section.card_3.budget %}mb-3{% else %}mb-0{% endif %}">
           <p class="benefit_title small mb-2 text-wood fw-semibold">
             <i class="bi bi-check-circle-fill me-1 text-{{ section.card_3.color | default: 'success' }}"></i>{{ section.card_3.benefit_title | default: "Keunggulan" }}
           </p>
@@ -418,10 +418,10 @@
 
         {% if section.card_3.budget %}
         <div class="budget alert alert-{{ section.card_3.color | default: 'success' }} mb-0 py-2">
-          <p class="mb-1 small fw-semibold">
+          <p class="label mb-1 small fw-semibold">
             <i class="bi bi-cash-stack me-1"></i>{{ section.card_3.budget.label | default: "Estimasi Budget" }}
           </p>
-          <p class="mb-0 small">{{ section.card_3.budget.value }}</p>
+          <p class="value mb-0 small">{{ section.card_3.budget.value }}</p>
         </div>
         {% endif %}
       </div>
@@ -435,7 +435,7 @@
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header border-0 bg-transparent pt-4">
         <div class="text-center">
-          <div class="bg-{{ section.card_4.color | default: 'warning' }} bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+          <div class="icon bg-{{ section.card_4.color | default: 'warning' }} bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
             <i class="bi {{ section.card_4.icon | default: 'bi-box' }} text-{{ section.card_4.color | default: 'warning' }}" style="font-size: 2rem;"></i>
           </div>
           <h3 class="title h5 text-wood mb-0">{{ section.card_4.title }}</h3>
@@ -446,7 +446,7 @@
       </div>
       <div class="card-body pt-3">
         {% if section.card_4.implementasi %}
-        <div class="mb-3">
+        <div class="implementasi_section mb-3">
           <p class="implementasi_title small mb-2 text-wood fw-semibold">
             <i class="bi bi-gear-fill me-1"></i>{{ section.card_4.implementasi_title | default: "Implementasi" }}
           </p>
@@ -459,7 +459,7 @@
         {% endif %}
 
         {% if section.card_4.benefit %}
-        <div class="{% if section.card_4.budget %}mb-3{% else %}mb-0{% endif %}">
+        <div class="benefit_section {% if section.card_4.budget %}mb-3{% else %}mb-0{% endif %}">
           <p class="benefit_title small mb-2 text-wood fw-semibold">
             <i class="bi bi-check-circle-fill me-1 text-{{ section.card_4.color | default: 'success' }}"></i>{{ section.card_4.benefit_title | default: "Plus Points" }}
           </p>
@@ -473,10 +473,10 @@
 
         {% if section.card_4.budget %}
         <div class="budget alert alert-{{ section.card_4.color | default: 'warning' }} mb-0 py-2">
-          <p class="mb-1 small fw-semibold">
+          <p class="label mb-1 small fw-semibold">
             <i class="bi bi-cash-stack me-1"></i>{{ section.card_4.budget.label | default: "Estimasi Budget" }}
           </p>
-          <p class="mb-0 small">{{ section.card_4.budget.value }}</p>
+          <p class="value mb-0 small">{{ section.card_4.budget.value }}</p>
         </div>
         {% endif %}
       </div>
@@ -490,7 +490,7 @@
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header border-0 bg-transparent pt-4">
         <div class="text-center">
-          <div class="bg-{{ section.card_5.color | default: 'danger' }} bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+          <div class="icon bg-{{ section.card_5.color | default: 'danger' }} bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
             <i class="bi {{ section.card_5.icon | default: 'bi-box' }} text-{{ section.card_5.color | default: 'danger' }}" style="font-size: 2rem;"></i>
           </div>
           <h3 class="title h5 text-wood mb-0">{{ section.card_5.title }}</h3>
@@ -501,7 +501,7 @@
       </div>
       <div class="card-body pt-3">
         {% if section.card_5.implementasi %}
-        <div class="mb-3">
+        <div class="implementasi_section mb-3">
           <p class="implementasi_title small mb-2 text-wood fw-semibold">
             <i class="bi bi-lightbulb-fill text-warning me-1"></i>{{ section.card_5.implementasi_title | default: "Implementasi" }}
           </p>
@@ -514,7 +514,7 @@
         {% endif %}
 
         {% if section.card_5.benefit %}
-        <div class="{% if section.card_5.budget %}mb-3{% else %}mb-0{% endif %}">
+        <div class="benefit_section {% if section.card_5.budget %}mb-3{% else %}mb-0{% endif %}">
           <p class="benefit_title small mb-2 text-wood fw-semibold">
             <i class="bi bi-star-fill text-warning me-1"></i>{{ section.card_5.benefit_title | default: "Why It Works" }}
           </p>
@@ -528,7 +528,7 @@
 
         {% if section.card_5.budget %}
         <div class="budget alert alert-{{ section.card_5.color | default: 'danger' }} mb-0 py-2" style="background-color: rgba(220, 53, 69, 0.1); border: none;">
-          <p class="mb-0 small text-{{ section.card_5.color | default: 'danger' }}">
+          <p class="value mb-0 small text-{{ section.card_5.color | default: 'danger' }}">
             <i class="bi bi-cash-coin me-1"></i>
             <strong>{{ section.card_5.budget.value }}</strong>
           </p>
@@ -545,7 +545,7 @@
     <div class="card border-0 shadow-sm h-100 hover-lift">
       <div class="card-header border-0 bg-transparent pt-4">
         <div class="text-center">
-          <div class="bg-{{ section.card_6.color | default: 'secondary' }} bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+          <div class="icon bg-{{ section.card_6.color | default: 'secondary' }} bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
             <i class="bi {{ section.card_6.icon | default: 'bi-box' }} text-{{ section.card_6.color | default: 'secondary' }}" style="font-size: 2rem;"></i>
           </div>
           <h3 class="title h5 text-wood mb-0">{{ section.card_6.title }}</h3>
@@ -556,7 +556,7 @@
       </div>
       <div class="card-body pt-3">
         {% if section.card_6.implementasi %}
-        <div class="mb-3">
+        <div class="implementasi_section mb-3">
           <p class="implementasi_title small mb-2 text-wood fw-semibold">
             <i class="bi bi-gear-fill me-1"></i>{{ section.card_6.implementasi_title | default: "Implementasi" }}
           </p>
@@ -569,7 +569,7 @@
         {% endif %}
 
         {% if section.card_6.benefit %}
-        <div class="{% if section.card_6.budget %}mb-3{% else %}mb-0{% endif %}">
+        <div class="benefit_section {% if section.card_6.budget %}mb-3{% else %}mb-0{% endif %}">
           <p class="benefit_title small mb-2 text-wood fw-semibold">
             <i class="bi bi-check-circle-fill me-1 text-{{ section.card_6.color | default: 'success' }}"></i>{{ section.card_6.benefit_title | default: "Benefit" }}
           </p>
@@ -583,10 +583,10 @@
 
         {% if section.card_6.budget %}
         <div class="budget alert alert-{{ section.card_6.color | default: 'secondary' }} mb-0 py-2">
-          <p class="mb-1 small fw-semibold">
+          <p class="label mb-1 small fw-semibold">
             <i class="bi bi-cash-stack me-1"></i>{{ section.card_6.budget.label | default: "Estimasi Budget" }}
           </p>
-          <p class="mb-0 small">{{ section.card_6.budget.value }}</p>
+          <p class="value mb-0 small">{{ section.card_6.budget.value }}</p>
         </div>
         {% endif %}
       </div>
