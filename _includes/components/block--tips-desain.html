@@ -89,49 +89,239 @@
 
   Usage:
   ------
-  In frontmatter:
+  In content:
+  <section id="tips-desain">
+    {% include components/block--tips-desain.html %}
+  </section>
+
+  ============================================================================
+  COMPLETE YAML STRUCTURE - COPY & PASTE KE FRONTMATTER
+  ============================================================================
+
+  Instruksi Penggunaan:
+  1. Copy seluruh structure YAML di bawah ini
+  2. Paste ke frontmatter artikel Anda
+  3. Ganti semua teks "isi ..." dengan konten Anda
+  4. Hapus card yang tidak digunakan (misal: jika hanya perlu 4 cards, hapus card_5 dan card_6)
+  5. Field yang marked OPTIONAL bisa dihapus jika tidak digunakan
+
   ---
+  # Section: Tips Desain
   tips_desain:
-    title: "Tips Desain dengan Kayu Dolken"
-    subtitle: "Panduan praktis untuk hasil maksimal"
-    icon: "bi-palette-fill"
-    gradient: "wood"
+    # Header Section
+    title: "isi judul H2 (misal: Tips Desain dengan Kayu Dolken)"
+    subtitle: "isi subtitle di bawah title (OPTIONAL - hapus jika tidak perlu)"
+    icon: "bi-palette-fill"  # Bootstrap icon class
+    gradient: "wood"  # Options: wood, purple, blue, green, orange
 
     # Paragraphs (REQUIRED - untuk SEO & Accessibility)
     paragraph_1: "isi paragraf pertama setelah H2. Berikan konteks umum tentang tips desain ini."
     paragraph_2: "isi paragraf kedua untuk melengkapi penjelasan overview section."
 
-    layout: "3col"
+    layout: "3col"  # Options: "3col" (col-lg-4) atau "4col" (col-lg-3)
 
+    # CARD 1
     card_1:
-      title: "1. Jangan Over-do"
-      icon: "bi-x-circle"
-      color: "danger"
+      title: "isi judul H3 card #1 (misal: 1. Jangan Over-do)"
+      icon: "bi-x-circle"  # Bootstrap icon class
+      color: "danger"  # Options: danger, warning, info, primary, success, secondary
 
       # Paragraph after H3 (REQUIRED for SEO)
-      intro: "isi paragraf penjelasan mengapa tip ini penting."
+      intro: "isi paragraf penjelasan singkat tentang tip ini. Berikan konteks mengapa tip ini penting."
 
       # H4 Sub-headings dengan paragraf (REQUIRED for SEO)
-      h4_1: "Kesalahan Umum"
-      paragraph_h4_1: "isi paragraf tentang kesalahan yang sering terjadi."
+      h4_1: "isi H4 pertama (misal: Kesalahan Umum)"
+      paragraph_h4_1: "isi paragraf setelah H4 pertama. Jelaskan detail tentang topik H4 ini."
 
-      h4_2: "Solusi Praktis"
-      paragraph_h4_2: "isi paragraf tentang cara menghindari kesalahan."
+      h4_2: "isi H4 kedua (misal: Solusi Praktis)"
+      paragraph_h4_2: "isi paragraf setelah H4 kedua. Jelaskan detail tentang topik H4 ini."
+
+      item_1:
+        icon: "bi-check2"  # OPTIONAL
+        color: "success"  # OPTIONAL
+        title: "isi title item (OPTIONAL)"  # OPTIONAL - untuk item dengan title:text format
+        text: "isi text item #1 (misal: Pilih 1-2 focal point saja)"
+      item_2:
+        icon: "bi-check2"
+        color: "success"
+        text: "isi text item #2 (misal: Balance dengan material lain)"
+      item_3:  # OPTIONAL
+        icon: "bi-check2"
+        color: "success"
+        text: "isi text item #3"
+      item_4:  # OPTIONAL
+        icon: "bi-check2"
+        color: "success"
+        text: "isi text item #4"
+      item_5:  # OPTIONAL
+        icon: "bi-check2"
+        color: "success"
+        text: "isi text item #5"
+      item_6:  # OPTIONAL
+        icon: "bi-check2"
+        color: "success"
+        text: "isi text item #6"
+
+    # CARD 2
+    card_2:
+      title: "isi judul H3 card #2 (misal: 2. Lighting is Key)"
+      icon: "bi-lightbulb-fill"
+      color: "warning"
+
+      intro: "isi paragraf intro card #2"
+
+      h4_1: "isi H4 pertama card #2"
+      paragraph_h4_1: "isi paragraf h4_1 card #2"
+
+      h4_2: "isi H4 kedua card #2"
+      paragraph_h4_2: "isi paragraf h4_2 card #2"
 
       item_1:
         icon: "bi-check2"
         color: "success"
-        text: "Pilih 1-2 focal point saja"
+        text: "isi text item #1"
       item_2:
         icon: "bi-check2"
         color: "success"
-        text: "Balance dengan material lain"
-  ---
+        text: "isi text item #2"
+      item_3:
+        icon: "bi-check2"
+        color: "success"
+        text: "isi text item #3"
+      item_4:
+        icon: "bi-check2"
+        color: "success"
+        text: "isi text item #4"
 
-  In content:
-  <section id="tips-desain">
-    {% include components/block--tips-desain.html %}
-  </section>
+    # CARD 3
+    card_3:
+      title: "isi judul H3 card #3 (misal: 3. Variasi Diameter)"
+      icon: "bi-layers-fill"
+      color: "info"
+
+      intro: "isi paragraf intro card #3"
+
+      h4_1: "isi H4 pertama card #3"
+      paragraph_h4_1: "isi paragraf h4_1 card #3"
+
+      h4_2: "isi H4 kedua card #3"
+      paragraph_h4_2: "isi paragraf h4_2 card #3"
+
+      item_1:
+        icon: "bi-check2"
+        color: "success"
+        text: "isi text item #1"
+      item_2:
+        icon: "bi-check2"
+        color: "success"
+        text: "isi text item #2"
+      item_3:
+        icon: "bi-check2"
+        color: "success"
+        text: "isi text item #3"
+      item_4:
+        icon: "bi-check2"
+        color: "success"
+        text: "isi text item #4"
+
+    # CARD 4
+    card_4:
+      title: "isi judul H3 card #4 (misal: 4. Finishing Matters)"
+      icon: "bi-brush-fill"
+      color: "primary"
+
+      intro: "isi paragraf intro card #4"
+
+      h4_1: "isi H4 pertama card #4"
+      paragraph_h4_1: "isi paragraf h4_1 card #4"
+
+      h4_2: "isi H4 kedua card #4"
+      paragraph_h4_2: "isi paragraf h4_2 card #4"
+
+      # Format dengan title:text untuk opsi finishing
+      item_1:
+        icon: "bi-droplet-fill"
+        color: "success"
+        title: "Natural Oil"
+        text: "Tampilan natural, satin finish"
+      item_2:
+        icon: "bi-shield-check"
+        color: "primary"
+        title: "Clear Coat"
+        text: "Protection lebih kuat"
+      item_3:
+        icon: "bi-fire"
+        color: "danger"
+        title: "Charred"
+        text: "Darker dramatic tone"
+      item_4:
+        icon: "bi-water"
+        color: "info"
+        title: "Whitewash"
+        text: "Scandinavian vibe"
+
+    # CARD 5 (OPTIONAL - hapus jika tidak digunakan)
+    card_5:
+      title: "isi judul H3 card #5 (misal: 5. Maintenance Plan)"
+      icon: "bi-tools"
+      color: "success"
+
+      intro: "isi paragraf intro card #5"
+
+      h4_1: "isi H4 pertama card #5"
+      paragraph_h4_1: "isi paragraf h4_1 card #5"
+
+      h4_2: "isi H4 kedua card #5"
+      paragraph_h4_2: "isi paragraf h4_2 card #5"
+
+      item_1:
+        icon: "bi-calendar-week"
+        color: "primary"
+        text: "isi text item #1"
+      item_2:
+        icon: "bi-calendar-range"
+        color: "info"
+        text: "isi text item #2"
+      item_3:
+        icon: "bi-search"
+        color: "warning"
+        text: "isi text item #3"
+      item_4:
+        icon: "bi-arrow-repeat"
+        color: "success"
+        text: "isi text item #4"
+
+    # CARD 6 (OPTIONAL - hapus jika tidak digunakan)
+    card_6:
+      title: "isi judul H3 card #6 (misal: 6. Combine with Greenery)"
+      icon: "bi-tree"
+      color: "success"
+
+      intro: "isi paragraf intro card #6"
+
+      h4_1: "isi H4 pertama card #6"
+      paragraph_h4_1: "isi paragraf h4_1 card #6"
+
+      h4_2: "isi H4 kedua card #6"
+      paragraph_h4_2: "isi paragraf h4_2 card #6"
+
+      item_1:
+        icon: "bi-flower1"
+        color: "success"
+        text: "isi text item #1"
+      item_2:
+        icon: "bi-droplet"
+        color: "primary"
+        text: "isi text item #2"
+      item_3:
+        icon: "bi-grid-3x3"
+        color: "info"
+        text: "isi text item #3"
+      item_4:
+        icon: "bi-stars"
+        color: "warning"
+        text: "isi text item #4"
+  ---
 
   ============================================================================
 {% endcomment %}
