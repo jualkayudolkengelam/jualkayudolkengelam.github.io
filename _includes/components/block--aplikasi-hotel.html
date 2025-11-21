@@ -48,13 +48,29 @@
 
   Class Mapping (Best Practice Pattern):
   ---------------------------------------
-  Frontmatter key → HTML class name
-  - title → <h2 class="title"> or <h3 class="title">
-  - subtitle → <p class="subtitle">
+  Frontmatter key → HTML class name (Semantic Classes)
+
+  Header Section:
+  - title (header card) → <div class="card title border-0 shadow-lg">
+  - title (h2 text) → <h2 class="h2 mb-0 fw-bold text-white">
+  - subtitle → <p class="subtitle mb-0 mt-2 small">
+
+  Cards:
   - card_1 → <div class="card_1">
-  - implementasi → <ul class="implementasi">
-  - benefit → <ul class="benefit">
-  - budget → <div class="budget">
+  - card_2 → <div class="card_2">
+  - card_3 → <div class="card_3">
+  - card_4 → <div class="card_4">
+  - card_5 → <div class="card_5">
+  - card_6 → <div class="card_6">
+
+  Card Content:
+  - title (card) → <h3 class="title h5 text-wood mb-0">
+  - subtitle (card) → <p class="subtitle small text-muted mb-0">
+  - implementasi_title → <p class="implementasi_title small mb-2">
+  - implementasi → <ul class="implementasi small mb-0">
+  - benefit_title → <p class="benefit_title small mb-2">
+  - benefit → <ul class="benefit small mb-0">
+  - budget → <div class="budget alert mb-0 py-2">
 
   Usage:
   ------
@@ -211,9 +227,9 @@
 
 {% if section %}
 
-<!-- Gradient Header -->
+<!-- Header Section -->
 <div class="my-5">
-  <div class="card border-0 shadow-lg">
+  <div class="card title border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3"
       {% if section.gradient == 'purple' %}
         style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"
@@ -233,7 +249,7 @@
       {% if section.icon %}
       <i class="bi {{ section.icon }} mb-2" style="font-size: 2.5rem;"></i>
       {% endif %}
-      <h2 class="title h3 mb-0 fw-bold text-white">{{ section.title }}</h2>
+      <h2 class="h2 mb-0 fw-bold text-white">{{ section.title }}</h2>
       {% if section.subtitle %}
       <p class="subtitle mb-0 mt-2 small" style="opacity: 0.85;">
         <i class="bi bi-stars me-1"></i>
