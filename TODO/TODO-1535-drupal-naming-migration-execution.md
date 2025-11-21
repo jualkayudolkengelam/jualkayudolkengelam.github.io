@@ -20,7 +20,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 - *(new)* → `page--front.html` (homepage wrapper)
 - *(new)* → `node.html` (base content template)
 - `post.html` → `node--post.html` (blog content)
-- `post-with-products.html` → `node--post-with-product.html` (hybrid content)
+- `post-with-city.html` → `node--post-with-city.html` (city content)
 - `product.html` → `node--product.html` (product content)
 - All includes → `block--*.html` pattern
 
@@ -120,15 +120,15 @@ This is the **execution checklist** for implementing the Drupal naming conventio
   - [ ] Change frontmatter: `layout: default` → `layout: page`
   - [ ] Add comment: `<!-- Content Type: Blog Post (node--post.html) -->`
 
-- [ ] **Rename post-with-products.html → node--post-with-product.html**
+- [ ] **Rename post-with-city.html → node--post-with-city.html**
   ```bash
-  git mv post-with-products.html node--post-with-product.html
+  git mv post-with-city.html node--post-with-city.html
   git status  # Verify rename
   ```
 
-- [ ] **Update node--post-with-product.html layout reference**
+- [ ] **Update node--post-with-city.html layout reference**
   - [ ] Change frontmatter: `layout: default` → `layout: page`
-  - [ ] Add comment: `<!-- Content Type: Blog Post with Products (node--post-with-product.html) -->`
+  - [ ] Add comment: `<!-- Content Type: Blog Post with City (node--post-with-city.html) -->`
 
 - [ ] **Rename product.html → node--product.html**
   ```bash
@@ -147,7 +147,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
   ```
   Expected output:
   ```
-  node--post-with-product.html
+  node--post-with-city.html
   node--post.html
   node--product.html
   node.html
@@ -166,8 +166,8 @@ This is the **execution checklist** for implementing the Drupal naming conventio
   # Posts
   grep -l "layout: post" _posts/*.md 2>/dev/null | wc -l
 
-  # Post with products
-  grep -l "layout: post-with-products" _post_with_product/*.md 2>/dev/null | wc -l
+  # Post with city
+  grep -l "layout: post-with-city" _post_with_city/*.md 2>/dev/null | wc -l
 
   # Products
   grep -l "layout: product" _products/*.md 2>/dev/null | wc -l
@@ -187,14 +187,14 @@ This is the **execution checklist** for implementing the Drupal naming conventio
   grep -l "layout: post$" _posts/*.md | wc -l  # Should be 0
   ```
 
-- [ ] **Update hybrid posts: layout: post-with-products → layout: node--post-with-product**
+- [ ] **Update city posts: layout: post-with-city → layout: node--post-with-city**
   ```bash
-  # Find and replace in all _post_with_product/*.md files
-  find _post_with_product/ -name "*.md" -type f -exec sed -i 's/^layout: post-with-products$/layout: node--post-with-product/g' {} +
+  # Find and replace in all _post_with_city/*.md files
+  find _post_with_city/ -name "*.md" -type f -exec sed -i 's/^layout: post-with-city$/layout: node--post-with-city/g' {} +
 
   # Verify changes
-  grep -l "layout: node--post-with-product" _post_with_product/*.md | wc -l
-  grep -l "layout: post-with-products" _post_with_product/*.md | wc -l  # Should be 0
+  grep -l "layout: node--post-with-city" _post_with_city/*.md | wc -l
+  grep -l "layout: post-with-city" _post_with_city/*.md | wc -l  # Should be 0
   ```
 
 - [ ] **Update products: layout: product → layout: node--product**
@@ -498,11 +498,11 @@ This is the **execution checklist** for implementing the Drupal naming conventio
   - [ ] Layout uses page.html wrapper (same header/footer as homepage)
   - [ ] No broken includes
 
-- [ ] **Test Blog with Products (node--post-with-product.html)**
-  - [ ] Visit a hybrid post
+- [ ] **Test Blog with City (node--post-with-city.html)**
+  - [ ] Visit a city post
   - [ ] Post content renders
-  - [ ] Product list block appears
-  - [ ] All products display correctly
+  - [ ] City-specific content appears
+  - [ ] All sections display correctly
   - [ ] No broken includes
 
 - [ ] **Test Product Page (node--product.html)**
@@ -620,7 +620,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Add documentation to node--post.html**
 
-- [ ] **Add documentation to node--post-with-product.html**
+- [ ] **Add documentation to node--post-with-city.html**
 
 - [ ] **Add documentation to node--product.html**
 
@@ -668,7 +668,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
   # Layouts
   grep -r "layout: default" . --include="*.md" --include="*.html" --exclude-dir=_site --exclude-dir=TODO
   grep -r "layout: post$" . --include="*.md" --include="*.html" --exclude-dir=_site --exclude-dir=TODO
-  grep -r "layout: post-with-products" . --include="*.md" --include="*.html" --exclude-dir=_site --exclude-dir=TODO
+  grep -r "layout: post-with-city" . --include="*.md" --include="*.html" --exclude-dir=_site --exclude-dir=TODO
   grep -r "layout: product" . --include="*.md" --include="*.html" --exclude-dir=_site --exclude-dir=TODO
 
   # Includes
@@ -726,7 +726,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
   Renamed:
   - default.html → page.html (base page wrapper)
   - post.html → node--post.html (blog content)
-  - post-with-products.html → node--post-with-product.html (hybrid content)
+  - post-with-city.html → node--post-with-city.html (city content)
   - product.html → node--product.html (product content)
 
   Created:
@@ -749,7 +749,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
   Updated all frontmatter layout references:
   - Blog posts: layout: post → layout: node--post
-  - Hybrid posts: layout: post-with-products → layout: node--post-with-product
+  - City posts: layout: post-with-city → layout: node--post-with-city
   - Products: layout: product → layout: node--product
   - Homepage: layout: default → layout: page--front
   - Static pages: layout: default → layout: page
@@ -932,7 +932,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 - [x] `node.html` - Base content template created
 - [x] `node--page.html` - Static page content created
 - [x] `node--post.html` - Blog post content migrated
-- [x] `node--post-with-product.html` - Hybrid post content migrated
+- [x] `node--post-with-city.html` - City post content migrated
 - [x] `node--product.html` - Product content migrated
 - [x] All frontmatter `layout:` references updated in content files
 - [x] Homepage uses `layout: page--front`
@@ -961,7 +961,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
   - [x] Homepage (page--front.html)
   - [x] Product pages (node--product.html with page--product.html wrapper)
   - [x] Blog posts (node--post.html)
-  - [x] Blog with products (node--post-with-product.html)
+  - [x] Blog with city (node--post-with-city.html)
   - [x] Static pages (page.html wrapper)
 - [x] All blocks render correctly
 - [x] Schema.org markup intact and validated

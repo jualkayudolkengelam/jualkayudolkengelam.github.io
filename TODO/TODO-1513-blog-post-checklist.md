@@ -107,7 +107,7 @@ cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
 **Front Matter:**
 ```yaml
 ---
-layout: post-with-products
+layout: post-with-city
 title: "Jual Kayu Dolken [Lokasi] - Hub 081311400177 - Gratis Ongkir"
 description: "Jual kayu dolken [lokasi] harga terbaik. Gratis ongkir. Hub 081311400177."
 date: YYYY-MM-DD

@@ -15,7 +15,7 @@
 _layouts/
 ├── default.html
 ├── post.html
-├── post-with-products.html
+├── post-with-city.html
 └── product.html
 
 _includes/
@@ -217,7 +217,7 @@ layout: page  <!-- Wraps in page.html -->
 | *(new)* | `page--product.html` | Product wrapper | Special layout for product pages with product-specific includes |
 | *(new)* | `node.html` | Base content | Fallback content template |
 | `post.html` | `node--post.html` | Blog post content | Single blog post layout |
-| `post-with-products.html` | `node--post-with-product.html` | Hybrid post content | Blog post + product catalog |
+| `post-with-city.html` | `node--post-with-city.html` | City post content | Blog post + city-specific content |
 | `product.html` | `node--product.html` | Product content | Single product detail |
 
 ---
@@ -401,10 +401,10 @@ node--product.html (pure product entity)
 - Purpose: Product detail content layout
 - Includes: NONE (pure entity, includes in page wrapper)
 
-**node--post-with-product.html (Hybrid Content):**
+**node--post-with-city.html (City Content):**
 - Wrapped by: page.html (same wrapper!)
-- Contains: Post content + embedded product catalog
-- Purpose: Blog post with product recommendations
+- Contains: Post content + city-specific content
+- Purpose: Blog post with city-specific information
 
 ---
 
@@ -1091,7 +1091,7 @@ ls _includes/block--carousel*
 - ✅ `node.html` - Base content template (created)
 - ✅ `node--page.html` - Static page content (created)
 - ✅ `node--post.html` - Blog post content (migrated)
-- ✅ `node--post-with-product.html` - Hybrid post content (migrated)
+- ✅ `node--post-with-city.html` - City post content (migrated)
 - ✅ `node--product.html` - Product detail content (migrated)
 
 **Blocks Migration:**

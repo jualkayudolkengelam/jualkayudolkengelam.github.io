@@ -3,20 +3,20 @@ layout: page
 ---
 {% comment %}
 ============================================================================
-Content Template: Blog Post with Products (node--post-with-product.html)
+Content Template: Blog Post with City (node--post-with-city.html)
 ============================================================================
 
-@file        node--post-with-product.html
-@path        _layouts/node--post-with-product.html
+@file        node--post-with-city.html
+@path        _layouts/node--post-with-city.html
 @type        Node (content template - variant)
-@variant     post-with-product (hybrid posts)
-@description Hybrid content template for blog posts with embedded product catalog
+@variant     post-with-city (city posts)
+@description Content template for blog posts with city-specific information
 @author      arisciwek
 
-Drupal-style naming: node--post-with-product.html (variant of node.html)
+Drupal-style naming: node--post-with-city.html (variant of node.html)
 
-This template wraps in page.html and provides hybrid structure combining
-blog post content with product recommendations/catalog.
+This template wraps in page.html and provides structure combining
+blog post content with city-specific information.
 
 Related templates:
 - node.html (base content template - fallback)
@@ -25,17 +25,17 @@ Related templates:
 - node--product.html (product detail only)
 
 Used by:
-- _post_with_product/*.md (hybrid blog post files)
-- Articles about products with embedded catalog (e.g., location-based posts)
+- _post_with_city/*.md (city blog post files)
+- Articles about city-specific content (e.g., location-based posts)
 
 Features:
 - Breadcrumb navigation
 - Hero intro card with gradient styling
 - Blog post content rendering
-- Embedded product catalog (full or filtered)
+- City-specific content sections
 - Engagement metrics (likes, comments, shares)
 - Related content/articles div
-- Schema.org BlogPosting + ItemList markup
+- Schema.org BlogPosting markup
 
 Styling:
 - Bootstrap classes: container, row, col-lg-8, col-lg-4, py-5
@@ -45,7 +45,7 @@ Styling:
 
 Data Expected in Frontmatter:
   ---
-  layout: node--post-with-product
+  layout: node--post-with-city
   title: Blog Post Title
   description: Post description
   date: 2025-11-17
@@ -63,11 +63,11 @@ Data Expected in Frontmatter:
 
 Hierarchy:
 page.html (wrapper with header/footer)
-└── node--post-with-product.html (this file - hybrid post)
-    └── {{ content }} (blog content from _post_with_product/*.md)
+└── node--post-with-city.html (this file - city post)
+    └── {{ content }} (blog content from _post_with_city/*.md)
         ├── Hero intro card with engagement stats
         ├── Blog post body content
-        └── {% include block--product-list.html %} (product catalog)
+        └── CTA section
 
 ============================================================================
 {% endcomment %}
