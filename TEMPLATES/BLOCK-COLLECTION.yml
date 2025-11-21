@@ -18,7 +18,7 @@
 
 blocks:
   - id: mengapa-memilih-dolken
-    file: block--mengapa-memilih-dolken.html
+    file: inspirasi/block--mengapa-memilih-dolken.html
     name: "Mengapa Memilih Dolken"
     category: product
     tags:
@@ -44,7 +44,7 @@ blocks:
       total: 3
 
   - id: mengapa-memilih-kami
-    file: block--mengapa-memilih-kami.html
+    file: inspirasi/block--mengapa-memilih-kami.html
     name: "Mengapa Memilih Kami"
     category: company
     tags:
@@ -70,7 +70,7 @@ blocks:
       total: 3
 
   - id: aplikasi-hotel
-    file: block--aplikasi-hotel.html
+    file: inspirasi/block--aplikasi-hotel.html
     name: "Aplikasi Kayu Dolken untuk Hotel/Cafe"
     category: application
     tags:
@@ -99,7 +99,7 @@ blocks:
       total: 19
 
   - id: tips-desain
-    file: block--tips-desain.html
+    file: inspirasi/block--tips-desain.html
     name: "Tips Desain Kayu Dolken"
     category: tips
     tags:
@@ -128,7 +128,7 @@ blocks:
       total: 19
 
   - id: case-study
-    file: block--case-study.html
+    file: inspirasi/block--case-study.html
     name: "Case Study Implementasi"
     category: case-study
     tags:
@@ -155,7 +155,7 @@ blocks:
       total: 14
 
   - id: tentang-kota-ini
-    file: block--tentang-kota-ini.html
+    file: inspirasi/block--tentang-kota-ini.html
     name: "Tentang Kota Kami"
     category: location
     tags:
