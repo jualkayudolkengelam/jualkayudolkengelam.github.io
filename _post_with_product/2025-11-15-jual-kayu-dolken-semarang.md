@@ -2,7 +2,7 @@
 # ============================================================================
 # META INFORMATION
 # ============================================================================
-layout: node--post-with-product
+layout: node--post-with-city
 title: "Jual Kayu Dolken Semarang - Hub 081311400177 - Gratis Ongkir"
 description: "Jual kayu dolken Semarang dengan harga terbaik. Melayani pengiriman gratis ke seluruh Semarang. Hubungi 081311400177 untuk info dan pemesanan."
 date: 2025-11-15
