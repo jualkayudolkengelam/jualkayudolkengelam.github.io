@@ -69,8 +69,6 @@ Architecture Principle:
 {% include head.html %}
 
 <body>
-  <!-- Article Schema will be included within node template -->
-
   {% include header.html %}
 
   <main class="main-content">
@@ -79,5 +77,36 @@ Architecture Principle:
 
   {% include footer.html %}
   {% include block--cta--whatsapp.html %}
+
+  <!-- Article Schema (BlogPosting/Article) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title }}",
+    "description": "{{ page.description | strip_html | strip_newlines | escape }}",
+    "url": "{{ page.url | absolute_url }}",
+    "image": "{% if page.images %}{{ page.images[0] | absolute_url }}{% elsif page.image %}{{ page.image | absolute_url }}{% endif %}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+    "author": {
+      "@type": "Person",
+      "name": "{% if page.author %}{{ page.author }}{% else %}Admin{% endif %}"{% if page.author_url %},
+      "url": "{{ page.author_url }}"{% endif %}
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.business.name }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    }
+  }
+  </script>
 </body>
 </html>
