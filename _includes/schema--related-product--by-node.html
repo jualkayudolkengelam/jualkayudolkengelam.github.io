@@ -1,0 +1,139 @@
+{% comment %}
+============================================================================
+Shared Schema: Related Products ItemList (By Node)
+============================================================================
+
+@file        schema--related-product--by-node.html
+@path        _includes/schema--related-product--by-node.html
+@type        Schema (shared component)
+@description Reusable ItemList schema for related products display
+@author      arisciwek
+
+This is a shared schema component that provides ItemList structured data
+for related products sections. Products are dynamically selected based on
+the current page context.
+
+Parameters:
+-----------
+- products: (required) array of product objects to include in list
+- raw: (optional) output raw JSON without <script> tags (default: false)
+
+Usage:
+------
+In page wrapper (collect schemas at bottom):
+{% include schema--related-product--by-node.html products=related_products %}
+
+In block include (if needed inline):
+{% include schema--related-product--by-node.html products=final_products raw=false %}
+
+Benefits:
+---------
+- DRY: Single source of truth for related products schema
+- Flexibility: Can be called from page wrapper or blocks
+- Consistency: Same schema structure across all uses
+- Maintainability: Update once, applies everywhere
+
+Used by:
+--------
+- _includes/block--related-product--by-node.html
+- _layouts/page--product.html (wrapper)
+- _layouts/page--post.html (wrapper)
+
+Schema Structure:
+-----------------
+- ItemList with Product items
+- Each product has: name, url, image, sku, description
+- Complete Offer details: price, shipping, return policy
+- AggregateRating (if available)
+
+============================================================================
+{% endcomment %}
+
+{% assign raw_output = include.raw | default: false %}
+{% assign products = include.products %}
+
+{% unless raw_output %}<script type="application/ld+json">
+{% endunless %}{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "{{ page.url | absolute_url }}#related-products",
+  "name": "Produk Kayu Dolken Terkait",
+  "description": "Pilihan ukuran kayu dolken untuk kebutuhan proyek Anda",
+  "numberOfItems": {{ products.size }},
+  "itemListElement": [
+    {% for product in products %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "name": "{{ product.title }}",
+      "item": {
+        "@type": "Product",
+        "name": "{{ product.title }}",
+        "url": "{{ product.url | absolute_url }}",
+        "image": "{{ product.image | absolute_url }}",
+        "sku": "{{ product.sku }}",
+        "description": "{{ product.description | strip_html | strip_newlines | escape }}",
+        "brand": {
+          "@type": "Brand",
+          "name": "{{ site.business.name }}"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "{{ product.price }}",
+          "priceCurrency": "IDR",
+          "availability": "https://schema.org/InStock",
+          "url": "{{ product.url | absolute_url }}",
+          "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+          "seller": {
+            "@type": "Organization",
+            "name": "{{ site.business.name }}"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "IDR"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "ID"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 1,
+                "maxValue": 2,
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 3,
+                "maxValue": 7,
+                "unitCode": "DAY"
+              }
+            }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "ID",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          }
+        }{% if product.rating or product.review_count %},
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "{{ product.rating | default: 4.5 }}",
+          "reviewCount": "{{ product.review_count | default: 45 }}",
+          "bestRating": "5",
+          "worstRating": "1"
+        }{% endif %}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}{% unless raw_output %}
+</script>{% endunless %}

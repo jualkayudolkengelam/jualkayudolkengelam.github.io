@@ -99,5 +99,14 @@ Architecture Principle:
 
   {% include footer.html %}
   {% include block--cta--whatsapp.html %}
+
+  <!-- Collect all schemas at bottom before </body> -->
+  {% comment %}
+  NOTE: final_products is set inside block--related-product--by-node.html
+  Testing if variable is available in parent scope
+  {% endcomment %}
+  {% if final_products.size > 0 %}
+    {% include schema--related-product--by-node.html products=final_products %}
+  {% endif %}
 </body>
 </html>
