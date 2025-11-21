@@ -10,7 +10,7 @@
 
 ## 📋 Objective
 
-Create a modular template system for regular blog posts (`_posts/`) following the successful pattern from `_post_with_product/`. This will enable:
+Create a modular template system for regular blog posts (`_posts/`) following the successful pattern from `_post_with_city/`. This will enable:
 - **Consistency** - All posts use standardized reusable blocks
 - **Maintainability** - Update one block = update all posts
 - **Scalability** - Easy to add new content types and templates

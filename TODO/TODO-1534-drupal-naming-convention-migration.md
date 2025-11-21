@@ -605,9 +605,9 @@ git mv product.html node--product.html
 **Files to Update (frontmatter):**
 ```bash
 # Find all files using old layout names
-grep -r "layout: default" _posts/ _post_with_product/ _products/
+grep -r "layout: default" _posts/ _post_with_city/ _products/
 grep -r "layout: post" _posts/
-grep -r "layout: post-with-products" _post_with_product/
+grep -r "layout: post-with-products" _post_with_city/
 grep -r "layout: product" _products/
 
 # Update references
@@ -667,7 +667,7 @@ After creating node.html, edit it to:
 **Locations to check:**
 - [ ] Homepage (`index.html` or `index.md`) frontmatter → should use `layout: page--front`
 - [ ] `_posts/*.md` frontmatter → should use `layout: node--post`
-- [ ] `_post_with_product/*.md` frontmatter → should use `layout: node--post-with-product`
+- [ ] `_post_with_city/*.md` frontmatter → should use `layout: node--post-with-product`
 - [ ] `_products/*.md` frontmatter → should use `layout: page--product` (wrapper, not node!)
 - [ ] Static pages (about, contact, etc.) → should use `layout: page` (if they need wrapper)
 - [ ] Any other collections

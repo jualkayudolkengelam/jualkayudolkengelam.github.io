@@ -8,7 +8,7 @@
 # Date: 2025-11-19
 #
 # CARA PENGGUNAAN:
-# 1. Copy file ini ke _post_with_product/ dengan nama: YYYY-MM-DD-jual-kayu-dolken-{kota}.md
+# 1. Copy file ini ke _post_with_city/ dengan nama: YYYY-MM-DD-jual-kayu-dolken-{kota}.md
 # 2. Siapkan 4 foto produk (PENTING: harus format WebP):
 #    a. Buat direktori:
 #       mkdir -p assets/images/posts/jual-kayu-dolken-{kota}/

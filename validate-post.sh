@@ -3,7 +3,7 @@
 # ============================================================================
 # Validation Script for post_with_product
 # ============================================================================
-# Usage: ./validate-post.sh _post_with_product/2025-11-15-jual-kayu-dolken-kota.md
+# Usage: ./validate-post.sh _post_with_city/2025-11-15-jual-kayu-dolken-kota.md
 # Purpose: Validate frontmatter structure before build
 # Version: 1.0.0
 # ============================================================================
@@ -18,7 +18,7 @@ NC='\033[0m' # No Color
 if [ $# -eq 0 ]; then
     echo -e "${RED}Error: No file specified${NC}"
     echo "Usage: ./validate-post.sh <path-to-markdown-file>"
-    echo "Example: ./validate-post.sh _post_with_product/2025-11-15-jual-kayu-dolken-semarang.md"
+    echo "Example: ./validate-post.sh _post_with_city/2025-11-15-jual-kayu-dolken-semarang.md"
     exit 1
 fi
 

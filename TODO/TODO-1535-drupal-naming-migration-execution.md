@@ -253,7 +253,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Stage layout changes**
   ```bash
-  git add _posts/ _post_with_product/ _products/ index.* about.* contact.* 2>/dev/null
+  git add _posts/ _post_with_city/ _products/ index.* about.* contact.* 2>/dev/null
   git status
   ```
 

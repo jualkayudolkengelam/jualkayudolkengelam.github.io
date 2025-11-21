@@ -10,7 +10,7 @@
 
 ## 📋 Objective
 
-Refactor all blog post content in `_post_with_product/` to implement proper heading hierarchy (H2 → H3 → H4) for better:
+Refactor all blog post content in `_post_with_city/` to implement proper heading hierarchy (H2 → H3 → H4) for better:
 - **SEO optimization** - Google loves clear content structure
 - **User experience** - Easy to scan and navigate
 - **Accessibility** - Screen reader friendly
@@ -46,7 +46,7 @@ Example hierarchy:
 
 ## ✅ Refactoring Checklist
 
-### 📄 Post Files (_post_with_product/)
+### 📄 Post Files (_post_with_city/)
 
 - [ ] **2024-04-20-aplikasi-kayu-dolken-untuk-hotel-dan-cafe.md**
   - Current H2 count: ?
