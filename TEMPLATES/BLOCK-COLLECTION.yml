@@ -209,6 +209,62 @@ blocks:
       h6: 0
       total: 18
 
+  - id: tips-praktis
+    file: tutorial/block--tips-praktis.html
+    name: "Tips Praktis"
+    category: tutorial
+    tags:
+      - tutorial
+      - tips
+      - practical-guide
+      - best-practices
+      - 3-column
+    use_cases:
+      - tips_advice
+      - tutorial
+      - practical_guide
+      - customer_education
+    description: |
+      Block untuk menyajikan tips praktis dengan 3 kartu tematik.
+      Membantu pengguna memahami praktik terbaik dengan struktur yang terorganisir.
+      Ideal untuk artikel tips, panduan praktis, dan customer education.
+
+    heading_structure:
+      h2: 1   # Header title
+      h3: 4   # 1 overview (optional) + 3 card titles
+      h4: 9   # Detail headings (3 per card)
+      h5: 0
+      h6: 0
+      total: 14
+
+  - id: cara-pemasangan
+    file: tutorial/block--cara-pemasangan.html
+    name: "Cara Pemasangan"
+    category: tutorial
+    tags:
+      - tutorial
+      - installation
+      - step-by-step
+      - how-to
+      - 2-column
+    use_cases:
+      - installation_guide
+      - tutorial
+      - customer_education
+      - diy_guide
+    description: |
+      Block untuk menyajikan panduan pemasangan step-by-step dengan 2 fase utama: persiapan dan instalasi.
+      Membantu pengguna memahami tahapan lengkap dari awal hingga akhir dengan detail praktis.
+      Ideal untuk artikel tutorial instalasi dan panduan pemasangan.
+
+    heading_structure:
+      h2: 1   # Header title
+      h3: 3   # 1 overview (optional) + 2 card titles (persiapan, instalasi)
+      h4: 8   # Detail headings (4 per card)
+      h5: 0
+      h6: 0
+      total: 12
+
 # ============================================================================
 # USAGE NOTES
 # ============================================================================

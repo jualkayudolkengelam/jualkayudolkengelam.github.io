@@ -108,8 +108,98 @@
 
   In content:
   <section id="cara-pemasangan">
-    {% include posts/tutorial/block--cara-pemasangan.html %}
+    {% include components/tutorial/block--cara-pemasangan.html %}
   </section>
+
+  ============================================================================
+  COMPLETE YAML STRUCTURE - COPY & PASTE KE FRONTMATTER
+  ============================================================================
+
+  Instruksi Penggunaan:
+  1. Copy seluruh structure YAML di bawah ini
+  2. Paste ke frontmatter artikel Anda
+  3. Ganti semua teks "isi ..." dengan konten Anda
+  4. Field yang marked OPTIONAL bisa dihapus jika tidak digunakan
+  5. Setiap card WAJIB punya minimal: title, icon, color, paragraph_1, dan 1 detail
+
+  ---
+  # Section: Cara Pemasangan
+  cara_pemasangan:
+    # Header Section
+    title: "isi judul H2 (misal: Cara Memasang Kayu Dolken dengan Benar)"
+    subtitle: "isi subtitle di bawah title (OPTIONAL - hapus jika tidak perlu, misal: Panduan step-by-step instalasi yang tepat)"
+    icon: "bi-tools"  # Bootstrap icon class
+    gradient: "success"  # Options: primary, info, warning, success, danger, wood
+
+    # Introduction (OPTIONAL)
+    intro: "isi paragraf intro untuk memberikan konteks umum tentang pentingnya pemasangan yang benar. Jelaskan benefit jika memasang dengan prosedur yang tepat."
+
+    # Overview Section (OPTIONAL - hapus semua jika tidak perlu)
+    overview_title: "isi judul H3 overview (misal: Tahapan Pemasangan)"
+    overview_subtitle: "isi subtitle overview (OPTIONAL)"
+    overview_icon: "bi-check-circle-fill"  # OPTIONAL
+    overview_color: "success"  # OPTIONAL
+
+    # CARD 1: PERSIAPAN
+    persiapan:
+      title: "isi judul H3 card persiapan (misal: Persiapan Sebelum Pemasangan)"
+      icon: "bi-clipboard-check"  # Bootstrap icon class
+      color: "primary"  # Options: primary, success, warning, danger
+
+      # Paragraphs after H3
+      paragraph_1: "isi paragraf pertama di bawah H3, jelaskan pentingnya persiapan yang matang sebelum pemasangan dimulai"
+      paragraph_2: "isi paragraf kedua, lanjutkan penjelasan atau tambahkan konteks tambahan (OPTIONAL - hapus jika tidak perlu)"
+
+      # Detail 1 (REQUIRED)
+      detail_1:
+        h4: "isi judul H4 detail #1 (misal: Cek dan Sortir Material)"
+        paragraph: "isi 1 paragraf konten untuk detail #1, jelaskan cara cek kualitas dan sortir dolken dengan benar"
+
+      # Detail 2 (REQUIRED)
+      detail_2:
+        h4: "isi judul H4 detail #2 (misal: Siapkan Alat dan Perlengkapan)"
+        paragraph: "isi 1 paragraf konten untuk detail #2, list alat yang dibutuhkan dan jelaskan fungsinya"
+
+      # Detail 3 (REQUIRED)
+      detail_3:
+        h4: "isi judul H4 detail #3 (misal: Ukur dan Tandai Area Pemasangan)"
+        paragraph: "isi 1 paragraf konten untuk detail #3, jelaskan teknik pengukuran yang akurat dan cara menandai area"
+
+      # Detail 4 (REQUIRED)
+      detail_4:
+        h4: "isi judul H4 detail #4 (misal: Persiapan Pondasi dan Base)"
+        paragraph: "isi 1 paragraf konten untuk detail #4, jelaskan persiapan foundation yang kuat untuk dolken"
+
+    # CARD 2: INSTALASI
+    instalasi:
+      title: "isi judul H3 card instalasi (misal: Proses Instalasi Step-by-Step)"
+      icon: "bi-hammer"  # Bootstrap icon class
+      color: "success"  # Options: primary, success, warning, danger
+
+      # Paragraphs after H3
+      paragraph_1: "isi paragraf pertama di bawah H3, jelaskan overview proses instalasi secara umum"
+      paragraph_2: "isi paragraf kedua, tekankan pentingnya mengikuti urutan yang benar (OPTIONAL - hapus jika tidak perlu)"
+
+      # Detail 1 (REQUIRED)
+      detail_1:
+        h4: "isi judul H4 detail #1 (misal: Pasang Tiang/Dolken Pertama sebagai Base Point)"
+        paragraph: "isi 1 paragraf konten untuk detail #1, jelaskan cara menentukan dan pasang tiang pertama sebagai acuan"
+
+      # Detail 2 (REQUIRED)
+      detail_2:
+        h4: "isi judul H4 detail #2 (misal: Setting Jarak dan Alignment)"
+        paragraph: "isi 1 paragraf konten untuk detail #2, jelaskan teknik mengatur jarak dan menjaga kelurusan tiang"
+
+      # Detail 3 (REQUIRED)
+      detail_3:
+        h4: "isi judul H4 detail #3 (misal: Pengikatan dan Penguatan Struktur)"
+        paragraph: "isi 1 paragraf konten untuk detail #3, jelaskan cara mengikat dolken dengan kawat atau material pengikat lain"
+
+      # Detail 4 (REQUIRED)
+      detail_4:
+        h4: "isi judul H4 detail #4 (misal: Finishing dan Quality Check)"
+        paragraph: "isi 1 paragraf konten untuk detail #4, jelaskan tahap akhir finishing dan cara cek kualitas hasil pemasangan"
+  ---
 
   ============================================================================
 {% endcomment %}
