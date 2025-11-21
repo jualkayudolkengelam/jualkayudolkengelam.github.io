@@ -47,11 +47,6 @@ page.html (this file - site wrapper)
 {% include head.html %}
 
 <body>
-  <!-- Unified Schema: WebSite + Organization + Navigation + Page in single @graph -->
-  {% unless page.skip_page_schema %}
-    {% include schema--page.html %}
-  {% endunless %}
-
   {% include header.html %}
 
   <main class="main-content">
@@ -60,5 +55,10 @@ page.html (this file - site wrapper)
 
   {% include footer.html %}
   {% include block--cta--whatsapp.html %}
+
+  <!-- Global Schema: WebSite + Organization + Navigation + Page in @graph -->
+  {% unless page.skip_page_schema %}
+    {% include schema--page.html %}
+  {% endunless %}
 </body>
 </html>
