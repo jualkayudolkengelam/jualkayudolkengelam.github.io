@@ -1,0 +1,506 @@
+{% comment %}
+  ============================================================================
+  Tentang Kota Kami Block Component
+  ============================================================================
+
+  @file        _includes/components/block--tentang-kota-ini.html
+  @description Menyajikan informasi komprehensif tentang kota/daerah untuk membangun
+               local authority dan trust. Menampilkan sejarah, ekonomi, landmark, dan
+               kehidupan modern dalam format yang terstruktur dan mudah dipahami.
+               Membantu pembaca memahami konteks geografis dan sosial-ekonomi yang
+               relevan dengan bisnis lokal. Ideal untuk halaman About, landing page
+               daerah, dan artikel lokasi-spesifik.
+
+  @version     1.0.0
+  @date        2025-11-21
+  @author      jualkayudolkengelam
+
+  Heading Structure (SEO & Accessibility):
+  -----------------------------------------
+  - 1 × H2: Main section title (tentang [nama_kota]: [tagline])
+  - 2 × H3: Section headers (tentang_kota_1.title, tentang_kota_2.title)
+  - 4 × H4: Card titles (card_1 to card_4)
+  - 4 × H5: Card subtitles (card_1.subjudul to card_4.subjudul)
+
+  Total Headings: 11 (1×H2 + 2×H3 + 4×H4 + 4×H5)
+
+  Paragraphs (REQUIRED for SEO):
+  - 1 after H2: overview
+  - 1 after H3 section 1: tentang_kota_1.paragraph_h3
+  - 1 after H3 section 2: tentang_kota_2.paragraph_h3
+  - 4 after H4 cards: card_1.deskripsi to card_4.deskripsi
+  - 4 after H5: card_1.paragraph_h5 to card_4.paragraph_h5
+
+  Total Paragraphs: 11
+
+  Features:
+  ---------
+  - H2 heading with dynamic city name and tagline
+  - Overview paragraph after H2
+  - 2 H3 sections with paragraphs
+  - 4 hardcoded cards (card_1 to card_4) - NO LOOPS!
+  - Each card has H4 title, H5 subjudul
+  - Multiple content formats: fakta lists, list_item, info_tambahan
+  - Color-coded sections (primary/success)
+  - Responsive card grid layout
+
+  Parameters:
+  -----------
+  - page.nama_kota: City name (required for H2)
+  - page.tentang_kota: Object containing:
+    - tagline: City tagline (e.g., "Ibu Kota Jawa Tengah") → H2 subtitle
+    - deskripsi_singkat: Brief description text → header subtitle
+    - overview: Paragraph after H2 (REQUIRED for SEO) → class="overview"
+    - tentang_kota_1: Section 1 object (NO LOOP! - hardcoded)
+      - title: H3 section 1 title → class="title"
+      - paragraph_h3: Paragraph after H3 (REQUIRED for SEO) → class="paragraph_h3"
+      - card_1, card_2: Hardcoded cards for section 1 → class="card_1", "card_2"
+        Each card:
+        - judul: H4 card title → class="judul"
+        - icon: Bootstrap icon class
+        - subjudul: H5 subtitle → class="subjudul"
+        - paragraph_h5: Paragraph after H5 (REQUIRED) → class="paragraph_h5"
+        - deskripsi: Main description paragraph → class="deskripsi"
+        - fakta: Array of facts (optional) → class="fakta"
+    - tentang_kota_2: Section 2 object (NO LOOP! - hardcoded)
+      - title: H3 section 2 title → class="title"
+      - paragraph_h3: Paragraph after H3 (REQUIRED for SEO) → class="paragraph_h3"
+      - card_3, card_4: Hardcoded cards for section 2 → class="card_3", "card_4"
+        Each card:
+        - judul: H4 card title → class="judul"
+        - icon: Bootstrap icon class
+        - subjudul: H5 subtitle → class="subjudul"
+        - paragraph_h5: Paragraph after H5 (REQUIRED) → class="paragraph_h5"
+        - deskripsi: Main description paragraph → class="deskripsi"
+        - list_item: Array of list items (optional) → class="list_item"
+        - info_tambahan: Additional info (optional) → class="info_tambahan"
+
+  Class Mapping (Best Practice Pattern):
+  ---------------------------------------
+  Frontmatter key → HTML class name (Semantic Classes)
+
+  Header Section:
+  - title (H2) → <h2 class="h2 mb-0 fw-bold text-white">
+  - overview → <p class="overview mb-0">
+
+  Section 1 (tentang_kota_1):
+  - title → <h3 class="title h4 mb-0 text-wood fw-bold">
+  - paragraph_h3 → <p class="paragraph_h3 small text-muted mb-3">
+  - card_1 → <div class="card_1 col-md-6">
+  - card_2 → <div class="card_2 col-md-6">
+
+  Section 2 (tentang_kota_2):
+  - title → <h3 class="title h4 mb-0 text-wood fw-bold">
+  - paragraph_h3 → <p class="paragraph_h3 small text-muted mb-3">
+  - card_3 → <div class="card_3 col-md-6">
+  - card_4 → <div class="card_4 col-md-6">
+
+  Card Content (all cards):
+  - judul → <h4 class="judul h5 mb-0 fw-bold">
+  - subjudul → <h5 class="subjudul h6 fw-bold text-wood mb-2">
+  - paragraph_h5 → <p class="paragraph_h5 small mb-3">
+  - deskripsi → <p class="deskripsi small mb-3">
+  - fakta → <p class="fakta small">
+  - list_item → <ul class="list_item list-unstyled small">
+  - info_tambahan → <p class="info_tambahan small mb-0 text-muted">
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  nama_kota: Semarang
+  tentang_kota:
+    tagline: "Ibu Kota Jawa Tengah"
+    deskripsi_singkat: "Pusat pemerintahan, ekonomi, dan budaya Jawa Tengah"
+    overview: "Semarang adalah ibu kota dan kota terbesar di Provinsi Jawa Tengah dengan populasi 1,6 juta jiwa."
+    tentang_kota_1:
+      title: "Informasi Semarang"
+      paragraph_h3: "Mengenal lebih dekat tentang sejarah dan perkembangan kota ini."
+      card_1:
+        judul: "Sejarah Semarang"
+        icon: "bi-clock-history"
+        subjudul: "Asal-usul Nama dan Perkembangan"
+        paragraph_h5: "Nama Semarang memiliki sejarah yang kaya dan beragam interpretasi."
+        deskripsi: "Sejarah Semarang berawal kurang lebih pada abad ke-6..."
+        fakta:
+          - "Berasal dari kata asem (pohon asam) dan arang (jarang)"
+          - "Sejak masa penjajahan Belanda menjadi pelabuhan penting"
+      card_2:
+        judul: "Ekonomi & Perdagangan"
+        icon: "bi-graph-up-arrow"
+        subjudul: "Pusat Bisnis Jawa Tengah"
+        paragraph_h5: "Semarang adalah hub ekonomi terbesar di Jawa Tengah."
+        deskripsi: "Sebagai ibu kota provinsi, Semarang memiliki peran vital..."
+    tentang_kota_2:
+      title: "Lebih Lanjut tentang Semarang"
+      paragraph_h3: "Hal menarik lainnya yang perlu Anda ketahui tentang kota ini."
+      card_3:
+        judul: "Landmark & Wisata"
+        icon: "bi-building"
+        subjudul: "Destinasi Wisata Populer"
+        paragraph_h5: "Semarang memiliki banyak landmark bersejarah yang menarik."
+        deskripsi: "Dari Kota Lama hingga Lawang Sewu, setiap sudut punya cerita..."
+        list_item:
+          - "Kota Lama Semarang - Bangunan kolonial bersejarah"
+          - "Simpang Lima - Pusat bisnis dan kuliner modern"
+      card_4:
+        judul: "Kehidupan Modern"
+        icon: "bi-buildings-fill"
+        subjudul: "Infrastruktur & Fasilitas"
+        paragraph_h5: "Kota berkembang dengan infrastruktur modern yang memadai."
+        deskripsi: "Mall, hotel, dan fasilitas bisnis kelas dunia tersedia..."
+        info_tambahan: "Bandara Ahmad Yani melayani penerbangan domestik & internasional"
+  ---
+
+  In content:
+  <section id="tentang-kota">
+    {% include components/block--tentang-kota-ini.html %}
+  </section>
+
+  ============================================================================
+  COMPLETE YAML STRUCTURE - COPY & PASTE KE FRONTMATTER
+  ============================================================================
+
+  Instruksi Penggunaan:
+  1. Copy seluruh structure YAML di bawah ini
+  2. Paste ke frontmatter artikel Anda
+  3. Ganti semua teks "isi ..." dengan konten Anda
+  4. Ganti "NamaKota" dengan nama kota Anda
+  5. Section 1 biasanya: Sejarah & Ekonomi (card_1, card_2)
+  6. Section 2 biasanya: Landmark & Kehidupan Modern (card_3, card_4)
+
+  ---
+  # City Name (REQUIRED)
+  nama_kota: NamaKota  # Ganti dengan nama kota (misal: Semarang, Surabaya, dll)
+
+  # Section: Tentang Kota
+  tentang_kota:
+    # Header Section
+    tagline: "isi tagline kota (misal: Ibu Kota Jawa Tengah)"
+    deskripsi_singkat: "isi deskripsi singkat (misal: Pusat pemerintahan, ekonomi, dan budaya)"
+    overview: "isi overview paragraph setelah H2 - REQUIRED untuk SEO. Jelaskan ringkasan kota: populasi, lokasi, dan peran strategisnya."
+
+    # SECTION 1: Informasi Kota (H3)
+    tentang_kota_1:
+      title: "isi title H3 section 1 (misal: Informasi [NamaKota])"
+      paragraph_h3: "isi paragraph setelah H3 - REQUIRED untuk SEO (misal: Mengenal lebih dekat tentang sejarah dan perkembangan kota ini.)"
+
+      # CARD 1 - Biasanya: Sejarah
+      card_1:
+        judul: "isi H4 card #1 (misal: Sejarah [NamaKota])"
+        icon: "bi-clock-history"  # Bootstrap icon class
+        subjudul: "isi H5 subjudul (misal: Asal-usul Nama dan Perkembangan)"
+        paragraph_h5: "isi paragraph setelah H5 - REQUIRED untuk SEO. Berikan intro singkat tentang topik H5."
+        deskripsi: "isi deskripsi utama card. Jelaskan detail sejarah kota, kronologi penting, atau milestone bersejarah."
+        fakta:  # Array - bisa multiple items
+          - "isi fakta #1 (misal: Berasal dari kata X yang berarti Y)"
+          - "isi fakta #2 (misal: Sejak masa penjajahan...)"
+          - "isi fakta #3 (optional)"
+
+      # CARD 2 - Biasanya: Ekonomi
+      card_2:
+        judul: "isi H4 card #2 (misal: Ekonomi & Perdagangan)"
+        icon: "bi-graph-up-arrow"
+        subjudul: "isi H5 subjudul (misal: Pusat Bisnis Regional)"
+        paragraph_h5: "isi paragraph setelah H5 - REQUIRED untuk SEO."
+        deskripsi: "isi deskripsi tentang ekonomi kota, sektor utama, dan potensi bisnis."
+        fakta:
+          - "isi fakta ekonomi #1 (misal: PDRB mencapai Rp X triliun)"
+          - "isi fakta ekonomi #2 (misal: Hub logistik terbesar di...)"
+
+    # SECTION 2: Lebih Lanjut (H3)
+    tentang_kota_2:
+      title: "isi title H3 section 2 (misal: Lebih Lanjut tentang [NamaKota])"
+      paragraph_h3: "isi paragraph setelah H3 - REQUIRED untuk SEO (misal: Hal menarik lainnya yang perlu Anda ketahui tentang kota ini.)"
+
+      # CARD 3 - Biasanya: Landmark/Wisata
+      card_3:
+        judul: "isi H4 card #3 (misal: Landmark & Wisata)"
+        icon: "bi-building"
+        subjudul: "isi H5 subjudul (misal: Destinasi Wisata Populer)"
+        paragraph_h5: "isi paragraph setelah H5 - REQUIRED untuk SEO."
+        deskripsi: "isi deskripsi tentang landmark dan tempat wisata terkenal di kota ini."
+        list_item:  # Array - format list
+          - "isi list item #1 (misal: Kota Lama - Bangunan kolonial bersejarah)"
+          - "isi list item #2 (misal: Simpang Lima - Pusat bisnis modern)"
+          - "isi list item #3 (optional)"
+        info_tambahan: "isi info tambahan jika ada (optional - bisa dihapus)"
+
+      # CARD 4 - Biasanya: Kehidupan Modern
+      card_4:
+        judul: "isi H4 card #4 (misal: Kehidupan Modern)"
+        icon: "bi-buildings-fill"
+        subjudul: "isi H5 subjudul (misal: Infrastruktur & Fasilitas)"
+        paragraph_h5: "isi paragraph setelah H5 - REQUIRED untuk SEO."
+        deskripsi: "isi deskripsi tentang kehidupan modern, infrastruktur, fasilitas publik, dan kemudahan akses."
+        list_item:
+          - "isi list item #1 (misal: Bandara internasional dengan 50+ rute)"
+          - "isi list item #2 (misal: 20+ mall dan pusat perbelanjaan modern)"
+        info_tambahan: "isi info tambahan (misal: Akses tol, kereta cepat, dll)"
+  ---
+
+  Notes:
+  - nama_kota: Digunakan di H2 dan H3 titles secara dinamis
+  - Section 1 (tentang_kota_1): Fokus pada Sejarah & Ekonomi - menggunakan "fakta"
+  - Section 2 (tentang_kota_2): Fokus pada Landmark & Modern - menggunakan "list_item"
+  - paragraph_h5: REQUIRED di semua cards untuk SEO hierarchy yang baik
+  - fakta & list_item: Bisa punya unlimited items (array)
+  - info_tambahan: Optional, hapus jika tidak perlu
+  - Icon list: https://icons.getbootstrap.com/
+  - Section colors: tentang_kota_1 (primary/blue), tentang_kota_2 (success/green)
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.tentang_kota %}
+<!-- Header Section -->
+<div class="my-5">
+  <div class="card border-0 shadow-lg">
+    <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);">
+      <i class="bi bi-buildings-fill mb-2 fs-2-5rem"></i>
+      <h2 class="h2 mb-0 fw-bold text-white">Tentang{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}{% if page.tentang_kota.tagline %}: {{ page.tentang_kota.tagline }}{% endif %}</h2>
+      <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+        <i class="bi bi-geo-alt me-1"></i>
+        {{ page.tentang_kota.deskripsi_singkat | default: "Informasi lengkap tentang kota kami" }}
+        <i class="bi bi-geo-alt ms-1"></i>
+      </p>
+    </div>
+  </div>
+</div>
+
+{% if page.tentang_kota.overview %}
+<div class="tentang-kota-overview card border-0 shadow-sm my-4">
+  <div class="card-body">
+    <p class="mb-0">{{ page.tentang_kota.overview }}</p>
+  </div>
+</div>
+{% endif %}
+
+{% if page.tentang_kota.tentang_kota_1 %}
+{% assign section1 = page.tentang_kota.tentang_kota_1 %}
+<!-- H3: Section 1 -->
+<div class="tentang-kota-1 my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      {% if section1.title %}
+      <h3 class="title h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-info-circle text-primary me-2"></i>{{ section1.title }}
+      </h3>
+      {% else %}
+      <h3 class="title h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-info-circle text-primary me-2"></i>Informasi{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}
+      </h3>
+      {% endif %}
+
+      <!-- Paragraph after H3 (REQUIRED for SEO) -->
+      {% if section1.paragraph_h3 %}
+      <p class="paragraph_h3 small text-muted mb-0 mt-1">{{ section1.paragraph_h3 }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <!-- CARD 1 -->
+    {% if section1.card_1 %}
+    <div class="col-md-6 card_1">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header bg-primary text-white">
+          <div class="d-flex align-items-center">
+            <i class="bi {{ section1.card_1.icon | default: 'bi-info-circle' }} me-2 fs-1-5rem"></i>
+            <h4 class="judul h5 mb-0 fw-bold">{{ section1.card_1.judul }}</h4>
+          </div>
+        </div>
+        <div class="card-body">
+          <!-- H5: Subjudul -->
+          {% if section1.card_1.subjudul %}
+          <h5 class="subjudul h6 fw-bold text-wood mb-2">
+            <i class="bi {{ section1.card_1.icon_subjudul | default: 'bi-book' }} me-1"></i>{{ section1.card_1.subjudul }}
+          </h5>
+          {% endif %}
+
+          <!-- Paragraph after H5 (REQUIRED for SEO) -->
+          {% if section1.card_1.paragraph_h5 %}
+          <p class="paragraph_h5 small mb-3">{{ section1.card_1.paragraph_h5 }}</p>
+          {% endif %}
+
+          {% if section1.card_1.deskripsi %}
+          <p class="deskripsi small mb-3">{{ section1.card_1.deskripsi }}</p>
+          {% endif %}
+
+          {% if section1.card_1.fakta %}
+            {% for fakta in section1.card_1.fakta %}
+            <p class="fakta small {% if forloop.last %}mb-0 text-muted{% else %}mb-3{% endif %}">
+              <i class="bi bi-info-circle me-1"></i>{{ fakta }}
+            </p>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- CARD 2 -->
+    {% if section1.card_2 %}
+    <div class="col-md-6 card_2">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header bg-primary text-white">
+          <div class="d-flex align-items-center">
+            <i class="bi {{ section1.card_2.icon | default: 'bi-info-circle' }} me-2 fs-1-5rem"></i>
+            <h4 class="judul h5 mb-0 fw-bold">{{ section1.card_2.judul }}</h4>
+          </div>
+        </div>
+        <div class="card-body">
+          <!-- H5: Subjudul -->
+          {% if section1.card_2.subjudul %}
+          <h5 class="subjudul h6 fw-bold text-wood mb-2">
+            <i class="bi {{ section1.card_2.icon_subjudul | default: 'bi-book' }} me-1"></i>{{ section1.card_2.subjudul }}
+          </h5>
+          {% endif %}
+
+          <!-- Paragraph after H5 (REQUIRED for SEO) -->
+          {% if section1.card_2.paragraph_h5 %}
+          <p class="paragraph_h5 small mb-3">{{ section1.card_2.paragraph_h5 }}</p>
+          {% endif %}
+
+          {% if section1.card_2.deskripsi %}
+          <p class="deskripsi small mb-3">{{ section1.card_2.deskripsi }}</p>
+          {% endif %}
+
+          {% if section1.card_2.fakta %}
+            {% for fakta in section1.card_2.fakta %}
+            <p class="fakta small {% if forloop.last %}mb-0 text-muted{% else %}mb-3{% endif %}">
+              <i class="bi bi-info-circle me-1"></i>{{ fakta }}
+            </p>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
+{% if page.tentang_kota.tentang_kota_2 %}
+{% assign section2 = page.tentang_kota.tentang_kota_2 %}
+<!-- H3: Section 2 -->
+<div class="tentang-kota-2 my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      {% if section2.title %}
+      <h3 class="title h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-building text-success me-2"></i>{{ section2.title }}
+      </h3>
+      {% else %}
+      <h3 class="title h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-building text-success me-2"></i>Lebih Lanjut tentang{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}
+      </h3>
+      {% endif %}
+
+      <!-- Paragraph after H3 (REQUIRED for SEO) -->
+      {% if section2.paragraph_h3 %}
+      <p class="paragraph_h3 small text-muted mb-0 mt-1">{{ section2.paragraph_h3 }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <!-- CARD 3 -->
+    {% if section2.card_3 %}
+    <div class="col-md-6 card_3">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header bg-success text-white">
+          <div class="d-flex align-items-center">
+            <i class="bi {{ section2.card_3.icon | default: 'bi-building' }} me-2 fs-1-5rem"></i>
+            <h4 class="judul h5 mb-0 fw-bold">{{ section2.card_3.judul }}</h4>
+          </div>
+        </div>
+        <div class="card-body">
+          <!-- H5: Subjudul -->
+          {% if section2.card_3.subjudul %}
+          <h5 class="subjudul h6 fw-bold text-wood mb-2">
+            <i class="bi {{ section2.card_3.icon_subjudul | default: 'bi-pin-map' }} me-1"></i>{{ section2.card_3.subjudul }}
+          </h5>
+          {% endif %}
+
+          <!-- Paragraph after H5 (REQUIRED for SEO) -->
+          {% if section2.card_3.paragraph_h5 %}
+          <p class="paragraph_h5 small mb-3">{{ section2.card_3.paragraph_h5 }}</p>
+          {% endif %}
+
+          {% if section2.card_3.deskripsi %}
+          <p class="deskripsi small mb-3">{{ section2.card_3.deskripsi }}</p>
+          {% endif %}
+
+          {% if section2.card_3.list_item %}
+          <ul class="list_item list-unstyled small {% if section2.card_3.info_tambahan %}mb-3{% else %}mb-0{% endif %}">
+            {% for list in section2.card_3.list_item %}
+            <li class="{% if forloop.last %}mb-0{% else %}mb-3{% endif %}">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              <span class="list-content">{{ list }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          {% if section2.card_3.info_tambahan %}
+          <p class="info_tambahan small mb-0 text-muted">
+            <i class="bi bi-info-circle me-1"></i>{{ section2.card_3.info_tambahan }}
+          </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- CARD 4 -->
+    {% if section2.card_4 %}
+    <div class="col-md-6 card_4">
+      <div class="card border-0 shadow-sm h-100 hover-lift">
+        <div class="card-header bg-success text-white">
+          <div class="d-flex align-items-center">
+            <i class="bi {{ section2.card_4.icon | default: 'bi-building' }} me-2 fs-1-5rem"></i>
+            <h4 class="judul h5 mb-0 fw-bold">{{ section2.card_4.judul }}</h4>
+          </div>
+        </div>
+        <div class="card-body">
+          <!-- H5: Subjudul -->
+          {% if section2.card_4.subjudul %}
+          <h5 class="subjudul h6 fw-bold text-wood mb-2">
+            <i class="bi {{ section2.card_4.icon_subjudul | default: 'bi-pin-map' }} me-1"></i>{{ section2.card_4.subjudul }}
+          </h5>
+          {% endif %}
+
+          <!-- Paragraph after H5 (REQUIRED for SEO) -->
+          {% if section2.card_4.paragraph_h5 %}
+          <p class="paragraph_h5 small mb-3">{{ section2.card_4.paragraph_h5 }}</p>
+          {% endif %}
+
+          {% if section2.card_4.deskripsi %}
+          <p class="deskripsi small mb-3">{{ section2.card_4.deskripsi }}</p>
+          {% endif %}
+
+          {% if section2.card_4.list_item %}
+          <ul class="list_item list-unstyled small {% if section2.card_4.info_tambahan %}mb-3{% else %}mb-0{% endif %}">
+            {% for list in section2.card_4.list_item %}
+            <li class="{% if forloop.last %}mb-0{% else %}mb-3{% endif %}">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              <span class="list-content">{{ list }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          {% if section2.card_4.info_tambahan %}
+          <p class="info_tambahan small mb-0 text-muted">
+            <i class="bi bi-info-circle me-1"></i>{{ section2.card_4.info_tambahan }}
+          </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+{% endif %}
