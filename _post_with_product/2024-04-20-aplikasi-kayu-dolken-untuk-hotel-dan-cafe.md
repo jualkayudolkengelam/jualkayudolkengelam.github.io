@@ -871,6 +871,38 @@ Kayu dolken gelam diameter kecil hingga sedang (2-6 cm) menjadi trending dalam d
       </div>
     </div>
   </div>
+
+  <div class="col-md-6 col-lg-4">
+    <div class="card border-0 shadow-sm h-100">
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+          <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+            <i class="bi bi-tree text-success" style="font-size: 1.5rem;"></i>
+          </div>
+          <h3 class="h6 mb-0 text-wood">6. Combine with Greenery</h3>
+        </div>
+        <p class="small mb-3 text-muted">Kayu + tanaman = perfect match:</p>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2">
+            <i class="bi bi-flower1 text-success me-2"></i>
+            <span class="small">Tambahkan tanaman gantung atau merambat</span>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-droplet text-primary me-2"></i>
+            <span class="small">Hanging plants di pergola dolken</span>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-grid-3x3 text-info me-2"></i>
+            <span class="small">Pot tanaman di base partition dolken</span>
+          </li>
+          <li class="mb-0">
+            <i class="bi bi-stars text-warning me-2"></i>
+            <span class="small">Biophilic design meningkatkan wellness</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
 ## Supplier Checklist
