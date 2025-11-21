@@ -4,9 +4,12 @@
   ============================================================================
 
   @file        _includes/components/block--case-study.html
-  @description Reusable component for case study section with profile,
-               application details, investment, and ROI metrics
-               HARDCODED - NO LOOPS!
+  @description Menyajikan studi kasus nyata implementasi produk dengan data
+               lengkap dari profil bisnis, aplikasi detail, hingga analisis ROI.
+               Membantu prospek memahami value proposition melalui bukti sosial
+               dan hasil terukur. Ideal untuk membangun kredibilitas, menunjukkan
+               track record, dan membantu prospek memvisualisasikan implementasi
+               di bisnis mereka sendiri.
 
   @version     1.0.0
   @date        2025-11-21
@@ -14,10 +17,23 @@
 
   Heading Structure (SEO & Accessibility):
   -----------------------------------------
-  - 1 × H2: Main section title
-  - 3 × H3: Profil title, Aplikasi title, ROI title
-  - 4 × H4: 3 aplikasi card titles + 1 investment title
-  - 0 × H5, H6: Not used in this block
+  - 1 × H2: Main section title (case_study.title)
+  - 3 × H3: profil_title, aplikasi_title, roi_title
+  - 4 × H4: 3 aplikasi card titles + investment_title
+  - 6 × H5: Sub-headings (h5_1, h5_2) × 3 aplikasi cards
+  - 0 × H6: Not used in this block
+
+  Total Headings: 14 (1×H2 + 3×H3 + 4×H4 + 6×H5)
+
+  Paragraphs (REQUIRED for SEO):
+  - 1 after H2: paragraph_1
+  - 1 after H3 profil_title: profil_intro
+  - 1 after H3 aplikasi_title: aplikasi_intro
+  - 3 after H4 card titles: aplikasi_card_[1-3].intro
+  - 6 after H5s: aplikasi_card_[1-3].paragraph_h5_[1-2]
+  - 1 after H3 roi_title: roi_intro
+
+  Total Paragraphs: 13
 
   Features:
   ---------
@@ -71,36 +87,137 @@
 
   Usage:
   ------
-  In frontmatter:
-  ---
-  case_study:
-    title: "Case Study: Cafe di Jakarta"
-    profil_title: "Profil Cafe"
-    profil_info_1:
-      icon: "bi-shop"
-      label: "Nama"
-      value: "[Cafe XYZ]"
-    aplikasi_title: "Aplikasi Dolken"
-    aplikasi_card_1:
-      title: "Feature Wall"
-      luas: "30 m²"
-      detail_1: "900 batang dolken 2-3 cm"
-      detail_2: "Pattern: Vertical variasi panjang"
-      budget: "Rp 13.5 juta"
-    investment_title: "Total Investment Material"
-    investment_value: "± Rp 32.25 juta"
-    roi_title: "Return on Investment (ROI)"
-    roi_metric_1:
-      icon: "bi-instagram"
-      color: "primary"
-      label: "Instagram Mentions"
-      value: "↑ 300%"
-  ---
-
   In content:
   <section id="case-study">
     {% include components/block--case-study.html %}
   </section>
+
+  ============================================================================
+  COMPLETE YAML STRUCTURE - COPY & PASTE KE FRONTMATTER
+  ============================================================================
+
+  Instruksi Penggunaan:
+  1. Copy seluruh structure YAML di bawah ini
+  2. Paste ke frontmatter artikel Anda
+  3. Ganti semua teks "isi ..." dengan konten Anda
+  4. Sesuaikan jumlah metric ROI sesuai kebutuhan
+  5. Semua field bertanda REQUIRED wajib diisi untuk SEO optimal
+
+  ---
+  # Section: Case Study
+  case_study:
+    # Main Section (H2)
+    title: "isi judul H2 (misal: Case Study: Cafe Minimalis di Jakarta Selatan)"
+
+    # Paragraph after H2 (REQUIRED for SEO)
+    paragraph_1: "isi paragraf overview case study ini..."
+
+    # PROFIL SECTION (H3)
+    profil_title: "isi H3 profil (misal: Profil Bisnis)"
+
+    # Intro paragraph after H3 profil_title (REQUIRED for SEO)
+    profil_intro: "isi paragraf intro profil bisnis..."
+
+    profil_info_1:
+      icon: "bi-shop"  # Bootstrap icon
+      label: "isi label (misal: Jenis)"
+      value: "isi value (misal: Cafe & Coworking)"
+    profil_info_2:
+      icon: "bi-geo-alt"
+      label: "isi label (misal: Lokasi)"
+      value: "isi value (misal: Jakarta Selatan)"
+    profil_info_3:
+      icon: "bi-people"
+      label: "isi label (misal: Kapasitas)"
+      value: "isi value (misal: 50 pax)"
+
+    # APLIKASI SECTION (H3)
+    aplikasi_title: "isi H3 aplikasi (misal: Implementasi Material)"
+
+    # Intro paragraph after H3 aplikasi_title (REQUIRED for SEO)
+    aplikasi_intro: "isi paragraf intro implementasi..."
+
+    # APLIKASI CARD 1 (H4)
+    aplikasi_card_1:
+      title: "isi H4 card #1 (misal: Feature Wall Lobby)"
+
+      # Intro paragraph after H4 (REQUIRED for SEO)
+      intro: "isi paragraf intro aplikasi #1..."
+
+      # H5 Sub-headings dengan paragraf (REQUIRED for SEO)
+      h5_1: "isi H5 pertama (misal: Desain Konsep)"
+      paragraph_h5_1: "isi paragraf setelah H5 pertama..."
+
+      h5_2: "isi H5 kedua (misal: Proses Instalasi)"
+      paragraph_h5_2: "isi paragraf setelah H5 kedua..."
+
+      luas: "isi luas area (misal: 25 m²)"
+      detail_1: "isi detail #1 (misal: 750 batang dolken 3-4 cm)"
+      detail_2: "isi detail #2 (misal: Pattern: Vertical dengan variasi panjang)"
+      budget: "isi budget (misal: Rp 15 juta)"
+
+    # APLIKASI CARD 2 (H4)
+    aplikasi_card_2:
+      title: "isi H4 card #2 (misal: Backdrop Bar)"
+      intro: "isi paragraf intro aplikasi #2..."
+      h5_1: "isi H5 pertama card #2"
+      paragraph_h5_1: "isi paragraf h5_1 card #2"
+      h5_2: "isi H5 kedua card #2"
+      paragraph_h5_2: "isi paragraf h5_2 card #2"
+      luas: "isi luas area #2"
+      detail_1: "isi detail #1 card #2"
+      detail_2: "isi detail #2 card #2"
+      budget: "isi budget card #2"
+
+    # APLIKASI CARD 3 (H4)
+    aplikasi_card_3:
+      title: "isi H4 card #3 (misal: Outdoor Deck Railing)"
+      intro: "isi paragraf intro aplikasi #3..."
+      h5_1: "isi H5 pertama card #3"
+      paragraph_h5_1: "isi paragraf h5_1 card #3"
+      h5_2: "isi H5 kedua card #3"
+      paragraph_h5_2: "isi paragraf h5_2 card #3"
+      luas: "isi luas area #3"
+      detail_1: "isi detail #1 card #3"
+      detail_2: "isi detail #2 card #3"
+      budget: "isi budget card #3"
+
+    # INVESTMENT SUMMARY (H4)
+    investment_title: "isi H4 investment (misal: Total Investment Material)"
+    investment_value: "isi total value (misal: ± Rp 45 juta)"
+
+    # ROI SECTION (H3)
+    roi_title: "isi H3 ROI (misal: Return on Investment)"
+
+    # Intro paragraph after H3 roi_title (REQUIRED for SEO)
+    roi_intro: "isi paragraf intro ROI dan impact bisnis..."
+
+    # ROI Metrics (minimal 1, maksimal 4)
+    roi_metric_1:
+      icon: "bi-instagram"  # Bootstrap icon
+      color: "primary"  # Options: primary, success, warning, info, danger
+      label: "isi label metric (misal: Instagram Mentions)"
+      value: "isi value (misal: ↑ 300%)"
+      note: "isi catatan (misal: dalam 3 bulan pertama)"
+    roi_metric_2:
+      icon: "bi-graph-up"
+      color: "success"
+      label: "isi label metric #2"
+      value: "isi value metric #2"
+      note: "isi catatan (optional)"
+    roi_metric_3:
+      icon: "bi-people"
+      color: "info"
+      label: "isi label metric #3"
+      value: "isi value metric #3"
+      note: "isi catatan (optional)"
+    roi_metric_4:
+      icon: "bi-star"
+      color: "warning"
+      label: "isi label metric #4"
+      value: "isi value metric #4"
+      note: "isi catatan (optional)"
+  ---
 
   ============================================================================
 {% endcomment %}
@@ -114,6 +231,11 @@
   <h2 class="title h2 fw-bold text-wood mb-4">{{ section.title }}</h2>
   {% endif %}
 
+  <!-- Paragraph after H2 (REQUIRED for SEO) -->
+  {% if section.paragraph_1 %}
+  <p class="paragraph_1 mb-4">{{ section.paragraph_1 }}</p>
+  {% endif %}
+
   <!-- Profile Card -->
   <div class="card border-0 shadow-lg mb-4">
     <div class="card-header bg-wood text-white py-3">
@@ -124,6 +246,10 @@
       {% endif %}
     </div>
     <div class="card-body bg-light">
+      <!-- Intro paragraph after H3 profil_title (REQUIRED for SEO) -->
+      {% if section.profil_intro %}
+      <p class="profil_intro mb-3">{{ section.profil_intro }}</p>
+      {% endif %}
       <div class="row">
         <!-- Profile Info 1 -->
         {% if section.profil_info_1 %}
@@ -168,6 +294,11 @@
   </h3>
   {% endif %}
 
+  <!-- Intro paragraph after H3 aplikasi_title (REQUIRED for SEO) -->
+  {% if section.aplikasi_intro %}
+  <p class="aplikasi_intro mb-3">{{ section.aplikasi_intro }}</p>
+  {% endif %}
+
   <div class="row g-3 mb-4">
     <!-- Aplikasi Card 1 -->
     {% if section.aplikasi_card_1 %}
@@ -178,6 +309,27 @@
             <span class="h4 mb-0 text-primary fw-bold">1</span>
           </div>
           <h4 class="title h6 text-wood mb-3">{{ section.aplikasi_card_1.title }}</h4>
+
+          <!-- Intro paragraph after H4 title (REQUIRED for SEO) -->
+          {% if section.aplikasi_card_1.intro %}
+          <p class="intro small mb-3">{{ section.aplikasi_card_1.intro }}</p>
+          {% endif %}
+
+          <!-- H5 Sub-headings dengan paragraf (REQUIRED for SEO) -->
+          {% if section.aplikasi_card_1.h5_1 %}
+          <h5 class="h5_1 small fw-bold text-wood mb-2">{{ section.aplikasi_card_1.h5_1 }}</h5>
+          {% endif %}
+          {% if section.aplikasi_card_1.paragraph_h5_1 %}
+          <p class="paragraph_h5_1 small mb-3">{{ section.aplikasi_card_1.paragraph_h5_1 }}</p>
+          {% endif %}
+
+          {% if section.aplikasi_card_1.h5_2 %}
+          <h5 class="h5_2 small fw-bold text-wood mb-2">{{ section.aplikasi_card_1.h5_2 }}</h5>
+          {% endif %}
+          {% if section.aplikasi_card_1.paragraph_h5_2 %}
+          <p class="paragraph_h5_2 small mb-3">{{ section.aplikasi_card_1.paragraph_h5_2 }}</p>
+          {% endif %}
+
           {% if section.aplikasi_card_1.luas %}
           <p class="luas small text-muted mb-2">
             <i class="bi bi-rulers me-1"></i>{{ section.aplikasi_card_1.luas }}
@@ -210,6 +362,27 @@
             <span class="h4 mb-0 text-info fw-bold">2</span>
           </div>
           <h4 class="title h6 text-wood mb-3">{{ section.aplikasi_card_2.title }}</h4>
+
+          <!-- Intro paragraph after H4 title (REQUIRED for SEO) -->
+          {% if section.aplikasi_card_2.intro %}
+          <p class="intro small mb-3">{{ section.aplikasi_card_2.intro }}</p>
+          {% endif %}
+
+          <!-- H5 Sub-headings dengan paragraf (REQUIRED for SEO) -->
+          {% if section.aplikasi_card_2.h5_1 %}
+          <h5 class="h5_1 small fw-bold text-wood mb-2">{{ section.aplikasi_card_2.h5_1 }}</h5>
+          {% endif %}
+          {% if section.aplikasi_card_2.paragraph_h5_1 %}
+          <p class="paragraph_h5_1 small mb-3">{{ section.aplikasi_card_2.paragraph_h5_1 }}</p>
+          {% endif %}
+
+          {% if section.aplikasi_card_2.h5_2 %}
+          <h5 class="h5_2 small fw-bold text-wood mb-2">{{ section.aplikasi_card_2.h5_2 }}</h5>
+          {% endif %}
+          {% if section.aplikasi_card_2.paragraph_h5_2 %}
+          <p class="paragraph_h5_2 small mb-3">{{ section.aplikasi_card_2.paragraph_h5_2 }}</p>
+          {% endif %}
+
           {% if section.aplikasi_card_2.luas %}
           <p class="luas small text-muted mb-2">
             <i class="bi bi-rulers me-1"></i>{{ section.aplikasi_card_2.luas }}
@@ -242,6 +415,27 @@
             <span class="h4 mb-0 text-warning fw-bold">3</span>
           </div>
           <h4 class="title h6 text-wood mb-3">{{ section.aplikasi_card_3.title }}</h4>
+
+          <!-- Intro paragraph after H4 title (REQUIRED for SEO) -->
+          {% if section.aplikasi_card_3.intro %}
+          <p class="intro small mb-3">{{ section.aplikasi_card_3.intro }}</p>
+          {% endif %}
+
+          <!-- H5 Sub-headings dengan paragraf (REQUIRED for SEO) -->
+          {% if section.aplikasi_card_3.h5_1 %}
+          <h5 class="h5_1 small fw-bold text-wood mb-2">{{ section.aplikasi_card_3.h5_1 }}</h5>
+          {% endif %}
+          {% if section.aplikasi_card_3.paragraph_h5_1 %}
+          <p class="paragraph_h5_1 small mb-3">{{ section.aplikasi_card_3.paragraph_h5_1 }}</p>
+          {% endif %}
+
+          {% if section.aplikasi_card_3.h5_2 %}
+          <h5 class="h5_2 small fw-bold text-wood mb-2">{{ section.aplikasi_card_3.h5_2 }}</h5>
+          {% endif %}
+          {% if section.aplikasi_card_3.paragraph_h5_2 %}
+          <p class="paragraph_h5_2 small mb-3">{{ section.aplikasi_card_3.paragraph_h5_2 }}</p>
+          {% endif %}
+
           {% if section.aplikasi_card_3.luas %}
           <p class="luas small text-muted mb-2">
             <i class="bi bi-rulers me-1"></i>{{ section.aplikasi_card_3.luas }}
@@ -287,6 +481,11 @@
       </h3>
     </div>
     <div class="card-body">
+      <!-- Intro paragraph after H3 roi_title (REQUIRED for SEO) -->
+      {% if section.roi_intro %}
+      <p class="roi_intro mb-3">{{ section.roi_intro }}</p>
+      {% endif %}
+
       <div class="row g-4">
         <!-- ROI Metric 1 -->
         {% if section.roi_metric_1 %}
