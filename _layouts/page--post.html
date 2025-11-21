@@ -127,6 +127,15 @@ Architecture Principle:
   }
   </script>
 
+  <!-- FAQ Schema (FAQPage) -->
+  {% comment %}
+  NOTE: FAQ data is set in page frontmatter (faq_pemesanan, faq_produk, faq_pengiriman)
+  Only include if page has FAQ data
+  {% endcomment %}
+  {% if page.faq_pemesanan or page.faq_produk or page.faq_pengiriman %}
+    {% include schema--faq-kayu-dolken.html %}
+  {% endif %}
+
   <!-- Related Articles Schema (ItemList) -->
   {% comment %}
   NOTE: all_related is set inside block--related-content--latest.html (in node--post.html)

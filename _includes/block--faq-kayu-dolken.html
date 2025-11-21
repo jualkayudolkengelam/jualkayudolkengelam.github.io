@@ -1,13 +1,13 @@
 {% comment %}
   ============================================================================
-  FAQ Kayu Dolken Block Component
+  FAQ Kayu Dolken Block Component (Visual Only)
   ============================================================================
 
   @file        _includes/block--faq-kayu-dolken.html
-  @description Reusable FAQ component with categorized Q&A
+  @description Reusable FAQ component with categorized Q&A (visual rendering only)
 
-  @version     1.0.0
-  @date        2025-11-19
+  @version     1.0.1
+  @date        2025-11-21
   @author      jualkayudolkengelam
 
   Features:
@@ -15,9 +15,13 @@
   - H2 heading for SEO with dynamic city
   - Categorized FAQ sections (3 categories)
   - Dynamic Q&A pairs with icons
-  - Schema.org FAQPage markup for rich snippets
   - Color-coded categories (primary, success, warning)
   - Flexible array structure per category
+
+  Schema:
+  -------
+  Schema for this block is now in: _includes/schema--faq-kayu-dolken.html
+  Call from page wrapper with: {% include schema--faq-kayu-dolken.html %}
 
   Parameters:
   -----------
@@ -177,52 +181,7 @@
   </div>
   {% endif %}
 
-  <!-- Schema.org FAQPage Markup -->
-  {% if page.faq_pemesanan or page.faq_produk or page.faq_pengiriman %}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {% if page.faq_pemesanan %}
-        {% for faq in page.faq_pemesanan %}
-        {
-          "@type": "Question",
-          "name": "{{ faq.pertanyaan | escape }}",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "{{ faq.jawaban | escape }}"
-          }
-        }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-        {% if page.faq_produk or page.faq_pengiriman %},{% endif %}
-      {% endif %}
-      {% if page.faq_produk %}
-        {% for faq in page.faq_produk %}
-        {
-          "@type": "Question",
-          "name": "{{ faq.pertanyaan | escape }}",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "{{ faq.jawaban | escape }}"
-          }
-        }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-        {% if page.faq_pengiriman %},{% endif %}
-      {% endif %}
-      {% if page.faq_pengiriman %}
-        {% for faq in page.faq_pengiriman %}
-        {
-          "@type": "Question",
-          "name": "{{ faq.pertanyaan | escape }}",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "{{ faq.jawaban | escape }}"
-          }
-        }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-      {% endif %}
-    ]
-  }
-  </script>
-  {% endif %}
+  {% comment %}
+  Schema for this block is now in: _includes/schema--faq-kayu-dolken.html
+  Call from page wrapper with: {% include schema--faq-kayu-dolken.html %}
+  {% endcomment %}

@@ -1,0 +1,102 @@
+{% comment %}
+  ============================================================================
+  Schema Include - FAQ Kayu Dolken (FAQPage)
+  ============================================================================
+
+  @file        _includes/schema--faq-kayu-dolken.html
+  @description Dedicated schema include for FAQPage markup.
+               Separated from block--faq-kayu-dolken.html for better
+               architecture and schema centralization at page wrapper level.
+
+  @version     1.0.0
+  @date        2025-11-21
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Architecture:
+  -------------
+  - Block (_includes/block--faq-kayu-dolken.html): Visual FAQ display
+  - Schema (_includes/schema--faq-kayu-dolken.html): FAQPage schema markup
+  - Page wrapper (_layouts/page--post.html): Include schema before </body>
+
+  Features:
+  ---------
+  - Schema.org FAQPage markup
+  - Combines 3 FAQ categories (pemesanan, produk, pengiriman)
+  - Perfect for Google Rich Results FAQ snippets
+  - High SEO value for search visibility
+
+  Parameters:
+  -----------
+  - page.faq_pemesanan: Array of order/pricing FAQ items
+  - page.faq_produk: Array of product/maintenance FAQ items
+  - page.faq_pengiriman: Array of delivery/service FAQ items
+    Each FAQ item should have:
+    - pertanyaan: Question text
+    - jawaban: Answer text
+
+  Usage:
+  ------
+  {% include schema--faq-kayu-dolken.html %}
+
+  Note: This schema reads directly from page frontmatter variables.
+        Ensure the FAQ arrays are defined in the page/post frontmatter.
+
+  Called from:
+  ------------
+  - _layouts/page--post.html (before </body> tag)
+  - Only included on pages that have FAQ data
+
+  ============================================================================
+{% endcomment %}
+
+<!-- Schema.org FAQPage Markup -->
+{% if page.faq_pemesanan or page.faq_produk or page.faq_pengiriman %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% if page.faq_pemesanan %}
+      {% for faq in page.faq_pemesanan %}
+      {
+        "@type": "Question",
+        "name": "{{ faq.pertanyaan | escape }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ faq.jawaban | escape }}"
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+      {% if page.faq_produk or page.faq_pengiriman %},{% endif %}
+    {% endif %}
+    {% if page.faq_produk %}
+      {% for faq in page.faq_produk %}
+      {
+        "@type": "Question",
+        "name": "{{ faq.pertanyaan | escape }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ faq.jawaban | escape }}"
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+      {% if page.faq_pengiriman %},{% endif %}
+    {% endif %}
+    {% if page.faq_pengiriman %}
+      {% for faq in page.faq_pengiriman %}
+      {
+        "@type": "Question",
+        "name": "{{ faq.pertanyaan | escape }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ faq.jawaban | escape }}"
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    {% endif %}
+  ]
+}
+</script>
+{% endif %}
