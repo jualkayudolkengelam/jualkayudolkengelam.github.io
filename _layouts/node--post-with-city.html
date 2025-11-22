@@ -74,7 +74,7 @@ page.html (wrapper with header/footer)
 
 <!-- Blog Post with Product List -->
 <div class="container py-5">
-  {% include block--breadcrumb.html
+  {% include reusable/block--breadcrumb.html
      current_title=page.title
      parent_name="Blog"
      parent_url="/blog"
@@ -122,7 +122,7 @@ page.html (wrapper with header/footer)
     <!-- Featured Image / Gallery Carousel -->
     {% if page.images %}
     <div class="mb-4">
-      {% include block--carousel--image.html
+      {% include reusable/block--carousel--image.html
          carousel_id="postCarousel"
          images=page.images
          title=page.title

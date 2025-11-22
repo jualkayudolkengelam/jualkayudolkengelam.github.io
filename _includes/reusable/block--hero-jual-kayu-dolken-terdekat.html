@@ -1,0 +1,106 @@
+{% comment %}
+  ============================================================================
+  Hero Jual Kayu Dolken Terdekat Block Component
+  ============================================================================
+
+  @file        _includes/block--hero-jual-kayu-dolken-terdekat.html
+  @description Hero section for "terdekat" (nearby) kayu dolken sales page
+               Works WITHOUT nama_kota variable - generic location-based
+
+  @version     1.0.0
+  @date        2025-11-20
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading for SEO without specific city name
+  - Red gradient background for attention
+  - Two-column layout (info + CTA)
+  - Delivery area display with fallback
+  - Badge features (stok ready, pengiriman cepat, harga kompetitif)
+  - WhatsApp CTA button with generic message
+  - Phone number display with 24/7 notice
+  - NO DEPENDENCY on page.nama_kota variable
+
+  Parameters:
+  -----------
+  - page.area_pengiriman: Array of delivery areas (optional)
+    If not provided, defaults to generic message
+  - site.business.phone: Business phone number
+  - site.business.whatsapp: WhatsApp number (for CTA link)
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  area_pengiriman:
+    - Jakarta
+    - Bogor
+    - Depok
+    - Tangerang
+    - Bekasi
+  ---
+
+  In content:
+  <section id="hero-jual-kayu-dolken">
+    {% include reusable/block--hero-jual-kayu-dolken-terdekat.html %}
+  </section>
+
+  ============================================================================
+{% endcomment %}
+
+<div id="cari-kayu-dolken-terdekat">
+  <div class="card border-0 shadow-lg my-4" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);">
+    <div class="card-body text-white py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h2 class="h2 fw-bold mb-3">
+            <i class="bi bi-geo-alt-fill me-2"></i>Cari Yang Jual Kayu Dolken Terdekat?
+          </h2>
+          <p class="mb-3" style="opacity: 0.95; font-size: 1.05rem;">
+            Anda sedang mencari yang <strong>jual kayu dolken terdekat</strong> dengan harga terbaik dan kualitas terjamin? Kami adalah supplier kayu dolken gelam terpercaya yang melayani berbagai wilayah dengan <strong>pengiriman gratis</strong> dan sistem COD (Cash on Delivery).
+          </p>
+          <div class="bg-white bg-opacity-10 p-3 rounded mb-3">
+            <p class="mb-2" style="opacity: 0.95;">
+              <i class="bi bi-truck me-2"></i>
+              <strong>Melayani Pengiriman ke:</strong>
+            </p>
+            <p class="mb-0 small" style="opacity: 0.9;">
+              {% if page.area_pengiriman %}
+                {{ page.area_pengiriman | join: ', ' }}
+              {% else %}
+                Jakarta, Bogor, Depok, Tangerang, Bekasi, Bandung, Semarang, Surabaya, dan kota-kota lainnya di Jawa-Bali
+              {% endif %}
+            </p>
+          </div>
+          <div class="d-flex flex-wrap gap-2 align-items-center">
+            <span class="badge bg-white text-danger px-3 py-2">
+              <i class="bi bi-check-circle-fill me-1"></i>Stok Ready
+            </span>
+            <span class="badge bg-white text-danger px-3 py-2">
+              <i class="bi bi-lightning-fill me-1"></i>Pengiriman Cepat
+            </span>
+            <span class="badge bg-white text-danger px-3 py-2">
+              <i class="bi bi-cash-coin me-1"></i>Harga Kompetitif
+            </span>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center mt-4 mt-lg-0">
+          <div class="bg-white p-4 rounded shadow-lg">
+            <i class="bi bi-telephone-fill text-danger mb-3" style="font-size: 3rem;"></i>
+            <h4 class="h5 fw-bold text-danger mb-2">Hubungi Kami Sekarang!</h4>
+            <p class="h3 fw-bold text-dark mb-3">{{ site.business.phone }}</p>
+            <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken"
+               class="btn btn-success btn-lg w-100 shadow-sm"
+               target="_blank">
+              <i class="bi bi-whatsapp me-2"></i>Chat WhatsApp
+            </a>
+            <p class="small text-muted mt-2 mb-0">
+              <i class="bi bi-clock-fill me-1"></i>Respon cepat 24/7
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

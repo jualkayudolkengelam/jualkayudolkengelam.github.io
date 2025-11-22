@@ -1,0 +1,187 @@
+{% comment %}
+  ============================================================================
+  FAQ Kayu Dolken Block Component (Visual Only)
+  ============================================================================
+
+  @file        _includes/block--faq-kayu-dolken.html
+  @description Reusable FAQ component with categorized Q&A (visual rendering only)
+
+  @version     1.0.1
+  @date        2025-11-21
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading for SEO with dynamic city
+  - Categorized FAQ sections (3 categories)
+  - Dynamic Q&A pairs with icons
+  - Color-coded categories (primary, success, warning)
+  - Flexible array structure per category
+
+  Schema:
+  -------
+  Schema for this block is now in: _includes/schema--faq-kayu-dolken.html
+  Call from page wrapper with: {% include schema--faq-kayu-dolken.html %}
+
+  Parameters:
+  -----------
+  - page.nama_kota: City name for dynamic content
+  - page.faq_pemesanan: Array of order/pricing FAQs
+  - page.faq_produk: Array of product/maintenance FAQs
+  - page.faq_pengiriman: Array of delivery/service FAQs
+    Each FAQ item:
+    - pertanyaan: Question text
+    - jawaban: Answer text
+    - icon: Bootstrap icon class (optional)
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  nama_kota: Semarang
+  faq_pemesanan:
+    - pertanyaan: "Berapa minimal pemesanan?"
+      jawaban: "Minimal 10 batang..."
+      icon: "bi-cart-check"
+  faq_produk:
+    - pertanyaan: "Apakah perlu perawatan khusus?"
+      jawaban: "Tidak memerlukan perawatan..."
+      icon: "bi-tools"
+  faq_pengiriman:
+    - pertanyaan: "Berapa lama pengiriman?"
+      jawaban: "1-3 hari kerja..."
+      icon: "bi-truck"
+  ---
+
+  In content:
+  <section id="faq-kayu-dolken">
+    {% include reusable/block--faq-kayu-dolken.html %}
+  </section>
+
+  ============================================================================
+{% endcomment %}
+
+  <!-- Header Section -->
+  <div class="my-5">
+    <div class="card border-0 shadow-lg">
+      <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);">
+        <i class="bi bi-question-circle-fill mb-2 fs-2-5rem"></i>
+        <h2 class="h2 mb-0 fw-bold text-white">FAQ Seputar Kayu Dolken{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}</h2>
+        <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+          <i class="bi bi-chat-dots me-1"></i>
+          Pertanyaan yang sering diajukan pelanggan kami
+          <i class="bi bi-chat-dots ms-1"></i>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {% if page.faq_pemesanan %}
+  <!-- H3: Pemesanan dan Harga -->
+  <div class="my-4">
+    <div class="d-flex align-items-center mb-3">
+      <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+        <h3 class="h4 mb-0 text-wood fw-bold">
+          <i class="bi bi-cart-check text-primary me-2"></i>Pemesanan dan Harga
+        </h3>
+        <p class="small text-muted mb-0 mt-1">Informasi seputar cara pesan dan sistem pembayaran</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      {% for faq in page.faq_pemesanan %}
+      <div class="col-12">
+        <div class="card border-0 shadow-sm hover-lift">
+          <div class="card-body">
+            <div class="d-flex align-items-start">
+              <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3 tip-icon-circle">
+                <i class="bi {{ faq.icon | default: 'bi-question-circle' }} text-primary fs-1-5rem"></i>
+              </div>
+              <div class="flex-grow-1">
+                <h4 class="h6 fw-bold text-wood mb-2">{{ faq.pertanyaan }}</h4>
+                <h5 class="visually-hidden">Jawaban Detail</h5>
+                <p class="small text-muted mb-0">{{ faq.jawaban }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.faq_produk %}
+  <!-- H3: Produk dan Perawatan -->
+  <div class="my-4">
+    <div class="d-flex align-items-center mb-3">
+      <div class="bg-success bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+        <h3 class="h4 mb-0 text-wood fw-bold">
+          <i class="bi bi-tools text-success me-2"></i>Produk dan Perawatan
+        </h3>
+        <p class="small text-muted mb-0 mt-1">Informasi seputar spesifikasi dan perawatan produk</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      {% for faq in page.faq_produk %}
+      <div class="col-12">
+        <div class="card border-0 shadow-sm hover-lift">
+          <div class="card-body">
+            <div class="d-flex align-items-start">
+              <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3 tip-icon-circle">
+                <i class="bi {{ faq.icon | default: 'bi-box-seam' }} text-success fs-1-5rem"></i>
+              </div>
+              <div class="flex-grow-1">
+                <h4 class="h6 fw-bold text-wood mb-2">{{ faq.pertanyaan }}</h4>
+                <h5 class="visually-hidden">Jawaban Detail</h5>
+                <p class="small text-muted mb-0">{{ faq.jawaban }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.faq_pengiriman %}
+  <!-- H3: Pengiriman dan Layanan -->
+  <div class="my-4">
+    <div class="d-flex align-items-center mb-3">
+      <div class="bg-warning bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+        <h3 class="h4 mb-0 text-wood fw-bold">
+          <i class="bi bi-truck text-warning me-2"></i>Pengiriman dan Layanan
+        </h3>
+        <p class="small text-muted mb-0 mt-1">Informasi seputar pengiriman dan layanan pelanggan</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      {% for faq in page.faq_pengiriman %}
+      <div class="col-12">
+        <div class="card border-0 shadow-sm hover-lift">
+          <div class="card-body">
+            <div class="d-flex align-items-start">
+              <div class="bg-warning bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3 tip-icon-circle">
+                <i class="bi {{ faq.icon | default: 'bi-truck' }} text-warning fs-1-5rem"></i>
+              </div>
+              <div class="flex-grow-1">
+                <h4 class="h6 fw-bold text-wood mb-2">{{ faq.pertanyaan }}</h4>
+                <h5 class="visually-hidden">Jawaban Detail</h5>
+                <p class="small text-muted mb-0">{{ faq.jawaban }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% comment %}
+  Schema for this block is now in: _includes/schema--faq-kayu-dolken.html
+  Call from page wrapper with: {% include schema--faq-kayu-dolken.html %}
+  {% endcomment %}

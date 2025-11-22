@@ -1,0 +1,310 @@
+{% comment %}
+  ============================================================================
+  Area Pengiriman Kayu Dolken Block Component
+  ============================================================================
+
+  @file        _includes/block--area-pengiriman-kayu-dolken.html
+  @description Reusable component for delivery area section with categorized districts
+
+  @version     1.0.0
+  @date        2025-11-19
+  @author      jualkayudolkengelam
+
+  Features:
+  ---------
+  - H2 heading for SEO with dynamic city
+  - 3 main categories of delivery areas
+  - H3 for each category (Jangkauan, Landmark)
+  - H4 for subcategories (Wilayah Pusat, Utara/Selatan, Pengembangan)
+  - H5 for district cards
+  - Flexible array structure for districts and landmarks
+  - Free shipping message
+
+  Parameters:
+  -----------
+  - page.nama_kota: City name for dynamic content
+  - page.area_pengiriman_detail: Object containing:
+    - wilayah_pusat: Array of 3-5 central districts
+    - wilayah_utara_selatan: Array of 2 districts (north/south)
+    - wilayah_pengembangan: Array of development areas
+    - kecamatan_lainnya: Array of other districts (optional)
+    - landmark_wisata: Array of tourism landmarks (optional)
+    - landmark_fasilitas: Array of education/commercial facilities (optional)
+    Each district:
+    - nama: District name
+    - kelurahan: Array of sub-districts (2-4 items)
+    - warna: Card color (primary, success, info, danger, warning, wood, secondary)
+
+  Usage:
+  ------
+  In frontmatter:
+  ---
+  nama_kota: Semarang
+  area_pengiriman_detail:
+    wilayah_pusat:
+      - nama: "Semarang Tengah"
+        kelurahan: ["Purwodinatan, Gabahan", "Miroto, Pekunden"]
+        warna: "primary"
+      - nama: "Semarang Barat"
+        kelurahan: ["Tawang, Krobokan", "Ngemplak Simongan, Bongsari"]
+        warna: "success"
+    wilayah_utara_selatan:
+      - nama: "Semarang Utara"
+        kelurahan: ["Bandarharjo, Tanjung Mas", "Kuningan, Plombokan"]
+        warna: "danger"
+    wilayah_pengembangan:
+      - nama: "Tembalang"
+        kelurahan: ["Tembalang, Sendangmulyo", "Mangunharjo, Kedungmundu"]
+        warna: "primary"
+    kecamatan_lainnya:
+      - "Candisari"
+      - "Gajah Mungkur"
+      - "Ngaliyan"
+    landmark_wisata:
+      - nama: "Kota Lama Semarang"
+        icon: "bi-building"
+        warna: "warning"
+    landmark_fasilitas:
+      - nama: "Pelabuhan Tanjung Emas"
+        icon: "bi-shop"
+        warna: "info"
+  ---
+
+  In content:
+  <section id="area-pengiriman-kayu-dolken">
+    {% include reusable/block--area-pengiriman-kayu-dolken.html %}
+  </section>
+
+  ============================================================================
+{% endcomment %}
+
+{% if page.area_pengiriman_detail %}
+<!-- Header Section -->
+<div class="my-5">
+  <div class="card border-0 shadow-lg">
+    <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);">
+      <i class="bi bi-geo-alt-fill mb-2 fs-2-5rem"></i>
+      <h2 class="h2 mb-0 fw-bold text-white">Area Pengiriman{% if page.nama_kota %} {{ page.nama_kota }}{% endif %}</h2>
+      <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+        <i class="bi bi-truck me-1"></i>
+        Gratis ongkir ke seluruh wilayah{% if page.nama_kota %} Kota {{ page.nama_kota }}{% endif %}
+        <i class="bi bi-truck ms-1"></i>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- H3: Jangkauan Pengiriman Lengkap -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-primary bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-truck text-primary me-2"></i>{{ page.area_pengiriman_detail.judul_jangkauan | default: "Jangkauan Pengiriman Lengkap" }}
+      </h3>
+      <p class="small text-muted mb-0 mt-1">{{ page.area_pengiriman_detail.deskripsi_jangkauan | default: "Kami melayani pengiriman gratis ke seluruh wilayah untuk kemudahan proyek Anda" }}</p>
+    </div>
+  </div>
+
+  {% if page.area_pengiriman_detail.wilayah_pusat %}
+  <!-- H4: Wilayah Pusat Kota -->
+  <div class="card border-0 shadow-sm">
+    <div class="card-body bg-light py-3">
+      <h4 class="h4 text-wood mb-2 fw-bold">
+        <i class="bi bi-geo-fill me-2"></i>{{ page.area_pengiriman_detail.judul_pusat | default: "Wilayah Pusat Kota" }}
+      </h4>
+      <p class="small text-muted mb-0">{{ page.area_pengiriman_detail.deskripsi_pusat | default: "Kecamatan utama di pusat kota dengan akses mudah dan pengiriman cepat." }}</p>
+    </div>
+  </div>
+
+  <div class="row g-3 my-4">
+    {% for wilayah in page.area_pengiriman_detail.wilayah_pusat %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-header bg-{{ wilayah.warna | default: 'primary' }} text-white">
+          <h5 class="h5 mb-0">
+            <i class="bi bi-pin-map-fill me-2"></i>{{ wilayah.nama }}
+          </h5>
+        </div>
+        <div class="card-body">
+          {% if wilayah.kelurahan %}
+          <ul class="list-unstyled small mb-0">
+            {% for kel in wilayah.kelurahan %}
+            <li class="{% if forloop.last %}mb-0{% else %}mb-1{% endif %}">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>{{ kel }}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.area_pengiriman_detail.wilayah_utara_selatan %}
+  <!-- H4: Wilayah Utara & Selatan -->
+  <div class="card border-0 shadow-sm my-4">
+    <div class="card-body bg-light py-3">
+      <h4 class="h4 text-wood mb-2 fw-bold">
+        <i class="bi bi-geo-alt-fill me-2"></i>{{ page.area_pengiriman_detail.judul_utara_selatan | default: "Wilayah Utara & Selatan" }}
+      </h4>
+      <p class="small text-muted mb-0">{{ page.area_pengiriman_detail.deskripsi_utara_selatan | default: "Kawasan pelabuhan, industri, dan perumahan di sisi utara dan selatan kota." }}</p>
+    </div>
+  </div>
+
+  <div class="row g-3 my-4">
+    {% for wilayah in page.area_pengiriman_detail.wilayah_utara_selatan %}
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-header bg-{{ wilayah.warna | default: 'danger' }} {% if wilayah.warna == 'warning' %}text-dark{% else %}text-white{% endif %}">
+          <h5 class="h5 mb-0">
+            <i class="bi bi-pin-map-fill me-2"></i>{{ wilayah.nama }}
+          </h5>
+        </div>
+        <div class="card-body">
+          {% if wilayah.kelurahan %}
+          <ul class="list-unstyled small mb-0">
+            {% for kel in wilayah.kelurahan %}
+            <li class="{% if forloop.last %}mb-0{% else %}mb-1{% endif %}">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>{{ kel }}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.area_pengiriman_detail.wilayah_pengembangan %}
+  <!-- H4: Wilayah Pengembangan & Pinggiran -->
+  <div class="card border-0 shadow-sm my-4">
+    <div class="card-body bg-light py-3">
+      <h4 class="h4 text-wood mb-2 fw-bold">
+        <i class="bi bi-map-fill me-2"></i>{{ page.area_pengiriman_detail.judul_pengembangan | default: "Wilayah Pengembangan & Pinggiran" }}
+      </h4>
+      <p class="small text-muted mb-0">{{ page.area_pengiriman_detail.deskripsi_pengembangan | default: "Area pengembangan dengan pertumbuhan pesat, termasuk kawasan pendidikan dan perumahan baru." }}</p>
+    </div>
+  </div>
+
+  <div class="row g-3 my-4">
+    {% for wilayah in page.area_pengiriman_detail.wilayah_pengembangan %}
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-header bg-{{ wilayah.warna | default: 'info' }} text-white">
+          <h5 class="h5 mb-0">
+            <i class="bi bi-pin-map-fill me-2"></i>{{ wilayah.nama }}
+          </h5>
+        </div>
+        <div class="card-body">
+          {% if wilayah.kelurahan %}
+          <ul class="list-unstyled small mb-0">
+            {% for kel in wilayah.kelurahan %}
+            <li class="{% if forloop.last %}mb-0{% else %}mb-1{% endif %}">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>{{ kel }}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    {% if page.area_pengiriman_detail.kecamatan_lainnya %}
+    <div class="col-12">
+      <div class="card border-0 shadow-sm">
+        <div class="card-header bg-secondary text-white">
+          <h5 class="h5 mb-0">
+            <i class="bi bi-pin-map-fill me-2"></i>{{ page.area_pengiriman_detail.judul_lainnya | default: "Kecamatan Lainnya" }}
+          </h5>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            {% assign half = page.area_pengiriman_detail.kecamatan_lainnya.size | divided_by: 2 %}
+            <div class="col-md-6">
+              <ul class="list-unstyled small mb-0">
+                {% for kec in page.area_pengiriman_detail.kecamatan_lainnya limit:half %}
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>{{ kec }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled small mb-0">
+                {% for kec in page.area_pengiriman_detail.kecamatan_lainnya offset:half %}
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-2"></i>{{ kec }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+
+{% if page.area_pengiriman_detail.landmark_wisata or page.area_pengiriman_detail.landmark_fasilitas %}
+<!-- H3: Landmark & Lokasi Strategis -->
+<div class="my-4">
+  <div class="d-flex align-items-center mb-3">
+    <div class="bg-warning bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
+      <h3 class="h4 mb-0 text-wood fw-bold">
+        <i class="bi bi-star-fill text-warning me-2"></i>{{ page.area_pengiriman_detail.judul_landmark | default: "Landmark & Lokasi Strategis" }}
+      </h3>
+      <p class="small text-muted mb-0 mt-1">{{ page.area_pengiriman_detail.deskripsi_landmark | default: "Kami juga melayani area landmark terkenal dan lokasi strategis untuk kemudahan proyek komersial Anda" }}</p>
+    </div>
+  </div>
+
+  <div class="row g-3">
+    {% if page.area_pengiriman_detail.landmark_wisata %}
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body bg-light py-3">
+          <h4 class="h4 text-wood mb-2 fw-bold">
+            <i class="bi bi-building-fill me-2"></i>{{ page.area_pengiriman_detail.judul_wisata | default: "Destinasi Wisata & Sejarah" }}
+          </h4>
+          <p class="small text-muted mb-3">{{ page.area_pengiriman_detail.deskripsi_wisata | default: "Landmark bersejarah dan destinasi wisata terkenal." }}</p>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled small mb-0">
+            {% for landmark in page.area_pengiriman_detail.landmark_wisata %}
+            <li class="{% if forloop.last %}mb-0{% else %}mb-2{% endif %}">
+              <i class="bi {{ landmark.icon | default: 'bi-building' }} text-{{ landmark.warna | default: 'warning' }} me-2"></i><strong>{{ landmark.nama }}</strong>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if page.area_pengiriman_detail.landmark_fasilitas %}
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body bg-light py-3">
+          <h4 class="h4 text-wood mb-2 fw-bold">
+            <i class="bi bi-shop-window me-2"></i>{{ page.area_pengiriman_detail.judul_fasilitas | default: "Fasilitas Pendidikan & Komersial" }}
+          </h4>
+          <p class="small text-muted mb-3">{{ page.area_pengiriman_detail.deskripsi_fasilitas | default: "Kampus, pelabuhan, dan pusat perbelanjaan strategis." }}</p>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled small mb-0">
+            {% for landmark in page.area_pengiriman_detail.landmark_fasilitas %}
+            <li class="{% if forloop.last %}mb-0{% else %}mb-2{% endif %}">
+              <i class="bi {{ landmark.icon | default: 'bi-shop' }} text-{{ landmark.warna | default: 'info' }} me-2"></i><strong>{{ landmark.nama }}</strong>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+{% endif %}

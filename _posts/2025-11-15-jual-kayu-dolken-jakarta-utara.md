@@ -726,65 +726,65 @@ share_count: 2
 ---
 
 <section id="hero-jual-kayu-dolken">
-  {% include block--hero-jual-kayu-dolken.html %}
+  {% include reusable/block--hero-jual-kayu-dolken.html %}
 </section>
 
 <section id="mengapa-memilih-kami">
-  {% include block--mengapa-memilih-kami.html %}
+  {% include reusable/block--mengapa-memilih-kami.html %}
 </section>
 
 <section id="area-pengiriman-kayu-dolken">
-  {% include block--area-pengiriman-kayu-dolken.html %}
+  {% include reusable/block--area-pengiriman-kayu-dolken.html %}
 </section>
 
 <section id="keunggulan-kayu-dolken-gelam">
-  {% include block--keunggulan-kayu-dolken-gelam.html %}
+  {% include reusable/block--keunggulan-kayu-dolken-gelam.html %}
 </section>
 
 <section id="jual-kayu-dolken-terdekat">
-{% include block--jual-kayu-dolken-terdekat.html
+{% include reusable/block--jual-kayu-dolken-terdekat.html
    nama_kota="Jakarta Utara"
 %}
 </section>
 
 <section id="aplikasi-kayu-dolken-gelam">
-  {% include block--aplikasi-kayu-dolken-gelam.html %}
+  {% include reusable/block--aplikasi-kayu-dolken-gelam.html %}
 </section>
 
 <section id="cara-pemesanan">
-  {% include block--cara-pemesanan-kayu-dolken.html %}
+  {% include reusable/block--cara-pemesanan-kayu-dolken.html %}
 </section>
 
 <section id="studi-kasus-proyek">
-  {% include block--studi-kasus-proyek.html %}
+  {% include reusable/block--studi-kasus-proyek.html %}
 </section>
 
 <section id="testimoni-pelanggan">
-  {% include block--testimoni-pelanggan.html %}
+  {% include reusable/block--testimoni-pelanggan.html %}
 </section>
 
 <section id="tips-memilih-ukuran">
-  {% include block--tips-memilih-ukuran-kayu-dolken.html %}
+  {% include reusable/block--tips-memilih-ukuran-kayu-dolken.html %}
 </section>
 
 <section id="faq-kayu-dolken">
-  {% include block--faq-kayu-dolken.html %}
+  {% include reusable/block--faq-kayu-dolken.html %}
 </section>
 
 <section id="tentang-kota-kami">
-  {% include block--tentang-kota-kami.html %}
+  {% include reusable/block--tentang-kota-kami.html %}
 </section>
 
 <section id="relevansi-kayu-dolken">
-  {% include block--relevansi-kayu-dolken.html %}
+  {% include reusable/block--relevansi-kayu-dolken.html %}
 </section>
 
 <section id="hubungi-kami">
-  {% include block--hubungi-kami.html %}
+  {% include reusable/block--hubungi-kami.html %}
 </section>
 
 
 <!-- Related Products Section (Part of article content) -->
 <div id="related-products" class="article-related-products mt-5">
-  {% include block--related-product-last-modified.html %}
+  {% include reusable/block--related-product-last-modified.html %}
 </div>

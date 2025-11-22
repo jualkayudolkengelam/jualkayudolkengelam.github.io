@@ -1,0 +1,158 @@
+{% comment %}
+  ============================================================================
+  Blog Preview Component (Visual Only)
+  ============================================================================
+
+  @file        _includes/block--blog-preview.html
+  @description Homepage blog preview showing 3 latest/recently updated articles
+               with images, meta info, engagement stats, and CTA to blog page.
+
+  @version     1.0.0
+  @date        2025-11-22
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Features:
+  ---------
+  - Shows 3 most recent or recently updated articles
+  - Sorts by last_modified_at (fresh content first)
+  - Card layout with responsive grid (3 columns on large, 2 on medium)
+  - Post metadata (date, author, categories)
+  - Engagement stats (likes, comments, shares)
+  - Featured images with WebP support
+  - CTA button to view all articles
+
+  Schema:
+  -------
+  Schema for this block is in: _includes/schema--blog-preview.html
+  Call from page with: {% include schema--blog-preview.html %}
+
+  Parameters:
+  -----------
+  - title: Custom section heading (default: "Artikel & Tips Terbaru")
+  - subtitle: Custom subtitle (default: "Informasi seputar kayu dolken gelam dan penggunaannya")
+  - limit: Number of posts to show (default: 3)
+
+  Usage:
+  ------
+  {% include reusable/block--blog-preview.html %}
+
+  {% include reusable/block--blog-preview.html title="Berita Terbaru" limit=6 %}
+
+  Used in:
+  --------
+  - index.html (homepage blog preview section)
+
+  ============================================================================
+{% endcomment %}
+
+{% assign preview_title = include.title | default: "Artikel & Tips Terbaru" %}
+{% assign preview_subtitle = include.subtitle | default: "Informasi seputar kayu dolken gelam dan penggunaannya" %}
+{% assign preview_limit = include.limit | default: 3 %}
+
+{% comment %}Combine all posts from both collections{% endcomment %}
+{% assign all_posts = site.posts | concat: site.post_with_city %}
+
+{% if all_posts.size > 0 %}
+<div class="container">
+  <div class="text-center mb-5">
+    <h2 class="display-6 fw-bold text-wood mb-3">{{ preview_title }}</h2>
+    <p class="lead text-muted">{{ preview_subtitle }}</p>
+  </div>
+
+  {% comment %}
+  Sort by last_modified_at to show recently updated posts first
+  {% endcomment %}
+  {% assign posts_with_modified = all_posts | where_exp: "post", "post.last_modified_at" | sort: "last_modified_at" | reverse %}
+  {% assign posts_without_modified = all_posts | where_exp: "post", "post.last_modified_at == nil" | sort: "date" | reverse %}
+  {% assign sorted_posts = posts_with_modified | concat: posts_without_modified %}
+
+  <div class="row g-4">
+    {% for post in sorted_posts limit:preview_limit %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card blog-card">
+        {% if post.image %}
+        <picture>
+          <source srcset="{{ post.image | replace: '.jpeg', '.webp' | relative_url }}" type="image/webp">
+          <img src="{{ post.image | relative_url }}" class="card-img-top" alt="{{ post.title }}" loading="lazy">
+        </picture>
+        {% else %}
+        <div class="bg-gradient-wood d-flex align-items-center justify-content-center" style="height: 200px;">
+          <i class="bi bi-file-text text-white" class="fs-4rem"></i>
+        </div>
+        {% endif %}
+        <div class="card-body">
+          <!-- Post Meta -->
+          <div class="post-meta text-muted small mb-2">
+            <p class="mb-1">
+              <i class="bi bi-calendar3 me-1"></i>{{ post.date | date: "%d %b %Y" }}
+            </p>
+            {% if post.last_modified_at %}
+            <p class="mb-1" title="Terakhir diperbarui">
+              <i class="bi bi-pencil-square me-1"></i>{{ post.last_modified_at | date: "%d %b %Y" }}
+            </p>
+            {% endif %}
+            {% if post.author %}
+            <p class="mb-1">
+              <i class="bi bi-person me-1"></i>{{ post.author }}
+            </p>
+            {% endif %}
+            {% if post.categories %}
+            <p class="mb-1">
+              <i class="bi bi-folder me-1"></i>
+              {% for category in post.categories %}
+                <a href="{{ site.baseurl }}/blog/kategori/{{ category | slugify }}" class="text-muted text-decoration-none">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </p>
+            {% endif %}
+          </div>
+
+          <h5 class="card-title">
+            <a href="{{ post.url | relative_url }}" class="text-decoration-none text-dark">{{ post.title }}</a>
+          </h5>
+          <p class="card-text">{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+
+          <!-- Engagement Stats -->
+          {% if post.like_count or post.comment_count or post.share_count %}
+          <div class="engagement-stats mb-3 d-flex align-items-center flex-wrap gap-3" class="text-sm">
+            {% if post.like_count %}
+            <span class="d-flex align-items-center text-muted">
+              <i class="bi bi-heart-fill me-1 text-danger"></i>
+              <strong class="text-dark">{{ post.like_count }}</strong>
+              <span class="ms-1 small">suka</span>
+            </span>
+            {% endif %}
+            {% if post.comment_count %}
+            <span class="d-flex align-items-center text-muted">
+              <i class="bi bi-chat-fill me-1 text-primary"></i>
+              <strong class="text-dark">{{ post.comment_count }}</strong>
+              <span class="ms-1 small">komentar</span>
+            </span>
+            {% endif %}
+            {% if post.share_count %}
+            <span class="d-flex align-items-center text-muted">
+              <i class="bi bi-share-fill me-1 text-success"></i>
+              <strong class="text-dark">{{ post.share_count }}</strong>
+              <span class="ms-1 small">dibagikan</span>
+            </span>
+            {% endif %}
+          </div>
+          {% endif %}
+
+          <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-outline-wood">
+            Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="{{ '/blog' | relative_url }}" class="btn btn-wood btn-lg">
+      Lihat Semua Artikel <i class="bi bi-arrow-right ms-2"></i>
+    </a>
+  </div>
+</div>
+{% endif %}

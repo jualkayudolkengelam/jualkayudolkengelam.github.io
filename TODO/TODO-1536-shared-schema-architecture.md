@@ -238,7 +238,7 @@
 
   Usage:
   {% for product in site.products %}
-    {% include block--product.html product=product %}
+    {% include reusable/block--product.html product=product %}
   {% endfor %}
 
   Parameters:

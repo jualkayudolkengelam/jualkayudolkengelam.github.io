@@ -76,7 +76,7 @@ by page--product.html wrapper, NOT in this node template.
     <!-- Product Image -->
     <div class="col-lg-6 mb-4">
       {% if page.images %}
-      {% include block--carousel--image.html
+      {% include reusable/block--carousel--image.html
          carousel_id="productCarousel"
          images=page.images
          title=page.title
@@ -102,12 +102,12 @@ by page--product.html wrapper, NOT in this node template.
       {% endif %}
 
       <!-- Trust Badges (below carousel) -->
-      {% include block--trust-badges.html %}
+      {% include reusable/block--trust-badges.html %}
     </div>
 
     <!-- Product Info -->
     <div class="col-lg-6">
-      {% include block--breadcrumb.html current_title=page.title %}
+      {% include reusable/block--breadcrumb.html current_title=page.title %}
 
       <h1 class="display-5 fw-bold text-wood mb-3">{{ page.title }}</h1>
 

@@ -10,32 +10,32 @@ custom_schema:
 ---
 
 <!-- Breadcrumb Navigation -->
-{% include block--breadcrumb.html current_title="Produk" %}
+{% include reusable/block--breadcrumb.html current_title="Produk" %}
 
 <!-- Product Intro Section -->
 <section class="product-intro-section py-3">
-  {% include block--product-intro.html %}
+  {% include reusable/block--product-intro.html %}
 </section>
 
 <div class="container">
 <!-- Product List Component (with Schema) -->
-{% include block--product-list.html %}
+{% include reusable/block--product-list.html %}
 
 </div><!-- /.container -->
 
 <!-- Features Section -->
 <section class="product-features-section py-5">
-  {% include block--product-features.html %}
+  {% include reusable/block--product-features.html %}
 </section>
 
 <!-- Application Examples Section -->
 <section class="application-examples-section py-5 bg-light">
-  {% include block--product-applications.html %}
+  {% include reusable/block--product-applications.html %}
 </section>
 
 <!-- CTA Section -->
 <section class="cta-section py-5 bg-wood text-white">
-  {% include block--cta-order.html
+  {% include reusable/block--cta-order.html
      title="Tertarik dengan Produk Kami?"
      subtitle="Hubungi kami sekarang untuk konsultasi gratis, info stok terkini, dan penawaran khusus!"
   %}

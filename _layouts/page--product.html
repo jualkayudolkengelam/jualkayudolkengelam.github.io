@@ -78,7 +78,7 @@ Architecture Principle:
     <div class="container">
       <div class="row mt-5">
         <div class="col-12">
-          {% include block--related-product--by-node.html %}
+          {% include reusable/block--related-product--by-node.html %}
         </div>
       </div>
 
@@ -87,7 +87,7 @@ Architecture Principle:
       {% if all_posts.size > 0 %}
       <div class="row mt-5">
         <div class="col-12">
-          {% include block--related-content--by-node.html title="Artikel Panduan & Tips" %}
+          {% include reusable/block--related-content--by-node.html title="Artikel Panduan & Tips" %}
         </div>
       </div>
       {% endif %}
@@ -95,7 +95,7 @@ Architecture Principle:
   </main>
 
   {% include footer.html %}
-  {% include block--cta--whatsapp.html %}
+  {% include reusable/block--cta--whatsapp.html %}
 
   <!-- Collect all schemas at bottom before </body> -->
 

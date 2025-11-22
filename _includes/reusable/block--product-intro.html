@@ -1,0 +1,68 @@
+{% comment %}
+  ============================================================================
+  Product Introduction Block (Visual Only)
+  ============================================================================
+
+  @file        _includes/block--product-intro.html
+  @description Product specifications intro alert box for catalog page.
+               Displays key product specifications in two-column layout.
+
+  @version     1.0.0
+  @date        2025-11-22
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Features:
+  ---------
+  - Eye-catching alert box with wood background
+  - Two-column specification layout
+  - Icon-based specification items
+  - Responsive design (stack on mobile)
+  - Customizable title
+
+  Parameters:
+  -----------
+  - title: Alert heading (default: "Spesifikasi Produk")
+
+  Usage:
+  ------
+  Default:
+  {% include reusable/block--product-intro.html %}
+
+  Custom title:
+  {% include reusable/block--product-intro.html
+     title="Detail Spesifikasi Kayu Dolken"
+  %}
+
+  Used in:
+  --------
+  - product.html (product catalog page)
+
+  ============================================================================
+{% endcomment %}
+
+{% assign intro_title = include.title | default: "Spesifikasi Produk" %}
+
+<div class="container product-intro">
+  <div class="row mb-5">
+    <div class="col-lg-8 mx-auto text-center">
+      <div class="alert alert-wood text-white border-0 shadow-sm">
+        <h4 class="alert-heading"><i class="bi bi-info-circle me-2"></i>{{ intro_title }}</h4>
+        <hr class="border-white">
+        <div class="row text-start">
+          <div class="col-md-6">
+            <p class="mb-2"><strong><i class="bi bi-check-circle me-2"></i>Panjang:</strong> 4 Meter</p>
+            <p class="mb-2"><strong><i class="bi bi-check-circle me-2"></i>Material:</strong> Kayu Gelam Asli</p>
+            <p class="mb-2"><strong><i class="bi bi-check-circle me-2"></i>Finishing:</strong> Natural/Poles</p>
+          </div>
+          <div class="col-md-6">
+            <p class="mb-2"><strong><i class="bi bi-check-circle me-2"></i>Kualitas:</strong> Grade A Premium</p>
+            <p class="mb-2"><strong><i class="bi bi-check-circle me-2"></i>Sifat:</strong> Anti Rayap, Tahan Air</p>
+            <p class="mb-2"><strong><i class="bi bi-check-circle me-2"></i>Garansi:</strong> Kualitas Terjamin</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

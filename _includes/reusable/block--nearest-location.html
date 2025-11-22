@@ -1,0 +1,117 @@
+{% comment %}
+  ============================================================================
+  Nearest Location Component (Visual Only)
+  ============================================================================
+
+  @file        _includes/block--nearest-location.html
+  @description "Jual Kayu Dolken Terdekat" section showing location, delivery
+               areas, and coverage with CTA buttons for availability check.
+
+  @version     1.0.0
+  @date        2025-11-22
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Features:
+  ---------
+  - Location information card (Kota Serang, Banten)
+  - Delivery area lists (Banten, DKI Jakarta, etc.)
+  - Wide coverage lists (all Java and Bali)
+  - CTA card with WhatsApp and contact buttons
+  - Responsive 3-column grid layout
+
+  Parameters:
+  -----------
+  - title: Custom section heading (default: "Jual Kayu Dolken Terdekat")
+  - subtitle: Custom subtitle (default: "Melayani Pengiriman Ke Seluruh Jawa")
+
+  Usage:
+  ------
+  {% include reusable/block--nearest-location.html %}
+
+  {% include reusable/block--nearest-location.html title="Area Pengiriman Kami" %}
+
+  Used in:
+  --------
+  - index.html (homepage nearest location section)
+
+  ============================================================================
+{% endcomment %}
+
+{% assign location_title = include.title | default: "Jual Kayu Dolken Terdekat" %}
+{% assign location_subtitle = include.subtitle | default: "Melayani Pengiriman Ke Seluruh Jawa" %}
+
+<div class="container jual-kayu-dolken-terdekat">
+  <div class="text-center mb-5">
+    <h2 class="display-5 fw-bold text-wood mb-3">{{ location_title }}</h2>
+    <p class="lead text-muted">{{ location_subtitle }}</p>
+  </div>
+
+  <div class="row g-4 mb-4">
+    <div class="col-lg-4 col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body text-center p-4">
+          <i class="bi bi-geo-alt-fill text-wood mb-3" class="fs-3rem"></i>
+          <h5 class="mb-3">Lokasi Kami</h5>
+          <p class="text-muted mb-2"><strong>{{ site.business.location }}</strong></p>
+          <p class="text-muted small">Pusat distribusi kayu dolken gelam untuk wilayah Banten dan sekitarnya</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body text-center p-4">
+          <i class="bi bi-truck text-wood mb-3" class="fs-3rem"></i>
+          <h5 class="mb-3">Area Pengiriman</h5>
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Banten (Serang, Tangerang, Cilegon)</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>DKI Jakarta</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Bekasi & Depok</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Bogor & Bandung</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body text-center p-4">
+          <i class="bi bi-map text-wood mb-3" class="fs-3rem"></i>
+          <h5 class="mb-3">Jangkauan Luas</h5>
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Bandung & Jawa Barat</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Semarang & Jawa Tengah</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Surabaya & Jawa Timur</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Denpasar & Bali</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Seluruh Jawa & Bali</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card border-wood shadow" style="border-width: 2px;">
+        <div class="card-body p-4">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <h4 class="text-wood mb-3"><i class="bi bi-pin-map-fill me-2"></i>Cari Kayu Dolken Terdekat di Lokasi Anda?</h4>
+              <p class="mb-md-0 text-muted">Kami adalah supplier terpercaya kayu dolken gelam dengan jangkauan pengiriman ke seluruh Jawa dan Bali. Apapun kebutuhan proyek Anda - hotel, cafe, villa, taman, atau konstruksi - kami siap melayani dengan harga terbaik dan kualitas terjamin. Pengiriman cepat, stok selalu tersedia!</p>
+            </div>
+            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+              <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20cari%20kayu%20dolken%20terdekat%20untuk%20area%20..." class="btn btn-success btn-lg w-100" target="_blank">
+                <i class="bi bi-whatsapp me-2"></i>Cek Ketersediaan
+              </a>
+              <a href="{{ '/contact' | relative_url }}" class="btn btn-outline-wood btn-lg w-100 mt-2">
+                <i class="bi bi-telephone me-2"></i>Hubungi Kami
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -132,8 +132,8 @@ layout: page  <!-- Wraps in page.html -->
   </div>
 
   <!-- Embed blocks -->
-  {% include block--related-content--by-node.html %}
-  {% include block--product-list.html %}
+  {% include reusable/block--related-content--by-node.html %}
+  {% include reusable/block--product-list.html %}
 </article>
 
 <!-- Article schema -->
@@ -340,12 +340,12 @@ node--product.html (pure product entity)
   <div class="container">
     <div class="row mt-5">
       <div class="col-12">
-        {% include block--related-product--by-node.html %}
+        {% include reusable/block--related-product--by-node.html %}
       </div>
     </div>
     <div class="row mt-4">
       <div class="col-12">
-        {% include block--product-list.html title="Produk Lainnya" %}
+        {% include reusable/block--product-list.html title="Produk Lainnya" %}
       </div>
     </div>
   </div>
@@ -639,13 +639,13 @@ After creating page--product.html, add product-specific includes:
      <!-- Product-specific includes -->
      <div class="row mt-5">
        <div class="col-12">
-         {% include block--related-product--by-node.html %}
+         {% include reusable/block--related-product--by-node.html %}
        </div>
      </div>
 
      <div class="row mt-5">
        <div class="col-12">
-         {% include block--product-list.html %}
+         {% include reusable/block--product-list.html %}
        </div>
      </div>
    </main>
@@ -833,7 +833,7 @@ _includes/whatsapp-button.html → block--cta--whatsapp.html
   - block--related-product--by-node.html (node-based recommendations)
 
   Usage:
-  {% include block--product-list.html %}
+  {% include reusable/block--product-list.html %}
   ============================================================================
 {% endcomment %}
 ```

@@ -1,0 +1,68 @@
+{% comment %}
+  ============================================================================
+  Features Component (Visual Only)
+  ============================================================================
+
+  @file        _includes/block--features.html
+  @description Key features section showing 4 main selling points with icons.
+
+  @version     1.0.0
+  @date        2025-11-22
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Features:
+  ---------
+  - 4 key features with icons
+  - Responsive 4-column grid layout
+  - Icon-based visual design
+  - Simple and clean presentation
+
+  Parameters:
+  -----------
+  None (static content)
+
+  Usage:
+  ------
+  {% include reusable/block--features.html %}
+
+  Used in:
+  --------
+  - index.html (homepage features section)
+
+  ============================================================================
+{% endcomment %}
+
+<div class="container features py-4">
+  <div class="row text-center">
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="feature-icon">
+        <i class="bi bi-shield-check"></i>
+      </div>
+      <h5>Kualitas Terjamin</h5>
+      <p class="text-muted">Kayu gelam pilihan berkualitas tinggi</p>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="feature-icon">
+        <i class="bi bi-rulers"></i>
+      </div>
+      <h5>Berbagai Ukuran</h5>
+      <p class="text-muted">Diameter 2 cm hingga 12 cm</p>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="feature-icon">
+        <i class="bi bi-truck"></i>
+      </div>
+      <h5>Pengiriman Luas</h5>
+      <p class="text-muted">Melayani seluruh Jawa</p>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div class="feature-icon">
+        <i class="bi bi-cash-coin"></i>
+      </div>
+      <h5>Harga Kompetitif</h5>
+      <p class="text-muted">Harga terbaik langsung dari supplier</p>
+    </div>
+  </div>
+</div>

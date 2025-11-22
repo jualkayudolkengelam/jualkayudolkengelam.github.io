@@ -55,7 +55,7 @@ Parent Block (Logic Layer)
   <div class="row">
     {% for product in selected_products %}
     <div class="col-md-4">
-      {% include block--product.html
+      {% include reusable/block--product.html
          product=product
          variant="card"
          show_schema=false
@@ -94,15 +94,15 @@ Parent Block (Logic Layer)
 
 ```liquid
 <!-- Last Modified Strategy -->
-{% include block--related-product-last-modified.html %}
+{% include reusable/block--related-product-last-modified.html %}
 └── calls block--product.html
 
 <!-- Node-based Strategy -->
-{% include block--related-product--by-node.html %}
+{% include reusable/block--related-product--by-node.html %}
 └── calls block--product.html
 
 <!-- Category Strategy -->
-{% include block--related-product--by-category.html %}
+{% include reusable/block--related-product--by-category.html %}
 └── calls block--product.html
 ```
 
@@ -112,14 +112,14 @@ Same `block--product.html`, different parent blocks!
 
 ```liquid
 <!-- Show 5 products instead of 3 -->
-{% include block--related-product-last-modified.html
+{% include reusable/block--related-product-last-modified.html
    limit=5
    title="Top 5 Produk Terbaru"
 %}
 
 <!-- Different variant -->
 {% for product in site.products limit:3 %}
-  {% include block--product.html
+  {% include reusable/block--product.html
      product=product
      variant="featured"
      show_schema=true
@@ -185,7 +185,7 @@ Examples:
 <section>
   {% assign products = site.products | sort: "date" %}
   {% for product in products limit:3 %}
-    {% include block--product.html product=product %}
+    {% include reusable/block--product.html product=product %}
   {% endfor %}
 </section>
 

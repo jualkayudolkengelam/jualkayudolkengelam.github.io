@@ -1,0 +1,261 @@
+{% comment %}
+  ============================================================================
+  Related Content Component - Node-based Proximity Recommendations
+  ============================================================================
+
+  @file        _includes/block--related-content--by-node.html
+  @description Reusable component that displays related articles using
+               node-based proximity algorithm. Shows 3 articles positioned
+               near the current article in the content array, with circular
+               wrapping for continuous recommendations. Implements component-
+               level schema architecture with complete ItemList and BlogPosting
+               markup for SEO optimization.
+
+  @version     1.0.1
+  @date        2025-11-16
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Changelog:
+  ----------
+  v1.0.1 (2025-11-16)
+    - Added ItemList schema with BlogPosting items
+    - Complete BlogPosting fields (headline, url, image, dates, author, publisher)
+    - Include interactionStatistic for engagement metrics (likes, comments, shares)
+    - Schema describes exactly 3 articles (matches visual display)
+    - Perfect schema/visual accuracy
+
+  v1.0.0 (2025-11-15)
+    - Initial component with node-based proximity algorithm
+    - Proximity-based selection (shows articles before current position)
+    - Circular wrapping (wraps to end if at beginning)
+    - Support for custom limit and title parameters
+    - Engagement metrics display (likes, comments, shares)
+
+  Proximity Algorithm:
+  --------------------
+  1. Combine posts from site.posts and site.post_with_city collections
+  2. Find current article's position (index) in combined array
+  3. Select N articles BEFORE current position (proximity-based)
+  4. If at beginning: wrap to end of array (circular logic)
+  5. Fallback: if current not found, show first N posts
+
+  Example with limit=3:
+  - Article at position 20 shows articles: 19, 18, 17 (3 before)
+  - Article at position 2 shows articles: 1, 0, last (wraps around)
+  - Article at position 0 shows articles: last-2, last-1, last
+
+  Features:
+  ---------
+  - Node-based proximity recommendations for related content
+  - Circular wrapping for continuous article flow
+  - Schema.org ItemList with BlogPosting items
+  - Complete article metadata (headline, dates, author, publisher)
+  - Engagement metrics (likes, comments, shares) in schema and visual
+  - WebP image optimization with JPEG fallback
+  - Category badges for article classification
+  - Responsive card layout with Bootstrap 5
+  - Excerpt preview with read more link
+  - Last modified date tracking
+  - Customizable limit and section title via parameters
+
+  Schema Implementation:
+  ----------------------
+  - ItemList with N BlogPosting items (default: 3)
+  - Complete BlogPosting fields: headline, url, image, dates
+  - Author (Person) and Publisher (Organization) entities
+  - interactionStatistic for social engagement (likes, comments, shares)
+  - datePublished and dateModified timestamps
+  - numberOfItems matches visual display (perfect accuracy)
+
+  Parameters:
+  -----------
+  - limit: Number of articles to display (default: 3)
+  - title: Custom section heading (default: "Artikel Terkait Lainnya")
+
+  Usage:
+  ------
+  {% include reusable/block--related-content--by-node.html %}
+
+  {% include reusable/block--related-content--by-node.html limit=5 %}
+
+  {% include reusable/block--related-content--by-node.html title="Artikel Panduan & Tips" %}
+
+  Used in:
+  --------
+  - _layouts/post-with-products.html (blog posts with products)
+  - _layouts/product.html (individual product pages)
+
+  ============================================================================
+{% endcomment %}
+
+{% assign limit = include.limit | default: 3 %}
+{% assign section_title = include.title | default: "Artikel Terkait Lainnya" %}
+
+{% comment %} Combine all posts from both collections {% endcomment %}
+{% assign all_posts = site.posts | concat: site.post_with_city %}
+
+{% comment %} Find current page index in all_posts {% endcomment %}
+{% assign current_index = -1 %}
+{% assign post_count = all_posts.size %}
+
+{% for post in all_posts %}
+  {% if post.url == page.url %}
+    {% assign current_index = forloop.index0 %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Get 3 articles before current position (or wrap around) {% endcomment %}
+{% assign related_posts = "" | split: "" %}
+
+{% if current_index >= 0 %}
+  {% for i in (1..limit) %}
+    {% assign target_index = current_index | minus: i %}
+
+    {% comment %} Circular logic: if negative, wrap to end {% endcomment %}
+    {% if target_index < 0 %}
+      {% assign target_index = post_count | plus: target_index %}
+    {% endif %}
+
+    {% comment %} Get post at target index {% endcomment %}
+    {% for post in all_posts %}
+      {% if forloop.index0 == target_index %}
+        {% assign related_posts = related_posts | push: post %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+
+{% comment %} Fallback: if current page not found, show first 3 posts {% endcomment %}
+{% if related_posts.size == 0 %}
+  {% for post in all_posts limit: limit %}
+    {% if post.url != page.url %}
+      {% assign related_posts = related_posts | push: post %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% assign final_posts = related_posts %}
+
+{% if final_posts.size > 0 %}
+{% comment %}
+Schema for this block is now in: _includes/schema--related-content--by-node.html
+Call from page wrapper with: {% include schema--related-content--by-node.html posts=final_posts %}
+{% endcomment %}
+
+<!-- Related Content Section -->
+<section class="related-content-section related-content-by-node-id my-5">
+  <div class="row align-items-center mb-4">
+    <div class="col">
+      <h3 class="h4 fw-bold text-wood mb-0">
+        <i class="bi bi-collection me-2"></i>{{ section_title }}
+      </h3>
+    </div>
+    <div class="col-auto">
+      <a href="{{ '/blog' | relative_url }}" class="btn btn-sm btn-outline-wood">
+        Lihat Semua Artikel <i class="bi bi-arrow-right ms-1"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    {% for post in final_posts %}
+    <div class="col-md-6 col-lg-4">
+      <article class="card border-0 shadow-sm h-100 related-content-card">
+        {% if post.images %}
+          {% comment %} Use first image from images array {% endcomment %}
+          <a href="{{ post.url | relative_url }}" class="text-decoration-none">
+            <picture>
+              <source srcset="{{ post.images[0] | replace: '.jpeg', '.webp' | relative_url }}" type="image/webp">
+              <img src="{{ post.images[0] | relative_url }}"
+                   class="card-img-top"
+                   alt="{{ post.title }}"
+                   loading="lazy">
+            </picture>
+          </a>
+        {% elsif post.image %}
+          <a href="{{ post.url | relative_url }}" class="text-decoration-none">
+            <picture>
+              <source srcset="{{ post.image | replace: '.jpeg', '.webp' | replace: '.jpg', '.webp' | relative_url }}" type="image/webp">
+              <img src="{{ post.image | relative_url }}"
+                   class="card-img-top"
+                   alt="{{ post.title }}"
+                   loading="lazy">
+            </picture>
+          </a>
+        {% else %}
+          <a href="{{ post.url | relative_url }}" class="text-decoration-none">
+            <div class="card-img-top bg-wood-gradient">
+              <i class="bi bi-file-text text-white opacity-75"></i>
+            </div>
+          </a>
+        {% endif %}
+
+        <div class="card-body d-flex flex-column">
+          {% if post.categories %}
+          <div class="mb-2">
+            <span class="badge bg-wood-light text-dark small">
+              <i class="bi bi-folder me-1"></i>{{ post.categories | first }}
+            </span>
+          </div>
+          {% endif %}
+
+          <h4 class="card-title h6 mb-2">
+            <a href="{{ post.url | relative_url }}" class="text-dark text-decoration-none stretched-link">
+              {{ post.title }}
+            </a>
+          </h4>
+
+          <p class="card-text small text-muted mb-2">
+            <i class="bi bi-calendar3 me-1"></i>
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%d %b %Y" }}
+            </time>
+            {% if post.last_modified_at %}
+            <span class="ms-2" title="Terakhir diperbarui">
+              <i class="bi bi-pencil-square me-1"></i>{{ post.last_modified_at | date: "%d %b %Y" }}
+            </span>
+            {% endif %}
+          </p>
+
+          {% if post.like_count or post.comment_count or post.share_count %}
+          <div class="engagement-metrics">
+            {% if post.like_count %}
+            <span class="text-muted">
+              <i class="bi bi-heart-fill text-danger"></i> {{ post.like_count }}
+            </span>
+            {% endif %}
+            {% if post.comment_count %}
+            <span class="text-muted">
+              <i class="bi bi-chat-fill text-primary"></i> {{ post.comment_count }}
+            </span>
+            {% endif %}
+            {% if post.share_count %}
+            <span class="text-muted">
+              <i class="bi bi-share-fill text-success"></i> {{ post.share_count }}
+            </span>
+            {% endif %}
+          </div>
+          {% endif %}
+
+          {% if post.excerpt %}
+          <p class="card-text small text-secondary mb-3 flex-grow-1">
+            {{ post.excerpt | strip_html | truncatewords: 20 }}
+          </p>
+          {% endif %}
+
+          <div class="mt-auto">
+            <span class="text-wood small fw-semibold">
+              Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i>
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
