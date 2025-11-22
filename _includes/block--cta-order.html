@@ -1,0 +1,56 @@
+{% comment %}
+  ============================================================================
+  CTA Order Component (Visual Only)
+  ============================================================================
+
+  @file        _includes/block--cta-order.html
+  @description Call-to-action section for encouraging visitors to order
+               kayu dolken with WhatsApp and phone buttons.
+
+  @version     1.0.0
+  @date        2025-11-22
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Features:
+  ---------
+  - Eye-catching CTA with wood background
+  - WhatsApp and phone call buttons
+  - Responsive button layout
+  - Pre-filled WhatsApp message
+  - Direct phone call link
+
+  Parameters:
+  -----------
+  - title: Custom heading (default: "Siap Memesan Kayu Dolken Gelam?")
+  - subtitle: Custom subtitle (default: "Hubungi kami sekarang untuk konsultasi gratis dan dapatkan penawaran terbaik")
+
+  Usage:
+  ------
+  {% include block--cta-order.html %}
+
+  {% include block--cta-order.html title="Hubungi Kami Sekarang!" %}
+
+  Used in:
+  --------
+  - index.html (homepage CTA section)
+
+  ============================================================================
+{% endcomment %}
+
+{% assign cta_title = include.title | default: "Siap Memesan Kayu Dolken Gelam?" %}
+{% assign cta_subtitle = include.subtitle | default: "Hubungi kami sekarang untuk konsultasi gratis dan dapatkan penawaran terbaik" %}
+
+<div class="container cta text-center py-4">
+  <h2 class="display-6 fw-bold mb-3">{{ cta_title }}</h2>
+  <p class="lead mb-4">{{ cta_subtitle }}</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+    <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20konsultasi%20pemesanan%20kayu%20dolken" class="btn btn-success btn-lg px-5" target="_blank">
+      <i class="bi bi-whatsapp me-2"></i>Chat via WhatsApp
+    </a>
+    <a href="tel:{{ site.business.phone }}" class="btn btn-outline-light btn-lg px-5">
+      <i class="bi bi-telephone me-2"></i>Telepon Langsung
+    </a>
+  </div>
+</div>

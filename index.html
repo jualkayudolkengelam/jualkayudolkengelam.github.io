@@ -312,18 +312,7 @@ skip_page_schema: true
 
 <!-- CTA Section -->
 <section class="cta-section py-5 bg-wood text-white">
-  <div class="container text-center py-4">
-    <h2 class="display-6 fw-bold mb-3">Siap Memesan Kayu Dolken Gelam?</h2>
-    <p class="lead mb-4">Hubungi kami sekarang untuk konsultasi gratis dan dapatkan penawaran terbaik</p>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-      <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20konsultasi%20pemesanan%20kayu%20dolken" class="btn btn-success btn-lg px-5" target="_blank">
-        <i class="bi bi-whatsapp me-2"></i>Chat via WhatsApp
-      </a>
-      <a href="tel:{{ site.business.phone }}" class="btn btn-outline-light btn-lg px-5">
-        <i class="bi bi-telephone me-2"></i>Telepon Langsung
-      </a>
-    </div>
-  </div>
+  {% include block--cta-order.html %}
 </section>
 
 <!-- Latest Blog Posts -->
