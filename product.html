@@ -9,17 +9,8 @@ custom_schema:
   - schema--product-catalog.html
 ---
 
-<div class="container py-4">
 <!-- Breadcrumb Navigation -->
-<nav aria-label="breadcrumb" class="mb-3">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item">
-      <a href="{{ '/' | relative_url }}">Beranda</a>
-    </li>
-    <li class="breadcrumb-item active" aria-current="page">Produk</li>
-  </ol>
-</nav>
-</div>
+{% include block--breadcrumb.html current_title="Produk" %}
 
 <!-- Product Intro Section -->
 <section class="product-intro-section py-3">

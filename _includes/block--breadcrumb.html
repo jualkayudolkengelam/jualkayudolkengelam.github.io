@@ -20,33 +20,41 @@ Parameters:
   - url: Link URL
 
   If not provided, will use default structure:
-  Beranda > Produk > Current Page
+  - 2-level: Beranda > Current Page (if no parent_name)
+  - 3-level: Beranda > Parent > Current Page (if parent_name provided)
 
 - current_title: (required if items not provided) Current page title
-- parent_name: (optional) Parent section name (default: "Produk")
+- parent_name: (optional) Parent section name (if omitted, uses 2-level breadcrumb)
 - parent_url: (optional) Parent section URL (default: "/#product")
+- with_container: (optional) Wrap in container div (default: true)
 
 Usage:
 ------
-Basic (auto breadcrumb for product pages):
-{% include block--breadcrumb.html current_title=page.title %}
+1. Simple 2-level (Beranda → Current):
+   {% include block--breadcrumb.html current_title="Produk" %}
 
-Custom parent:
-{% include block--breadcrumb.html
-   current_title=page.title
-   parent_name="Blog"
-   parent_url="/blog/"
-%}
+2. With parent (3-level: Beranda → Parent → Current):
+   {% include block--breadcrumb.html
+      current_title=page.title
+      parent_name="Blog"
+      parent_url="/blog/"
+   %}
 
-Custom items:
-{% assign breadcrumb_items = "
-  [
-    {\"name\": \"Beranda\", \"url\": \"/\"},
-    {\"name\": \"Produk\", \"url\": \"/#product\"},
-    {\"name\": \"" | append: page.title | append: "\", \"url\": \"" | append: page.url | append: "\"}
-  ]
-" %}
-{% include block--breadcrumb.html items=breadcrumb_items %}
+3. Custom items (full control):
+   {% assign breadcrumb_items = "
+     [
+       {\"name\": \"Beranda\", \"url\": \"/\"},
+       {\"name\": \"Produk\", \"url\": \"/#product\"},
+       {\"name\": \"" | append: page.title | append: "\", \"url\": \"" | append: page.url | append: "\"}
+     ]
+   " %}
+   {% include block--breadcrumb.html items=breadcrumb_items %}
+
+4. Without container wrapper (if already inside container):
+   {% include block--breadcrumb.html
+      current_title="Produk"
+      with_container=false
+   %}
 
 Features:
 ---------
@@ -67,12 +75,15 @@ Call from page wrapper with: {% include schema--breadcrumb.html current_title=pa
   {% assign breadcrumb_items = include.items %}
 {% else %}
   {% comment %} Default breadcrumb structure {% endcomment %}
-  {% assign parent_name = include.parent_name | default: "Produk" %}
+  {% assign parent_name = include.parent_name %}
   {% assign parent_url = include.parent_url | default: "/#product" %}
   {% assign current_title = include.current_title | default: page.title %}
   {% assign current_url = page.url %}
 {% endif %}
 
+{% assign with_container = include.with_container | default: true %}
+
+{% if with_container %}<div class="container py-4">{% endif %}
 <!-- Breadcrumb Navigation -->
 <nav aria-label="breadcrumb" class="mb-3">
   <ol class="breadcrumb">
@@ -88,17 +99,20 @@ Call from page wrapper with: {% include schema--breadcrumb.html current_title=pa
         {% endif %}
       {% endfor %}
     {% else %}
-      {% comment %} Default mode {% endcomment %}
+      {% comment %} Default mode: 2-level or 3-level {% endcomment %}
       <li class="breadcrumb-item">
         <a href="{{ '/' | relative_url }}">Beranda</a>
       </li>
-      <li class="breadcrumb-item">
-        <a href="{{ parent_url | relative_url }}">{{ parent_name }}</a>
-      </li>
+      {% if parent_name %}
+        <li class="breadcrumb-item">
+          <a href="{{ parent_url | relative_url }}">{{ parent_name }}</a>
+        </li>
+      {% endif %}
       <li class="breadcrumb-item active" aria-current="page">{{ current_title }}</li>
     {% endif %}
   </ol>
 </nav>
+{% if with_container %}</div>{% endif %}
 
 {% comment %}
 Schema for this block is now in: _includes/schema--breadcrumb.html
