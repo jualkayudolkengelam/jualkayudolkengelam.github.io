@@ -19,122 +19,28 @@ custom_schema:
     <li class="breadcrumb-item active" aria-current="page">Produk</li>
   </ol>
 </nav>
-
-<!-- Product Intro -->
-<div class="row mb-5">
-  <div class="col-lg-8 mx-auto text-center">
-    <div class="alert alert-wood text-white border-0 shadow-sm">
-      <h4 class="alert-heading"><i class="bi bi-info-circle me-2"></i>Spesifikasi Produk</h4>
-      <hr class="border-white">
-      <div class="row text-start">
-        <div class="col-md-6">
-          <p class="mb-2"><strong><i class="bi bi-check-circle me-2"></i>Panjang:</strong> 4 Meter</p>
-          <p class="mb-2"><strong><i class="bi bi-check-circle me-2"></i>Material:</strong> Kayu Gelam Asli</p>
-          <p class="mb-2"><strong><i class="bi bi-check-circle me-2"></i>Finishing:</strong> Natural/Poles</p>
-        </div>
-        <div class="col-md-6">
-          <p class="mb-2"><strong><i class="bi bi-check-circle me-2"></i>Kualitas:</strong> Grade A Premium</p>
-          <p class="mb-2"><strong><i class="bi bi-check-circle me-2"></i>Sifat:</strong> Anti Rayap, Tahan Air</p>
-          <p class="mb-2"><strong><i class="bi bi-check-circle me-2"></i>Garansi:</strong> Kualitas Terjamin</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
+<!-- Product Intro Section -->
+<section class="product-intro-section py-3">
+  {% include block--product-intro.html %}
+</section>
+
+<div class="container">
 <!-- Product List Component (with Schema) -->
 {% include block--product-list.html %}
 
-<!-- Features Grid -->
-<div class="row g-4 mb-5">
-  <div class="col-12">
-    <h3 class="text-wood mb-4"><i class="bi bi-stars me-2"></i>Keunggulan Kayu Dolken Gelam Kami</h3>
-  </div>
-  <div class="col-md-6">
-    <div class="card border-0 shadow-sm h-100">
-      <div class="card-body">
-        <h5 class="card-title text-wood">
-          <i class="bi bi-shield-check me-2"></i>Kualitas Premium
-        </h5>
-        <p class="card-text">Kami hanya menyediakan kayu gelam pilihan dengan serat rapat, warna natural, dan bebas dari cacat. Setiap batang telah melalui proses seleksi ketat.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="card border-0 shadow-sm h-100">
-      <div class="card-body">
-        <h5 class="card-title text-wood">
-          <i class="bi bi-lightning me-2"></i>Kekuatan Maksimal
-        </h5>
-        <p class="card-text">Kayu gelam memiliki kepadatan tinggi yang menjadikannya salah satu kayu terkuat. Cocok untuk konstruksi yang membutuhkan kekuatan ekstra.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="card border-0 shadow-sm h-100">
-      <div class="card-body">
-        <h5 class="card-title text-wood">
-          <i class="bi bi-droplet-half me-2"></i>Tahan Air & Cuaca
-        </h5>
-        <p class="card-text">Sifat alami kayu gelam yang tahan terhadap air, kelembaban, dan perubahan cuaca ekstrem membuatnya ideal untuk outdoor maupun indoor.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="card border-0 shadow-sm h-100">
-      <div class="card-body">
-        <h5 class="card-title text-wood">
-          <i class="bi bi-bug me-2"></i>Anti Rayap Alami
-        </h5>
-        <p class="card-text">Tidak memerlukan treatment kimia tambahan. Kayu gelam secara alami resisten terhadap serangan rayap dan serangga perusak kayu lainnya.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Application Examples -->
-<div class="row mb-5">
-  <div class="col-12">
-    <h3 class="text-wood mb-4"><i class="bi bi-lightbulb me-2"></i>Contoh Penggunaan</h3>
-  </div>
-  <div class="col-lg-12">
-    <div class="card border-0 shadow-sm">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-4 mb-3 mb-md-0">
-            <h5 class="text-wood mb-3">Proyek Komersial</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Dekorasi hotel & resort</li>
-              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Interior cafe & restoran</li>
-              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Landscaping taman</li>
-              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Pagar pembatas area</li>
-            </ul>
-          </div>
-          <div class="col-md-4 mb-3 mb-md-0">
-            <h5 class="text-wood mb-3">Konstruksi</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Tiang penyangga struktur</li>
-              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Pondasi bangunan ringan</li>
-              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Scaffolding tradisional</li>
-              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Rangka atap</li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h5 class="text-wood mb-3">Dekorasi & Lainnya</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Gazebo & pergola</li>
-              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Pagar rumah natural</li>
-              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Art installation</li>
-              <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Furniture outdoor</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 </div><!-- /.container -->
+
+<!-- Features Section -->
+<section class="product-features-section py-5">
+  {% include block--product-features.html %}
+</section>
+
+<!-- Application Examples Section -->
+<section class="application-examples-section py-5 bg-light">
+  {% include block--product-applications.html %}
+</section>
 
 <!-- CTA Section -->
 <section class="cta-section py-5 bg-wood text-white">
