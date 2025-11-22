@@ -134,29 +134,19 @@ custom_schema:
   </div>
 </div>
 
-<!-- CTA -->
-<div class="row">
-  <div class="col-12">
-    <div class="card border-0 bg-wood text-white shadow-lg">
-      <div class="card-body p-5 text-center">
-        <h3 class="mb-3">Tertarik dengan Produk Kami?</h3>
-        <p class="lead mb-4">Hubungi kami sekarang untuk konsultasi gratis, info stok terkini, dan penawaran khusus!</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-          <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20konsultasi%20produk%20kayu%20dolken" class="btn btn-success btn-lg px-5" target="_blank">
-            <i class="bi bi-whatsapp me-2"></i>Chat WhatsApp
-          </a>
-          <a href="tel:{{ site.business.phone }}" class="btn btn-outline-light btn-lg px-5">
-            <i class="bi bi-telephone me-2"></i>{{ site.business.phone }}
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+</div><!-- /.container -->
 
+<!-- CTA Section -->
+<section class="cta-section py-5 bg-wood text-white">
+  {% include block--cta-order.html
+     title="Tertarik dengan Produk Kami?"
+     subtitle="Hubungi kami sekarang untuk konsultasi gratis, info stok terkini, dan penawaran khusus!"
+  %}
+</section>
+
+<div class="container">
 <!-- Schemas for this page -->
 
 <!-- Product List Schema (ItemList with Product items) -->
 {% include schema--product-list.html %}
-
 </div><!-- /.container -->
