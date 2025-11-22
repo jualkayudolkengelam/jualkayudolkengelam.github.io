@@ -1,0 +1,89 @@
+{% comment %}
+  ============================================================================
+  Contact Cards Block (Visual Only)
+  ============================================================================
+
+  @file        _includes/block--contact-cards.html
+  @description Contact information cards for WhatsApp, Phone, and Location.
+               Three-column responsive card layout.
+
+  @version     1.0.0
+  @date        2025-11-22
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Features:
+  ---------
+  - Three contact method cards (WhatsApp, Phone, Location)
+  - Icon-based design with Bootstrap cards
+  - Hover lift effect for interactivity
+  - Responsive grid (3 columns on desktop, stack on mobile)
+  - Direct action buttons (call, message)
+
+  Parameters:
+  -----------
+  None (uses site.business data from _config.yml)
+
+  Usage:
+  ------
+  {% include block--contact-cards.html %}
+
+  Used in:
+  --------
+  - contact.html (contact page)
+
+  ============================================================================
+{% endcomment %}
+
+<!-- Contact Cards -->
+<div class="row g-4 mb-5">
+  <!-- WhatsApp Card -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card border-0 shadow-sm h-100 text-center hover-lift">
+      <div class="card-body p-4">
+        <div class="mb-3">
+          <i class="bi bi-whatsapp text-success" style="font-size: 3rem;"></i>
+        </div>
+        <h5 class="card-title">WhatsApp</h5>
+        <p class="text-muted mb-3">Cara tercepat untuk menghubungi kami</p>
+        <h6 class="text-wood mb-3">{{ site.business.phone }}</h6>
+        <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20konsultasi%20tentang%20kayu%20dolken%20gelam" class="btn btn-success btn-lg w-100" target="_blank">
+          <i class="bi bi-whatsapp me-2"></i>Chat Sekarang
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phone Card -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card border-0 shadow-sm h-100 text-center hover-lift">
+      <div class="card-body p-4">
+        <div class="mb-3">
+          <i class="bi bi-telephone-fill text-primary" style="font-size: 3rem;"></i>
+        </div>
+        <h5 class="card-title">Telepon</h5>
+        <p class="text-muted mb-3">Hubungi langsung untuk konsultasi</p>
+        <h6 class="text-wood mb-3">{{ site.business.phone }}</h6>
+        <a href="tel:{{ site.business.phone }}" class="btn btn-primary btn-lg w-100">
+          <i class="bi bi-telephone me-2"></i>Telepon Sekarang
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Location Card -->
+  <div class="col-md-12 col-lg-4">
+    <div class="card border-0 shadow-sm h-100 text-center hover-lift">
+      <div class="card-body p-4">
+        <div class="mb-3">
+          <i class="bi bi-geo-alt-fill text-danger" style="font-size: 3rem;"></i>
+        </div>
+        <h5 class="card-title">Lokasi</h5>
+        <p class="text-muted mb-3">Supplier yang jual kayu dolken terdekat di kota Anda</p>
+        <h6 class="text-wood mb-3">{{ site.business.location }}</h6>
+        <p class="small text-muted">Melayani pengiriman ke seluruh Jawa & Bali</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,104 +18,57 @@ custom_schema:
 </div>
 
 <!-- Contact Cards -->
-<div class="row g-4 mb-5">
-  <!-- WhatsApp -->
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm h-100 text-center hover-lift">
-      <div class="card-body p-4">
-        <div class="mb-3">
-          <i class="bi bi-whatsapp text-success" class="fs-4rem"></i>
-        </div>
-        <h5 class="card-title">WhatsApp</h5>
-        <p class="text-muted mb-3">Cara tercepat untuk menghubungi kami</p>
-        <h6 class="text-wood mb-3">{{ site.business.phone }}</h6>
-        <a href="https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20konsultasi%20tentang%20kayu%20dolken%20gelam" class="btn btn-success btn-lg w-100" target="_blank">
-          <i class="bi bi-whatsapp me-2"></i>Chat Sekarang
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Phone -->
-  <div class="col-md-6 col-lg-4">
-    <div class="card border-0 shadow-sm h-100 text-center hover-lift">
-      <div class="card-body p-4">
-        <div class="mb-3">
-          <i class="bi bi-telephone-fill text-primary" class="fs-4rem"></i>
-        </div>
-        <h5 class="card-title">Telepon</h5>
-        <p class="text-muted mb-3">Hubungi langsung untuk konsultasi</p>
-        <h6 class="text-wood mb-3">{{ site.business.phone }}</h6>
-        <a href="tel:{{ site.business.phone }}" class="btn btn-primary btn-lg w-100">
-          <i class="bi bi-telephone me-2"></i>Telepon Sekarang
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Location -->
-  <div class="col-md-12 col-lg-4">
-    <div class="card border-0 shadow-sm h-100 text-center hover-lift">
-      <div class="card-body p-4">
-        <div class="mb-3">
-          <i class="bi bi-geo-alt-fill text-danger" class="fs-4rem"></i>
-        </div>
-        <h5 class="card-title">Lokasi</h5>
-        <p class="text-muted mb-3">Supplier yang jual kayu dolken terdekat di kota Anda</p>
-        <h6 class="text-wood mb-3">{{ site.business.location }}</h6>
-        <p class="small text-muted">Melayani pengiriman ke seluruh Jawa & Bali</p>
-      </div>
-    </div>
-  </div>
-</div>
+{% include block--contact-cards.html %}
 
 <!-- Business Info -->
 <div class="row mb-5">
-  <div class="col-lg-8 mx-auto">
-    <div class="card border-0 shadow-sm">
-      <div class="card-header bg-wood text-white">
-        <h5 class="mb-0"><i class="bi bi-info-circle me-2"></i>Informasi Bisnis</h5>
-      </div>
-      <div class="card-body p-4">
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <h6 class="text-wood mb-2"><i class="bi bi-shop me-2"></i>Nama Usaha</h6>
-            <p class="mb-0">{{ site.business.name }}</p>
-          </div>
-          <div class="col-md-6 mb-3">
-            <h6 class="text-wood mb-2"><i class="bi bi-person-fill me-2"></i>Pemilik</h6>
-            <p class="mb-0">{{ site.business.owner }}</p>
-          </div>
-          <div class="col-md-6 mb-3">
-            <h6 class="text-wood mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Lokasi</h6>
-            <p class="mb-0">{{ site.business.location }}</p>
-          </div>
-          <div class="col-md-6 mb-3">
-            <h6 class="text-wood mb-2"><i class="bi bi-clock me-2"></i>Jam Operasional</h6>
-            <p class="mb-0">
-              Senin - Sabtu: 08.00 - 17.00 WIB
-              <span class="badge bg-success ms-2">Fast Response</span>
-            </p>
-            <p class="mb-0 small text-muted">
-              <i class="bi bi-whatsapp me-1"></i>Minggu: Chat via WhatsApp (24 jam)
-            </p>
-          </div>
-          <div class="col-md-6 mb-3">
-            <h6 class="text-wood mb-2"><i class="bi bi-cash-coin me-2"></i>Metode Pembayaran</h6>
-            <p class="mb-0">
-              <span class="badge bg-primary">COD</span>
-              <span class="badge bg-info ms-1">Transfer</span>
-            </p>
-            <p class="mb-0 small text-muted">Bayar setelah barang sampai</p>
-          </div>
-          <div class="col-12 mb-3">
-            <h6 class="text-wood mb-2"><i class="bi bi-truck me-2"></i>Area Pengiriman</h6>
-            <p class="mb-0">{{ site.business.coverage }}</p>
-          </div>
-          <div class="col-12">
-            <h6 class="text-wood mb-2"><i class="bi bi-box-seam me-2"></i>Produk</h6>
-            <p class="mb-0">Kayu Dolken Gelam - Panjang 4 Meter</p>
-            <p class="mb-0 small">Diameter: 2-3 cm, 4-6 cm, 6-8 cm, 8-10 cm, 10-12 cm</p>
+  <div class="container business-info">
+    <div class="col-lg-8 mx-auto">
+      <div class="card border-0 shadow-sm">
+        <div class="card-header bg-wood text-white">
+          <h5 class="mb-0"><i class="bi bi-info-circle me-2"></i>Informasi Bisnis</h5>
+        </div>
+        <div class="card-body p-4">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <h6 class="text-wood mb-2"><i class="bi bi-shop me-2"></i>Nama Usaha</h6>
+              <p class="mb-0">{{ site.business.name }}</p>
+            </div>
+            <div class="col-md-6 mb-3">
+              <h6 class="text-wood mb-2"><i class="bi bi-person-fill me-2"></i>Pemilik</h6>
+              <p class="mb-0">{{ site.business.owner }}</p>
+            </div>
+            <div class="col-md-6 mb-3">
+              <h6 class="text-wood mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Lokasi</h6>
+              <p class="mb-0">{{ site.business.location }}</p>
+            </div>
+            <div class="col-md-6 mb-3">
+              <h6 class="text-wood mb-2"><i class="bi bi-clock me-2"></i>Jam Operasional</h6>
+              <p class="mb-0">
+                Senin - Sabtu: 08.00 - 17.00 WIB
+                <span class="badge bg-success ms-2">Fast Response</span>
+              </p>
+              <p class="mb-0 small text-muted">
+                <i class="bi bi-whatsapp me-1"></i>Minggu: Chat via WhatsApp (24 jam)
+              </p>
+            </div>
+            <div class="col-md-6 mb-3">
+              <h6 class="text-wood mb-2"><i class="bi bi-cash-coin me-2"></i>Metode Pembayaran</h6>
+              <p class="mb-0">
+                <span class="badge bg-primary">COD</span>
+                <span class="badge bg-info ms-1">Transfer</span>
+              </p>
+              <p class="mb-0 small text-muted">Bayar setelah barang sampai</p>
+            </div>
+            <div class="col-12 mb-3">
+              <h6 class="text-wood mb-2"><i class="bi bi-truck me-2"></i>Area Pengiriman</h6>
+              <p class="mb-0">{{ site.business.coverage }}</p>
+            </div>
+            <div class="col-12">
+              <h6 class="text-wood mb-2"><i class="bi bi-box-seam me-2"></i>Produk</h6>
+              <p class="mb-0">Kayu Dolken Gelam - Panjang 4 Meter</p>
+              <p class="mb-0 small">Diameter: 2-3 cm, 4-6 cm, 6-8 cm, 8-10 cm, 10-12 cm</p>
+            </div>
           </div>
         </div>
       </div>
@@ -123,58 +76,61 @@ custom_schema:
   </div>
 </div>
 
+</div>
 <!-- Quick Contact Form -->
 <div class="row mb-5">
-  <div class="col-lg-8 mx-auto">
-    <div class="card border-0 shadow-sm">
-      <div class="card-header bg-light">
-        <h5 class="mb-0 text-wood"><i class="bi bi-envelope me-2"></i>Kirim Pesan Cepat</h5>
-      </div>
-      <div class="card-body p-4">
-        <p class="text-muted mb-4">Isi form di bawah ini dan kami akan menghubungi Anda via WhatsApp</p>
+  
+    <div class="col-lg-8 mx-auto">
+      <div class="card border-0 shadow-sm">
+        <div class="card-header bg-light">
+          <h5 class="mb-0 text-wood"><i class="bi bi-envelope me-2"></i>Kirim Pesan Cepat</h5>
+        </div>
+        <div class="card-body p-4">
+          <p class="text-muted mb-4">Isi form di bawah ini dan kami akan menghubungi Anda via WhatsApp</p>
 
-        <div class="contact-form">
-          <form id="quickContactForm" data-whatsapp="{{ site.business.whatsapp }}">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label for="name" class="form-label">Nama Lengkap *</label>
-                <input type="text" class="form-control" id="name" required>
+          <div class="contact-form">
+            <form id="quickContactForm" data-whatsapp="{{ site.business.whatsapp }}">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Nama Lengkap *</label>
+                  <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Nomor WhatsApp *</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="08xxx" required>
+                </div>
+                <div class="col-12">
+                  <label for="productType" class="form-label">Ukuran yang Diminati</label>
+                  <select class="form-select" id="productType">
+                    <option value="">Pilih ukuran diameter...</option>
+                    <option value="2-3 cm">2 - 3 cm (Rp 15.000)</option>
+                    <option value="4-6 cm">4 - 6 cm (Rp 25.000)</option>
+                    <option value="6-8 cm">6 - 8 cm (Rp 30.000)</option>
+                    <option value="8-10 cm">8 - 10 cm (Rp 35.000)</option>
+                    <option value="10-12 cm">10 - 12 cm (Rp 45.000)</option>
+                    <option value="custom">Custom / Konsultasi</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="quantity" class="form-label">Jumlah Kebutuhan (estimasi)</label>
+                  <input type="text" class="form-control" id="quantity" placeholder="Contoh: 100 batang">
+                </div>
+                <div class="col-md-6">
+                  <label for="city" class="form-label">Kota Tujuan</label>
+                  <input type="text" class="form-control" id="city" placeholder="Contoh: Jakarta">
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Pesan / Pertanyaan</label>
+                  <textarea class="form-control" id="message" rows="4" placeholder="Tuliskan pertanyaan atau kebutuhan Anda..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-success btn-lg w-100">
+                    <i class="bi bi-whatsapp me-2"></i>Kirim via WhatsApp
+                  </button>
+                </div>
               </div>
-              <div class="col-md-6">
-                <label for="phone" class="form-label">Nomor WhatsApp *</label>
-                <input type="tel" class="form-control" id="phone" placeholder="08xxx" required>
-              </div>
-              <div class="col-12">
-                <label for="productType" class="form-label">Ukuran yang Diminati</label>
-                <select class="form-select" id="productType">
-                  <option value="">Pilih ukuran diameter...</option>
-                  <option value="2-3 cm">2 - 3 cm (Rp 15.000)</option>
-                  <option value="4-6 cm">4 - 6 cm (Rp 25.000)</option>
-                  <option value="6-8 cm">6 - 8 cm (Rp 30.000)</option>
-                  <option value="8-10 cm">8 - 10 cm (Rp 35.000)</option>
-                  <option value="10-12 cm">10 - 12 cm (Rp 45.000)</option>
-                  <option value="custom">Custom / Konsultasi</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label for="quantity" class="form-label">Jumlah Kebutuhan (estimasi)</label>
-                <input type="text" class="form-control" id="quantity" placeholder="Contoh: 100 batang">
-              </div>
-              <div class="col-md-6">
-                <label for="city" class="form-label">Kota Tujuan</label>
-                <input type="text" class="form-control" id="city" placeholder="Contoh: Jakarta">
-              </div>
-              <div class="col-12">
-                <label for="message" class="form-label">Pesan / Pertanyaan</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Tuliskan pertanyaan atau kebutuhan Anda..."></textarea>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-success btn-lg w-100">
-                  <i class="bi bi-whatsapp me-2"></i>Kirim via WhatsApp
-                </button>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
