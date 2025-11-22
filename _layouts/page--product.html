@@ -100,14 +100,14 @@ Architecture Principle:
   <!-- Collect all schemas at bottom before </body> -->
 
   <!-- Product Page Schema (WebPage + Product in @graph) -->
-  {% include schema--product-page.html product=page %}
+  {% include schema/schema--product-page.html product=page %}
 
   <!-- Breadcrumb Schema (BreadcrumbList) -->
-  {% include schema--breadcrumb.html current_title=page.title %}
+  {% include schema/schema--breadcrumb.html current_title=page.title %}
 
   <!-- Image Gallery Schema (ImageGallery) -->
   {% if page.images.size > 0 %}
-    {% include schema--carousel--image.html images=page.images title=page.title %}
+    {% include schema/schema--carousel--image.html images=page.images title=page.title %}
   {% endif %}
 
   <!-- Related Products Schema (ItemList with Product items) -->
@@ -116,7 +116,7 @@ Architecture Principle:
   Variable is available in parent scope
   {% endcomment %}
   {% if final_products.size > 0 %}
-    {% include schema--related-product--by-node.html products=final_products %}
+    {% include schema/schema--related-product--by-node.html products=final_products %}
   {% endif %}
 
   <!-- Related Articles Schema (ItemList with BlogPosting items) -->
@@ -125,7 +125,7 @@ Architecture Principle:
   Variable is available in parent scope
   {% endcomment %}
   {% if final_posts.size > 0 %}
-    {% include schema--related-content--by-node.html posts=final_posts title="Artikel Panduan & Tips" %}
+    {% include schema/schema--related-content--by-node.html posts=final_posts title="Artikel Panduan & Tips" %}
   {% endif %}
 </body>
 </html>

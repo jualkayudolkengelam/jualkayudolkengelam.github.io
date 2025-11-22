@@ -35,9 +35,9 @@
 
   Usage:
   ------
-  {% include schema--blog-preview.html %}
+  {% include schema/schema--blog-preview.html %}
 
-  {% include schema--blog-preview.html title="Berita Terbaru" limit=6 %}
+  {% include schema/schema--blog-preview.html title="Berita Terbaru" limit=6 %}
 
   Called from:
   ------------
@@ -79,7 +79,7 @@ This ensures recently updated posts with new metrics rise to the top.
       "@type": "ListItem",
       "position": {{ forloop.index }},
       "name": "{{ post.title | strip_html | strip_newlines | escape }}",
-      "item": {% include schema--post.html post=post raw=true %}
+      "item": {% include schema/schema--post.html post=post raw=true %}
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]

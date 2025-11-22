@@ -20,13 +20,13 @@ Parameters:
 Usage:
 ------
 In node--product.html (single product page):
-{% include schema--product.html product=page %}
+{% include schema/schema--product.html product=page %}
 
 In block--product.html (product card with schema):
-{% include schema--product.html product=include.product %}
+{% include schema/schema--product.html product=include.product %}
 
 In block--product-list.html (ItemList with Products):
-"item": {% include schema--product.html product=product raw=true %}
+"item": {% include schema/schema--product.html product=product raw=true %}
 
 Benefits:
 ---------

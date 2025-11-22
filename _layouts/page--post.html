@@ -94,11 +94,11 @@ Architecture Principle:
   <!-- Collect all schemas at bottom before </body> -->
 
   <!-- Breadcrumb Schema (BreadcrumbList) -->
-  {% include schema--breadcrumb.html current_title=page.title parent_name="Blog" parent_url="/blog/" %}
+  {% include schema/schema--breadcrumb.html current_title=page.title parent_name="Blog" parent_url="/blog/" %}
 
   <!-- Image Gallery Schema (ImageGallery) -->
   {% if page.images.size > 0 %}
-    {% include schema--carousel--image.html images=page.images title=page.title %}
+    {% include schema/schema--carousel--image.html images=page.images title=page.title %}
   {% endif %}
 
   <!-- Article Schema (BlogPosting/Article) -->
@@ -138,7 +138,7 @@ Architecture Principle:
   Only include if page has FAQ data
   {% endcomment %}
   {% if page.faq_pemesanan or page.faq_produk or page.faq_pengiriman %}
-    {% include schema--faq-kayu-dolken.html %}
+    {% include schema/schema--faq-kayu-dolken.html %}
   {% endif %}
 
   <!-- Related Articles Schema (ItemList) -->
@@ -147,7 +147,7 @@ Architecture Principle:
   Variable is available in parent scope
   {% endcomment %}
   {% if all_related.size > 0 %}
-    {% include schema--related-content--latest.html posts=all_related %}
+    {% include schema/schema--related-content--latest.html posts=all_related %}
   {% endif %}
 
   <!-- Page-specific scripts -->

@@ -22,13 +22,13 @@ Parameters:
 Usage:
 ------
 In node--post.html (single post page):
-{% include schema--post.html post=page %}
+{% include schema/schema--post.html post=page %}
 
 In block--post.html (post card with schema):
-{% include schema--post.html post=include.post %}
+{% include schema/schema--post.html post=include.post %}
 
 In schema--blog-list.html (ItemList with BlogPosting):
-"item": {% include schema--post.html post=post raw=true %}
+"item": {% include schema/schema--post.html post=post raw=true %}
 
 Benefits:
 ---------

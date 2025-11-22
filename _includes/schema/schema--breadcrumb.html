@@ -38,17 +38,17 @@
   Usage:
   ------
   Basic (auto breadcrumb):
-  {% include schema--breadcrumb.html current_title=page.title %}
+  {% include schema/schema--breadcrumb.html current_title=page.title %}
 
   Custom parent:
-  {% include schema--breadcrumb.html
+  {% include schema/schema--breadcrumb.html
      current_title=page.title
      parent_name="Blog"
      parent_url="/blog/"
   %}
 
   Custom items:
-  {% include schema--breadcrumb.html items=breadcrumb_items %}
+  {% include schema/schema--breadcrumb.html items=breadcrumb_items %}
 
   Called from:
   ------------
