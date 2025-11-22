@@ -69,6 +69,13 @@ Note: Homepage does NOT use node template - renders content directly!
     {% include schema--page.html %}
   {% endunless %}
 
+  <!-- Page-specific schemas -->
+  {% if page.custom_schema %}
+    {% for schema_file in page.custom_schema %}
+      {% include {{ schema_file }} %}
+    {% endfor %}
+  {% endif %}
+
   {% include header.html %}
 
   <main class="main-content">

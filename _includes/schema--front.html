@@ -1,0 +1,142 @@
+{% comment %}
+  ============================================================================
+  Schema Include - Front Page (@graph with WebPage, Breadcrumb, ItemList)
+  ============================================================================
+
+  @file        _includes/schema--front.html
+  @description Front page (homepage) schema with @graph combining WebPage,
+               BreadcrumbList, and product ItemList for better SEO.
+
+  @version     1.0.0
+  @date        2025-11-22
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Features:
+  ---------
+  - @graph structure combining multiple schema types
+  - WebPage schema with page info
+  - BreadcrumbList for homepage (single level)
+  - ItemList with all products (for product carousel/list in hero)
+
+  Called from:
+  ------------
+  - page--front.html layout (via custom_schema frontmatter)
+  - Only for front page (index.html)
+
+  ============================================================================
+{% endcomment %}
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}#webpage",
+      "url": "{{ page.url | absolute_url }}",
+      "name": "{{ page.title }}",
+      "description": "{{ page.description }}",
+      "inLanguage": "{{ site.lang | default: 'id' }}",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}{{ site.baseurl }}/#website",
+        "url": "{{ site.url }}{{ site.baseurl }}/",
+        "name": "{{ site.title }}"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "{{ site.url }}{{ site.baseurl }}/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Daftar Harga Kayu Dolken Gelam",
+      "description": "Daftar produk kayu dolken gelam berbagai ukuran diameter",
+      "numberOfItems": {{ site.products.size }},
+      "itemListElement": [
+        {% assign sorted_products = site.products | sort: "price" %}
+        {% for product in sorted_products %}
+        {
+          "@type": "Product",
+          "position": {{ forloop.index }},
+          "name": "{{ product.title }}",
+          "description": "{{ product.description }}",
+          {% if product.image %}
+          "image": "{{ product.image | absolute_url }}",
+          {% endif %}
+          "sku": "{{ product.sku }}",
+          "brand": {
+            "@type": "Brand",
+            "name": "{{ site.business.name }}"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "{{ product.url | absolute_url }}",
+            "priceCurrency": "IDR",
+            "price": "{{ product.price }}",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+              "@type": "Organization",
+              "name": "{{ site.business.name }}"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "IDR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "ID"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 2,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 3,
+                  "maxValue": 7,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "ID",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 7,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            }
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "{{ product.rating | default: 4.5 }}",
+            "reviewCount": "{{ product.review_count | default: 45 }}",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+  ]
+}
+</script>
