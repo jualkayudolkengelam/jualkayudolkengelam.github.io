@@ -5,6 +5,8 @@ description: Daftar lengkap kayu dolken gelam panjang 4 meter dengan berbagai uk
 keywords: harga kayu dolken gelam, jual dolken gelam 4 meter, dolken gelam murah
 image: /assets/images/jual-kayu-dolken-gelam-product-page-001.jpeg
 schema_type: CollectionPage
+custom_schema:
+  - schema--product-catalog.html
 ---
 
 <div class="container py-4">
@@ -153,28 +155,6 @@ schema_type: CollectionPage
 </div>
 
 <!-- Schemas for this page -->
-
-<!-- Breadcrumb Schema (2 levels for catalog page) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Beranda",
-      "item": "{{ site.url }}{{ site.baseurl }}/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Produk",
-      "item": "{{ page.url | absolute_url }}"
-    }
-  ]
-}
-</script>
 
 <!-- Product List Schema (ItemList with Product items) -->
 {% include schema--product-list.html %}

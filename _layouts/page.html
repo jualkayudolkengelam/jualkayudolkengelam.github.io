@@ -47,6 +47,18 @@ page.html (this file - site wrapper)
 {% include head.html %}
 
 <body>
+  <!-- Global Schema: WebSite + Organization + Navigation + Page in @graph -->
+  {% unless page.skip_page_schema %}
+    {% include schema--page.html %}
+  {% endunless %}
+
+  <!-- Page-specific schemas -->
+  {% if page.custom_schema %}
+    {% for schema_file in page.custom_schema %}
+      {% include {{ schema_file }} %}
+    {% endfor %}
+  {% endif %}
+
   {% include header.html %}
 
   <main class="main-content">
@@ -55,10 +67,5 @@ page.html (this file - site wrapper)
 
   {% include footer.html %}
   {% include block--cta--whatsapp.html %}
-
-  <!-- Global Schema: WebSite + Organization + Navigation + Page in @graph -->
-  {% unless page.skip_page_schema %}
-    {% include schema--page.html %}
-  {% endunless %}
 </body>
 </html>
