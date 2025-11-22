@@ -23,64 +23,12 @@ custom_schema:
   {% include block--contact-cards.html %}
 </section>
 
-<div class="container">
-<!-- Business Info -->
-<div class="row mb-5">
-  <div class="container business-info">
-    <div class="col-lg-8 mx-auto">
-      <div class="card border-0 shadow-sm">
-        <div class="card-header bg-wood text-white">
-          <h5 class="mb-0"><i class="bi bi-info-circle me-2"></i>Informasi Bisnis</h5>
-        </div>
-        <div class="card-body p-4">
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <h6 class="text-wood mb-2"><i class="bi bi-shop me-2"></i>Nama Usaha</h6>
-              <p class="mb-0">{{ site.business.name }}</p>
-            </div>
-            <div class="col-md-6 mb-3">
-              <h6 class="text-wood mb-2"><i class="bi bi-person-fill me-2"></i>Pemilik</h6>
-              <p class="mb-0">{{ site.business.owner }}</p>
-            </div>
-            <div class="col-md-6 mb-3">
-              <h6 class="text-wood mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Lokasi</h6>
-              <p class="mb-0">{{ site.business.location }}</p>
-            </div>
-            <div class="col-md-6 mb-3">
-              <h6 class="text-wood mb-2"><i class="bi bi-clock me-2"></i>Jam Operasional</h6>
-              <p class="mb-0">
-                Senin - Sabtu: 08.00 - 17.00 WIB
-                <span class="badge bg-success ms-2">Fast Response</span>
-              </p>
-              <p class="mb-0 small text-muted">
-                <i class="bi bi-whatsapp me-1"></i>Minggu: Chat via WhatsApp (24 jam)
-              </p>
-            </div>
-            <div class="col-md-6 mb-3">
-              <h6 class="text-wood mb-2"><i class="bi bi-cash-coin me-2"></i>Metode Pembayaran</h6>
-              <p class="mb-0">
-                <span class="badge bg-primary">COD</span>
-                <span class="badge bg-info ms-1">Transfer</span>
-              </p>
-              <p class="mb-0 small text-muted">Bayar setelah barang sampai</p>
-            </div>
-            <div class="col-12 mb-3">
-              <h6 class="text-wood mb-2"><i class="bi bi-truck me-2"></i>Area Pengiriman</h6>
-              <p class="mb-0">{{ site.business.coverage }}</p>
-            </div>
-            <div class="col-12">
-              <h6 class="text-wood mb-2"><i class="bi bi-box-seam me-2"></i>Produk</h6>
-              <p class="mb-0">Kayu Dolken Gelam - Panjang 4 Meter</p>
-              <p class="mb-0 small">Diameter: 2-3 cm, 4-6 cm, 6-8 cm, 8-10 cm, 10-12 cm</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- Business Info Section -->
+<section class="business-info-section py-5">
+  {% include block--business-info.html %}
+</section>
 
-</div>
+<div class="container">
 <!-- Quick Contact Form -->
 <div class="row mb-5">
   
