@@ -1,0 +1,87 @@
+{% comment %}
+  ============================================================================
+  Schema Include - Blog Preview (ItemList with BlogPosting items)
+  ============================================================================
+
+  @file        _includes/schema--blog-preview.html
+  @description Dedicated schema include for homepage blog preview ItemList markup.
+               Shows limited number of latest/recently updated articles.
+
+  @version     1.0.0
+  @date        2025-11-22
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Architecture:
+  -------------
+  - Block (_includes/block--blog-preview.html): Visual blog preview display
+  - Schema (_includes/schema--blog-preview.html): ItemList schema markup
+  - Page (index.html): Include schema at bottom before </body>
+
+  Features:
+  ---------
+  - Schema.org ItemList with BlogPosting items
+  - Shows latest/recently updated posts (default: 3)
+  - Sorted by last_modified_at (recent updates first)
+  - Complete BlogPosting fields (author, dates, interaction stats)
+  - Perfect schema/visual accuracy
+  - Maximum SEO value for homepage blog preview
+
+  Parameters:
+  -----------
+  - title: Custom section heading (default: "Artikel & Tips Terbaru")
+  - limit: Number of posts to show (default: 3)
+
+  Usage:
+  ------
+  {% include schema--blog-preview.html %}
+
+  {% include schema--blog-preview.html title="Berita Terbaru" limit=6 %}
+
+  Called from:
+  ------------
+  - index.html (homepage blog preview, before </body> tag)
+
+  ============================================================================
+{% endcomment %}
+
+{% assign preview_title = include.title | default: "Artikel & Tips Terbaru" %}
+{% assign preview_limit = include.limit | default: 3 %}
+
+{% comment %}Combine all posts from both collections{% endcomment %}
+{% assign all_posts = site.posts | concat: site.post_with_city %}
+
+{% comment %}
+Sort posts by last_modified_at (DESC) for fresh content priority.
+Posts with last_modified_at appear first, then posts sorted by publish date.
+This ensures recently updated posts with new metrics rise to the top.
+{% endcomment %}
+{% assign posts_with_modified = all_posts | where_exp: "post", "post.last_modified_at" | sort: "last_modified_at" | reverse %}
+{% assign posts_without_modified = all_posts | where_exp: "post", "post.last_modified_at == nil" | sort: "date" | reverse %}
+{% assign sorted_posts = posts_with_modified | concat: posts_without_modified %}
+
+{% comment %}Limit to preview count{% endcomment %}
+{% assign preview_posts = sorted_posts | slice: 0, preview_limit %}
+
+{% comment %} Schema.org ItemList for Blog Preview {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "{{ page.url | absolute_url }}#blog-preview",
+  "name": "{{ preview_title }}",
+  "description": "Artikel terbaru dan informasi seputar kayu dolken gelam",
+  "numberOfItems": {{ preview_posts.size }},
+  "itemListElement": [
+    {% for post in preview_posts %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "name": "{{ post.title | strip_html | strip_newlines | escape }}",
+      "item": {% include schema--post.html post=post raw=true %}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
