@@ -49,17 +49,26 @@
 
 {% assign list_title = include.title | default: "Blog & Artikel" %}
 
-{% comment %} Combine regular posts and posts with products {% endcomment %}
-{% assign all_posts = site.posts | concat: site.post_with_city %}
-
 {% comment %}
-Sort posts by last_modified_at (DESC) for fresh content priority.
-Posts with last_modified_at appear first, then posts sorted by publish date.
-This ensures recently updated posts with new metrics rise to the top.
+For pagination-enabled pages, use paginator.posts (posts shown on current page).
+For non-paginated pages, use all site.posts.
+This ensures schema accurately reflects only the posts visible on each page.
 {% endcomment %}
-{% assign posts_with_modified = all_posts | where_exp: "post", "post.last_modified_at" | sort: "last_modified_at" | reverse %}
-{% assign posts_without_modified = all_posts | where_exp: "post", "post.last_modified_at == nil" | sort: "date" | reverse %}
-{% assign sorted_posts = posts_with_modified | concat: posts_without_modified %}
+{% if paginator.posts %}
+  {% assign sorted_posts = paginator.posts %}
+{% else %}
+  {% comment %} Combine regular posts and posts with products {% endcomment %}
+  {% assign all_posts = site.posts | concat: site.post_with_city %}
+
+  {% comment %}
+  Sort posts by last_modified_at (DESC) for fresh content priority.
+  Posts with last_modified_at appear first, then posts sorted by publish date.
+  This ensures recently updated posts with new metrics rise to the top.
+  {% endcomment %}
+  {% assign posts_with_modified = all_posts | where_exp: "post", "post.last_modified_at" | sort: "last_modified_at" | reverse %}
+  {% assign posts_without_modified = all_posts | where_exp: "post", "post.last_modified_at == nil" | sort: "date" | reverse %}
+  {% assign sorted_posts = posts_with_modified | concat: posts_without_modified %}
+{% endif %}
 
 {% comment %} Schema.org ItemList for Blog Archive {% endcomment %}
 <script type="application/ld+json">
