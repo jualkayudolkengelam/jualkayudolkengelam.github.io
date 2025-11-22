@@ -149,5 +149,12 @@ Architecture Principle:
   {% if all_related.size > 0 %}
     {% include schema--related-content--latest.html posts=all_related %}
   {% endif %}
+
+  <!-- Page-specific scripts -->
+  {% if page.custom_js %}
+    {% for js_file in page.custom_js %}
+      <script src="{{ js_file | relative_url }}"></script>
+    {% endfor %}
+  {% endif %}
 </body>
 </html>

@@ -1,0 +1,97 @@
+{% comment %}
+  ============================================================================
+  Schema Include - FAQ Contact Page (FAQPage)
+  ============================================================================
+
+  @file        _includes/schema--faq-contact.html
+  @description Dedicated schema include for FAQPage markup on contact page.
+               Separated from block--faq-contact.html for better
+               architecture and schema centralization at page wrapper level.
+
+  @version     1.0.0
+  @date        2025-11-22
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Architecture:
+  -------------
+  - Block (_includes/block--faq-contact.html): Visual FAQ display
+  - Schema (_includes/schema--faq-contact.html): FAQPage schema markup
+  - Page (contact.html): Include both block and schema
+
+  Features:
+  ---------
+  - Schema.org FAQPage markup
+  - Contact-specific FAQs (minimum order, shipping, payment, etc.)
+  - Perfect for Google Rich Results FAQ snippets
+  - High SEO value for search visibility
+
+  Questions Covered:
+  ------------------
+  1. Berapa minimal pemesanan kayu dolken gelam?
+  2. Apakah harga sudah termasuk ongkir?
+  3. Berapa lama pengiriman ke Jakarta?
+  4. Apakah bisa custom ukuran panjang?
+  5. Bagaimana cara pembayarannya?
+
+  Usage:
+  ------
+  {% include schema--faq-contact.html %}
+
+  Called from:
+  ------------
+  - contact.html (via custom_schema frontmatter)
+
+  ============================================================================
+{% endcomment %}
+
+<!-- FAQ Schema.org Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Berapa minimal pemesanan kayu dolken gelam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Untuk jumlah minimal pemesanan disesuaikan dengan kapasitas pengiriman truk kami agar lebih efisien dan ekonomis. Silakan hubungi kami terlebih dahulu untuk konsultasi mengenai jumlah minimal order sesuai dengan lokasi tujuan Anda. Kami akan bantu menghitung kebutuhan yang paling optimal untuk proyek Anda, dan tentunya untuk pembelian dalam jumlah besar akan mendapat harga spesial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah harga sudah termasuk ongkir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, harga sudah termasuk ongkos kirim! Harga per batang yang tercantum adalah harga franco/delivered (sudah termasuk biaya pengiriman ke lokasi Anda). Untuk memberikan kenyamanan dan keamanan transaksi, kami menerapkan sistem pembayaran setelah barang sampai di tempat. Anda dapat memeriksa kualitas dan kondisi kayu dolken terlebih dahulu, baru kemudian melakukan pembayaran. Ini adalah komitmen kami untuk memberikan pelayanan terbaik dan kepercayaan kepada setiap pelanggan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa lama pengiriman ke Jakarta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pengiriman ke Jakarta biasanya memakan waktu 1-2 hari kerja tergantung volume dan ketersediaan armada. Untuk wilayah lain di Jawa, estimasi 2-5 hari kerja. Kami akan informasikan estimasi waktu pengiriman saat Anda melakukan pemesanan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah bisa custom ukuran panjang?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, kami melayani custom cutting sesuai kebutuhan Anda. Panjang standar adalah 4 meter, namun bisa dipotong sesuai permintaan. Untuk custom ukuran, silakan konsultasikan terlebih dahulu dengan kami."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana cara pembayarannya?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pembayaran dilakukan di tempat setelah barang sampai! Anda tidak perlu DP atau transfer di muka. Kami menerapkan sistem pembayaran COD (Cash on Delivery) - bayar setelah kayu dolken tiba di lokasi Anda dan Anda sudah cek kondisi barangnya. Pembayaran bisa cash atau transfer setelah barang diterima. Sistem ini memberikan keamanan dan kenyamanan untuk Anda."
+      }
+    }
+  ]
+}
+</script>
