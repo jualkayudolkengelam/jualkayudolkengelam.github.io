@@ -28,13 +28,53 @@
 
   Usage:
   ------
-  {% include block--cta-order.html %}
+  1. Default (no parameters):
+     {% include block--cta-order.html %}
 
-  {% include block--cta-order.html title="Hubungi Kami Sekarang!" %}
+  2. Custom title only:
+     {% include block--cta-order.html
+        title="Hubungi Kami Sekarang!"
+     %}
+
+  3. Custom title and subtitle:
+     {% include block--cta-order.html
+        title="Tertarik dengan Produk Kami?"
+        subtitle="Hubungi kami sekarang untuk konsultasi gratis, info stok terkini, dan penawaran khusus!"
+     %}
+
+  4. Custom subtitle only (title uses default):
+     {% include block--cta-order.html
+        subtitle="Dapatkan penawaran khusus hari ini!"
+     %}
+
+  Examples by Page Context:
+  --------------------------
+  Homepage (index.html):
+  {% include block--cta-order.html %}
+  (Uses defaults)
+
+  Product Page (product.html):
+  {% include block--cta-order.html
+     title="Tertarik dengan Produk Kami?"
+     subtitle="Hubungi kami sekarang untuk konsultasi gratis, info stok terkini, dan penawaran khusus!"
+  %}
+
+  Blog Post:
+  {% include block--cta-order.html
+     title="Butuh Kayu Dolken Berkualitas?"
+     subtitle="Konsultasi gratis dan harga terbaik hanya untuk Anda!"
+  %}
+
+  Contact Page:
+  {% include block--cta-order.html
+     title="Siap Membantu Anda!"
+     subtitle="Tim kami siap menjawab semua pertanyaan Anda"
+  %}
 
   Used in:
   --------
-  - index.html (homepage CTA section)
+  - index.html (homepage CTA section - default)
+  - product.html (product catalog CTA - custom title & subtitle)
 
   ============================================================================
 {% endcomment %}
