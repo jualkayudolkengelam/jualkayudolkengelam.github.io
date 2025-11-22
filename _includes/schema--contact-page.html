@@ -1,0 +1,56 @@
+{% comment %}
+  ============================================================================
+  Schema Include - Contact Page (BreadcrumbList for contact page)
+  ============================================================================
+
+  @file        _includes/schema--contact-page.html
+  @description Contact page schema with BreadcrumbList for SEO.
+               Specific to contact page.
+
+  @version     1.0.0
+  @date        2025-11-22
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Features:
+  ---------
+  - BreadcrumbList for contact page (2 levels: Beranda → Kontak)
+  - Optimized for ContactPage schema type
+
+  Called from:
+  ------------
+  - kontak.html (via custom_schema frontmatter)
+
+  Usage:
+  ------
+  In page frontmatter:
+  ---
+  custom_schema:
+    - schema--contact-page.html
+  ---
+
+  ============================================================================
+{% endcomment %}
+
+<!-- Breadcrumb Schema for Contact Page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Beranda",
+      "item": "{{ site.url }}{{ site.baseurl }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Kontak",
+      "item": "{{ page.url | absolute_url }}"
+    }
+  ]
+}
+</script>
