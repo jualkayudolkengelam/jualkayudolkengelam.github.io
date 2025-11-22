@@ -67,5 +67,12 @@ page.html (this file - site wrapper)
 
   {% include footer.html %}
   {% include reusable/block--cta--whatsapp.html %}
+
+  <!-- Page-specific scripts -->
+  {% if page.custom_js %}
+    {% for js_file in page.custom_js %}
+      <script src="{{ js_file | relative_url }}"></script>
+    {% endfor %}
+  {% endif %}
 </body>
 </html>
