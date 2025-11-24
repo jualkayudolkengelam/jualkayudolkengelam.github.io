@@ -19,7 +19,9 @@
     MAX_COMMENT_LENGTH: 1000,
     RATE_LIMIT_MINUTES: 5,
     NETWORK_DELAY_MS: 1500,
-    STORAGE_KEY: 'reviewFormLastSubmit'
+    STORAGE_KEY: 'reviewFormLastSubmit',
+    RECAPTCHA_SITE_KEY: '6LfXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+    RECAPTCHA_ACTION: 'submit_review'
   };
 
   // State
@@ -89,35 +91,8 @@
     // Get form data (for potential analytics)
     const formData = getFormData(form);
 
-    // Submit to server-side API
-    submitToServer(formData)
-      .then(response => {
-        // Record submission timestamp
-        recordSubmission();
-
-        // Track with analytics (if available)
-        trackSubmission(formData);
-
-        // Show success message
-        showSuccess(form, response);
-
-        // Reset state
-        isSubmitting = false;
-        submitButton.disabled = false;
-        submitButton.classList.remove('form-submit--loading');
-        submitButton.textContent = 'Kirim Ulasan';
-      })
-      .catch(error => {
-        // Handle submission error
-        console.error('[Review Form] Submission failed:', error);
-
-        isSubmitting = false;
-        submitButton.disabled = false;
-        submitButton.classList.remove('form-submit--loading');
-        submitButton.textContent = 'Kirim Ulasan';
-
-        showError(form, 'general', 'Gagal mengirim ulasan. Silakan coba lagi.');
-      });
+    // Execute reCAPTCHA v3 and submit
+    executeRecaptchaAndSubmit(formData, form, submitButton);
   }
 
   /**
@@ -437,9 +412,86 @@
   }
 
   /**
+   * Execute reCAPTCHA v3 verification before submission
+   * @param {Object} formData - Form data object
+   * @param {HTMLFormElement} form - Form element
+   * @param {HTMLButtonElement} submitButton - Submit button element
+   */
+  function executeRecaptchaAndSubmit(formData, form, submitButton) {
+    // Check if reCAPTCHA is loaded
+    if (typeof grecaptcha === 'undefined') {
+      console.warn('[Review Form] reCAPTCHA not loaded, proceeding without verification');
+      submitToServer(formData)
+        .then(response => handleSubmitSuccess(response, form, submitButton))
+        .catch(error => handleSubmitError(error, form, submitButton));
+      return;
+    }
+
+    // Execute reCAPTCHA v3
+    grecaptcha.ready(function() {
+      grecaptcha.execute(CONFIG.RECAPTCHA_SITE_KEY, {
+        action: CONFIG.RECAPTCHA_ACTION
+      }).then(function(token) {
+        // Add reCAPTCHA token to form data
+        formData.recaptchaToken = token;
+        formData.recaptchaAction = CONFIG.RECAPTCHA_ACTION;
+
+        console.log('[Review Form] reCAPTCHA token generated:', token.substring(0, 20) + '...');
+
+        // Submit to server with reCAPTCHA token
+        submitToServer(formData)
+          .then(response => handleSubmitSuccess(response, form, submitButton))
+          .catch(error => handleSubmitError(error, form, submitButton));
+      }).catch(function(error) {
+        console.error('[Review Form] reCAPTCHA execution failed:', error);
+
+        // Fallback: submit without token
+        submitToServer(formData)
+          .then(response => handleSubmitSuccess(response, form, submitButton))
+          .catch(error => handleSubmitError(error, form, submitButton));
+      });
+    });
+  }
+
+  /**
+   * Handle successful submission
+   */
+  function handleSubmitSuccess(response, form, submitButton) {
+    // Record submission timestamp
+    recordSubmission();
+
+    // Track with analytics (if available)
+    const formData = getFormData(form);
+    trackSubmission(formData);
+
+    // Show success message
+    showSuccess(form, response);
+
+    // Reset state
+    isSubmitting = false;
+    submitButton.disabled = false;
+    submitButton.classList.remove('form-submit--loading');
+    submitButton.textContent = 'Kirim Ulasan';
+  }
+
+  /**
+   * Handle submission error
+   */
+  function handleSubmitError(error, form, submitButton) {
+    console.error('[Review Form] Submission failed:', error);
+
+    isSubmitting = false;
+    submitButton.disabled = false;
+    submitButton.classList.remove('form-submit--loading');
+    submitButton.textContent = 'Kirim Ulasan';
+
+    showError(form, 'general', 'Gagal mengirim ulasan. Silakan coba lagi.');
+  }
+
+  /**
    * Submit review data to server-side API
    * Sends review to backend for processing and storage
-   * @param {Object} data - Form data object
+   * @param {Object} data - Form data object (with reCAPTCHA token)
    * @returns {Promise} - Resolves with server response
    */
   function submitToServer(data) {
@@ -449,14 +501,17 @@
         ? '/api/v1/reviews/products'
         : '/api/v1/reviews/posts';
 
-      // Prepare payload with additional metadata
+      // Prepare payload with additional metadata and reCAPTCHA token
       const payload = {
         ...data,
         sessionId: getSessionId(),
         deviceType: getDeviceType(),
         language: navigator.language || 'id-ID',
         timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-        screenResolution: `${window.screen.width}x${window.screen.height}`
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+        // reCAPTCHA verification
+        recaptchaToken: data.recaptchaToken || null,
+        recaptchaAction: data.recaptchaAction || null
       };
 
       // Submit using Fetch API

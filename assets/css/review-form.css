@@ -277,6 +277,26 @@
   display: block;
 }
 
+/* reCAPTCHA Notice */
+.recaptcha-notice {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.75rem;
+  color: #666;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.recaptcha-notice a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.recaptcha-notice a:hover {
+  text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .review-section {
@@ -297,5 +317,9 @@
 
   .success-message {
     padding: 2rem 1.5rem;
+  }
+
+  .recaptcha-notice {
+    font-size: 0.7rem;
   }
 }

@@ -17,7 +17,9 @@
     STORAGE_KEY_PREFIX: 'likeDislike_',
     ANIMATION_DURATION: 300,
     NOTIFICATION_DURATION: 2500,
-    COOLDOWN_MS: 1000 // Prevent spam clicking
+    COOLDOWN_MS: 1000, // Prevent spam clicking
+    RECAPTCHA_SITE_KEY: '6LfXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+    RECAPTCHA_ACTION: 'like_dislike_interaction'
   };
 
   // State
@@ -290,8 +292,8 @@
    * Track interaction with analytics
    */
   function trackInteraction(action, previousState) {
-    // Send to server-side API endpoint for persistence
-    submitToServer(action, previousState);
+    // Execute reCAPTCHA v3 before sending to server
+    executeRecaptchaAndTrack(action, previousState);
 
     // Google Analytics 4
     if (typeof gtag !== 'undefined') {
@@ -320,12 +322,43 @@
   }
 
   /**
+   * Execute reCAPTCHA v3 verification before tracking
+   * @param {string} action - The interaction action (like/dislike)
+   * @param {string} previousState - Previous interaction state
+   */
+  function executeRecaptchaAndTrack(action, previousState) {
+    // Check if reCAPTCHA is loaded
+    if (typeof grecaptcha === 'undefined') {
+      console.warn('[Like/Dislike] reCAPTCHA not loaded, proceeding without verification');
+      submitToServer(action, previousState, null);
+      return;
+    }
+
+    // Execute reCAPTCHA v3
+    grecaptcha.ready(function() {
+      grecaptcha.execute(CONFIG.RECAPTCHA_SITE_KEY, {
+        action: CONFIG.RECAPTCHA_ACTION
+      }).then(function(token) {
+        console.log('[Like/Dislike] reCAPTCHA token generated:', token.substring(0, 20) + '...');
+        submitToServer(action, previousState, token);
+      }).catch(function(error) {
+        console.error('[Like/Dislike] reCAPTCHA execution failed:', error);
+        // Fallback: submit without token
+        submitToServer(action, previousState, null);
+      });
+    });
+  }
+
+  /**
    * Submit interaction data to server-side API
    * Sends POST request to track user engagement
    * for analytics and aggregate statistics
+   * @param {string} action - The interaction action (like/dislike)
+   * @param {string} previousState - Previous interaction state
+   * @param {string|null} recaptchaToken - reCAPTCHA verification token
    */
-  function submitToServer(action, previousState) {
-    // Prepare payload for server
+  function submitToServer(action, previousState, recaptchaToken) {
+    // Prepare payload for server with reCAPTCHA token
     const payload = {
       action: action,
       previousState: previousState || 'none',
@@ -333,7 +366,10 @@
       pageTitle: document.title,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      referrer: document.referrer || 'direct'
+      referrer: document.referrer || 'direct',
+      // reCAPTCHA verification
+      recaptchaToken: recaptchaToken,
+      recaptchaAction: CONFIG.RECAPTCHA_ACTION
     };
 
     // API endpoint configuration
