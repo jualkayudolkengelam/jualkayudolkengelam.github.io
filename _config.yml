@@ -87,3 +87,13 @@ exclude:
   - validate-post.sh
   - rebuild.sh
   - TEMPLATES/
+  # Exclude documentation and development files
+  - contact/
+  - docs/
+  - product/
+  - RELEASE/
+  - TODO/
+  - LICENSE
+  - CHANGELOG.md
+  - README.md
+  - RELEASE_NOTES.md
