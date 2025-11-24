@@ -1,0 +1,81 @@
+{% comment %}
+  ============================================================================
+  Schema Include - Area Pengiriman (areaServed)
+  ============================================================================
+
+  @file        _includes/schema/schema--area-pengiriman.html
+  @description Schema markup for delivery area coverage.
+               Provides areaServed property for LocalBusiness/Organization.
+
+  @version     1.0.0
+  @date        2025-11-25
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Architecture:
+  -------------
+  - Block (_includes/products/block--product-area-pengiriman.html): Visual display
+  - Schema (this file): areaServed schema markup for SEO
+  - Data (_data/area_pengiriman.yml): Global delivery area data
+
+  Features:
+  ---------
+  - Schema.org areaServed property
+  - Province-level and city-level coverage
+  - Enhanced local SEO visibility
+  - Better Google Business Profile integration
+
+  Parameters:
+  -----------
+  - site.data.area_pengiriman.provinsi: Array of provinces with cities
+
+  Usage:
+  ------
+  {% include schema/schema--area-pengiriman.html %}
+
+  Note: This schema reads from global _data/area_pengiriman.yml
+        Same data used by block--product-area-pengiriman.html
+
+  Called from:
+  ------------
+  - _layouts/page--product.html (before </body> tag)
+  - Included on all product pages
+
+  SEO Benefits:
+  -------------
+  - Improved local search visibility
+  - Better "near me" search results
+  - Enhanced Google Business Profile coverage
+  - Clear service area definition for search engines
+
+  ============================================================================
+{% endcomment %}
+
+<!-- Schema.org areaServed Markup for Delivery Coverage -->
+{% if site.data.area_pengiriman.provinsi %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Pengiriman Kayu Dolken Gelam",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "{{ site.business.name }}",
+    "telephone": "{{ site.business.phone }}"
+  },
+  "areaServed": [{% for provinsi in site.data.area_pengiriman.provinsi %}
+    {
+      "@type": "State",
+      "name": "{{ provinsi.nama | escape }}",
+      "containsPlace": [{% for kota in provinsi.kota %}
+        {
+          "@type": "City",
+          "name": "{{ kota | escape }}"
+        }{% unless forloop.last %},{% endunless %}{% endfor %}
+      ]
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>
+{% endif %}
