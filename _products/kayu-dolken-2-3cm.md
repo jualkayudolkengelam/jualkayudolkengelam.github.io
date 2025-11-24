@@ -54,18 +54,25 @@ keunggulan:
   - judul: "Tahan Lama"
     deskripsi: "Kayu gelam terkenal dengan ketahanannya terhadap rayap, jamur, dan pembusukan. Bahkan tanpa treatment khusus, kayu dolken gelam dapat bertahan puluhan tahun."
 
-# Recommendations
-rekomendasi:
-  tipe: "penggunaan"
-  sections:
-    - heading: "Untuk Dekorasi Interior:"
-      deskripsi: "Sempurna untuk aksen dinding hotel, cafe, dan restoran. Pasang vertikal atau horizontal untuk menciptakan texture natural yang menarik."
-    - heading: "Untuk Taman & Landscape:"
-      deskripsi: "Ideal sebagai border dekoratif, penyangga tanaman merambat, atau pembatas area taman dengan jarak 5-8 cm antar batang."
-    - heading: "Untuk Art Installation:"
-      deskripsi: "Cocok untuk instalasi seni, display produk, atau dekorasi event dengan kreativitas tinggi."
-    - heading: "Catatan Penting:"
-      deskripsi: "Diameter 2-3 cm ideal untuk aplikasi dekoratif dan hiasan. Tidak direkomendasikan untuk konstruksi struktural yang memerlukan beban berat."
+# FAQ Recommendations
+faq_rekomendasi:
+  header:
+    judul: "Rekomendasi Penggunaan"
+    icon: "bi-lightbulb-fill"
+    tagline: "Tips dan rekomendasi untuk hasil optimal"
+  intro:
+    judul: "Panduan dan Saran Penggunaan"
+    icon: "bi-stars"
+    deskripsi: "Rekomendasi dari para profesional untuk memaksimalkan penggunaan produk ini"
+  items:
+    - pertanyaan: "Bagaimana cara menggunakan kayu dolken diameter 2-3 cm untuk dekorasi interior?"
+      jawaban: "Kayu dolken diameter 2-3 cm sempurna untuk aksen dinding hotel, cafe, dan restoran. Pasang vertikal atau horizontal untuk menciptakan texture natural yang menarik. Jarak ideal 5-8 cm antar batang untuk hasil optimal."
+    - pertanyaan: "Apakah kayu dolken diameter 2-3 cm cocok untuk taman dan landscape?"
+      jawaban: "Sangat cocok! Ideal sebagai border dekoratif, penyangga tanaman merambat, atau pembatas area taman. Gunakan jarak 5-8 cm antar batang untuk tampilan rapi dan natural."
+    - pertanyaan: "Bisakah kayu dolken diameter 2-3 cm digunakan untuk art installation?"
+      jawaban: "Ya, sangat cocok untuk instalasi seni, display produk, atau dekorasi event dengan kreativitas tinggi. Diameter kecil memberikan fleksibilitas dalam desain artistic."
+    - pertanyaan: "Apakah kayu dolken diameter 2-3 cm cocok untuk konstruksi struktural?"
+      jawaban: "Diameter 2-3 cm ideal untuk aplikasi dekoratif dan hiasan. Tidak direkomendasikan untuk konstruksi struktural yang memerlukan beban berat. Untuk konstruksi, gunakan diameter 6-8 cm atau lebih besar."
 
 # Order Process
 cara_pemesanan:
@@ -149,6 +156,6 @@ cara_pemesanan:
 {% include products/block--product-area-pengiriman.html %}
 </section>
 
-<section id="product-rekomendasi">
-{% include products/block--product-rekomendasi.html %}
+<section id="product-faq-rekomendasi">
+{% include products/block--product-faq-rekomendasi.html %}
 </section>

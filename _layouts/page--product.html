@@ -133,6 +133,11 @@ Architecture Principle:
     {% include schema/schema--howto-product-pemesanan.html %}
   {% endif %}
 
+  <!-- FAQ Schema for Product Recommendations -->
+  {% if page.faq_rekomendasi.items %}
+    {% include schema/schema--faq-rekomendasi.html %}
+  {% endif %}
+
   <!-- Review Form (Floating Button + Modal) -->
   {% include review-form-product.html %}
   <script src="{{ '/assets/js/review-modal.js' | relative_url }}"></script>

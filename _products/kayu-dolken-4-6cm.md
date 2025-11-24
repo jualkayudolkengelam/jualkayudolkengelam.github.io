@@ -137,7 +137,7 @@ cara_pemesanan:
 </section>
 
 <section id="product-rekomendasi">
-{% include products/block--product-rekomendasi.html %}
+{% include products/block--product-faq-rekomendasi.html %}
 </section>
 
 <section id="product-cara-pemesanan">

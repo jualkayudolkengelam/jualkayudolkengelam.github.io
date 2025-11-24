@@ -82,74 +82,43 @@
   ============================================================================
 {% endcomment %}
 
-{% if page.rekomendasi %}
+{% if page.faq_rekomendasi %}
 <!-- H2: Main Section Header -->
-<div class="my-5">
+<div class="my-5 faq_rekomendasi__header">
   <div class="card border-0 shadow-lg">
     <div class="card-body text-white text-center py-4 px-3" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);">
-      <i class="bi bi-lightbulb-fill mb-2 fs-2-5rem"></i>
-      {% if page.rekomendasi.judul %}
-      <h2 class="h2 mb-0 fw-bold text-white">{{ page.rekomendasi.judul }}</h2>
-      {% else %}
-      <h2 class="h2 mb-0 fw-bold text-white">Rekomendasi Penggunaan</h2>
-      {% endif %}
-      <p class="mb-0 mt-2 small" style="opacity: 0.85;">
+      <i class="bi {{ page.faq_rekomendasi.header.icon }} mb-2 fs-2-5rem header__icon"></i>
+      <h2 class="h2 mb-0 fw-bold text-white header__judul">{{ page.faq_rekomendasi.header.judul }}</h2>
+      <p class="mb-0 mt-2 small header__tagline" style="opacity: 0.85;">
         <i class="bi bi-bookmark-star me-1"></i>
-        Tips dan rekomendasi untuk hasil optimal
+        {{ page.faq_rekomendasi.header.tagline }}
         <i class="bi bi-bookmark-star ms-1"></i>
       </p>
     </div>
   </div>
 </div>
 
-<!-- H3: Recommendations Overview -->
-<div class="my-4">
+<!-- H3: FAQ Overview -->
+<div class="my-4 faq_rekomendasi__intro">
   <div class="d-flex align-items-center mb-3">
     <div class="bg-info bg-opacity-10 px-3 py-2 rounded-3 flex-grow-1">
-      <h3 class="h4 mb-0 text-wood fw-bold">
-        <i class="bi bi-stars text-info me-2"></i>Panduan dan Saran Penggunaan
+      <h3 class="h4 mb-0 text-wood fw-bold intro__judul">
+        <i class="bi {{ page.faq_rekomendasi.intro.icon }} text-info me-2 intro__icon"></i>{{ page.faq_rekomendasi.intro.judul }}
       </h3>
-      <p class="small text-muted mb-0 mt-1">Rekomendasi dari para profesional untuk memaksimalkan penggunaan produk ini</p>
+      <p class="small text-muted mb-0 mt-1 intro__deskripsi">{{ page.faq_rekomendasi.intro.deskripsi }}</p>
     </div>
   </div>
 
-  {% if page.rekomendasi.sections %}
-    {% for section in page.rekomendasi.sections %}
-    <div class="card border-0 shadow-sm mb-3">
-      <div class="card-body">
-        <!-- H4: Recommendation Category -->
-        {% if section.heading %}
-        <h4 class="h5 text-wood mb-2 fw-bold">
-          <i class="bi bi-arrow-right-circle-fill text-info me-2"></i>{{ section.heading }}
-        </h4>
-        {% endif %}
-
-        {% if section.deskripsi %}
-        <p class="text-muted mb-3">{{ section.deskripsi }}</p>
-        {% endif %}
-
-        {% if section.items %}
-          {% if page.rekomendasi.tipe == "why_popular" or page.rekomendasi.tipe == "vs_material" %}
-          <ul class="list-unstyled mb-0">
-            {% for item in section.items %}
-            <li class="mb-1">
-              <i class="bi bi-check-circle-fill text-success me-2"></i>{{ item }}
-            </li>
-            {% endfor %}
-          </ul>
-          {% else %}
-          <div class="mb-0">
-            {% for item in section.items %}
-            <p class="mb-2 text-muted">
-              <i class="bi bi-dot text-info me-1"></i>{{ item }}
-            </p>
-            {% endfor %}
-          </div>
-          {% endif %}
-        {% endif %}
-      </div>
+  <!-- FAQ Rekomendasi Section -->
+  {% for faq in page.faq_rekomendasi.items %}
+  <div class="card border-0 shadow-sm mb-3 faq_rekomendasi__item">
+    <div class="card-body">
+      <h4 class="h5 text-wood mb-2 fw-bold faq__pertanyaan">
+        <i class="bi bi-question-circle-fill text-info me-2"></i>{{ faq.pertanyaan }}
+      </h4>
+      <p class="text-muted mb-0 faq__jawaban">{{ faq.jawaban }}</p>
     </div>
-    {% endfor %}
-  {% endif %}
+  </div>
+  {% endfor %}
 </div>
 {% endif %}

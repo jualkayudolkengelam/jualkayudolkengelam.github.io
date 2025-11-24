@@ -1,0 +1,80 @@
+{% comment %}
+  ============================================================================
+  Schema Include - FAQ Rekomendasi (FAQPage)
+  ============================================================================
+
+  @file        _includes/schema/schema--faq-rekomendasi.html
+  @description Schema markup for product usage recommendations in FAQ format.
+               Provides Q&A guidance for optimal product usage.
+
+  @version     1.0.0
+  @date        2025-11-25
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Architecture:
+  -------------
+  - Block (_includes/products/block--product-rekomendasi.html): Visual display
+  - Schema (this file): FAQPage schema markup for SEO
+  - Page wrapper (_layouts/page--product.html): Include schema before </body>
+
+  Features:
+  ---------
+  - Schema.org FAQPage markup
+  - Product-specific usage recommendations
+  - Enhanced questions with diameter specification
+  - Rich answers with actionable details
+  - Perfect for Google Rich Results FAQ snippets
+
+  Parameters:
+  -----------
+  - page.faq_rekomendasi: Array of recommendation FAQ items
+    Each FAQ item should have:
+    - pertanyaan: Question text (should include product diameter)
+    - jawaban: Answer text (detailed recommendation)
+
+  - page.diameter: Product diameter (used in context)
+
+  Usage:
+  ------
+  {% include schema/schema--faq-rekomendasi.html %}
+
+  Note: This schema reads directly from page frontmatter variables.
+        Ensure faq_rekomendasi array is defined in product frontmatter.
+
+  Called from:
+  ------------
+  - _layouts/page--product.html (before </body> tag)
+  - Only included on product pages that have faq_rekomendasi data
+
+  SEO Benefits:
+  -------------
+  - Enhanced SERP with FAQ rich snippets
+  - Better visibility for "bagaimana cara" searches
+  - Voice search optimization
+  - Featured snippet eligibility
+  - Improved CTR with direct answers
+
+  ============================================================================
+{% endcomment %}
+
+<!-- Schema.org FAQPage Markup for Product Recommendations -->
+{% if page.faq_rekomendasi.items %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{% for faq in page.faq_rekomendasi.items %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.pertanyaan | escape }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.jawaban | escape }}"
+      }
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>
+{% endif %}
