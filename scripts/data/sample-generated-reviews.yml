@@ -1,0 +1,80 @@
+---
+generated_at: '2025-11-24 19:54:39 +0700'
+generator_version: 3.0.0
+total_reviews: 10
+rating_distribution:
+  4: 5
+  5: 5
+category_distribution:
+  commercial: 2
+  residential: 3
+  specific: 3
+  infrastructure: 2
+reviews:
+- author: Mas Ricky
+  location: Ubud
+  rating: 4
+  category: commercial
+  use_case: jalur pejalan kaki
+  text: Harga sebanding kualitas. untuk jalur pejalan kaki kami. Tahan rayap. Omzet
+    naik. Oke lah
+- author: Mas Wibowo
+  location: Manado
+  rating: 4
+  category: residential
+  use_case: property developer
+  text: Terbaik di kelasnya. tepat untuk property developer. Diameter sesuai. Tampilan
+    bagus. Proper quality
+- author: Bu Wijayanti
+  location: Kediri
+  rating: 4
+  category: specific
+  use_case: restaurant
+  text: Recommended sekali. di area restaurant. Jadi signature. Recommended
+- author: Bu Hidayat
+  location: Makassar
+  rating: 5
+  category: residential
+  use_case: danau wisata
+  text: Terbaik di kelasnya. untuk danau wisata. Tepat waktu. Hasilnya memuaskan.
+    Best quality!
+- author: Bu Arief
+  location: Kediri
+  rating: 4
+  category: commercial
+  use_case: restaurant
+  text: Kayunya berkualitas tinggi. untuk area restaurant. Diameter sesuai. Vibe nya
+    pas. Quite satisfied
+- author: Bu Siswanto
+  location: Sidoarjo
+  rating: 4
+  category: specific
+  use_case: wahana wisata
+  text: Sudah order beberapa kali. untuk area wahana wisata. Panjang presisi. Performance
+    bagus. Oke lah
+- author: Bu Subagyo
+  location: Jakarta Timur
+  rating: 5
+  category: specific
+  use_case: landscape
+  text: Melebihi ekspektasi. untuk area landscape. Fast response. Tahan beban. Must
+    try!
+- author: Mas Galih
+  location: Gresik
+  rating: 5
+  category: infrastructure
+  use_case: taman kota
+  text: Pilihan tepat. cocok untuk taman kota. Perfect!
+- author: Bu Yudi
+  location: Banjarmasin
+  rating: 5
+  category: residential
+  use_case: marine application
+  text: Sangat recommended. dipakai untuk marine application. Profesional. Tamu banyak
+    puji. Perfect!
+- author: Mas Rahman
+  location: Sidoarjo
+  rating: 5
+  category: infrastructure
+  use_case: jembatan
+  text: Investasi yang bagus. sesuai untuk jembatan. Profesional. Gak nyesel!
