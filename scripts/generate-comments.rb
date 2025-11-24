@@ -101,16 +101,16 @@ class CommentGenerator
 
   def generate_single_comment
     # Select random base attributes
-    author = blocks[:author].sample
+    first_name = blocks[:author].sample
+    last_name = blocks[:author].sample
     location = blocks[:location].sample
     comment_type = random_comment_type # Weighted distribution
 
     # Generate comment text
     text = build_comment_text(comment_type)
 
-    # Add prefix to author (Pak/Bu/Mas)
-    prefix = ['Pak', 'Bu', 'Mas'].sample
-    full_author = "#{prefix} #{author}"
+    # Full name without prefix (more natural for blog comments)
+    full_author = "#{first_name} #{last_name}"
 
     {
       'author' => full_author,
