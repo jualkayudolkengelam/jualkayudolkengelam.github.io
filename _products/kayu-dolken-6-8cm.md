@@ -56,26 +56,26 @@ keunggulan:
 - judul: Investasi Jangka Panjang
   deskripsi: Dengan ukuran dan kekuatan ini, kayu dolken gelam dapat bertahan puluhan
     tahun bahkan dalam kondisi ekstrem. Sangat ekonomis untuk proyek jangka panjang.
-rekomendasi:
-  tipe: penggunaan
-  sections:
-  - heading: 'Untuk Tiang Pancang Fondasi:'
-    deskripsi: Ideal untuk fondasi ringan hingga sedang, dapat dipancang 1-1.5 meter
-      ke dalam tanah untuk stabilitas maksimal. Jarak antar tiang 1.5-2 meter sesuai
-      beban struktur.
-  - heading: 'Untuk Pagar Permanen:'
-    deskripsi: Jarak ideal 15-20 cm antar tiang untuk kekuatan optimal. Tinggi pagar
-      2-2.5 meter untuk keamanan maksimal. Dapat bertahan 20-30 tahun tanpa perawatan
-      khusus.
-  - heading: 'Untuk Konstruksi Dermaga:'
-    deskripsi: Sangat cocok untuk dermaga kecil hingga sedang. Tahan terendam air
-      laut dan air tawar puluhan tahun tanpa pembusukan.
-  - heading: 'Untuk Gazebo & Pergola Besar:'
-    deskripsi: Cocok sebagai tiang penyangga utama untuk gazebo ukuran 4x4 hingga
-      6x6 meter dengan kapasitas beban tinggi.
-  - heading: 'Untuk Turap & Penahan Tanah:'
-    deskripsi: Efektif untuk penahan tanah setinggi 1-2 meter. Dapat dipasang rapat
-      atau dengan jarak tertentu sesuai kebutuhan.
+faq_rekomendasi:
+  header:
+    judul: "Rekomendasi Penggunaan"
+    icon: "bi-lightbulb-fill"
+    tagline: "Tips dan rekomendasi untuk hasil optimal"
+  intro:
+    judul: "Panduan dan Saran Penggunaan"
+    icon: "bi-stars"
+    deskripsi: "Rekomendasi dari para profesional untuk memaksimalkan penggunaan produk ini"
+  items:
+    - pertanyaan: "Bagaimana cara menggunakan kayu dolken diameter 6-8 cm untuk tiang pancang fondasi?"
+      jawaban: "Ideal untuk fondasi ringan hingga sedang, dapat dipancang 1-1.5 meter ke dalam tanah untuk stabilitas maksimal. Gunakan jarak antar tiang 1.5-2 meter sesuai beban struktur untuk hasil optimal."
+    - pertanyaan: "Apakah kayu dolken diameter 6-8 cm cocok untuk pagar permanen?"
+      jawaban: "Sangat cocok! Jarak ideal 15-20 cm antar tiang untuk kekuatan optimal. Tinggi pagar 2-2.5 meter memberikan keamanan maksimal. Dapat bertahan 20-30 tahun tanpa perawatan khusus."
+    - pertanyaan: "Bisakah kayu dolken diameter 6-8 cm digunakan untuk konstruksi dermaga?"
+      jawaban: "Ya, sangat cocok untuk dermaga kecil hingga sedang. Kayu gelam tahan terendam air laut dan air tawar puluhan tahun tanpa pembusukan, ideal untuk aplikasi marine."
+    - pertanyaan: "Apakah kayu dolken diameter 6-8 cm cocok untuk gazebo dan pergola besar?"
+      jawaban: "Sangat cocok! Ideal sebagai tiang penyangga utama untuk gazebo ukuran 4x4 hingga 6x6 meter dengan kapasitas beban tinggi dan daya tahan struktural yang kuat."
+    - pertanyaan: "Bisakah kayu dolken diameter 6-8 cm digunakan untuk turap dan penahan tanah?"
+      jawaban: "Ya, sangat efektif untuk penahan tanah setinggi 1-2 meter. Dapat dipasang rapat atau dengan jarak tertentu sesuai kebutuhan proyek sipil Anda."
 
 # Order Process
 cara_pemesanan:

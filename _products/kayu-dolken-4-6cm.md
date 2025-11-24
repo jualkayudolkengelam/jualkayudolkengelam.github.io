@@ -49,18 +49,25 @@ keunggulan:
   - judul: "Daya Tahan Luar Biasa"
     deskripsi: "Kayu gelam dengan diameter ini memiliki masa pakai yang sangat panjang. Ketahanannya terhadap cuaca, air, dan serangan hama menjadikannya investasi jangka panjang yang ekonomis."
 
-# Recommendations
-rekomendasi:
-  tipe: "penggunaan"
-  sections:
-    - heading: "Untuk Pagar Rumah:"
-      deskripsi: "Jarak ideal antar dolken 10-15 cm untuk pagar yang kuat dan rapat. Tinggi standar 1.5-2 meter untuk privacy optimal."
-    - heading: "Untuk Pergola & Gazebo:"
-      deskripsi: "Dapat digunakan sebagai tiang penyangga dengan jarak 1.5-2 meter sesuai desain struktur. Cocok untuk gazebo ukuran 3x3 hingga 4x4 meter."
-    - heading: "Untuk Tiang Pancang Ringan:"
-      deskripsi: "Cocok untuk konstruksi ringan hingga sedang, dapat dipancang 80-100 cm ke dalam tanah untuk stabilitas maksimal."
-    - heading: "Untuk Landscape & Taman:"
-      deskripsi: "Ideal sebagai pembatas area taman, penyangga tanaman vertikal, atau struktur dekoratif outdoor dengan daya tahan tinggi."
+# FAQ Recommendations
+faq_rekomendasi:
+  header:
+    judul: "Rekomendasi Penggunaan"
+    icon: "bi-lightbulb-fill"
+    tagline: "Tips dan rekomendasi untuk hasil optimal"
+  intro:
+    judul: "Panduan dan Saran Penggunaan"
+    icon: "bi-stars"
+    deskripsi: "Rekomendasi dari para profesional untuk memaksimalkan penggunaan produk ini"
+  items:
+    - pertanyaan: "Bagaimana cara menggunakan kayu dolken diameter 4-6 cm untuk pagar rumah?"
+      jawaban: "Untuk pagar rumah, gunakan jarak ideal antar dolken 10-15 cm untuk pagar yang kuat dan rapat. Tinggi standar 1.5-2 meter memberikan privacy optimal dengan tampilan kokoh dan natural."
+    - pertanyaan: "Apakah kayu dolken diameter 4-6 cm cocok untuk pergola dan gazebo?"
+      jawaban: "Sangat cocok! Dapat digunakan sebagai tiang penyangga dengan jarak 1.5-2 meter sesuai desain struktur. Ideal untuk gazebo ukuran 3x3 hingga 4x4 meter dengan kekuatan yang memadai."
+    - pertanyaan: "Bisakah kayu dolken diameter 4-6 cm digunakan untuk tiang pancang?"
+      jawaban: "Ya, cocok untuk konstruksi ringan hingga sedang. Dapat dipancang 80-100 cm ke dalam tanah untuk stabilitas maksimal. Ideal untuk fondasi struktur dengan beban menengah."
+    - pertanyaan: "Apakah kayu dolken diameter 4-6 cm cocok untuk landscape dan taman?"
+      jawaban: "Sangat ideal! Cocok sebagai pembatas area taman, penyangga tanaman vertikal, atau struktur dekoratif outdoor dengan daya tahan tinggi terhadap cuaca ekstrem."
 
 # Order Process
 cara_pemesanan:

@@ -60,34 +60,25 @@ keunggulan:
   - judul: "Investasi Terbaik Jangka Panjang"
     deskripsi: "Dengan kualitas premium dan ukuran maksimal, kayu dolken ini dapat bertahan 50 tahun lebih. Sangat ekonomis untuk proyek permanen skala besar."
 
-# Recommendations (Single Object Format)
-rekomendasi:
-  tipe: "penggunaan"
-  sections:
-    - heading: "Untuk Tiang Pancang Bangunan Bertingkat:"
-      deskripsi: "Ideal untuk fondasi rumah 2-3 lantai atau bangunan komersial. Dapat dipancang 2-3 meter ke dalam tanah dengan jarak antar tiang 1.5-2 meter."
-    - heading: "Untuk Dermaga dan Pelabuhan:"
-      deskripsi: "Mampu menahan beban kapal dan aktivitas pelabuhan dengan aman. Tahan terendam air laut puluhan tahun."
-    - heading: "Untuk Turap:"
-      deskripsi: "Sangat efektif untuk penahan tanah setinggi 2-3 meter. Dapat dipasang rapat atau dengan jarak tertentu sesuai kebutuhan."
-    - heading: "Keunggulan vs Beton:"
-      items:
-        - "Lebih fleksibel, tidak retak"
-        - "Lebih mudah dipasang dan dipindahkan"
-        - "Lebih ekonomis untuk lokasi sulit dijangkau"
-        - "Ramah lingkungan"
-    - heading: "Keunggulan vs Kayu Biasa:"
-      items:
-        - "Tidak perlu pengawetan kimia"
-        - "Tahan rayap dan jamur alami"
-        - "Jauh lebih awet (50+ tahun vs 5-10 tahun)"
-        - "Dapat terendam air tanpa pembusukan"
-    - heading: "Keunggulan vs Baja:"
-      items:
-        - "Tidak berkarat"
-        - "Lebih ekonomis untuk jangka panjang"
-        - "Tidak perlu perawatan khusus"
-        - "Tetap kuat meski terendam air"
+# FAQ Recommendations
+faq_rekomendasi:
+  header:
+    judul: "Rekomendasi Penggunaan"
+    icon: "bi-lightbulb-fill"
+    tagline: "Tips dan rekomendasi untuk hasil optimal"
+  intro:
+    judul: "Panduan dan Saran Penggunaan"
+    icon: "bi-stars"
+    deskripsi: "Rekomendasi dari para profesional untuk memaksimalkan penggunaan produk ini"
+  items:
+    - pertanyaan: "Bagaimana cara menggunakan kayu dolken diameter 10-12 cm untuk tiang pancang bangunan bertingkat?"
+      jawaban: "Ideal untuk fondasi rumah 2-3 lantai atau bangunan komersial. Dapat dipancang 2-3 meter ke dalam tanah dengan jarak antar tiang 1.5-2 meter untuk kapasitas beban maksimal dan stabilitas struktural tinggi."
+    - pertanyaan: "Apakah kayu dolken diameter 10-12 cm cocok untuk dermaga dan pelabuhan?"
+      jawaban: "Sangat cocok! Diameter terbesar ini mampu menahan beban kapal dan aktivitas pelabuhan dengan aman. Kayu gelam tahan terendam air laut puluhan tahun tanpa pembusukan, ideal untuk proyek marine skala besar."
+    - pertanyaan: "Bisakah kayu dolken diameter 10-12 cm digunakan untuk turap?"
+      jawaban: "Ya, sangat efektif! Diameter premium ini ideal untuk penahan tanah setinggi 2-3 meter. Dapat dipasang rapat atau dengan jarak tertentu sesuai kebutuhan proyek infrastruktur sipil Anda."
+    - pertanyaan: "Apa keunggulan kayu dolken gelam diameter 10-12 cm dibanding material lain?"
+      jawaban: "Dibanding beton: lebih fleksibel tidak retak, mudah dipasang/dipindahkan, ekonomis untuk lokasi sulit, ramah lingkungan. Dibanding kayu biasa: tanpa pengawetan kimia, tahan rayap alami, awet 50+ tahun vs 5-10 tahun, tahan terendam air. Dibanding baja: tidak berkarat, ekonomis jangka panjang, tanpa perawatan khusus, kuat meski terendam."
 
 # Order Process
 cara_pemesanan:

@@ -59,23 +59,25 @@ keunggulan:
   - judul: "Daya Tahan Legendaris"
     deskripsi: "Kayu gelam diameter 8-10 cm dapat bertahan 30-50 tahun bahkan dalam kondisi terendam air atau kontak langsung dengan tanah. Tidak perlu pengawetan kimia!"
 
-# Recommendations (Single Object Format)
-rekomendasi:
-  tipe: "penggunaan"
-  sections:
-    - heading: "Untuk Tiang Pancang Fondasi:"
-      deskripsi: "Ideal untuk fondasi rumah 1-2 lantai. Dapat dipancang 1.5-2.5 meter ke dalam tanah. Jarak ideal antar tiang 1.5-2 meter sesuai beban struktur."
-    - heading: "Untuk Dermaga:"
-      deskripsi: "Sangat cocok untuk konstruksi dermaga permanen. Tahan terendam air laut puluhan tahun tanpa pembusukan."
-    - heading: "Untuk Pagar Industrial:"
-      deskripsi: "Memberikan kekuatan dan keamanan maksimal. Jarak ideal 20-30 cm untuk pagar yang sangat kokoh."
-    - heading: "Mengapa Diameter 8-10 cm Paling Populer?"
-      items:
-        - "Keseimbangan Sempurna - Kuat namun tidak terlalu berat untuk handling"
-        - "Standar Industri - Banyak digunakan kontraktor profesional"
-        - "Cost Effective - Harga per kekuatan paling ekonomis"
-        - "Versatile - Cocok untuk hampir semua aplikasi konstruksi"
-        - "Ketersediaan - Stok selalu ready untuk proyek besar"
+# FAQ Recommendations
+faq_rekomendasi:
+  header:
+    judul: "Rekomendasi Penggunaan"
+    icon: "bi-lightbulb-fill"
+    tagline: "Tips dan rekomendasi untuk hasil optimal"
+  intro:
+    judul: "Panduan dan Saran Penggunaan"
+    icon: "bi-stars"
+    deskripsi: "Rekomendasi dari para profesional untuk memaksimalkan penggunaan produk ini"
+  items:
+    - pertanyaan: "Bagaimana cara menggunakan kayu dolken diameter 8-10 cm untuk tiang pancang fondasi?"
+      jawaban: "Ideal untuk fondasi rumah 1-2 lantai. Dapat dipancang 1.5-2.5 meter ke dalam tanah dengan jarak ideal antar tiang 1.5-2 meter sesuai beban struktur untuk stabilitas optimal."
+    - pertanyaan: "Apakah kayu dolken diameter 8-10 cm cocok untuk dermaga?"
+      jawaban: "Sangat cocok! Diameter ini adalah pilihan favorit untuk konstruksi dermaga permanen. Kayu gelam tahan terendam air laut puluhan tahun tanpa pembusukan, ideal untuk aplikasi marine."
+    - pertanyaan: "Bisakah kayu dolken diameter 8-10 cm digunakan untuk pagar industrial?"
+      jawaban: "Ya, sangat ideal! Memberikan kekuatan dan keamanan maksimal. Gunakan jarak ideal 20-30 cm antar tiang untuk pagar industrial yang sangat kokoh dan tahan lama."
+    - pertanyaan: "Mengapa diameter 8-10 cm menjadi ukuran paling populer?"
+      jawaban: "Diameter 8-10 cm menawarkan keseimbangan sempurna: kuat namun tidak terlalu berat untuk handling, standar industri yang digunakan kontraktor profesional, paling cost effective (harga per kekuatan optimal), versatile untuk hampir semua aplikasi konstruksi, dan stok selalu ready untuk proyek besar."
 
 # Order Process
 cara_pemesanan:
