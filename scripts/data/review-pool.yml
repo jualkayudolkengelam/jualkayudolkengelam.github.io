@@ -1,0 +1,312 @@
+# Review Pool for Product Hybrid Update System
+# Version: 2.0.0
+# Last Updated: 2025-11-24
+# Total Templates: 40
+#
+# Categories: Residential, Commercial, Infrastructure, Repeat Customers, Specific Use Cases
+# Rating Distribution: 70% = 5 stars, 30% = 4 stars
+#
+# Changelog:
+# - v2.0.0 (2025-11-24): Extracted from Ruby script, expanded to 40 templates
+# - v1.0.0 (2025-11-20): Initial hard-coded version (6 templates)
+
+reviews:
+  # ============================================================================
+  # RESIDENTIAL PROJECTS (10 reviews)
+  # ============================================================================
+
+  - author: "Pak Budi Santoso"
+    location: "Jakarta Selatan"
+    rating: 5
+    category: "residential"
+    use_case: "pagar rumah"
+    text: "Kualitas kayu sangat bagus, sesuai dengan deskripsi. Pengiriman juga cepat!"
+
+  - author: "Bu Siti Nurhaliza"
+    location: "Tangerang"
+    rating: 5
+    category: "residential"
+    use_case: "gazebo"
+    text: "Sudah order beberapa kali, selalu puas. Kayunya kokoh dan tahan lama."
+
+  - author: "Mas Andi Wijaya"
+    location: "Bekasi"
+    rating: 4
+    category: "residential"
+    use_case: "pagar rumah"
+    text: "Bagus untuk proyek pagar rumah. Harga kompetitif dan pelayanan ramah."
+
+  - author: "Pak Hendra Gunawan"
+    location: "Depok"
+    rating: 5
+    category: "residential"
+    use_case: "general"
+    text: "Kayu gelam berkualitas premium. Tidak ada cacat, potongan rapi."
+
+  - author: "Bu Linda Kusuma"
+    location: "Bogor"
+    rating: 5
+    category: "residential"
+    use_case: "gazebo"
+    text: "Sudah pakai untuk gazebo, hasilnya memuaskan. Recommended!"
+
+  - author: "Mas Dedi Kurniawan"
+    location: "Jakarta Timur"
+    rating: 4
+    category: "residential"
+    use_case: "taman"
+    text: "Cocok untuk landscape taman rumah. Kualitas oke, harga sesuai budget."
+
+  - author: "Pak Agung Prasetyo"
+    location: "Bandung"
+    rating: 5
+    category: "residential"
+    use_case: "deck outdoor"
+    text: "Untuk deck outdoor di taman belakang. Hasilnya kokoh dan tahan cuaca."
+
+  - author: "Bu Ratna Dewi"
+    location: "Cibubur"
+    rating: 5
+    category: "residential"
+    use_case: "pagar rumah"
+    text: "Pagar rumah jadi lebih natural. Kayunya awet, tidak mudah lapuk."
+
+  - author: "Mas Fajar Rahman"
+    location: "Serpong"
+    rating: 4
+    category: "residential"
+    use_case: "pergola"
+    text: "Dipakai untuk pergola di carport. Kualitas bagus, instalasi mudah."
+
+  - author: "Pak Irwan Setiawan"
+    location: "Karawang"
+    rating: 5
+    category: "residential"
+    use_case: "pagar halaman"
+    text: "Sangat puas! Pagar halaman jadi lebih estetik. Pelayanan juga responsif."
+
+  # ============================================================================
+  # COMMERCIAL PROJECTS (10 reviews)
+  # ============================================================================
+
+  - author: "Pak Agus Subagyo"
+    location: "Serang"
+    rating: 4
+    category: "commercial"
+    use_case: "cafe"
+    text: "Untuk dekorasi cafe sangat cocok. Memberikan kesan natural dan hangat."
+
+  - author: "Bu Fitri Handayani"
+    location: "Jakarta Pusat"
+    rating: 5
+    category: "commercial"
+    use_case: "restaurant"
+    text: "Digunakan untuk partisi restaurant. Pelanggan banyak yang komplimen!"
+
+  - author: "Mas Rudi Hartono"
+    location: "Surabaya"
+    rating: 5
+    category: "commercial"
+    use_case: "hotel"
+    text: "Order untuk hotel di Bali. Kualitas premium, pengiriman tepat waktu."
+
+  - author: "Pak Bambang Wijayanto"
+    location: "Yogyakarta"
+    rating: 4
+    category: "commercial"
+    use_case: "resort"
+    text: "Kayu dolken untuk villa resort. Cocok untuk konsep tropical modern."
+
+  - author: "Bu Maya Anggraini"
+    location: "Semarang"
+    rating: 5
+    category: "commercial"
+    use_case: "cafe"
+    text: "Sudah 2x order untuk 2 cabang cafe. Konsisten kualitasnya, mantap!"
+
+  - author: "Mas Joko Susanto"
+    location: "Bali"
+    rating: 5
+    category: "commercial"
+    use_case: "hotel"
+    text: "Untuk landscape hotel di Ubud. Tahan cuaca tropis, tidak mudah rusak."
+
+  - author: "Pak Toni Hermawan"
+    location: "Batam"
+    rating: 4
+    category: "commercial"
+    use_case: "restaurant"
+    text: "Bagus untuk outdoor seating restaurant. Kualitas sesuai ekspektasi."
+
+  - author: "Bu Dewi Lestari"
+    location: "Medan"
+    rating: 5
+    category: "commercial"
+    use_case: "cafe"
+    text: "Cafe jadi lebih Instagramable! Banyak customer foto-foto di area kayu dolken."
+
+  - author: "Mas Haris Wijaya"
+    location: "Malang"
+    rating: 5
+    category: "commercial"
+    use_case: "restaurant"
+    text: "Untuk pergola outdoor restaurant. Strong dan tahan beban, recommended!"
+
+  - author: "Pak Arief Budiman"
+    location: "Bandung"
+    rating: 4
+    category: "commercial"
+    use_case: "hotel"
+    text: "Order untuk renovasi hotel. Proses smooth, hasil memuaskan."
+
+  # ============================================================================
+  # INFRASTRUCTURE PROJECTS (10 reviews)
+  # ============================================================================
+
+  - author: "Pak Wahyu Nugroho"
+    location: "Jakarta Utara"
+    rating: 5
+    category: "infrastructure"
+    use_case: "dermaga"
+    text: "Dipakai untuk dermaga di area pantai. Tahan air laut, sangat cocok!"
+
+  - author: "Mas Dani Saputra"
+    location: "Tangerang"
+    rating: 5
+    category: "infrastructure"
+    use_case: "jembatan"
+    text: "Untuk jembatan kecil di kawasan perumahan. Kokoh dan aman dipakai."
+
+  - author: "Pak Ricky Firmansyah"
+    location: "Bekasi"
+    rating: 4
+    category: "infrastructure"
+    use_case: "piling"
+    text: "Piling foundation proyek kecil. Kualitas bagus, harga terjangkau."
+
+  - author: "Bu Ani Yulianti"
+    location: "Bogor"
+    rating: 5
+    category: "infrastructure"
+    use_case: "retaining wall"
+    text: "Untuk retaining wall di lahan miring. Kuat menahan beban tanah."
+
+  - author: "Mas Eko Prasetyo"
+    location: "Jakarta Barat"
+    rating: 5
+    category: "infrastructure"
+    use_case: "dermaga"
+    text: "Renovasi dermaga fishing area. Kayu gelam memang pilihan terbaik!"
+
+  - author: "Pak Yudi Setiawan"
+    location: "Cilegon"
+    rating: 4
+    category: "infrastructure"
+    use_case: "piling"
+    text: "Piling untuk proyek konstruksi ringan. Load bearing capacity bagus."
+
+  - author: "Mas Galih Pratama"
+    location: "Purwakarta"
+    rating: 5
+    category: "infrastructure"
+    use_case: "jembatan"
+    text: "Jembatan di area wisata alam. Awet dan blend dengan alam sekitar."
+
+  - author: "Pak Cahyo Wibowo"
+    location: "Serang"
+    rating: 5
+    category: "infrastructure"
+    use_case: "retaining wall"
+    text: "Retaining wall area parkir. Strong structure, installation mudah."
+
+  - author: "Bu Rina Wijayanti"
+    location: "Jakarta Selatan"
+    rating: 4
+    category: "infrastructure"
+    use_case: "pedestrian walkway"
+    text: "Untuk walkway taman kota. Tahan beban pejalan kaki dengan baik."
+
+  - author: "Mas Iqbal Maulana"
+    location: "Tangerang Selatan"
+    rating: 5
+    category: "infrastructure"
+    use_case: "dermaga"
+    text: "Dermaga area danau wisata. Kayunya tidak gampang busuk kena air."
+
+  # ============================================================================
+  # REPEAT CUSTOMERS (5 reviews)
+  # ============================================================================
+
+  - author: "Pak Suryanto"
+    location: "Jakarta"
+    rating: 5
+    category: "repeat_customer"
+    use_case: "multiple"
+    text: "Sudah order 3 kali untuk proyek berbeda. Pelayanan konsisten, kualitas stabil!"
+
+  - author: "Bu Diana Puspitasari"
+    location: "Tangerang"
+    rating: 5
+    category: "repeat_customer"
+    use_case: "multiple"
+    text: "Langganan sudah 2 tahun. Dari gazebo sampai pagar rumah, semua dari sini."
+
+  - author: "Mas Farhan Akbar"
+    location: "Bekasi"
+    rating: 5
+    category: "repeat_customer"
+    use_case: "cafe chain"
+    text: "Order berkala untuk 5 cabang cafe. Supplier terpercaya, highly recommended!"
+
+  - author: "Pak Hendro Siswanto"
+    location: "Bogor"
+    rating: 4
+    category: "repeat_customer"
+    use_case: "contractor"
+    text: "Sebagai kontraktor, saya selalu order dari sini. Stock ready, harga kompetitif."
+
+  - author: "Bu Novita Sari"
+    location: "Jakarta Selatan"
+    rating: 5
+    category: "repeat_customer"
+    use_case: "property developer"
+    text: "Developer perumahan, rutin order untuk fasilitas umum. Transaksi selalu lancar!"
+
+  # ============================================================================
+  # SPECIFIC USE CASES (5 reviews)
+  # ============================================================================
+
+  - author: "Pak Rahman Hidayat"
+    location: "Banten"
+    rating: 5
+    category: "specific"
+    use_case: "marine application"
+    text: "Untuk aplikasi marine. Kayu gelam memang tahan air laut, tidak seperti kayu biasa."
+
+  - author: "Mas Teguh Santoso"
+    location: "Jakarta"
+    rating: 4
+    category: "specific"
+    use_case: "heavy load bearing"
+    text: "Load bearing untuk struktur berat. Kekuatan kayu dolken gelam terbukti!"
+
+  - author: "Pak Adi Nugraha"
+    location: "Surabaya"
+    rating: 5
+    category: "specific"
+    use_case: "landscape architecture"
+    text: "Arsitek landscape, sering pakai kayu dolken untuk proyek klien. Quality assured!"
+
+  - author: "Bu Sari Indah"
+    location: "Bandung"
+    rating: 5
+    category: "specific"
+    use_case: "garden design"
+    text: "Garden designer, kayu dolken jadi material favorit. Natural dan durable!"
+
+  - author: "Mas Bima Sakti"
+    location: "Yogyakarta"
+    rating: 4
+    category: "specific"
+    use_case: "construction project"
+    text: "Proyek konstruksi skala menengah. Kayu dolken cocok untuk berbagai aplikasi."

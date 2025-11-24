@@ -2,18 +2,9 @@
 # frozen_string_literal: true
 
 # Hybrid Product Update Strategy
-# Version: 2.0.0
-# Last Updated: 2025-11-24
-#
-# Features:
 # - Every update: review_count++, rating adjust slightly
 # - Every 5 updates: Add real review/testimonial to content
 # - Rotating: 1 product per week based on week number
-# - Review templates: Loaded from external YAML file (40 templates)
-#
-# Changelog:
-# - v2.0.0 (2025-11-24): Extract templates to YAML, expand to 40 reviews
-# - v1.0.0 (2025-11-20): Initial version with hard-coded 6 reviews
 
 require 'yaml'
 require 'date'
@@ -21,46 +12,44 @@ require 'fileutils'
 
 # Configuration
 PRODUCTS_DIR = '_products'
-REVIEW_POOL_FILE = File.join(__dir__, 'data', 'review-pool.yml')
-
-# Load review pool from external YAML file
-# This allows easy expansion without modifying script logic
-def load_review_pool
-  unless File.exist?(REVIEW_POOL_FILE)
-    puts "Error: Review pool file not found at #{REVIEW_POOL_FILE}"
-    exit 1
-  end
-
-  begin
-    data = YAML.load_file(REVIEW_POOL_FILE)
-    reviews = data['reviews']
-
-    if reviews.nil? || reviews.empty?
-      puts "Error: No reviews found in #{REVIEW_POOL_FILE}"
-      exit 1
-    end
-
-    # Convert string keys to symbols for consistency
-    reviews.map do |review|
-      {
-        author: review['author'],
-        location: review['location'],
-        rating: review['rating'],
-        text: review['text'],
-        category: review['category'],
-        use_case: review['use_case']
-      }
-    end
-  rescue => e
-    puts "Error loading review pool: #{e.message}"
-    exit 1
-  end
-end
-
-# Load reviews at startup
-REVIEWS_POOL = load_review_pool
-
-puts "Loaded #{REVIEWS_POOL.length} review templates from #{REVIEW_POOL_FILE}"
+REVIEWS_POOL = [
+  {
+    author: 'Pak Budi',
+    location: 'Jakarta',
+    rating: 5,
+    text: 'Kualitas kayu sangat bagus, sesuai dengan deskripsi. Pengiriman juga cepat!'
+  },
+  {
+    author: 'Bu Siti',
+    location: 'Tangerang',
+    rating: 5,
+    text: 'Sudah order beberapa kali, selalu puas. Kayunya kokoh dan tahan lama.'
+  },
+  {
+    author: 'Mas Andi',
+    location: 'Bekasi',
+    rating: 4,
+    text: 'Bagus untuk proyek pagar rumah. Harga kompetitif dan pelayanan ramah.'
+  },
+  {
+    author: 'Pak Hendra',
+    location: 'Depok',
+    rating: 5,
+    text: 'Kayu gelam berkualitas premium. Tidak ada cacat, potongan rapi.'
+  },
+  {
+    author: 'Bu Linda',
+    location: 'Bogor',
+    rating: 5,
+    text: 'Sudah pakai untuk gazebo, hasilnya memuaskan. Recommended!'
+  },
+  {
+    author: 'Pak Agus',
+    location: 'Serang',
+    rating: 4,
+    text: 'Untuk dekorasi cafe sangat cocok. Memberikan kesan natural dan hangat.'
+  }
+]
 
 class ProductUpdater
   attr_reader :product_file, :front_matter, :content
