@@ -92,6 +92,7 @@ exclude:
   - docs/
   - product/
   - RELEASE/
+  - scripts/
   - TODO/
   - LICENSE
   - CHANGELOG.md
