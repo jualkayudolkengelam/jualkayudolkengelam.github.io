@@ -144,6 +144,11 @@ Architecture Principle:
   <!-- Harga dan Pengiriman Schema (Offer + Payment Method) -->
   {% include schema/schema--harga-pengiriman.html %}
 
+  <!-- Product Features Schema (Specifications + Advantages) -->
+  {% if page.spesifikasi or page.keunggulan %}
+    {% include schema/schema--product-features.html %}
+  {% endif %}
+
   <!-- Review Form (Floating Button + Modal) -->
   {% include review-form-product.html %}
   <script src="{{ '/assets/js/review-modal.js' | relative_url }}"></script>

@@ -1,0 +1,101 @@
+{% comment %}
+  ============================================================================
+  Schema Include - Product Features (additionalProperty)
+  ============================================================================
+
+  @file        _includes/schema/schema--product-features.html
+  @description Schema markup for product features, specifications, and advantages.
+               Provides detailed additionalProperty for Product schema.
+
+  @version     1.0.0
+  @date        2025-11-25
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Architecture:
+  -------------
+  - This schema extends Product with detailed properties
+  - Separate from main Product schema for modularity
+  - Reads from page frontmatter (spesifikasi, keunggulan)
+
+  Features:
+  ---------
+  - Product specifications (material, kondisi, finishing)
+  - Product advantages/features (keunggulan)
+  - Flexible structure supporting aplikasi[] or deskripsi
+  - PropertyValue format for structured data
+
+  Parameters:
+  -----------
+  - page.spesifikasi: Product specifications (material, kondisi, finishing)
+  - page.keunggulan: Array of product advantages
+    - item.judul: Feature title
+    - item.aplikasi[]: List of applications (optional)
+    - item.deskripsi: Feature description (optional)
+
+  Usage:
+  ------
+  {% include schema/schema--product-features.html %}
+
+  Note: This schema creates a separate Product entity with only
+        additionalProperty. It complements the main Product schema.
+
+  Called from:
+  ------------
+  - _layouts/page--product.html (before </body> tag)
+  - Included on all product pages
+
+  SEO Benefits:
+  -------------
+  - Detailed product specifications in structured data
+  - Better product feature visibility in search
+  - Enhanced rich snippets with product details
+  - Improved product comparison in search results
+
+  ============================================================================
+{% endcomment %}
+
+<!-- Schema.org Product Features (additionalProperty) -->
+{% if page.spesifikasi or page.keunggulan %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "{{ page.url | absolute_url }}#product-features",
+  "name": "{{ page.title | escape }}",
+  "additionalProperty": [{% if page.spesifikasi %}
+    {
+      "@type": "PropertyValue",
+      "name": "Material",
+      "value": "{{ page.spesifikasi.material | escape }}"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Kondisi",
+      "value": "{{ page.spesifikasi.kondisi | escape }}"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Finishing",
+      "value": "{{ page.spesifikasi.finishing | escape }}"
+    }{% if page.spesifikasi.panjang %},
+    {
+      "@type": "PropertyValue",
+      "name": "Panjang Standar",
+      "value": "{{ page.spesifikasi.panjang | escape }}"
+    }{% endif %}{% if page.keunggulan %},{% endif %}{% endif %}{% if page.keunggulan %}{% for item in page.keunggulan %}{% if item.aplikasi %}{% for app in item.aplikasi %}
+    {
+      "@type": "PropertyValue",
+      "name": "{{ item.judul | escape }}",
+      "value": "{{ app | escape }}"
+    }{% unless forloop.last %},{% endunless %}{% endfor %}{% elsif item.deskripsi %}
+    {
+      "@type": "PropertyValue",
+      "name": "{{ item.judul | escape }}",
+      "value": "{{ item.deskripsi | escape }}"
+    }{% endif %}{% unless forloop.last %},{% endunless %}{% endfor %}{% endif %}
+  ]
+}
+</script>
+{% endif %}
