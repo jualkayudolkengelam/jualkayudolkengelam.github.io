@@ -69,38 +69,9 @@ jobs:
       - name: Update engagement metrics
         if: steps.check_update.outputs.should_update == 'true'
         run: |
-          echo "Updating engagement metrics..."
-
-          # Example: Increment like counts on random posts
-          # This is a simple simulation - you can make it more sophisticated
-
-          for post in _posts/*.md; do
-            # Random chance to increment (30% probability)
-            if [ $((RANDOM % 10)) -lt 3 ]; then
-              # Get current like_count
-              current_likes=$(grep "^like_count:" "$post" | awk '{print $2}')
-
-              if [ -n "$current_likes" ]; then
-                # Increment by 1-3 randomly
-                increment=$((RANDOM % 3 + 1))
-                new_likes=$((current_likes + increment))
-
-                # Update like_count
-                sed -i "s/^like_count: $current_likes/like_count: $new_likes/" "$post"
-
-                # Update last_modified_at for SEO freshness
-                current_date=$(date '+%Y-%m-%d %H:%M:%S %z')
-                if grep -q "^last_modified_at:" "$post"; then
-                  sed -i "s|^last_modified_at:.*|last_modified_at: $current_date|" "$post"
-                else
-                  # Add after share_count if last_modified_at doesn't exist
-                  sed -i "/^share_count:/a last_modified_at: $current_date" "$post"
-                fi
-
-                echo "✅ Updated $post: $current_likes → $new_likes likes (last_modified: $current_date)"
-              fi
-            fi
-          done
+          echo "🚀 Running hybrid post update system..."
+          cd public_html
+          ruby scripts/update-post-hybrid.rb
 
       - name: Check for changes
         id: check_changes
@@ -122,10 +93,11 @@ jobs:
           # Get actual execution time for commit message
           execution_time=$(date '+%Y-%m-%d %H:%M %Z')
 
-          git commit -m "chore: auto-update engagement metrics
+          git commit -m "chore: auto-update post engagement with dynamic comments
 
-          - Automated post engagement update (natural timing)
-          - Updated like counts via GitHub Actions
+          - Automated post engagement update (hybrid system v1.0)
+          - Updated like_count and share_count via Ruby script
+          - Dynamic comment generation (every 10th update)
           - Execution time: ${execution_time}
           - Triggered by scheduled workflow: update-post-metrics.yml"
 
