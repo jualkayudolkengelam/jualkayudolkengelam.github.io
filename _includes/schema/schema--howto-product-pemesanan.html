@@ -105,20 +105,12 @@
       "name": "Koneksi internet atau telepon"
     }
   ],
-  "step": [
-    {% for section in page.cara_pemesanan.sections %}
+  "step": [{% for section in page.cara_pemesanan.sections %}
     {
       "@type": "HowToSection",
       "name": "{{ section.judul | escape }}",
       "position": "{{ forloop.index }}",
-      "itemListElement": [
-        {% assign range_parts = section.range | split: '-' %}
-        {% assign start_num = range_parts[0] | plus: 0 %}
-        {% assign end_num = range_parts[1] | plus: 0 %}
-        {% assign step_counter = 0 %}
-        {% for step in page.cara_pemesanan.langkah %}
-          {% if step.nomor >= start_num and step.nomor <= end_num %}
-            {% assign step_counter = step_counter | plus: 1 %}
+      "itemListElement": [{% assign range_parts = section.range | split: '-' %}{% assign start_num = range_parts[0] | plus: 0 %}{% assign end_num = range_parts[1] | plus: 0 %}{% assign step_counter = 0 %}{% for step in page.cara_pemesanan.langkah %}{% if step.nomor >= start_num and step.nomor <= end_num %}{% assign step_counter = step_counter | plus: 1 %}
         {
           "@type": "HowToStep",
           "position": "{{ step_counter }}",
@@ -167,12 +159,9 @@
               "text": "Anda dapat mengecek kualitas produk terlebih dahulu sebelum melakukan pembayaran"
             }
           ]{% endif %}
-        }{% assign last_step_in_range = step.nomor | plus: 1 %}{% if last_step_in_range <= end_num %},{% endif %}
-          {% endif %}
-        {% endfor %}
+        }{% if step.nomor < end_num %},{% endif %}{% endif %}{% endfor %}
       ]
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
   ],
   "about": {
     "@type": "Product",
