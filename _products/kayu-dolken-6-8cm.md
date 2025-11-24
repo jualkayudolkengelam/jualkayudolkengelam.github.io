@@ -76,6 +76,63 @@ rekomendasi:
   - heading: 'Untuk Turap & Penahan Tanah:'
     deskripsi: Efektif untuk penahan tanah setinggi 1-2 meter. Dapat dipasang rapat
       atau dengan jarak tertentu sesuai kebutuhan.
+
+# Order Process
+cara_pemesanan:
+  header:
+    judul: "Cara Pemesanan Kayu Dolken Diameter 6-8 cm"
+    icon: "bi-cart-check-fill"
+    deskripsi: "Hubungi: {{ site.business.phone }} (Telepon / WhatsApp)"
+  intro:
+    judul: "Langkah Mudah Pemesanan"
+    icon: "bi-list-check"
+    deskripsi: "Memesan kayu dolken gelam 6-8 cm untuk konstruksi berat sangat praktis. Ikuti 6 langkah mudah berikut untuk mendapatkan material konstruksi berkualitas tinggi dengan layanan profesional"
+  sections:
+    - judul: "Proses Awal Pemesanan"
+      icon: "bi-clipboard-check"
+      deskripsi: "Langkah 1-3: Tentukan spesifikasi, hubungi kami, dan dapatkan konsultasi teknis gratis."
+      range: "1-3"
+    - judul: "Finalisasi & Pengiriman"
+      icon: "bi-truck"
+      deskripsi: "Langkah 4-6: Verifikasi pesanan, pengiriman aman dengan armada khusus, bayar COD."
+      range: "4-6"
+  langkah:
+    - nomor: 1
+      judul: "Tentukan Spesifikasi"
+      deskripsi: "Diameter 6-8 cm ideal untuk tiang pancang, pagar permanen, dan konstruksi berat dengan daya dukung maksimal"
+      icon: "bi-rulers"
+      color: "primary"
+    - nomor: 2
+      judul: "Hubungi Kami Sekarang"
+      deskripsi: "Kontak langsung via telepon atau WhatsApp untuk diskusi kebutuhan proyek konstruksi Anda"
+      icon: "bi-telephone-fill"
+      color: "success"
+    - nomor: 3
+      judul: "Konsultasi Teknis Gratis"
+      deskripsi: "Tim ahli konstruksi kami siap membantu kalkulasi beban, jumlah tiang, dan rekomendasi pemasangan"
+      icon: "bi-chat-dots-fill"
+      color: "warning"
+    - nomor: 4
+      judul: "Verifikasi Detail Pesanan"
+      deskripsi: "Konfirmasi jumlah batang, spesifikasi diameter, panjang, dan lokasi proyek konstruksi"
+      icon: "bi-clipboard-check"
+      color: "info"
+    - nomor: 5
+      judul: "Pengiriman Khusus Material"
+      deskripsi: "Dikirim dengan armada khusus material konstruksi langsung ke lokasi proyek Anda"
+      icon: "bi-truck"
+      color: "danger"
+    - nomor: 6
+      judul: "Bayar Setelah Diterima"
+      deskripsi: "Pembayaran COD setelah material sampai, cek kualitas dan jumlah sebelum bayar"
+      icon: "bi-cash-coin"
+      color: "success"
+  cta:
+    judul: "Konsultasi Proyek Sekarang!"
+    icon: "bi-whatsapp"
+    deskripsi: "Hubungi <strong>{{ site.business.phone }}</strong> via WhatsApp untuk konsultasi teknis gratis, cek stok, dan penawaran khusus proyek konstruksi Anda!"
+    tombol_text: "WhatsApp Konsultasi"
+    tombol_url: "https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20butuh%20konsultasi%20untuk%20kayu%20dolken%20gelam%20diameter%206-8%20cm%20untuk%20proyek%20konstruksi"
 ---
 
 <section id="product-deskripsi">
