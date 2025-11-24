@@ -4,9 +4,11 @@
 
 Dokumentasi ini menjelaskan pola scheduling yang digunakan untuk automated updates pada blog post dan product metrics. Sistem ini dirancang untuk menciptakan update pattern yang **natural, unpredictable, dan human-like**.
 
+> **📌 IMPORTANT:** Ini adalah **versi mutakhir (v2.0)** dari workflow scheduling system. Versi ini merupakan **penyempurnaan signifikan** dari pola sebelumnya (v1.0) yang menggunakan fixed schedule. Semua workflow produksi saat ini menggunakan pattern yang dijelaskan dalam dokumentasi ini.
+
 ---
 
-## Revisi Terbaru (v2.0)
+## Revisi Terbaru (v2.0) - CURRENT VERSION ✨
 
 ### Perubahan dari Pola Sebelumnya
 
