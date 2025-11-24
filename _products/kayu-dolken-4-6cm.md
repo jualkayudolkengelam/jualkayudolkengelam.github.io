@@ -61,6 +61,63 @@ rekomendasi:
       deskripsi: "Cocok untuk konstruksi ringan hingga sedang, dapat dipancang 80-100 cm ke dalam tanah untuk stabilitas maksimal."
     - heading: "Untuk Landscape & Taman:"
       deskripsi: "Ideal sebagai pembatas area taman, penyangga tanaman vertikal, atau struktur dekoratif outdoor dengan daya tahan tinggi."
+
+# Order Process
+cara_pemesanan:
+  header:
+    judul: "Cara Pemesanan Kayu Dolken Diameter 4-6 cm"
+    icon: "bi-cart-check-fill"
+    deskripsi: "Hubungi: {{ site.business.phone }} (Telepon / WhatsApp)"
+  intro:
+    judul: "Langkah Mudah Pemesanan"
+    icon: "bi-list-check"
+    deskripsi: "Pesan kayu dolken gelam 4-6 cm untuk pagar dan konstruksi Anda sangat mudah. Ikuti 6 langkah sederhana berikut dan dapatkan kayu dolken berkualitas tinggi dengan pelayanan profesional"
+  sections:
+    - judul: "Proses Awal Pemesanan"
+      icon: "bi-clipboard-check"
+      deskripsi: "Langkah 1-3: Pilih ukuran yang tepat, hubungi kami, dan konsultasi kebutuhan konstruksi Anda."
+      range: "1-3"
+    - judul: "Finalisasi & Pengiriman"
+      icon: "bi-truck"
+      deskripsi: "Langkah 4-6: Konfirmasi detail pesanan, nikmati pengiriman gratis, dan bayar COD setelah barang tiba."
+      range: "4-6"
+  langkah:
+    - nomor: 1
+      judul: "Pilih Diameter yang Tepat"
+      deskripsi: "Diameter 4-6 cm cocok untuk pagar kuat, pergola, dan konstruksi sedang dengan daya dukung optimal"
+      icon: "bi-rulers"
+      color: "primary"
+    - nomor: 2
+      judul: "Hubungi Kami"
+      deskripsi: "Kontak langsung via telepon atau WhatsApp untuk konsultasi dan penawaran terbaik"
+      icon: "bi-telephone-fill"
+      color: "success"
+    - nomor: 3
+      judul: "Konsultasi Proyek Gratis"
+      deskripsi: "Tim ahli kami siap membantu menghitung kebutuhan material untuk proyek pagar atau konstruksi Anda"
+      icon: "bi-chat-dots-fill"
+      color: "warning"
+    - nomor: 4
+      judul: "Konfirmasi Detail Pesanan"
+      deskripsi: "Pastikan jumlah batang, ukuran diameter, dan alamat pengiriman sudah sesuai kebutuhan"
+      icon: "bi-clipboard-check"
+      color: "info"
+    - nomor: 5
+      judul: "Pengiriman Gratis & Aman"
+      deskripsi: "Kami kirim langsung ke lokasi proyek Anda dengan armada khusus material konstruksi"
+      icon: "bi-truck"
+      color: "danger"
+    - nomor: 6
+      judul: "Bayar COD Setelah Terima"
+      deskripsi: "Pembayaran dilakukan setelah barang sampai dan Anda cek kualitas serta jumlahnya"
+      icon: "bi-cash-coin"
+      color: "success"
+  cta:
+    judul: "Pesan Sekarang via WhatsApp!"
+    icon: "bi-whatsapp"
+    deskripsi: "Klik tombol WhatsApp atau langsung hubungi <strong>{{ site.business.phone }}</strong> untuk konsultasi gratis, cek ketersediaan stok, dan penawaran khusus proyek Anda!"
+    tombol_text: "Chat WhatsApp Sekarang"
+    tombol_url: "https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20gelam%20diameter%204-6%20cm%20untuk%20pagar"
 ---
 
 <section id="product-deskripsi">
