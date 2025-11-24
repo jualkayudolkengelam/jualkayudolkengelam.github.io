@@ -1,0 +1,64 @@
+# ==============================================================================
+# Harga dan Pengiriman Data (Global)
+# ==============================================================================
+#
+# @file        _data/harga_pengiriman.yml
+# @description Global pricing and shipping data for all products
+# @version     1.0.0
+# @date        2025-11-25
+# @author      jualkayudolkengelam
+#
+# Usage:
+# ------
+# Access via: site.data.harga_pengiriman
+# Product price from: page.price (per-product frontmatter)
+#
+# ==============================================================================
+
+header:
+  judul: "Harga dan Pengiriman"
+  icon: "bi-cash-coin"
+  tagline: "Harga terjangkau dengan sistem pembayaran COD yang aman"
+
+info_harga:
+  judul: "Informasi Harga"
+  icon: "bi-tag"
+  deskripsi: "Harga kompetitif langsung dari supplier dengan sistem pembayaran yang aman"
+  catatan: "per batang (sudah termasuk ongkos kirim)"
+
+sistem_cod:
+  judul: "Sistem Pembayaran COD"
+  icon: "bi-shield-check"
+  deskripsi: "Bayar setelah barang sampai dan Anda cek kualitasnya - Aman, Mudah, Terpercaya!"
+
+keuntungan:
+  - judul: "Tidak Perlu DP"
+    icon: "bi-x-circle"
+    color: "success"
+    deskripsi: "Tidak perlu transfer uang muka atau DP. Cukup pesan, kami kirim!"
+
+  - judul: "Bayar Setelah Sampai"
+    icon: "bi-truck"
+    color: "primary"
+    deskripsi: "Bayar langsung saat barang tiba di lokasi Anda, tidak ada risiko"
+
+  - judul: "Cek Kualitas Dulu"
+    icon: "bi-search"
+    color: "warning"
+    deskripsi: "Periksa kondisi, ukuran, dan kualitas kayu sebelum melakukan pembayaran"
+
+  - judul: "Aman & Terpercaya"
+    icon: "bi-shield-check"
+    color: "info"
+    deskripsi: "Sistem pembayaran yang aman, tanpa risiko penipuan atau kerugian"
+
+bulk_offer:
+  judul: "Harga Spesial untuk Pembelian Partai Besar!"
+  icon: "bi-star-fill"
+  deskripsi: "Dapatkan penawaran terbaik untuk proyek skala besar. Hubungi kami untuk negosiasi harga khusus."
+
+# Payment method info for schema
+payment_method:
+  name: "Cash on Delivery (COD)"
+  identifier: "COD"
+  description: "Pembayaran dilakukan saat barang sampai di lokasi"

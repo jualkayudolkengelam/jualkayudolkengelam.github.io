@@ -1,0 +1,99 @@
+{% comment %}
+  ============================================================================
+  Schema Include - Harga dan Pengiriman (Offer)
+  ============================================================================
+
+  @file        _includes/schema/schema--harga-pengiriman.html
+  @description Schema markup for product pricing and payment options.
+               Provides Offer with price and payment method details.
+
+  @version     1.0.0
+  @date        2025-11-25
+  @author      jualkayudolkengelam
+  @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
+  @license     All rights reserved
+
+  Architecture:
+  -------------
+  - Block (_includes/products/block--product-harga-pengiriman.html): Visual display
+  - Schema (this file): Offer schema markup for SEO
+  - Data (_data/harga_pengiriman.yml): Global pricing/payment data
+
+  Features:
+  ---------
+  - Schema.org Offer with price details
+  - Payment method (Cash on Delivery)
+  - Availability status
+  - Price currency (IDR)
+  - Shipping details for Indonesia
+
+  Parameters:
+  -----------
+  - page.price: Product price (required)
+  - page.title: Product name (required)
+  - site.data.harga_pengiriman.payment_method: Payment method details
+
+  Usage:
+  ------
+  {% include schema/schema--harga-pengiriman.html %}
+
+  Note: This schema reads from:
+        - Global _data/harga_pengiriman.yml (payment method)
+        - Page frontmatter (page.price, page.title)
+
+  Called from:
+  ------------
+  - _layouts/page--product.html (before </body> tag)
+  - Included on all product pages
+
+  SEO Benefits:
+  -------------
+  - Better price display in search results
+  - Rich snippets with pricing information
+  - Payment method visibility
+  - Improved product listing appearance
+
+  ============================================================================
+{% endcomment %}
+
+<!-- Schema.org Offer Markup for Pricing and Payment -->
+{% if page.price %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "price": "{{ page.price }}",
+  "priceCurrency": "IDR",
+  "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+  "availability": "https://schema.org/InStock",
+  "url": "{{ page.url | absolute_url }}",
+  "seller": {
+    "@type": "Organization",
+    "name": "{{ site.business.name }}"
+  },
+  "itemOffered": {
+    "@type": "Product",
+    "name": "{{ page.title | escape }}"
+  },
+  "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "{{ page.price }}",
+    "priceCurrency": "IDR",
+    "valueAddedTaxIncluded": false
+  },
+  "acceptedPaymentMethod": {
+    "@type": "PaymentMethod",
+    "name": "{{ site.data.harga_pengiriman.payment_method.name }}",
+    "identifier": "{{ site.data.harga_pengiriman.payment_method.identifier }}",
+    "description": "{{ site.data.harga_pengiriman.payment_method.description }}"
+  },
+  "shippingDetails": {
+    "@type": "OfferShippingDetails",
+    "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "ID"
+    }
+  }
+}
+</script>
+{% endif %}
