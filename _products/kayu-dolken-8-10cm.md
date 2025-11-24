@@ -76,6 +76,63 @@ rekomendasi:
         - "Cost Effective - Harga per kekuatan paling ekonomis"
         - "Versatile - Cocok untuk hampir semua aplikasi konstruksi"
         - "Ketersediaan - Stok selalu ready untuk proyek besar"
+
+# Order Process
+cara_pemesanan:
+  header:
+    judul: "Cara Pemesanan Kayu Dolken Diameter 8-10 cm"
+    icon: "bi-cart-check-fill"
+    deskripsi: "Hubungi: {{ site.business.phone }} (Telepon / WhatsApp)"
+  intro:
+    judul: "Langkah Mudah Pemesanan"
+    icon: "bi-list-check"
+    deskripsi: "Pesan produk terlaris kami - kayu dolken gelam 8-10 cm untuk proyek konstruksi profesional Anda. Proses cepat, mudah, dan terpercaya dengan 6 langkah praktis"
+  sections:
+    - judul: "Proses Awal Pemesanan"
+      icon: "bi-clipboard-check"
+      deskripsi: "Langkah 1-3: Pilih produk terlaris, hubungi tim profesional, konsultasi proyek gratis."
+      range: "1-3"
+    - judul: "Finalisasi & Pengiriman"
+      icon: "bi-truck"
+      deskripsi: "Langkah 4-6: Finalkan pesanan, pengiriman terjadwal ke lokasi, bayar COD aman."
+      range: "4-6"
+  langkah:
+    - nomor: 1
+      judul: "Pilih Produk Terlaris"
+      deskripsi: "Diameter 8-10 cm adalah pilihan favorit kontraktor untuk tiang pancang fondasi dan konstruksi permanen"
+      icon: "bi-star-fill"
+      color: "primary"
+    - nomor: 2
+      judul: "Hubungi Tim Profesional"
+      deskripsi: "Kontak langsung via telepon atau WhatsApp untuk layanan konsultasi proyek konstruksi profesional"
+      icon: "bi-telephone-fill"
+      color: "success"
+    - nomor: 3
+      judul: "Konsultasi Proyek Gratis"
+      deskripsi: "Dapatkan perhitungan volume material, estimasi biaya, dan solusi konstruksi dari tim ahli kami"
+      icon: "bi-chat-dots-fill"
+      color: "warning"
+    - nomor: 4
+      judul: "Finalisasi Pesanan"
+      deskripsi: "Pastikan volume material, spesifikasi produk, jadwal pengiriman, dan lokasi proyek sudah akurat"
+      icon: "bi-clipboard-check"
+      color: "info"
+    - nomor: 5
+      judul: "Pengiriman Terjadwal"
+      deskripsi: "Material dikirim sesuai jadwal proyek Anda dengan armada profesional langsung ke lokasi"
+      icon: "bi-truck"
+      color: "danger"
+    - nomor: 6
+      judul: "Bayar COD Aman"
+      deskripsi: "Pembayaran setelah material tiba di lokasi, verifikasi kualitas dan kuantitas sebelum transfer"
+      icon: "bi-cash-coin"
+      color: "success"
+  cta:
+    judul: "Pesan Produk Terlaris Sekarang!"
+    icon: "bi-whatsapp"
+    deskripsi: "Hubungi <strong>{{ site.business.phone }}</strong> via WhatsApp sekarang! Dapatkan konsultasi gratis, harga spesial proyek, dan jaminan stok produk terlaris kami!"
+    tombol_text: "Order via WhatsApp"
+    tombol_url: "https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20memesan%20kayu%20dolken%20gelam%20diameter%208-10%20cm%20(produk%20terlaris)%20untuk%20proyek%20saya"
 ---
 
 <section id="product-deskripsi">
