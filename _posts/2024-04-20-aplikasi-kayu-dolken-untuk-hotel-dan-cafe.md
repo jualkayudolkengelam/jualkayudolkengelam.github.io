@@ -1,222 +1,231 @@
 ---
 layout: node--post-with-city
-title: "Inspirasi Aplikasi Kayu Dolken Gelam untuk Hotel dan Cafe"
-date: 2024-04-20 11:00:00 +0700
-categories: [Inspirasi Desain]
-tags: [desain, hotel, cafe, dekorasi, interior]
+title: Inspirasi Aplikasi Kayu Dolken Gelam untuk Hotel dan Cafe
+date: 2024-04-20 11:00:00.000000000 +07:00
+categories:
+- Inspirasi Desain
+tags:
+- desain
+- hotel
+- cafe
+- dekorasi
+- interior
 author: Admin
 author_url: https://jualkayudolkengelam.github.io
-image: /assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-001.jpeg
+image: "/assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-001.jpeg"
 images:
-  - /assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-001.jpeg
-  - /assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-002.jpeg
-  - /assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-003.jpeg
-  - /assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-004.jpeg
-url: /2024/04/20/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/
-excerpt: "Ide kreatif mengaplikasikan kayu dolken gelam untuk menciptakan suasana natural dan elegan di hotel dan cafe Anda."
-like_count: 97
+- "/assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-001.jpeg"
+- "/assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-002.jpeg"
+- "/assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-003.jpeg"
+- "/assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-004.jpeg"
+url: "/2024/04/20/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/"
+excerpt: Ide kreatif mengaplikasikan kayu dolken gelam untuk menciptakan suasana natural
+  dan elegan di hotel dan cafe Anda.
+like_count: 102
 comment_count: 24
-share_count: 38
-last_modified_at: 2025-11-24 03:49:03 +0000
-
-# Tips Desain Block Component
+share_count: 42
+last_modified_at: '2025-11-24 20:33:34 +0700'
 tips_desain:
-  title: "Tips Desain dengan Kayu Dolken"
-  subtitle: "Panduan praktis untuk hasil maksimal"
-  icon: "bi-palette-fill"
-  gradient: "wood"
-
-  # Paragraphs (REQUIRED - untuk SEO & Accessibility)
-  paragraph_1: "Merancang desain dengan kayu dolken membutuhkan pemahaman yang tepat tentang material ini dan bagaimana mengaplikasikannya secara efektif. Berikut adalah panduan lengkap yang akan membantu Anda menciptakan ruang yang stunning dengan kayu dolken."
-  paragraph_2: "Dari pemilihan focal point hingga maintenance jangka panjang, tips-tips ini sudah terbukti menghasilkan desain yang tidak hanya indah secara visual, tetapi juga sustainable dan mudah dirawat untuk hospitality business."
-
-  layout: "3col"
-
-  # CARD 1
+  title: Tips Desain dengan Kayu Dolken
+  subtitle: Panduan praktis untuk hasil maksimal
+  icon: bi-palette-fill
+  gradient: wood
+  paragraph_1: Merancang desain dengan kayu dolken membutuhkan pemahaman yang tepat
+    tentang material ini dan bagaimana mengaplikasikannya secara efektif. Berikut
+    adalah panduan lengkap yang akan membantu Anda menciptakan ruang yang stunning
+    dengan kayu dolken.
+  paragraph_2: Dari pemilihan focal point hingga maintenance jangka panjang, tips-tips
+    ini sudah terbukti menghasilkan desain yang tidak hanya indah secara visual, tetapi
+    juga sustainable dan mudah dirawat untuk hospitality business.
+  layout: 3col
   card_1:
-    title: "1. Jangan Over-do"
-    icon: "bi-x-circle"
-    color: "danger"
-
-    intro: "Kesalahan paling umum dalam menggunakan kayu dolken adalah terlalu banyak menggunakannya. Less is more - prinsip ini sangat penting untuk menciptakan ruang yang balanced dan tidak overwhelming."
-
-    h4_1: "Kesalahan yang Sering Terjadi"
-    paragraph_h4_1: "Banyak desainer pemula yang terlalu excited dan akhirnya menggunakan dolken di hampir seluruh area. Hasilnya: ruangan terasa claustrophobic dan kehilangan focal point yang jelas."
-
-    h4_2: "Prinsip Balance yang Benar"
-    paragraph_h4_2: "Kayu dolken paling efektif ketika dijadikan aksen, bukan elemen dominan. Kombinasikan dengan material industrial seperti concrete, metal, atau glass untuk kontras yang menarik."
-
+    title: 1. Jangan Over-do
+    icon: bi-x-circle
+    color: danger
+    intro: Kesalahan paling umum dalam menggunakan kayu dolken adalah terlalu banyak
+      menggunakannya. Less is more - prinsip ini sangat penting untuk menciptakan
+      ruang yang balanced dan tidak overwhelming.
+    h4_1: Kesalahan yang Sering Terjadi
+    paragraph_h4_1: 'Banyak desainer pemula yang terlalu excited dan akhirnya menggunakan
+      dolken di hampir seluruh area. Hasilnya: ruangan terasa claustrophobic dan kehilangan
+      focal point yang jelas.'
+    h4_2: Prinsip Balance yang Benar
+    paragraph_h4_2: Kayu dolken paling efektif ketika dijadikan aksen, bukan elemen
+      dominan. Kombinasikan dengan material industrial seperti concrete, metal, atau
+      glass untuk kontras yang menarik.
     item_1:
-      icon: "bi-check2"
-      color: "success"
-      text: "Pilih 1-2 focal point saja"
+      icon: bi-check2
+      color: success
+      text: Pilih 1-2 focal point saja
     item_2:
-      icon: "bi-check2"
-      color: "success"
-      text: "Balance dengan material lain (concrete, metal, glass)"
+      icon: bi-check2
+      color: success
+      text: Balance dengan material lain (concrete, metal, glass)
     item_3:
-      icon: "bi-check2"
-      color: "success"
-      text: "Biarkan kayu menjadi aksen, bukan dominan"
-
-  # CARD 2
+      icon: bi-check2
+      color: success
+      text: Biarkan kayu menjadi aksen, bukan dominan
   card_2:
-    title: "2. Lighting is Key"
-    icon: "bi-lightbulb-fill"
-    color: "warning"
-
-    intro: "Pencahayaan adalah elemen yang paling mengubah penampilan kayu dolken. Tanpa lighting yang tepat, tekstur natural dan warmth dari kayu tidak akan maksimal."
-
-    h4_1: "Jenis Lighting yang Recommended"
-    paragraph_h4_1: "Warm white light (2700-3000K) adalah pilihan terbaik untuk kayu dolken. Temperature ini menonjolkan natural tone kayu tanpa membuat ruangan terasa terlalu kuning atau orange."
-
-    h4_2: "Teknik Shadow Play"
-    paragraph_h4_2: "Dengan menempatkan lighting di sudut tertentu, shadow yang dihasilkan oleh dolken vertikal bisa menjadi elemen desain tersendiri. Ini menciptakan depth dan movement pada dinding."
-
+    title: 2. Lighting is Key
+    icon: bi-lightbulb-fill
+    color: warning
+    intro: Pencahayaan adalah elemen yang paling mengubah penampilan kayu dolken.
+      Tanpa lighting yang tepat, tekstur natural dan warmth dari kayu tidak akan maksimal.
+    h4_1: Jenis Lighting yang Recommended
+    paragraph_h4_1: Warm white light (2700-3000K) adalah pilihan terbaik untuk kayu
+      dolken. Temperature ini menonjolkan natural tone kayu tanpa membuat ruangan
+      terasa terlalu kuning atau orange.
+    h4_2: Teknik Shadow Play
+    paragraph_h4_2: Dengan menempatkan lighting di sudut tertentu, shadow yang dihasilkan
+      oleh dolken vertikal bisa menjadi elemen desain tersendiri. Ini menciptakan
+      depth dan movement pada dinding.
     item_1:
-      icon: "bi-check2"
-      color: "success"
-      text: "Dolken + lighting = magic"
+      icon: bi-check2
+      color: success
+      text: Dolken + lighting = magic
     item_2:
-      icon: "bi-check2"
-      color: "success"
-      text: "Gunakan warm light (2700-3000K)"
+      icon: bi-check2
+      color: success
+      text: Gunakan warm light (2700-3000K)
     item_3:
-      icon: "bi-check2"
-      color: "success"
-      text: "Coba strip LED, spotlight, atau pendant lights"
+      icon: bi-check2
+      color: success
+      text: Coba strip LED, spotlight, atau pendant lights
     item_4:
-      icon: "bi-check2"
-      color: "success"
-      text: "Shadow play bisa jadi elemen desain"
-
-  # CARD 3
+      icon: bi-check2
+      color: success
+      text: Shadow play bisa jadi elemen desain
   card_3:
-    title: "3. Variasi Diameter untuk Depth"
-    icon: "bi-layers-fill"
-    color: "info"
-
-    intro: "Menggunakan satu ukuran diameter saja akan menghasilkan tampilan yang flat dan monoton. Mixing different sizes adalah kunci untuk menciptakan visual interest."
-
-    h4_1: "Kombinasi Diameter yang Efektif"
-    paragraph_h4_1: "Mix 2-3 cm diameter untuk base layer, kemudian tambahkan accent dengan 4-6 cm diameter. Perbedaan size ini menciptakan dimensi dan depth yang tidak bisa dicapai dengan monotone installation."
-
-    h4_2: "Pattern dan Arrangement"
-    paragraph_h4_2: "Jangan arrange secara random. Buat pattern dengan grouping size tertentu, atau create gradient dari kecil ke besar. Ini memberikan visual flow yang lebih intentional."
-
+    title: 3. Variasi Diameter untuk Depth
+    icon: bi-layers-fill
+    color: info
+    intro: Menggunakan satu ukuran diameter saja akan menghasilkan tampilan yang flat
+      dan monoton. Mixing different sizes adalah kunci untuk menciptakan visual interest.
+    h4_1: Kombinasi Diameter yang Efektif
+    paragraph_h4_1: Mix 2-3 cm diameter untuk base layer, kemudian tambahkan accent
+      dengan 4-6 cm diameter. Perbedaan size ini menciptakan dimensi dan depth yang
+      tidak bisa dicapai dengan monotone installation.
+    h4_2: Pattern dan Arrangement
+    paragraph_h4_2: Jangan arrange secara random. Buat pattern dengan grouping size
+      tertentu, atau create gradient dari kecil ke besar. Ini memberikan visual flow
+      yang lebih intentional.
     item_1:
-      icon: "bi-check2"
-      color: "success"
-      text: "Jangan monoton satu ukuran"
+      icon: bi-check2
+      color: success
+      text: Jangan monoton satu ukuran
     item_2:
-      icon: "bi-check2"
-      color: "success"
-      text: "Mix 2-3 cm dengan 4-6 cm"
+      icon: bi-check2
+      color: success
+      text: Mix 2-3 cm dengan 4-6 cm
     item_3:
-      icon: "bi-check2"
-      color: "success"
-      text: "Ciptakan layer dan dimensi"
+      icon: bi-check2
+      color: success
+      text: Ciptakan layer dan dimensi
     item_4:
-      icon: "bi-check2"
-      color: "success"
-      text: "Lebih dynamic dan interesting"
-
-  # CARD 4
+      icon: bi-check2
+      color: success
+      text: Lebih dynamic dan interesting
   card_4:
-    title: "4. Finishing Matters"
-    icon: "bi-brush-fill"
-    color: "primary"
-
-    intro: "Finishing adalah step yang menentukan durability dan aesthetic final dari instalasi dolken. Pilihan finish yang tepat akan melindungi investment Anda sekaligus enhance visual appeal."
-
-    h4_1: "Opsi Finishing untuk Different Looks"
-    paragraph_h4_1: "Natural oil memberikan protection ringan dengan satin finish yang subtle. Matte clear coat lebih durable untuk high-traffic area. Charred finish trend Shou Sugi Ban untuk darker dramatic tone. Whitewash perfect untuk Scandinavian vibe."
-
-    h4_2: "Maintenance per Finishing Type"
-    paragraph_h4_2: "Natural oil perlu re-application setiap 6-12 bulan. Clear coat lebih low-maintenance, hanya perlu dibersihkan. Charred finish hampir tidak perlu maintenance. Whitewash mungkin perlu touch-up di high-traffic spots."
-
+    title: 4. Finishing Matters
+    icon: bi-brush-fill
+    color: primary
+    intro: Finishing adalah step yang menentukan durability dan aesthetic final dari
+      instalasi dolken. Pilihan finish yang tepat akan melindungi investment Anda
+      sekaligus enhance visual appeal.
+    h4_1: Opsi Finishing untuk Different Looks
+    paragraph_h4_1: Natural oil memberikan protection ringan dengan satin finish yang
+      subtle. Matte clear coat lebih durable untuk high-traffic area. Charred finish
+      trend Shou Sugi Ban untuk darker dramatic tone. Whitewash perfect untuk Scandinavian
+      vibe.
+    h4_2: Maintenance per Finishing Type
+    paragraph_h4_2: Natural oil perlu re-application setiap 6-12 bulan. Clear coat
+      lebih low-maintenance, hanya perlu dibersihkan. Charred finish hampir tidak
+      perlu maintenance. Whitewash mungkin perlu touch-up di high-traffic spots.
     item_1:
-      icon: "bi-droplet-fill"
-      color: "success"
-      title: "Natural Oil"
-      text: "Tampilan natural, satin finish"
+      icon: bi-droplet-fill
+      color: success
+      title: Natural Oil
+      text: Tampilan natural, satin finish
     item_2:
-      icon: "bi-shield-check"
-      color: "primary"
-      title: "Matte Clear Coat"
-      text: "Protection tanpa kilap berlebihan"
+      icon: bi-shield-check
+      color: primary
+      title: Matte Clear Coat
+      text: Protection tanpa kilap berlebihan
     item_3:
-      icon: "bi-fire"
-      color: "danger"
-      title: "Charred/Burnt"
-      text: "Trend Shou Sugi Ban untuk darker tone"
+      icon: bi-fire
+      color: danger
+      title: Charred/Burnt
+      text: Trend Shou Sugi Ban untuk darker tone
     item_4:
-      icon: "bi-water"
-      color: "info"
-      title: "Whitewash"
-      text: "Untuk Scandinavian/beach vibe"
-
-  # CARD 5
+      icon: bi-water
+      color: info
+      title: Whitewash
+      text: Untuk Scandinavian/beach vibe
   card_5:
-    title: "5. Maintenance Plan"
-    icon: "bi-tools"
-    color: "success"
-
-    intro: "Kayu dolken yang well-maintained bisa bertahan 10+ tahun bahkan di outdoor environment. Kunci nya adalah consistent maintenance routine yang tidak perlu complicated."
-
-    h4_1: "Routine Cleaning Schedule"
-    paragraph_h4_1: "Weekly dusting dengan microfiber cloth sudah cukup untuk indoor installation. Untuk outdoor, monthly deep cleaning dengan mild soap dan air pressure rendah. Hindari harsh chemicals yang bisa damage finishing."
-
-    h4_2: "Long-term Care Strategy"
-    paragraph_h4_2: "Re-oil treatment setiap 6-12 bulan untuk high-touch area seperti partition atau railing. Bi-annual inspection untuk crack atau split, especially di outdoor installation. Individual piece replacement sangat mudah - one of dolken's biggest advantages."
-
+    title: 5. Maintenance Plan
+    icon: bi-tools
+    color: success
+    intro: Kayu dolken yang well-maintained bisa bertahan 10+ tahun bahkan di outdoor
+      environment. Kunci nya adalah consistent maintenance routine yang tidak perlu
+      complicated.
+    h4_1: Routine Cleaning Schedule
+    paragraph_h4_1: Weekly dusting dengan microfiber cloth sudah cukup untuk indoor
+      installation. Untuk outdoor, monthly deep cleaning dengan mild soap dan air
+      pressure rendah. Hindari harsh chemicals yang bisa damage finishing.
+    h4_2: Long-term Care Strategy
+    paragraph_h4_2: Re-oil treatment setiap 6-12 bulan untuk high-touch area seperti
+      partition atau railing. Bi-annual inspection untuk crack atau split, especially
+      di outdoor installation. Individual piece replacement sangat mudah - one of
+      dolken's biggest advantages.
     item_1:
-      icon: "bi-calendar-week"
-      color: "primary"
-      text: "Bersihkan debu setiap minggu"
+      icon: bi-calendar-week
+      color: primary
+      text: Bersihkan debu setiap minggu
     item_2:
-      icon: "bi-calendar-range"
-      color: "info"
-      text: "Re-oil setiap 6-12 bulan (high-touch area)"
+      icon: bi-calendar-range
+      color: info
+      text: Re-oil setiap 6-12 bulan (high-touch area)
     item_3:
-      icon: "bi-search"
-      color: "warning"
-      text: "Check untuk crack/split setiap 6 bulan"
+      icon: bi-search
+      color: warning
+      text: Check untuk crack/split setiap 6 bulan
     item_4:
-      icon: "bi-arrow-repeat"
-      color: "success"
-      text: "Replace individual piece jika perlu (easy!)"
-
-  # CARD 6
+      icon: bi-arrow-repeat
+      color: success
+      text: Replace individual piece jika perlu (easy!)
   card_6:
-    title: "6. Combine with Greenery"
-    icon: "bi-tree"
-    color: "success"
-
-    intro: "Kayu dan tanaman adalah kombinasi natural yang selalu work. Biophilic design approach ini tidak hanya aesthetic, tapi juga proven meningkatkan well-being dan productivity."
-
-    h4_1: "Plant Selection yang Cocok"
-    paragraph_h4_1: "Pilih tanaman yang low-maintenance untuk hospitality setting. Hanging plants seperti pothos atau string of pearls cantik di pergola dolken. Philodendron atau monstera bagus untuk floor level near partition dolken."
-
-    h4_2: "Integration Techniques"
-    paragraph_h4_2: "Built-in planters bisa diintegrate langsung ke dolken partition. Hanging systems dari dolken pergola menciptakan green canopy. Wall-mounted pots pada dolken wall cladding. Spacing yang tepat antara kayu dan tanaman penting untuk air circulation."
-
+    title: 6. Combine with Greenery
+    icon: bi-tree
+    color: success
+    intro: Kayu dan tanaman adalah kombinasi natural yang selalu work. Biophilic design
+      approach ini tidak hanya aesthetic, tapi juga proven meningkatkan well-being
+      dan productivity.
+    h4_1: Plant Selection yang Cocok
+    paragraph_h4_1: Pilih tanaman yang low-maintenance untuk hospitality setting.
+      Hanging plants seperti pothos atau string of pearls cantik di pergola dolken.
+      Philodendron atau monstera bagus untuk floor level near partition dolken.
+    h4_2: Integration Techniques
+    paragraph_h4_2: Built-in planters bisa diintegrate langsung ke dolken partition.
+      Hanging systems dari dolken pergola menciptakan green canopy. Wall-mounted pots
+      pada dolken wall cladding. Spacing yang tepat antara kayu dan tanaman penting
+      untuk air circulation.
     item_1:
-      icon: "bi-flower1"
-      color: "success"
-      text: "Tambahkan tanaman gantung atau merambat"
+      icon: bi-flower1
+      color: success
+      text: Tambahkan tanaman gantung atau merambat
     item_2:
-      icon: "bi-droplet"
-      color: "primary"
-      text: "Hanging plants di pergola dolken"
+      icon: bi-droplet
+      color: primary
+      text: Hanging plants di pergola dolken
     item_3:
-      icon: "bi-grid-3x3"
-      color: "info"
-      text: "Pot tanaman di base partition dolken"
+      icon: bi-grid-3x3
+      color: info
+      text: Pot tanaman di base partition dolken
     item_4:
-      icon: "bi-stars"
-      color: "warning"
-      text: "Biophilic design meningkatkan wellness"
+      icon: bi-stars
+      color: warning
+      text: Biophilic design meningkatkan wellness
+total_updates: 2
 ---
 
 Kayu dolken gelam diameter kecil hingga sedang (2-6 cm) menjadi trending dalam desain interior dan eksterior hotel serta cafe modern. Material natural ini memberikan sentuhan rustic yang hangat namun tetap elegan.
