@@ -1,0 +1,50 @@
+---
+generated_at: '2025-11-24 20:27:00 +0700'
+generator_version: 1.0.0
+total_comments: 10
+type_distribution:
+  appreciation: 5
+  feedback: 1
+  insight: 1
+  question: 3
+comments:
+- author: Bu Budiman
+  location: Surabaya
+  type: appreciation
+  text: Artikelnya keren, real case nya membantu, Nice article
+- author: Bu Dewi
+  location: Malang
+  type: appreciation
+  text: Tutorial yang mudah diikuti, pembahasannya tuntas, Semangat
+- author: Pak Budi
+  location: Serang
+  type: feedback
+  text: Request topik, perbandingan dengan material lain, Mantap!
+- author: Bu Akbar
+  location: Balikpapan
+  type: insight
+  text: Saya bisa konfirmasi, maintenance nya gampang, On point
+- author: Pak Siti
+  location: Batam
+  type: appreciation
+  text: Tulisan yang bagus, penjelasannya detail, Terus berkarya
+- author: Bu Nurhaliza
+  location: Jakarta Pusat
+  type: question
+  text: Mau konfirmasi, mengenai after sales, Mohon infonya
+- author: Mas Eko
+  location: Makassar
+  type: appreciation
+  text: Pembahasan yang lengkap, Appreciate it
+- author: Bu Linda
+  location: Jakarta Pusat
+  type: appreciation
+  text: Informasi yang dicari, solutif, Appreciate it
+- author: Mas Hidayat
+  location: Yogyakarta
+  type: question
+  text: Bisakah dijelaskan, terkait maintenance, Ditunggu jawabannya
+- author: Mas Eko
+  location: Tangerang Selatan
+  type: question
+  text: Mohon pencerahannya, terkait return policy, Tolong info
