@@ -66,6 +66,63 @@ rekomendasi:
       deskripsi: "Cocok untuk instalasi seni, display produk, atau dekorasi event dengan kreativitas tinggi."
     - heading: "Catatan Penting:"
       deskripsi: "Diameter 2-3 cm ideal untuk aplikasi dekoratif dan hiasan. Tidak direkomendasikan untuk konstruksi struktural yang memerlukan beban berat."
+
+# Order Process
+cara_pemesanan:
+  header:
+    judul: "Cara Pemesanan Kayu Dolken"
+    icon: "bi-cart-check-fill"
+    deskripsi: "Hubungi: {{ site.business.phone }} (Telepon / WhatsApp)"
+  intro:
+    judul: "Langkah Mudah Pemesanan"
+    icon: "bi-list-check"
+    deskripsi: "Proses pemesanan kayu dolken gelam sangat mudah dan praktis. Ikuti 6 langkah sederhana berikut untuk mendapatkan kayu dolken berkualitas dengan pelayanan terbaik"
+  sections:
+    - judul: "Proses Awal Pemesanan"
+      icon: "bi-clipboard-check"
+      deskripsi: "Langkah 1-3: Dari pemilihan produk hingga konsultasi kebutuhan proyek Anda."
+      range: "1-3"
+    - judul: "Finalisasi & Pengiriman"
+      icon: "bi-truck"
+      deskripsi: "Langkah 4-6: Konfirmasi pesanan, pengiriman gratis, hingga pembayaran COD yang aman."
+      range: "4-6"
+  langkah:
+    - nomor: 1
+      judul: "Pilih Ukuran"
+      deskripsi: "Pilih diameter kayu dolken yang sesuai dengan kebutuhan proyek Anda"
+      icon: "bi-list-check"
+      color: "primary"
+    - nomor: 2
+      judul: "Hubungi Kami"
+      deskripsi: "Langsung via telepon atau WhatsApp untuk respon cepat dan pelayanan ramah"
+      icon: "bi-telephone-fill"
+      color: "success"
+    - nomor: 3
+      judul: "Konsultasi Gratis"
+      deskripsi: "Tim kami akan bantu hitung kebutuhan dan berikan rekomendasi terbaik untuk proyek Anda"
+      icon: "bi-chat-dots-fill"
+      color: "warning"
+    - nomor: 4
+      judul: "Konfirmasi Pesanan"
+      deskripsi: "Pastikan jumlah, ukuran, dan alamat pengiriman sudah benar"
+      icon: "bi-clipboard-check"
+      color: "info"
+    - nomor: 5
+      judul: "Pengiriman Gratis"
+      deskripsi: "Kami antar langsung ke lokasi Anda dengan armada terpercaya, tepat waktu"
+      icon: "bi-truck"
+      color: "danger"
+    - nomor: 6
+      judul: "Bayar COD"
+      deskripsi: "Bayar setelah barang sampai dan Anda cek kualitasnya, tidak ada risiko"
+      icon: "bi-cash-coin"
+      color: "success"
+  cta:
+    judul: "Chat WhatsApp Sekarang!"
+    icon: "bi-whatsapp"
+    deskripsi: "Klik tombol WhatsApp di bawah atau langsung hubungi <strong>{{ site.business.phone }}</strong> untuk info lengkap, cek stok, dan penawaran khusus!"
+    tombol_text: "Hubungi WhatsApp"
+    tombol_url: "https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20ingin%20pesan%20kayu%20dolken%20gelam"
 ---
 
 <section id="product-deskripsi">
