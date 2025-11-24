@@ -156,5 +156,14 @@ Architecture Principle:
       <script src="{{ js_file | relative_url }}"></script>
     {% endfor %}
   {% endif %}
+
+  <!-- Review Form (Floating Button + Modal) -->
+  {% include review-form-post.html %}
+  <script src="{{ '/assets/js/review-modal.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/review-form.js' | relative_url }}"></script>
+
+  <!-- Like/Dislike Buttons (positioned above Review FAB) -->
+  {% include like-dislike-buttons.html %}
+  <script src="{{ '/assets/js/like-dislike.js' | relative_url }}"></script>
 </body>
 </html>

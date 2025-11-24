@@ -55,4 +55,15 @@
   <link rel="icon" type="image/png" sizes="256x256" href="{{ '/assets/images/favicon-256.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon-180.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="512x512" href="{{ '/assets/images/favicon-512.png' | relative_url }}">
+
+  <!-- Review Form CSS (loaded in head for proper rendering) -->
+  {% if page.layout == 'node--product' or page.layout == 'node--post' or page.layout == 'node--post-with-city' %}
+  <link rel="stylesheet" href="{{ '/assets/css/review-form.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/review-modal.css' | relative_url }}">
+  {% endif %}
+
+  <!-- Like/Dislike Buttons CSS (for post pages) -->
+  {% if page.layout == 'node--post' or page.layout == 'node--post-with-city' %}
+  <link rel="stylesheet" href="{{ '/assets/css/like-dislike.css' | relative_url }}">
+  {% endif %}
 </head>

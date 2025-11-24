@@ -127,5 +127,10 @@ Architecture Principle:
   {% if final_posts.size > 0 %}
     {% include schema/schema--related-content--by-node.html posts=final_posts title="Artikel Panduan & Tips" %}
   {% endif %}
+
+  <!-- Review Form (Floating Button + Modal) -->
+  {% include review-form-product.html %}
+  <script src="{{ '/assets/js/review-modal.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/review-form.js' | relative_url }}"></script>
 </body>
 </html>

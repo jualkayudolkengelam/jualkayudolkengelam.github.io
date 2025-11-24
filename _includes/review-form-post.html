@@ -1,0 +1,88 @@
+<!-- Review Form for Blog Post Pages -->
+<!-- Floating Action Button -->
+<button class="review-fab" type="button" aria-label="Tulis Komentar">
+  <i class="bi bi-chat-dots-fill review-fab__icon"></i>
+  <span class="review-fab__tooltip">Tulis Komentar</span>
+</button>
+
+<!-- Modal Overlay -->
+<div class="review-modal-overlay"></div>
+
+<!-- Modal -->
+<div class="review-modal" role="dialog" aria-labelledby="reviewModalTitle" aria-modal="true">
+  <div class="review-modal__header">
+    <div>
+      <h2 class="review-modal__title" id="reviewModalTitle">Tulis Komentar</h2>
+      <p class="review-modal__subtitle">Bagikan pendapat Anda tentang artikel ini</p>
+    </div>
+    <button class="review-modal__close" type="button" aria-label="Tutup">×</button>
+  </div>
+
+  <div class="review-modal__body">
+    <!-- Review Form -->
+    <form class="review-form" data-type="post" novalidate>
+      <!-- Name Field -->
+      <div class="form-group">
+        <label class="form-group__label form-group__label--required" for="commentName">
+          Nama Anda
+        </label>
+        <input
+          type="text"
+          id="commentName"
+          name="name"
+          class="form-group__input"
+          placeholder="Contoh: Budi Santoso"
+          required
+          autocomplete="name"
+        >
+      </div>
+
+      <!-- Like Field (Hidden - just for tracking) -->
+      <input type="hidden" name="action" value="like">
+
+      <!-- Comment Field -->
+      <div class="form-group">
+        <label class="form-group__label form-group__label--required" for="commentText">
+          Komentar Anda
+        </label>
+        <textarea
+          id="commentText"
+          name="comment"
+          class="form-group__textarea"
+          placeholder="Bagikan pendapat, pengalaman, atau pertanyaan Anda tentang artikel ini..."
+          required
+        ></textarea>
+        <span class="form-group__hint">Minimal 20 karakter untuk komentar yang bermakna</span>
+      </div>
+
+      <!-- Honeypot (spam protection) -->
+      <div class="form-group form-group--honeypot" aria-hidden="true">
+        <label for="commentWebsite">Website</label>
+        <input type="text" id="commentWebsite" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="form-submit">
+        Kirim Komentar
+      </button>
+    </form>
+
+    <!-- Success Message -->
+    <div class="success-message">
+      <div class="success-message__icon">❤️</div>
+      <h3 class="success-message__title">Terima Kasih atas Komentar Anda!</h3>
+      <p class="success-message__text">
+        Komentar Anda telah diterima dan like Anda terhitung.
+      </p>
+      <p class="success-message__text">
+        Kami akan meninjau komentar Anda untuk memastikan kualitas dan kesesuaian dengan topik sebelum dipublikasikan.
+      </p>
+      <p class="success-message__note">
+        Komentar biasanya akan muncul dalam 1-2 hari kerja. Terima kasih atas partisipasi Anda!
+      </p>
+      <button type="button" class="success-message__reset">
+        Kirim Komentar Lain
+      </button>
+    </div>
+  </div>
+</div>

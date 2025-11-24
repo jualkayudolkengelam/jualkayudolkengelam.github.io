@@ -1,0 +1,238 @@
+/* Modal Overlay */
+.review-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.review-modal-overlay.is-active {
+  display: block;
+  opacity: 1;
+}
+
+/* Modal Container */
+.review-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 9999;
+  display: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.review-modal.is-active {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Modal Header */
+.review-modal__header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e1e8ed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-modal__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.review-modal__subtitle {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-top: 0.25rem;
+}
+
+.review-modal__close {
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  color: #95a5a6;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.review-modal__close:hover {
+  background: #ecf0f1;
+  color: #2c3e50;
+}
+
+/* Modal Body */
+.review-modal__body {
+  padding: 2rem;
+}
+
+/* Floating Action Button */
+.review-fab {
+  position: fixed;
+  bottom: 6rem;  /* 96px - positioned above WhatsApp button */
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+  cursor: pointer;
+  z-index: 1001;  /* Above WhatsApp button (z-index: 1000) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.review-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(39, 174, 96, 0.5);
+}
+
+.review-fab:active {
+  transform: scale(0.95);
+}
+
+.review-fab__icon {
+  font-size: 1.5rem;
+  color: #ffffff;
+  line-height: 1;
+  display: inline-block;
+}
+
+.review-fab__tooltip {
+  position: absolute;
+  right: 70px;
+  background: #2c3e50;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.review-fab__tooltip::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid #2c3e50;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+.review-fab:hover .review-fab__tooltip {
+  opacity: 1;
+}
+
+/* Hide FAB when modal is active */
+.review-fab.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Scrollbar styling for modal */
+.review-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.review-modal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0 12px 12px 0;
+}
+
+.review-modal::-webkit-scrollbar-thumb {
+  background: #bdc3c7;
+  border-radius: 4px;
+}
+
+.review-modal::-webkit-scrollbar-thumb:hover {
+  background: #95a5a6;
+}
+
+/* Prevent body scroll when modal is open */
+body.review-modal-open {
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .review-modal {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .review-modal__header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .review-modal__title {
+    font-size: 1.25rem;
+  }
+
+  .review-modal__body {
+    padding: 1.5rem;
+  }
+
+  .review-fab {
+    bottom: 5rem;  /* 80px - positioned above WhatsApp button on mobile */
+    right: 1.5rem;
+    width: 56px;
+    height: 56px;
+  }
+
+  .review-fab__icon {
+    font-size: 1.25rem;
+  }
+
+  .review-fab__tooltip {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-modal {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+  }
+
+  .review-modal.is-active {
+    transform: translateY(0);
+  }
+}
