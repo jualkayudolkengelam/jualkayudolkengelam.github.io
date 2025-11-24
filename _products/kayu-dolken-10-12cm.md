@@ -88,6 +88,63 @@ rekomendasi:
         - "Lebih ekonomis untuk jangka panjang"
         - "Tidak perlu perawatan khusus"
         - "Tetap kuat meski terendam air"
+
+# Order Process
+cara_pemesanan:
+  header:
+    judul: "Cara Pemesanan Kayu Dolken Diameter 10-12 cm"
+    icon: "bi-cart-check-fill"
+    deskripsi: "Hubungi: {{ site.business.phone }} (Telepon / WhatsApp)"
+  intro:
+    judul: "Langkah Mudah Pemesanan"
+    icon: "bi-list-check"
+    deskripsi: "Memesan kayu dolken gelam premium diameter 10-12 cm untuk proyek infrastruktur dan konstruksi berat Anda. Proses profesional dengan 6 langkah sistematis untuk proyek skala besar"
+  sections:
+    - judul: "Proses Awal Pemesanan"
+      icon: "bi-clipboard-check"
+      deskripsi: "Langkah 1-3: Survey kebutuhan proyek, hubungi tim engineering, analisis teknis mendalam."
+      range: "1-3"
+    - judul: "Finalisasi & Pengiriman"
+      icon: "bi-truck"
+      deskripsi: "Langkah 4-6: Konfirmasi spesifikasi, pengiriman dengan alat berat, pembayaran fleksibel."
+      range: "4-6"
+  langkah:
+    - nomor: 1
+      judul: "Survey Kebutuhan Proyek"
+      deskripsi: "Diameter 10-12 cm untuk proyek infrastruktur besar: fondasi bertingkat, dermaga besar, dan konstruksi beban maksimal"
+      icon: "bi-clipboard-data"
+      color: "primary"
+    - nomor: 2
+      judul: "Hubungi Tim Engineering"
+      deskripsi: "Kontak tim ahli konstruksi via telepon atau WhatsApp untuk konsultasi teknis proyek infrastruktur"
+      icon: "bi-telephone-fill"
+      color: "success"
+    - nomor: 3
+      judul: "Analisis Teknis Mendalam"
+      deskripsi: "Dapatkan perhitungan struktur, analisis beban, RAB material, dan rekomendasi solusi engineering terbaik"
+      icon: "bi-calculator"
+      color: "warning"
+    - nomor: 4
+      judul: "Konfirmasi Spesifikasi Teknis"
+      deskripsi: "Validasi volume material, spesifikasi grade kayu, timeline proyek, dan koordinat lokasi pengiriman"
+      icon: "bi-clipboard-check"
+      color: "info"
+    - nomor: 5
+      judul: "Pengiriman dengan Alat Berat"
+      deskripsi: "Material dikirim dengan truk crane dan alat berat khusus sesuai koordinasi proyek infrastruktur Anda"
+      icon: "bi-truck"
+      color: "danger"
+    - nomor: 6
+      judul: "Pembayaran Fleksibel"
+      deskripsi: "Opsi COD atau termin sesuai kesepakatan proyek, verifikasi material premium sebelum pelunasan"
+      icon: "bi-credit-card"
+      color: "success"
+  cta:
+    judul: "Konsultasi Proyek Infrastruktur!"
+    icon: "bi-whatsapp"
+    deskripsi: "Hubungi <strong>{{ site.business.phone }}</strong> via WhatsApp untuk konsultasi engineering gratis, survey lokasi, dan penawaran khusus proyek infrastruktur skala besar!"
+    tombol_text: "Konsultasi Engineering"
+    tombol_url: "https://wa.me/{{ site.business.whatsapp }}?text=Halo,%20saya%20butuh%20konsultasi%20untuk%20kayu%20dolken%20gelam%20diameter%2010-12%20cm%20untuk%20proyek%20infrastruktur%20besar"
 ---
 
 <section id="product-deskripsi">
