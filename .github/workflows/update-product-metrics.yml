@@ -2,14 +2,9 @@ name: Update Product Metrics
 
 on:
   schedule:
-    # Varied schedule for natural timing (multiple times per week)
-    # Tuesday slots (alternating weeks via random delay)
-    - cron: '15 2 * * 2'   # Tuesday 02:15 UTC (09:15 WIB)
-    - cron: '45 4 * * 2'   # Tuesday 04:45 UTC (11:45 WIB)
-
-    # Friday slots (alternating weeks via random delay)
-    - cron: '30 5 * * 5'   # Friday 05:30 UTC (12:30 WIB)
-    - cron: '0 7 * * 5'    # Friday 07:00 UTC (14:00 WIB)
+    # Check every 2 hours for potential updates (12 checks per day)
+    # Time Window + Escalating Probability pattern for natural, human-like behavior
+    - cron: '0 */2 * * *'  # Every 2 hours
 
   workflow_dispatch:  # Allow manual trigger
 
@@ -26,39 +21,88 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Random timing delay for natural appearance
+      - name: Filter time window (human hours only)
+        id: time_window
         run: |
-          # Add random delay 0-120 minutes for unpredictable timing
-          delay_minutes=$((RANDOM % 120))
-          delay_seconds=$((delay_minutes * 60))
+          current_hour_wib=$(TZ='Asia/Jakarta' date +%H)
 
-          echo "⏰ Adding natural timing variation: ${delay_minutes} minutes"
-          echo "   This makes updates appear more organic and less automated"
-          echo "   Sleeping for ${delay_seconds} seconds..."
+          echo "🕐 Current time: $(TZ='Asia/Jakarta' date '+%Y-%m-%d %H:%M:%S %Z')"
 
-          sleep ${delay_seconds}
-
-          actual_time=$(date '+%Y-%m-%d %H:%M:%S %Z')
-          echo "✅ Timing delay complete. Starting update at: ${actual_time}"
-
-      - name: Check if already updated this week
-        id: check_update
-        run: |
-          # Get last commit date from product files
-          last_update=$(git log -1 --format=%cd --date=short _products/ 2>/dev/null || echo "1970-01-01")
-          days_since=$((( $(date +%s) - $(date -d "$last_update" +%s) ) / 86400))
-
-          echo "📅 Last update: $last_update"
-          echo "📊 Days since last update: $days_since"
-
-          # Only proceed if it's been 3+ days since last update
-          if [ $days_since -ge 3 ]; then
-            echo "should_update=true" >> $GITHUB_OUTPUT
-            echo "✅ Proceeding with update (3+ days since last)"
-          else
-            echo "should_update=false" >> $GITHUB_OUTPUT
-            echo "⏭️  Skipping update (updated recently: $days_since days ago)"
+          # Only allow updates during active hours: 06:00-21:59 WIB
+          # (Avoid sleep hours: 22:00-05:59 WIB)
+          if [ $current_hour_wib -lt 6 ] || [ $current_hour_wib -ge 22 ]; then
+            echo "⏰ Outside active hours (${current_hour_wib}:00 WIB - sleep time)"
+            echo "   Active window: 06:00-21:59 WIB"
+            echo "should_continue=false" >> $GITHUB_OUTPUT
+            exit 0
           fi
+
+          echo "✅ Within active hours (${current_hour_wib}:00 WIB)"
+          echo "should_continue=true" >> $GITHUB_OUTPUT
+
+      - name: Check last run and calculate probability
+        id: check_update
+        if: steps.time_window.outputs.should_continue == 'true'
+        run: |
+          # Get last commit timestamp from product files
+          last_run=$(git log -1 --format=%ct _products/ 2>/dev/null || echo 0)
+          current_time=$(date +%s)
+          hours_since=$(( (current_time - last_run) / 3600 ))
+          days_since=$(echo "scale=1; $hours_since / 24" | bc)
+
+          echo "📅 Last update: $(date -d @$last_run '+%Y-%m-%d %H:%M:%S %Z' 2>/dev/null || echo 'Never')"
+          echo "📊 Time since last update: $hours_since hours ($days_since days)"
+
+          # Escalating probability based on time since last run
+          # Minimum gap: 72 hours (3 days) - products update less frequently than posts
+          if [ $hours_since -lt 72 ]; then
+            probability=0
+            echo "⏭️  Too recent ($hours_since hours < 72 hours minimum)"
+            echo "should_update=false" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ $hours_since -lt 96 ]; then
+            # 3-4 days: 10% chance
+            probability=10
+          elif [ $hours_since -lt 120 ]; then
+            # 4-5 days: 25% chance
+            probability=25
+          elif [ $hours_since -lt 168 ]; then
+            # 5-7 days: 50% chance
+            probability=50
+          else
+            # 7+ days: 90% chance (getting urgent!)
+            probability=90
+          fi
+
+          # Roll the dice
+          random=$((RANDOM % 100))
+
+          echo "🎲 Probability: $probability% | Random roll: $random"
+
+          if [ $random -lt $probability ]; then
+            echo "✅ HIT! ($random < $probability) - Proceeding with update"
+            echo "should_update=true" >> $GITHUB_OUTPUT
+          else
+            echo "⏭️  MISS! ($random >= $probability) - Skipping this check"
+            echo "should_update=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Random timing variation (make timestamp unique)
+        if: steps.check_update.outputs.should_update == 'true'
+        run: |
+          # Add random delay: 0-59 minutes + 0-59 seconds
+          # This ensures every execution has a unique timestamp
+          delay_minutes=$((RANDOM % 60))
+          delay_seconds=$((RANDOM % 60))
+          total_delay=$((delay_minutes * 60 + delay_seconds))
+
+          echo "⏰ Adding timing variation: ${delay_minutes}m ${delay_seconds}s"
+          echo "   This makes the exact execution time unpredictable and unique"
+
+          sleep $total_delay
+
+          final_time=$(TZ='Asia/Jakarta' date '+%Y-%m-%d %H:%M:%S %Z')
+          echo "✅ Executing at: $final_time"
 
       - name: Update product metrics
         if: steps.check_update.outputs.should_update == 'true'
@@ -223,6 +267,7 @@ jobs:
           - Automated product metrics update (natural timing)
           - Updated review counts, ratings, and popularity flags
           - Execution time: ${execution_time}
+          - Natural timing: Time Window + Escalating Probability pattern
           - Triggered by scheduled workflow: update-product-metrics.yml"
 
           git push
