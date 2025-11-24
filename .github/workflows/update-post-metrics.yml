@@ -2,9 +2,15 @@ name: Update Post Metrics
 
 on:
   schedule:
-    # Runs twice per week for organic timing variation
-    - cron: '0 0 * * 1'   # Monday 00:00 UTC (07:00 WIB)
-    - cron: '30 2 * * 4'  # Thursday 02:30 UTC (09:30 WIB)
+    # Varied schedule for natural timing (multiple times per week)
+    # Monday slots (alternating weeks via random delay)
+    - cron: '45 23 * * 0'  # Sunday 23:45 UTC (Mon 06:45 WIB)
+    - cron: '30 1 * * 1'   # Monday 01:30 UTC (08:30 WIB)
+
+    # Thursday slots (alternating weeks via random delay)
+    - cron: '15 2 * * 4'   # Thursday 02:15 UTC (09:15 WIB)
+    - cron: '0 4 * * 4'    # Thursday 04:00 UTC (11:00 WIB)
+
   workflow_dispatch:  # Allow manual trigger
 
 permissions:
@@ -20,12 +26,48 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Random timing delay for natural appearance
+        run: |
+          # Add random delay 0-90 minutes for unpredictable timing
+          delay_minutes=$((RANDOM % 90))
+          delay_seconds=$((delay_minutes * 60))
+
+          echo "⏰ Adding natural timing variation: ${delay_minutes} minutes"
+          echo "   This makes updates appear more organic and less automated"
+          echo "   Sleeping for ${delay_seconds} seconds..."
+
+          sleep ${delay_seconds}
+
+          actual_time=$(date '+%Y-%m-%d %H:%M:%S %Z')
+          echo "✅ Timing delay complete. Starting update at: ${actual_time}"
+
+      - name: Check if already updated recently
+        id: check_update
+        run: |
+          # Get last commit date from post files
+          last_update=$(git log -1 --format=%cd --date=short _posts/ 2>/dev/null || echo "1970-01-01")
+          days_since=$((( $(date +%s) - $(date -d "$last_update" +%s) ) / 86400))
+
+          echo "📅 Last update: $last_update"
+          echo "📊 Days since last update: $days_since"
+
+          # Only proceed if it's been 2+ days since last update
+          if [ $days_since -ge 2 ]; then
+            echo "should_update=true" >> $GITHUB_OUTPUT
+            echo "✅ Proceeding with update (2+ days since last)"
+          else
+            echo "should_update=false" >> $GITHUB_OUTPUT
+            echo "⏭️  Skipping update (updated recently: $days_since days ago)"
+          fi
+
       - name: Setup Ruby
+        if: steps.check_update.outputs.should_update == 'true'
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0'
 
       - name: Update engagement metrics
+        if: steps.check_update.outputs.should_update == 'true'
         run: |
           echo "Updating engagement metrics..."
 
@@ -70,18 +112,22 @@ jobs:
           fi
 
       - name: Commit and push changes
-        if: steps.check_changes.outputs.has_changes == 'true'
+        if: steps.check_changes.outputs.has_changes == 'true' && steps.check_update.outputs.should_update == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
           git add _posts/*.md
 
+          # Get actual execution time for commit message
+          execution_time=$(date '+%Y-%m-%d %H:%M %Z')
+
           git commit -m "chore: auto-update engagement metrics
 
-          - Daily automated engagement update
+          - Automated post engagement update (natural timing)
           - Updated like counts via GitHub Actions
-          - Triggered by scheduled workflow"
+          - Execution time: ${execution_time}
+          - Triggered by scheduled workflow: update-post-metrics.yml"
 
           git push
 

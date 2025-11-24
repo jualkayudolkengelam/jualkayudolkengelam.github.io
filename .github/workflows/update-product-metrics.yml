@@ -2,9 +2,15 @@ name: Update Product Metrics
 
 on:
   schedule:
-    # Runs twice per week for organic timing variation
-    - cron: '0 3 * * 2'   # Tuesday 03:00 UTC (10:00 WIB)
-    - cron: '15 5 * * 5'  # Friday 05:15 UTC (12:15 WIB)
+    # Varied schedule for natural timing (multiple times per week)
+    # Tuesday slots (alternating weeks via random delay)
+    - cron: '15 2 * * 2'   # Tuesday 02:15 UTC (09:15 WIB)
+    - cron: '45 4 * * 2'   # Tuesday 04:45 UTC (11:45 WIB)
+
+    # Friday slots (alternating weeks via random delay)
+    - cron: '30 5 * * 5'   # Friday 05:30 UTC (12:30 WIB)
+    - cron: '0 7 * * 5'    # Friday 07:00 UTC (14:00 WIB)
+
   workflow_dispatch:  # Allow manual trigger
 
 permissions:
@@ -20,7 +26,42 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Random timing delay for natural appearance
+        run: |
+          # Add random delay 0-120 minutes for unpredictable timing
+          delay_minutes=$((RANDOM % 120))
+          delay_seconds=$((delay_minutes * 60))
+
+          echo "⏰ Adding natural timing variation: ${delay_minutes} minutes"
+          echo "   This makes updates appear more organic and less automated"
+          echo "   Sleeping for ${delay_seconds} seconds..."
+
+          sleep ${delay_seconds}
+
+          actual_time=$(date '+%Y-%m-%d %H:%M:%S %Z')
+          echo "✅ Timing delay complete. Starting update at: ${actual_time}"
+
+      - name: Check if already updated this week
+        id: check_update
+        run: |
+          # Get last commit date from product files
+          last_update=$(git log -1 --format=%cd --date=short _products/ 2>/dev/null || echo "1970-01-01")
+          days_since=$((( $(date +%s) - $(date -d "$last_update" +%s) ) / 86400))
+
+          echo "📅 Last update: $last_update"
+          echo "📊 Days since last update: $days_since"
+
+          # Only proceed if it's been 3+ days since last update
+          if [ $days_since -ge 3 ]; then
+            echo "should_update=true" >> $GITHUB_OUTPUT
+            echo "✅ Proceeding with update (3+ days since last)"
+          else
+            echo "should_update=false" >> $GITHUB_OUTPUT
+            echo "⏭️  Skipping update (updated recently: $days_since days ago)"
+          fi
+
       - name: Update product metrics
+        if: steps.check_update.outputs.should_update == 'true'
         run: |
           echo "Updating product metrics..."
 
@@ -167,17 +208,21 @@ jobs:
           fi
 
       - name: Commit and push changes
-        if: steps.check_changes.outputs.has_changes == 'true'
+        if: steps.check_changes.outputs.has_changes == 'true' && steps.check_update.outputs.should_update == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
           git add _products/*.md
 
+          # Get actual execution time for commit message
+          execution_time=$(date '+%Y-%m-%d %H:%M %Z')
+
           git commit -m "chore: auto-update product metrics
 
-          - Weekly automated product metrics update
+          - Automated product metrics update (natural timing)
           - Updated review counts, ratings, and popularity flags
+          - Execution time: ${execution_time}
           - Triggered by scheduled workflow: update-product-metrics.yml"
 
           git push
