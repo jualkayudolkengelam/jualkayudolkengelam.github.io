@@ -377,6 +377,36 @@ blocks:
       h6: 0
       total: 2
 
+  - id: h2-with-3-cards
+    file: reusable-blocks/block--h2-with-3-cards.html
+    name: "H2 Section with 3 Cards"
+    category: general
+    tags:
+      - general-purpose
+      - features
+      - benefits
+      - 3-column
+      - flexible
+    use_cases:
+      - product_focus
+      - company_focus
+      - features_showcase
+      - benefits_list
+      - general
+    description: |
+      Block umum dengan H2 heading, 1 intro paragraph, dan 3 cards dengan icon.
+      Setiap card berisi H3 title dan 2 paragraphs. Layout 3-column responsive.
+      Sangat flexible untuk berbagai use case: fitur produk, keunggulan perusahaan, atau informasi umum.
+      Block ini menggunakan explicit frontmatter (no loops) untuk kontrol penuh setiap card.
+
+    heading_structure:
+      h2: 1  # Main section title
+      h3: 3  # Card titles (heading_3_title_1, heading_3_title_2, heading_3_title_3)
+      h4: 0
+      h5: 0
+      h6: 0
+      total: 4
+
 # ============================================================================
 # USAGE NOTES
 # ============================================================================
