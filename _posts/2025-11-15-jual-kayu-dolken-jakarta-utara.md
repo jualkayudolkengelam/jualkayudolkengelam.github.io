@@ -18,6 +18,7 @@ keywords: jual kayu dolken jakarta utara, dolken gelam jakarta utara, supplier k
 show_products: true
 rating: 4.5
 review_count: 39
+excerpt: "Jual kayu dolken Jakarta Utara dengan harga terbaik. Melayani pengiriman gratis ke seluruh Jakarta Utara. Hubungi 081311400177 untuk info dan pemesanan."
 nama_kota: Jakarta Utara
 
 # ============================================================================

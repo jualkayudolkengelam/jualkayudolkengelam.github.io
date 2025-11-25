@@ -18,6 +18,7 @@ url: "/2025/11/15/jual-kayu-dolken-semarang/"
 show_products: true
 rating: 4.5
 review_count: 23
+excerpt: "Jual kayu dolken Semarang dengan harga terbaik. Melayani pengiriman gratis ke seluruh Semarang. Hubungi 081311400177 untuk info dan pemesanan."
 nama_kota: Semarang
 area_pengiriman:
 - Semarang Tengah

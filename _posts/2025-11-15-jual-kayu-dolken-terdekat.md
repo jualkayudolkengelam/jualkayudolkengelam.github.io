@@ -27,6 +27,7 @@ keywords: "jual kayu dolken terdekat, jual dolken terdekat, kayu dolken jakarta,
 show_products: true
 rating: 4.5
 review_count: 40
+excerpt: "Jual kayu dolken terdekat - Hubungi 081311400177. Supplier kayu dolken gelam terpercaya, pengiriman Jakarta, Bogor, Bandung, Tangerang, Bekasi, Semarang, Surabaya. COD tersedia!"
 nama_kota: Jawa-Bali
 
 # ============================================================================

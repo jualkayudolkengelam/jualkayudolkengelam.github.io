@@ -27,6 +27,7 @@ keywords: "jual kayu dolken karawang, kayu dolken gelam karawang, dolken KIIC, d
 show_products: true
 rating: 4.5
 review_count: 42
+excerpt: "Jual kayu dolken gelam Karawang kualitas premium untuk industri & konstruksi. Gratis ongkir KIIC, Cikampek, Telukjambe. Harga mulai Rp 15.000/batang. COD tersedia."
 nama_kota: Karawang
 
 # ============================================================================

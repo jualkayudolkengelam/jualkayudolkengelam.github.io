@@ -18,6 +18,7 @@ keywords: jual kayu dolken bandung, kayu dolken gelam bandung, dolken dago, dolk
 show_products: true
 rating: 4.5
 review_count: 45
+excerpt: "Jual kayu dolken gelam Bandung kualitas premium, harga mulai Rp 15.000/batang. Gratis ongkir seluruh Bandung, COD tersedia. Cocok untuk iklim sejuk dataran tinggi."
 nama_kota: Bandung
 area_pengiriman:
 - Coblong (Dago, Cipaganti, Lebak Siliwangi)

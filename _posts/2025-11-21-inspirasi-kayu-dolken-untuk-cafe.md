@@ -18,6 +18,7 @@ images:
 - "/assets/images/posts/inspirasi-kayu-dolken-untuk-cafe/inspirasi-kayu-dolken-untuk-cafe-002.webp"
 keywords: kayu dolken cafe, inspirasi interior cafe, desain cafe natural, dolken untuk
   cafe, tips desain cafe, material cafe modern, biophilic design cafe, cafe aesthetic
+excerpt: "Temukan inspirasi menggunakan kayu dolken untuk interior cafe Anda. Dari feature wall hingga outdoor deck, lengkap dengan tips desain dan estimasi budget."
 rating: 4.8
 review_count: 28
 like_count: 2
