@@ -73,62 +73,75 @@ page.html (wrapper with header/footer)
 {% endcomment %}
 
 <!-- Blog Post with Product List -->
-<div class="container py-5">
+<article class="post-content py-5">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-11 col-xl-10">
+        <div class="row">
+          <!-- Main Content Area -->
+          <div class="col-12 col-lg-8 col-xl-9">
+
   {% include reusable/block--breadcrumb.html
      current_title=page.title
      parent_name="Blog"
      parent_url="/blog"
   %}
 
-  <!-- Article Header -->
-  <article class="mb-5">
-    <header class="mb-4">
-      <h1 class="display-4 fw-bold text-wood mb-3">{{ page.title }}</h1>
-      <div class="text-muted mb-3">
-        <i class="bi bi-calendar3 me-2"></i>{{ page.date | date: "%d %B %Y" }}
-        {% if page.author %}
-        <span class="ms-3"><i class="bi bi-person me-2"></i>{{ page.author }}</span>
-        {% endif %}
-      </div>
+  <!-- Post Header -->
+  <header class="post-header mb-4">
+    <h1 class="post-title display-5 fw-bold text-wood mb-3">{{ page.title }}</h1>
 
-      <!-- Engagement Stats -->
-      {% if page.rating or page.like_count or page.comment_count or page.share_count %}
-      <div class="engagement-stats mb-3 d-flex align-items-center flex-wrap gap-3">
-        {% if page.rating %}
-        <span class="d-flex align-items-center text-muted">
-          <i class="bi bi-star-fill me-1 text-warning"></i>
-          <strong class="text-dark">{{ page.rating }}</strong>
-          <span class="ms-1 small">({{ page.review_count | default: 0 }} review)</span>
-        </span>
-        {% endif %}
-        {% if page.like_count %}
-        <span class="d-flex align-items-center text-muted">
-          <i class="bi bi-heart-fill me-1 text-danger"></i>
-          <strong class="text-dark">{{ page.like_count }}</strong>
-          <span class="ms-1 small">suka</span>
-        </span>
-        {% endif %}
-        {% if page.comment_count %}
-        <span class="d-flex align-items-center text-muted">
-          <i class="bi bi-chat-fill me-1 text-primary"></i>
-          <strong class="text-dark">{{ page.comment_count }}</strong>
-          <span class="ms-1 small">komentar</span>
-        </span>
-        {% endif %}
-        {% if page.share_count %}
-        <span class="d-flex align-items-center text-muted">
-          <i class="bi bi-share-fill me-1 text-success"></i>
-          <strong class="text-dark">{{ page.share_count }}</strong>
-          <span class="ms-1 small">dibagikan</span>
-        </span>
-        {% endif %}
-      </div>
+    <div class="post-meta text-muted mb-3">
+      <span class="me-3">
+        <i class="bi bi-calendar3 me-1"></i>
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%d %B %Y" }}
+        </time>
+      </span>
+      {% if page.author %}
+      <span class="me-3">
+        <i class="bi bi-person me-1"></i>{{ page.author }}
+      </span>
       {% endif %}
-    </header>
+    </div>
+
+    <!-- Engagement Stats -->
+    {% if page.rating or page.like_count or page.comment_count or page.share_count %}
+    <div class="engagement-stats mb-3 d-flex align-items-center flex-wrap gap-3">
+      {% if page.rating %}
+      <span class="d-flex align-items-center text-muted">
+        <i class="bi bi-star-fill me-1 text-warning"></i>
+        <strong class="text-dark">{{ page.rating }}</strong>
+        <span class="ms-1 small">({{ page.review_count | default: 0 }} review)</span>
+      </span>
+      {% endif %}
+      {% if page.like_count %}
+      <span class="d-flex align-items-center text-muted">
+        <i class="bi bi-heart-fill me-1 text-danger"></i>
+        <strong class="text-dark">{{ page.like_count }}</strong>
+        <span class="ms-1 small">suka</span>
+      </span>
+      {% endif %}
+      {% if page.comment_count %}
+      <span class="d-flex align-items-center text-muted">
+        <i class="bi bi-chat-fill me-1 text-primary"></i>
+        <strong class="text-dark">{{ page.comment_count }}</strong>
+        <span class="ms-1 small">komentar</span>
+      </span>
+      {% endif %}
+      {% if page.share_count %}
+      <span class="d-flex align-items-center text-muted">
+        <i class="bi bi-share-fill me-1 text-success"></i>
+        <strong class="text-dark">{{ page.share_count }}</strong>
+        <span class="ms-1 small">dibagikan</span>
+      </span>
+      {% endif %}
+    </div>
+    {% endif %}
 
     <!-- Featured Image / Gallery Carousel -->
     {% if page.images %}
-    <div class="mb-4">
+    <div class="post-image mb-4">
       {% include reusable/block--carousel--image.html
          carousel_id="postCarousel"
          images=page.images
@@ -138,13 +151,13 @@ page.html (wrapper with header/footer)
       %}
     </div>
     {% elsif page.image %}
-    <div class="mb-4">
+    <div class="post-image mb-4">
       <picture>
         <source srcset="{{ page.image | replace: '.jpeg', '.webp' | relative_url }}" type="image/webp">
         <img src="{{ page.image | relative_url }}"
-             class="img-fluid rounded shadow w-100"
+             class="img-fluid rounded shadow"
              alt="{{ page.title }}"
-             style="max-height: 500px; object-fit: cover;"
+             style="max-height: 500px; object-fit: cover; width: 100%;"
              width="1200"
              height="500"
              loading="eager"
@@ -152,13 +165,35 @@ page.html (wrapper with header/footer)
       </picture>
     </div>
     {% endif %}
+  </header>
 
-    <!-- Article Content -->
-    <div id="article-content" class="post-content mb-5">
-      {{ content }}
+  <!-- Post Body -->
+  <div class="post-body mb-5">
+    {{ content }}
+  </div>
+
+  <!-- Post Footer -->
+  <footer class="post-footer mt-5 pt-4 border-top">
+    <!-- Share Buttons -->
+    <div class="share-buttons">
+      <h5 class="h6 mb-3">Bagikan Artikel Ini:</h5>
+      <a href="https://wa.me/?text={{ page.title | uri_escape }}%20{{ page.url | absolute_url | uri_escape }}"
+         target="_blank"
+         class="btn btn-success btn-sm me-2 mb-2">
+        <i class="bi bi-whatsapp me-1"></i> WhatsApp
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}"
+         target="_blank"
+         class="btn btn-primary btn-sm me-2 mb-2">
+        <i class="bi bi-facebook me-1"></i> Facebook
+      </a>
+      <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}"
+         target="_blank"
+         class="btn btn-info btn-sm me-2 mb-2 text-white">
+        <i class="bi bi-twitter me-1"></i> Twitter
+      </a>
     </div>
-  </article>
-
+  </footer>
 
   <!-- CTA Section -->
   <div id="cta-konsultasi" class="cta-div mt-5">
@@ -177,7 +212,112 @@ page.html (wrapper with header/footer)
       </div>
     </div>
   </div>
-</div>
+
+      </div>
+      <!-- End Main Content Area -->
+
+      <!-- Sidebar Area -->
+      <aside class="col-12 col-lg-4 col-xl-3 mt-5 mt-lg-0">
+        <div class="sidebar-sticky" style="position: sticky; top: 80px; max-height: calc(100vh - 100px); overflow-y: auto;">
+
+          <!-- Table of Contents Widget -->
+          <div class="card border-0 shadow-sm mb-4 sidebar-toc-widget">
+            <div class="card-body">
+              <h3 class="h5 fw-bold text-wood mb-0">
+                <button class="btn btn-link text-decoration-none p-0 d-flex align-items-center justify-content-between w-100 text-start"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#tocCollapse"
+                        aria-expanded="false"
+                        aria-controls="tocCollapse">
+                  <span>
+                    <i class="bi bi-list-ul text-primary me-2"></i>Daftar Isi
+                  </span>
+                  <i class="bi bi-chevron-down text-muted"></i>
+                </button>
+              </h3>
+              <div class="collapse" id="tocCollapse">
+                <nav id="sidebar-toc" class="sidebar-toc mt-3">
+                  <!-- ToC will be auto-generated by JS -->
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <!-- Popular Posts Widget -->
+          <div class="card border-0 shadow-sm mb-4 sidebar-popular-widget">
+            <div class="card-body">
+              <h3 class="h5 fw-bold text-wood mb-3">
+                <i class="bi bi-fire text-danger me-2"></i>Artikel Populer
+              </h3>
+              <div class="list-group list-group-flush">
+                {% assign popular_posts = site.posts | where_exp: "post", "post.like_count" | sort: "like_count" | reverse | limit: 5 %}
+                {% for post in popular_posts %}
+                <a href="{{ post.url | relative_url }}" class="list-group-item list-group-item-action border-0 px-0 py-3">
+                  <div class="d-flex align-items-start">
+                    {% if post.image %}
+                    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="rounded me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                    {% endif %}
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1 fw-semibold small">{{ post.title | truncate: 50 }}</h6>
+                      <small class="text-muted d-flex align-items-center gap-2">
+                        {% if post.rating %}
+                        <span>
+                          <i class="bi bi-star-fill text-warning me-1"></i>{{ post.rating }}
+                        </span>
+                        {% endif %}
+                        {% if post.like_count %}
+                        <span>
+                          <i class="bi bi-heart-fill text-danger me-1"></i>{{ post.like_count }}
+                        </span>
+                        {% endif %}
+                      </small>
+                    </div>
+                  </div>
+                </a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <!-- Categories Widget -->
+          <div class="card border-0 shadow-sm mb-4 sidebar-categories-widget">
+            <div class="card-body">
+              <h3 class="h5 fw-bold text-wood mb-3">
+                <i class="bi bi-folder text-primary me-2"></i>Kategori
+              </h3>
+              <div class="d-flex flex-wrap gap-2">
+                {% assign categories = site.posts | map: 'category' | uniq | compact %}
+                {% for category in categories %}
+                <a href="{{ site.baseurl }}/blog/kategori/{{ category | slugify }}" class="badge bg-secondary text-decoration-none">
+                  {{ category }}
+                </a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Widget -->
+          <div class="card border-0 shadow-sm sidebar-cta-widget" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+            <div class="card-body text-white text-center p-4">
+              <i class="bi bi-chat-dots-fill fs-1 mb-3 d-block"></i>
+              <h3 class="h5 fw-bold mb-2">Butuh Bantuan?</h3>
+              <p class="small mb-3">Hubungi kami untuk konsultasi gratis</p>
+              <a href="https://wa.me/{{ site.business.whatsapp }}" target="_blank" class="btn btn-light btn-sm">
+                <i class="bi bi-whatsapp me-1"></i> Chat Sekarang
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+      <!-- End Sidebar Area -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
 
 <!-- Initialize Carousel -->
 {% if page.images %}

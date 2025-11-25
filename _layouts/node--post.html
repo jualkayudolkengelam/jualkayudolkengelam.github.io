@@ -219,7 +219,7 @@ page.html (wrapper with header/footer)
 
       <!-- Sidebar Area -->
       <aside class="col-12 col-lg-4 col-xl-3 mt-5 mt-lg-0">
-        <div class="sidebar-sticky" style="position: sticky; top: 80px;">
+        <div class="sidebar-sticky" style="position: sticky; top: 80px; max-height: calc(100vh - 100px); overflow-y: auto;">
 
           <!-- Table of Contents Widget -->
           <div class="card border-0 shadow-sm mb-4 sidebar-toc-widget">
@@ -261,8 +261,17 @@ page.html (wrapper with header/footer)
                     {% endif %}
                     <div class="flex-grow-1">
                       <h6 class="mb-1 small">{{ post.title | truncate: 60 }}</h6>
-                      <p class="mb-0 text-muted" style="font-size: 0.75rem;">
-                        <i class="bi bi-calendar3 me-1"></i>{{ post.date | date: "%d %b %Y" }}
+                      <p class="mb-0 text-muted d-flex align-items-center gap-2" style="font-size: 0.75rem;">
+                        {% if post.rating %}
+                        <span>
+                          <i class="bi bi-star-fill text-warning me-1"></i>{{ post.rating }}
+                        </span>
+                        {% endif %}
+                        {% if post.like_count %}
+                        <span>
+                          <i class="bi bi-heart-fill text-danger me-1"></i>{{ post.like_count }}
+                        </span>
+                        {% endif %}
                       </p>
                     </div>
                   </div>
