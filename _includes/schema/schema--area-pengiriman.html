@@ -62,7 +62,9 @@
   "provider": {
     "@type": "LocalBusiness",
     "name": "{{ site.business.name }}",
+    "image": "{{ site.business.logo | default: '/assets/images/logo.png' | absolute_url }}",
     "telephone": "{{ site.business.phone }}",
+    "priceRange": "Rp 15.000 - Rp 85.000",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "{{ site.business.address | default: 'Jl. Raya Citereup' }}",
