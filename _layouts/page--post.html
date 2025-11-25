@@ -76,6 +76,13 @@ Architecture Principle:
 
     <!-- Post-specific includes -->
     <div class="container">
+      <!-- Article Feedback (Like/Dislike) -->
+      <div class="row">
+        <div class="col-12">
+          {% include posts/block--article-feedback.html %}
+        </div>
+      </div>
+
       <!-- Related Articles Block -->
       {% assign all_posts = site.posts | concat: site.post_with_city %}
       {% if all_posts.size > 1 %}
@@ -162,8 +169,7 @@ Architecture Principle:
   <script src="{{ '/assets/js/review-modal.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/review-form.js' | relative_url }}"></script>
 
-  <!-- Like/Dislike Buttons (positioned above Review FAB) -->
-  {% include like-dislike-buttons.html %}
-  <script src="{{ '/assets/js/like-dislike.js' | relative_url }}"></script>
+  <!-- Article Feedback (Inline Like/Dislike) -->
+  <script src="{{ '/assets/js/article-feedback.js' | relative_url }}"></script>
 </body>
 </html>

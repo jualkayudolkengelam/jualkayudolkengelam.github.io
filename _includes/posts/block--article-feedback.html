@@ -1,0 +1,70 @@
+{% comment %}
+============================================================================
+Article Feedback Block - Like/Dislike
+============================================================================
+
+@file        block--article-feedback.html
+@path        _includes/posts/block--article-feedback.html
+@type        Component (reusable block)
+@description Inline like/dislike feedback for blog articles
+@author      arisciwek
+
+This component displays like/dislike buttons inline within article content
+to gather reader feedback. Positioned after article content, before related posts.
+
+Features:
+---------
+- Inline horizontal layout (not floating)
+- "Apakah artikel ini membantu?" prompt
+- Like and Dislike buttons with counters
+- LocalStorage for user preference
+- Toast notifications
+- Smooth animations
+
+Usage:
+------
+In page--post.html or node--post.html:
+{% include posts/block--article-feedback.html %}
+
+Integration:
+-----------
+- JavaScript: /assets/js/like-dislike.js (refactored for inline)
+- CSS: /assets/css/like-dislike.css (refactored for inline)
+
+============================================================================
+{% endcomment %}
+
+<!-- Article Feedback Section -->
+<div class="article-feedback">
+  <div class="article-feedback__container">
+    <div class="article-feedback__header">
+      <h3 class="article-feedback__title">Apakah artikel ini membantu?</h3>
+      <p class="article-feedback__subtitle">Bantu kami meningkatkan kualitas konten</p>
+    </div>
+
+    <div class="article-feedback__buttons">
+      <!-- Like Button -->
+      <button class="article-feedback__button article-feedback__button--like"
+              data-action="like"
+              aria-label="Artikel ini membantu">
+        <span class="article-feedback__icon">👍</span>
+        <span class="article-feedback__label">Ya, Membantu</span>
+        <span class="article-feedback__count" data-count="like">0</span>
+      </button>
+
+      <!-- Dislike Button -->
+      <button class="article-feedback__button article-feedback__button--dislike"
+              data-action="dislike"
+              aria-label="Artikel ini kurang membantu">
+        <span class="article-feedback__icon">👎</span>
+        <span class="article-feedback__label">Kurang Membantu</span>
+        <span class="article-feedback__count" data-count="dislike">0</span>
+      </button>
+    </div>
+
+    <div class="article-feedback__thank-you" style="display: none;">
+      <i class="bi bi-check-circle-fill"></i>
+      <span>Terima kasih atas feedback Anda!</span>
+    </div>
+  </div>
+</div>

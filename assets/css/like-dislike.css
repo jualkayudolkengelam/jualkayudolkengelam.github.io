@@ -319,3 +319,289 @@
     display: none;
   }
 }
+
+/* ============================================
+   INLINE ARTICLE FEEDBACK (New Style)
+   ============================================ */
+
+/* Article Feedback Container */
+.article-feedback {
+  margin: 3rem 0;
+  padding: 0 1rem;
+}
+
+.article-feedback__container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #e9ecef;
+  text-align: center;
+}
+
+/* Header Section */
+.article-feedback__header {
+  margin-bottom: 2rem;
+}
+
+.article-feedback__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.article-feedback__title::before {
+  content: "💭";
+  font-size: 1.75rem;
+}
+
+.article-feedback__subtitle {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+/* Buttons Container */
+.article-feedback__buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Individual Button */
+.article-feedback__button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+  overflow: visible;
+}
+
+.article-feedback__button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Like Button Colors */
+.article-feedback__button--like {
+  color: #27ae60;
+  border-color: #27ae60;
+}
+
+.article-feedback__button--like:hover {
+  background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+  color: white;
+  border-color: #27ae60;
+}
+
+.article-feedback__button--like.is-active {
+  background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+  color: white;
+  box-shadow: 0 8px 24px rgba(39, 174, 96, 0.4);
+  animation: activePulseInline 2s ease-in-out infinite;
+}
+
+/* Dislike Button Colors */
+.article-feedback__button--dislike {
+  color: #e67e22;
+  border-color: #e67e22;
+}
+
+.article-feedback__button--dislike:hover {
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+  color: white;
+  border-color: #e67e22;
+}
+
+.article-feedback__button--dislike.is-active {
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+  color: white;
+  box-shadow: 0 8px 24px rgba(230, 126, 34, 0.4);
+  animation: activeDislikePulseInline 2s ease-in-out infinite;
+}
+
+/* Button Icon */
+.article-feedback__icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.article-feedback__button.is-animating .article-feedback__icon {
+  animation: likeDislikePulse 0.3s ease;
+}
+
+/* Button Label */
+.article-feedback__label {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Counter Badge */
+.article-feedback__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 0.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.article-feedback__button--like:hover .article-feedback__count,
+.article-feedback__button--like.is-active .article-feedback__count {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.article-feedback__button--dislike:hover .article-feedback__count,
+.article-feedback__button--dislike.is-active .article-feedback__count {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Thank You Message */
+.article-feedback__thank-you {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  color: #27ae60;
+  font-weight: 600;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  animation: slideDown 0.3s ease;
+}
+
+.article-feedback__thank-you.is-visible {
+  display: flex;
+}
+
+.article-feedback__thank-you i {
+  font-size: 1.25rem;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse animations for inline buttons */
+@keyframes activePulseInline {
+  0%, 100% {
+    box-shadow: 0 8px 24px rgba(39, 174, 96, 0.4);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(39, 174, 96, 0.6);
+  }
+}
+
+@keyframes activeDislikePulseInline {
+  0%, 100% {
+    box-shadow: 0 8px 24px rgba(230, 126, 34, 0.4);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(230, 126, 34, 0.6);
+  }
+}
+
+/* Disabled state */
+.article-feedback__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Responsive Design for Inline Feedback */
+@media (max-width: 768px) {
+  .article-feedback__container {
+    padding: 2rem 1.5rem;
+  }
+
+  .article-feedback__title {
+    font-size: 1.25rem;
+  }
+
+  .article-feedback__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .article-feedback__buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .article-feedback__button {
+    justify-content: center;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .article-feedback__container {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+  }
+
+  .article-feedback__title {
+    font-size: 1.125rem;
+  }
+
+  .article-feedback__title::before {
+    font-size: 1.5rem;
+  }
+
+  .article-feedback__subtitle {
+    font-size: 0.85rem;
+  }
+
+  .article-feedback__button {
+    font-size: 0.95rem;
+    padding: 0.875rem 1.25rem;
+  }
+
+  .article-feedback__icon {
+    font-size: 1.25rem;
+  }
+
+  .article-feedback__count {
+    min-width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .article-feedback {
+    display: none;
+  }
+}
