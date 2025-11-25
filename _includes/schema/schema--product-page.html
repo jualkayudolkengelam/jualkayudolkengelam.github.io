@@ -79,6 +79,12 @@ Benefits:
         "@type": "Offer",
         "price": "{{ product.price }}",
         "priceCurrency": "IDR",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "{{ product.price }}",
+          "priceCurrency": "IDR",
+          "valueAddedTaxIncluded": false
+        },
         "availability": "https://schema.org/InStock",
         "url": "{{ product.url | absolute_url }}",
         "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
