@@ -19,6 +19,8 @@ images:
 - "/assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-004.jpeg"
 url: "/2024/06/10/hitung-kebutuhan-kayu-dolken-untuk-proyek/"
 excerpt: Panduan praktis menghitung jumlah kayu dolken yang dibutuhkan untuk proyek
+rating: 4.6
+review_count: 24
   pagar, gazebo, dekorasi, dan konstruksi lainnya dengan akurat.
 like_count: 96
 comment_count: 21

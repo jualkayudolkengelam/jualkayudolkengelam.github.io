@@ -21,6 +21,8 @@ images:
   - /assets/images/posts/cara-menghitung-kebutuhan-kayu-dolken-untuk-proyek-anda/cara-menghitung-kebutuhan-kayu-dolken-untuk-proyek-anda-003.webp
   - /assets/images/posts/cara-menghitung-kebutuhan-kayu-dolken-untuk-proyek-anda/cara-menghitung-kebutuhan-kayu-dolken-untuk-proyek-anda-004.webp
 keywords: "cara menghitung kayu dolken, kebutuhan kayu dolken, perhitungan material konstruksi, estimasi biaya dolken, panduan praktis kayu dolken, tips hemat konstruksi"
+rating: 4.7
+review_count: 35
 
 # ============================================================================
 # TUTORIAL META (OPTIONAL - tapi recommended untuk tutorial)

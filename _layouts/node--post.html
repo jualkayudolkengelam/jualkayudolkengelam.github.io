@@ -98,8 +98,15 @@ page.html (wrapper with header/footer)
           </div>
 
           <!-- Engagement Stats -->
-          {% if page.like_count or page.comment_count or page.share_count %}
+          {% if page.rating or page.like_count or page.comment_count or page.share_count %}
           <div class="engagement-stats mb-3 d-flex align-items-center flex-wrap gap-3">
+            {% if page.rating %}
+            <span class="d-flex align-items-center text-muted">
+              <i class="bi bi-star-fill me-1 text-warning"></i>
+              <strong class="text-dark">{{ page.rating }}</strong>
+              <span class="ms-1 small">({{ page.review_count | default: 0 }} review)</span>
+            </span>
+            {% endif %}
             {% if page.like_count %}
             <span class="d-flex align-items-center text-muted">
               <i class="bi bi-heart-fill me-1 text-danger"></i>

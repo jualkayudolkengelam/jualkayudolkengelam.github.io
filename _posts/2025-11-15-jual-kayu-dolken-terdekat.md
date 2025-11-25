@@ -25,6 +25,8 @@ images:
   - /assets/images/posts/jual-kayu-dolken-terdekat/jual-kayu-dolken-terdekat-004.jpeg
 keywords: "jual kayu dolken terdekat, jual dolken terdekat, kayu dolken jakarta, dolken gelam tangerang, supplier kayu dolken, kayu dolken bekasi, dolken terdekat bogor"
 show_products: true
+rating: 4.5
+review_count: 40
 nama_kota: Jawa-Bali
 
 # ============================================================================

@@ -19,6 +19,8 @@ images:
 - "/assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-004.jpeg"
 url: "/2024/01/15/keunggulan-kayu-dolken-gelam-untuk-konstruksi/"
 excerpt: Kayu dolken gelam memiliki berbagai keunggulan yang membuatnya menjadi pilihan
+rating: 4.6
+review_count: 43
   utama untuk berbagai keperluan konstruksi dan dekorasi.
 like_count: 71
 comment_count: 12

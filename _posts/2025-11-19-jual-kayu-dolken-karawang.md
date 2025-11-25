@@ -25,6 +25,8 @@ images:
   - /assets/images/posts/jual-kayu-dolken-karawang/jual-kayu-dolken-karawang-004.webp
 keywords: "jual kayu dolken karawang, kayu dolken gelam karawang, dolken KIIC, dolken cikampek, dolken telukjambe, kayu gelam karawang, dolken industri karawang, harga dolken karawang"
 show_products: true
+rating: 4.5
+review_count: 42
 nama_kota: Karawang
 
 # ============================================================================

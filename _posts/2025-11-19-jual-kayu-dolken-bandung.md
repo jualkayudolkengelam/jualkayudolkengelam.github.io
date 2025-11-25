@@ -16,6 +16,8 @@ keywords: jual kayu dolken bandung, kayu dolken gelam bandung, dolken dago, dolk
   cihampelas, dolken lembang, kayu gelam bandung, dolken bandung utara, harga dolken
   bandung
 show_products: true
+rating: 4.5
+review_count: 45
 nama_kota: Bandung
 area_pengiriman:
 - Coblong (Dago, Cipaganti, Lebak Siliwangi)

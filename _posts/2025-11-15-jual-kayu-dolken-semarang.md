@@ -16,6 +16,8 @@ keywords: jual kayu dolken semarang, dolken gelam semarang, supplier kayu dolken
   kayu dolken kota lama, dolken tembalang, kayu dolken banyumanik
 url: "/2025/11/15/jual-kayu-dolken-semarang/"
 show_products: true
+rating: 4.5
+review_count: 23
 nama_kota: Semarang
 area_pengiriman:
 - Semarang Tengah
