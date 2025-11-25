@@ -68,7 +68,8 @@
         <h2 class="h2 mb-0 fw-bold text-white header__judul">{{ page.cara_pemesanan.header.judul }}</h2>
         <p class="mb-0 mt-2 small header__deskripsi" style="opacity: 0.85;">
           <i class="bi bi-phone me-1"></i>
-          {{ page.cara_pemesanan.header.deskripsi }}
+          {% assign deskripsi_parsed = page.cara_pemesanan.header.deskripsi | replace: '{{ site.business.phone }}', site.business.phone %}
+          {{ deskripsi_parsed }}
           <i class="bi bi-phone ms-1"></i>
         </p>
       </div>
@@ -133,12 +134,14 @@
 
   <!-- WhatsApp CTA -->
   {% if page.cara_pemesanan.cta %}
+  {% assign cta_deskripsi_parsed = page.cara_pemesanan.cta.deskripsi | replace: '{{ site.business.phone }}', site.business.phone %}
+  {% assign cta_url_parsed = page.cara_pemesanan.cta.tombol_url | replace: '{{ site.business.whatsapp }}', site.business.whatsapp %}
   <div class="card border-0 shadow-lg my-4 cara_pemesanan__cta" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
     <div class="card-body text-white text-center py-4">
       <i class="bi {{ page.cara_pemesanan.cta.icon }} mb-3 cta__icon" style="font-size: 3rem;"></i>
       <h4 class="h5 mb-3 fw-bold cta__judul">{{ page.cara_pemesanan.cta.judul }}</h4>
-      <p class="mb-3 cta__deskripsi">{{ page.cara_pemesanan.cta.deskripsi }}</p>
-      <a href="{{ page.cara_pemesanan.cta.tombol_url }}" class="btn btn-light btn-lg px-5 cta__tombol" target="_blank">
+      <p class="mb-3 cta__deskripsi">{{ cta_deskripsi_parsed }}</p>
+      <a href="{{ cta_url_parsed }}" class="btn btn-light btn-lg px-5 cta__tombol" target="_blank">
         <i class="bi {{ page.cara_pemesanan.cta.icon }} me-2"></i>{{ page.cara_pemesanan.cta.tombol_text }}
       </a>
     </div>

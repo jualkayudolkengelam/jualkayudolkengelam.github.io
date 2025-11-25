@@ -102,6 +102,11 @@ Architecture Principle:
   <!-- Product Page Schema (WebPage + Product in @graph) -->
   {% include schema/schema--product-page.html product=page %}
 
+  <!-- HowTo Schema for Product Ordering Process (Priority) -->
+  {% if page.cara_pemesanan.langkah %}
+    {% include schema/schema--howto-product-pemesanan.html %}
+  {% endif %}
+
   <!-- Breadcrumb Schema (BreadcrumbList) -->
   {% include schema/schema--breadcrumb.html current_title=page.title %}
 
@@ -126,11 +131,6 @@ Architecture Principle:
   {% endcomment %}
   {% if final_posts.size > 0 %}
     {% include schema/schema--related-content--by-node.html posts=final_posts title="Artikel Panduan & Tips" %}
-  {% endif %}
-
-  <!-- HowTo Schema for Product Ordering Process -->
-  {% if page.cara_pemesanan.langkah %}
-    {% include schema/schema--howto-product-pemesanan.html %}
   {% endif %}
 
   <!-- FAQ Schema for Product Recommendations -->
