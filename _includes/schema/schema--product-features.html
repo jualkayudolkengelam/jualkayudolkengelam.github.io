@@ -64,6 +64,10 @@
   "@type": "Product",
   "@id": "{{ page.url | absolute_url }}#product-features",
   "name": "{{ page.title | escape }}",
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ page.url | absolute_url }}"
+  },
   "additionalProperty": [{% if page.spesifikasi %}
     {
       "@type": "PropertyValue",

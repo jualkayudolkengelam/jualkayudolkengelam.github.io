@@ -65,9 +65,11 @@
     "telephone": "{{ site.business.phone }}",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "ID",
+      "streetAddress": "{{ site.business.address | default: 'Jl. Raya Citereup' }}",
+      "addressLocality": "{{ site.business.city | default: 'Bandung' }}",
       "addressRegion": "{{ site.business.region | default: 'Jawa Barat' }}",
-      "addressLocality": "{{ site.business.city | default: 'Bandung' }}"
+      "postalCode": "{{ site.business.postal_code | default: '40000' }}",
+      "addressCountry": "ID"
     }
   },
   "areaServed": [{% for provinsi in site.data.area_pengiriman.provinsi %}
