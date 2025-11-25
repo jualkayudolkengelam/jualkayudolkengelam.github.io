@@ -76,7 +76,14 @@ Architecture Principle:
 
     <!-- Post-specific includes -->
     <div class="container">
-      <!-- Article Reviews (Star Rating) -->
+      <!-- Article Feedback (Like/Dislike - Quick Engagement) -->
+      <div class="row">
+        <div class="col-12">
+          {% include posts/block--article-feedback.html %}
+        </div>
+      </div>
+
+      <!-- Article Reviews (Star Rating - Detailed Reviews + Google SERP) -->
       <div class="row">
         <div class="col-12">
           {% include posts/block--article-reviews.html article=page %}
@@ -176,5 +183,8 @@ Architecture Principle:
   {% include review-form-post.html %}
   <script src="{{ '/assets/js/review-modal.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/review-form.js' | relative_url }}"></script>
+
+  <!-- Article Feedback (Like/Dislike) -->
+  <script src="{{ '/assets/js/article-feedback.js' | relative_url }}"></script>
 </body>
 </html>
