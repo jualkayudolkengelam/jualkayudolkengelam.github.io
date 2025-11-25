@@ -37,8 +37,28 @@
         >
       </div>
 
-      <!-- Like Field (Hidden - just for tracking) -->
-      <input type="hidden" name="action" value="like">
+      <!-- Rating Field -->
+      <div class="form-group">
+        <label class="form-group__label form-group__label--required">
+          Rating Artikel
+        </label>
+        <div class="star-rating">
+          <input type="radio" name="rating" value="5" id="star5" class="star-rating__input">
+          <label for="star5" class="star-rating__label" title="Sangat Bermanfaat">★</label>
+
+          <input type="radio" name="rating" value="4" id="star4" class="star-rating__input">
+          <label for="star4" class="star-rating__label" title="Bermanfaat">★</label>
+
+          <input type="radio" name="rating" value="3" id="star3" class="star-rating__input">
+          <label for="star3" class="star-rating__label" title="Cukup Bermanfaat">★</label>
+
+          <input type="radio" name="rating" value="2" id="star2" class="star-rating__input">
+          <label for="star2" class="star-rating__label" title="Kurang Bermanfaat">★</label>
+
+          <input type="radio" name="rating" value="1" id="star1" class="star-rating__input">
+          <label for="star1" class="star-rating__label" title="Tidak Bermanfaat">★</label>
+        </div>
+      </div>
 
       <!-- Comment Field -->
       <div class="form-group">
@@ -76,19 +96,19 @@
 
     <!-- Success Message -->
     <div class="success-message">
-      <div class="success-message__icon">❤️</div>
-      <h3 class="success-message__title">Terima Kasih atas Komentar Anda!</h3>
+      <div class="success-message__icon">✅</div>
+      <h3 class="success-message__title">Terima Kasih atas Review Anda!</h3>
       <p class="success-message__text">
-        Komentar Anda telah diterima dan like Anda terhitung.
+        Review dan rating Anda telah diterima dan sedang dalam proses moderasi.
       </p>
       <p class="success-message__text">
-        Kami akan meninjau komentar Anda untuk memastikan kualitas dan kesesuaian dengan topik sebelum dipublikasikan.
+        Kami akan meninjau komentar Anda untuk memastikan kualitas dan keaslian sebelum dipublikasikan.
       </p>
       <p class="success-message__note">
-        Komentar biasanya akan muncul dalam 1-2 hari kerja. Terima kasih atas partisipasi Anda!
+        Review biasanya akan muncul dalam 1-2 hari kerja. Terima kasih atas kontribusi Anda!
       </p>
       <button type="button" class="success-message__reset">
-        Kirim Komentar Lain
+        Kirim Review Lain
       </button>
     </div>
   </div>

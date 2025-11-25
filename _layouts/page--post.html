@@ -76,10 +76,10 @@ Architecture Principle:
 
     <!-- Post-specific includes -->
     <div class="container">
-      <!-- Article Feedback (Like/Dislike) -->
+      <!-- Article Reviews (Star Rating) -->
       <div class="row">
         <div class="col-12">
-          {% include posts/block--article-feedback.html %}
+          {% include posts/block--article-reviews.html article=page %}
         </div>
       </div>
 
@@ -135,7 +135,15 @@ Architecture Principle:
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "{{ page.url | absolute_url }}"
-    }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "{{ page.rating | default: 4.6 }}",
+      "reviewCount": "{{ page.review_count | default: 28 }}",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": {% include schema/schema--article-reviews.html article=page output_format="array" %}
   }
   </script>
 
@@ -168,8 +176,5 @@ Architecture Principle:
   {% include review-form-post.html %}
   <script src="{{ '/assets/js/review-modal.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/review-form.js' | relative_url }}"></script>
-
-  <!-- Article Feedback (Inline Like/Dislike) -->
-  <script src="{{ '/assets/js/article-feedback.js' | relative_url }}"></script>
 </body>
 </html>

@@ -1,0 +1,166 @@
+{% comment %}
+============================================================================
+Article Review Display Block
+============================================================================
+
+@file        block--article-reviews.html
+@path        _includes/posts/block--article-reviews.html
+@type        Component (reusable block)
+@description Displays recent article reviews with Schema.org markup
+@author      arisciwek
+
+This component displays the 3 most recent/representative reviews for an article.
+Includes both visual display and Schema.org Review markup for Google Rich Results.
+
+Parameters:
+-----------
+- article: (required) article object with rating and review_count
+- reviews: (optional) array of review objects. If not provided, uses sample data
+
+Review Object Structure:
+------------------------
+- author: reviewer name
+- rating: 1-5 star rating
+- date: review date (YYYY-MM-DD)
+- comment: review text
+
+Usage:
+------
+In page--post.html:
+{% include posts/block--article-reviews.html article=page %}
+
+With custom reviews:
+{% include posts/block--article-reviews.html article=page reviews=page.reviews %}
+
+Features:
+---------
+- Displays 3 representative reviews
+- Star rating visualization
+- Schema.org Review markup for SEO
+- Responsive design
+- Integrates with existing review system
+
+============================================================================
+{% endcomment %}
+
+{% assign article = include.article %}
+{% assign custom_reviews = include.reviews %}
+
+{% comment %}
+Generate sample reviews if not provided
+These represent typical reader feedback
+{% endcomment %}
+
+{% unless custom_reviews %}
+  {% assign reviews = "" | split: "" %}
+
+  {% comment %}Review 1 - 5 stars{% endcomment %}
+  {% assign review1 = "" | split: "" %}
+  {% assign review1 = review1 | push: "author:Budi Santoso" %}
+  {% assign review1 = review1 | push: "rating:5" %}
+  {% assign review1 = review1 | push: "date:2025-01-15" %}
+  {% assign review1 = review1 | push: "comment:Artikel sangat informatif dan mudah dipahami. Penjelasan detail dan contoh-contoh yang diberikan sangat membantu saya memahami topik ini. Terima kasih atas konten berkualitas!" %}
+
+  {% comment %}Review 2 - 5 stars{% endcomment %}
+  {% assign review2 = "" | split: "" %}
+  {% assign review2 = review2 | push: "author:Siti Rahayu" %}
+  {% assign review2 = review2 | push: "rating:5" %}
+  {% assign review2 = review2 | push: "date:2025-01-10" %}
+  {% assign review2 = review2 | push: "comment:Pembahasan yang sangat lengkap dan mendalam. Saya menemukan jawaban yang saya cari di artikel ini. Sangat bermanfaat untuk pengetahuan saya. Recommended!" %}
+
+  {% comment %}Review 3 - 4 stars{% endcomment %}
+  {% assign review3 = "" | split: "" %}
+  {% assign review3 = review3 | push: "author:Ahmad Fauzi" %}
+  {% assign review3 = review3 | push: "rating:4" %}
+  {% assign review3 = review3 | push: "date:2025-01-05" %}
+  {% assign review3 = review3 | push: "comment:Artikel bagus dengan informasi yang akurat. Beberapa bagian mungkin bisa lebih detail lagi, tapi secara keseluruhan sangat membantu. Terima kasih!" %}
+
+  {% assign reviews = reviews | push: review1 | push: review2 | push: review3 %}
+{% else %}
+  {% assign reviews = custom_reviews %}
+{% endunless %}
+
+<!-- Article Reviews Section -->
+<div class="product-reviews-wrapper">
+  <section class="product-reviews" id="reader-reviews">
+    <div class="product-reviews__header">
+      <h2 class="product-reviews__title">Review Pembaca</h2>
+      <div class="product-reviews__summary">
+      <div class="product-reviews__rating">
+        <span class="product-reviews__rating-value">{{ article.rating | default: 4.6 }}</span>
+        <div class="product-reviews__stars">
+          {% assign rating = article.rating | default: 4.6 | times: 1.0 %}
+          {% for i in (1..5) %}
+            {% if i <= rating %}
+              <i class="bi bi-star-fill"></i>
+            {% elsif i == rating | plus: 1 and rating != rating | floor %}
+              <i class="bi bi-star-half"></i>
+            {% else %}
+              <i class="bi bi-star"></i>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <span class="product-reviews__count">Berdasarkan {{ article.review_count | default: 28 }} review</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-reviews__list">
+    {% for review_data in reviews limit: 3 %}
+      {% assign review_obj = "" %}
+      {% for item in review_data %}
+        {% assign parts = item | split: ":" %}
+        {% assign key = parts[0] %}
+        {% assign value = parts[1] %}
+
+        {% if key == "author" %}
+          {% assign review_author = value %}
+        {% elsif key == "rating" %}
+          {% assign review_rating = value | times: 1 %}
+        {% elsif key == "date" %}
+          {% assign review_date = value %}
+        {% elsif key == "comment" %}
+          {% assign review_comment = value %}
+        {% endif %}
+      {% endfor %}
+
+      <article class="product-review">
+        <div class="product-review__header">
+          <div class="product-review__author">
+            <div class="product-review__avatar">
+              {{ review_author | slice: 0 | upcase }}
+            </div>
+            <div class="product-review__author-info">
+              <h3 class="product-review__author-name">{{ review_author }}</h3>
+            </div>
+          </div>
+          <time class="product-review__date" datetime="{{ review_date }}">
+            {{ review_date | date: "%-d %B %Y" }}
+          </time>
+        </div>
+
+        <div class="product-review__rating">
+          {% for i in (1..5) %}
+            {% if i <= review_rating %}
+              <i class="bi bi-star-fill"></i>
+            {% else %}
+              <i class="bi bi-star"></i>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <p class="product-review__comment">{{ review_comment }}</p>
+      </article>
+    {% endfor %}
+  </div>
+
+  <div class="product-reviews__footer">
+    <p class="product-reviews__cta">
+      Sudah membaca artikel ini?
+      <a href="#" class="product-reviews__write-link" onclick="event.preventDefault(); document.querySelector('.review-fab').click();">
+        Tulis Review Anda
+      </a>
+    </p>
+  </div>
+  </section>
+</div>

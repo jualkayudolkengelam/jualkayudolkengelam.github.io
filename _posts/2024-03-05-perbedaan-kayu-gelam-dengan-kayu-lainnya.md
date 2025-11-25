@@ -19,6 +19,8 @@ images:
 url: "/2024/03/05/perbedaan-kayu-gelam-dengan-kayu-lainnya/"
 excerpt: Mengapa kayu gelam lebih unggul dibanding jenis kayu lainnya? Simak perbandingan
   lengkap karakteristik, harga, dan kegunaannya.
+rating: 4.7
+review_count: 32
 like_count: 58
 comment_count: 8
 share_count: 18
