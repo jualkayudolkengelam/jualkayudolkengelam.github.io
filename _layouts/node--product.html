@@ -206,6 +206,13 @@ by page--product.html wrapper, NOT in this node template.
     </div>
   </div>
   {% endif %}
+
+  <!-- Customer Reviews Section -->
+  <div class="row mt-5">
+    <div class="col-12">
+      {% include products/block--product-review.html product=page %}
+    </div>
+  </div>
 </div>
 
 <!-- Initialize Carousel -->

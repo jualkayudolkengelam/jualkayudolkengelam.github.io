@@ -66,6 +66,11 @@
   <link rel="stylesheet" href="{{ '/assets/css/review-modal.css' | relative_url }}">
   {% endif %}
 
+  <!-- Product Reviews Display CSS (for product pages) -->
+  {% if page.layout == 'node--product' %}
+  <link rel="stylesheet" href="{{ '/assets/css/product-reviews.css' | relative_url }}">
+  {% endif %}
+
   <!-- Like/Dislike Buttons CSS (for post pages) -->
   {% if page.layout == 'node--post' or page.layout == 'node--post-with-city' %}
   <link rel="stylesheet" href="{{ '/assets/css/like-dislike.css' | relative_url }}">

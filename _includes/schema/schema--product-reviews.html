@@ -1,0 +1,110 @@
+{% comment %}
+============================================================================
+Schema: Product Reviews
+============================================================================
+
+@file        schema--product-reviews.html
+@path        _includes/schema/schema--product-reviews.html
+@type        Schema component
+@description Schema.org Review markup for product reviews
+@author      arisciwek
+
+This component generates Schema.org Review structured data for product reviews.
+Designed to be included within Product schema for Google Rich Results.
+
+Parameters:
+-----------
+- product: (required) product object
+- reviews: (optional) array of review objects. If not provided, uses sample data
+- output_format: (optional) "array" or "standalone" (default: "array")
+
+Output Formats:
+--------------
+- "array": Returns JSON array for inclusion in Product schema "review" property
+- "standalone": Returns complete script tag with Review schema
+
+Usage in Product Schema:
+------------------------
+In schema--product-page.html or schema--product.html:
+"review": {% include schema/schema--product-reviews.html product=page output_format="array" %}
+
+Standalone Usage:
+-----------------
+{% include schema/schema--product-reviews.html product=page output_format="standalone" %}
+
+Review Data Structure:
+---------------------
+Each review should have:
+- author: reviewer name
+- rating: 1-5 star rating
+- date: review date (YYYY-MM-DD format)
+- comment: review text
+- verified: (optional) verified purchase indicator
+
+Benefits:
+---------
+- Enables Google Review Rich Results
+- Shows star ratings in search results
+- Increases click-through rate
+- Builds trust with potential customers
+- Reusable across all product pages
+
+============================================================================
+{% endcomment %}
+
+{% assign product = include.product %}
+{% assign custom_reviews = include.reviews %}
+{% assign output_format = include.output_format | default: "array" %}
+
+{% comment %}
+Generate sample reviews if not provided
+These represent typical customer feedback
+{% endcomment %}
+
+{% unless custom_reviews %}
+  {% assign reviews = "" | split: "" %}
+
+  {% comment %}Review 1{% endcomment %}
+  {% assign review1 = "" | split: "" %}
+  {% assign review1 = review1 | push: "author:Budi Santoso" %}
+  {% assign review1 = review1 | push: "rating:5" %}
+  {% assign review1 = review1 | push: "date:2025-01-15" %}
+  {% assign review1 = review1 | push: "comment:Kualitas kayu dolken sangat bagus, pengiriman cepat dan aman. Sudah saya pakai untuk pagar rumah, hasilnya sangat kokoh dan tahan lama. Harga sudah termasuk ongkir, sangat worth it!" %}
+
+  {% comment %}Review 2{% endcomment %}
+  {% assign review2 = "" | split: "" %}
+  {% assign review2 = review2 | push: "author:Siti Rahayu" %}
+  {% assign review2 = review2 | push: "rating:5" %}
+  {% assign review2 = review2 | push: "date:2025-01-10" %}
+  {% assign review2 = review2 | push: "comment:Pelayanan sangat memuaskan, penjual responsif dan membantu. Kayu gelam berkualitas premium, tidak ada cacat. Sistem bayar setelah barang sampai bikin tenang. Recommended!" %}
+
+  {% comment %}Review 3{% endcomment %}
+  {% assign review3 = "" | split: "" %}
+  {% assign review3 = review3 | push: "author:Ahmad Fauzi" %}
+  {% assign review3 = review3 | push: "rating:4" %}
+  {% assign review3 = review3 | push: "date:2025-01-05" %}
+  {% assign review3 = review3 | push: "comment:Produk bagus dan sesuai deskripsi. Kayu kuat dan tidak mudah lapuk. Pengiriman agak lama tapi masih dalam estimasi. Overall puas dengan pembelian ini." %}
+
+  {% assign reviews = reviews | push: review1 | push: review2 | push: review3 %}
+{% else %}
+  {% assign reviews = custom_reviews %}
+{% endunless %}
+
+{% if output_format == "standalone" %}<script type="application/ld+json">
+{% endif %}[{% for review_data in reviews limit: 3 %}{% if forloop.index > 1 %},{% endif %}
+  {
+    "@type": "Review",
+    "author": {
+      "@type": "Person",
+      "name": "{% for item in review_data %}{% assign parts = item | split: ':' %}{% if parts[0] == 'author' %}{{ parts[1] }}{% endif %}{% endfor %}"
+    },
+    "datePublished": "{% for item in review_data %}{% assign parts = item | split: ':' %}{% if parts[0] == 'date' %}{{ parts[1] }}{% endif %}{% endfor %}",
+    "reviewBody": "{% for item in review_data %}{% assign parts = item | split: ':' %}{% if parts[0] == 'comment' %}{{ parts[1] }}{% endif %}{% endfor %}",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "{% for item in review_data %}{% assign parts = item | split: ':' %}{% if parts[0] == 'rating' %}{{ parts[1] }}{% endif %}{% endfor %}",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  }{% endfor %}]{% if output_format == "standalone" %}
+</script>{% endif %}

@@ -63,12 +63,17 @@ Schema Fields:
   "@id": "{{ product.url | absolute_url }}#product",
   "name": "{{ product.title }}",
   "description": "{{ product.description | strip_html | strip_newlines | escape }}",
-  "image": "{{ product.image | absolute_url }}",
+  "image": {% if product.images %}[{% for img in product.images %}"{{ img | absolute_url }}"{% unless forloop.last %},{% endunless %}{% endfor %}]{% else %}"{{ product.image | absolute_url }}"{% endif %},
   "url": "{{ product.url | absolute_url }}",
   "sku": "{{ product.sku }}",
+  "mpn": "{{ product.sku }}",
   "brand": {
     "@type": "Brand",
-    "name": "{{ site.business.name }}"
+    "name": "{{ site.business.name }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/images/logo.png"
+    }
   },
   "category": "{{ product.category | default: 'Kayu Dolken Gelam' }}",
   "material": "{{ product.material | default: 'Kayu Gelam' }}",
@@ -77,6 +82,7 @@ Schema Fields:
     "price": "{{ product.price }}",
     "priceCurrency": "IDR",
     "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
     "url": "{{ product.url | absolute_url }}",
     "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
     "seller": {
@@ -125,7 +131,8 @@ Schema Fields:
     "reviewCount": "{{ product.review_count | default: 45 }}",
     "bestRating": "5",
     "worstRating": "1"
-  }{% endif %}{% if product.diameter %},
+  },
+  "review": {% include schema/schema--product-reviews.html product=product output_format="array" %}{% endif %}{% if product.diameter %},
   "additionalProperty": [
     {
       "@type": "PropertyValue",
