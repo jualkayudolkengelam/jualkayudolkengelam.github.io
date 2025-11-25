@@ -153,14 +153,14 @@ cara_pemesanan:
 {% include products/block--product-harga-pengiriman.html %}
 </section>
 
-<section id="product-rekomendasi">
-{% include products/block--product-faq-rekomendasi.html %}
-</section>
-
 <section id="product-cara-pemesanan">
 {% include products/block--product-cara-pemesanan.html %}
 </section>
 
 <section id="product-area-pengiriman">
 {% include products/block--product-area-pengiriman.html %}
+</section>
+
+<section id="product-faq-rekomendasi">
+{% include products/block--product-faq-rekomendasi.html %}
 </section>

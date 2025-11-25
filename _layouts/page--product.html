@@ -142,7 +142,8 @@ Architecture Principle:
   {% include schema/schema--area-pengiriman.html %}
 
   <!-- Harga dan Pengiriman Schema (Offer + Payment Method) -->
-  {% include schema/schema--harga-pengiriman.html %}
+  {% comment %} DISABLED: Duplicate Offer already in schema--product-page.html {% endcomment %}
+  {% comment %} {% include schema/schema--harga-pengiriman.html %} {% endcomment %}
 
   <!-- Product Features Schema (Specifications + Advantages) -->
   {% if page.spesifikasi or page.keunggulan %}

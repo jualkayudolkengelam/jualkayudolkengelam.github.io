@@ -58,25 +58,29 @@
 {% assign carousel_description = include.description | default: "" %}
 
 {% if carousel_images and carousel_images.size > 0 %}
-<!-- Schema.org ImageGallery Markup -->
+<!-- Schema.org ItemList Markup for Image Gallery -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ImageGallery",
+  "@type": "ItemList",
   "@id": "{{ page.url | absolute_url }}#gallery",
   "name": "{{ gallery_name }}",
   "description": "{% if carousel_description != '' %}{{ carousel_description }}{% else %}Galeri foto {{ carousel_title }}{% endif %}",
-  "image": [
+  "itemListElement": [
     {% for image in carousel_images %}
     {
-      "@type": "ImageObject",
-      "@id": "{{ page.url | absolute_url }}#image-{{ forloop.index }}",
-      "url": "{{ image | absolute_url }}",
-      "name": "{{ carousel_title }} - Foto {{ forloop.index }}",
-      "caption": "{{ carousel_title }} gambar {{ forloop.index }} dari {{ carousel_images.size }}",
-      "representativeOfPage": false{% if page.width and page.height %},
-      "width": "{{ page.width }}",
-      "height": "{{ page.height }}"{% endif %}
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {
+        "@type": "ImageObject",
+        "@id": "{{ page.url | absolute_url }}#image-{{ forloop.index }}",
+        "url": "{{ image | absolute_url }}",
+        "name": "{{ carousel_title }} - Foto {{ forloop.index }}",
+        "caption": "{{ carousel_title }} gambar {{ forloop.index }} dari {{ carousel_images.size }}",
+        "representativeOfPage": false{% if page.width and page.height %},
+        "width": "{{ page.width }}",
+        "height": "{{ page.height }}"{% endif %}
+      }
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]
