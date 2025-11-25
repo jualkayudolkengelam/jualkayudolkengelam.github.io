@@ -62,7 +62,13 @@
   "provider": {
     "@type": "LocalBusiness",
     "name": "{{ site.business.name }}",
-    "telephone": "{{ site.business.phone }}"
+    "telephone": "{{ site.business.phone }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "ID",
+      "addressRegion": "{{ site.business.region | default: 'Jawa Barat' }}",
+      "addressLocality": "{{ site.business.city | default: 'Bandung' }}"
+    }
   },
   "areaServed": [{% for provinsi in site.data.area_pengiriman.provinsi %}
     {
