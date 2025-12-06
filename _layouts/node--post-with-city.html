@@ -145,6 +145,7 @@ page.html (wrapper with header/footer)
       {% include reusable/block--carousel--image.html
          carousel_id="postCarousel"
          images=page.images
+         images_alt=page.images_alt
          title=page.title
          gallery_name="Galeri Artikel"
          max_height="500px"
@@ -156,7 +157,7 @@ page.html (wrapper with header/footer)
         <source srcset="{{ page.image | replace: '.jpeg', '.webp' | relative_url }}" type="image/webp">
         <img src="{{ page.image | relative_url }}"
              class="img-fluid rounded shadow"
-             alt="{{ page.title }}"
+             alt="{% if page.image_alt %}{{ page.image_alt }}{% else %}{{ page.title }}{% endif %}"
              style="max-height: 500px; object-fit: cover; width: 100%;"
              width="1200"
              height="500"

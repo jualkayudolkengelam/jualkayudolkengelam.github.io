@@ -24,6 +24,11 @@ images:
   - /assets/images/posts/jual-kayu-dolken-karawang/jual-kayu-dolken-karawang-002.webp
   - /assets/images/posts/jual-kayu-dolken-karawang/jual-kayu-dolken-karawang-003.webp
   - /assets/images/posts/jual-kayu-dolken-karawang/jual-kayu-dolken-karawang-004.webp
+images_alt:
+  - "Stok kayu dolken gelam untuk kebutuhan industri Karawang tersedia di gudang supplier siap kirim ke kawasan KIIC Cikampek dan Telukjambe dengan gratis ongkir"
+  - "Pengiriman kayu dolken ke pabrik dan proyek konstruksi di kawasan industri Karawang menggunakan armada truk untuk pengiriman cepat dan tepat waktu"
+  - "Kayu dolken gelam kualitas premium cocok untuk pagar pabrik dan konstruksi industri di Karawang dengan ketahanan tinggi terhadap cuaca ekstrem"
+  - "Hasil pemasangan kayu dolken sebagai pagar pembatas area industri di Karawang menunjukkan kekuatan struktural dan tampilan profesional yang rapi"
 keywords: "jual kayu dolken karawang, kayu dolken gelam karawang, dolken KIIC, dolken cikampek, dolken telukjambe, kayu gelam karawang, dolken industri karawang, harga dolken karawang"
 show_products: true
 rating: 4.5

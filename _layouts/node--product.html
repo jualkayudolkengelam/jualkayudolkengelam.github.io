@@ -79,6 +79,7 @@ by page--product.html wrapper, NOT in this node template.
       {% include reusable/block--carousel--image.html
          carousel_id="productCarousel"
          images=page.images
+         images_alt=page.images_alt
          title=page.title
          gallery_name="Galeri Produk Kayu Dolken"
       %}
@@ -89,7 +90,7 @@ by page--product.html wrapper, NOT in this node template.
           <source srcset="{{ page.image | replace: '.jpeg', '.webp' | relative_url }}" type="image/webp">
           <img src="{{ page.image | relative_url }}"
                class="img-fluid rounded shadow"
-               alt="{{ page.title }}"
+               alt="{% if page.image_alt %}{{ page.image_alt }}{% else %}{{ page.title }}{% endif %}"
                loading="eager">
         </picture>
       </div>

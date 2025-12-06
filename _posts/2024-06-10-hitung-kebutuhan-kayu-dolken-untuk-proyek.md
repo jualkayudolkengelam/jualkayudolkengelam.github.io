@@ -18,6 +18,11 @@ images:
 - "/assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-002.jpeg"
 - "/assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-003.jpeg"
 - "/assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-004.jpeg"
+images_alt:
+- "Diagram perhitungan kebutuhan kayu dolken untuk proyek pagar dengan rumus praktis berdasarkan panjang keliling dan jarak antar tiang"
+- "Ilustrasi estimasi jumlah kayu dolken untuk gazebo dengan perhitungan tiang utama rangka atap dan finishing dekoratif"
+- "Tabel konversi kebutuhan kayu dolken per meter persegi untuk berbagai aplikasi seperti ceiling dinding dekoratif dan pagar panel"
+- "Contoh kalkulator sederhana menghitung total biaya material kayu dolken dengan variabel jumlah batang harga satuan dan cadangan"
 url: "/2024/06/10/hitung-kebutuhan-kayu-dolken-untuk-proyek/"
 excerpt: Panduan praktis menghitung jumlah kayu dolken yang dibutuhkan untuk proyek
 rating: 4.6

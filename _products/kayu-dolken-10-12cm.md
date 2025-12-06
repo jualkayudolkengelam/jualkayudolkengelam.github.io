@@ -5,11 +5,17 @@ description: Jual kayu dolken gelam diameter 10-12 cm panjang 4 meter. Ukuran te
 price: 45000
 diameter: 10 - 12 cm
 image: /assets/images/products/jual-kayu-dolken-gelam-10-12cm-001.jpeg
+image_alt: "Kayu dolken gelam diameter 10-12 cm panjang 4 meter ukuran terbesar premium untuk proyek konstruksi berat dan infrastruktur, tiang dengan kapasitas beban sangat tinggi dan ketahanan maksimal"
 images:
   - /assets/images/products/jual-kayu-dolken-gelam-10-12cm-001.jpeg
   - /assets/images/products/jual-kayu-dolken-gelam-10-12cm-002.jpeg
   - /assets/images/products/jual-kayu-dolken-gelam-10-12cm-003.jpeg
   - /assets/images/products/jual-kayu-dolken-gelam-10-12cm-004.jpeg
+images_alt:
+  - "Kayu dolken gelam diameter 10-12 cm ukuran terbesar premium menampilkan ketebalan maksimal untuk proyek infrastruktur dan konstruksi berat dengan beban tinggi"
+  - "Potongan melintang kayu dolken 10-12 cm memperlihatkan diameter besar dan struktur serat sangat padat memberikan kapasitas dukung beban maksimal untuk pondasi"
+  - "Tumpukan kayu dolken gelam 10-12 cm di gudang penyimpanan siap kirim untuk proyek konstruksi infrastruktur jembatan, dermaga, dan bangunan bertingkat"
+  - "Penggunaan kayu dolken diameter 10-12 cm sebagai tiang pancang utama proyek infrastruktur menunjukkan aplikasi untuk beban struktural sangat berat dan permanen"
 sku: DOLKEN-10-12
 popular: false
 rating: 4.5

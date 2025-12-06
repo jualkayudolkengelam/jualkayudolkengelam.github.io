@@ -7,11 +7,17 @@ description: Jual kayu dolken gelam diameter 6-8 cm panjang 4 meter. Kuat untuk 
 price: 30000
 diameter: 6 - 8 cm
 image: "/assets/images/products/jual-kayu-dolken-gelam-6-8cm-001.jpeg"
+image_alt: "Kayu dolken gelam diameter 6-8 cm panjang 4 meter untuk konstruksi berat, tiang pancang pondasi, pagar pembatas permanen dengan daya dukung tinggi dan ketahanan puluhan tahun terhadap rayap dan cuaca"
 images:
 - "/assets/images/products/jual-kayu-dolken-gelam-6-8cm-001.jpeg"
 - "/assets/images/products/jual-kayu-dolken-gelam-6-8cm-002.jpeg"
 - "/assets/images/products/jual-kayu-dolken-gelam-6-8cm-003.jpeg"
 - "/assets/images/products/jual-kayu-dolken-gelam-6-8cm-004.jpeg"
+images_alt:
+- "Tumpukan kayu dolken gelam diameter 6-8 cm panjang 4 meter untuk konstruksi berat menunjukkan ketebalan dan kepadatan serat yang optimal untuk tiang pancang"
+- "Potongan melintang kayu dolken 6-8 cm memperlihatkan struktur internal serat padat dan kandungan minyak alami yang memberikan ketahanan terhadap air dan rayap"
+- "Kayu dolken gelam ukuran 6-8 cm ditumpuk di gudang supplier siap dikirim ke proyek konstruksi pondasi cerucuk dan pagar pembatas permanen di seluruh Jawa"
+- "Penggunaan kayu dolken diameter 6-8 cm sebagai tiang pancang pondasi bangunan menunjukkan aplikasi struktural dengan daya dukung beban tinggi dan tahan lama"
 sku: DOLKEN-6-8
 popular: false
 rating: 4.7

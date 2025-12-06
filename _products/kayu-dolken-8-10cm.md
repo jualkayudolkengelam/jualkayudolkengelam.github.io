@@ -5,11 +5,17 @@ description: Jual kayu dolken gelam diameter 8-10 cm panjang 4 meter. Produk pal
 price: 35000
 diameter: 8 - 10 cm
 image: /assets/images/products/jual-kayu-dolken-gelam-8-10cm-001.jpeg
+image_alt: "Kayu dolken gelam diameter 8-10 cm panjang 4 meter produk terlaris favorit kontraktor untuk tiang pancang fondasi dan konstruksi struktural permanen dengan kekuatan optimal dan daya tahan maksimal"
 images:
   - /assets/images/products/jual-kayu-dolken-gelam-8-10cm-001.jpeg
   - /assets/images/products/jual-kayu-dolken-gelam-8-10cm-002.jpeg
   - /assets/images/products/jual-kayu-dolken-gelam-8-10cm-003.jpeg
   - /assets/images/products/jual-kayu-dolken-gelam-8-10cm-004.jpeg
+images_alt:
+  - "Tumpukan kayu dolken gelam diameter 8-10 cm produk terlaris untuk tiang pancang pondasi menunjukkan diameter optimal yang dipilih kontraktor profesional"
+  - "Detail tekstur permukaan kayu dolken 8-10 cm memperlihatkan kualitas serat padat dan warna coklat kehitaman khas kayu gelam premium tahan puluhan tahun"
+  - "Stok besar kayu dolken gelam 8-10 cm di gudang supplier menunjukkan ketersediaan untuk proyek konstruksi skala besar dengan pengiriman cepat ke seluruh Indonesia"
+  - "Aplikasi kayu dolken diameter 8-10 cm sebagai cerucuk pondasi bangunan di lahan gambut menunjukkan ketahanan superior terhadap kondisi tanah basah dan asam"
 sku: DOLKEN-8-10
 popular: true
 rating: 4.8

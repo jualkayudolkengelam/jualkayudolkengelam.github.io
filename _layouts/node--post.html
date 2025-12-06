@@ -133,7 +133,7 @@ page.html (wrapper with header/footer)
 
           {% if page.image %}
           <div class="post-image mb-4">
-            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="img-fluid rounded shadow">
+            <img src="{{ page.image | relative_url }}" alt="{% if page.image_alt %}{{ page.image_alt }}{% else %}{{ page.title }}{% endif %}" class="img-fluid rounded shadow">
           </div>
           {% endif %}
         </header>

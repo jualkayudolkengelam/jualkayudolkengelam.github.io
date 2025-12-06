@@ -13,6 +13,11 @@ images:
 - "/assets/images/posts/jual-kayu-dolken-semarang/jual-kayu-dolken-semarang-002.jpeg"
 - "/assets/images/posts/jual-kayu-dolken-semarang/jual-kayu-dolken-semarang-003.jpeg"
 - "/assets/images/posts/jual-kayu-dolken-semarang/jual-kayu-dolken-semarang-004.jpeg"
+images_alt:
+- "Stok kayu dolken gelam siap kirim ke Semarang melayani area Semarang Tengah Barat Timur Utara Tembalang dan Banyumanik dengan gratis ongkir"
+- "Pengiriman kayu dolken ke proyek konstruksi di Semarang menggunakan armada truk untuk memastikan material sampai dengan aman dan tepat waktu"
+- "Kayu dolken gelam berkualitas premium cocok untuk konstruksi di Semarang dengan ketahanan terhadap iklim tropis dan kelembaban tinggi pesisir"
+- "Hasil pemasangan kayu dolken sebagai pagar dan konstruksi di Semarang menunjukkan kekuatan struktural dan tampilan estetis yang optimal"
 keywords: jual kayu dolken semarang, dolken gelam semarang, supplier kayu dolken semarang,
   kayu dolken kota lama, dolken tembalang, kayu dolken banyumanik
 url: "/2025/11/15/jual-kayu-dolken-semarang/"

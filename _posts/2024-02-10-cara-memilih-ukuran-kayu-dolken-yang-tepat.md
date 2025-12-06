@@ -13,6 +13,11 @@ images:
   - /assets/images/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/cara-memilih-ukuran-kayu-dolken-yang-tepat-002.jpeg
   - /assets/images/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/cara-memilih-ukuran-kayu-dolken-yang-tepat-003.jpeg
   - /assets/images/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/cara-memilih-ukuran-kayu-dolken-yang-tepat-004.jpeg
+images_alt:
+  - "Perbandingan visual berbagai ukuran diameter kayu dolken gelam dari 2-3cm hingga 10-12cm untuk membantu pelanggan memilih sesuai kebutuhan proyek konstruksi"
+  - "Ilustrasi penggunaan kayu dolken diameter kecil 2-4cm untuk aplikasi dekorasi interior seperti ceiling accent dan feature wall dengan tampilan natural"
+  - "Contoh penggunaan kayu dolken diameter sedang 6-8cm untuk konstruksi pagar rumah dan gazebo yang membutuhkan kekuatan struktural menengah"
+  - "Aplikasi kayu dolken diameter besar 8-12cm sebagai tiang pancang pondasi dan cerucuk untuk konstruksi berat yang memerlukan daya dukung tinggi"
 url: /2024/02/10/cara-memilih-ukuran-kayu-dolken-yang-tepat/
 excerpt: "Panduan lengkap memilih ukuran diameter kayu dolken gelam yang sesuai dengan kebutuhan proyek konstruksi atau dekorasi Anda."
 rating: 4.6

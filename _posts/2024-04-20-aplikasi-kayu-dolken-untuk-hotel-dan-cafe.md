@@ -19,6 +19,11 @@ images:
 - "/assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-002.jpeg"
 - "/assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-003.jpeg"
 - "/assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-004.jpeg"
+images_alt:
+- "Desain interior hotel menggunakan kayu dolken gelam untuk ceiling dan dinding dekoratif menciptakan suasana natural mewah yang menenangkan tamu"
+- "Aplikasi kayu dolken sebagai pergola outdoor cafe memberikan area teduh dengan estetika rustic yang menarik untuk spot foto pengunjung"
+- "Feature wall kayu dolken di lobby hotel menciptakan focal point yang elegan dan memberikan kesan hangat selamat datang bagi tamu"
+- "Penggunaan kayu dolken untuk partisi dan elemen dekoratif restoran hotel memberikan sentuhan natural yang meningkatkan pengalaman bersantap"
 url: "/2024/04/20/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/"
 excerpt: Ide kreatif mengaplikasikan kayu dolken gelam untuk menciptakan suasana natural
 rating: 4.6

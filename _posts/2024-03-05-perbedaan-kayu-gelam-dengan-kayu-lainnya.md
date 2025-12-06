@@ -17,6 +17,11 @@ images:
 - "/assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-002.jpeg"
 - "/assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-003.jpeg"
 - "/assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-004.jpeg"
+images_alt:
+- "Perbandingan visual tekstur serat kayu gelam dengan kayu jati menunjukkan perbedaan kepadatan warna dan karakteristik permukaan masing-masing"
+- "Tabel perbandingan spesifikasi kayu gelam merbau ulin dan jati meliputi kepadatan ketahanan rayap harga dan kegunaan utama"
+- "Ilustrasi ketahanan kayu gelam terhadap air dibandingkan kayu lain menunjukkan keunggulan untuk aplikasi outdoor dan area basah"
+- "Grafik perbandingan harga kayu gelam dengan kayu premium lainnya menunjukkan value for money terbaik untuk konstruksi dan dekorasi"
 url: "/2024/03/05/perbedaan-kayu-gelam-dengan-kayu-lainnya/"
 excerpt: Mengapa kayu gelam lebih unggul dibanding jenis kayu lainnya? Simak perbandingan
   lengkap karakteristik, harga, dan kegunaannya.

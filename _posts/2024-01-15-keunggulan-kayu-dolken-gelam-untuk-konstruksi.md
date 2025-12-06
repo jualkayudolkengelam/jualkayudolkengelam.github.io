@@ -18,6 +18,11 @@ images:
 - "/assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-002.jpeg"
 - "/assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-003.jpeg"
 - "/assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-004.jpeg"
+images_alt:
+- "Struktur serat kayu dolken gelam Melaleuca cajuputi yang padat dan rapat menunjukkan keunggulan ketahanan alami terhadap serangan rayap dan jamur perusak kayu"
+- "Potongan melintang kayu dolken gelam memperlihatkan kandungan minyak kayu putih alami yang memberikan perlindungan terhadap air dan kelembaban tinggi"
+- "Aplikasi kayu dolken gelam sebagai cerucuk pondasi bangunan menunjukkan keunggulan daya dukung beban tinggi untuk konstruksi di tanah lunak dan gambut"
+- "Perbandingan ketahanan kayu dolken gelam dengan kayu lainnya menunjukkan umur pakai puluhan tahun tanpa perawatan khusus di berbagai kondisi lingkungan"
 url: "/2024/01/15/keunggulan-kayu-dolken-gelam-untuk-konstruksi/"
 excerpt: Kayu dolken gelam memiliki berbagai keunggulan yang membuatnya menjadi pilihan
 rating: 4.6

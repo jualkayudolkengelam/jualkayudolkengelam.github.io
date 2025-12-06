@@ -18,6 +18,11 @@ images:
 - "/assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-002.jpeg"
 - "/assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-003.jpeg"
 - "/assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-004.jpeg"
+images_alt:
+- "Proses pembersihan kayu dolken gelam menggunakan sikat dan air bersih untuk menghilangkan debu kotoran dan lumut yang menempel pada permukaan"
+- "Aplikasi coating pelindung pada kayu dolken untuk meningkatkan ketahanan terhadap air hujan sinar UV dan serangan jamur perusak kayu"
+- "Pemeriksaan kondisi kayu dolken secara berkala untuk mendeteksi tanda kerusakan awal seperti retak lubang rayap atau perubahan warna"
+- "Hasil perawatan kayu dolken yang rutin menunjukkan kondisi tetap prima dengan warna natural terjaga dan struktur tetap kuat puluhan tahun"
 url: "/2024/05/15/perawatan-kayu-dolken-gelam-agar-awet/"
 excerpt: Panduan lengkap merawat kayu dolken gelam untuk memaksimalkan umur pakai
 rating: 4.6

@@ -13,6 +13,11 @@ images:
 - "/assets/images/posts/jual-kayu-dolken-bandung/jual-kayu-dolken-bandung-002.webp"
 - "/assets/images/posts/jual-kayu-dolken-bandung/jual-kayu-dolken-bandung-003.webp"
 - "/assets/images/posts/jual-kayu-dolken-bandung/jual-kayu-dolken-bandung-004.webp"
+images_alt:
+- "Tumpukan kayu dolken gelam berkualitas tinggi siap kirim ke wilayah Bandung Dago Cihampelas Lembang dengan gratis ongkir dan sistem pembayaran COD bayar di tempat"
+- "Detail tekstur serat kayu dolken gelam yang padat dan tahan lama cocok untuk iklim sejuk dataran tinggi Bandung dengan ketahanan terhadap kelembaban tinggi"
+- "Proses pengiriman kayu dolken ke proyek konstruksi di Bandung menggunakan armada truk untuk memastikan barang sampai dengan aman dan tepat waktu"
+- "Aplikasi kayu dolken gelam untuk pagar dan konstruksi di area Bandung menunjukkan hasil pemasangan yang kokoh dan estetis untuk hunian dan komersial"
 keywords: jual kayu dolken bandung, kayu dolken gelam bandung, dolken dago, dolken
   cihampelas, dolken lembang, kayu gelam bandung, dolken bandung utara, harga dolken
   bandung

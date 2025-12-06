@@ -5,11 +5,17 @@ description: Jual kayu dolken gelam diameter 4-6 cm panjang 4 meter. Ideal untuk
 price: 25000
 diameter: 4 - 6 cm
 image: /assets/images/products/jual-kayu-dolken-gelam-4-6cm-001.jpeg
+image_alt: "Kayu dolken gelam diameter 4-6 cm panjang 4 meter untuk konstruksi pagar kokoh, tiang penyangga ringan, dan aplikasi struktural menengah dengan kekuatan optimal dan harga ekonomis gratis ongkir"
 images:
 - /assets/images/products/jual-kayu-dolken-gelam-4-6cm-001.jpeg
 - /assets/images/products/jual-kayu-dolken-gelam-4-6cm-002.jpeg
 - /assets/images/products/jual-kayu-dolken-gelam-4-6cm-003.jpeg
 - /assets/images/products/jual-kayu-dolken-gelam-4-6cm-004.jpeg
+images_alt:
+- "Tumpukan kayu dolken gelam diameter 4-6 cm panjang 4 meter tampak dari samping menunjukkan kualitas premium dengan tekstur serat padat ideal untuk konstruksi pagar"
+- "Detail permukaan kayu dolken 4-6 cm memperlihatkan karakteristik kulit dan serat alami kayu gelam yang tahan rayap dan cuaca ekstrem Indonesia"
+- "Stok kayu dolken gelam 4-6 cm tersusun rapi di area penyimpanan outdoor menunjukkan ketahanan material terhadap hujan dan panas matahari langsung"
+- "Proses pengiriman kayu dolken diameter 4-6 cm menggunakan truk untuk memastikan barang sampai dengan aman ke lokasi proyek konstruksi pelanggan"
 sku: DOLKEN-4-6
 popular: false
 rating: 4.6

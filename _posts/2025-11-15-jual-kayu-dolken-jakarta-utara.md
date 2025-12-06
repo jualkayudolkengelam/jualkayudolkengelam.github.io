@@ -15,6 +15,11 @@ images:
   - /assets/images/posts/jual-kayu-dolken-jakarta-utara/jual-kayu-dolken-jakarta-utara-002.jpeg
   - /assets/images/posts/jual-kayu-dolken-jakarta-utara/jual-kayu-dolken-jakarta-utara-003.jpeg
   - /assets/images/posts/jual-kayu-dolken-jakarta-utara/jual-kayu-dolken-jakarta-utara-004.jpeg
+images_alt:
+  - "Stok kayu dolken gelam premium siap kirim ke Jakarta Utara melayani area Kelapa Gading Ancol Pademangan Sunter dengan gratis ongkir dan pembayaran COD"
+  - "Pengiriman kayu dolken ke proyek konstruksi di kawasan industri Jakarta Utara menggunakan truk untuk memastikan material sampai tepat waktu dan kondisi baik"
+  - "Kayu dolken gelam berkualitas tinggi cocok untuk konstruksi di area pesisir Jakarta Utara dengan ketahanan terhadap kelembaban tinggi dan air laut"
+  - "Hasil pemasangan kayu dolken sebagai pagar dan tiang pancang di proyek perumahan Jakarta Utara menunjukkan kekuatan dan estetika yang optimal"
 keywords: jual kayu dolken jakarta utara, dolken gelam jakarta utara, supplier kayu dolken jakarta utara, kayu dolken kelapa gading, dolken ancol, kayu dolken pademangan, kayu dolken sunter
 show_products: true
 rating: 4.5
