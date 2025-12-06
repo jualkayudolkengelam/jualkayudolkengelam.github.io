@@ -3,6 +3,7 @@ Allow: /
 
 # Sitemap
 Sitemap: https://jualkayudolkengelam.github.io/sitemap.xml
+Sitemap: https://jualkayudolkengelam.github.io/sitemap-index.xml
 
 # Disallow admin/config files
 Disallow: /assets/css/*.map
