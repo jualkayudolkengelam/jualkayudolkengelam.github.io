@@ -7,6 +7,7 @@ tags: [tips, panduan, ukuran kayu, konstruksi]
 author: Admin
 author_url: https://jualkayudolkengelam.github.io
 image: /assets/images/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/cara-memilih-ukuran-kayu-dolken-yang-tepat-001.jpeg
+image_alt: "Perbandingan berbagai ukuran diameter kayu dolken gelam dari 2-3cm hingga 10-12cm untuk membantu memilih ukuran yang tepat sesuai kebutuhan proyek konstruksi pagar, gazebo, pergola, atau dekorasi interior"
 images:
   - /assets/images/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/cara-memilih-ukuran-kayu-dolken-yang-tepat-001.jpeg
   - /assets/images/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat/cara-memilih-ukuran-kayu-dolken-yang-tepat-002.jpeg

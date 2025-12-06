@@ -12,6 +12,7 @@ tags:
 author: Admin
 author_url: https://jualkayudolkengelam.github.io
 image: "/assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-001.jpeg"
+image_alt: "Tips perawatan kayu dolken gelam agar tetap awet puluhan tahun meliputi pembersihan berkala, coating pelindung, penanganan jamur dan rayap serta pemeliharaan struktur untuk menjaga kualitas dan tampilan natural"
 images:
 - "/assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-001.jpeg"
 - "/assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-002.jpeg"

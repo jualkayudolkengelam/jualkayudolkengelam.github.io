@@ -15,6 +15,7 @@ tags:
 author: Admin
 author_url: https://jualkayudolkengelam.github.io
 image: /assets/images/posts/cara-menghitung-kebutuhan-kayu-dolken-untuk-proyek-anda/cara-menghitung-kebutuhan-kayu-dolken-untuk-proyek-anda-001.webp
+image_alt: "Panduan visual cara menghitung kebutuhan kayu dolken untuk proyek konstruksi dengan metode praktis, meliputi perhitungan pagar, gazebo, pergola dan struktur lainnya agar estimasi biaya material lebih akurat"
 images:
   - /assets/images/posts/cara-menghitung-kebutuhan-kayu-dolken-untuk-proyek-anda/cara-menghitung-kebutuhan-kayu-dolken-untuk-proyek-anda-001.webp
   - /assets/images/posts/cara-menghitung-kebutuhan-kayu-dolken-untuk-proyek-anda/cara-menghitung-kebutuhan-kayu-dolken-untuk-proyek-anda-002.webp

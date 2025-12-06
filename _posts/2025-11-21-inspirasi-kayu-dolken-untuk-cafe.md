@@ -13,6 +13,7 @@ tags:
 author: Admin
 author_url: https://jualkayudolkengelam.github.io
 image: "/assets/images/posts/inspirasi-kayu-dolken-untuk-cafe/inspirasi-kayu-dolken-untuk-cafe-001.webp"
+image_alt: "Inspirasi desain interior cafe menggunakan kayu dolken gelam untuk feature wall, partisi ruangan, dan ceiling accent yang menciptakan suasana natural rustic aesthetic cocok untuk konsep biophilic design"
 images:
 - "/assets/images/posts/inspirasi-kayu-dolken-untuk-cafe/inspirasi-kayu-dolken-untuk-cafe-001.webp"
 - "/assets/images/posts/inspirasi-kayu-dolken-untuk-cafe/inspirasi-kayu-dolken-untuk-cafe-002.webp"

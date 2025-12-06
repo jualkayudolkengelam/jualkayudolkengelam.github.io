@@ -18,6 +18,7 @@ date: 2025-11-19
 author: Admin
 author_url: https://jualkayudolkengelam.github.io
 image: /assets/images/posts/jual-kayu-dolken-karawang/jual-kayu-dolken-karawang-001.webp
+image_alt: "Kayu dolken gelam kualitas industri untuk proyek konstruksi Karawang, tersedia pengiriman gratis ke kawasan KIIC, Cikampek, Telukjambe dengan sistem COD, cocok untuk pagar pabrik dan konstruksi bangunan"
 images:
   - /assets/images/posts/jual-kayu-dolken-karawang/jual-kayu-dolken-karawang-001.webp
   - /assets/images/posts/jual-kayu-dolken-karawang/jual-kayu-dolken-karawang-002.webp
