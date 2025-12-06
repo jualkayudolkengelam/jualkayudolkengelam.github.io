@@ -63,8 +63,7 @@ Architecture Principle:
 - All includes belong in page wrapper, NOT in node template!
 
 ============================================================================
-{% endcomment %}
-<!DOCTYPE html>
+{% endcomment %}<!DOCTYPE html>
 <html lang="{{ site.lang | default: 'id' }}">
 {% include head.html %}
 
@@ -142,6 +141,33 @@ Architecture Principle:
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "{{ page.url | absolute_url }}"
+    }
+  }
+  </script>
+
+  <!-- Product Schema with Rating (for Rich Results star rating) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "{{ page.title }}",
+    "description": "{{ page.description | strip_html | strip_newlines | escape }}",
+    "image": "{% if page.images %}{{ page.images[0] | absolute_url }}{% elsif page.image %}{{ page.image | absolute_url }}{% endif %}",
+    "brand": {
+      "@type": "Brand",
+      "name": "{{ site.business.name }}"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "IDR",
+      "lowPrice": "4500",
+      "highPrice": "17000",
+      "offerCount": "5",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "{{ site.business.name }}"
+      }
     },
     "aggregateRating": {
       "@type": "AggregateRating",
