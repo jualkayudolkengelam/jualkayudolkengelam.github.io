@@ -24,10 +24,9 @@ images_alt:
 - "Pemeriksaan kondisi kayu dolken secara berkala untuk mendeteksi tanda kerusakan awal seperti retak lubang rayap atau perubahan warna"
 - "Hasil perawatan kayu dolken yang rutin menunjukkan kondisi tetap prima dengan warna natural terjaga dan struktur tetap kuat puluhan tahun"
 url: "/2024/05/15/perawatan-kayu-dolken-gelam-agar-awet/"
-excerpt: Panduan lengkap merawat kayu dolken gelam untuk memaksimalkan umur pakai
+excerpt: "Panduan lengkap merawat kayu dolken gelam untuk memaksimalkan umur pakai hingga puluhan tahun dengan perawatan minimal."
 rating: 4.6
 review_count: 24
-  hingga puluhan tahun dengan perawatan minimal.
 like_count: 78
 comment_count: 16
 share_count: 30

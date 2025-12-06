@@ -24,10 +24,9 @@ images_alt:
 - "Aplikasi kayu dolken gelam sebagai cerucuk pondasi bangunan menunjukkan keunggulan daya dukung beban tinggi untuk konstruksi di tanah lunak dan gambut"
 - "Perbandingan ketahanan kayu dolken gelam dengan kayu lainnya menunjukkan umur pakai puluhan tahun tanpa perawatan khusus di berbagai kondisi lingkungan"
 url: "/2024/01/15/keunggulan-kayu-dolken-gelam-untuk-konstruksi/"
-excerpt: Kayu dolken gelam memiliki berbagai keunggulan yang membuatnya menjadi pilihan
+excerpt: "Kayu dolken gelam memiliki berbagai keunggulan yang membuatnya menjadi pilihan utama untuk berbagai keperluan konstruksi dan dekorasi."
 rating: 4.6
 review_count: 43
-  utama untuk berbagai keperluan konstruksi dan dekorasi.
 like_count: 71
 comment_count: 12
 share_count: 23

@@ -25,10 +25,9 @@ images_alt:
 - "Feature wall kayu dolken di lobby hotel menciptakan focal point yang elegan dan memberikan kesan hangat selamat datang bagi tamu"
 - "Penggunaan kayu dolken untuk partisi dan elemen dekoratif restoran hotel memberikan sentuhan natural yang meningkatkan pengalaman bersantap"
 url: "/2024/04/20/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/"
-excerpt: Ide kreatif mengaplikasikan kayu dolken gelam untuk menciptakan suasana natural
+excerpt: "Ide kreatif mengaplikasikan kayu dolken gelam untuk menciptakan suasana natural dan elegan di hotel dan cafe Anda."
 rating: 4.6
 review_count: 44
-  dan elegan di hotel dan cafe Anda.
 like_count: 102
 comment_count: 24
 share_count: 42

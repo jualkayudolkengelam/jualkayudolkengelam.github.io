@@ -24,10 +24,9 @@ images_alt:
 - "Tabel konversi kebutuhan kayu dolken per meter persegi untuk berbagai aplikasi seperti ceiling dinding dekoratif dan pagar panel"
 - "Contoh kalkulator sederhana menghitung total biaya material kayu dolken dengan variabel jumlah batang harga satuan dan cadangan"
 url: "/2024/06/10/hitung-kebutuhan-kayu-dolken-untuk-proyek/"
-excerpt: Panduan praktis menghitung jumlah kayu dolken yang dibutuhkan untuk proyek
+excerpt: "Panduan praktis menghitung jumlah kayu dolken yang dibutuhkan untuk proyek pagar, gazebo, dekorasi, dan konstruksi lainnya dengan akurat."
 rating: 4.6
 review_count: 24
-  pagar, gazebo, dekorasi, dan konstruksi lainnya dengan akurat.
 like_count: 96
 comment_count: 21
 share_count: 36
