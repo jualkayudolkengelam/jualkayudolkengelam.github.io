@@ -2,56 +2,53 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{% for post in site.posts %}
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for post in site.posts %}
 <url>
-  <loc>{{ post.url | absolute_url }}</loc>
-  <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
-  {% if post.images %}
-  {% for img in post.images %}
-  <image:image>
-    <image:loc>{{ img | absolute_url }}</image:loc>
-    {% if post.images_alt %}{% assign idx = forloop.index0 %}{% if post.images_alt[idx] %}<image:title>{{ post.images_alt[idx] | xml_escape }}</image:title>{% endif %}{% endif %}
-  </image:image>
-  {% endfor %}
-  {% elsif post.image %}
-  <image:image>
-    <image:loc>{{ post.image | absolute_url }}</image:loc>
-    {% if post.image_alt %}<image:title>{{ post.image_alt | xml_escape }}</image:title>{% endif %}
-  </image:image>
-  {% endif %}
+<loc>{{ post.url | absolute_url }}</loc>
+<lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+{%- if post.images %}
+{%- for img in post.images %}
+<image:image>
+<image:loc>{{ img | absolute_url }}</image:loc>
+{%- if post.images_alt %}{% assign idx = forloop.index0 %}{% if post.images_alt[idx] %}<image:title>{{ post.images_alt[idx] | xml_escape }}</image:title>{% endif %}{% endif %}
+</image:image>
+{%- endfor %}
+{%- elsif post.image %}
+<image:image>
+<image:loc>{{ post.image | absolute_url }}</image:loc>
+{%- if post.image_alt %}<image:title>{{ post.image_alt | xml_escape }}</image:title>{% endif %}
+</image:image>
+{%- endif %}
 </url>
-{% endfor %}
-{% for product in site.products %}
+{%- endfor %}
+{%- for product in site.products %}
 <url>
-  <loc>{{ product.url | absolute_url }}</loc>
-  <lastmod>{{ product.last_modified_at | default: product.date | date_to_xmlschema }}</lastmod>
-  {% if product.images %}
-  {% for img in product.images %}
-  <image:image>
-    <image:loc>{{ img | absolute_url }}</image:loc>
-    {% if product.images_alt %}{% assign idx = forloop.index0 %}{% if product.images_alt[idx] %}<image:title>{{ product.images_alt[idx] | xml_escape }}</image:title>{% endif %}{% endif %}
-  </image:image>
-  {% endfor %}
-  {% elsif product.image %}
-  <image:image>
-    <image:loc>{{ product.image | absolute_url }}</image:loc>
-    {% if product.image_alt %}<image:title>{{ product.image_alt | xml_escape }}</image:title>{% endif %}
-  </image:image>
-  {% endif %}
+<loc>{{ product.url | absolute_url }}</loc>
+<lastmod>{{ product.last_modified_at | default: product.date | date_to_xmlschema }}</lastmod>
+{%- if product.images %}
+{%- for img in product.images %}
+<image:image>
+<image:loc>{{ img | absolute_url }}</image:loc>
+{%- if product.images_alt %}{% assign idx = forloop.index0 %}{% if product.images_alt[idx] %}<image:title>{{ product.images_alt[idx] | xml_escape }}</image:title>{% endif %}{% endif %}
+</image:image>
+{%- endfor %}
+{%- elsif product.image %}
+<image:image>
+<image:loc>{{ product.image | absolute_url }}</image:loc>
+{%- if product.image_alt %}<image:title>{{ product.image_alt | xml_escape }}</image:title>{% endif %}
+</image:image>
+{%- endif %}
 </url>
-{% endfor %}
-{% for page in site.pages %}
-{% unless page.sitemap == false or page.url contains '/assets/' %}
-{% if page.url %}
+{%- endfor %}
+{%- for page in site.pages %}
+{%- unless page.sitemap == false or page.url contains '/assets/' %}
+{%- if page.url %}
 <url>
-  <loc>{{ page.url | absolute_url }}</loc>
-  {% if page.last_modified_at %}<lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>{% endif %}
+<loc>{{ page.url | absolute_url }}</loc>
+{%- if page.last_modified_at %}<lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>{% endif %}
 </url>
-{% endif %}
-{% endunless %}
-{% endfor %}
+{%- endif %}
+{%- endunless %}
+{%- endfor %}
 </urlset>
