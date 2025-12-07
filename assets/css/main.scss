@@ -525,7 +525,7 @@ h6.h6 {
   h4.h4 + p.small,
   h4.h4 ~ p.small {
     display: block !important;
-    width: 100%;
+    width: calc(100% - 1.75rem);
     margin-left: 1.75rem !important; /* Align with h4 text, accounting for icon width */
     padding-left: 0 !important;
   }
