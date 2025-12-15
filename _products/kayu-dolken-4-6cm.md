@@ -71,6 +71,10 @@ faq_rekomendasi:
     icon: "bi-stars"
     deskripsi: "Rekomendasi dari para profesional untuk memaksimalkan penggunaan produk ini"
   items:
+    - pertanyaan: "Apa itu kayu dolken?"
+      jawaban: "Kayu dolken adalah kayu gelam (Melaleuca cajuputi) berbentuk bulat/silinder yang digunakan untuk konstruksi dan dekorasi. Disebut juga dolken gelam atau kayu dolog. Keunggulannya: tahan rayap alami, tahan air, awet puluhan tahun tanpa pengawetan kimia."
+    - pertanyaan: "Berapa harga kayu dolken per batang untuk diameter 4-6 cm?"
+      jawaban: "Harga kayu dolken perbatang untuk diameter 4-6 cm adalah Rp 25.000 (panjang 4 meter). Harga sudah termasuk ongkir ke seluruh Jawa-Bali. Pembayaran COD setelah barang sampai."
     - pertanyaan: "Bagaimana cara menggunakan kayu dolken diameter 4-6 cm untuk pagar rumah?"
       jawaban: "Untuk pagar rumah, gunakan jarak ideal antar dolken 10-15 cm untuk pagar yang kuat dan rapat. Tinggi standar 1.5-2 meter memberikan privacy optimal dengan tampilan kokoh dan natural."
     - pertanyaan: "Apakah kayu dolken diameter 4-6 cm cocok untuk pergola dan gazebo?"

@@ -77,6 +77,12 @@ faq_rekomendasi:
     icon: "bi-stars"
     deskripsi: "Rekomendasi dari para profesional untuk memaksimalkan penggunaan produk ini"
   items:
+    - pertanyaan: "Apa itu kayu dolken?"
+      jawaban: "Kayu dolken adalah kayu gelam (Melaleuca cajuputi) berbentuk bulat/silinder yang digunakan untuk konstruksi dan dekorasi. Disebut juga dolken gelam atau kayu dolog. Keunggulannya: tahan rayap alami, tahan air, awet puluhan tahun tanpa pengawetan kimia."
+    - pertanyaan: "Berapa harga kayu dolken per batang untuk diameter 10-12 cm?"
+      jawaban: "Harga kayu dolken perbatang untuk diameter 10-12 cm adalah Rp 45.000 (panjang 4 meter). Ukuran premium untuk proyek berat! Harga sudah termasuk ongkir ke seluruh Jawa-Bali. Pembayaran COD setelah barang sampai."
+    - pertanyaan: "Apa itu cerucuk dolken?"
+      jawaban: "Cerucuk dolken adalah kayu dolken yang dipancang ke dalam tanah sebagai pondasi bangunan. Fungsinya memperkuat tanah lunak/gambut agar mampu menahan beban struktur. Diameter 10-12 cm ideal untuk cerucuk pondasi bangunan 2-3 lantai dan proyek infrastruktur."
     - pertanyaan: "Bagaimana cara menggunakan kayu dolken diameter 10-12 cm untuk tiang pancang bangunan bertingkat?"
       jawaban: "Ideal untuk fondasi rumah 2-3 lantai atau bangunan komersial. Dapat dipancang 2-3 meter ke dalam tanah dengan jarak antar tiang 1.5-2 meter untuk kapasitas beban maksimal dan stabilitas struktural tinggi."
     - pertanyaan: "Apakah kayu dolken diameter 10-12 cm cocok untuk dermaga dan pelabuhan?"

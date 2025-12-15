@@ -71,6 +71,10 @@ faq_rekomendasi:
     icon: "bi-stars"
     deskripsi: "Rekomendasi dari para profesional untuk memaksimalkan penggunaan produk ini"
   items:
+    - pertanyaan: "Apa itu kayu dolken?"
+      jawaban: "Kayu dolken adalah kayu gelam (Melaleuca cajuputi) berbentuk bulat/silinder yang digunakan untuk konstruksi dan dekorasi. Disebut juga dolken gelam atau kayu dolog. Keunggulannya: tahan rayap alami, tahan air, awet puluhan tahun tanpa pengawetan kimia."
+    - pertanyaan: "Berapa harga kayu dolken per batang untuk diameter 2-3 cm?"
+      jawaban: "Harga kayu dolken perbatang untuk diameter 2-3 cm adalah Rp 15.000 (panjang 4 meter). Harga sudah termasuk ongkir ke seluruh Jawa-Bali. Pembayaran COD setelah barang sampai."
     - pertanyaan: "Bagaimana cara menggunakan kayu dolken diameter 2-3 cm untuk dekorasi interior?"
       jawaban: "Kayu dolken diameter 2-3 cm sempurna untuk aksen dinding hotel, cafe, dan restoran. Pasang vertikal atau horizontal untuk menciptakan texture natural yang menarik. Jarak ideal 5-8 cm antar batang untuk hasil optimal."
     - pertanyaan: "Apakah kayu dolken diameter 2-3 cm cocok untuk taman dan landscape?"
