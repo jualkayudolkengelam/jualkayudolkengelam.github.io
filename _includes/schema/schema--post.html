@@ -76,15 +76,7 @@ Schema Fields:
     "url": "{{ site.url }}{{ site.baseurl }}"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "{{ site.business.name }}",
-    "url": "{{ site.url }}{{ site.baseurl }}",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ site.logo | default: '/assets/images/logo.png' | absolute_url }}",
-      "width": 600,
-      "height": 60
-    }
+    "@id": "{{ site.url }}{{ site.baseurl }}/#organization"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",

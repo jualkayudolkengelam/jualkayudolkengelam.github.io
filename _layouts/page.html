@@ -46,18 +46,6 @@ page.html (this file - site wrapper)
 {% include head.html %}
 
 <body>
-  <!-- Global Schema: WebSite + Organization + Navigation + Page in @graph -->
-  {% unless page.skip_page_schema %}
-    {% include schema/schema--page.html %}
-  {% endunless %}
-
-  <!-- Page-specific schemas -->
-  {% if page.custom_schema %}
-    {% for schema_file in page.custom_schema %}
-      {% include {{ schema_file }} %}
-    {% endfor %}
-  {% endif %}
-
   {% include header.html %}
 
   <main class="main-content">
@@ -71,6 +59,18 @@ page.html (this file - site wrapper)
   {% if page.custom_js %}
     {% for js_file in page.custom_js %}
       <script src="{{ js_file | relative_url }}"></script>
+    {% endfor %}
+  {% endif %}
+
+  <!-- Global Schema: WebSite + Organization + Navigation + Page in @graph -->
+  {% unless page.skip_page_schema %}
+    {% include schema/schema--page.html %}
+  {% endunless %}
+
+  <!-- Page-specific schemas -->
+  {% if page.custom_schema %}
+    {% for schema_file in page.custom_schema %}
+      {% include {{ schema_file }} %}
     {% endfor %}
   {% endif %}
 </body>

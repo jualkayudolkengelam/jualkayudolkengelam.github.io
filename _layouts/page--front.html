@@ -63,18 +63,6 @@ Note: Homepage does NOT use node template - renders content directly!
 {% include head.html %}
 
 <body>
-  <!-- Unified Schema: WebSite + Organization + Navigation + Page in single @graph -->
-  {% unless page.skip_page_schema %}
-    {% include schema/schema--page.html %}
-  {% endunless %}
-
-  <!-- Page-specific schemas -->
-  {% if page.custom_schema %}
-    {% for schema_file in page.custom_schema %}
-      {% include {{ schema_file }} %}
-    {% endfor %}
-  {% endif %}
-
   {% include header.html %}
 
   <main class="main-content">
@@ -88,6 +76,18 @@ Note: Homepage does NOT use node template - renders content directly!
   {% if page.custom_js %}
     {% for js_file in page.custom_js %}
       <script src="{{ js_file | relative_url }}"></script>
+    {% endfor %}
+  {% endif %}
+
+  <!-- Unified Schema: WebSite + Organization + Navigation + Page in single @graph -->
+  {% unless page.skip_page_schema %}
+    {% include schema/schema--page.html %}
+  {% endunless %}
+
+  <!-- Page-specific schemas -->
+  {% if page.custom_schema %}
+    {% for schema_file in page.custom_schema %}
+      {% include {{ schema_file }} %}
     {% endfor %}
   {% endif %}
 </body>
