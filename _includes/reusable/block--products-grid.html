@@ -39,7 +39,7 @@
   ============================================================================
 {% endcomment %}
 
-{% assign grid_title = include.title | default: "Daftar Harga Kayu Dolken Gelam" %}
+{% assign grid_title = include.title | default: "Harga Kayu Dolken Per Batang" %}
 {% assign grid_subtitle = include.subtitle | default: "Panjang 4 Meter - Berbagai Ukuran Diameter" %}
 
 <div class="container">
@@ -76,7 +76,7 @@
         </div>
         <div class="card-body text-center">
           <div class="product-price mb-2">Rp {{ product.price | rupiah }}</div>
-          <p class="text-muted mb-2">per batang (4 meter)</p>
+          <p class="text-muted mb-2">harga per batang (4 meter)</p>
 
           {% if product.rating or product.review_count %}
           <div class="mb-3 d-flex justify-content-center align-items-center gap-2">
