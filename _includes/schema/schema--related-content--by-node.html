@@ -1,15 +1,14 @@
 {% comment %}
   ============================================================================
-  Schema Include - Related Content by Node (ItemList with BlogPosting)
+  Schema Include - Related Content by Node (ItemList with URL references)
   ============================================================================
 
   @file        _includes/schema--related-content--by-node.html
   @description Dedicated schema include for related articles ItemList markup.
-               Separated from block--related-content--by-node.html for better
-               architecture and schema centralization at page wrapper level.
+               Uses URL references to avoid creating multiple Article entities.
 
-  @version     1.0.0
-  @date        2025-11-21
+  @version     2.0.0
+  @date        2025-12-15
   @author      jualkayudolkengelam
   @copyright   2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
   @license     All rights reserved
@@ -22,11 +21,9 @@
 
   Features:
   ---------
-  - Schema.org ItemList with BlogPosting items
-  - Complete BlogPosting metadata (headline, url, image, dates)
-  - Author (Person) and Publisher (Organization) entities
-  - interactionStatistic for engagement (likes, comments, shares)
-  - Perfect schema/visual accuracy (numberOfItems matches display)
+  - Schema.org ItemList with URL references only
+  - Does NOT create separate BlogPosting/Article entities
+  - Perfect schema accuracy (1 ItemList, not multiple Articles)
 
   Parameters:
   -----------
@@ -36,13 +33,6 @@
   Usage:
   ------
   {% include schema/schema--related-content--by-node.html posts=final_posts %}
-
-  {% include schema/schema--related-content--by-node.html posts=final_posts title="Artikel Panduan & Tips" %}
-
-  Called from:
-  ------------
-  - _layouts/page--post.html (before </body> tag)
-  - Any page wrapper needing related content schema
 
   ============================================================================
 {% endcomment %}
@@ -64,57 +54,8 @@
     {
       "@type": "ListItem",
       "position": {{ forloop.index }},
-      "name": "{{ post.title }}",
-      "item": {
-        "@type": "BlogPosting",
-        "headline": "{{ post.title }}",
-        "url": "{{ post.url | absolute_url }}",
-        {% if post.images %}
-        "image": "{{ post.images[0] | absolute_url }}",
-        {% elsif post.image %}
-        "image": "{{ post.image | absolute_url }}",
-        {% endif %}
-        "datePublished": "{{ post.date | date_to_xmlschema }}",
-        {% if post.last_modified_at %}
-        "dateModified": "{{ post.last_modified_at | date_to_xmlschema }}",
-        {% endif %}
-        "author": {
-          "@type": "Person",
-          "name": "{% if post.author %}{{ post.author }}{% else %}Admin{% endif %}"{% if post.author_url %},
-          "url": "{{ post.author_url }}"{% endif %}
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "{{ site.business.name }}",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}"
-          }
-        }{% if post.like_count or post.comment_count or post.share_count %},
-        "interactionStatistic": [
-          {% if post.like_count %}
-          {
-            "@type": "InteractionCounter",
-            "interactionType": "https://schema.org/LikeAction",
-            "userInteractionCount": {{ post.like_count }}
-          }{% if post.comment_count or post.share_count %},{% endif %}
-          {% endif %}
-          {% if post.comment_count %}
-          {
-            "@type": "InteractionCounter",
-            "interactionType": "https://schema.org/CommentAction",
-            "userInteractionCount": {{ post.comment_count }}
-          }{% if post.share_count %},{% endif %}
-          {% endif %}
-          {% if post.share_count %}
-          {
-            "@type": "InteractionCounter",
-            "interactionType": "https://schema.org/ShareAction",
-            "userInteractionCount": {{ post.share_count }}
-          }
-          {% endif %}
-        ]{% endif %}
-      }
+      "name": "{{ post.title | escape }}",
+      "url": "{{ post.url | absolute_url }}"
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]

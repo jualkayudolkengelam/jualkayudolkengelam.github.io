@@ -8,9 +8,12 @@ Shared Schema: Related Articles ItemList (Latest)
 @type        Schema (shared component)
 @description Reusable ItemList schema for latest related articles display
 @author      arisciwek
+@version     2.0.0
+@date        2025-12-15
 
 This is a shared schema component that provides ItemList structured data
-for related articles sections. Articles are mix of latest and older posts.
+for related articles sections. Uses URL references to avoid creating
+multiple Article entities (which would inflate Google Rich Results count).
 
 Parameters:
 -----------
@@ -19,30 +22,13 @@ Parameters:
 
 Usage:
 ------
-In page wrapper (collect schemas at bottom):
 {% include schema/schema--related-content--latest.html posts=all_related %}
-
-In block include (if needed inline):
-{% include schema/schema--related-content--latest.html posts=all_related raw=false %}
-
-Benefits:
----------
-- DRY: Single source of truth for related articles schema
-- Flexibility: Can be called from page wrapper or blocks
-- Consistency: Same schema structure across all uses
-- Maintainability: Update once, applies everywhere
-
-Used by:
---------
-- _includes/block--related-content--latest.html
-- _layouts/node--post.html (wrapper)
 
 Schema Structure:
 -----------------
-- ItemList with BlogPosting items
-- Each post has: headline, url, image, dates, author
-- Publisher information
-- InteractionStatistic (likes, comments, shares if available)
+- ItemList with ListItem items (URL reference only)
+- Each item has: position, name, url
+- Does NOT create separate Article/BlogPosting entities
 
 ============================================================================
 {% endcomment %}
@@ -63,55 +49,8 @@ Schema Structure:
     {
       "@type": "ListItem",
       "position": {{ forloop.index }},
-      "name": "{{ post.title }}",
-      "item": {
-        "@type": "BlogPosting",
-        "headline": "{{ post.title }}",
-        "url": "{{ post.url | absolute_url }}",
-        {% if post.image %}
-        "image": "{{ post.image | absolute_url }}",
-        {% endif %}
-        "datePublished": "{{ post.date | date_to_xmlschema }}",
-        {% if post.last_modified_at %}
-        "dateModified": "{{ post.last_modified_at | date_to_xmlschema }}",
-        {% endif %}
-        "author": {
-          "@type": "Person",
-          "name": "{% if post.author %}{{ post.author }}{% else %}Admin{% endif %}"{% if post.author_url %},
-          "url": "{{ post.author_url }}"{% endif %}
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "{{ site.business.name }}",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "{{ '/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg' | absolute_url }}"
-          }
-        }{% if post.like_count or post.comment_count or post.share_count %},
-        "interactionStatistic": [
-          {% if post.like_count %}
-          {
-            "@type": "InteractionCounter",
-            "interactionType": "https://schema.org/LikeAction",
-            "userInteractionCount": {{ post.like_count }}
-          }{% if post.comment_count or post.share_count %},{% endif %}
-          {% endif %}
-          {% if post.comment_count %}
-          {
-            "@type": "InteractionCounter",
-            "interactionType": "https://schema.org/CommentAction",
-            "userInteractionCount": {{ post.comment_count }}
-          }{% if post.share_count %},{% endif %}
-          {% endif %}
-          {% if post.share_count %}
-          {
-            "@type": "InteractionCounter",
-            "interactionType": "https://schema.org/ShareAction",
-            "userInteractionCount": {{ post.share_count }}
-          }
-          {% endif %}
-        ]{% endif %}
-      }
+      "name": "{{ post.title | escape }}",
+      "url": "{{ post.url | absolute_url }}"
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]
