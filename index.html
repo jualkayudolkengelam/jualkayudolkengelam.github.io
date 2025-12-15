@@ -9,6 +9,33 @@ custom_schema:
 - schema/schema--front.html
 custom_js:
 - "/assets/js/kalkulator-kayu-dolken.js"
+faq_pemesanan:
+  - pertanyaan: "Berapa harga kayu dolken per batang?"
+    jawaban: "Harga kayu dolken per batang mulai Rp 15.000 untuk diameter 2-3 cm hingga Rp 45.000 untuk diameter 10-12 cm. Semua harga sudah termasuk ongkir ke seluruh Jawa-Bali."
+    icon: "bi-cash-coin"
+  - pertanyaan: "Berapa harga kayu gelam per batang?"
+    jawaban: "Harga kayu gelam (dolken gelam) per batang sama dengan harga kayu dolken, mulai Rp 15.000. Kayu gelam dan kayu dolken adalah produk yang sama - kayu dari pohon Melaleuca cajuputi."
+    icon: "bi-tag"
+  - pertanyaan: "Berapa minimal pemesanan kayu dolken?"
+    jawaban: "Minimal pemesanan 50 batang untuk pengiriman gratis. Untuk pemesanan di bawah 50 batang, hubungi kami untuk konfirmasi ketersediaan dan ongkir."
+    icon: "bi-cart-check"
+faq_produk:
+  - pertanyaan: "Apa itu kayu dolken?"
+    jawaban: "Kayu dolken adalah kayu gelam (Melaleuca cajuputi) berbentuk bulat/silinder. Disebut juga dolken gelam atau kayu dolog. Keunggulannya: tahan rayap alami, tahan air, awet puluhan tahun tanpa pengawetan kimia."
+    icon: "bi-tree"
+  - pertanyaan: "Apa itu cerucuk dolken?"
+    jawaban: "Cerucuk dolken adalah kayu dolken yang dipancang ke dalam tanah sebagai pondasi bangunan. Fungsinya memperkuat tanah lunak atau gambut agar mampu menahan beban struktur. Diameter 8-10 cm paling populer untuk cerucuk."
+    icon: "bi-building"
+  - pertanyaan: "Ukuran kayu dolken apa saja yang tersedia?"
+    jawaban: "Tersedia 5 ukuran diameter: 2-3 cm (dekorasi), 4-6 cm (pagar), 6-8 cm (konstruksi ringan), 8-10 cm (terlaris, tiang pancang), 10-12 cm (konstruksi berat). Semua panjang 4 meter."
+    icon: "bi-rulers"
+faq_pengiriman:
+  - pertanyaan: "Apakah pengiriman gratis?"
+    jawaban: "Ya, gratis ongkir untuk pemesanan minimal 50 batang ke seluruh Jawa dan Bali. Pengiriman menggunakan truk langsung ke lokasi proyek Anda."
+    icon: "bi-truck"
+  - pertanyaan: "Bagaimana sistem pembayaran?"
+    jawaban: "Kami menerima pembayaran COD (bayar di tempat setelah barang sampai). Anda bisa cek kualitas dan jumlah barang sebelum melakukan pembayaran."
+    icon: "bi-credit-card"
 reviews:
 - author: Hendro Siswanto
   location: Bogor
@@ -72,6 +99,13 @@ reviews:
   {% include reusable/block--frontpage-product-review.html %}
 </section>
 
+<!-- FAQ Section -->
+<section id="faq" class="faq-section py-5 bg-light">
+  <div class="container">
+    {% include reusable/block--faq-kayu-dolken.html %}
+  </div>
+</section>
+
 <!-- Latest Blog Posts -->
 <!-- Blog Preview Section -->
 <section class="blog-preview-section py-5">
@@ -85,3 +119,6 @@ reviews:
 
 <!-- Blog Preview Schema (ItemList with BlogPosting items) -->
 {% include schema/schema--blog-preview.html %}
+
+<!-- FAQ Schema (FAQPage for rich snippets) -->
+{% include schema/schema--faq-kayu-dolken.html %}
