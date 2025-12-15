@@ -46,13 +46,43 @@ Benefits:
       }
     },
     {
-      "@type": "Organization",
+      "@type": ["Organization", "LocalBusiness"],
       "@id": "{{ site.url }}{{ site.baseurl }}/#organization",
       "name": "{{ site.business.name }}",
       "url": "{{ site.url }}{{ site.baseurl }}/",
       "logo": {
         "@type": "ImageObject",
         "url": "{{ site.url }}{{ site.baseurl }}/assets/images/logo.png"
+      },
+      "image": "{{ site.url }}{{ site.baseurl }}/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg",
+      "telephone": "{{ site.business.phone }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.business.street_address }}",
+        "addressLocality": "{{ site.business.location }}",
+        "postalCode": "{{ site.business.postal_code }}",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -6.1149,
+        "longitude": 106.1502
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "priceRange": "Rp 15.000 - Rp 45.000",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": -6.1149,
+          "longitude": 106.1502
+        },
+        "geoRadius": "500000"
       },
       "contactPoint": {
         "@type": "ContactPoint",
@@ -62,7 +92,7 @@ Benefits:
         "availableLanguage": "Indonesian"
       },
       "sameAs": [
-        "{{ site.business.whatsapp_url }}"
+        "https://wa.me/{{ site.business.whatsapp }}"
       ]
     },
     {
