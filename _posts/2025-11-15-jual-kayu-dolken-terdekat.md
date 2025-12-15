@@ -33,6 +33,19 @@ keywords: "jual kayu dolken terdekat, jual dolken terdekat, kayu dolken jakarta,
 show_products: true
 rating: 4.5
 review_count: 40
+reviews:
+  - author: "Rudi Hartono"
+    rating: 5
+    date: "2025-01-13"
+    comment: "Artikel sangat membantu menemukan supplier kayu dolken terpercaya. Pengiriman ke Surabaya lancar dan kualitas premium sesuai deskripsi!"
+  - author: "Yanti Susanti"
+    rating: 5
+    date: "2025-01-08"
+    comment: "Informasi lengkap tentang area layanan pengiriman. Order dari Jogja, barang sampai dengan aman dan tepat waktu. Recommended!"
+  - author: "Fadli Rahman"
+    rating: 4
+    date: "2025-01-04"
+    comment: "Panduan pemilihan ukuran sangat informatif. Gratis ongkir dan sistem COD memudahkan pembelian dari luar kota. Kualitas bagus."
 excerpt: "Jual Kayu Dolken Terdekat - Hub 081311400177. Cari supplier kayu dolken terdekat di kota Anda? Kami melayani pengiriman ke seluruh Jawa dan Bali. Gratis ongkir, COD tersedia, harga mulai Rp 15.000/batang."
 nama_kota: Jawa-Bali
 

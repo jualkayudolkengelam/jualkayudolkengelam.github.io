@@ -28,6 +28,19 @@ url: "/2024/04/20/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/"
 excerpt: "Ide kreatif mengaplikasikan kayu dolken gelam untuk menciptakan suasana natural dan elegan di hotel dan cafe Anda."
 rating: 4.6
 review_count: 44
+reviews:
+  - author: "Andika Wijaya"
+    rating: 5
+    date: "2025-01-12"
+    comment: "Artikel inspiratif untuk desain hotel! Ide pergola dan ceiling dari kayu dolken sangat kreatif. Langsung aplikasikan di resort kami."
+  - author: "Maya Sari"
+    rating: 5
+    date: "2025-01-07"
+    comment: "Referensi lengkap untuk desain cafe rustic. Foto-foto contoh aplikasi sangat membantu visualisasi konsep. Highly recommended!"
+  - author: "Bima Prasetya"
+    rating: 4
+    date: "2025-01-02"
+    comment: "Panduan aplikasi kayu dolken untuk interior hotel sangat detail. Tips pemilihan ukuran dan finishing sangat bermanfaat."
 like_count: 102
 comment_count: 24
 share_count: 42

@@ -24,6 +24,19 @@ url: "/2025/11/15/jual-kayu-dolken-semarang/"
 show_products: true
 rating: 4.5
 review_count: 23
+reviews:
+  - author: "Bambang Sutrisno"
+    rating: 5
+    date: "2025-01-10"
+    comment: "Artikel lengkap tentang kayu dolken di Semarang. Langsung order untuk gazebo di Tembalang, kualitas sesuai deskripsi dan pengiriman cepat!"
+  - author: "Sri Wahyuni"
+    rating: 5
+    date: "2025-01-06"
+    comment: "Informasi sangat membantu untuk proyek cafe di Kota Lama. Kayu dolken cocok untuk konsep rustic, harga juga kompetitif."
+  - author: "Eko Prasetyo"
+    rating: 4
+    date: "2025-01-02"
+    comment: "Panduan pemesanan jelas dan detail. Gratis ongkir ke Banyumanik sangat menguntungkan. Recommended untuk yang butuh kayu dolken di Semarang."
 excerpt: "Jual Kayu Dolken Semarang - Hub 081311400177. Harga terbaik, gratis ongkir seluruh Semarang."
 nama_kota: Semarang
 area_pengiriman:

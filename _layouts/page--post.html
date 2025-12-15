@@ -145,7 +145,7 @@ Architecture Principle:
   }
   </script>
 
-  <!-- CreativeWorkSeries Schema with Rating (for Rich Results star rating) -->
+  <!-- CreativeWorkSeries Schema with Rating and Reviews (for Rich Results) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
@@ -156,7 +156,23 @@ Architecture Principle:
       "ratingValue": "{{ page.rating | default: 4.6 }}",
       "bestRating": "5",
       "ratingCount": "{{ page.review_count | default: 28 }}"
-    }
+    }{% if page.reviews %},
+    "review": [
+      {% for review in page.reviews limit: 3 %}
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "{{ review.author }}" },
+        "datePublished": "{{ review.date }}",
+        "reviewBody": "{{ review.comment | escape }}",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "{{ review.rating }}",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]{% endif %}
   }
   </script>
 

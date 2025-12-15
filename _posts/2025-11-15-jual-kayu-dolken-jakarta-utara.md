@@ -24,6 +24,19 @@ keywords: jual kayu dolken jakarta utara, dolken gelam jakarta utara, supplier k
 show_products: true
 rating: 4.5
 review_count: 39
+reviews:
+  - author: "Hendra Wijaya"
+    rating: 5
+    date: "2025-01-12"
+    comment: "Artikel sangat membantu untuk proyek gazebo di Kelapa Gading. Informasi lengkap tentang ukuran dan harga kayu dolken. Langsung order dan hasilnya memuaskan!"
+  - author: "Dewi Kusuma"
+    rating: 5
+    date: "2025-01-08"
+    comment: "Penjelasan detail tentang keunggulan kayu dolken gelam untuk area pesisir Jakarta Utara. Sangat relevan dengan kebutuhan saya di Pluit. Recommended!"
+  - author: "Agus Pratama"
+    rating: 4
+    date: "2025-01-03"
+    comment: "Artikel informatif dengan panduan pemesanan yang jelas. Pengiriman gratis ke Sunter sangat membantu. Kualitas kayu sesuai deskripsi."
 excerpt: "Jual Kayu Dolken Jakarta Utara - Hub 081311400177. Harga terbaik, gratis ongkir seluruh Jakarta Utara."
 nama_kota: Jakarta Utara
 

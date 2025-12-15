@@ -24,6 +24,19 @@ keywords: jual kayu dolken bandung, kayu dolken gelam bandung, dolken dago, dolk
 show_products: true
 rating: 4.5
 review_count: 45
+reviews:
+  - author: "Rizky Permana"
+    rating: 5
+    date: "2025-01-14"
+    comment: "Artikel sangat informatif untuk kebutuhan kayu dolken di Bandung. Order untuk villa di Lembang, hasilnya memuaskan dan tahan cuaca dingin!"
+  - author: "Nadia Putri"
+    rating: 5
+    date: "2025-01-09"
+    comment: "Penjelasan lengkap tentang aplikasi kayu dolken. Cocok untuk konsep cafe outdoor di Dago. Pengiriman gratis sangat membantu!"
+  - author: "Dedi Kurniawan"
+    rating: 4
+    date: "2025-01-04"
+    comment: "Panduan pemilihan ukuran sangat membantu untuk proyek pergola di Cihampelas. Kualitas kayu bagus dan sesuai dengan harga."
 excerpt: "Jual Kayu Dolken Bandung - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang. Gratis ongkir seluruh Bandung, COD tersedia."
 nama_kota: Bandung
 area_pengiriman:

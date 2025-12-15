@@ -33,6 +33,19 @@ keywords: "jual kayu dolken karawang, kayu dolken gelam karawang, dolken KIIC, d
 show_products: true
 rating: 4.5
 review_count: 42
+reviews:
+  - author: "Wahyu Nugroho"
+    rating: 5
+    date: "2025-01-11"
+    comment: "Artikel sangat membantu untuk kebutuhan pagar pabrik di KIIC. Pengiriman cepat dan kualitas kayu dolken sesuai standar industri!"
+  - author: "Lina Marlina"
+    rating: 5
+    date: "2025-01-07"
+    comment: "Informasi lengkap tentang kayu dolken untuk konstruksi di Karawang. Order untuk gudang di Cikampek, hasilnya kokoh dan tahan lama."
+  - author: "Joko Susilo"
+    rating: 4
+    date: "2025-01-03"
+    comment: "Panduan pemesanan jelas, gratis ongkir ke Telukjambe sangat menguntungkan untuk proyek kami. Kualitas sesuai ekspektasi."
 excerpt: "Jual Kayu Dolken Karawang - Hub 081311400177. Kualitas premium untuk industri & konstruksi. Gratis ongkir KIIC, Cikampek, Telukjambe. COD tersedia."
 nama_kota: Karawang
 
