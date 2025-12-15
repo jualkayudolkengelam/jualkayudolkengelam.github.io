@@ -88,9 +88,9 @@
         "bestRating": "5",
         "worstRating": "1"
       },
-      {% if page.reviews %}
+      {% if site.data.featured_reviews.reviews %}
       "review": [
-        {% assign front_reviews = page.reviews | slice: 0, 3 %}
+        {% assign front_reviews = site.data.featured_reviews.reviews | slice: 0, 3 %}
         {% for review in front_reviews %}
         {
           "@type": "Review",

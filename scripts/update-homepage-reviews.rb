@@ -1,14 +1,14 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-# Homepage Reviews Update Script
-# Version: 1.0.0
+# Featured Reviews Update Script
+# Version: 2.0.0
 # Last Updated: 2025-12-15
 #
 # Features:
 # - Reads reviews from pool (scripts/data/review-pool.yml)
 # - Selects 3 reviews using configurable strategy
-# - Updates index.html frontmatter with selected reviews
+# - Updates _data/featured_reviews.yml (shared by homepage and product page)
 # - Maps fields for visual block and schema compatibility
 #
 # Strategies:
@@ -29,11 +29,11 @@ require 'fileutils'
 
 # Configuration
 REVIEW_POOL_FILE = File.join(__dir__, 'data', 'review-pool.yml')
-INDEX_FILE = File.join(__dir__, '..', 'index.html')
+FEATURED_REVIEWS_FILE = File.join(__dir__, '..', '_data', 'featured_reviews.yml')
 PRODUCTS = ['Kayu Dolken 2-3 cm', 'Kayu Dolken 4-6 cm', 'Kayu Dolken 6-8 cm',
             'Kayu Dolken 8-10 cm', 'Kayu Dolken 10-12 cm']
 
-class HomepageReviewsUpdater
+class FeaturedReviewsUpdater
   attr_reader :pool, :strategy
 
   def initialize(strategy = 'random')
@@ -111,7 +111,7 @@ class HomepageReviewsUpdater
     select_random
   end
 
-  def transform_for_frontmatter(reviews)
+  def transform_reviews(reviews)
     # Generate recent dates (last 30 days)
     base_date = Date.today
     dates = [
@@ -133,64 +133,66 @@ class HomepageReviewsUpdater
     end
   end
 
-  def update_index!
-    unless File.exist?(INDEX_FILE)
-      puts "❌ Error: index.html not found at #{INDEX_FILE}"
-      exit 1
+  def update_featured_reviews!
+    # Load old reviews for comparison
+    old_reviews = []
+    if File.exist?(FEATURED_REVIEWS_FILE)
+      old_data = YAML.load_file(FEATURED_REVIEWS_FILE)
+      old_reviews = old_data['reviews'] || [] if old_data
     end
-
-    # Read file
-    file_content = File.read(INDEX_FILE)
-
-    # Parse front matter
-    match = file_content.match(/^(---\s*\n)(.*?)(^---\s*$\n?)/m)
-
-    unless match
-      puts "❌ Error: No front matter found in index.html"
-      exit 1
-    end
-
-    front_matter = YAML.safe_load(match[2], permitted_classes: [Date, Time])
-    content_after = match.post_match
 
     # Select and transform reviews
     selected = select_reviews
-    transformed = transform_for_frontmatter(selected)
+    transformed = transform_reviews(selected)
 
-    # Update front matter
-    old_reviews = front_matter['reviews'] || []
-    front_matter['reviews'] = transformed
+    # Build new data structure
+    new_data = {
+      'reviews' => transformed
+    }
 
-    # Generate new file content
-    # YAML.dump already includes "---\n" at the start, so we don't add another
-    new_front_matter = YAML.dump(front_matter)
-    new_content = "#{new_front_matter}---\n#{content_after}"
+    # Generate YAML with header comment
+    header = <<~HEADER
+      # Featured Reviews for Homepage and Product Page
+      # Version: 1.0.0
+      # Last Updated: #{Date.today}
+      #
+      # Used by:
+      # - schema--front.html (ProductGroup reviews)
+      # - schema--product-list.html (ProductGroup reviews)
+      # - block--frontpage-product-review.html (visual display)
+      #
+      # Updated by:
+      # - scripts/update-homepage-reviews.rb
 
-    # Write back
-    File.write(INDEX_FILE, new_content)
+    HEADER
+
+    # Write to file
+    File.write(FEATURED_REVIEWS_FILE, header + YAML.dump(new_data).sub(/^---\n/, ''))
 
     puts ""
-    puts "✅ Updated index.html with #{transformed.length} reviews:"
+    puts "✅ Updated _data/featured_reviews.yml with #{transformed.length} reviews:"
     transformed.each_with_index do |review, idx|
       puts "   #{idx + 1}. #{review['author']} (#{review['location']}) - #{review['rating']}⭐"
       puts "      #{review['comment'][0..60]}..."
       puts "      Product: #{review['product']}, Date: #{review['date']}"
     end
 
-    puts ""
-    puts "📝 Previous reviews replaced:"
-    old_reviews.each_with_index do |review, idx|
-      puts "   #{idx + 1}. #{review['author']} (#{review['rating']}⭐)"
-    end if old_reviews.any?
+    if old_reviews.any?
+      puts ""
+      puts "📝 Previous reviews replaced:"
+      old_reviews.each_with_index do |review, idx|
+        puts "   #{idx + 1}. #{review['author']} (#{review['rating']}⭐)"
+      end
+    end
   end
 
   def run!
     puts "═══════════════════════════════════════════════"
-    puts "  Homepage Reviews Updater"
+    puts "  Featured Reviews Updater"
     puts "═══════════════════════════════════════════════"
     puts ""
 
-    update_index!
+    update_featured_reviews!
 
     puts ""
     puts "═══════════════════════════════════════════════"
@@ -207,6 +209,6 @@ if __FILE__ == $0
   puts "Strategies: random, top_rated, mixed, newest"
   puts ""
 
-  updater = HomepageReviewsUpdater.new(strategy)
+  updater = FeaturedReviewsUpdater.new(strategy)
   updater.run!
 end

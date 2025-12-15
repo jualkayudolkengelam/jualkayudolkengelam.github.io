@@ -40,8 +40,8 @@ In index.html:
 {% endfor %}
 {% assign avg_rating = total_rating | divided_by: total_reviews | round: 1 %}
 
-{% comment %}Get reviews from page frontmatter, limit to 3{% endcomment %}
-{% assign reviews = page.reviews | slice: 0, 3 %}
+{% comment %}Get reviews from data file, limit to 3{% endcomment %}
+{% assign reviews = site.data.featured_reviews.reviews | slice: 0, 3 %}
 
 <div class="container">
   <div class="text-center mb-5">
