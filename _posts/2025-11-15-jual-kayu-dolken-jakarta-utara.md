@@ -4,7 +4,7 @@
 # ============================================================================
 layout: node--post-with-city
 title: "Jual Kayu Dolken Jakarta Utara - Hub 081311400177 - Gratis Ongkir"
-description: "Jual kayu dolken Jakarta Utara dengan harga terbaik. Melayani pengiriman gratis ke seluruh Jakarta Utara. Hubungi 081311400177 untuk info dan pemesanan."
+description: "Jual Kayu Dolken Jakarta Utara - Hub 081311400177. Harga terbaik, gratis ongkir seluruh Jakarta Utara."
 date: 2025-11-15
 author: Admin
 author_url: https://jualkayudolkengelam.github.io
@@ -24,7 +24,7 @@ keywords: jual kayu dolken jakarta utara, dolken gelam jakarta utara, supplier k
 show_products: true
 rating: 4.5
 review_count: 39
-excerpt: "Jual kayu dolken Jakarta Utara dengan harga terbaik. Melayani pengiriman gratis ke seluruh Jakarta Utara. Hubungi 081311400177 untuk info dan pemesanan."
+excerpt: "Jual Kayu Dolken Jakarta Utara - Hub 081311400177. Harga terbaik, gratis ongkir seluruh Jakarta Utara."
 nama_kota: Jakarta Utara
 
 # ============================================================================
