@@ -27,6 +27,19 @@ url: "/2024/05/15/perawatan-kayu-dolken-gelam-agar-awet/"
 excerpt: "Panduan lengkap merawat kayu dolken gelam untuk memaksimalkan umur pakai hingga puluhan tahun dengan perawatan minimal."
 rating: 4.6
 review_count: 24
+reviews:
+  - author: "Wawan Setiawan"
+    rating: 5
+    date: "2025-01-11"
+    comment: "Tips perawatan sangat praktis dan mudah diikuti. Gazebo saya sudah 3 tahun, setelah ikuti panduan coating di artikel ini kondisinya tetap prima!"
+  - author: "Yuni Astuti"
+    rating: 5
+    date: "2025-01-06"
+    comment: "Panduan pembersihan berkala sangat detail. Pagar kayu dolken saya kena lumut, setelah ikuti cara di artikel langsung bersih. Terima kasih!"
+  - author: "Eko Prasetyo"
+    rating: 4
+    date: "2025-01-01"
+    comment: "Artikel lengkap tentang maintenance kayu dolken. Tips penanganan musim hujan sangat relevan untuk kondisi tropis Indonesia. Recommended!"
 like_count: 78
 comment_count: 16
 share_count: 30

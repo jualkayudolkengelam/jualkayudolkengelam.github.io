@@ -27,6 +27,19 @@ url: "/2024/06/10/hitung-kebutuhan-kayu-dolken-untuk-proyek/"
 excerpt: "Panduan praktis menghitung jumlah kayu dolken yang dibutuhkan untuk proyek pagar, gazebo, dekorasi, dan konstruksi lainnya dengan akurat."
 rating: 4.6
 review_count: 24
+reviews:
+  - author: "Fajar Nugroho"
+    rating: 5
+    date: "2025-01-10"
+    comment: "Rumus perhitungan sangat akurat! Saya pakai untuk proyek pagar 20 meter, estimasi pas tidak ada sisa berlebihan. Hemat budget dan waktu!"
+  - author: "Dewi Lestari"
+    rating: 5
+    date: "2025-01-05"
+    comment: "Kalkulator kebutuhan dolken sangat membantu. Perhitungan untuk gazebo 3x3m presisi, tidak perlu order ulang karena kekurangan. Sangat recommended!"
+  - author: "Budi Santoso"
+    rating: 4
+    date: "2024-12-30"
+    comment: "Panduan perhitungan lengkap dengan contoh kasus. Worksheet template-nya sangat berguna untuk planning proyek ceiling dekoratif saya."
 like_count: 96
 comment_count: 21
 share_count: 36

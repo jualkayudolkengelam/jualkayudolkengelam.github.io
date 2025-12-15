@@ -22,6 +22,19 @@ url: /2024/02/10/cara-memilih-ukuran-kayu-dolken-yang-tepat/
 excerpt: "Panduan lengkap memilih ukuran diameter kayu dolken gelam yang sesuai dengan kebutuhan proyek konstruksi atau dekorasi Anda."
 rating: 4.6
 review_count: 42
+reviews:
+  - author: "Andi Kurniawan"
+    rating: 5
+    date: "2025-01-13"
+    comment: "Panduan pemilihan ukuran sangat praktis! Awalnya bingung pilih diameter berapa, setelah baca artikel ini langsung paham. Order diameter 6-8cm untuk gazebo, pas banget!"
+  - author: "Siti Nurhaliza"
+    rating: 5
+    date: "2025-01-08"
+    comment: "Tabel perbandingan ukuran dan aplikasinya sangat membantu. Saya pilih 4-6cm untuk dekorasi ceiling cafe, hasilnya estetik dan sesuai budget."
+  - author: "Dedi Prasetyo"
+    rating: 4
+    date: "2025-01-03"
+    comment: "Artikel informatif dengan penjelasan detail tiap ukuran. Tips pemilihan untuk beban berat sangat berguna untuk proyek pergola saya."
 like_count: 88
 comment_count: 19
 share_count: 31

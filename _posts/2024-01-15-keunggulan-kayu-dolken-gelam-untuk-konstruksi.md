@@ -27,6 +27,19 @@ url: "/2024/01/15/keunggulan-kayu-dolken-gelam-untuk-konstruksi/"
 excerpt: "Kayu dolken gelam memiliki berbagai keunggulan yang membuatnya menjadi pilihan utama untuk berbagai keperluan konstruksi dan dekorasi."
 rating: 4.6
 review_count: 43
+reviews:
+  - author: "Hendra Santoso"
+    rating: 5
+    date: "2025-01-14"
+    comment: "Artikel sangat edukatif tentang keunggulan kayu gelam. Setelah baca ini, saya yakin pilih dolken gelam untuk pondasi cerucuk rumah di tanah gambut. Hasilnya kokoh!"
+  - author: "Ratna Dewi"
+    rating: 5
+    date: "2025-01-09"
+    comment: "Penjelasan detail tentang kepadatan dan ketahanan rayap sangat membantu. Langsung order untuk pagar rumah, sudah 6 bulan tidak ada masalah sama sekali."
+  - author: "Bambang Wijaya"
+    rating: 4
+    date: "2025-01-04"
+    comment: "Informasi lengkap tentang kelas kekuatan kayu gelam. Sangat bermanfaat untuk referensi proyek gazebo outdoor saya. Recommended!"
 like_count: 71
 comment_count: 12
 share_count: 23

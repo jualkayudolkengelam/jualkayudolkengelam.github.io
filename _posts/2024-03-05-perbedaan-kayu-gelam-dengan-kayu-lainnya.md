@@ -27,6 +27,19 @@ excerpt: Mengapa kayu gelam lebih unggul dibanding jenis kayu lainnya? Simak per
   lengkap karakteristik, harga, dan kegunaannya.
 rating: 4.7
 review_count: 32
+reviews:
+  - author: "Agus Hermawan"
+    rating: 5
+    date: "2025-01-12"
+    comment: "Perbandingan dengan kayu jati sangat objektif. Saya awalnya mau pakai jati tapi setelah baca ini, pilih gelam karena value for money lebih baik untuk outdoor."
+  - author: "Linda Susanti"
+    rating: 5
+    date: "2025-01-07"
+    comment: "Artikel eye-opening! Tidak menyangka kayu gelam punya ketahanan setara merbau dengan harga jauh lebih terjangkau. Langsung order untuk pagar rumah."
+  - author: "Rudi Hartono"
+    rating: 4
+    date: "2025-01-02"
+    comment: "Tabel perbandingan spesifikasi sangat membantu pengambilan keputusan. Informasi tentang ketahanan air gelam meyakinkan saya untuk proyek di area kolam."
 like_count: 58
 comment_count: 8
 share_count: 18

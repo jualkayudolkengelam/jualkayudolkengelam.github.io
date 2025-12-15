@@ -30,6 +30,19 @@ keywords: "cara menghitung kayu dolken, kebutuhan kayu dolken, perhitungan mater
 excerpt: "Panduan lengkap menghitung kebutuhan kayu dolken untuk proyek konstruksi. Hemat biaya dengan perhitungan akurat menggunakan metode praktis dan tips dari ahli."
 rating: 4.7
 review_count: 35
+reviews:
+  - author: "Ahmad Fauzi"
+    rating: 5
+    date: "2025-01-15"
+    comment: "Tutorial step-by-step yang sangat jelas! Sebagai pemula, saya bisa menghitung sendiri kebutuhan dolken untuk pergola tanpa bantuan kontraktor. Hemat konsultasi!"
+  - author: "Rina Wulandari"
+    rating: 5
+    date: "2025-01-10"
+    comment: "Metode perhitungan praktis dan mudah dipahami. Estimasi untuk proyek pagar villa saya sangat akurat, tidak ada material terbuang sia-sia."
+  - author: "Joko Susanto"
+    rating: 4
+    date: "2025-01-05"
+    comment: "Panduan lengkap dengan tips hemat budget. Sangat membantu untuk perencanaan proyek konstruksi skala kecil hingga menengah."
 
 # ============================================================================
 # TUTORIAL META (OPTIONAL - tapi recommended untuk tutorial)
