@@ -1,0 +1,121 @@
+{% comment %}
+============================================================================
+Frontpage Product Reviews Block
+============================================================================
+
+@file        block--frontpage-product-review.html
+@path        _includes/reusable/block--frontpage-product-review.html
+@type        Component (reusable block)
+@description Displays 3 latest product reviews on homepage
+@author      arisciwek
+@version     1.0.0
+@date        2025-12-15
+
+Features:
+---------
+- Displays 3 representative reviews
+- Aggregate rating summary from all products
+- Star rating visualization
+- Verified purchase badges
+- Responsive card design
+- Links to product page
+
+Usage:
+------
+In index.html:
+{% include reusable/block--frontpage-product-review.html %}
+
+============================================================================
+{% endcomment %}
+
+{% comment %}Calculate aggregate rating from all products{% endcomment %}
+{% assign total_rating = 0 %}
+{% assign total_reviews = 0 %}
+{% for product in site.products %}
+  {% assign product_rating = product.rating | default: 4.5 | times: 1.0 %}
+  {% assign product_reviews = product.review_count | default: 45 %}
+  {% assign weighted = product_rating | times: product_reviews %}
+  {% assign total_rating = total_rating | plus: weighted %}
+  {% assign total_reviews = total_reviews | plus: product_reviews %}
+{% endfor %}
+{% assign avg_rating = total_rating | divided_by: total_reviews | round: 1 %}
+
+{% comment %}Get reviews from page frontmatter, limit to 3{% endcomment %}
+{% assign reviews = page.reviews | slice: 0, 3 %}
+
+<div class="container">
+  <div class="text-center mb-5">
+    <h2 class="display-5 fw-bold text-wood mb-3">
+      <i class="bi bi-star-fill text-warning me-2"></i>Ulasan Pelanggan
+    </h2>
+    <p class="lead text-muted">Apa kata mereka tentang produk kami</p>
+  </div>
+
+  <!-- Aggregate Rating Summary -->
+  <div class="row justify-content-center mb-5">
+    <div class="col-md-6 col-lg-4">
+      <div class="card border-0 shadow-sm text-center p-4">
+        <div class="display-3 fw-bold text-wood">{{ avg_rating }}</div>
+        <div class="text-warning fs-4 mb-2">
+          {% for i in (1..5) %}
+            {% if i <= avg_rating %}
+              <i class="bi bi-star-fill"></i>
+            {% elsif i == avg_rating | plus: 1 and avg_rating != avg_rating | floor %}
+              <i class="bi bi-star-half"></i>
+            {% else %}
+              <i class="bi bi-star"></i>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <p class="text-muted mb-0">Berdasarkan {{ total_reviews }} ulasan</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reviews Grid -->
+  <div class="row g-4">
+    {% assign avatar_colors = "primary,success,info" | split: "," %}
+    {% for review in reviews %}
+    {% assign color_index = forloop.index0 | modulo: 3 %}
+    {% assign avatar_color = avatar_colors[color_index] %}
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="d-flex align-items-center">
+              <div class="rounded-circle bg-{{ avatar_color }} text-white d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px; font-size: 1.25rem;">
+                {{ review.author | slice: 0 | upcase }}
+              </div>
+              <div>
+                <h5 class="mb-0 fw-semibold">{{ review.author }}</h5>
+                {% if review.verified %}
+                <small class="text-success">
+                  <i class="bi bi-patch-check-fill me-1"></i>Terverifikasi
+                </small>
+                {% endif %}
+              </div>
+            </div>
+            <small class="text-muted">{{ review.date | date: "%-d %b %Y" }}</small>
+          </div>
+          <div class="text-warning mb-2">
+            {% for i in (1..5) %}
+              {% if i <= review.rating %}<i class="bi bi-star-fill"></i>{% else %}<i class="bi bi-star"></i>{% endif %}
+            {% endfor %}
+          </div>
+          <p class="card-text text-muted mb-3">{{ review.comment }}</p>
+          <span class="badge bg-light text-dark">
+            <i class="bi bi-box-seam me-1"></i>{{ review.product }}
+          </span>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- CTA -->
+  <div class="text-center mt-5">
+    <a href="{{ '/product' | relative_url }}" class="btn btn-outline-wood btn-lg">
+      <i class="bi bi-grid me-2"></i>Lihat Semua Produk
+    </a>
+  </div>
+</div>
