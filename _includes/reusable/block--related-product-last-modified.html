@@ -82,8 +82,10 @@ Sort products by last_modified_at (most recent first)
 ====================
 SCHEMA SECTION
 ====================
-Note: ItemList schema removed to avoid duplication with block--product-list.html
-Individual Product schemas are handled by block--product.html when needed
+Note: show_schema=false to prevent Product schemas with reviews from appearing
+on blog posts. This avoids Google detecting multiple Product/Review snippets
+when the reviews should be tied to the article (BlogPosting), not products.
+For dedicated product pages, use show_schema=true if needed.
 {% endcomment %}
 
 {% comment %}
@@ -124,7 +126,7 @@ Section wrapper and nested block calls
         {% include reusable/block--product.html
            product=product
            variant="card"
-           show_schema=true
+           show_schema=false
         %}
       </div>
       {% endfor %}
