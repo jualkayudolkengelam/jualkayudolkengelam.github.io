@@ -83,15 +83,12 @@ Benefits:
         "closes": "17:00"
       },
       "priceRange": "Rp 15.000 - Rp 45.000",
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": -6.1149,
-          "longitude": 106.1502
-        },
-        "geoRadius": "500000"
-      },
+      "areaServed": [{% for provinsi in site.data.area_pengiriman.provinsi %}
+        {
+          "@type": "State",
+          "name": "{{ provinsi.nama }}"
+        }{% unless forloop.last %},{% endunless %}{% endfor %}
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "{{ site.business.phone }}",
