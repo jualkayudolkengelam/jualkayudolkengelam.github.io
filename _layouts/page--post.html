@@ -145,38 +145,18 @@ Architecture Principle:
   }
   </script>
 
-  <!-- Product Schema with Rating (for Rich Results star rating) -->
+  <!-- CreativeWorkSeries Schema with Rating (for Rich Results star rating) -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Product",
+    "@context": "https://schema.org/",
+    "@type": "CreativeWorkSeries",
     "name": "{{ page.title }}",
-    "description": "{{ page.description | strip_html | strip_newlines | escape }}",
-    "image": "{% if page.images %}{{ page.images[0] | absolute_url }}{% elsif page.image %}{{ page.image | absolute_url }}{% endif %}",
-    "brand": {
-      "@type": "Brand",
-      "name": "{{ site.business.name }}"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "IDR",
-      "lowPrice": "4500",
-      "highPrice": "17000",
-      "offerCount": "5",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@type": "Organization",
-        "name": "{{ site.business.name }}"
-      }
-    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "{{ page.rating | default: 4.6 }}",
-      "reviewCount": "{{ page.review_count | default: 28 }}",
       "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": {% include schema/schema--article-reviews.html article=page output_format="array" %}
+      "ratingCount": "{{ page.review_count | default: 28 }}"
+    }
   }
   </script>
 
