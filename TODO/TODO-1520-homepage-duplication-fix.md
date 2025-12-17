@@ -136,7 +136,7 @@ Fix **critical schema.org duplication** pada homepage (`/`) dimana products munc
           "@type": "ListItem",
           "position": 1,
           "name": "Beranda",
-          "item": "https://jualkayudolkengelam.github.io/"
+          "item": "https://jualkayudolkengelam.net/"
         }
       ]
     },
@@ -232,7 +232,7 @@ Output shows:
 `_site/index.html`
 
 **Live URL:**
-`https://jualkayudolkengelam.github.io/`
+`https://jualkayudolkengelam.net/`
 
 ---
 

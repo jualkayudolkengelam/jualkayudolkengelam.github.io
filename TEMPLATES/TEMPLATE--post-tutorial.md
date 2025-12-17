@@ -103,7 +103,7 @@ tags:
   - "isi tag #3 (misal: panduan)"
   - "isi tag #4 (opsional)"
 author: Admin
-author_url: https://jualkayudolkengelam.github.io
+author_url: https://jualkayudolkengelam.net
 image: /assets/images/posts/{slug-lengkap}/{slug-lengkap}-001.webp
 images:
   - /assets/images/posts/{slug-lengkap}/{slug-lengkap}-001.webp

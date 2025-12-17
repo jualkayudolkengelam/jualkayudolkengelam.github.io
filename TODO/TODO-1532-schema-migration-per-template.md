@@ -289,7 +289,7 @@ Component: ItemList schema (3 products) + HTML (3 products)
 - [ ] Remove conditional wrapper `{% if page.url == '/tentang' %}`
 - [ ] Remove lines 164-232 dari head.html
 - [ ] Test build: `bundle exec jekyll build`
-- [ ] Test page: https://jualkayudolkengelam.github.io/tentang
+- [ ] Test page: https://jualkayudolkengelam.net/tentang
 - [ ] Validate schema: [Google Rich Results Test](https://search.google.com/test/rich-results)
 - [ ] Verify AboutPage + Organization schema appears
 - [ ] Commit changes with message: "Migrate AboutPage schema from head.html to tentang.html"
@@ -307,7 +307,7 @@ Component: ItemList schema (3 products) + HTML (3 products)
 - [ ] Remove conditional wrapper `{% if page.url == '/kontak' %}`
 - [ ] Remove lines 234-299 dari head.html
 - [ ] Test build: `bundle exec jekyll build`
-- [ ] Test page: https://jualkayudolkengelam.github.io/kontak
+- [ ] Test page: https://jualkayudolkengelam.net/kontak
 - [ ] Validate schema: Google Rich Results Test
 - [ ] Verify ContactPage + LocalBusiness schema appears
 - [ ] Commit changes with message: "Migrate ContactPage schema from head.html to kontak.html"
@@ -325,7 +325,7 @@ Component: ItemList schema (3 products) + HTML (3 products)
 - [ ] Remove conditional wrapper `{% if page.url == '/blog' %}`
 - [ ] Remove lines 126-162 dari head.html
 - [ ] Test build: `bundle exec jekyll build`
-- [ ] Test page: https://jualkayudolkengelam.github.io/blog
+- [ ] Test page: https://jualkayudolkengelam.net/blog
 - [ ] Validate schema: Google Rich Results Test
 - [ ] Verify CollectionPage + ItemList (blog posts) schema appears
 - [ ] Commit changes with message: "Migrate CollectionPage schema from head.html to blog.html"
@@ -423,7 +423,7 @@ Component: ItemList schema (3 products) + HTML (3 products)
 ### **Phase 4: Investigate & Decide** (Requires discussion)
 
 #### ❓ Task 4.1: Investigate product.html (Product Listing Page)
-**File:** `/home/mkt01/Public/jualkayudolkengelam.github.io/public_html/product.html`
+**File:** `/home/mkt01/Public/jualkayudolkengelam.net/public_html/product.html`
 **Status:** Unknown - need to investigate
 
 **Questions to Answer:**

@@ -180,7 +180,7 @@
 #     - category: Tutorial/Guide/Tips/Review/Comparison/Case-Study/Landing-Page/About-Us
 #     - tags: Generate 3-4 tags relevan (array format)
 #     - author: Admin (fixed)
-#     - author_url: https://jualkayudolkengelam.github.io (fixed)
+#     - author_url: https://jualkayudolkengelam.net (fixed)
 #     - image: /assets/images/posts/{slug}/{slug}-001.webp
 #     - images: Array minimal 3-4 images
 #     - keywords: Generate 6-8 keywords (comma-separated string)
@@ -481,7 +481,7 @@ tags:
   - "[GENERATE: tag #3]"
   - "[GENERATE: tag #4 - optional]"
 author: Admin
-author_url: https://jualkayudolkengelam.github.io
+author_url: https://jualkayudolkengelam.net
 image: /assets/images/posts/{slug}/{slug}-001.webp  # [REPLACE {slug}]
 images:
   - /assets/images/posts/{slug}/{slug}-001.webp

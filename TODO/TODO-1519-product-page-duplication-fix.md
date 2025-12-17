@@ -212,7 +212,7 @@ Shows only ItemList → ListItem → Product hierarchy, no duplicate LocalBusine
 `_site/product/index.html`
 
 **Live URL:**
-`https://jualkayudolkengelam.github.io/product/`
+`https://jualkayudolkengelam.net/product/`
 
 ---
 

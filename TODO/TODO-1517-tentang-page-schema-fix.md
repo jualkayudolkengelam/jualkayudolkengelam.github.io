@@ -41,12 +41,12 @@ Fix missing schema.org markup pada halaman `/tentang/` (About Us page) dengan me
   "@type": "AboutPage",
   "name": "Tentang Kami",
   "description": "Supplier terpercaya kayu dolken gelam...",
-  "url": "https://jualkayudolkengelam.github.io/tentang/",
+  "url": "https://jualkayudolkengelam.net/tentang/",
   "mainEntity": {
     "@type": "Organization",
     "name": "Kayu Dolken Gelam - Amirudin Abdul Karim",
     "description": "Supplier kayu dolken gelam...",
-    "url": "https://jualkayudolkengelam.github.io",
+    "url": "https://jualkayudolkengelam.net",
     "telephone": "+62 813-1140-0177",
     "address": { ... },
     "geo": { ... },
@@ -143,7 +143,7 @@ This ensures each page type gets semantically correct schema.org markup.
 - ✅ No errors or warnings
 
 **Live URL:**
-`https://jualkayudolkengelam.github.io/tentang/`
+`https://jualkayudolkengelam.net/tentang/`
 
 ---
 
@@ -207,7 +207,7 @@ grep -A 50 '"@type": "Organization"' _site/tentang/index.html
 ```
 ✅ Image property now present:
 ```json
-"image": "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg"
+"image": "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg"
 ```
 
 ---

@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-Comprehensive analysis of the automated product/post metrics system implemented in jualkayudolkengelam.github.io project. This document evaluates technical implementation, conceptual design, risks, and provides strategic recommendations.
+Comprehensive analysis of the automated product/post metrics system implemented in jualkayudolkengelam.net project. This document evaluates technical implementation, conceptual design, risks, and provides strategic recommendations.
 
 **Overall Assessment Score: 88/100 (Grade A- / Excellent)**
 

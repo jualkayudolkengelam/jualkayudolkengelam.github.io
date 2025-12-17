@@ -82,15 +82,15 @@ name Kayu Dolken Gelam - Amirudin Abdul Karim
 #### 1. Enhanced `image` Property
 **From:** Single string
 ```json
-"image": "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg"
+"image": "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg"
 ```
 
 **To:** Array of URLs (3 images)
 ```json
 "image": [
-  "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg",
-  "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-002.jpeg",
-  "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-003.jpeg"
+  "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg",
+  "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-002.jpeg",
+  "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-003.jpeg"
 ]
 ```
 
@@ -103,7 +103,7 @@ name Kayu Dolken Gelam - Amirudin Abdul Karim
 ```json
 "logo": {
   "@type": "ImageObject",
-  "url": "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg",
+  "url": "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg",
   "width": "600",
   "height": "600"
 }
@@ -146,21 +146,21 @@ name Kayu Dolken Gelam - Amirudin Abdul Karim
   "@type": "AboutPage",
   "name": "Tentang Kami",
   "description": "Tentang supplier kayu dolken gelam terpercaya",
-  "url": "https://jualkayudolkengelam.github.io/tentang/",
+  "url": "https://jualkayudolkengelam.net/tentang/",
   "mainEntity": {
     "@type": "Organization",
     "name": "Kayu Dolken Gelam - Amirudin Abdul Karim",
     "description": "Supplier kayu dolken gelam diameter 2-12 cm panjang 4 meter. Melayani pengiriman ke seluruh Jawa. Hubungi kami untuk pemesanan.",
-    "url": "https://jualkayudolkengelam.github.io",
+    "url": "https://jualkayudolkengelam.net",
     "telephone": "+62 813-1140-0177",
     "image": [
-      "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg",
-      "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-002.jpeg",
-      "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-003.jpeg"
+      "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg",
+      "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-002.jpeg",
+      "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-003.jpeg"
     ],
     "logo": {
       "@type": "ImageObject",
-      "url": "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg",
+      "url": "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg",
       "width": "600",
       "height": "600"
     },
@@ -303,7 +303,7 @@ grep -c "jual-kayu-dolken-gelam-lokalbisnis" _site/tentang/index.html
 
 ### Before:
 ```json
-"image": "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg"
+"image": "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg"
 ```
 ❌ Single image only
 ❌ No logo property
@@ -312,13 +312,13 @@ grep -c "jual-kayu-dolken-gelam-lokalbisnis" _site/tentang/index.html
 ### After:
 ```json
 "image": [
-  "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg",
-  "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-002.jpeg",
-  "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-003.jpeg"
+  "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg",
+  "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-002.jpeg",
+  "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-003.jpeg"
 ],
 "logo": {
   "@type": "ImageObject",
-  "url": "https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg",
+  "url": "https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg",
   "width": "600",
   "height": "600"
 }

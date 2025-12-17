@@ -408,7 +408,7 @@ fi
 
 ### **Manual Trigger (Recommended First):**
 
-1. Go to: `https://github.com/jualkayudolkengelam/jualkayudolkengelam.github.io/actions`
+1. Go to: `https://github.com/jualkayudolkengelam/jualkayudolkengelam.net/actions`
 2. Click "Update Product Metrics" workflow
 3. Click "Run workflow" dropdown
 4. Click "Run workflow" button

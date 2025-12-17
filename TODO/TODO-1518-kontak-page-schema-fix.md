@@ -188,7 +188,7 @@ grep -c '@type' _site/kontak/index.html
 `_site/kontak/index.html`
 
 **Live URL:**
-`https://jualkayudolkengelam.github.io/kontak/`
+`https://jualkayudolkengelam.net/kontak/`
 
 ---
 

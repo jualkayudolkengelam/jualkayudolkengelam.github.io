@@ -43,7 +43,7 @@ Fixed Google Rich Results non-critical warnings by adding optional but recommend
 
 ```bash
 # Verified in Google Rich Results Test
-URL: https://jualkayudolkengelam.github.io/blog/2025/11/15/jual-kayu-dolken-semarang/
+URL: https://jualkayudolkengelam.net/blog/2025/11/15/jual-kayu-dolken-semarang/
 Result: 11 items valid, 0 non-critical warnings
 ```
 
@@ -326,5 +326,5 @@ Original head.html preserved as `_includes/head-backup.html` before migration.
 
 **Project:** Jual Kayu Dolken Gelam Website
 **Owner:** Kayu Dolken Gelam - Amirudin Abdul Karim
-**Repository:** https://github.com/jualkayudolkengelam/jualkayudolkengelam.github.io
-**Website:** https://jualkayudolkengelam.github.io
+**Repository:** https://github.com/jualkayudolkengelam/jualkayudolkengelam.net
+**Website:** https://jualkayudolkengelam.net

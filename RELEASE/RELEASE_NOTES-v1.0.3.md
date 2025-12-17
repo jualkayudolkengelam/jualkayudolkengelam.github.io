@@ -232,5 +232,5 @@ For questions or issues related to this release:
 ---
 
 **Generated:** 20 November 2025 08:30 WIB
-**Repository:** jualkayudolkengelam.github.io
+**Repository:** jualkayudolkengelam.net
 **Branch:** main

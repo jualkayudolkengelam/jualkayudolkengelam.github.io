@@ -5,7 +5,7 @@ description: Jual Kayu Dolken Bandung - Hub 081311400177. Kualitas premium, harg
   Gratis ongkir seluruh Bandung, COD tersedia.
 date: 2025-11-19
 author: Admin
-author_url: https://jualkayudolkengelam.github.io
+author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/jual-kayu-dolken-bandung/jual-kayu-dolken-bandung-001.webp"
 image_alt: "Tumpukan kayu dolken gelam kualitas premium siap kirim ke Bandung, tersedia berbagai ukuran diameter 4-12cm panjang 4 meter, cocok untuk konstruksi pagar, gazebo, dan dekorasi interior rumah di dataran tinggi Bandung"
 images:

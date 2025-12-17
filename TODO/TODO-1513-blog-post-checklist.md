@@ -73,7 +73,7 @@ mv "WhatsApp Image 2025-08-30 at 15.34.53.jpeg" "[slug]-004.jpeg"
 
 **Step 2: Masuk ke Jekyll folder & buat folder images**
 ```bash
-cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 mkdir -p assets/images/posts/[slug]
 ```
 
@@ -90,7 +90,7 @@ mv [Folder sumber foto]/[folder-name]/[slug]-004.jpeg assets/images/posts/[slug]
 ```bash
 cd assets/images/posts/[slug]
 for img in *.jpeg; do cwebp -q 85 "$img" -o "${img%.jpeg}.webp"; done
-cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 ```
 
 **Checklist:**
@@ -100,7 +100,7 @@ cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
 
 ### 3️⃣ Buat File (5 menit)
 ```bash
-cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 # Buat file: _posts/YYYY-MM-DD-[slug].md
 ```
 
@@ -112,7 +112,7 @@ title: "Jual Kayu Dolken [Lokasi] - Hub 081311400177 - Gratis Ongkir"
 description: "Jual kayu dolken [lokasi] harga terbaik. Gratis ongkir. Hub 081311400177."
 date: YYYY-MM-DD
 author: Admin
-author_url: https://jualkayudolkengelam.github.io
+author_url: https://jualkayudolkengelam.net
 image: /assets/images/posts/[slug]/[slug]-001.jpeg
 images:
   - /assets/images/posts/[slug]/[slug]-001.jpeg
@@ -360,7 +360,7 @@ share_count: 8
 
 ### 5️⃣ Build & Test (5 menit)
 ```bash
-cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 bundle exec jekyll build
 ```
 - [ ] Build success

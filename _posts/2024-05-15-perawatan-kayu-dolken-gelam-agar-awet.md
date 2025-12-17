@@ -10,7 +10,7 @@ tags:
 - maintenance
 - kayu dolken
 author: Admin
-author_url: https://jualkayudolkengelam.github.io
+author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-001.jpeg"
 image_alt: "Tips perawatan kayu dolken gelam agar tetap awet puluhan tahun meliputi pembersihan berkala, coating pelindung, penanganan jamur dan rayap serta pemeliharaan struktur untuk menjaga kualitas dan tampilan natural"
 images:

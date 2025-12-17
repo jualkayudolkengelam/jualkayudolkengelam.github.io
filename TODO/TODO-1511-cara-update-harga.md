@@ -35,7 +35,7 @@ public_html/_products/
 Buka file product yang ingin diubah harganya, misalnya:
 
 ```bash
-nano /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_products/kayu-dolken-8-10cm.md
+nano /home/mkt01/Public/jualkayudolkengelam.net/public_html/_products/kayu-dolken-8-10cm.md
 ```
 
 ### Step 2: Ubah Nilai Price
@@ -69,7 +69,7 @@ popular: true
 Setelah mengubah harga, rebuild site:
 
 ```bash
-cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 ./rebuild.sh
 ```
 
@@ -77,9 +77,9 @@ cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
 
 Cek apakah harga sudah berubah di semua halaman:
 
-1. **Homepage** - http://jualkayudolkengelam.github.io.local/#product
-2. **Daftar Produk** - http://jualkayudolkengelam.github.io.local/product/
-3. **Halaman Detail** - http://jualkayudolkengelam.github.io.local/product/kayu-dolken-8-10cm/
+1. **Homepage** - http://jualkayudolkengelam.net.local/#product
+2. **Daftar Produk** - http://jualkayudolkengelam.net.local/product/
+3. **Halaman Detail** - http://jualkayudolkengelam.net.local/product/kayu-dolken-8-10cm/
 
 ---
 

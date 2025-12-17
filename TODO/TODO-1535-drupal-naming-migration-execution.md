@@ -32,7 +32,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [x] **Verify working directory is clean**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
   git status
   ```
   - Should show "working tree clean" or only expected changes
@@ -73,7 +73,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 - [ ] **Navigate to layouts directory**
   ```bash
   cd _layouts/
-  pwd  # Should show: /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_layouts
+  pwd  # Should show: /home/mkt01/Public/jualkayudolkengelam.net/public_html/_layouts
   ```
 
 - [ ] **Rename default.html → page.html**
@@ -142,7 +142,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Verify layouts directory structure**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
   ls -1 _layouts/
   ```
   Expected output:
@@ -159,7 +159,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 ### Task 1.2: Update Content Files Layout References
 
-**Working Directory:** `/home/mkt01/Public/jualkayudolkengelam.github.io/public_html`
+**Working Directory:** `/home/mkt01/Public/jualkayudolkengelam.net/public_html`
 
 - [ ] **Find all files using old layout names**
   ```bash
@@ -267,7 +267,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Navigate to includes directory**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_includes
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html/_includes
   pwd
   ```
 
@@ -288,7 +288,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Update {% include %} references to related-content blocks**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 
   # Find all files including old names
   grep -r "related-content-by-node-id.html" . --exclude-dir=_site
@@ -309,7 +309,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Check current product-related files**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_includes
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html/_includes
   ls -la product-list* related-products* 2>/dev/null
   ```
 
@@ -330,7 +330,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Update {% include %} references to product blocks**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 
   # Find all files including old names
   grep -r "product-list\.html" . --exclude-dir=_site
@@ -353,7 +353,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Check current UI component files**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_includes
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html/_includes
   ls -la image-carousel* *link-card* 2>/dev/null
   ```
 
@@ -369,7 +369,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Update {% include %} references to UI blocks**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 
   # Find and replace
   find . -type f \( -name "*.html" -o -name "*.md" \) ! -path "./_site/*" -exec sed -i 's/image-carousel\.html/block--carousel--image.html/g' {} +
@@ -386,7 +386,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Check current utility component files**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_includes
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html/_includes
   ls -la whatsapp-button* 2>/dev/null
   ```
 
@@ -397,7 +397,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Update {% include %} references to WhatsApp block**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 
   # Find all references (likely in page.html, page--front.html)
   grep -r "whatsapp-button\.html" . --exclude-dir=_site
@@ -411,7 +411,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Verify includes directory structure**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
   ls -1 _includes/block--*
   ```
   Expected files starting with `block--`:
@@ -440,7 +440,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Clean previous build**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
   bundle exec jekyll clean
   ```
 
@@ -478,7 +478,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Start local Jekyll server**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
   bundle exec jekyll serve --host 0.0.0.0 --port 4000
   ```
 
@@ -530,7 +530,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Check schema in generated HTML files**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_site
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html/_site
 
   # Check homepage schema
   grep -o '<script type="application/ld+json">.*</script>' index.html | head -1
@@ -557,7 +557,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Check internal links**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 
   # Build and check for broken links (if htmlproofer installed)
   # bundle exec htmlproofer ./_site --disable-external
@@ -639,7 +639,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Create NAMING-CONVENTION.md guide** (if doesn't exist)
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
   mkdir -p docs
   ```
   - [ ] Explain Drupal naming pattern
@@ -663,7 +663,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Ensure NO old references remain**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 
   # Layouts
   grep -r "layout: default" . --include="*.md" --include="*.html" --exclude-dir=_site --exclude-dir=TODO
@@ -794,7 +794,7 @@ This is the **execution checklist** for implementing the Drupal naming conventio
 
 - [ ] **Create completion summary**
   ```bash
-  cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/TODO
+  cd /home/mkt01/Public/jualkayudolkengelam.net/public_html/TODO
   ```
 
 - [ ] **Document migration results** in `COMPLETED-1535-drupal-naming-migration-summary.md`

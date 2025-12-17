@@ -11,7 +11,7 @@ tags:
 - dekorasi
 - interior
 author: Admin
-author_url: https://jualkayudolkengelam.github.io
+author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/aplikasi-kayu-dolken-untuk-hotel-dan-cafe/aplikasi-kayu-dolken-untuk-hotel-dan-cafe-001.jpeg"
 image_alt: "Aplikasi kayu dolken gelam pada interior hotel dan cafe menciptakan suasana natural elegan, digunakan untuk pergola outdoor, ceiling dekoratif, dan elemen arsitektur yang memberikan kesan hangat dan mewah"
 images:

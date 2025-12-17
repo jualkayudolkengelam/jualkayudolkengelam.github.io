@@ -342,7 +342,7 @@ All rights reserved © 2024-2025 Kayu Dolken Gelam - Amirudin Abdul Karim
 
 Untuk pertanyaan atau bantuan:
 - WhatsApp: +62 813-1140-0177
-- Website: https://jualkayudolkengelam.github.io
+- Website: https://jualkayudolkengelam.net
 
 ---
 

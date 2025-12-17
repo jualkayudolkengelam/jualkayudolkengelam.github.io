@@ -149,7 +149,7 @@ public_html/
 
 ```bash
 # Test run
-cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 ruby scripts/update-product-hybrid.rb
 
 # Output:

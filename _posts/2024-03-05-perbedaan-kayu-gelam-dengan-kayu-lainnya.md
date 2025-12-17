@@ -9,7 +9,7 @@ tags:
 - perbandingan
 - jenis kayu
 author: Admin
-author_url: https://jualkayudolkengelam.github.io
+author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-001.jpeg"
 image_alt: "Perbandingan karakteristik kayu gelam Melaleuca cajuputi dengan jenis kayu lain seperti jati, merbau dan ulin dari segi kepadatan, ketahanan rayap, harga dan kegunaan untuk berbagai aplikasi konstruksi"
 images:

@@ -196,8 +196,8 @@ custom_js:
 
 1. **Clone repository**:
    ```bash
-   git clone https://github.com/jualkayudolkengelam/jualkayudolkengelam.github.io.git
-   cd jualkayudolkengelam.github.io/public_html
+   git clone https://github.com/jualkayudolkengelam/jualkayudolkengelam.net.git
+   cd jualkayudolkengelam.net/public_html
    ```
 
 2. **Install dependencies**:
@@ -338,7 +338,7 @@ Edit `_config.yml`:
 ```yaml
 title: "Jual Kayu Dolken Gelam"
 description: "Supplier kayu dolken gelam berkualitas..."
-url: "https://jualkayudolkengelam.github.io"
+url: "https://jualkayudolkengelam.net"
 baseurl: ""
 lang: "id"
 ```
@@ -439,7 +439,7 @@ Website sudah dilengkapi dengan:
 
 3. **Website live di**:
    ```
-   https://jualkayudolkengelam.github.io
+   https://jualkayudolkengelam.net
    ```
 
 ### Custom Domain (Optional)

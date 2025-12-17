@@ -94,7 +94,7 @@ mv 'WhatsApp Image 2025-08-09 at 10.01.21.jpeg' 'jual-kayu-dolken-gelam-2-3cm-00
 **Command:**
 ```bash
 cp '/home/mkt01/Documents/ANDRI/Dolken/foto/WhatsApp Unknown 2025-08-10 at 06.51.00/jual-kayu-dolken-gelam-2-3cm-001.jpeg' \
-   /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/
+   /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/
 ```
 
 ### Step 3: Update Code References
@@ -118,13 +118,13 @@ cp '/home/mkt01/Documents/ANDRI/Dolken/foto/WhatsApp Unknown 2025-08-10 at 06.51
 
 ### Step 4: Rebuild & Test
 ```bash
-cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 ./rebuild.sh
 ```
 
 **Test URLs:**
-- Local: `http://jualkayudolkengelam.github.io.local/assets/images/products/jual-kayu-dolken-gelam-2-3cm-001.jpeg`
-- Production: `https://jualkayudolkengelam.github.io/assets/images/products/jual-kayu-dolken-gelam-2-3cm-001.jpeg`
+- Local: `http://jualkayudolkengelam.net.local/assets/images/products/jual-kayu-dolken-gelam-2-3cm-001.jpeg`
+- Production: `https://jualkayudolkengelam.net/assets/images/products/jual-kayu-dolken-gelam-2-3cm-001.jpeg`
 
 ---
 
@@ -189,7 +189,7 @@ cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
 - ✅ Copied to: `public_html/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg` (451K)
 - ✅ Updated Schema.org LocalBusiness in `_includes/head.html` line 36
 - ✅ Added `"image"` field to LocalBusiness schema
-- ✅ Image URL: `https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg`
+- ✅ Image URL: `https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-lokalbisnis-001.jpeg`
 - ✅ Build successful (33 files, 2.9M)
 - ✅ Image accessible via HTTP 200 OK
 - ✅ Fixes Google Rich Results warning "Kolom 'image' tidak ada (opsional)"
@@ -251,8 +251,8 @@ images:  # Gallery array (optional)
 - ✅ Featured image now shown when sharing `/product/` URL to WhatsApp, Facebook, Twitter, LinkedIn
 
 **Featured Image URL:**
-- Local: `http://jualkayudolkengelam.github.io.local/assets/images/jual-kayu-dolken-gelam-product-page-001.jpeg`
-- Production: `https://jualkayudolkengelam.github.io/assets/images/jual-kayu-dolken-gelam-product-page-001.jpeg`
+- Local: `http://jualkayudolkengelam.net.local/assets/images/jual-kayu-dolken-gelam-product-page-001.jpeg`
+- Production: `https://jualkayudolkengelam.net/assets/images/jual-kayu-dolken-gelam-product-page-001.jpeg`
 
 **Social Media Preview:**
 - Shows image of kayu dolken gelam warehouse/storage
@@ -297,8 +297,8 @@ images:  # Gallery array (optional)
 - ✅ Modern browsers will use WebP, older browsers fallback to JPEG
 
 #### URLs:
-- Local: `http://jualkayudolkengelam.github.io.local/product/kayu-dolken-8-10cm/`
-- Production: `https://jualkayudolkengelam.github.io/product/kayu-dolken-8-10cm/`
+- Local: `http://jualkayudolkengelam.net.local/product/kayu-dolken-8-10cm/`
+- Production: `https://jualkayudolkengelam.net/product/kayu-dolken-8-10cm/`
 
 **Notes:**
 - This is the POPULAR product (popular: true, rating: 4.8, review_count: 91)

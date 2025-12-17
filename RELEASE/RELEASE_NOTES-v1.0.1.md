@@ -283,7 +283,7 @@ From v1.0.0 TODO items:
 
 Untuk pertanyaan atau bantuan:
 - WhatsApp: +62 813-1140-0177
-- Website: https://jualkayudolkengelam.github.io
+- Website: https://jualkayudolkengelam.net
 
 ---
 

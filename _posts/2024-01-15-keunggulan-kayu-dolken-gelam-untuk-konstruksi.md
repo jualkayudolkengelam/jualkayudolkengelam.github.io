@@ -10,7 +10,7 @@ tags:
 - konstruksi
 - keunggulan
 author: Admin
-author_url: https://jualkayudolkengelam.github.io
+author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-001.jpeg"
 image_alt: "Kayu dolken gelam Melaleuca cajuputi menampilkan keunggulan struktur serat padat dan tahan rayap, ideal untuk konstruksi pondasi cerucuk, pagar, gazebo dengan ketahanan puluhan tahun di berbagai kondisi cuaca"
 images:

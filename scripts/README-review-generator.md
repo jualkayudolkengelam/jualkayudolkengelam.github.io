@@ -425,7 +425,7 @@ For issues or questions:
 
 ## 📄 License
 
-Part of jualkayudolkengelam.github.io project.
+Part of jualkayudolkengelam.net project.
 Internal use only.
 
 ---

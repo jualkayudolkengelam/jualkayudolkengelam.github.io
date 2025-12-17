@@ -44,7 +44,7 @@ title: "tulis title yang menarik untuk jual kayu dolken di kota ini, mention nom
 description: "tulis meta description untuk SEO (150-160 karakter), mention kota, produk, keunggulan utama, dan CTA"
 date: YYYY-MM-DD  # Ganti dengan tanggal publikasi, format: 2025-11-20
 author: Admin
-author_url: https://jualkayudolkengelam.github.io
+author_url: https://jualkayudolkengelam.net
 image: /assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-001.webp
 images:
   - /assets/images/posts/jual-kayu-dolken-{kota}/jual-kayu-dolken-{kota}-001.webp

@@ -955,7 +955,7 @@ main if __FILE__ == $PROGRAM_NAME
 **Created:** 2025-11-24
 **Last Updated:** 2025-11-24 (Added rotating schedule implementation)
 **Assignee:** Claude + User
-**Projects:** jualkayudolkengelam.github.io, cmj.github
+**Projects:** jualkayudolkengelam.net, cmj.github
 
 ---
 

@@ -114,7 +114,7 @@ tags:
   - "isi tag #2"
   - "isi tag #3"
 author: Admin
-author_url: https://jualkayudolkengelam.github.io
+author_url: https://jualkayudolkengelam.net
 image: /assets/images/posts/{slug}/{slug}-001.webp
 images:
   - /assets/images/posts/{slug}/{slug}-001.webp

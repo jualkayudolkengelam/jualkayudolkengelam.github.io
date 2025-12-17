@@ -139,7 +139,7 @@ jobs:
 
 **1. Enable GitHub Actions for Pages:**
 
-Go to: `https://github.com/jualkayudolkengelam/jualkayudolkengelam.github.io/settings/pages`
+Go to: `https://github.com/jualkayudolkengelam/jualkayudolkengelam.net/settings/pages`
 
 **Steps:**
 1. Scroll to **"Build and deployment"** section
@@ -169,7 +169,7 @@ git push origin main
 **3. Verify Deployment:**
 
 After push:
-1. Go to: `https://github.com/jualkayudolkengelam/jualkayudolkengelam.github.io/actions`
+1. Go to: `https://github.com/jualkayudolkengelam/jualkayudolkengelam.net/actions`
 2. Wait for "Deploy Jekyll site to GitHub Pages" workflow to complete (2-3 minutes)
 3. Check for ✅ green checkmark
 4. Visit live site and verify schema.org fixes are deployed
@@ -227,13 +227,13 @@ GitHub → Actions → Deploy Jekyll site to GitHub Pages → ✅ Success
 **2. Verify Live Site:**
 ```bash
 # Test kontak page schema.org
-curl -s https://jualkayudolkengelam.github.io/kontak/ | grep -c "hasOfferCatalog"
+curl -s https://jualkayudolkengelam.net/kontak/ | grep -c "hasOfferCatalog"
 # Expected: 0 (no OfferCatalog on contact page)
 ```
 
 **3. Google Rich Results Test:**
 ```
-Test URL: https://jualkayudolkengelam.github.io/kontak/
+Test URL: https://jualkayudolkengelam.net/kontak/
 Expected: NO "cuplikan produk" or "listingan penjual" errors
 ```
 

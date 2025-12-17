@@ -22,7 +22,7 @@ Template ini universal untuk semua product. Cukup ganti `[PRODUCT_SIZE]` dengan 
 ## Prerequisites
 
 1. **Source Folder:** `[SOURCE_FOLDER]` (folder yang berisi foto yang akan ditambahkan)
-2. **Destination Folder:** `/home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/`
+2. **Destination Folder:** `/home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/`
 3. **WebP Converter:** `cwebp` (already installed at `/usr/bin/cwebp`)
 
 **Note:** Ganti `[SOURCE_FOLDER]` dengan path lengkap folder sumber Anda, contoh:
@@ -43,16 +43,16 @@ Template ini universal untuk semua product. Cukup ganti `[PRODUCT_SIZE]` dengan 
 **Command:**
 ```bash
 # Cek file existing di destination
-ls -lh /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/jual-kayu-dolken-gelam-[PRODUCT_SIZE]-*.jpeg 2>/dev/null
+ls -lh /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/jual-kayu-dolken-gelam-[PRODUCT_SIZE]-*.jpeg 2>/dev/null
 
 # Auto-detect next number
-ls /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/jual-kayu-dolken-gelam-[PRODUCT_SIZE]-*.jpeg 2>/dev/null | grep -oP '\d{3}(?=\.jpeg)' | sort -n | tail -1
+ls /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/jual-kayu-dolken-gelam-[PRODUCT_SIZE]-*.jpeg 2>/dev/null | grep -oP '\d{3}(?=\.jpeg)' | sort -n | tail -1
 ```
 
 **Example:**
 ```bash
 # Product 6-8cm
-ls -lh /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/jual-kayu-dolken-gelam-6-8cm-*.jpeg
+ls -lh /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/jual-kayu-dolken-gelam-6-8cm-*.jpeg
 
 # Output contoh:
 # jual-kayu-dolken-gelam-6-8cm-001.jpeg (285K)
@@ -134,7 +134,7 @@ ls -lh jual-kayu-dolken-gelam-6-8cm-*
 **⚠️ SAFETY CHECK:**
 ```bash
 # Cek apakah file destination sudah ada (prevent overwrite)
-ls -lh /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/jual-kayu-dolken-gelam-[PRODUCT_SIZE]-002.jpeg 2>/dev/null && echo "⚠️ WARNING: File 002 already exists!" || echo "✓ Safe to proceed"
+ls -lh /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/jual-kayu-dolken-gelam-[PRODUCT_SIZE]-002.jpeg 2>/dev/null && echo "⚠️ WARNING: File 002 already exists!" || echo "✓ Safe to proceed"
 ```
 
 **Command (flexible - adjust range):**
@@ -143,33 +143,33 @@ ls -lh /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/image
 ```bash
 cd '[SOURCE_FOLDER]' && \
 mv jual-kayu-dolken-gelam-[PRODUCT_SIZE]-00{1,2,3,4}.jpeg \
-   /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/
+   /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/
 ```
 
 **For 3 files (002-004):**
 ```bash
 cd '[SOURCE_FOLDER]' && \
 mv jual-kayu-dolken-gelam-[PRODUCT_SIZE]-00{2,3,4}.jpeg \
-   /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/
+   /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/
 ```
 
 **For 2 files (003-004):**
 ```bash
 cd '[SOURCE_FOLDER]' && \
 mv jual-kayu-dolken-gelam-[PRODUCT_SIZE]-00{3,4}.jpeg \
-   /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/
+   /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/
 ```
 
 **For 1 file (004 only):**
 ```bash
 cd '[SOURCE_FOLDER]' && \
 mv jual-kayu-dolken-gelam-[PRODUCT_SIZE]-004.jpeg \
-   /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/
+   /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/
 ```
 
 **Verify:**
 ```bash
-ls -lh /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/jual-kayu-dolken-gelam-[PRODUCT_SIZE]-*.jpeg
+ls -lh /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/jual-kayu-dolken-gelam-[PRODUCT_SIZE]-*.jpeg
 ```
 
 **✅ Result:**
@@ -185,7 +185,7 @@ ls -lh /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/image
 
 **Command (dengan skip existing - smart conversion):**
 ```bash
-cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/
+cd /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/
 
 # Convert hanya file yang belum ada WebP-nya
 for img in jual-kayu-dolken-gelam-[PRODUCT_SIZE]-*.jpeg; do
@@ -203,7 +203,7 @@ ls -lh jual-kayu-dolken-gelam-[PRODUCT_SIZE]-* | awk '{print $5, $9}'
 
 **Example (Product 6-8cm):**
 ```bash
-cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/
+cd /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/
 
 for img in jual-kayu-dolken-gelam-6-8cm-*.jpeg; do
   if [ ! -f "${img%.jpeg}.webp" ]; then
@@ -236,7 +236,7 @@ done
 
 **File Location:**
 ```
-/home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_products/kayu-dolken-[PRODUCT_SIZE].md
+/home/mkt01/Public/jualkayudolkengelam.net/public_html/_products/kayu-dolken-[PRODUCT_SIZE].md
 ```
 
 **⚠️ Update sesuai jumlah file yang ada!**
@@ -300,7 +300,7 @@ review_count: 68
 
 **Edit Command:**
 ```bash
-nano /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_products/kayu-dolken-[PRODUCT_SIZE].md
+nano /home/mkt01/Public/jualkayudolkengelam.net/public_html/_products/kayu-dolken-[PRODUCT_SIZE].md
 ```
 
 ---
@@ -309,7 +309,7 @@ nano /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_products/kayu
 
 **Command:**
 ```bash
-cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html
+cd /home/mkt01/Public/jualkayudolkengelam.net/public_html
 ./rebuild.sh
 ```
 
@@ -366,7 +366,7 @@ ls -lh '[SOURCE_FOLDER]' | grep "jual-kayu-dolken-gelam-[PRODUCT_SIZE]"
 
 **Pre-check:**
 ```bash
-ls -lh /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/jual-kayu-dolken-gelam-[SIZE]-*.jpeg
+ls -lh /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/jual-kayu-dolken-gelam-[SIZE]-*.jpeg
 ```
 
 **Rename (3 files for example):**
@@ -379,12 +379,12 @@ mv 'WhatsApp Image [C].jpeg' 'jual-kayu-dolken-gelam-[SIZE]-004.jpeg'
 
 **Move:**
 ```bash
-mv jual-kayu-dolken-gelam-[SIZE]-00{2,3,4}.jpeg /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/
+mv jual-kayu-dolken-gelam-[SIZE]-00{2,3,4}.jpeg /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/
 ```
 
 **Convert WebP (smart):**
 ```bash
-cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/
+cd /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/
 for img in jual-kayu-dolken-gelam-[SIZE]-*.jpeg; do
   [ ! -f "${img%.jpeg}.webp" ] && cwebp -q 85 "$img" -o "${img%.jpeg}.webp"
 done
@@ -392,7 +392,7 @@ done
 
 **Rebuild:**
 ```bash
-cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html && ./rebuild.sh
+cd /home/mkt01/Public/jualkayudolkengelam.net/public_html && ./rebuild.sh
 ```
 
 ---
@@ -424,12 +424,12 @@ jual-kayu-dolken-gelam-[PRODUCT_SIZE]-[NUMBER].jpeg
 
 **Local:**
 ```
-http://jualkayudolkengelam.github.io.local/product/kayu-dolken-[PRODUCT_SIZE]/
+http://jualkayudolkengelam.net.local/product/kayu-dolken-[PRODUCT_SIZE]/
 ```
 
 **Production:**
 ```
-https://jualkayudolkengelam.github.io/product/kayu-dolken-[PRODUCT_SIZE]/
+https://jualkayudolkengelam.net/product/kayu-dolken-[PRODUCT_SIZE]/
 ```
 
 ---
@@ -498,7 +498,7 @@ ls -lh | grep "WhatsApp Image"
 ### Problem: "File already exists" warning
 ```bash
 # Solution: Run Step 0 Pre-check
-ls -lh /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/products/jual-kayu-dolken-gelam-[SIZE]-*.jpeg
+ls -lh /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/products/jual-kayu-dolken-gelam-[SIZE]-*.jpeg
 
 # Adjust numbering accordingly
 # If 001 exists, start from 002

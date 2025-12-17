@@ -20,14 +20,14 @@
 ● I'll continue by fixing the template completely first, as you instructed.
   Let me read the current template and update it with the correct structure.
 
-● Read(~/Public/jualkayudolkengelam.github.io/public_html/TEMPLATES/TEMPLATE--po
+● Read(~/Public/jualkayudolkengelam.net/public_html/TEMPLATES/TEMPLATE--po
       st-tutorial.md)
   ⎿  Read 524 lines
 
 ● Now I'll update the template completely with the correct naming
   conventions and hardcoded structure:
 
-● Write(~/Public/jualkayudolkengelam.github.io/public_html/TEMPLATES/TEMPLATE--p
+● Write(~/Public/jualkayudolkengelam.net/public_html/TEMPLATES/TEMPLATE--p
        ost-tutorial.md)
   ⎿  Updated ../../../../TEMPLATES/TEMPLATE--post-tutorial.md with 289     
      additions and 266 removals
@@ -925,14 +925,14 @@
 
 ● Now let me verify the section blocks are using the correct variable names:
 
-● Read(~/Public/jualkayudolkengelam.github.io/public_html/_includes/posts/tutori
+● Read(~/Public/jualkayudolkengelam.net/public_html/_includes/posts/tutori
       al/block--section-1.html)
   ⎿  Read 168 lines
 
 ● I need to fix the overview section in the block to match the new template
   structure:
 
-● Update(~/Public/jualkayudolkengelam.github.io/public_html/_includes/posts/tuto
+● Update(~/Public/jualkayudolkengelam.net/public_html/_includes/posts/tuto
         rial/block--section-1.html)
   ⎿  Updated ../../../../_includes/posts/tutorial/block--section-1.html wit
       5 additions and 5 removals
@@ -984,7 +984,7 @@
 ● Search(pattern: "_includes/posts/tutorial/block--*.html")
   ⎿  Found 0 files 
 
-● Bash(ls -la /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_incl
+● Bash(ls -la /home/mkt01/Public/jualkayudolkengelam.net/public_html/_incl
       udes/posts/tutorial/block--*.html)
   ⎿ -rw------- 1 mkt01 mkt01 6073 Nov 20 16:06 /home/mkt01/Public/jualkayud
     olkengelam.github.io/public_html/_includes/posts/tutorial/block--calcul
@@ -993,7 +993,7 @@
 
 
 
-● Update(~/Public/jualkayudolkengelam.github.io/public_html/_includes/posts/tuto
+● Update(~/Public/jualkayudolkengelam.net/public_html/_includes/posts/tuto
         rial/block--kesimpulan.html)
   ⎿  Updated ../../../../_includes/posts/tutorial/block--kesimpulan.html   
      with 1 addition and 1 removal
@@ -1008,12 +1008,12 @@
        35      <div class="card border-0 kesimpulan-section-header-card 
             shadow-lg mb-4">
 
-● Read(~/Public/jualkayudolkengelam.github.io/public_html/_includes/posts/tutori
+● Read(~/Public/jualkayudolkengelam.net/public_html/_includes/posts/tutori
       al/block--tutorial-meta.html)
   ⎿  Read 106 lines
 
 ● Bash(sed -i 's/page\.tutorial_meta/page.tutorial_meta_section/g'
-      /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_includes/pos
+      /home/mkt01/Public/jualkayudolkengelam.net/public_html/_includes/pos
       ts/tutorial/block--tutoria…)
   ⎿  (No content)
 
@@ -1037,7 +1037,7 @@
 
 
 ● Bash(mkdir -p
-      /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images
+      /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images
       /posts/cara-memilih-ukuran-kayu-dolken-yang-tepat-untuk-proyek-anda && cp
       /ho…)
   ⎿ total 1,2M                                                             
@@ -1046,13 +1046,13 @@
     … +6 lines (ctrl+o to expand)
 
 
-● Bash(cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/im
+● Bash(cd /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/im
       ages/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat-untuk-proyek-anda &&
        for file in…)
   ⎿  Error: Exit code 2
      /bin/bash: eval: line 1: syntax error near unexpected token `echo'
      /bin/bash: eval: line 1: `cd 
-     /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/p
+     /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/p
      osts/cara-memilih-ukuran-kayu-dolken-yang-tepat-untuk-proyek-anda && for 
      file in cara-memilih-ukuran-kayu-dolken-yang-tepat-*.webp ; do new_name\=\$ 
      ( echo '' < /dev/null | sed s/cara-memilih-ukuran-kayu-dolken-yang-tepat-/ca
@@ -1060,7 +1060,7 @@
      done && ls -lh'
 
 
-● Bash(cd /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/im
+● Bash(cd /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/im
       ages/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat-untuk-proyek-anda &&
        mv cara-memi…)
   ⎿ total 1,2M                                                             
@@ -1071,7 +1071,7 @@
 
 ● Now I'll create the article with the correct structure:
 
-● Write(~/Public/jualkayudolkengelam.github.io/public_html/_posts/2024-11-20-car
+● Write(~/Public/jualkayudolkengelam.net/public_html/_posts/2024-11-20-car
        a-memilih-ukuran-kayu-dolken-yang-tepat-untuk-proyek-anda.md)
   ⎿  Wrote 443 lines to ../../../../_posts/2024-11-20-cara-memilih-ukuran-k
      yu-dolken-yang-tepat-untuk-proyek-anda.md
@@ -1093,7 +1093,7 @@
 ● Perfect! Article created with complete slug and correct structure. Now let
    me test the build:
 
-● Bash(/home/mkt01/Public/jualkayudolkengelam.github.io/public_html/rebuild.sh)
+● Bash(/home/mkt01/Public/jualkayudolkengelam.net/public_html/rebuild.sh)
   ⎿  ═══════════════════════════════════════════════
        Jekyll Build - Jual Kayu Dolken Gelam
      ═══════════════════════════════════════════════
@@ -1101,15 +1101,15 @@
 
 ● Excellent! Build successful. Let me verify the article URL:
 
-● Bash(ls -lh /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_site
+● Bash(ls -lh /home/mkt01/Public/jualkayudolkengelam.net/public_html/_site
       /2024/11/20/ | grep cara-memilih)
-  ⎿ ls: cannot access '/home/mkt01/Public/jualkayudolkengelam.github.io/pub
+  ⎿ ls: cannot access '/home/mkt01/Public/jualkayudolkengelam.net/pub
     lic_html/_site/2024/11/20/': No such file or directory
 
 
-● Bash(find /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_site
+● Bash(find /home/mkt01/Public/jualkayudolkengelam.net/public_html/_site
       -type f -name "*cara-memilih-ukuran-kayu-dolken*" | head -5)
-  ⎿ /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_site/asse
+  ⎿ /home/mkt01/Public/jualkayudolkengelam.net/public_html/_site/asse
     ts/images/posts/cara-memilih-ukuran-kayu-dolken-yang-tepat-untuk-proyek
     -anda/cara-memilih-ukuran-kayu-dolken-yang-tepat-untuk-proyek-anda-001.
     … +13 lines (ctrl+o to expand)
@@ -1117,9 +1117,9 @@
 
 
 
-● Bash(find /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_site
+● Bash(find /home/mkt01/Public/jualkayudolkengelam.net/public_html/_site
       -type f -name "index.html" -path "*cara-memilih*" 2>/dev/null)
-  ⎿ /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_site/blog
+  ⎿ /home/mkt01/Public/jualkayudolkengelam.net/public_html/_site/blog
     /2024/11/20/cara-memilih-ukuran-kayu-dolken-yang-tepat-untuk-proyek-and
     a/index.html
 
@@ -1164,7 +1164,7 @@
 
   Build completed successfully - 130 files generated!
 
-> /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/TEMPLATES/TEM
+> /home/mkt01/Public/jualkayudolkengelam.net/public_html/TEMPLATES/TEM
 PLATE--post-tutorial-backup.md, /home/mkt01/Public/jualkayudolkengelam.githu
 b.io/public_html/_includes/posts/tutorial-backup, adalah backup dari 
 pekerjaan kita, ini tidak digunakan, hanya referensi apa yang sudah kita 
@@ -1172,10 +1172,10 @@ kerjakan.  sepakat ?
 
 ● Sepakat! Saya mengerti:
 
-  - /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/TEMPLATES/T
+  - /home/mkt01/Public/jualkayudolkengelam.net/public_html/TEMPLATES/T
   EMPLATE--post-tutorial-backup.md → Backup template, tidak digunakan, hanya
    referensi
-  - /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_includes/p
+  - /home/mkt01/Public/jualkayudolkengelam.net/public_html/_includes/p
   osts/tutorial-backup/ → Backup blocks, tidak digunakan, hanya referensi
 
   File-file backup ini disimpan sebagai dokumentasi pekerjaan yang sudah
@@ -1191,13 +1191,13 @@ kerjakan.  sepakat ?
 
   Sepakat! 👍
 
-> /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_includes/pos
+> /home/mkt01/Public/jualkayudolkengelam.net/public_html/_includes/pos
 ts/tutorial, folder ini yang akan kita pakai, saat ini saya kosongkan, 
 sepakat ? 
 
 ● Sepakat!
 
-  Folder /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/_inclu
+  Folder /home/mkt01/Public/jualkayudolkengelam.net/public_html/_inclu
   des/posts/tutorial adalah folder aktif yang akan kita pakai untuk semua
   block tutorial.
 
@@ -1240,7 +1240,7 @@ sebagian percakapan kita, sepakat ?
 ● Baik, saya catat lokasinya:
 
   Export percakapan kita:
-  /home/mkt01/Public/jualkayudolkengelam.github.io/public_html/assets/images/posts/jual-kayu-dolken-terdekat/2025-11-20-caveat-the-messages-below-were-generated-by-the-u.txt
+  /home/mkt01/Public/jualkayudolkengelam.net/public_html/assets/images/posts/jual-kayu-dolken-terdekat/2025-11-20-caveat-the-messages-below-were-generated-by-the-u.txt
 
   File ini bisa Anda baca kembali nanti jika memory saya hilang setelah logout. Dokumentasi lengkap tentang:
   - Template structure baru (v2.0.0)
