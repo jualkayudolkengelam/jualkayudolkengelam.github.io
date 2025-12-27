@@ -18,10 +18,10 @@ images_alt:
 - "Proses pengiriman kayu dolken diameter 4-6 cm menggunakan truk untuk memastikan barang sampai dengan aman ke lokasi proyek konstruksi pelanggan"
 sku: DOLKEN-4-6
 popular: false
-rating: 4.6
-review_count: 58
-total_updates: 4
-last_modified_at: '2025-12-22 13:38:22 +0000'
+rating: 4.7
+review_count: 60
+total_updates: 5
+last_modified_at: '2025-12-27 13:27:13 +0000'
 show_bulk_offer: false
 
 # Product Description
