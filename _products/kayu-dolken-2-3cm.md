@@ -20,10 +20,10 @@ images_alt:
 - "Aplikasi kayu dolken diameter 2-3 cm sebagai elemen dekoratif ceiling dan dinding interior menciptakan suasana natural rustic yang elegan dan instagramable"
 sku: DOLKEN-2-3
 popular: false
-rating: 4.5
-review_count: 6
-total_updates: 3
-last_modified_at: '2025-12-27 13:27:13 +0000'
+rating: 4.6
+review_count: 10
+total_updates: 4
+last_modified_at: '2026-01-01 11:23:49 +0000'
 show_bulk_offer: false
 
 # Product Description
