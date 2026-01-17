@@ -19,9 +19,9 @@ images_alt:
 sku: DOLKEN-8-10
 popular: true
 rating: 4.8
-review_count: 93
-total_updates: 2
-last_modified_at: '2026-01-06 04:42:02 +0000'
+review_count: 94
+total_updates: 3
+last_modified_at: '2026-01-17 14:49:21 +0000'
 show_bulk_offer: true
 
 # Product Description
