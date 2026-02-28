@@ -18,10 +18,10 @@ images_alt:
   - "Aplikasi kayu dolken diameter 8-10 cm sebagai cerucuk pondasi bangunan di lahan gambut menunjukkan ketahanan superior terhadap kondisi tanah basah dan asam"
 sku: DOLKEN-8-10
 popular: true
-rating: 4.8
-review_count: 99
-total_updates: 6
-last_modified_at: '2026-02-24 07:56:28 +0000'
+rating: 4.9
+review_count: 100
+total_updates: 7
+last_modified_at: '2026-02-28 10:26:36 +0000'
 show_bulk_offer: true
 
 # Product Description
