@@ -19,11 +19,11 @@ images_alt:
 - "Kayu dolken gelam ukuran 6-8 cm ditumpuk di gudang supplier siap dikirim ke proyek konstruksi pondasi cerucuk dan pagar pembatas permanen di seluruh Jawa"
 - "Penggunaan kayu dolken diameter 6-8 cm sebagai tiang pancang pondasi bangunan menunjukkan aplikasi struktural dengan daya dukung beban tinggi dan tahan lama"
 sku: DOLKEN-6-8
-popular: false
+popular: true
 rating: 4.8
-review_count: 80
-total_updates: 9
-last_modified_at: '2026-02-24 07:56:28 +0000'
+review_count: 82
+total_updates: 10
+last_modified_at: '2026-03-16 14:09:18 +0000'
 show_bulk_offer: false
 deskripsi_intro: Kayu dolken gelam diameter 6-8 cm adalah pilihan untuk konstruksi
   yang membutuhkan kekuatan ekstra. Dengan diameter yang lebih besar, kayu dolken
