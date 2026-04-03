@@ -21,9 +21,9 @@ images_alt:
 sku: DOLKEN-2-3
 popular: false
 rating: 4.6
-review_count: 25
-total_updates: 10
-last_modified_at: '2026-03-31 07:48:04 +0000'
+review_count: 26
+total_updates: 11
+last_modified_at: '2026-04-03 14:55:16 +0000'
 show_bulk_offer: false
 
 # Product Description
