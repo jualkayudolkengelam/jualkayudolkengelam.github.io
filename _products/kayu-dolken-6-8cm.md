@@ -21,9 +21,9 @@ images_alt:
 sku: DOLKEN-6-8
 popular: true
 rating: 4.8
-review_count: 84
-total_updates: 11
-last_modified_at: '2026-04-08 06:27:33 +0000'
+review_count: 85
+total_updates: 12
+last_modified_at: '2026-04-21 03:46:04 +0000'
 show_bulk_offer: false
 deskripsi_intro: Kayu dolken gelam diameter 6-8 cm adalah pilihan untuk konstruksi
   yang membutuhkan kekuatan ekstra. Dengan diameter yang lebih besar, kayu dolken
