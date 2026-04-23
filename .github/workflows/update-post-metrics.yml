@@ -114,7 +114,6 @@ jobs:
         if: steps.check_update.outputs.should_update == 'true'
         run: |
           echo "🚀 Running hybrid post update system..."
-          cd public_html
           ruby scripts/update-post-hybrid.rb
 
       - name: Check for changes
