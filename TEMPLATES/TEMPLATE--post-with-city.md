@@ -39,7 +39,7 @@
 # ============================================================================
 # META INFORMATION (REQUIRED)
 # ============================================================================
-layout: node--post-with-product
+layout: node--post-with-city
 title: "tulis title yang menarik untuk jual kayu dolken di kota ini, mention nomor HP dan gratis ongkir"
 description: "tulis meta description untuk SEO (150-160 karakter), mention kota, produk, keunggulan utama, dan CTA"
 date: YYYY-MM-DD  # Ganti dengan tanggal publikasi, format: 2025-11-20
