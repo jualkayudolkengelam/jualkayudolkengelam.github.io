@@ -622,6 +622,8 @@ tentang_kota:
 like_count: 0
 comment_count: 0
 share_count: 0
+total_updates: 1
+last_modified_at: 'YYYY-MM-DD HH:MM:SS +0700'  # Ganti dengan tanggal & waktu publikasi
 ---
 
 <!-- ========================================================================
