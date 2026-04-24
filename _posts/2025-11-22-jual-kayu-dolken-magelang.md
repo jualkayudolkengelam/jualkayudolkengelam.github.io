@@ -10,14 +10,8 @@ image: "/assets/images/posts/jual-kayu-dolken-magelang/jual-kayu-dolken-magelang
 image_alt: "Tumpukan kayu dolken gelam kualitas premium siap kirim ke Magelang, tersedia berbagai ukuran diameter 4-12cm panjang 4 meter, cocok untuk konstruksi pagar, gazebo, dan dekorasi rumah di Magelang"
 images:
 - "/assets/images/posts/jual-kayu-dolken-magelang/jual-kayu-dolken-magelang-001.webp"
-- "/assets/images/posts/jual-kayu-dolken-magelang/jual-kayu-dolken-magelang-002.webp"
-- "/assets/images/posts/jual-kayu-dolken-magelang/jual-kayu-dolken-magelang-003.webp"
-- "/assets/images/posts/jual-kayu-dolken-magelang/jual-kayu-dolken-magelang-004.webp"
 images_alt:
 - "Tumpukan kayu dolken gelam berkualitas tinggi siap kirim ke wilayah Magelang dengan gratis ongkir dan sistem pembayaran COD bayar di tempat"
-- "Stok kayu dolken gelam melimpah siap dikirim ke seluruh wilayah Magelang dan sekitarnya termasuk Mertoyudan dan Muntilan"
-- "Kayu dolken gelam pilihan premium untuk kebutuhan konstruksi dan dekorasi di Magelang, cocok untuk iklim sejuk lereng Merapi"
-- "Armada pengiriman kayu dolken siap melayani seluruh area Magelang Raya termasuk Borobudur dan Grabag dengan gratis ongkir"
 keywords: jual kayu dolken magelang, kayu dolken gelam magelang, dolken magelang kota,
   dolken mertoyudan, dolken muntilan, kayu gelam magelang, dolken borobudur, harga
   dolken magelang
