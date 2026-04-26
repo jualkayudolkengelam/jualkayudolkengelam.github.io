@@ -12,38 +12,48 @@ tags:
 author: Admin
 author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-001.jpeg"
-image_alt: "Rumus dan cara praktis menghitung jumlah kayu dolken yang dibutuhkan untuk berbagai proyek seperti pagar, gazebo, dekorasi dinding dan ceiling dengan kalkulasi akurat agar tidak terjadi pemborosan material"
+image_alt: Rumus dan cara praktis menghitung jumlah kayu dolken yang dibutuhkan untuk
+  berbagai proyek seperti pagar, gazebo, dekorasi dinding dan ceiling dengan kalkulasi
+  akurat agar tidak terjadi pemborosan material
 images:
 - "/assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-001.jpeg"
 - "/assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-002.jpeg"
 - "/assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-003.jpeg"
 - "/assets/images/posts/hitung-kebutuhan-kayu-dolken-untuk-proyek/hitung-kebutuhan-kayu-dolken-untuk-proyek-004.jpeg"
 images_alt:
-- "Diagram perhitungan kebutuhan kayu dolken untuk proyek pagar dengan rumus praktis berdasarkan panjang keliling dan jarak antar tiang"
-- "Ilustrasi estimasi jumlah kayu dolken untuk gazebo dengan perhitungan tiang utama rangka atap dan finishing dekoratif"
-- "Tabel konversi kebutuhan kayu dolken per meter persegi untuk berbagai aplikasi seperti ceiling dinding dekoratif dan pagar panel"
-- "Contoh kalkulator sederhana menghitung total biaya material kayu dolken dengan variabel jumlah batang harga satuan dan cadangan"
+- Diagram perhitungan kebutuhan kayu dolken untuk proyek pagar dengan rumus praktis
+  berdasarkan panjang keliling dan jarak antar tiang
+- Ilustrasi estimasi jumlah kayu dolken untuk gazebo dengan perhitungan tiang utama
+  rangka atap dan finishing dekoratif
+- Tabel konversi kebutuhan kayu dolken per meter persegi untuk berbagai aplikasi seperti
+  ceiling dinding dekoratif dan pagar panel
+- Contoh kalkulator sederhana menghitung total biaya material kayu dolken dengan variabel
+  jumlah batang harga satuan dan cadangan
 url: "/2024/06/10/hitung-kebutuhan-kayu-dolken-untuk-proyek/"
-excerpt: "Panduan praktis menghitung jumlah kayu dolken yang dibutuhkan untuk proyek pagar, gazebo, dekorasi, dan konstruksi lainnya dengan akurat."
+excerpt: Panduan praktis menghitung jumlah kayu dolken yang dibutuhkan untuk proyek
+  pagar, gazebo, dekorasi, dan konstruksi lainnya dengan akurat.
 rating: 4.6
 review_count: 24
 reviews:
-  - author: "Fajar Nugroho"
-    rating: 5
-    date: "2025-01-10"
-    comment: "Rumus perhitungan sangat akurat! Saya pakai untuk proyek pagar 20 meter, estimasi pas tidak ada sisa berlebihan. Hemat budget dan waktu!"
-  - author: "Dewi Lestari"
-    rating: 5
-    date: "2025-01-05"
-    comment: "Kalkulator kebutuhan dolken sangat membantu. Perhitungan untuk gazebo 3x3m presisi, tidak perlu order ulang karena kekurangan. Sangat recommended!"
-  - author: "Budi Santoso"
-    rating: 4
-    date: "2024-12-30"
-    comment: "Panduan perhitungan lengkap dengan contoh kasus. Worksheet template-nya sangat berguna untuk planning proyek ceiling dekoratif saya."
-like_count: 96
+- author: Fajar Nugroho
+  rating: 5
+  date: '2025-01-10'
+  comment: Rumus perhitungan sangat akurat! Saya pakai untuk proyek pagar 20 meter,
+    estimasi pas tidak ada sisa berlebihan. Hemat budget dan waktu!
+- author: Dewi Lestari
+  rating: 5
+  date: '2025-01-05'
+  comment: Kalkulator kebutuhan dolken sangat membantu. Perhitungan untuk gazebo 3x3m
+    presisi, tidak perlu order ulang karena kekurangan. Sangat recommended!
+- author: Budi Santoso
+  rating: 4
+  date: '2024-12-30'
+  comment: Panduan perhitungan lengkap dengan contoh kasus. Worksheet template-nya
+    sangat berguna untuk planning proyek ceiling dekoratif saya.
+like_count: 99
 comment_count: 21
 share_count: 36
-last_modified_at: '2025-11-24 20:33:34 +0700'
+last_modified_at: '2026-04-26 09:47:59 +0000'
 labels:
   mengapa_perhitungan_title: Mengapa Perhitungan Akurat Penting?
   formula_dasar_title: Formula Dasar
@@ -400,7 +410,7 @@ kesimpulan:
     Tim kami akan verify calculations, provide detailed breakdown, dan give best price
     quote.
   cta_link: "/kontak"
-total_updates: 2
+total_updates: 3
 ---
 
 <div class="article-intro py-4">

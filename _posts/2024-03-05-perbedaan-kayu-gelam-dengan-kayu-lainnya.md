@@ -11,38 +11,47 @@ tags:
 author: Admin
 author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-001.jpeg"
-image_alt: "Perbandingan karakteristik kayu gelam Melaleuca cajuputi dengan jenis kayu lain seperti jati, merbau dan ulin dari segi kepadatan, ketahanan rayap, harga dan kegunaan untuk berbagai aplikasi konstruksi"
+image_alt: Perbandingan karakteristik kayu gelam Melaleuca cajuputi dengan jenis kayu
+  lain seperti jati, merbau dan ulin dari segi kepadatan, ketahanan rayap, harga dan
+  kegunaan untuk berbagai aplikasi konstruksi
 images:
 - "/assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-001.jpeg"
 - "/assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-002.jpeg"
 - "/assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-003.jpeg"
 - "/assets/images/posts/perbedaan-kayu-gelam-dengan-kayu-lainnya/perbedaan-kayu-gelam-dengan-kayu-lainnya-004.jpeg"
 images_alt:
-- "Perbandingan visual tekstur serat kayu gelam dengan kayu jati menunjukkan perbedaan kepadatan warna dan karakteristik permukaan masing-masing"
-- "Tabel perbandingan spesifikasi kayu gelam merbau ulin dan jati meliputi kepadatan ketahanan rayap harga dan kegunaan utama"
-- "Ilustrasi ketahanan kayu gelam terhadap air dibandingkan kayu lain menunjukkan keunggulan untuk aplikasi outdoor dan area basah"
-- "Grafik perbandingan harga kayu gelam dengan kayu premium lainnya menunjukkan value for money terbaik untuk konstruksi dan dekorasi"
+- Perbandingan visual tekstur serat kayu gelam dengan kayu jati menunjukkan perbedaan
+  kepadatan warna dan karakteristik permukaan masing-masing
+- Tabel perbandingan spesifikasi kayu gelam merbau ulin dan jati meliputi kepadatan
+  ketahanan rayap harga dan kegunaan utama
+- Ilustrasi ketahanan kayu gelam terhadap air dibandingkan kayu lain menunjukkan keunggulan
+  untuk aplikasi outdoor dan area basah
+- Grafik perbandingan harga kayu gelam dengan kayu premium lainnya menunjukkan value
+  for money terbaik untuk konstruksi dan dekorasi
 url: "/2024/03/05/perbedaan-kayu-gelam-dengan-kayu-lainnya/"
 excerpt: Mengapa kayu gelam lebih unggul dibanding jenis kayu lainnya? Simak perbandingan
   lengkap karakteristik, harga, dan kegunaannya.
 rating: 4.7
 review_count: 32
 reviews:
-  - author: "Agus Hermawan"
-    rating: 5
-    date: "2025-01-12"
-    comment: "Perbandingan dengan kayu jati sangat objektif. Saya awalnya mau pakai jati tapi setelah baca ini, pilih gelam karena value for money lebih baik untuk outdoor."
-  - author: "Linda Susanti"
-    rating: 5
-    date: "2025-01-07"
-    comment: "Artikel eye-opening! Tidak menyangka kayu gelam punya ketahanan setara merbau dengan harga jauh lebih terjangkau. Langsung order untuk pagar rumah."
-  - author: "Rudi Hartono"
-    rating: 4
-    date: "2025-01-02"
-    comment: "Tabel perbandingan spesifikasi sangat membantu pengambilan keputusan. Informasi tentang ketahanan air gelam meyakinkan saya untuk proyek di area kolam."
-like_count: 58
+- author: Agus Hermawan
+  rating: 5
+  date: '2025-01-12'
+  comment: Perbandingan dengan kayu jati sangat objektif. Saya awalnya mau pakai jati
+    tapi setelah baca ini, pilih gelam karena value for money lebih baik untuk outdoor.
+- author: Linda Susanti
+  rating: 5
+  date: '2025-01-07'
+  comment: Artikel eye-opening! Tidak menyangka kayu gelam punya ketahanan setara
+    merbau dengan harga jauh lebih terjangkau. Langsung order untuk pagar rumah.
+- author: Rudi Hartono
+  rating: 4
+  date: '2025-01-02'
+  comment: Tabel perbandingan spesifikasi sangat membantu pengambilan keputusan. Informasi
+    tentang ketahanan air gelam meyakinkan saya untuk proyek di area kolam.
+like_count: 59
 comment_count: 8
-share_count: 18
+share_count: 19
 karakteristik_unik:
   nama_ilmiah: Melaleuca cajuputi
   kepadatan: 900-1000 kg/m³
@@ -278,8 +287,8 @@ kesimpulan:
   - Sustainability yang lebih baik
   cta_text: Tertarik Menggunakan Kayu Dolken Gelam untuk Proyek Anda?
   cta_link: "/kontak"
-total_updates: 1
-last_modified_at: '2025-11-24 20:32:38 +0700'
+total_updates: 2
+last_modified_at: '2026-04-26 09:47:59 +0000'
 ---
 
 <div class="article-intro py-4">
