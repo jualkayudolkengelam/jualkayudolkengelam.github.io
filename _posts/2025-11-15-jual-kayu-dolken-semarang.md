@@ -7,17 +7,23 @@ date: 2025-11-15
 author: Admin
 author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/jual-kayu-dolken-semarang/jual-kayu-dolken-semarang-001.jpeg"
-image_alt: "Supplier kayu dolken gelam terpercaya di Semarang melayani pengiriman gratis ke Semarang Tengah, Barat, Timur, Utara, Tembalang dan Banyumanik dengan stok lengkap berbagai ukuran untuk konstruksi dan dekorasi"
+image_alt: Supplier kayu dolken gelam terpercaya di Semarang melayani pengiriman gratis
+  ke Semarang Tengah, Barat, Timur, Utara, Tembalang dan Banyumanik dengan stok lengkap
+  berbagai ukuran untuk konstruksi dan dekorasi
 images:
 - "/assets/images/posts/jual-kayu-dolken-semarang/jual-kayu-dolken-semarang-001.jpeg"
 - "/assets/images/posts/jual-kayu-dolken-semarang/jual-kayu-dolken-semarang-002.jpeg"
 - "/assets/images/posts/jual-kayu-dolken-semarang/jual-kayu-dolken-semarang-003.jpeg"
 - "/assets/images/posts/jual-kayu-dolken-semarang/jual-kayu-dolken-semarang-004.jpeg"
 images_alt:
-- "Stok kayu dolken gelam siap kirim ke Semarang melayani area Semarang Tengah Barat Timur Utara Tembalang dan Banyumanik dengan gratis ongkir"
-- "Pengiriman kayu dolken ke proyek konstruksi di Semarang menggunakan armada truk untuk memastikan material sampai dengan aman dan tepat waktu"
-- "Kayu dolken gelam berkualitas premium cocok untuk konstruksi di Semarang dengan ketahanan terhadap iklim tropis dan kelembaban tinggi pesisir"
-- "Hasil pemasangan kayu dolken sebagai pagar dan konstruksi di Semarang menunjukkan kekuatan struktural dan tampilan estetis yang optimal"
+- Stok kayu dolken gelam siap kirim ke Semarang melayani area Semarang Tengah Barat
+  Timur Utara Tembalang dan Banyumanik dengan gratis ongkir
+- Pengiriman kayu dolken ke proyek konstruksi di Semarang menggunakan armada truk
+  untuk memastikan material sampai dengan aman dan tepat waktu
+- Kayu dolken gelam berkualitas premium cocok untuk konstruksi di Semarang dengan
+  ketahanan terhadap iklim tropis dan kelembaban tinggi pesisir
+- Hasil pemasangan kayu dolken sebagai pagar dan konstruksi di Semarang menunjukkan
+  kekuatan struktural dan tampilan estetis yang optimal
 keywords: jual kayu dolken semarang, dolken gelam semarang, supplier kayu dolken semarang,
   kayu dolken kota lama, dolken tembalang, kayu dolken banyumanik
 url: "/2025/11/15/jual-kayu-dolken-semarang/"
@@ -25,19 +31,23 @@ show_products: true
 rating: 4.5
 review_count: 23
 reviews:
-  - author: "Bambang Sutrisno"
-    rating: 5
-    date: "2025-01-10"
-    comment: "Artikel lengkap tentang kayu dolken di Semarang. Langsung order untuk gazebo di Tembalang, kualitas sesuai deskripsi dan pengiriman cepat!"
-  - author: "Sri Wahyuni"
-    rating: 5
-    date: "2025-01-06"
-    comment: "Informasi sangat membantu untuk proyek cafe di Kota Lama. Kayu dolken cocok untuk konsep rustic, harga juga kompetitif."
-  - author: "Eko Prasetyo"
-    rating: 4
-    date: "2025-01-02"
-    comment: "Panduan pemesanan jelas dan detail. Gratis ongkir ke Banyumanik sangat menguntungkan. Recommended untuk yang butuh kayu dolken di Semarang."
-excerpt: "Jual Kayu Dolken Semarang - Hub 081311400177. Harga terbaik, gratis ongkir seluruh Semarang."
+- author: Bambang Sutrisno
+  rating: 5
+  date: '2025-01-10'
+  comment: Artikel lengkap tentang kayu dolken di Semarang. Langsung order untuk gazebo
+    di Tembalang, kualitas sesuai deskripsi dan pengiriman cepat!
+- author: Sri Wahyuni
+  rating: 5
+  date: '2025-01-06'
+  comment: Informasi sangat membantu untuk proyek cafe di Kota Lama. Kayu dolken cocok
+    untuk konsep rustic, harga juga kompetitif.
+- author: Eko Prasetyo
+  rating: 4
+  date: '2025-01-02'
+  comment: Panduan pemesanan jelas dan detail. Gratis ongkir ke Banyumanik sangat
+    menguntungkan. Recommended untuk yang butuh kayu dolken di Semarang.
+excerpt: Jual Kayu Dolken Semarang - Hub 081311400177. Harga terbaik, gratis ongkir
+  seluruh Semarang.
 nama_kota: Semarang
 area_pengiriman:
 - Semarang Tengah
@@ -532,11 +542,11 @@ area_pengiriman_detail:
   - nama: Java Mall
     icon: bi-cart
     warna: primary
-like_count: 4
+like_count: 7
 comment_count: 0
-share_count: 2
-total_updates: 1
-last_modified_at: '2025-11-24 20:33:34 +0700'
+share_count: 4
+total_updates: 2
+last_modified_at: '2026-04-29 07:01:43 +0000'
 ---
 
 <section id="hero-jual-kayu-dolken">

@@ -1,44 +1,56 @@
 ---
 layout: node--post-with-city
 title: Jual Kayu Dolken Bogor | Gratis Ongkir & COD | Hub. 081311400177
-description: Jual Kayu Dolken Bogor - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang.
-  Gratis ongkir seluruh Bogor, COD tersedia.
+description: Jual Kayu Dolken Bogor - Hub 081311400177. Kualitas premium, harga mulai
+  Rp 15.000/batang. Gratis ongkir seluruh Bogor, COD tersedia.
 date: 2025-11-23
 author: Admin
 author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/jual-kayu-dolken-bogor/jual-kayu-dolken-bogor-001.webp"
-image_alt: "Pengiriman kayu dolken gelam kualitas premium ke Bogor menggunakan armada truk, tersedia berbagai ukuran diameter 4-12cm panjang 4 meter, cocok untuk konstruksi pagar, gazebo, dan dekorasi rumah di Bogor"
+image_alt: Pengiriman kayu dolken gelam kualitas premium ke Bogor menggunakan armada
+  truk, tersedia berbagai ukuran diameter 4-12cm panjang 4 meter, cocok untuk konstruksi
+  pagar, gazebo, dan dekorasi rumah di Bogor
 images:
 - "/assets/images/posts/jual-kayu-dolken-bogor/jual-kayu-dolken-bogor-001.webp"
 images_alt:
-- "Pengiriman kayu dolken gelam berkualitas tinggi ke wilayah Bogor menggunakan armada truk dengan gratis ongkir dan sistem pembayaran COD bayar di tempat"
+- Pengiriman kayu dolken gelam berkualitas tinggi ke wilayah Bogor menggunakan armada
+  truk dengan gratis ongkir dan sistem pembayaran COD bayar di tempat
 keywords: jual kayu dolken bogor, kayu dolken gelam bogor, dolken bogor kota, dolken
   cibinong, dolken depok, kayu gelam bogor, dolken dramaga, harga dolken bogor
 show_products: true
 rating: 4.5
 review_count: 36
 reviews:
-  - author: "Andi Firmansyah"
-    rating: 5
-    date: "2025-01-14"
-    comment: "Artikel sangat informatif untuk kebutuhan kayu dolken di Bogor. Order untuk gazebo rumah di Cibinong, hasilnya memuaskan dan tahan cuaca hujan!"
-  - author: "Yuli Rahayu"
-    rating: 5
-    date: "2025-01-09"
-    comment: "Penjelasan lengkap tentang aplikasi kayu dolken. Cocok untuk pergola villa di Puncak. Pengiriman gratis sangat membantu!"
-  - author: "Dian Prasetya"
-    rating: 4
-    date: "2025-01-04"
-    comment: "Panduan pemilihan ukuran sangat membantu untuk proyek pagar di Dramaga. Kualitas kayu bagus dan sesuai dengan harga."
-excerpt: "Jual Kayu Dolken Bogor - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang. Gratis ongkir seluruh Bogor, COD tersedia."
+- author: Andi Firmansyah
+  rating: 5
+  date: '2025-01-14'
+  comment: Artikel sangat informatif untuk kebutuhan kayu dolken di Bogor. Order untuk
+    gazebo rumah di Cibinong, hasilnya memuaskan dan tahan cuaca hujan!
+- author: Yuli Rahayu
+  rating: 5
+  date: '2025-01-09'
+  comment: Penjelasan lengkap tentang aplikasi kayu dolken. Cocok untuk pergola villa
+    di Puncak. Pengiriman gratis sangat membantu!
+- author: Dian Prasetya
+  rating: 4
+  date: '2025-01-04'
+  comment: Panduan pemilihan ukuran sangat membantu untuk proyek pagar di Dramaga.
+    Kualitas kayu bagus dan sesuai dengan harga.
+excerpt: Jual Kayu Dolken Bogor - Hub 081311400177. Kualitas premium, harga mulai
+  Rp 15.000/batang. Gratis ongkir seluruh Bogor, COD tersedia.
 nama_kota: Bogor
 area_pengiriman:
-- Bogor Utara (Cibuluh, Ciluar, Kedung Halang, Kedung Waringin, Tegal Gundil, Tanah Baru)
-- Bogor Selatan (Batutulis, Bondongan, Empang, Harjasari, Lawanggintung, Muarasari, Pamoyanan)
+- Bogor Utara (Cibuluh, Ciluar, Kedung Halang, Kedung Waringin, Tegal Gundil, Tanah
+  Baru)
+- Bogor Selatan (Batutulis, Bondongan, Empang, Harjasari, Lawanggintung, Muarasari,
+  Pamoyanan)
 - Bogor Timur (Baranangsiang, Katulampa, Sindangrasa, Sindangsari, Tajur)
-- Bogor Barat (Cilendek Barat, Cilendek Timur, Curug, Gunung Batu, Menteng, Pasir Kuda, Pasir Mulya, Semplak)
-- Bogor Tengah (Babakan, Babakan Pasar, Cibogor, Ciwaringin, Gudang, Kebon Kelapa, Pabaton, Paledang)
-- Tanah Sareal (Cikaret, Kedung Badak, Kebon Pedes, Kencana, Mekarwangi, Sukaresmi, Sukadamai)
+- Bogor Barat (Cilendek Barat, Cilendek Timur, Curug, Gunung Batu, Menteng, Pasir
+  Kuda, Pasir Mulya, Semplak)
+- Bogor Tengah (Babakan, Babakan Pasar, Cibogor, Ciwaringin, Gudang, Kebon Kelapa,
+  Pabaton, Paledang)
+- Tanah Sareal (Cikaret, Kedung Badak, Kebon Pedes, Kencana, Mekarwangi, Sukaresmi,
+  Sukadamai)
 - Cibinong (Cibinong, Cirimekar, Harapan Jaya, Karadenan, Nanggewer, Pakansari)
 - Dramaga (Babakan, Ciherang, Dramaga, Petir, Sinarsari)
 keunggulan_produk:
@@ -82,9 +94,9 @@ area_pengiriman_detail:
     Bogor mencakup 6 kecamatan Kota Bogor dan 40 kecamatan Kabupaten Bogor. Gratis
     ongkir untuk semua area dengan minimal pembelian yang terjangkau.
   judul_pusat: Wilayah Pusat Kota Bogor
-  deskripsi_pusat: Area strategis pusat Kota Bogor dengan akses mudah dijangkau.
-    Melayani kecamatan utama di jantung kota seperti Bogor Tengah, Bogor Utara, dan
-    Bogor Selatan dengan waktu pengiriman cepat 1-2 hari kerja.
+  deskripsi_pusat: Area strategis pusat Kota Bogor dengan akses mudah dijangkau. Melayani
+    kecamatan utama di jantung kota seperti Bogor Tengah, Bogor Utara, dan Bogor Selatan
+    dengan waktu pengiriman cepat 1-2 hari kerja.
   judul_utara_selatan: Wilayah Bogor Utara & Selatan
   deskripsi_utara_selatan: Bogor Utara berbatasan dengan Depok dan Cibinong dengan
     banyak perumahan baru yang berkembang. Bogor Selatan berbatasan dengan kawasan
@@ -96,8 +108,8 @@ area_pengiriman_detail:
   judul_lainnya: Kecamatan Lainnya di Kabupaten Bogor
   judul_landmark: Landmark Strategis & Pusat Bisnis
   deskripsi_landmark: Kami melayani pengiriman ke area landmark terkenal Bogor seperti
-    Kebun Raya Bogor, Istana Bogor, dan kawasan bisnis utama. Ideal untuk proyek
-    komersial, hotel, dan restoran.
+    Kebun Raya Bogor, Istana Bogor, dan kawasan bisnis utama. Ideal untuk proyek komersial,
+    hotel, dan restoran.
   judul_wisata: Destinasi Wisata & Alam Bogor
   deskripsi_wisata: Bogor kaya akan destinasi wisata alam seperti Kebun Raya Bogor,
     kawasan Puncak, Curug Nangka, Taman Safari, dan berbagai villa resort di lereng
@@ -311,8 +323,8 @@ finalisasi_pengiriman:
   konfirmasi_pesanan: Konfirmasi detail pesanan Anda - pastikan jumlah batang, ukuran
     diameter, dan alamat pengiriman di Bogor sudah benar untuk kelancaran proses.
   pengiriman_gratis: Pengiriman gratis menggunakan armada terpercaya ke seluruh wilayah
-    Bogor dari pusat kota hingga kawasan Puncak dan Dramaga. Dijamin tepat waktu
-    dan aman sampai lokasi proyek Anda.
+    Bogor dari pusat kota hingga kawasan Puncak dan Dramaga. Dijamin tepat waktu dan
+    aman sampai lokasi proyek Anda.
   bayar_cod: Sistem pembayaran COD (Cash on Delivery) tersedia. Bayar setelah barang
     sampai dan Anda sudah cek kualitas kayu - aman, tanpa risiko, dan terpercaya.
 studi_kasus_proyek:
@@ -365,13 +377,13 @@ studi_kasus_proyek:
   proyek_residensial:
   - judul: Pagar & Taman Perumahan di Cibinong
     tahun: '2024'
-    deskripsi: Pemasangan pagar dan border taman untuk perumahan cluster baru di
-      Cibinong Kabupaten Bogor. Area perumahan yang berkembang membutuhkan material
-      tahan hujan dan rayap di iklim lembab Bogor.
+    deskripsi: Pemasangan pagar dan border taman untuk perumahan cluster baru di Cibinong
+      Kabupaten Bogor. Area perumahan yang berkembang membutuhkan material tahan hujan
+      dan rayap di iklim lembab Bogor.
     jumlah: 155 batang
     diameter: 6-8 cm
-    hasil: Pagar kokoh dan estetis, tahan cuaca lembab dan hujan Bogor. Pemilik
-      rumah sangat puas dengan kualitas dan tampilan natural yang elegan.
+    hasil: Pagar kokoh dan estetis, tahan cuaca lembab dan hujan Bogor. Pemilik rumah
+      sangat puas dengan kualitas dan tampilan natural yang elegan.
     warna: success
     icon: bi-house-door
   - judul: Gazebo Rumah di Dramaga Bogor
@@ -388,12 +400,12 @@ studi_kasus_proyek:
   - judul: Taman Rumah di Bogor Barat
     tahun: '2024'
     deskripsi: Dekorasi taman dan border landscape untuk rumah tinggal di Bogor Barat.
-      Menggunakan kayu dolken untuk aksen natural yang tahan cuaca hujan ekstrem
-      khas Bogor.
+      Menggunakan kayu dolken untuk aksen natural yang tahan cuaca hujan ekstrem khas
+      Bogor.
     jumlah: 70 batang
     diameter: 4-6 cm
-    hasil: Taman terlihat lebih rapi dan natural. Kayu tetap awet meski terkena
-      hujan hampir setiap hari sepanjang tahun.
+    hasil: Taman terlihat lebih rapi dan natural. Kayu tetap awet meski terkena hujan
+      hampir setiap hari sepanjang tahun.
     warna: info
     icon: bi-tree-fill
   - judul: Pergola Villa di Megamendung Bogor
@@ -403,8 +415,8 @@ studi_kasus_proyek:
       pegunungan sekitar Puncak.
     jumlah: 120 batang
     diameter: 8-10 cm
-    hasil: Pergola kokoh dan estetis, pemilik villa sangat puas. Setelah 7 bulan
-      masih prima meski terkena hujan deras setiap hari.
+    hasil: Pergola kokoh dan estetis, pemilik villa sangat puas. Setelah 7 bulan masih
+      prima meski terkena hujan deras setiap hari.
     warna: success
     icon: bi-house-heart-fill
   proyek_publik:
@@ -435,9 +447,9 @@ testimoni_residential:
   lokasi: Cibinong, Bogor
   rating: 5
   judul: Tahan Hujan Ekstrem Bogor
-  komentar: Saya pakai kayu dolken untuk gazebo rumah di Cibinong. Sudah 1 tahun
-    lebih masih kokoh dan tidak ada tanda-tanda rayap meski Bogor hujan hampir setiap
-    hari. Pengiriman gratis dan pelayanan sangat memuaskan. Recommended!
+  komentar: Saya pakai kayu dolken untuk gazebo rumah di Cibinong. Sudah 1 tahun lebih
+    masih kokoh dan tidak ada tanda-tanda rayap meski Bogor hujan hampir setiap hari.
+    Pengiriman gratis dan pelayanan sangat memuaskan. Recommended!
   warna: primary
 - nama: Bu Astuti Widyawati
   lokasi: Dramaga, Bogor
@@ -468,17 +480,17 @@ testimoni_komersial:
   lokasi: Owner Cafe di Bogor Kota
   rating: 5
   judul: Dekorasi Cafe Makin Natural
-  komentar: Cafe saya di dekat Kebun Raya Bogor pakai kayu dolken untuk dekorasi
-    dan pagar taman. Pengunjung suka dengan nuansa alamnya. Kayu tetap bagus meski
-    kena hujan hampir setiap hari. Highly recommended!
+  komentar: Cafe saya di dekat Kebun Raya Bogor pakai kayu dolken untuk dekorasi dan
+    pagar taman. Pengunjung suka dengan nuansa alamnya. Kayu tetap bagus meski kena
+    hujan hampir setiap hari. Highly recommended!
   warna: success
 - nama: Pak Denny Prasetyo
   lokasi: Developer Perumahan di Cibinong
   rating: 5
   judul: Solusi Material Tahan Hujan
-  komentar: Sebagai developer di Cibinong, kami butuh material yang tahan cuaca
-    lembab Bogor. Kayu dolken dari sini adalah pilihan terbaik - kualitas bagus,
-    tahan hujan, anti rayap, dan harga bersaing. Sudah 3 project pakai supplier ini.
+  komentar: Sebagai developer di Cibinong, kami butuh material yang tahan cuaca lembab
+    Bogor. Kayu dolken dari sini adalah pilihan terbaik - kualitas bagus, tahan hujan,
+    anti rayap, dan harga bersaing. Sudah 3 project pakai supplier ini.
   warna: primary
 tips_ukuran:
 - kategori: Dekorasi Ringan
@@ -523,8 +535,8 @@ faq_pemesanan:
 - pertanyaan: Apakah ada diskon untuk pembelian partai besar?
   jawaban: Ya, tersedia harga khusus untuk pembelian dalam jumlah besar. Untuk proyek
     villa, resort, atau developer di kawasan Puncak dan Cibinong yang membutuhkan
-    ratusan batang, kami berikan harga spesial. Hubungi tim kami untuk negosiasi
-    harga terbaik.
+    ratusan batang, kami berikan harga spesial. Hubungi tim kami untuk negosiasi harga
+    terbaik.
   icon: bi-percent
 faq_produk:
 - pertanyaan: Apakah kayu dolken perlu perawatan khusus di Bogor?
@@ -546,10 +558,10 @@ faq_produk:
   icon: bi-patch-check
 faq_pengiriman:
 - pertanyaan: Berapa lama pengiriman ke Bogor?
-  jawaban: Untuk area Bogor, pengiriman memakan waktu 1-3 hari kerja tergantung
-    lokasi. Area pusat kota dan Cibinong biasanya 1-2 hari. Area pinggiran seperti
-    kawasan Puncak, Dramaga, atau Leuwiliang maksimal 3 hari kerja. Gratis ongkir
-    untuk seluruh wilayah Bogor menggunakan armada terpercaya.
+  jawaban: Untuk area Bogor, pengiriman memakan waktu 1-3 hari kerja tergantung lokasi.
+    Area pusat kota dan Cibinong biasanya 1-2 hari. Area pinggiran seperti kawasan
+    Puncak, Dramaga, atau Leuwiliang maksimal 3 hari kerja. Gratis ongkir untuk seluruh
+    wilayah Bogor menggunakan armada terpercaya.
   icon: bi-truck
 - pertanyaan: Apakah pengiriman bisa sampai ke kawasan Puncak dan Cisarua?
   jawaban: Ya, bisa! Kami melayani pengiriman hingga kawasan Puncak, Cisarua, Megamendung,
@@ -562,9 +574,9 @@ relevansi_kayu_dolken:
     3.500-4.000 mm per tahun, menjadikannya salah satu kota dengan curah hujan tertinggi
     di dunia. Kelembaban udara yang sangat tinggi sepanjang tahun, terutama di kawasan
     Puncak dan lereng Gunung Salak, menjadi tantangan besar bagi material konstruksi
-    outdoor. Kayu dolken gelam sangat cocok karena sifatnya yang tahan air, anti
-    rayap natural, dan tidak mudah lapuk meskipun terkena hujan hampir setiap hari
-    sepanjang tahun.
+    outdoor. Kayu dolken gelam sangat cocok karena sifatnya yang tahan air, anti rayap
+    natural, dan tidak mudah lapuk meskipun terkena hujan hampir setiap hari sepanjang
+    tahun.
   keunggulan_lokal: 'Sifat kayu yang <strong>tahan hujan ekstrem, anti rayap, dan
     tahan kelembaban tinggi</strong> sangat cocok untuk aplikasi seperti:'
   aplikasi_lokal:
@@ -584,10 +596,10 @@ tentang_kota:
     Hujan dan menjadi rumah bagi Kebun Raya Bogor serta kawasan wisata Puncak yang
     legendaris.
   overview: Bogor adalah kota yang terletak di Provinsi Jawa Barat, sekitar 60 km
-    dari Jakarta. Dengan luas Kota Bogor sekitar 118 km² dan populasi lebih dari
-    1 juta jiwa, serta Kabupaten Bogor seluas 2.711 km² dengan populasi lebih dari
-    5,7 juta jiwa, Bogor Raya merupakan kawasan metropolitan yang terus berkembang
-    pesat. Bogor berbatasan langsung dengan Jakarta dan menjadi salah satu kota penyangga
+    dari Jakarta. Dengan luas Kota Bogor sekitar 118 km² dan populasi lebih dari 1
+    juta jiwa, serta Kabupaten Bogor seluas 2.711 km² dengan populasi lebih dari 5,7
+    juta jiwa, Bogor Raya merupakan kawasan metropolitan yang terus berkembang pesat.
+    Bogor berbatasan langsung dengan Jakarta dan menjadi salah satu kota penyangga
     utama ibu kota negara.
   tentang_kota_1:
   - judul: Sejarah & Warisan Kolonial
@@ -599,9 +611,11 @@ tentang_kota:
 
       Kebun Raya Bogor yang didirikan oleh Gubernur Jenderal Raffles pada tahun 1817 menjadi warisan kolonial paling berharga yang masih berfungsi hingga kini sebagai pusat penelitian botani dunia. Istana Bogor yang berdiri di dalam kawasan Kebun Raya menjadi salah satu dari enam Istana Kepresidenan Republik Indonesia yang aktif digunakan. Perpaduan sejarah kolonial dan kekayaan alam menjadikan Bogor kota yang unik dan berkarakter kuat.
     fakta:
-    - Kebun Raya Bogor didirikan tahun 1817 dan menjadi kebun raya tertua di Asia Tenggara
+    - Kebun Raya Bogor didirikan tahun 1817 dan menjadi kebun raya tertua di Asia
+      Tenggara
     - Istana Bogor adalah salah satu Istana Kepresidenan RI yang aktif digunakan
-    - Bogor pernah menjadi ibu kota Hindia Belanda sebelum dipindahkan ke Batavia (Jakarta)
+    - Bogor pernah menjadi ibu kota Hindia Belanda sebelum dipindahkan ke Batavia
+      (Jakarta)
   - judul: Wisata Alam & Kawasan Puncak
     icon: bi-tree
     subjudul: Surga Wisata Alam di Pintu Gerbang Jabodetabek
@@ -626,12 +640,12 @@ tentang_kota:
       dan masuk 500 besar universitas terbaik dunia versi QS Rankings"
     - "<strong>LIPI (Lembaga Ilmu Pengetahuan Indonesia)</strong> Pusat penelitian
       ilmiah nasional dengan berbagai laboratorium dan museum sains"
-    - "<strong>Pusat Penelitian Biologi BRIN</strong> Lembaga riset biologi dan
-      keanekaragaman hayati Indonesia terkemuka"
+    - "<strong>Pusat Penelitian Biologi BRIN</strong> Lembaga riset biologi dan keanekaragaman
+      hayati Indonesia terkemuka"
     - "<strong>Universitas Pakuan (UNPAK)</strong> Universitas swasta terbesar dan
       terkemuka di Bogor dengan ribuan mahasiswa"
-    - "<strong>Sekolah Tinggi Pertanian & Kehutanan</strong> Berbagai institusi
-      pendidikan pertanian yang mendukung riset agraria nasional"
+    - "<strong>Sekolah Tinggi Pertanian & Kehutanan</strong> Berbagai institusi pendidikan
+      pertanian yang mendukung riset agraria nasional"
     info_tambahan: Konsentrasi lembaga penelitian dan pendidikan menjadikan Bogor
       sebagai kota ilmu pengetahuan terdepan di Indonesia, menghasilkan riset-riset
       penting di bidang pertanian, biologi, dan lingkungan hidup.
@@ -642,24 +656,24 @@ tentang_kota:
     deskripsi: 'Bogor dikenal dengan kekayaan kuliner khas Sunda dan oleh-oleh yang
       menggugah selera:'
     list_item:
-    - "<strong>Asinan Bogor</strong> Kuliner ikonik khas Bogor berupa sayur dan
-      buah yang diasinkan dengan bumbu pedas manis"
-    - "<strong>Soto Mie Bogor</strong> Sup mie khas Bogor dengan kuah gurih dan
-      isian yang melimpah, favorit warga dan wisatawan"
+    - "<strong>Asinan Bogor</strong> Kuliner ikonik khas Bogor berupa sayur dan buah
+      yang diasinkan dengan bumbu pedas manis"
+    - "<strong>Soto Mie Bogor</strong> Sup mie khas Bogor dengan kuah gurih dan isian
+      yang melimpah, favorit warga dan wisatawan"
     - "<strong>Roti Unyil Venus</strong> Oleh-oleh roti mini khas Bogor yang terkenal
       di seluruh Indonesia"
     - "<strong>Talas Bogor</strong> Produk olahan talas khas Bogor dalam berbagai
       bentuk kue dan makanan ringan"
     - "<strong>Jalan Suryakencana</strong> Kawasan kuliner pecinan dengan deretan
       warung makan autentik yang buka sejak pagi"
-    info_tambahan: Kekayaan kuliner Bogor yang beragam dan terjangkau menjadikan
-      wisata kuliner sebagai daya tarik tambahan bagi jutaan wisatawan yang berkunjung
-      ke Kota Hujan setiap tahunnya.
-like_count: 1
+    info_tambahan: Kekayaan kuliner Bogor yang beragam dan terjangkau menjadikan wisata
+      kuliner sebagai daya tarik tambahan bagi jutaan wisatawan yang berkunjung ke
+      Kota Hujan setiap tahunnya.
+like_count: 3
 comment_count: 0
-share_count: 0
-total_updates: 1
-last_modified_at: '2026-04-24 08:50:15 +0700'
+share_count: 1
+total_updates: 2
+last_modified_at: '2026-04-29 07:01:43 +0000'
 ---
 
 <!-- ========================================================================

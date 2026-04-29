@@ -1,23 +1,29 @@
 ---
 layout: node--post-with-city
 title: Jual Kayu Dolken Bandung | Gratis Ongkir & COD | Hub. 081311400177
-description: Jual Kayu Dolken Bandung - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang.
-  Gratis ongkir seluruh Bandung, COD tersedia.
+description: Jual Kayu Dolken Bandung - Hub 081311400177. Kualitas premium, harga
+  mulai Rp 15.000/batang. Gratis ongkir seluruh Bandung, COD tersedia.
 date: 2025-11-19
 author: Admin
 author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/jual-kayu-dolken-bandung/jual-kayu-dolken-bandung-001.webp"
-image_alt: "Tumpukan kayu dolken gelam kualitas premium siap kirim ke Bandung, tersedia berbagai ukuran diameter 4-12cm panjang 4 meter, cocok untuk konstruksi pagar, gazebo, dan dekorasi interior rumah di dataran tinggi Bandung"
+image_alt: Tumpukan kayu dolken gelam kualitas premium siap kirim ke Bandung, tersedia
+  berbagai ukuran diameter 4-12cm panjang 4 meter, cocok untuk konstruksi pagar, gazebo,
+  dan dekorasi interior rumah di dataran tinggi Bandung
 images:
 - "/assets/images/posts/jual-kayu-dolken-bandung/jual-kayu-dolken-bandung-001.webp"
 - "/assets/images/posts/jual-kayu-dolken-bandung/jual-kayu-dolken-bandung-002.webp"
 - "/assets/images/posts/jual-kayu-dolken-bandung/jual-kayu-dolken-bandung-003.webp"
 - "/assets/images/posts/jual-kayu-dolken-bandung/jual-kayu-dolken-bandung-004.webp"
 images_alt:
-- "Tumpukan kayu dolken gelam berkualitas tinggi siap kirim ke wilayah Bandung Dago Cihampelas Lembang dengan gratis ongkir dan sistem pembayaran COD bayar di tempat"
-- "Detail tekstur serat kayu dolken gelam yang padat dan tahan lama cocok untuk iklim sejuk dataran tinggi Bandung dengan ketahanan terhadap kelembaban tinggi"
-- "Proses pengiriman kayu dolken ke proyek konstruksi di Bandung menggunakan armada truk untuk memastikan barang sampai dengan aman dan tepat waktu"
-- "Aplikasi kayu dolken gelam untuk pagar dan konstruksi di area Bandung menunjukkan hasil pemasangan yang kokoh dan estetis untuk hunian dan komersial"
+- Tumpukan kayu dolken gelam berkualitas tinggi siap kirim ke wilayah Bandung Dago
+  Cihampelas Lembang dengan gratis ongkir dan sistem pembayaran COD bayar di tempat
+- Detail tekstur serat kayu dolken gelam yang padat dan tahan lama cocok untuk iklim
+  sejuk dataran tinggi Bandung dengan ketahanan terhadap kelembaban tinggi
+- Proses pengiriman kayu dolken ke proyek konstruksi di Bandung menggunakan armada
+  truk untuk memastikan barang sampai dengan aman dan tepat waktu
+- Aplikasi kayu dolken gelam untuk pagar dan konstruksi di area Bandung menunjukkan
+  hasil pemasangan yang kokoh dan estetis untuk hunian dan komersial
 keywords: jual kayu dolken bandung, kayu dolken gelam bandung, dolken dago, dolken
   cihampelas, dolken lembang, kayu gelam bandung, dolken bandung utara, harga dolken
   bandung
@@ -25,19 +31,23 @@ show_products: true
 rating: 4.5
 review_count: 45
 reviews:
-  - author: "Rizky Permana"
-    rating: 5
-    date: "2025-01-14"
-    comment: "Artikel sangat informatif untuk kebutuhan kayu dolken di Bandung. Order untuk villa di Lembang, hasilnya memuaskan dan tahan cuaca dingin!"
-  - author: "Nadia Putri"
-    rating: 5
-    date: "2025-01-09"
-    comment: "Penjelasan lengkap tentang aplikasi kayu dolken. Cocok untuk konsep cafe outdoor di Dago. Pengiriman gratis sangat membantu!"
-  - author: "Dedi Kurniawan"
-    rating: 4
-    date: "2025-01-04"
-    comment: "Panduan pemilihan ukuran sangat membantu untuk proyek pergola di Cihampelas. Kualitas kayu bagus dan sesuai dengan harga."
-excerpt: "Jual Kayu Dolken Bandung - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang. Gratis ongkir seluruh Bandung, COD tersedia."
+- author: Rizky Permana
+  rating: 5
+  date: '2025-01-14'
+  comment: Artikel sangat informatif untuk kebutuhan kayu dolken di Bandung. Order
+    untuk villa di Lembang, hasilnya memuaskan dan tahan cuaca dingin!
+- author: Nadia Putri
+  rating: 5
+  date: '2025-01-09'
+  comment: Penjelasan lengkap tentang aplikasi kayu dolken. Cocok untuk konsep cafe
+    outdoor di Dago. Pengiriman gratis sangat membantu!
+- author: Dedi Kurniawan
+  rating: 4
+  date: '2025-01-04'
+  comment: Panduan pemilihan ukuran sangat membantu untuk proyek pergola di Cihampelas.
+    Kualitas kayu bagus dan sesuai dengan harga.
+excerpt: Jual Kayu Dolken Bandung - Hub 081311400177. Kualitas premium, harga mulai
+  Rp 15.000/batang. Gratis ongkir seluruh Bandung, COD tersedia.
 nama_kota: Bandung
 area_pengiriman:
 - Coblong (Dago, Cipaganti, Lebak Siliwangi)
@@ -659,11 +669,11 @@ tentang_kota:
     info_tambahan: Keberadaan puluhan kampus menjadikan Bandung kota dengan populasi
       mahasiswa terbesar di Indonesia, menciptakan ekosistem bisnis kuliner, kos-kosan,
       dan industri kreatif yang dinamis.
-like_count: 1
+like_count: 3
 comment_count: 0
-share_count: 0
-total_updates: 1
-last_modified_at: '2025-11-24 20:32:21 +0700'
+share_count: 1
+total_updates: 2
+last_modified_at: '2026-04-29 07:01:43 +0000'
 ---
 
 <!-- ========================================================================

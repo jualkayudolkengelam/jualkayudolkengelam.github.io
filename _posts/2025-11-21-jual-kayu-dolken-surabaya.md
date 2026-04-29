@@ -1,23 +1,29 @@
 ---
 layout: node--post-with-city
 title: Jual Kayu Dolken Surabaya | Gratis Ongkir & COD | Hub. 081311400177
-description: Jual Kayu Dolken Surabaya - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang.
-  Gratis ongkir seluruh Surabaya, COD tersedia.
+description: Jual Kayu Dolken Surabaya - Hub 081311400177. Kualitas premium, harga
+  mulai Rp 15.000/batang. Gratis ongkir seluruh Surabaya, COD tersedia.
 date: 2025-11-21
 author: Admin
 author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/jual-kayu-dolken-surabaya/jual-kayu-dolken-surabaya-001.webp"
-image_alt: "Tumpukan kayu dolken gelam kualitas premium siap kirim ke Surabaya, tersedia berbagai ukuran diameter 4-12cm panjang 4 meter, cocok untuk konstruksi pagar, gazebo, dan dekorasi rumah di Surabaya"
+image_alt: Tumpukan kayu dolken gelam kualitas premium siap kirim ke Surabaya, tersedia
+  berbagai ukuran diameter 4-12cm panjang 4 meter, cocok untuk konstruksi pagar, gazebo,
+  dan dekorasi rumah di Surabaya
 images:
 - "/assets/images/posts/jual-kayu-dolken-surabaya/jual-kayu-dolken-surabaya-001.webp"
 - "/assets/images/posts/jual-kayu-dolken-surabaya/jual-kayu-dolken-surabaya-002.webp"
 - "/assets/images/posts/jual-kayu-dolken-surabaya/jual-kayu-dolken-surabaya-003.webp"
 - "/assets/images/posts/jual-kayu-dolken-surabaya/jual-kayu-dolken-surabaya-004.webp"
 images_alt:
-- "Tumpukan kayu dolken gelam berkualitas tinggi siap kirim ke wilayah Surabaya dengan gratis ongkir dan sistem pembayaran COD bayar di tempat"
-- "Detail tekstur serat kayu dolken gelam yang padat dan tahan lama cocok untuk iklim panas Surabaya dengan ketahanan terhadap cuaca ekstrem pesisir"
-- "Proses pengiriman kayu dolken ke proyek konstruksi di Surabaya menggunakan armada truk untuk memastikan barang sampai dengan aman dan tepat waktu"
-- "Aplikasi kayu dolken gelam untuk pagar dan konstruksi di area Surabaya menunjukkan hasil pemasangan yang kokoh dan estetis untuk hunian dan komersial"
+- Tumpukan kayu dolken gelam berkualitas tinggi siap kirim ke wilayah Surabaya dengan
+  gratis ongkir dan sistem pembayaran COD bayar di tempat
+- Detail tekstur serat kayu dolken gelam yang padat dan tahan lama cocok untuk iklim
+  panas Surabaya dengan ketahanan terhadap cuaca ekstrem pesisir
+- Proses pengiriman kayu dolken ke proyek konstruksi di Surabaya menggunakan armada
+  truk untuk memastikan barang sampai dengan aman dan tepat waktu
+- Aplikasi kayu dolken gelam untuk pagar dan konstruksi di area Surabaya menunjukkan
+  hasil pemasangan yang kokoh dan estetis untuk hunian dan komersial
 keywords: jual kayu dolken surabaya, kayu dolken gelam surabaya, dolken surabaya utara,
   dolken surabaya selatan, dolken rungkut, kayu gelam surabaya, dolken wiyung, harga
   dolken surabaya
@@ -25,25 +31,31 @@ show_products: true
 rating: 4.5
 review_count: 42
 reviews:
-  - author: "Eko Prasetyo"
-    rating: 5
-    date: "2025-01-15"
-    comment: "Artikel sangat informatif untuk kebutuhan kayu dolken di Surabaya. Order untuk pagar rumah di Surabaya Timur, hasilnya memuaskan dan tahan panas terik!"
-  - author: "Lina Susanti"
-    rating: 5
-    date: "2025-01-10"
-    comment: "Penjelasan lengkap tentang aplikasi kayu dolken. Cocok untuk gazebo rumah di Wiyung. Pengiriman gratis sangat membantu!"
-  - author: "Wahyu Hidayat"
-    rating: 4
-    date: "2025-01-05"
-    comment: "Panduan pemilihan ukuran sangat membantu untuk proyek pergola di Rungkut. Kualitas kayu bagus dan sesuai dengan harga."
-excerpt: "Jual Kayu Dolken Surabaya - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang. Gratis ongkir seluruh Surabaya, COD tersedia."
+- author: Eko Prasetyo
+  rating: 5
+  date: '2025-01-15'
+  comment: Artikel sangat informatif untuk kebutuhan kayu dolken di Surabaya. Order
+    untuk pagar rumah di Surabaya Timur, hasilnya memuaskan dan tahan panas terik!
+- author: Lina Susanti
+  rating: 5
+  date: '2025-01-10'
+  comment: Penjelasan lengkap tentang aplikasi kayu dolken. Cocok untuk gazebo rumah
+    di Wiyung. Pengiriman gratis sangat membantu!
+- author: Wahyu Hidayat
+  rating: 4
+  date: '2025-01-05'
+  comment: Panduan pemilihan ukuran sangat membantu untuk proyek pergola di Rungkut.
+    Kualitas kayu bagus dan sesuai dengan harga.
+excerpt: Jual Kayu Dolken Surabaya - Hub 081311400177. Kualitas premium, harga mulai
+  Rp 15.000/batang. Gratis ongkir seluruh Surabaya, COD tersedia.
 nama_kota: Surabaya
 area_pengiriman:
 - Surabaya Pusat (Tegalsari, Simokerto, Genteng, Bubutan)
 - Surabaya Utara (Pabean Cantian, Semampir, Krembangan, Kenjeran, Bulak)
-- Surabaya Timur (Tambaksari, Gubeng, Gunung Anyar, Sukolilo, Mulyorejo, Rungkut, Tenggilis Mejoyo)
-- Surabaya Selatan (Wonokromo, Wonocolo, Wiyung, Karang Pilang, Jambangan, Gayungan, Dukuh Pakis, Sawahan)
+- Surabaya Timur (Tambaksari, Gubeng, Gunung Anyar, Sukolilo, Mulyorejo, Rungkut,
+  Tenggilis Mejoyo)
+- Surabaya Selatan (Wonokromo, Wonocolo, Wiyung, Karang Pilang, Jambangan, Gayungan,
+  Dukuh Pakis, Sawahan)
 - Surabaya Barat (Benowo, Pakal, Asemrowo, Sukomanunggal, Tandes, Sambikerep, Lakarsantri)
 keunggulan_produk:
 - judul: Kualitas Premium Grade A
@@ -95,8 +107,8 @@ area_pengiriman_detail:
     bisnis modern seperti Wiyung dan Dukuh Pakis.
   judul_pengembangan: Area Pengembangan & Perumahan Baru
   deskripsi_pengembangan: Wilayah Surabaya Barat dan Timur yang berkembang pesat dengan
-    banyak proyek perumahan baru di Rungkut, Lakarsantri, dan Benowo membutuhkan
-    kayu dolken berkualitas dalam jumlah besar.
+    banyak proyek perumahan baru di Rungkut, Lakarsantri, dan Benowo membutuhkan kayu
+    dolken berkualitas dalam jumlah besar.
   judul_lainnya: Kecamatan Lainnya di Surabaya
   judul_landmark: Landmark Strategis & Pusat Bisnis
   deskripsi_landmark: Kami melayani pengiriman ke area landmark terkenal Surabaya
@@ -195,7 +207,8 @@ area_pengiriman_detail:
     warna: warning
   kecamatan_lainnya:
   - Tambaksari (Tambaksari, Ploso, Rangkah, Pacarkeling, Pacarkembang, Gading)
-  - Mulyorejo (Mulyorejo, Kalijudan, Kejawan Putih Tambak, Kalisari, Dukuh Sutorejo, Manyar Sabrangan)
+  - Mulyorejo (Mulyorejo, Kalijudan, Kejawan Putih Tambak, Kalisari, Dukuh Sutorejo,
+    Manyar Sabrangan)
   - Karang Pilang (Karang Pilang, Kebraon, Kedurus, Warugunung)
   - Jambangan (Jambangan, Karah, Kebonsari, Pagesangan)
   - Gayungan (Gayungan, Dukuh Menanggal, Menanggal, Ketintang)
@@ -255,8 +268,8 @@ keunggulan_kayu_dolken:
   icon: bi-bug
 - judul: Tahan Cuaca Ekstrem
   deskripsi: Cocok untuk outdoor maupun indoor, tahan terhadap panas terik dan angin
-    kencang khas kota pesisir Surabaya. Tidak mudah lapuk meskipun terkena sinar
-    matahari langsung sepanjang tahun.
+    kencang khas kota pesisir Surabaya. Tidak mudah lapuk meskipun terkena sinar matahari
+    langsung sepanjang tahun.
   warna: primary
   icon: bi-cloud-rain
 - judul: Kuat & Padat Maksimal
@@ -329,8 +342,8 @@ finalisasi_pengiriman:
   konfirmasi_pesanan: Konfirmasi detail pesanan Anda - pastikan jumlah batang, ukuran
     diameter, dan alamat pengiriman di Surabaya sudah benar untuk kelancaran proses.
   pengiriman_gratis: Pengiriman gratis menggunakan armada terpercaya ke seluruh wilayah
-    Surabaya dari pusat kota hingga kawasan Rungkut, Wiyung, dan Benowo. Dijamin
-    tepat waktu dan aman sampai lokasi proyek Anda.
+    Surabaya dari pusat kota hingga kawasan Rungkut, Wiyung, dan Benowo. Dijamin tepat
+    waktu dan aman sampai lokasi proyek Anda.
   bayar_cod: Sistem pembayaran COD (Cash on Delivery) tersedia. Bayar setelah barang
     sampai dan Anda sudah cek kualitas kayu - aman, tanpa risiko, dan terpercaya.
 studi_kasus_proyek:
@@ -349,8 +362,8 @@ studi_kasus_proyek:
   - judul: Landscaping Cafe di Kawasan Tunjungan
     tahun: '2024'
     deskripsi: Proyek landscaping dan dekorasi outdoor untuk cafe modern di kawasan
-      Tunjungan Surabaya. Menggunakan kayu dolken untuk pagar, border taman, dan
-      aksen dekorasi natural.
+      Tunjungan Surabaya. Menggunakan kayu dolken untuk pagar, border taman, dan aksen
+      dekorasi natural.
     jumlah: 110 batang
     diameter: 4-6 cm dan 6-8 cm
     hasil: Tampilan cafe menjadi lebih natural dan menarik pengunjung. Pemilik cafe
@@ -383,8 +396,8 @@ studi_kasus_proyek:
   - judul: Pagar & Taman Cluster di Wiyung Surabaya
     tahun: '2024'
     deskripsi: Pemasangan pagar dan border taman untuk perumahan cluster premium di
-      Wiyung Surabaya Selatan. Area perumahan modern membutuhkan kayu yang tahan
-      rayap dan tahan lama di iklim panas.
+      Wiyung Surabaya Selatan. Area perumahan modern membutuhkan kayu yang tahan rayap
+      dan tahan lama di iklim panas.
     jumlah: 170 batang
     diameter: 6-8 cm
     hasil: Pagar kokoh dan estetis, tahan cuaca panas Surabaya. Pemilik rumah sangat
@@ -419,8 +432,8 @@ studi_kasus_proyek:
       belakang.
     jumlah: 130 batang
     diameter: 8-10 cm
-    hasil: Pergola kokoh dan estetis, pemilik rumah sangat puas. Setelah 7 bulan
-      masih dalam kondisi prima tanpa perawatan khusus.
+    hasil: Pergola kokoh dan estetis, pemilik rumah sangat puas. Setelah 7 bulan masih
+      dalam kondisi prima tanpa perawatan khusus.
     warna: success
     icon: bi-house-heart-fill
   proyek_publik:
@@ -476,8 +489,8 @@ testimoni_komersial:
   lokasi: Kontraktor Perumahan di Surabaya
   rating: 5
   judul: Partner Terpercaya untuk Proyek
-  komentar: Sudah beberapa kali order untuk proyek perumahan cluster di Surabaya
-    Barat dan Surabaya Timur. Kualitas konsisten bagus, stok selalu ready, dan pengiriman
+  komentar: Sudah beberapa kali order untuk proyek perumahan cluster di Surabaya Barat
+    dan Surabaya Timur. Kualitas konsisten bagus, stok selalu ready, dan pengiriman
     tepat waktu. Jadi partner supplier terpercaya saya.
   warna: info
 - nama: Bu Indah Puspitasari
@@ -581,8 +594,8 @@ relevansi_kayu_dolken:
     ekstrem. Kayu dolken gelam sangat cocok karena sifatnya yang tahan panas, tahan
     rayap natural, dan tidak mudah lapuk meskipun terkena sinar matahari langsung
     dan angin laut sepanjang tahun.
-  keunggulan_lokal: 'Sifat kayu yang <strong>tahan panas, tahan rayap, dan tahan
-    angin laut</strong> sangat cocok untuk aplikasi seperti:'
+  keunggulan_lokal: 'Sifat kayu yang <strong>tahan panas, tahan rayap, dan tahan angin
+    laut</strong> sangat cocok untuk aplikasi seperti:'
   aplikasi_lokal:
   - nama: Gazebo & pergola perumahan cluster di Wiyung, Rungkut, dan Lakarsantri
     icon: bi-check-circle-fill
@@ -598,10 +611,10 @@ tentang_kota:
   tagline: Kota Pahlawan
   deskripsi_singkat: Kota metropolitan terbesar kedua di Indonesia yang menjadi pusat
     perdagangan, industri, dan pelabuhan utama di Jawa Timur.
-  overview: Surabaya adalah ibukota Provinsi Jawa Timur yang terletak di pesisir
-    utara Pulau Jawa. Dengan luas wilayah sekitar 374 km² dan populasi lebih dari
-    2,9 juta jiwa, Surabaya terbagi menjadi 31 kecamatan dan 154 kelurahan yang tersebar
-    dari Surabaya Utara hingga Surabaya Selatan. Sebagai kota terbesar kedua di Indonesia,
+  overview: Surabaya adalah ibukota Provinsi Jawa Timur yang terletak di pesisir utara
+    Pulau Jawa. Dengan luas wilayah sekitar 374 km² dan populasi lebih dari 2,9 juta
+    jiwa, Surabaya terbagi menjadi 31 kecamatan dan 154 kelurahan yang tersebar dari
+    Surabaya Utara hingga Surabaya Selatan. Sebagai kota terbesar kedua di Indonesia,
     Surabaya menjadi pusat ekonomi, perdagangan, dan industri di kawasan Indonesia
     Timur.
   tentang_kota_1:
@@ -615,7 +628,8 @@ tentang_kota:
       Kota ini memiliki sejarah panjang sebagai pelabuhan dan pusat perdagangan sejak era kerajaan Majapahit. Pelabuhan Tanjung Perak yang dibangun pada masa kolonial Belanda masih menjadi salah satu pelabuhan tersibuk di Indonesia hingga kini. Kawasan Kota Lama Surabaya menyimpan banyak bangunan bersejarah berarsitektur Eropa yang menjadi warisan budaya penting.
     fakta:
     - Pertempuran 10 November 1945 menjadikan Surabaya sebagai simbol perlawanan kemerdekaan
-    - Pelabuhan Tanjung Perak adalah pelabuhan tersibuk kedua di Indonesia setelah Tanjung Priok
+    - Pelabuhan Tanjung Perak adalah pelabuhan tersibuk kedua di Indonesia setelah
+      Tanjung Priok
     - Surabaya telah menjadi kota pelabuhan sejak abad ke-13 pada masa Kerajaan Singasari
   - judul: Ekonomi & Perdagangan
     icon: bi-graph-up
@@ -669,11 +683,11 @@ tentang_kota:
     info_tambahan: Keberadaan puluhan perguruan tinggi menjadikan Surabaya kota pelajar
       terbesar di Indonesia Timur, menciptakan ekosistem inovasi, startup teknologi,
       dan industri kreatif yang dinamis dan terus berkembang.
-like_count: 1
+like_count: 4
 comment_count: 0
-share_count: 0
-total_updates: 1
-last_modified_at: '2026-04-24 08:50:15 +0700'
+share_count: 2
+total_updates: 2
+last_modified_at: '2026-04-29 07:01:43 +0000'
 ---
 
 <!-- ========================================================================
