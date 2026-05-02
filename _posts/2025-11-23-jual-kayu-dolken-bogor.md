@@ -669,11 +669,11 @@ tentang_kota:
     info_tambahan: Kekayaan kuliner Bogor yang beragam dan terjangkau menjadikan wisata
       kuliner sebagai daya tarik tambahan bagi jutaan wisatawan yang berkunjung ke
       Kota Hujan setiap tahunnya.
-like_count: 3
+like_count: 4
 comment_count: 0
 share_count: 1
-total_updates: 2
-last_modified_at: '2026-04-29 07:01:43 +0000'
+total_updates: 3
+last_modified_at: '2026-05-02 10:58:38 +0000'
 ---
 
 <!-- ========================================================================

@@ -12,38 +12,49 @@ tags:
 author: Admin
 author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-001.jpeg"
-image_alt: "Kayu dolken gelam Melaleuca cajuputi menampilkan keunggulan struktur serat padat dan tahan rayap, ideal untuk konstruksi pondasi cerucuk, pagar, gazebo dengan ketahanan puluhan tahun di berbagai kondisi cuaca"
+image_alt: Kayu dolken gelam Melaleuca cajuputi menampilkan keunggulan struktur serat
+  padat dan tahan rayap, ideal untuk konstruksi pondasi cerucuk, pagar, gazebo dengan
+  ketahanan puluhan tahun di berbagai kondisi cuaca
 images:
 - "/assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-001.jpeg"
 - "/assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-002.jpeg"
 - "/assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-003.jpeg"
 - "/assets/images/posts/keunggulan-kayu-dolken-gelam-untuk-konstruksi/keunggulan-kayu-dolken-gelam-untuk-konstruksi-004.jpeg"
 images_alt:
-- "Struktur serat kayu dolken gelam Melaleuca cajuputi yang padat dan rapat menunjukkan keunggulan ketahanan alami terhadap serangan rayap dan jamur perusak kayu"
-- "Potongan melintang kayu dolken gelam memperlihatkan kandungan minyak kayu putih alami yang memberikan perlindungan terhadap air dan kelembaban tinggi"
-- "Aplikasi kayu dolken gelam sebagai cerucuk pondasi bangunan menunjukkan keunggulan daya dukung beban tinggi untuk konstruksi di tanah lunak dan gambut"
-- "Perbandingan ketahanan kayu dolken gelam dengan kayu lainnya menunjukkan umur pakai puluhan tahun tanpa perawatan khusus di berbagai kondisi lingkungan"
+- Struktur serat kayu dolken gelam Melaleuca cajuputi yang padat dan rapat menunjukkan
+  keunggulan ketahanan alami terhadap serangan rayap dan jamur perusak kayu
+- Potongan melintang kayu dolken gelam memperlihatkan kandungan minyak kayu putih
+  alami yang memberikan perlindungan terhadap air dan kelembaban tinggi
+- Aplikasi kayu dolken gelam sebagai cerucuk pondasi bangunan menunjukkan keunggulan
+  daya dukung beban tinggi untuk konstruksi di tanah lunak dan gambut
+- Perbandingan ketahanan kayu dolken gelam dengan kayu lainnya menunjukkan umur pakai
+  puluhan tahun tanpa perawatan khusus di berbagai kondisi lingkungan
 url: "/2024/01/15/keunggulan-kayu-dolken-gelam-untuk-konstruksi/"
-excerpt: "Kayu dolken gelam memiliki berbagai keunggulan yang membuatnya menjadi pilihan utama untuk berbagai keperluan konstruksi dan dekorasi."
+excerpt: Kayu dolken gelam memiliki berbagai keunggulan yang membuatnya menjadi pilihan
+  utama untuk berbagai keperluan konstruksi dan dekorasi.
 rating: 4.6
 review_count: 43
 reviews:
-  - author: "Hendra Santoso"
-    rating: 5
-    date: "2025-01-14"
-    comment: "Artikel sangat edukatif tentang keunggulan kayu gelam. Setelah baca ini, saya yakin pilih dolken gelam untuk pondasi cerucuk rumah di tanah gambut. Hasilnya kokoh!"
-  - author: "Ratna Dewi"
-    rating: 5
-    date: "2025-01-09"
-    comment: "Penjelasan detail tentang kepadatan dan ketahanan rayap sangat membantu. Langsung order untuk pagar rumah, sudah 6 bulan tidak ada masalah sama sekali."
-  - author: "Bambang Wijaya"
-    rating: 4
-    date: "2025-01-04"
-    comment: "Informasi lengkap tentang kelas kekuatan kayu gelam. Sangat bermanfaat untuk referensi proyek gazebo outdoor saya. Recommended!"
-like_count: 71
+- author: Hendra Santoso
+  rating: 5
+  date: '2025-01-14'
+  comment: Artikel sangat edukatif tentang keunggulan kayu gelam. Setelah baca ini,
+    saya yakin pilih dolken gelam untuk pondasi cerucuk rumah di tanah gambut. Hasilnya
+    kokoh!
+- author: Ratna Dewi
+  rating: 5
+  date: '2025-01-09'
+  comment: Penjelasan detail tentang kepadatan dan ketahanan rayap sangat membantu.
+    Langsung order untuk pagar rumah, sudah 6 bulan tidak ada masalah sama sekali.
+- author: Bambang Wijaya
+  rating: 4
+  date: '2025-01-04'
+  comment: Informasi lengkap tentang kelas kekuatan kayu gelam. Sangat bermanfaat
+    untuk referensi proyek gazebo outdoor saya. Recommended!
+like_count: 73
 comment_count: 12
 share_count: 23
-last_modified_at: '2025-11-24 20:32:38 +0700'
+last_modified_at: '2026-05-02 10:58:38 +0000'
 definisi_kayu:
   nama_latin: Melaleuca cajuputi
   deskripsi: Kayu gelam adalah jenis kayu keras yang tumbuh di daerah berawa-rawa
@@ -181,7 +192,7 @@ kesimpulan:
   - Investasi jangka panjang yang menguntungkan
   cta_text: Butuh Kayu Dolken Gelam Berkualitas?
   cta_link: "/kontak"
-total_updates: 1
+total_updates: 2
 ---
 
 <div class="article-intro py-4">
