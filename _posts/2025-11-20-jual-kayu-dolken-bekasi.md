@@ -1,43 +1,53 @@
 ---
 layout: node--post-with-city
 title: Jual Kayu Dolken Bekasi | Gratis Ongkir & COD | Hub. 081311400177
-description: Jual Kayu Dolken Bekasi - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang.
-  Gratis ongkir seluruh Bekasi, COD tersedia.
+description: Jual Kayu Dolken Bekasi - Hub 081311400177. Kualitas premium, harga mulai
+  Rp 15.000/batang. Gratis ongkir seluruh Bekasi, COD tersedia.
 date: 2025-11-20
 author: Admin
 author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/jual-kayu-dolken-bekasi/jual-kayu-dolken-bekasi-001.webp"
-image_alt: "Tumpukan kayu dolken gelam kualitas premium siap kirim ke Bekasi, tersedia berbagai ukuran diameter 4-12cm panjang 4 meter, cocok untuk konstruksi pagar, gazebo, dan dekorasi rumah di Bekasi"
+image_alt: Tumpukan kayu dolken gelam kualitas premium siap kirim ke Bekasi, tersedia
+  berbagai ukuran diameter 4-12cm panjang 4 meter, cocok untuk konstruksi pagar, gazebo,
+  dan dekorasi rumah di Bekasi
 images:
 - "/assets/images/posts/jual-kayu-dolken-bekasi/jual-kayu-dolken-bekasi-001.webp"
 - "/assets/images/posts/jual-kayu-dolken-bekasi/jual-kayu-dolken-bekasi-002.webp"
 - "/assets/images/posts/jual-kayu-dolken-bekasi/jual-kayu-dolken-bekasi-003.webp"
 - "/assets/images/posts/jual-kayu-dolken-bekasi/jual-kayu-dolken-bekasi-004.webp"
 images_alt:
-- "Tumpukan kayu dolken gelam berkualitas tinggi siap kirim ke wilayah Bekasi dengan gratis ongkir dan sistem pembayaran COD bayar di tempat"
-- "Detail tekstur serat kayu dolken gelam yang padat dan tahan lama cocok untuk iklim panas lembab Bekasi dengan ketahanan terhadap cuaca ekstrem"
-- "Proses pengiriman kayu dolken ke proyek konstruksi di Bekasi menggunakan armada truk untuk memastikan barang sampai dengan aman dan tepat waktu"
-- "Aplikasi kayu dolken gelam untuk pagar dan konstruksi di area Bekasi menunjukkan hasil pemasangan yang kokoh dan estetis untuk hunian dan komersial"
-keywords: jual kayu dolken bekasi, kayu dolken gelam bekasi, dolken bekasi utara, dolken
-  bekasi selatan, dolken tambun, kayu gelam bekasi, dolken cikarang, harga dolken
-  bekasi
+- Tumpukan kayu dolken gelam berkualitas tinggi siap kirim ke wilayah Bekasi dengan
+  gratis ongkir dan sistem pembayaran COD bayar di tempat
+- Detail tekstur serat kayu dolken gelam yang padat dan tahan lama cocok untuk iklim
+  panas lembab Bekasi dengan ketahanan terhadap cuaca ekstrem
+- Proses pengiriman kayu dolken ke proyek konstruksi di Bekasi menggunakan armada
+  truk untuk memastikan barang sampai dengan aman dan tepat waktu
+- Aplikasi kayu dolken gelam untuk pagar dan konstruksi di area Bekasi menunjukkan
+  hasil pemasangan yang kokoh dan estetis untuk hunian dan komersial
+keywords: jual kayu dolken bekasi, kayu dolken gelam bekasi, dolken bekasi utara,
+  dolken bekasi selatan, dolken tambun, kayu gelam bekasi, dolken cikarang, harga
+  dolken bekasi
 show_products: true
 rating: 4.5
 review_count: 38
 reviews:
-  - author: "Budi Santoso"
-    rating: 5
-    date: "2025-01-12"
-    comment: "Artikel sangat informatif untuk kebutuhan kayu dolken di Bekasi. Order untuk pagar rumah di Bekasi Utara, hasilnya memuaskan dan tahan panas!"
-  - author: "Dewi Rahayu"
-    rating: 5
-    date: "2025-01-07"
-    comment: "Penjelasan lengkap tentang aplikasi kayu dolken. Cocok untuk gazebo rumah di Bekasi Selatan. Pengiriman gratis sangat membantu!"
-  - author: "Hendra Gunawan"
-    rating: 4
-    date: "2025-01-02"
-    comment: "Panduan pemilihan ukuran sangat membantu untuk proyek pergola di Cikarang. Kualitas kayu bagus dan sesuai dengan harga."
-excerpt: "Jual Kayu Dolken Bekasi - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang. Gratis ongkir seluruh Bekasi, COD tersedia."
+- author: Budi Santoso
+  rating: 5
+  date: '2025-01-12'
+  comment: Artikel sangat informatif untuk kebutuhan kayu dolken di Bekasi. Order
+    untuk pagar rumah di Bekasi Utara, hasilnya memuaskan dan tahan panas!
+- author: Dewi Rahayu
+  rating: 5
+  date: '2025-01-07'
+  comment: Penjelasan lengkap tentang aplikasi kayu dolken. Cocok untuk gazebo rumah
+    di Bekasi Selatan. Pengiriman gratis sangat membantu!
+- author: Hendra Gunawan
+  rating: 4
+  date: '2025-01-02'
+  comment: Panduan pemilihan ukuran sangat membantu untuk proyek pergola di Cikarang.
+    Kualitas kayu bagus dan sesuai dengan harga.
+excerpt: Jual Kayu Dolken Bekasi - Hub 081311400177. Kualitas premium, harga mulai
+  Rp 15.000/batang. Gratis ongkir seluruh Bekasi, COD tersedia.
 nama_kota: Bekasi
 area_pengiriman:
 - Bekasi Utara (Harapan Jaya, Kaliabang Tengah, Perwira)
@@ -262,8 +272,8 @@ keunggulan_kayu_dolken:
   icon: bi-hammer
 - judul: Ramah Lingkungan
   deskripsi: Material natural 100% sustainable dan biodegradable. Mendukung konsep
-    green building yang semakin banyak diterapkan di proyek-proyek perumahan dan
-    komersial modern di Bekasi.
+    green building yang semakin banyak diterapkan di proyek-proyek perumahan dan komersial
+    modern di Bekasi.
   warna: success
   icon: bi-recycle
 - judul: Estetika Natural Premium
@@ -401,8 +411,8 @@ studi_kasus_proyek:
       Utara. Menggunakan kayu dolken untuk aksen natural yang modern.
     jumlah: 70 batang
     diameter: 4-6 cm
-    hasil: Taman terlihat lebih rapi dan natural. Kayu tetap awet meski terkena
-      panas dan hujan rutin khas Bekasi.
+    hasil: Taman terlihat lebih rapi dan natural. Kayu tetap awet meski terkena panas
+      dan hujan rutin khas Bekasi.
     warna: info
     icon: bi-tree-fill
   - judul: Pergola Villa di Pondokgede
@@ -411,8 +421,8 @@ studi_kasus_proyek:
       Bekasi. Pemilik menginginkan tampilan natural premium untuk area taman belakang.
     jumlah: 120 batang
     diameter: 8-10 cm
-    hasil: Pergola kokoh dan estetis, pemilik rumah sangat puas. Setelah 7 bulan
-      masih dalam kondisi prima tanpa perawatan khusus.
+    hasil: Pergola kokoh dan estetis, pemilik rumah sangat puas. Setelah 7 bulan masih
+      dalam kondisi prima tanpa perawatan khusus.
     warna: success
     icon: bi-house-heart-fill
   proyek_publik:
@@ -443,8 +453,8 @@ testimoni_residential:
   rating: 5
   judul: Kualitas Premium Tahan Panas
   komentar: Saya pakai kayu dolken ini untuk gazebo rumah di Bekasi Selatan. Sudah
-    1 tahun lebih masih kokoh dan tidak ada tanda-tanda rayap meski panas Bekasi
-    sangat terik. Pengiriman gratis dan pelayanan sangat memuaskan. Recommended!
+    1 tahun lebih masih kokoh dan tidak ada tanda-tanda rayap meski panas Bekasi sangat
+    terik. Pengiriman gratis dan pelayanan sangat memuaskan. Recommended!
   warna: primary
 - nama: Bu Rini Kurniasih
   lokasi: Jatiasih, Bekasi
@@ -552,16 +562,16 @@ faq_produk:
   icon: bi-patch-check
 faq_pengiriman:
 - pertanyaan: Berapa lama pengiriman ke Bekasi?
-  jawaban: Untuk area Bekasi, pengiriman memakan waktu 1-3 hari kerja tergantung
-    lokasi. Area pusat kota seperti Bekasi Timur, Bekasi Barat, dan Bekasi Selatan
-    biasanya 1-2 hari. Area pinggiran seperti Cikarang, Tambun, atau Babelan maksimal
-    3 hari kerja. Gratis ongkir untuk seluruh wilayah Bekasi menggunakan armada terpercaya.
+  jawaban: Untuk area Bekasi, pengiriman memakan waktu 1-3 hari kerja tergantung lokasi.
+    Area pusat kota seperti Bekasi Timur, Bekasi Barat, dan Bekasi Selatan biasanya
+    1-2 hari. Area pinggiran seperti Cikarang, Tambun, atau Babelan maksimal 3 hari
+    kerja. Gratis ongkir untuk seluruh wilayah Bekasi menggunakan armada terpercaya.
   icon: bi-truck
 - pertanyaan: Apakah pengiriman bisa sampai ke kawasan industri Cikarang?
   jawaban: Ya, bisa! Kami melayani pengiriman hingga area Cikarang Barat, Cikarang
-    Selatan, Cikarang Utara, dan kawasan industri MM2100 sekitarnya. Armada kami
-    berpengalaman menangani pengiriman ke kawasan industri Bekasi. Tetap gratis ongkir
-    untuk minimal pembelian tertentu.
+    Selatan, Cikarang Utara, dan kawasan industri MM2100 sekitarnya. Armada kami berpengalaman
+    menangani pengiriman ke kawasan industri Bekasi. Tetap gratis ongkir untuk minimal
+    pembelian tertentu.
   icon: bi-geo-alt
 relevansi_kayu_dolken:
   karakteristik_iklim: Bekasi adalah kota metropolitan yang terletak di dataran rendah
@@ -571,8 +581,8 @@ relevansi_kayu_dolken:
     terbesar se-Asia Tenggara, Bekasi memiliki kebutuhan material konstruksi yang
     sangat tinggi. Kayu dolken gelam sangat cocok karena sifatnya yang tahan panas,
     tahan rayap natural, dan tidak mudah lapuk meskipun terkena sinar matahari langsung.
-  keunggulan_lokal: 'Sifat kayu yang <strong>tahan panas, tahan rayap, dan tahan
-    cuaca ekstrem</strong> sangat cocok untuk aplikasi seperti:'
+  keunggulan_lokal: 'Sifat kayu yang <strong>tahan panas, tahan rayap, dan tahan cuaca
+    ekstrem</strong> sangat cocok untuk aplikasi seperti:'
   aplikasi_lokal:
   - nama: Gazebo & pergola perumahan cluster di Bekasi Selatan dan Bekasi Timur
     icon: bi-check-circle-fill
@@ -603,9 +613,12 @@ tentang_kota:
 
       Setelah kemerdekaan, Bekasi berkembang pesat dari kawasan pertanian menjadi kota industri dan hunian modern. Pembangunan kawasan industri MM2100, EJIP, dan Hyundai pada era 1980-1990an mengubah wajah Bekasi menjadi pusat manufaktur terbesar di Indonesia. Kini Bekasi menjadi kota mandiri dengan infrastruktur lengkap dan kualitas hidup yang terus meningkat.
     fakta:
-    - Bekasi mendapat julukan "Kota Patriot" atas peran dalam perjuangan kemerdekaan RI
-    - Kawasan industri di Bekasi menampung lebih dari 2.000 perusahaan nasional dan multinasional
-    - Bekasi adalah kota dengan pertumbuhan penduduk tertinggi di Indonesia selama dekade terakhir
+    - Bekasi mendapat julukan "Kota Patriot" atas peran dalam perjuangan kemerdekaan
+      RI
+    - Kawasan industri di Bekasi menampung lebih dari 2.000 perusahaan nasional dan
+      multinasional
+    - Bekasi adalah kota dengan pertumbuhan penduduk tertinggi di Indonesia selama
+      dekade terakhir
   - judul: Ekonomi & Kawasan Industri
     icon: bi-graph-up
     subjudul: Pusat Industri & Pertumbuhan Ekonomi Terkuat
@@ -615,9 +628,11 @@ tentang_kota:
 
       Selain industri, sektor properti dan perdagangan juga berkembang pesat. Summarecon Bekasi, Grand Metropolitan, dan berbagai proyek perumahan premium terus bermunculan. Bekasi kini menjadi kota hunian pilihan bagi eksekutif dan profesional yang bekerja di Jakarta maupun kawasan industri lokal, mendorong permintaan material konstruksi berkualitas tinggi.
     fakta:
-    - Kawasan industri Bekasi-Cikarang adalah yang terbesar di Asia Tenggara dengan 2.000+ perusahaan
+    - Kawasan industri Bekasi-Cikarang adalah yang terbesar di Asia Tenggara dengan
+      2.000+ perusahaan
     - Summarecon Bekasi adalah salah satu proyek properti terbesar di Indonesia
-    - PDB Bekasi menempati peringkat tertinggi di antara kota-kota non-ibu-kota di Indonesia
+    - PDB Bekasi menempati peringkat tertinggi di antara kota-kota non-ibu-kota di
+      Indonesia
   tentang_kota_2:
   - judul: Landmark & Infrastruktur Modern
     icon: bi-pin-map
@@ -651,18 +666,18 @@ tentang_kota:
       yang memperlancar mobilitas warga Bekasi"
     - "<strong>Universitas Islam 45 (UNISMA)</strong> Universitas tertua dan terbesar
       di Bekasi dengan ribuan mahasiswa aktif"
-    - "<strong>Universitas Bhayangkara Jakarta Raya</strong> Kampus bergengsi di
-      Bekasi dengan program studi beragam"
+    - "<strong>Universitas Bhayangkara Jakarta Raya</strong> Kampus bergengsi di Bekasi
+      dengan program studi beragam"
     - "<strong>SMK & SMA Unggulan</strong> Puluhan sekolah menengah unggulan yang
       mencetak generasi berkualitas"
     info_tambahan: Konektivitas Bekasi terus meningkat dengan beroperasinya LRT Jabodebek
       dan berbagai proyek infrastruktur yang memperlancar akses dari dan ke Jakarta
       serta kawasan industri.
-like_count: 1
+like_count: 3
 comment_count: 0
-share_count: 0
-total_updates: 1
-last_modified_at: '2026-04-24 08:50:15 +0700'
+share_count: 1
+total_updates: 2
+last_modified_at: '2026-05-06 14:47:15 +0000'
 ---
 
 <!-- ========================================================================
