@@ -12,37 +12,47 @@ tags:
 author: Admin
 author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-001.jpeg"
-image_alt: "Tips perawatan kayu dolken gelam agar tetap awet puluhan tahun meliputi pembersihan berkala, coating pelindung, penanganan jamur dan rayap serta pemeliharaan struktur untuk menjaga kualitas dan tampilan natural"
+image_alt: Tips perawatan kayu dolken gelam agar tetap awet puluhan tahun meliputi
+  pembersihan berkala, coating pelindung, penanganan jamur dan rayap serta pemeliharaan
+  struktur untuk menjaga kualitas dan tampilan natural
 images:
 - "/assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-001.jpeg"
 - "/assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-002.jpeg"
 - "/assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-003.jpeg"
 - "/assets/images/posts/perawatan-kayu-dolken-gelam-agar-awet/perawatan-kayu-dolken-gelam-agar-awet-004.jpeg"
 images_alt:
-- "Proses pembersihan kayu dolken gelam menggunakan sikat dan air bersih untuk menghilangkan debu kotoran dan lumut yang menempel pada permukaan"
-- "Aplikasi coating pelindung pada kayu dolken untuk meningkatkan ketahanan terhadap air hujan sinar UV dan serangan jamur perusak kayu"
-- "Pemeriksaan kondisi kayu dolken secara berkala untuk mendeteksi tanda kerusakan awal seperti retak lubang rayap atau perubahan warna"
-- "Hasil perawatan kayu dolken yang rutin menunjukkan kondisi tetap prima dengan warna natural terjaga dan struktur tetap kuat puluhan tahun"
+- Proses pembersihan kayu dolken gelam menggunakan sikat dan air bersih untuk menghilangkan
+  debu kotoran dan lumut yang menempel pada permukaan
+- Aplikasi coating pelindung pada kayu dolken untuk meningkatkan ketahanan terhadap
+  air hujan sinar UV dan serangan jamur perusak kayu
+- Pemeriksaan kondisi kayu dolken secara berkala untuk mendeteksi tanda kerusakan
+  awal seperti retak lubang rayap atau perubahan warna
+- Hasil perawatan kayu dolken yang rutin menunjukkan kondisi tetap prima dengan warna
+  natural terjaga dan struktur tetap kuat puluhan tahun
 url: "/2024/05/15/perawatan-kayu-dolken-gelam-agar-awet/"
-excerpt: "Panduan lengkap merawat kayu dolken gelam untuk memaksimalkan umur pakai hingga puluhan tahun dengan perawatan minimal."
+excerpt: Panduan lengkap merawat kayu dolken gelam untuk memaksimalkan umur pakai
+  hingga puluhan tahun dengan perawatan minimal.
 rating: 4.6
 review_count: 24
 reviews:
-  - author: "Wawan Setiawan"
-    rating: 5
-    date: "2025-01-11"
-    comment: "Tips perawatan sangat praktis dan mudah diikuti. Gazebo saya sudah 3 tahun, setelah ikuti panduan coating di artikel ini kondisinya tetap prima!"
-  - author: "Yuni Astuti"
-    rating: 5
-    date: "2025-01-06"
-    comment: "Panduan pembersihan berkala sangat detail. Pagar kayu dolken saya kena lumut, setelah ikuti cara di artikel langsung bersih. Terima kasih!"
-  - author: "Eko Prasetyo"
-    rating: 4
-    date: "2025-01-01"
-    comment: "Artikel lengkap tentang maintenance kayu dolken. Tips penanganan musim hujan sangat relevan untuk kondisi tropis Indonesia. Recommended!"
-like_count: 78
+- author: Wawan Setiawan
+  rating: 5
+  date: '2025-01-11'
+  comment: Tips perawatan sangat praktis dan mudah diikuti. Gazebo saya sudah 3 tahun,
+    setelah ikuti panduan coating di artikel ini kondisinya tetap prima!
+- author: Yuni Astuti
+  rating: 5
+  date: '2025-01-06'
+  comment: Panduan pembersihan berkala sangat detail. Pagar kayu dolken saya kena
+    lumut, setelah ikuti cara di artikel langsung bersih. Terima kasih!
+- author: Eko Prasetyo
+  rating: 4
+  date: '2025-01-01'
+  comment: Artikel lengkap tentang maintenance kayu dolken. Tips penanganan musim
+    hujan sangat relevan untuk kondisi tropis Indonesia. Recommended!
+like_count: 80
 comment_count: 16
-share_count: 30
+share_count: 31
 labels:
   monthly_deep_clean: 'Pembersihan Mendalam Bulanan:'
   feature_wall_ceiling: 'Untuk Dinding/Plafon Dekoratif:'
@@ -413,8 +423,8 @@ kesimpulan:
   cta_description: 'Kayu dolken gelam berkualitas tinggi dari kami lebih mudah dirawat
     karena: Grade A bebas defect, properly dried, dan natural resistance optimal.'
   cta_link: "/kontak"
-total_updates: 10
-last_modified_at: '2025-11-24 20:33:34 +0700'
+total_updates: 11
+last_modified_at: '2026-05-09 03:38:29 +0000'
 ---
 
 <div class="article-intro py-4">
@@ -471,4 +481,3 @@ last_modified_at: '2025-11-24 20:33:34 +0700'
 💬 **Pak Fajar** (Batam)
 
 > "Butuh rekomendasi, untuk pergola, Tolong bantu ya"
-
