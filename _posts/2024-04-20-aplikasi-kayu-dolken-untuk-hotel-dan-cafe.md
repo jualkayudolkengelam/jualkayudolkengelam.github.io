@@ -51,10 +51,10 @@ reviews:
   date: '2025-01-02'
   comment: Panduan aplikasi kayu dolken untuk interior hotel sangat detail. Tips pemilihan
     ukuran dan finishing sangat bermanfaat.
-like_count: 103
+like_count: 106
 comment_count: 24
-share_count: 42
-last_modified_at: '2026-05-02 10:58:38 +0000'
+share_count: 44
+last_modified_at: '2026-05-12 15:12:45 +0000'
 tips_desain:
   title: Tips Desain dengan Kayu Dolken
   subtitle: Panduan praktis untuk hasil maksimal
@@ -255,7 +255,7 @@ tips_desain:
       icon: bi-stars
       color: warning
       text: Biophilic design meningkatkan wellness
-total_updates: 3
+total_updates: 4
 ---
 
 Kayu dolken gelam diameter kecil hingga sedang (2-6 cm) menjadi trending dalam desain interior dan eksterior hotel serta cafe modern. Material natural ini memberikan sentuhan rustic yang hangat namun tetap elegan.
