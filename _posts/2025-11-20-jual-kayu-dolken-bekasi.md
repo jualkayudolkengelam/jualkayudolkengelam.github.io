@@ -673,11 +673,11 @@ tentang_kota:
     info_tambahan: Konektivitas Bekasi terus meningkat dengan beroperasinya LRT Jabodebek
       dan berbagai proyek infrastruktur yang memperlancar akses dari dan ke Jakarta
       serta kawasan industri.
-like_count: 3
+like_count: 6
 comment_count: 0
-share_count: 1
-total_updates: 2
-last_modified_at: '2026-05-06 14:47:15 +0000'
+share_count: 2
+total_updates: 3
+last_modified_at: '2026-05-19 04:17:49 +0000'
 ---
 
 <!-- ========================================================================

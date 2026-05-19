@@ -542,11 +542,11 @@ area_pengiriman_detail:
   - nama: Java Mall
     icon: bi-cart
     warna: primary
-like_count: 12
+like_count: 14
 comment_count: 0
 share_count: 7
-total_updates: 4
-last_modified_at: '2026-05-12 15:12:45 +0000'
+total_updates: 5
+last_modified_at: '2026-05-19 04:17:49 +0000'
 ---
 
 <section id="hero-jual-kayu-dolken">
