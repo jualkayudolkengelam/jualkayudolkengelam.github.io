@@ -641,11 +641,11 @@ tentang_kota:
       terbesar Indonesia (50 km)"
     info_tambahan: Pembangunan Patimban Port dan tol layang Jakarta-Cikampek II semakin
       memperkuat posisi Karawang sebagai pusat industri dan logistik nasional.
-like_count: 5
+like_count: 7
 comment_count: 0
-share_count: 2
-last_modified_at: '2026-05-06 14:47:15 +0000'
-total_updates: 1
+share_count: 4
+last_modified_at: '2026-05-23 12:09:06 +0000'
+total_updates: 2
 ---
 
 <!-- ========================================================================
