@@ -13,32 +13,41 @@ tags:
 author: Admin
 author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/inspirasi-kayu-dolken-untuk-cafe/inspirasi-kayu-dolken-untuk-cafe-001.webp"
-image_alt: "Inspirasi desain interior cafe menggunakan kayu dolken gelam untuk feature wall, partisi ruangan, dan ceiling accent yang menciptakan suasana natural rustic aesthetic cocok untuk konsep biophilic design"
+image_alt: Inspirasi desain interior cafe menggunakan kayu dolken gelam untuk feature
+  wall, partisi ruangan, dan ceiling accent yang menciptakan suasana natural rustic
+  aesthetic cocok untuk konsep biophilic design
 images:
 - "/assets/images/posts/inspirasi-kayu-dolken-untuk-cafe/inspirasi-kayu-dolken-untuk-cafe-001.webp"
 - "/assets/images/posts/inspirasi-kayu-dolken-untuk-cafe/inspirasi-kayu-dolken-untuk-cafe-002.webp"
 images_alt:
-- "Inspirasi desain interior cafe dengan feature wall menggunakan kayu dolken gelam menciptakan suasana natural rustic yang instagramable dan nyaman untuk pengunjung"
-- "Aplikasi kayu dolken sebagai ceiling accent dan partisi ruangan cafe memberikan sentuhan biophilic design yang hangat dan menarik untuk konsep cafe modern"
+- Inspirasi desain interior cafe dengan feature wall menggunakan kayu dolken gelam
+  menciptakan suasana natural rustic yang instagramable dan nyaman untuk pengunjung
+- Aplikasi kayu dolken sebagai ceiling accent dan partisi ruangan cafe memberikan
+  sentuhan biophilic design yang hangat dan menarik untuk konsep cafe modern
 keywords: kayu dolken cafe, inspirasi interior cafe, desain cafe natural, dolken untuk
   cafe, tips desain cafe, material cafe modern, biophilic design cafe, cafe aesthetic
-excerpt: "Temukan inspirasi menggunakan kayu dolken untuk interior cafe Anda. Dari feature wall hingga outdoor deck, lengkap dengan tips desain dan estimasi budget."
+excerpt: Temukan inspirasi menggunakan kayu dolken untuk interior cafe Anda. Dari
+  feature wall hingga outdoor deck, lengkap dengan tips desain dan estimasi budget.
 rating: 4.8
 review_count: 28
 reviews:
-  - author: "Kevin Wijaya"
-    rating: 5
-    date: "2025-01-14"
-    comment: "Inspirasi desain cafe yang luar biasa! Langsung aplikasikan ide feature wall untuk cafe baru saya di Kemang. Hasilnya instagramable dan banyak customer foto-foto!"
-  - author: "Anita Sari"
-    rating: 5
-    date: "2025-01-09"
-    comment: "Artikel lengkap dengan estimasi budget sangat membantu perencanaan. Konsep biophilic design dengan dolken membuat cafe saya terlihat premium tapi tetap affordable."
-  - author: "Rizky Pratama"
-    rating: 4
-    date: "2025-01-04"
-    comment: "Ide ceiling accent dan partisi dari kayu dolken sangat kreatif. Tips pemilihan finishing untuk area outdoor cafe juga sangat berguna. Recommended!"
-like_count: 2
+- author: Kevin Wijaya
+  rating: 5
+  date: '2025-01-14'
+  comment: Inspirasi desain cafe yang luar biasa! Langsung aplikasikan ide feature
+    wall untuk cafe baru saya di Kemang. Hasilnya instagramable dan banyak customer
+    foto-foto!
+- author: Anita Sari
+  rating: 5
+  date: '2025-01-09'
+  comment: Artikel lengkap dengan estimasi budget sangat membantu perencanaan. Konsep
+    biophilic design dengan dolken membuat cafe saya terlihat premium tapi tetap affordable.
+- author: Rizky Pratama
+  rating: 4
+  date: '2025-01-04'
+  comment: Ide ceiling accent dan partisi dari kayu dolken sangat kreatif. Tips pemilihan
+    finishing untuk area outdoor cafe juga sangat berguna. Recommended!
+like_count: 5
 comment_count: 0
 share_count: 2
 mengapa_memilih:
@@ -500,8 +509,8 @@ tips_desain:
       icon: bi-tools
       color: warning
       text: DIY simple projects, hire pro untuk complex installation
-total_updates: 1
-last_modified_at: '2025-11-24 20:32:21 +0700'
+total_updates: 2
+last_modified_at: '2026-06-14 12:48:32 +0000'
 ---
 
 <!-- ========================================================================== -->
