@@ -1,7 +1,7 @@
 ---
 layout: node--post-with-city
 title: "Jual Kayu Dolken Jakarta Barat | Gratis Ongkir & COD | Hub. 081311400177"
-description: "Jual Kayu Dolken Jakarta Barat - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang. Gratis ongkir seluruh Jakarta Barat, COD tersedia."
+description: Jual Kayu Dolken Jakarta Barat - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang. Gratis ongkir seluruh Jakarta Barat, COD tersedia.
 date: 2026-06-24
 author: Admin
 author_url: https://jualkayudolkengelam.github.io
