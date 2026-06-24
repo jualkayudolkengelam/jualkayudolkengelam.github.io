@@ -1,19 +1,19 @@
 ---
 layout: node--post-with-city
-title: "Jual Kayu Dolken Tangerang | Gratis Ongkir & COD | Hub. 081311400177"
+title: Jual Kayu Dolken Tangerang | Gratis Ongkir & COD | Hub. 081311400177
 description: Jual Kayu Dolken Tangerang - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang. Gratis ongkir seluruh Tangerang, COD tersedia.
 date: 2026-06-24
 author: Admin
 author_url: https://jualkayudolkengelam.github.io
 image: /assets/images/posts/jual-kayu-dolken-tangerang/jual-kayu-dolken-tangerang-001.webp
-image_alt: "Tumpukan kayu dolken gelam kualitas premium siap kirim ke Tangerang, tersedia berbagai ukuran diameter 2-12cm panjang 4 meter"
+image_alt: Tumpukan kayu dolken gelam kualitas premium siap kirim ke Tangerang, tersedia berbagai ukuran diameter 2-12cm panjang 4 meter
 images:
   - /assets/images/posts/jual-kayu-dolken-tangerang/jual-kayu-dolken-tangerang-001.webp
   - /assets/images/posts/jual-kayu-dolken-tangerang/jual-kayu-dolken-tangerang-002.webp
 images_alt:
-  - "Tumpukan kayu dolken gelam kualitas premium siap kirim ke wilayah Tangerang dengan gratis ongkir dan COD bayar di tempat"
-  - "Detail tekstur serat kayu dolken gelam yang padat dan tahan lama cocok untuk iklim tropis Tangerang dengan ketahanan terhadap cuaca ekstrem"
-keywords: "jual kayu dolken tangerang, kayu dolken gelam tangerang, dolken tangerang, dolken tangerang selatan, kayu dolken cipondoh, dolken serpong, harga dolken tangerang"
+  - Tumpukan kayu dolken gelam kualitas premium siap kirim ke wilayah Tangerang dengan gratis ongkir dan COD bayar di tempat
+  - Detail tekstur serat kayu dolken gelam yang padat dan tahan lama cocok untuk iklim tropis Tangerang dengan ketahanan terhadap cuaca ekstrem
+keywords: jual kayu dolken tangerang, kayu dolken gelam tangerang, dolken tangerang, dolken tangerang selatan, kayu dolken cipondoh, dolken serpong, harga dolken tangerang
 show_products: true
 rating: 4.5
 review_count: 0
@@ -22,53 +22,53 @@ reviews:
     rating: 5
     date: '2026-06-24'
     comment: Pesan kayu dolken untuk pagar rumah di Cipondoh Tangerang. Kualitas bagus, pengiriman cepat dan gratis. Recommended!
-nama_kota: "Tangerang"
+nama_kota: Tangerang
 area_pengiriman:
-  - "Tangerang Kota (Cipondoh, Karawaci, Ciledug, Pinang, Tangerang)"
-  - "Tangerang Selatan (Serpong, Pondok Aren, Pamulang, Ciputat, Setu)"
-  - "Kabupaten Tangerang (Cikupa, Legok, Pagedangan, Curug, Balaraja)"
+  - Tangerang Kota (Cipondoh, Karawaci, Ciledug, Pinang, Tangerang)
+  - Tangerang Selatan (Serpong, Pondok Aren, Pamulang, Ciputat, Setu)
+  - Kabupaten Tangerang (Cikupa, Legok, Pagedangan, Curug, Balaraja)
 keunggulan_produk:
-  - judul: "Kualitas Premium Grade A"
-    deskripsi: "Kayu dolken gelam pilihan berkualitas tinggi, sangat cocok untuk iklim panas dan lembab Tangerang sebagai kota metropolitan dan penyangga Jakarta. Tekstur padat dan kuat tahan terik matahari serta hujan deras khas Tangerang."
+  - judul: Kualitas Premium Grade A
+    deskripsi: Kayu dolken gelam pilihan berkualitas tinggi, sangat cocok untuk iklim panas dan lembab Tangerang sebagai kota metropolitan dan penyangga Jakarta. Tekstur padat dan kuat tahan terik matahari serta hujan deras khas Tangerang.
     warna: warning
     icon: bi-award-fill
-  - judul: "Harga Terbaik Se-Tangerang"
-    deskripsi: "Harga kompetitif mulai dari Rp 15.000/batang dengan kualitas terjamin. Dapatkan harga khusus untuk pembelian partai besar di wilayah Tangerang Kota, BSD Serpong, Alam Sutera, dan kawasan industri Kabupaten Tangerang."
+  - judul: Harga Terbaik Se-Tangerang
+    deskripsi: Harga kompetitif mulai dari Rp 15.000/batang dengan kualitas terjamin. Dapatkan harga khusus untuk pembelian partai besar di wilayah Tangerang Kota, BSD Serpong, Alam Sutera, dan kawasan industri Kabupaten Tangerang.
     warna: danger
     icon: bi-cash-coin
-  - judul: "Stok Selalu Ready"
-    deskripsi: "Berbagai ukuran diameter 2-12 cm tersedia dengan stok melimpah. Siap kirim ke seluruh wilayah Tangerang dari pusat kota hingga BSD, Alam Sutera, dan kawasan industri."
+  - judul: Stok Selalu Ready
+    deskripsi: Berbagai ukuran diameter 2-12 cm tersedia dengan stok melimpah. Siap kirim ke seluruh wilayah Tangerang dari pusat kota hingga BSD, Alam Sutera, dan kawasan industri.
     warna: info
     icon: bi-boxes
 keunggulan_layanan:
-  - judul: "Gratis Ongkir Seluruh Tangerang"
-    deskripsi: "Nikmati pengiriman gratis untuk seluruh wilayah Tangerang dari Kota Tangerang, Tangerang Selatan hingga Kabupaten Tangerang. Hemat biaya transportasi untuk proyek Anda."
+  - judul: Gratis Ongkir Seluruh Tangerang
+    deskripsi: Nikmati pengiriman gratis untuk seluruh wilayah Tangerang dari Kota Tangerang, Tangerang Selatan hingga Kabupaten Tangerang. Hemat biaya transportasi untuk proyek Anda.
     warna: success
     icon: bi-truck
-  - judul: "COD & Bayar di Tempat"
-    deskripsi: "Sistem pembayaran Cash on Delivery (COD) tersedia. Cek kualitas kayu terlebih dahulu sebelum bayar, aman dan tanpa risiko untuk customer di Tangerang."
+  - judul: COD & Bayar di Tempat
+    deskripsi: Sistem pembayaran Cash on Delivery (COD) tersedia. Cek kualitas kayu terlebih dahulu sebelum bayar, aman dan tanpa risiko untuk customer di Tangerang.
     warna: primary
     icon: bi-shield-check
-  - judul: "Konsultasi Gratis 24/7"
-    deskripsi: "Tim kami siap membantu konsultasi kebutuhan kayu dolken untuk proyek rumah, pergola, atau pagar di Tangerang. Hubungi kami kapan saja untuk solusi terbaik."
+  - judul: Konsultasi Gratis 24/7
+    deskripsi: Tim kami siap membantu konsultasi kebutuhan kayu dolken untuk proyek rumah, pergola, atau pagar di Tangerang. Hubungi kami kapan saja untuk solusi terbaik.
     warna: secondary
     icon: bi-headset
 area_pengiriman_detail:
-  judul_jangkauan: "Jangkauan Pengiriman Luas ke Seluruh Tangerang Raya"
-  deskripsi_jangkauan: "Kami melayani pengiriman kayu dolken gelam ke seluruh wilayah Tangerang Raya mencakup Kota Tangerang (13 kecamatan), Tangerang Selatan (7 kecamatan), serta Kabupaten Tangerang (29 kecamatan). Gratis ongkir untuk semua area dengan minimal pembelian yang terjangkau."
-  judul_pusat: "Wilayah Pusat Kota Tangerang"
-  deskripsi_pusat: "Area strategis pusat Kota Tangerang dengan akses mudah dijangkau. Melayani kecamatan utama di jantung kota dengan waktu pengiriman cepat 1-2 hari kerja. Mencakup kawasan Cipondoh, Karawaci, Ciledug, dan pusat kota Tangerang."
-  judul_utara_selatan: "Wilayah Tangerang Selatan (Tangsel)"
-  deskripsi_utara_selatan: "Tangerang Selatan mencakup kawasan premium BSD City, Serpong, Alam Sutera, Pondok Aren, dan Ciputat. Area dengan banyak perumahan cluster, cafe, dan proyek komersial modern yang membutuhkan kayu dolken berkualitas."
-  judul_pengembangan: "Area Pengembangan Kabupaten Tangerang"
-  deskripsi_pengembangan: "Wilayah Kabupaten Tangerang seperti Cikupa, Legok, Pagedangan, Curug, dan Balaraja yang berkembang pesat dengan banyak proyek perumahan, kawasan industri, dan infrastruktur baru membutuhkan kayu dolken dalam jumlah besar."
-  judul_lainnya: "Kecamatan Lainnya di Tangerang Raya"
-  judul_landmark: "Landmark Strategis & Pusat Bisnis Tangerang"
-  deskripsi_landmark: "Kami melayani pengiriman ke area landmark terkenal Tangerang seperti BSD City, Summarecon Mall Serpong, AEON Mall BSD, dan kawasan bisnis Alam Sutera. Ideal untuk proyek komersial, cafe, dan perkantoran."
-  judul_wisata: "Destinasi Wisata Tangerang"
-  deskripsi_wisata: "Tangerang memiliki berbagai destinasi wisata seperti Pantai Tanjung Pasir, Museum Benteng Heritage, Masjid Raya Al-A'zhom, dan berbagai taman kota yang membutuhkan material kayu berkualitas untuk renovasi dan dekorasi."
-  judul_fasilitas: "Fasilitas Pendidikan & Komersial"
-  deskripsi_fasilitas: "Melayani kebutuhan kampus seperti Universitas Multimedia Nusantara (UMN), Universitas Pelita Harapan (UPH), dan pusat perbelanjaan seperti Summarecon Mall Serpong, AEON Mall BSD, dan ITC BSD."
+  judul_jangkauan: Jangkauan Pengiriman Luas ke Seluruh Tangerang Raya
+  deskripsi_jangkauan: Kami melayani pengiriman kayu dolken gelam ke seluruh wilayah Tangerang Raya mencakup Kota Tangerang (13 kecamatan), Tangerang Selatan (7 kecamatan), serta Kabupaten Tangerang (29 kecamatan). Gratis ongkir untuk semua area dengan minimal pembelian yang terjangkau.
+  judul_pusat: Wilayah Pusat Kota Tangerang
+  deskripsi_pusat: Area strategis pusat Kota Tangerang dengan akses mudah dijangkau. Melayani kecamatan utama di jantung kota dengan waktu pengiriman cepat 1-2 hari kerja. Mencakup kawasan Cipondoh, Karawaci, Ciledug, dan pusat kota Tangerang.
+  judul_utara_selatan: Wilayah Tangerang Selatan (Tangsel)
+  deskripsi_utara_selatan: Tangerang Selatan mencakup kawasan premium BSD City, Serpong, Alam Sutera, Pondok Aren, dan Ciputat. Area dengan banyak perumahan cluster, cafe, dan proyek komersial modern yang membutuhkan kayu dolken berkualitas.
+  judul_pengembangan: Area Pengembangan Kabupaten Tangerang
+  deskripsi_pengembangan: Wilayah Kabupaten Tangerang seperti Cikupa, Legok, Pagedangan, Curug, dan Balaraja yang berkembang pesat dengan banyak proyek perumahan, kawasan industri, dan infrastruktur baru membutuhkan kayu dolken dalam jumlah besar.
+  judul_lainnya: Kecamatan Lainnya di Tangerang Raya
+  judul_landmark: Landmark Strategis & Pusat Bisnis Tangerang
+  deskripsi_landmark: Kami melayani pengiriman ke area landmark terkenal Tangerang seperti BSD City, Summarecon Mall Serpong, AEON Mall BSD, dan kawasan bisnis Alam Sutera. Ideal untuk proyek komersial, cafe, dan perkantoran.
+  judul_wisata: Destinasi Wisata Tangerang
+  deskripsi_wisata: Tangerang memiliki berbagai destinasi wisata seperti Pantai Tanjung Pasir, Museum Benteng Heritage, Masjid Raya Al-A'zhom, dan berbagai taman kota yang membutuhkan material kayu berkualitas untuk renovasi dan dekorasi.
+  judul_fasilitas: Fasilitas Pendidikan & Komersial
+  deskripsi_fasilitas: Melayani kebutuhan kampus seperti Universitas Multimedia Nusantara (UMN), Universitas Pelita Harapan (UPH), dan pusat perbelanjaan seperti Summarecon Mall Serpong, AEON Mall BSD, dan ITC BSD.
   wilayah_pusat:
     - nama: Cipondoh
       kelurahan:
@@ -433,11 +433,11 @@ tentang_kota:
     subjudul: Kota Bersejarah dengan Warisan Budaya Kuat
     icon_subjudul: bi-book
     deskripsi: |-
-      Tangerang mendapat julukan "Kota Benteng" karena sejarahnya sebagai pusat pertahanan dan perlindungan pada masa kolonial Belanda. Benteng Heritage yang masih berdiri hingga kini menjadi saksi sejarah perjuangan masyarakat Tangerang. Selain itu, Tangerang juga dikenal dengan budaya Tionghoa-Betawi yang kental, terlihat dari klenteng dan arsitektur khas di kawasan Pasar Lama.
+      Tangerang mendapat julukan Kota Benteng karena sejarahnya sebagai pusat pertahanan dan perlindungan pada masa kolonial Belanda. Benteng Heritage yang masih berdiri hingga kini menjadi saksi sejarah perjuangan masyarakat Tangerang. Selain itu, Tangerang juga dikenal dengan budaya Tionghoa-Betawi yang kental, terlihat dari klenteng dan arsitektur khas di kawasan Pasar Lama.
 
       Setelah kemerdekaan, Tangerang berkembang pesat menjadi kota industri dan hunian modern. Kawasan industri seperti Jatake, Cikupa, dan Tangerang Industrial Estate menjadi tulang punggung ekonomi. Kini Tangerang menjadi kota mandiri dengan infrastruktur modern, kawasan properti premium seperti BSD City dan Alam Sutera, serta pusat perbelanjaan dan pendidikan yang lengkap.
     fakta:
-    - Tangerang mendapat julukan "Kota Benteng" dari sejarah benteng pertahanan kolonial
+    - Tangerang mendapat julukan Kota Benteng dari sejarah benteng pertahanan kolonial
     - Kawasan BSD City adalah salah satu kota mandiri terbesar di Indonesia
     - Tangerang Raya memiliki populasi lebih dari 5,5 juta jiwa
   - judul: Ekonomi & Pusat Bisnis Strategis
@@ -457,25 +457,25 @@ tentang_kota:
     icon: bi-pin-map
     subjudul: Kota Modern dengan Akses Strategis
     icon_subjudul: bi-star-fill
-    deskripsi: 'Tangerang terus berkembang dengan berbagai landmark dan infrastruktur modern yang mendukung pertumbuhan properti dan bisnis:'
+    deskripsi: Tangerang terus berkembang dengan berbagai landmark dan infrastruktur modern yang mendukung pertumbuhan properti dan bisnis
     list_item:
-    - "<strong>BSD City</strong> Kota mandiri dengan pusat bisnis, pendidikan, dan hunian premium terbesar di Tangerang"
-    - "<strong>AEON Mall BSD City</strong> Pusat perbelanjaan Jepang pertama di Indonesia yang menjadi ikon baru"
-    - "<strong>Summarecon Mall Serpong</strong> Mall lifestyle modern dengan berbagai tenant internasional"
-    - "<strong>Masjid Raya Al-A'zhom</strong> Masjid kebanggaan warga Tangerang dengan kapasitas 3.000 jemaah"
-    - "<strong>Benteng Heritage</strong> Museum bersejarah di Pasar Lama yang menjadi simbol budaya Tangerang"
-    - "<strong>Scientia Square Park</strong> Taman kota modern dengan area rekreasi dan olahraga"
+    - <strong>BSD City</strong> Kota mandiri dengan pusat bisnis, pendidikan, dan hunian premium terbesar di Tangerang
+    - <strong>AEON Mall BSD City</strong> Pusat perbelanjaan Jepang pertama di Indonesia yang menjadi ikon baru
+    - <strong>Summarecon Mall Serpong</strong> Mall lifestyle modern dengan berbagai tenant internasional
+    - <strong>Masjid Raya Al-A'zhom</strong> Masjid kebanggaan warga Tangerang dengan kapasitas 3.000 jemaah
+    - <strong>Benteng Heritage</strong> Museum bersejarah di Pasar Lama yang menjadi simbol budaya Tangerang
+    - <strong>Scientia Square Park</strong> Taman kota modern dengan area rekreasi dan olahraga
   - judul: Pendidikan & Transportasi
     icon: bi-mortarboard
     subjudul: Kota Terhubung dengan Fasilitas Lengkap
     icon_subjudul: bi-book-fill
-    deskripsi: 'Tangerang memiliki infrastruktur transportasi modern dan fasilitas pendidikan unggulan:'
+    deskripsi: Tangerang memiliki infrastruktur transportasi modern dan fasilitas pendidikan unggulan
     list_item:
-    - "<strong>Stasiun Rawa Buntu</strong> Stasiun kereta yang menghubungkan Tangerang Selatan dengan Jakarta dan Serpong"
-    - "<strong>Tol Jakarta-Merak</strong> Akses tol utama yang menghubungkan Tangerang dengan Jakarta dan Banten"
-    - "<strong>Universitas Multimedia Nusantara (UMN)</strong> Universitas swasta terkemuka di kawasan BSD"
-    - "<strong>Universitas Pelita Harapan (UPH)</strong> Kampus bergengsi di Tangerang dengan program internasional"
-    - "<strong>Pusat Inovasi Digital</strong> Kawasan kreatif dan startup yang berkembang di Tangerang Selatan"
+    - <strong>Stasiun Rawa Buntu</strong> Stasiun kereta yang menghubungkan Tangerang Selatan dengan Jakarta dan Serpong
+    - <strong>Tol Jakarta-Merak</strong> Akses tol utama yang menghubungkan Tangerang dengan Jakarta dan Banten
+    - <strong>Universitas Multimedia Nusantara (UMN)</strong> Universitas swasta terkemuka di kawasan BSD
+    - <strong>Universitas Pelita Harapan (UPH)</strong> Kampus bergengsi di Tangerang dengan program internasional
+    - <strong>Pusat Inovasi Digital</strong> Kawasan kreatif dan startup yang berkembang di Tangerang Selatan
     info_tambahan: Konektivitas Tangerang semakin baik dengan keberadaan Stasiun Rawa Buntu, integrasi KRL Commuter Line, dan akses tol menuju Jakarta, Bandara Soekarno-Hatta, serta kawasan industri di Kabupaten Tangerang.
 like_count: 0
 comment_count: 0
@@ -502,7 +502,7 @@ last_modified_at: '2026-06-24 12:00:00 +0700'
 
 <section id="jual-kayu-dolken-terdekat">
 {% include reusable/block--jual-kayu-dolken-terdekat.html
-   nama_kota="Tangerang"
+   nama_kota=Tangerang
 %}
 </section>
 
