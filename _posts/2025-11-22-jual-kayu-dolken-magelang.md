@@ -1,17 +1,20 @@
 ---
 layout: node--post-with-city
 title: Jual Kayu Dolken Magelang | Gratis Ongkir & COD | Hub. 081311400177
-description: Jual Kayu Dolken Magelang - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang.
-  Gratis ongkir seluruh Magelang, COD tersedia.
+description: Jual Kayu Dolken Magelang - Hub 081311400177. Kualitas premium, harga
+  mulai Rp 15.000/batang. Gratis ongkir seluruh Magelang, COD tersedia.
 date: 2025-11-22
 author: Admin
 author_url: https://jualkayudolkengelam.net
 image: "/assets/images/posts/jual-kayu-dolken-magelang/jual-kayu-dolken-magelang-001.webp"
-image_alt: "Tumpukan kayu dolken gelam kualitas premium siap kirim ke Magelang, tersedia berbagai ukuran diameter 4-12cm panjang 4 meter, cocok untuk konstruksi pagar, gazebo, dan dekorasi rumah di Magelang"
+image_alt: Tumpukan kayu dolken gelam kualitas premium siap kirim ke Magelang, tersedia
+  berbagai ukuran diameter 4-12cm panjang 4 meter, cocok untuk konstruksi pagar, gazebo,
+  dan dekorasi rumah di Magelang
 images:
 - "/assets/images/posts/jual-kayu-dolken-magelang/jual-kayu-dolken-magelang-001.webp"
 images_alt:
-- "Tumpukan kayu dolken gelam berkualitas tinggi siap kirim ke wilayah Magelang dengan gratis ongkir dan sistem pembayaran COD bayar di tempat"
+- Tumpukan kayu dolken gelam berkualitas tinggi siap kirim ke wilayah Magelang dengan
+  gratis ongkir dan sistem pembayaran COD bayar di tempat
 keywords: jual kayu dolken magelang, kayu dolken gelam magelang, dolken magelang kota,
   dolken mertoyudan, dolken muntilan, kayu gelam magelang, dolken borobudur, harga
   dolken magelang
@@ -19,24 +22,29 @@ show_products: true
 rating: 4.5
 review_count: 32
 reviews:
-  - author: "Tri Wahyono"
-    rating: 5
-    date: "2025-01-13"
-    comment: "Artikel sangat informatif untuk kebutuhan kayu dolken di Magelang. Order untuk gazebo rumah di Mertoyudan, hasilnya memuaskan dan tahan cuaca!"
-  - author: "Sari Dewanti"
-    rating: 5
-    date: "2025-01-08"
-    comment: "Penjelasan lengkap tentang aplikasi kayu dolken. Cocok untuk pagar villa di lereng Merapi. Pengiriman gratis sangat membantu!"
-  - author: "Agung Nugroho"
-    rating: 4
-    date: "2025-01-03"
-    comment: "Panduan pemilihan ukuran sangat membantu untuk proyek pergola di Muntilan. Kualitas kayu bagus dan sesuai dengan harga."
-excerpt: "Jual Kayu Dolken Magelang - Hub 081311400177. Kualitas premium, harga mulai Rp 15.000/batang. Gratis ongkir seluruh Magelang, COD tersedia."
+- author: Tri Wahyono
+  rating: 5
+  date: '2025-01-13'
+  comment: Artikel sangat informatif untuk kebutuhan kayu dolken di Magelang. Order
+    untuk gazebo rumah di Mertoyudan, hasilnya memuaskan dan tahan cuaca!
+- author: Sari Dewanti
+  rating: 5
+  date: '2025-01-08'
+  comment: Penjelasan lengkap tentang aplikasi kayu dolken. Cocok untuk pagar villa
+    di lereng Merapi. Pengiriman gratis sangat membantu!
+- author: Agung Nugroho
+  rating: 4
+  date: '2025-01-03'
+  comment: Panduan pemilihan ukuran sangat membantu untuk proyek pergola di Muntilan.
+    Kualitas kayu bagus dan sesuai dengan harga.
+excerpt: Jual Kayu Dolken Magelang - Hub 081311400177. Kualitas premium, harga mulai
+  Rp 15.000/batang. Gratis ongkir seluruh Magelang, COD tersedia.
 nama_kota: Magelang
 area_pengiriman:
 - Magelang Utara (Kramat Utara, Kramat Selatan, Potrobangsan, Wates)
 - Magelang Tengah (Cacaban, Kemirirejo, Magelang, Panjang, Rejowinangun Utara)
-- Magelang Selatan (Jurangombo Utara, Jurangombo Selatan, Rejowinangun Selatan, Tidar Utara, Tidar Selatan)
+- Magelang Selatan (Jurangombo Utara, Jurangombo Selatan, Rejowinangun Selatan, Tidar
+  Utara, Tidar Selatan)
 - Mertoyudan (Banyuurip, Bondowoso, Deyangan, Jogonegoro, Kalinegoro, Mertoyudan)
 - Muntilan (Muntilan, Gondosuli, Keji, Ngawen, Pucungrejo, Sriwedari, Tanjung)
 - Borobudur (Borobudur, Candirejo, Ngadiharjo, Wanurejo, Tuksongo)
@@ -63,9 +71,9 @@ keunggulan_produk:
   icon: bi-boxes
 keunggulan_layanan:
 - judul: Gratis Ongkir Seluruh Magelang
-  deskripsi: Nikmati pengiriman gratis untuk seluruh wilayah Magelang dari pusat
-    kota hingga kawasan wisata Borobudur dan lereng Merapi. Hemat biaya transportasi
-    untuk proyek Anda.
+  deskripsi: Nikmati pengiriman gratis untuk seluruh wilayah Magelang dari pusat kota
+    hingga kawasan wisata Borobudur dan lereng Merapi. Hemat biaya transportasi untuk
+    proyek Anda.
   warna: success
   icon: bi-truck
 - judul: COD & Bayar di Tempat
@@ -86,12 +94,12 @@ area_pengiriman_detail:
     ongkir untuk semua area dengan minimal pembelian yang terjangkau.
   judul_pusat: Wilayah Pusat Kota Magelang
   deskripsi_pusat: Area strategis pusat Kota Magelang dengan akses mudah dijangkau.
-    Melayani tiga kecamatan utama di jantung kota yaitu Magelang Utara, Magelang
-    Tengah, dan Magelang Selatan dengan waktu pengiriman cepat 1-2 hari kerja.
+    Melayani tiga kecamatan utama di jantung kota yaitu Magelang Utara, Magelang Tengah,
+    dan Magelang Selatan dengan waktu pengiriman cepat 1-2 hari kerja.
   judul_utara_selatan: Wilayah Magelang Utara & Selatan
-  deskripsi_utara_selatan: Magelang Utara berbatasan dengan Kabupaten Temanggung
-    dengan area perkebunan dan permukiman. Magelang Selatan berbatasan dengan Kecamatan
-    Mertoyudan yang berkembang pesat sebagai pusat perumahan baru.
+  deskripsi_utara_selatan: Magelang Utara berbatasan dengan Kabupaten Temanggung dengan
+    area perkebunan dan permukiman. Magelang Selatan berbatasan dengan Kecamatan Mertoyudan
+    yang berkembang pesat sebagai pusat perumahan baru.
   judul_pengembangan: Area Pengembangan & Wisata Borobudur
   deskripsi_pengembangan: Wilayah Borobudur, Muntilan, dan Mertoyudan yang berkembang
     pesat dengan banyak proyek homestay, villa, dan resort wisata membutuhkan kayu
@@ -300,8 +308,8 @@ finalisasi_pengiriman:
   konfirmasi_pesanan: Konfirmasi detail pesanan Anda - pastikan jumlah batang, ukuran
     diameter, dan alamat pengiriman di Magelang sudah benar untuk kelancaran proses.
   pengiriman_gratis: Pengiriman gratis menggunakan armada terpercaya ke seluruh wilayah
-    Magelang dari pusat kota hingga kawasan Borobudur dan lereng Merapi. Dijamin
-    tepat waktu dan aman sampai lokasi proyek Anda.
+    Magelang dari pusat kota hingga kawasan Borobudur dan lereng Merapi. Dijamin tepat
+    waktu dan aman sampai lokasi proyek Anda.
   bayar_cod: Sistem pembayaran COD (Cash on Delivery) tersedia. Bayar setelah barang
     sampai dan Anda sudah cek kualitas kayu - aman, tanpa risiko, dan terpercaya.
 studi_kasus_proyek:
@@ -422,50 +430,50 @@ testimoni_residential:
   lokasi: Mertoyudan, Magelang
   rating: 5
   judul: Kualitas Premium Tahan Cuaca Sejuk
-  komentar: Saya pakai kayu dolken ini untuk gazebo rumah di Mertoyudan. Sudah 1
-    tahun lebih masih kokoh dan tidak ada tanda-tanda rayap meski Magelang sering
-    hujan. Pengiriman gratis dan pelayanan sangat memuaskan. Recommended!
+  komentar: Saya pakai kayu dolken ini untuk gazebo rumah di Mertoyudan. Sudah 1 tahun
+    lebih masih kokoh dan tidak ada tanda-tanda rayap meski Magelang sering hujan.
+    Pengiriman gratis dan pelayanan sangat memuaskan. Recommended!
   warna: primary
 - nama: Bu Endang Sulistyowati
   lokasi: Muntilan, Magelang
   rating: 5
   judul: Pelayanan Ramah & Profesional
-  komentar: Order untuk pagar rumah di Muntilan, prosesnya mudah dan cepat. Tim
-    nya membantu konsultasi kebutuhan dengan sabar. Kayu nya bagus, warna natural
-    coklat cantik dan cocok untuk rumah bergaya Jawa. Puas!
+  komentar: Order untuk pagar rumah di Muntilan, prosesnya mudah dan cepat. Tim nya
+    membantu konsultasi kebutuhan dengan sabar. Kayu nya bagus, warna natural coklat
+    cantik dan cocok untuk rumah bergaya Jawa. Puas!
   warna: success
 testimoni_komersial:
 - nama: Pak Hadi Santoso
   lokasi: Owner Homestay di Kawasan Borobudur
   rating: 5
   judul: Cocok untuk Bisnis Wisata
-  komentar: Pakai kayu dolken untuk seluruh elemen kayu homestay saya di dekat
-    Borobudur. Wisatawan mancanegara suka dengan nuansa natural nya. Sudah 10 bulan
-    masih bagus kondisi nya, tahan hujan dan lembab. Mantap!
+  komentar: Pakai kayu dolken untuk seluruh elemen kayu homestay saya di dekat Borobudur.
+    Wisatawan mancanegara suka dengan nuansa natural nya. Sudah 10 bulan masih bagus
+    kondisi nya, tahan hujan dan lembab. Mantap!
   warna: warning
 - nama: Pak Mulyadi Hermawan
   lokasi: Kontraktor di Magelang
   rating: 5
   judul: Partner Terpercaya untuk Proyek
-  komentar: Sudah beberapa kali order untuk proyek villa dan homestay di kawasan
-    Borobudur dan lereng Merapi. Kualitas konsisten bagus, stok selalu ready, dan
-    pengiriman tepat waktu. Jadi partner supplier terpercaya saya.
+  komentar: Sudah beberapa kali order untuk proyek villa dan homestay di kawasan Borobudur
+    dan lereng Merapi. Kualitas konsisten bagus, stok selalu ready, dan pengiriman
+    tepat waktu. Jadi partner supplier terpercaya saya.
   warna: info
 - nama: Bu Rini Astuti
   lokasi: Owner Villa di Grabag Magelang
   rating: 5
   judul: Material Terbaik untuk Villa Wisata
   komentar: Villa alam saya di Grabag pakai kayu dolken ini untuk gazebo dan pergola.
-    Sangat cocok untuk iklim sejuk Magelang. Kayu nya kuat, estetis, dan tahan
-    lama. Tamu villa selalu memuji keindahan material alamnya!
+    Sangat cocok untuk iklim sejuk Magelang. Kayu nya kuat, estetis, dan tahan lama.
+    Tamu villa selalu memuji keindahan material alamnya!
   warna: success
 - nama: Pak Bambang Riyadi
   lokasi: Pengelola Resort di Borobudur
   rating: 5
   judul: Solusi Terbaik untuk Wisata
-  komentar: Sebagai pengelola resort di kawasan Borobudur, kami butuh material
-    yang natural dan tahan lama. Kayu dolken dari sini sempurna - kualitas bagus,
-    harga bersaing, dan pengiriman tepat waktu. Sangat merekomendasikan!
+  komentar: Sebagai pengelola resort di kawasan Borobudur, kami butuh material yang
+    natural dan tahan lama. Kayu dolken dari sini sempurna - kualitas bagus, harga
+    bersaing, dan pengiriman tepat waktu. Sangat merekomendasikan!
   warna: primary
 tips_ukuran:
 - kategori: Dekorasi Ringan
@@ -545,13 +553,12 @@ faq_pengiriman:
   icon: bi-geo-alt
 relevansi_kayu_dolken:
   karakteristik_iklim: Magelang adalah kota yang terletak di lembah subur yang dikelilingi
-    Gunung Merapi, Merbabu, Sumbing, dan Sindoro di Provinsi Jawa Tengah. Dengan
-    ketinggian rata-rata 380 mdpl, Magelang memiliki iklim sejuk dengan suhu 20-28°C
-    dan curah hujan cukup tinggi. Kelembaban udara yang tinggi terutama di kawasan
-    wisata Borobudur dan lereng gunung menjadi tantangan untuk material konstruksi
-    outdoor. Kayu dolken gelam sangat cocok karena sifatnya yang tahan air, tahan
-    rayap natural, dan tidak mudah lapuk meskipun terkena hujan dan kelembaban terus
-    menerus.
+    Gunung Merapi, Merbabu, Sumbing, dan Sindoro di Provinsi Jawa Tengah. Dengan ketinggian
+    rata-rata 380 mdpl, Magelang memiliki iklim sejuk dengan suhu 20-28°C dan curah
+    hujan cukup tinggi. Kelembaban udara yang tinggi terutama di kawasan wisata Borobudur
+    dan lereng gunung menjadi tantangan untuk material konstruksi outdoor. Kayu dolken
+    gelam sangat cocok karena sifatnya yang tahan air, tahan rayap natural, dan tidak
+    mudah lapuk meskipun terkena hujan dan kelembaban terus menerus.
   keunggulan_lokal: 'Sifat kayu yang <strong>tahan lembab, tahan rayap, dan estetika
     natural</strong> sangat cocok untuk aplikasi seperti:'
   aplikasi_lokal:
@@ -598,8 +605,10 @@ tentang_kota:
       Punthuk Setumbu adalah spot foto sunrise paling populer di Magelang, menawarkan pemandangan Borobudur yang diselimuti kabut di pagi hari. Kawasan agrowisata di Grabag dan Ngablak dengan perkebunan apel, stroberi, dan berbagai sayuran menjadi daya tarik tambahan. Iklim sejuk dan udara bersih membuat Magelang semakin diminati sebagai destinasi wisata alam yang menyegarkan.
     fakta:
     - Punthuk Setumbu masuk daftar 100 destinasi wisata terbaik Jawa Tengah
-    - Salak Pondoh Magelang dikenal sebagai salah satu produk pertanian unggulan Jawa Tengah
-    - Kawasan lereng Merapi-Merbabu menghasilkan sayuran dan tembakau berkualitas tinggi
+    - Salak Pondoh Magelang dikenal sebagai salah satu produk pertanian unggulan Jawa
+      Tengah
+    - Kawasan lereng Merapi-Merbabu menghasilkan sayuran dan tembakau berkualitas
+      tinggi
   tentang_kota_2:
   - judul: Landmark & Ikon Kota
     icon: bi-pin-map
@@ -640,11 +649,11 @@ tentang_kota:
     info_tambahan: Kekayaan kuliner dan budaya Magelang yang unik menjadikan kota
       ini destinasi wisata yang lengkap - bukan hanya Borobudur, tapi juga pengalaman
       gastronomi dan budaya Jawa yang autentik dan tak terlupakan.
-like_count: 1
+like_count: 4
 comment_count: 0
-share_count: 0
-total_updates: 1
-last_modified_at: '2026-04-24 08:50:15 +0700'
+share_count: 1
+total_updates: 2
+last_modified_at: '2026-07-04 07:06:38 +0000'
 ---
 
 <!-- ========================================================================

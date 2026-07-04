@@ -669,11 +669,11 @@ tentang_kota:
     info_tambahan: Keberadaan puluhan kampus menjadikan Bandung kota dengan populasi
       mahasiswa terbesar di Indonesia, menciptakan ekosistem bisnis kuliner, kos-kosan,
       dan industri kreatif yang dinamis.
-like_count: 20
+like_count: 21
 comment_count: 0
 share_count: 6
-total_updates: 9
-last_modified_at: '2026-06-14 12:48:32 +0000'
+total_updates: 10
+last_modified_at: '2026-07-04 07:06:38 +0000'
 ---
 
 <!-- ========================================================================
@@ -744,3 +744,11 @@ last_modified_at: '2026-06-14 12:48:32 +0000'
 <div id="related-products" class="article-related-products mt-5">
   {% include reusable/block--related-product-last-modified.html %}
 </div>
+---
+
+**Komentar - 04 July 2026**
+
+💬 **Budiman Linda** (Balikpapan)
+
+> "Content yang berkualitas, Helpful"
+
