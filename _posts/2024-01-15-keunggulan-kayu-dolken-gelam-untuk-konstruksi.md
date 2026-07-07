@@ -51,10 +51,10 @@ reviews:
   date: '2025-01-04'
   comment: Informasi lengkap tentang kelas kekuatan kayu gelam. Sangat bermanfaat
     untuk referensi proyek gazebo outdoor saya. Recommended!
-like_count: 88
+like_count: 89
 comment_count: 12
-share_count: 28
-last_modified_at: '2026-06-30 08:27:10 +0000'
+share_count: 30
+last_modified_at: '2026-07-07 07:50:33 +0000'
 definisi_kayu:
   nama_latin: Melaleuca cajuputi
   deskripsi: Kayu gelam adalah jenis kayu keras yang tumbuh di daerah berawa-rawa
@@ -192,7 +192,7 @@ kesimpulan:
   - Investasi jangka panjang yang menguntungkan
   cta_text: Butuh Kayu Dolken Gelam Berkualitas?
   cta_link: "/kontak"
-total_updates: 10
+total_updates: 11
 ---
 
 <div class="article-intro py-4">
@@ -238,4 +238,3 @@ total_updates: 10
 💬 **Budi Irwan** (Serang)
 
 > "Terima kasih atas artikelnya, sekarang lebih paham, Mantap!"
-

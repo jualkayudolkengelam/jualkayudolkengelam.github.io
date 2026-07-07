@@ -50,10 +50,10 @@ reviews:
   date: '2024-12-30'
   comment: Panduan perhitungan lengkap dengan contoh kasus. Worksheet template-nya
     sangat berguna untuk planning proyek ceiling dekoratif saya.
-like_count: 112
+like_count: 115
 comment_count: 21
-share_count: 46
-last_modified_at: '2026-07-04 07:06:38 +0000'
+share_count: 47
+last_modified_at: '2026-07-07 07:50:33 +0000'
 labels:
   mengapa_perhitungan_title: Mengapa Perhitungan Akurat Penting?
   formula_dasar_title: Formula Dasar
@@ -410,7 +410,7 @@ kesimpulan:
     Tim kami akan verify calculations, provide detailed breakdown, dan give best price
     quote.
   cta_link: "/kontak"
-total_updates: 10
+total_updates: 11
 ---
 
 <div class="article-intro py-4">
@@ -468,4 +468,3 @@ total_updates: 10
 💬 **Irwan Diana** (Solo)
 
 > "Artikelnya keren, langsung saya praktekkan, Good content"
-
