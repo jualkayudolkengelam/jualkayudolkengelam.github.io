@@ -49,9 +49,9 @@ reviews:
   date: '2025-01-02'
   comment: Tabel perbandingan spesifikasi sangat membantu pengambilan keputusan. Informasi
     tentang ketahanan air gelam meyakinkan saya untuk proyek di area kolam.
-like_count: 66
+like_count: 68
 comment_count: 8
-share_count: 21
+share_count: 22
 karakteristik_unik:
   nama_ilmiah: Melaleuca cajuputi
   kepadatan: 900-1000 kg/m³
@@ -287,8 +287,8 @@ kesimpulan:
   - Sustainability yang lebih baik
   cta_text: Tertarik Menggunakan Kayu Dolken Gelam untuk Proyek Anda?
   cta_link: "/kontak"
-total_updates: 7
-last_modified_at: '2026-07-15 02:28:37 +0000'
+total_updates: 8
+last_modified_at: '2026-07-18 15:27:38 +0000'
 ---
 
 <div class="article-intro py-4">
