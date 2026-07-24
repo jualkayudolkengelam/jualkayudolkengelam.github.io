@@ -59,7 +59,7 @@ tutorial_meta_section:
   - Meteran
   - Kalkulator
   - Catatan atau Aplikasi Notes
-like_count: 8
+like_count: 10
 comment_count: 0
 share_count: 4
 intro:
@@ -712,8 +712,8 @@ cara_merawat:
         dengan ground dan extract stub separately. Install replacement dolken, ensure
         sama level dan alignment dengan existing, compact fill thoroughly, dan re-wire.
         Final check untuk stability entire section.'
-total_updates: 4
-last_modified_at: '2026-07-10 11:32:02 +0000'
+total_updates: 5
+last_modified_at: '2026-07-24 06:58:27 +0000'
 ---
 
 <!-- Intro Section -->
