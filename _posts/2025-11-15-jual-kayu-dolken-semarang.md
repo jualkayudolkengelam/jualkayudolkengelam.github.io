@@ -542,11 +542,11 @@ area_pengiriman_detail:
   - nama: Java Mall
     icon: bi-cart
     warna: primary
-like_count: 20
+like_count: 22
 comment_count: 0
-share_count: 10
-total_updates: 9
-last_modified_at: '2026-07-20 23:09:22 +0000'
+share_count: 11
+total_updates: 10
+last_modified_at: '2026-07-27 11:52:28 +0000'
 ---
 
 <section id="hero-jual-kayu-dolken">
@@ -612,3 +612,11 @@ last_modified_at: '2026-07-20 23:09:22 +0000'
 <div id="related-products" class="article-related-products mt-5">
   {% include reusable/block--related-product-last-modified.html %}
 </div>
+---
+
+**Komentar - 27 July 2026**
+
+💬 **Lestari Haris** (Jakarta Barat)
+
+> "Mau konsultasi, untuk hotel, Tolong bantu ya"
+
