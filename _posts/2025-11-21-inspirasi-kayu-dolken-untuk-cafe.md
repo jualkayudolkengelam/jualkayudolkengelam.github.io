@@ -47,9 +47,9 @@ reviews:
   date: '2025-01-04'
   comment: Ide ceiling accent dan partisi dari kayu dolken sangat kreatif. Tips pemilihan
     finishing untuk area outdoor cafe juga sangat berguna. Recommended!
-like_count: 10
+like_count: 11
 comment_count: 0
-share_count: 3
+share_count: 4
 mengapa_memilih:
   title: Mengapa Cafe Modern Memilih Kayu Dolken?
   paragraph_1: Di era Instagram-able cafe, kayu dolken gelam menjadi pilihan cerdas
@@ -509,8 +509,8 @@ tips_desain:
       icon: bi-tools
       color: warning
       text: DIY simple projects, hire pro untuk complex installation
-total_updates: 5
-last_modified_at: '2026-07-18 15:27:38 +0000'
+total_updates: 6
+last_modified_at: '2026-08-02 10:30:29 +0000'
 ---
 
 <!-- ========================================================================== -->
