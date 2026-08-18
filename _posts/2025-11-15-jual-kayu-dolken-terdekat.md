@@ -698,11 +698,11 @@ tentang_kota:
     info_tambahan: Dengan armada sendiri dan mitra logistik terpercaya, kami menjamin
       pengiriman tepat waktu dan aman ke seluruh Jawa-Bali, dari kota besar hingga
       area terpencil.
-like_count: 25
+like_count: 27
 comment_count: 2
-share_count: 10
-total_updates: 9
-last_modified_at: '2026-08-16 04:43:55 +0000'
+share_count: 12
+total_updates: 10
+last_modified_at: '2026-08-18 07:30:25 +0000'
 ---
 
 <!-- ========================================================================
@@ -771,3 +771,11 @@ last_modified_at: '2026-08-16 04:43:55 +0000'
 <div id="related-products" class="article-related-products mt-5">
   {% include reusable/block--related-product-last-modified.html %}
 </div>
+---
+
+**Komentar - 18 August 2026**
+
+💬 **Dani Irwan** (Bandung)
+
+> "Butuh pencerahan, mengenai garansi, Ditunggu jawabannya"
+
