@@ -319,11 +319,11 @@ tentang_kota:
     - "<strong>Slipi</strong> Kawasan bisnis dan perkantoran strategis"
     info_tambahan: Jakarta Barat terhubung dengan transportasi umum yang baik termasuk
       MRT, LRT, dan TransJakarta dengan rute ke seluruh Jakarta.
-like_count: 5
+like_count: 7
 comment_count: 0
-share_count: 1
-total_updates: 4
-last_modified_at: '2026-07-20 23:09:22 +0000'
+share_count: 3
+total_updates: 5
+last_modified_at: '2026-08-22 01:24:11 +0000'
 ---
 
 <section id="hero-jual-kayu-dolken">
