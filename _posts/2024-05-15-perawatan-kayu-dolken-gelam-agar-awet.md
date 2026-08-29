@@ -50,7 +50,7 @@ reviews:
   date: '2025-01-01'
   comment: Artikel lengkap tentang maintenance kayu dolken. Tips penanganan musim
     hujan sangat relevan untuk kondisi tropis Indonesia. Recommended!
-like_count: 96
+like_count: 99
 comment_count: 16
 share_count: 37
 labels:
@@ -423,8 +423,8 @@ kesimpulan:
   cta_description: 'Kayu dolken gelam berkualitas tinggi dari kami lebih mudah dirawat
     karena: Grade A bebas defect, properly dried, dan natural resistance optimal.'
   cta_link: "/kontak"
-total_updates: 20
-last_modified_at: '2026-08-22 01:24:11 +0000'
+total_updates: 21
+last_modified_at: '2026-08-29 02:47:26 +0000'
 ---
 
 <div class="article-intro py-4">
@@ -488,4 +488,3 @@ last_modified_at: '2026-08-22 01:24:11 +0000'
 💬 **Lestari Novita** (Yogyakarta)
 
 > "Sangat bermanfaat, step by step nya jelas, Nice article"
-
