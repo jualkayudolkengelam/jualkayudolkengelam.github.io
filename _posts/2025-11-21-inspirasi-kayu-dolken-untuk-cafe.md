@@ -47,7 +47,7 @@ reviews:
   date: '2025-01-04'
   comment: Ide ceiling accent dan partisi dari kayu dolken sangat kreatif. Tips pemilihan
     finishing untuk area outdoor cafe juga sangat berguna. Recommended!
-like_count: 12
+like_count: 14
 comment_count: 0
 share_count: 6
 mengapa_memilih:
@@ -509,8 +509,8 @@ tips_desain:
       icon: bi-tools
       color: warning
       text: DIY simple projects, hire pro untuk complex installation
-total_updates: 7
-last_modified_at: '2026-08-25 05:05:51 +0000'
+total_updates: 8
+last_modified_at: '2026-09-05 08:22:06 +0000'
 ---
 
 <!-- ========================================================================== -->
