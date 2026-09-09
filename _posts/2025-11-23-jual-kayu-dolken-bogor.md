@@ -669,11 +669,11 @@ tentang_kota:
     info_tambahan: Kekayaan kuliner Bogor yang beragam dan terjangkau menjadikan wisata
       kuliner sebagai daya tarik tambahan bagi jutaan wisatawan yang berkunjung ke
       Kota Hujan setiap tahunnya.
-like_count: 21
+like_count: 23
 comment_count: 0
 share_count: 6
-total_updates: 10
-last_modified_at: '2026-08-29 02:47:26 +0000'
+total_updates: 11
+last_modified_at: '2026-09-09 14:25:21 +0000'
 ---
 
 <!-- ========================================================================
@@ -751,4 +751,3 @@ last_modified_at: '2026-08-29 02:47:26 +0000'
 💬 **Lestari Hendra** (Manado)
 
 > "Lagi cari supplier, untuk pergola, Terima kasih sebelumnya"
-
