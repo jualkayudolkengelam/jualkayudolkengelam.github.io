@@ -59,9 +59,9 @@ tutorial_meta_section:
   - Meteran
   - Kalkulator
   - Catatan atau Aplikasi Notes
-like_count: 20
+like_count: 21
 comment_count: 0
-share_count: 11
+share_count: 13
 intro:
   headline: Menghitung kebutuhan kayu dolken dengan tepat adalah kunci kesuksesan
     proyek konstruksi Anda
@@ -712,8 +712,8 @@ cara_merawat:
         dengan ground dan extract stub separately. Install replacement dolken, ensure
         sama level dan alignment dengan existing, compact fill thoroughly, dan re-wire.
         Final check untuk stability entire section.'
-total_updates: 10
-last_modified_at: '2026-09-14 04:24:47 +0000'
+total_updates: 11
+last_modified_at: '2026-09-18 03:41:20 +0000'
 ---
 
 <!-- Intro Section -->
@@ -752,4 +752,3 @@ last_modified_at: '2026-09-14 04:24:47 +0000'
 💬 **Irwan Siti** (Jakarta Utara)
 
 > "Tolong info, untuk custom order, Terima kasih sebelumnya"
-
