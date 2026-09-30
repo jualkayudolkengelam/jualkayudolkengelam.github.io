@@ -699,11 +699,11 @@ hubungi_kami:
     deskripsi: Diskon khusus
   jam_operasional: Senin - Sabtu, 08:00 - 17:00 WIB
   whatsapp_24_7: true
-like_count: 24
+like_count: 27
 comment_count: 1
 share_count: 10
-total_updates: 9
-last_modified_at: '2026-08-29 02:47:26 +0000'
+total_updates: 10
+last_modified_at: '2026-09-30 04:25:49 +0000'
 ---
 
 <section id="hero-jual-kayu-dolken">
@@ -769,3 +769,11 @@ last_modified_at: '2026-08-29 02:47:26 +0000'
 <div id="related-products" class="article-related-products mt-5">
   {% include reusable/block--related-product-last-modified.html %}
 </div>
+---
+
+**Komentar - 30 September 2026**
+
+💬 **Santoso Bambang** (Jakarta Selatan)
+
+> "Mau tanya, untuk partnership, Mohon bantuannya"
+

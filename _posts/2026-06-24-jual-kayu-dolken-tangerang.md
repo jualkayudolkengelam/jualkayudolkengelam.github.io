@@ -599,11 +599,11 @@ tentang_kota:
     info_tambahan: Konektivitas Tangerang semakin baik dengan keberadaan Stasiun Rawa
       Buntu, integrasi KRL Commuter Line, dan akses tol menuju Jakarta, Bandara Soekarno-Hatta,
       serta kawasan industri di Kabupaten Tangerang.
-like_count: 9
+like_count: 10
 comment_count: 0
-share_count: 8
-total_updates: 5
-last_modified_at: '2026-09-24 23:50:52 +0000'
+share_count: 9
+total_updates: 6
+last_modified_at: '2026-09-30 04:25:49 +0000'
 ---
 
 <section id="hero-jual-kayu-dolken">

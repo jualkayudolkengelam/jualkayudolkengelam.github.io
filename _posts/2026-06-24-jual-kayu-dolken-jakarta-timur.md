@@ -362,11 +362,11 @@ tentang_kota:
       di Jakarta Timur"
     info_tambahan: Jakarta Timur terhubung dengan jalan tol Jagorawi, TB Simatupang,
       dan akses kereta commuter yang menghubungkan ke pusat kota Jakarta.
-like_count: 9
+like_count: 10
 comment_count: 0
-share_count: 3
-total_updates: 5
-last_modified_at: '2026-09-14 04:24:47 +0000'
+share_count: 5
+total_updates: 6
+last_modified_at: '2026-09-30 04:25:49 +0000'
 ---
 
 <section id="hero-jual-kayu-dolken">

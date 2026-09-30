@@ -698,11 +698,11 @@ tentang_kota:
     info_tambahan: Dengan armada sendiri dan mitra logistik terpercaya, kami menjamin
       pengiriman tepat waktu dan aman ke seluruh Jawa-Bali, dari kota besar hingga
       area terpencil.
-like_count: 31
+like_count: 34
 comment_count: 2
 share_count: 15
-total_updates: 13
-last_modified_at: '2026-09-27 04:43:27 +0000'
+total_updates: 14
+last_modified_at: '2026-09-30 04:25:49 +0000'
 ---
 
 <!-- ========================================================================
