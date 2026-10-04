@@ -358,11 +358,11 @@ tentang_kota:
       wisata"
     info_tambahan: Akses ke Sukabumi terus berkembang dengan keberadaan jalan tol
       Bocimi yang menghubungkan ke Bogor dan Jakarta, serta jalan arteri selatan Jawa.
-like_count: 21
+like_count: 23
 comment_count: 0
 share_count: 9
-total_updates: 11
-last_modified_at: '2026-09-24 23:50:52 +0000'
+total_updates: 12
+last_modified_at: '2026-10-04 14:02:44 +0000'
 ---
 
 <section id="hero-jual-kayu-dolken">
