@@ -649,11 +649,11 @@ tentang_kota:
     info_tambahan: Kekayaan kuliner dan budaya Magelang yang unik menjadikan kota
       ini destinasi wisata yang lengkap - bukan hanya Borobudur, tapi juga pengalaman
       gastronomi dan budaya Jawa yang autentik dan tak terlupakan.
-like_count: 14
+like_count: 15
 comment_count: 0
-share_count: 5
-total_updates: 6
-last_modified_at: '2026-10-04 14:02:44 +0000'
+share_count: 6
+total_updates: 7
+last_modified_at: '2026-10-10 00:48:24 +0000'
 ---
 
 <!-- ========================================================================
