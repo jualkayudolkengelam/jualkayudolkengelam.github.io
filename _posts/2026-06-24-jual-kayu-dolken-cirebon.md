@@ -369,11 +369,11 @@ tentang_kota:
     - "<strong>Stasiun Cirebon</strong> Stasiun kereta api utama jalur pantura"
     info_tambahan: Cirebon terhubung dengan jalur pantura Jakarta-Cirebon-Semarang-Surabaya,
       serta akses tol Cipali yang menghubungkan ke Jakarta dan Bandung.
-like_count: 15
+like_count: 17
 comment_count: 0
 share_count: 9
-total_updates: 8
-last_modified_at: '2026-10-10 00:48:24 +0000'
+total_updates: 9
+last_modified_at: '2026-10-13 01:59:10 +0000'
 ---
 
 <section id="hero-jual-kayu-dolken">
