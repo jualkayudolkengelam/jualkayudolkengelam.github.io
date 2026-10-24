@@ -683,11 +683,11 @@ tentang_kota:
     info_tambahan: Keberadaan puluhan perguruan tinggi menjadikan Surabaya kota pelajar
       terbesar di Indonesia Timur, menciptakan ekosistem inovasi, startup teknologi,
       dan industri kreatif yang dinamis dan terus berkembang.
-like_count: 29
+like_count: 32
 comment_count: 0
-share_count: 13
-total_updates: 16
-last_modified_at: '2026-10-04 14:02:44 +0000'
+share_count: 15
+total_updates: 17
+last_modified_at: '2026-10-24 04:16:36 +0000'
 ---
 
 <!-- ========================================================================
