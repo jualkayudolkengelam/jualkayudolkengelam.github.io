@@ -699,11 +699,11 @@ hubungi_kami:
     deskripsi: Diskon khusus
   jam_operasional: Senin - Sabtu, 08:00 - 17:00 WIB
   whatsapp_24_7: true
-like_count: 36
+like_count: 39
 comment_count: 1
-share_count: 16
-total_updates: 14
-last_modified_at: '2026-10-30 05:34:09 +0000'
+share_count: 17
+total_updates: 15
+last_modified_at: '2026-11-13 12:02:49 +0000'
 ---
 
 <section id="hero-jual-kayu-dolken">

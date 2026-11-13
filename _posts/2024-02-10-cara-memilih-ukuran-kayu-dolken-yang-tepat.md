@@ -51,10 +51,10 @@ reviews:
   date: '2025-01-03'
   comment: Artikel informatif dengan penjelasan detail tiap ukuran. Tips pemilihan
     untuk beban berat sangat berguna untuk proyek pergola saya.
-like_count: 113
+like_count: 114
 comment_count: 19
 share_count: 43
-last_modified_at: '2026-10-18 14:41:50 +0000'
+last_modified_at: '2026-11-13 12:02:49 +0000'
 ukuran_tersedia:
 - diameter: 2-3 cm
   deskripsi: Diameter kecil untuk aplikasi ringan
@@ -279,7 +279,7 @@ kesimpulan:
   - Konsultasikan dengan ahli jika ragu
   cta_text: Siap Memulai Proyek Anda?
   cta_link: "/kontak"
-total_updates: 14
+total_updates: 15
 ---
 
 <div class="article-intro py-4">
